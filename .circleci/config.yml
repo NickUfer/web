@@ -1,0 +1,32 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2.1
+jobs:
+
+  publish-hydra:
+    docker:
+      - image: circleci/node:12.4
+    working_directory: ~/web
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package-lock.json" }}
+            - v1-dependencies-
+      - run: npm ci
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+      - run: make hydra
+
+workflows:
+  version: 2
+  publish-hydra:
+    jobs:
+      - publish-hydra:
+          filters:
+            brances:
+              only: master

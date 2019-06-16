@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500|IBM+Plex+Sans:300,400,500,600|Open+Sans:600&display=swap');
+@import "./properties.css";
+
+html {
+    text-rendering: geometricPrecision;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li, input, div {
+    font-family: "IBM Plex Sans", sans-serif;
+    color: var(--ory-brand-white);
+    font-style: normal;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 76px;
+    line-height: 126%;
+    margin-bottom: 32px;
+    color: var(--ory-brand-white);
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 168%;
+    margin-bottom: 32px;
+}
+
+h3 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 126%;
+}
+
+h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 168%;
+    margin-bottom: 0;
+}
+
+p {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 168%;
+    margin: 0;
+}
+
+p+p {
+    margin-top: 16px;
+}
+
+a, a:visited {
+    color: var(--ory-brand-tertiary);
+    text-decoration: none;
+    transition: color ease 200ms, background-color ease 200ms, border-color ease 200ms;
+
+    &:hover, &:active {
+        color: var(--ory-brand-white);
+    }
+}
+
+a.inverse, a.inverse:visited, li a, li a:visited {
+    color: var(--ory-brand-white);
+
+    &:hover, &:active {
+        color: var(--ory-brand-tertiary);
+    }
+}
+
+p.secondary {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 168%;
+}
+
+a.cta {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    padding: 10px 16px;
+    color: var(--ory-brand-white);
+    box-sizing: border-box;
+    margin: 32px 32px 0 0;
+    text-decoration: none;
+    transition: color ease 200ms, background-color ease 200ms, border-color ease 200ms;
+
+    &.primary, &.primary.visited {
+        border: 2px solid var(--ory-brand-tertiary);
+        background: var(--ory-brand-tertiary);
+        color: var(--ory-brand-white);
+
+        &:hover, &:focus {
+            background-color: var(--ory-brand-white);
+            border-color: var(--ory-brand-white);
+            color: var(--ory-brand-tertiary);
+        }
+
+        &:active {
+            background-color: var(--ory-brand-white-shade-15);
+        }
+    }
+
+    &.secondary, &.secondary.visited {
+        color: var(--ory-brand-white);
+        border: 2px solid var(--ory-brand-white);
+        padding: 10px 16px;
+
+        &:hover, &:focus {
+            border-color: var(--ory-brand-tertiary);
+            color: var(--ory-brand-tertiary);
+        }
+
+        &:active {
+            border-color: var(--ory-brand-tertiary-shade-15);
+            color: var(--ory-brand-tertiary-shade-15);
+        }
+    }
+
+    &.tertiary, &.tertiary.visited {
+        color: var(--ory-brand-tertiary);
+        border: 2px solid var(--ory-brand-tertiary);
+
+        &:hover, &:focus {
+            background-color: var(--ory-brand-tertiary);
+            color: var(--ory-brand-white);
+        }
+
+        &:active {
+            background-color: var(--ory-brand-tertiary-shade-15);
+        }
+    }
+}
+
+
+@media (--mobile-viewport) {
+    h1 {
+        font-weight: 300;
+        font-size: 36px;
+        margin-bottom: 32px;
+    }
+
+    h2 {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 168%;
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 168%;
+        margin-bottom: 16px;
+    }
+
+    h4 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 168%;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 168%;
+    }
+    p+p {
+        margin-top: 16px;
+    }
+
+}

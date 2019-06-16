@@ -1,0 +1,42 @@
+.adopters {
+    background-color: var(--ory-brand-primary-light-05);
+    padding: 96px 0;
+    position: relative;
+
+    & h3, & p {
+        color: var(--ory-brand-dark-primary);
+    }
+}
+
+@media (--mobile-viewport) {
+    .adopters {
+        padding: 64px 0;
+    }
+    .adopters :global .container-fluid .row {
+        flex-direction: column-reverse;
+    }
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logos {
+    height: 100%;
+}
+
+.logos-inner {
+    height: 100%;
+
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+
+    & img {
+        margin: 0 4px 16px 4px;
+    }
+}

@@ -1,0 +1,61 @@
+@import "../styles/properties.css";
+
+.footer {
+    background-color: var(--ory-brand-dark-primary);
+    padding: 36px 0;
+}
+
+.list-title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 168%;
+    margin: 0;
+    padding: 0;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    & a, & a:visited {
+        font-size: 14px;
+        line-height: 168%;
+    }
+}
+
+.contact {
+    color: var(--ory-brand-white);
+    margin-top: 16px;
+    margin-bottom: 2px;
+
+    & a {
+        text-decoration: none;
+    }
+}
+
+.menu-row {
+    justify-content: flex-end;
+}
+
+.menu-item {
+    margin-right: 32px;
+}
+
+@media (--mobile-viewport) {
+    .menu-row {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .menu-item {
+        margin-bottom: 32px;
+        margin-right: 0;
+    }
+}

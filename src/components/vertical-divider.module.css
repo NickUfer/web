@@ -1,0 +1,17 @@
+.divider {
+    border-left: 1px solid #F04870;
+    position: absolute;
+    left: 50%;
+}
+
+@media (--sm-viewport) {
+    .divider {
+        display: none;
+    }
+}
+
+@media (--md-viewport) {
+    .divider {
+        display: none;
+    }
+}

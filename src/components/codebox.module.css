@@ -1,0 +1,72 @@
+.box {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--ory-brand-dark-primary);
+    border-radius: 15px;
+    padding: 8px 16px;
+    min-height: 360px;
+}
+
+.tabs {
+    display: flex;
+    align-items: center;
+    & .tab {
+        font-family: "IBM Plex Mono", monospace;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 168%;
+        margin-right: 16px;
+        padding: 0 8px;
+        cursor: pointer;
+        &.selected {
+            border-bottom: 1px solid var(--ory-brand-tertiary);
+        }
+    }
+}
+
+.window-actions {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    margin-right: 5px;
+    & .window-action {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background-color: var(--ory-brand-ui-primary-dark-70);
+        margin-right: 5px;
+
+        &.primary {
+            background-color: var(--ory-brand-tertiary);
+        }
+    }
+}
+
+.content {
+    & pre {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &, & pre, & code {
+        color: var(--ory-brand-white);
+        font-family: "IBM Plex Mono", monospace;
+        text-shadow: none;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 168%;
+        background-color: var(--ory-brand-dark-primary);
+
+        word-wrap: break-word;
+        white-space: pre-wrap;
+    }
+
+    & pre code :global .token.operator {
+        color: var(--ory-brand-white);
+        background-color: var(--ory-brand-dark-primary);
+    }
+}

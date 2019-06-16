@@ -1,0 +1,45 @@
+@import "../styles/properties.css";
+
+.hero {
+    background: var(--ory-brand-primary);
+    & :global .container-fluid {
+        position: relative;
+        padding: 112px 0;
+    }
+}
+
+@media(--sm-viewport) {
+    .hero {
+        & :global .container-fluid {
+            padding: 64px 0;
+        }
+    }
+}
+
+@media(--md-viewport) {
+    .hero {
+        & :global .container-fluid {
+            padding: 64px 0;
+        }
+    }
+}
+
+.logo {
+    position: absolute;
+    content: " ";
+    right: 40px;
+    width: 461px;
+    height: 460px;
+    top: 54px;
+    background-image: url("../images/hero-logo-desktop.svg");
+}
+
+@media (max-width: 1280px) {
+    .logo {
+        width: 164px;
+        height: 320px;
+        top: 64px;
+        right: 0;
+        background-image: url("../images/hero-logo-mobile.svg");
+    }
+}

@@ -1,0 +1,10 @@
+@import "./properties.css" html
+
+{
+    font-size: 16px
+;
+}
+
+img.responsive {
+    width: 100%;
+}

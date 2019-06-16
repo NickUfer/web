@@ -1,0 +1,65 @@
+.stats {
+    background-color: var(--ory-brand-ui-primary-dark-70);
+    padding: 96px 0;
+    position: relative;
+}
+
+@media (--mobile-viewport) {
+    .stats {
+        padding: 64px 0;
+    }
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+
+    & .item {
+        & .title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 168%;
+            text-align: center;
+        }
+
+        & .amount {
+            font-weight: bold;
+            font-size: 28px;
+            line-height: 168%;
+            text-align: center;
+            color: var(--ory-brand-tertiary);
+        }
+
+        & .description {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 168%;
+            text-align: center;
+            color: var(--ory-brand-grey);
+        }
+    }
+}
+
+@media (--mobile-viewport) {
+    .items {
+        flex-direction: column;
+        & .item {
+            margin-top: 32px;
+        }
+        & .item:first-child {
+            margin-top: 0;
+        }
+    }
+}
+
+.divider {
+    border: 1px solid #F04870;
+    position: absolute;
+    top: 96px;
+    bottom: 96px;
+    left: 50%;
+}

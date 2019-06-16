@@ -1,0 +1,30 @@
+:root {
+    --ory-brand-primary: #6274F3;
+    --ory-brand-secondary: #50E3C2;
+
+    --ory-brand-tertiary: #F04870;
+    --ory-brand-tertiary-shade-10: color-mod(#F04870 shade(10%));
+    --ory-brand-tertiary-shade-15: color-mod(#F04870 shade(15%));
+
+    --ory-brand-black: #000000;
+
+    --ory-brand-white: #FFFFFF;
+    --ory-brand-white-shade-10: color-mod(#FFFFFF shade(10%));
+    --ory-brand-white-shade-15: color-mod(#FFFFFF shade(15%));
+
+    --ory-brand-grey: #C4C4C4;
+    --ory-brand-grey-light: #E5E5E5;
+    --ory-brand-dark-primary: #122232;
+
+    --ory-brand-primary-light-05: #F7F8FE;
+    --ory-brand-primary-light-10: #F0F2FE;
+    --ory-brand-primary-light-12: #ECEEFE;
+    --ory-brand-primary-light-15: #E7EBFE;
+
+    --ory-brand-code-green: #91FD7F;
+
+    --ory-brand-ui-primary-dark-70: #4551AA;
+    --ory-brand-ui-primary-light-7: #F4F5FE;
+
+    --nav-height: 48px;
+}

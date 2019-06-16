@@ -1,0 +1,28 @@
+@import "../styles/properties.css";
+
+.section {
+    padding: 192px 0;
+
+    &.light {
+        background-color: var(--ory-brand-primary-light-05);
+        & h3, & p {
+            color: var(--ory-brand-dark-primary);
+        }
+    }
+
+    &.dark {
+        background-color: var(--ory-brand-dark-primary);
+    }
+}
+
+@media (--sm-viewport) {
+    .section {
+        padding: 64px 0;
+    }
+}
+
+@media (--md-viewport) {
+    .section {
+        padding: 64px 0;
+    }
+}
