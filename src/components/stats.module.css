@@ -25,7 +25,7 @@
             text-align: center;
         }
 
-        & .amount {
+        & .amount * {
             font-weight: bold;
             font-size: 28px;
             line-height: 168%;

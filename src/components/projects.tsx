@@ -11,16 +11,19 @@ const projects = [
     title: 'ORY Hydra',
     description: 'Secure access to your applications and APIs with OAuth 2.0 and OpenID Connect.',
     image: hydra,
+    github: 'https://github.com/ory/hydra'
   },
   {
     title: 'ORY Oathkeeper',
     description: 'Verify and allow identities to interact with your applications.',
     image: oathkeeper,
+    github: 'https://github.com/ory/oathkeeper'
   },
   {
     title: 'ORY Keto',
     description: 'A best practice patterns based access control REST API.',
     image: keto,
+    github: 'https://github.com/ory/keto'
   },
 ]
 
@@ -39,8 +42,8 @@ const Projects = () => (
           </p>
         </div>
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-          {projects.map(({ title, description, image }) => (
-            <div key={title} className={pstyles.project}>
+          {projects.map(({ github, title, description, image }) => (
+            <a key={title} className={pstyles.project} href={github}>
               <img src={image} alt={title} />
               <div>
                 <h4>
@@ -50,7 +53,7 @@ const Projects = () => (
                   {description}
                 </p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
         <div className="hidden-lg col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">

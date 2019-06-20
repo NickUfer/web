@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import numeral from 'numeral'
 import parse from 'csv-parse'
-import regression from 'regression'
+import dateformat from 'dateformat'
 
 import styles from './stats.module.css'
 
@@ -9,6 +8,7 @@ import csvHydraHitsPerMonth from 'raw-loader!../stats/hydra/hits-per-month.csv'
 import csvOathkeeperHitsPerMonth from 'raw-loader!../stats/oathkeeper/hits-per-month.csv'
 import csvKetoHitsPerMonth from 'raw-loader!../stats/keto/hits-per-month.csv'
 import VerticalDivider from './vertical-divider'
+import AnimatedCounter from './animated-counter'
 
 const countGitHubStars = (state: StateTypes) =>
   (Object.keys(state.github) as Array<keyof GitHub>)
@@ -20,7 +20,7 @@ const countDockerImagePulls = (state: StateTypes) =>
     .map(repo => state.docker[repo])
     .reduce((p: number, n: number) => p + n, 0)
 
-const analyze = (raw: string): Promise<number> =>
+const analyze = (raw: string): Promise<number[][]> =>
   new Promise((resolve, reject) => {
     parse(raw, { cast_date: true }, (err, csv) => {
       if (err) {
@@ -38,17 +38,10 @@ const analyze = (raw: string): Promise<number> =>
       // Now that it's sorted, get the first (oldest) date
       // const then = new Date(data[0][0])
 
-      // Remove dupes, current month and transform dates to integer keys
-      data = uniq(data).map((v: any, k) => [k, parseInt(v[1])])
+      // Remove dupes, transform dates to integer keys
+      data = uniq(data).map((v: any) => [(new Date(v[0])).getTime(), parseInt(v[1])])
 
-      let max: number[] = [0, 0]
-      data.forEach((point: number[]) => {
-        if (point[1] > max[1]) {
-          max = point
-        }
-      })
-
-      resolve(max[1])
+      resolve(data)
     })
   })
 
@@ -70,18 +63,18 @@ const uniq = (raw: any) => {
 const stats = (state: StateTypes) => [
   {
     title: 'Requests secured',
-    amount: numeral(state.requests).format('0.0a'),
-    description: 'May 2019'
+    amount: state.requests.amount,
+    description: dateformat(state.requests.date, 'mmmm yyyy'),
   },
   {
     title: 'Docker pulls',
-    amount: numeral(countDockerImagePulls(state)).format('0.0a'),
-    description: 'Overall'
+    amount: countDockerImagePulls(state),
+    description: 'Overall',
   },
   {
     title: 'GitHub stars',
-    amount: numeral(countGitHubStars(state)).format('0.0a'),
-    description: 'Overall'
+    amount: countGitHubStars(state),
+    description: 'Overall',
   },
 ]
 
@@ -114,12 +107,15 @@ type Docker = {
 interface StateTypes {
   docker: Docker
   github: GitHub
-  requests: number,
+  requests: {
+    amount: number,
+    date: Date,
+  },
 }
 
 class Stats extends Component<PropTypes, StateTypes> {
   state = {
-    requests: 0,
+    requests: { amount: 0, date: new Date() },
     docker: {
       ['oryd/hydra']: 3031913,
       ['oryam/hydra']: 84275,
@@ -180,17 +176,39 @@ class Stats extends Component<PropTypes, StateTypes> {
   }
 
   fetchRequests() {
-    const resolver = (result: number) => {
-      this.setState(({ requests }) => {
-        return ({
-          requests: requests + result,
+    Promise.all([
+      analyze(csvHydraHitsPerMonth),
+      analyze(csvOathkeeperHitsPerMonth),
+      analyze(csvKetoHitsPerMonth),
+    ]).then((services: number[][][]) => {
+      const requests: { [key: number]: number } = {}
+
+      services.forEach((rows) => {
+        rows.forEach((row) => {
+          requests[row[0]] = requests[row[0]] ? requests[row[0]] + row[1] : row[1]
         })
       })
-    }
 
-    analyze(csvHydraHitsPerMonth).then(resolver)
-    analyze(csvOathkeeperHitsPerMonth).then(resolver)
-    analyze(csvKetoHitsPerMonth).then(resolver)
+      let max: number[] = [0, 0]
+      Object.keys(requests).forEach((date: string) => {
+        const amount = requests[parseInt(date)]
+
+        if (amount > max[1]) {
+          max = [parseInt(date), amount]
+        }
+      })
+
+      console.log(max, requests)
+
+      this.setState(() => {
+        return ({
+          requests: {
+            amount: max[1],
+            date: new Date(max[0]),
+          },
+        })
+      })
+    })
   }
 
   componentDidMount() {
@@ -228,7 +246,7 @@ class Stats extends Component<PropTypes, StateTypes> {
                       {title}
                     </div>
                     <div className={styles.amount}>
-                      {amount}
+                      <AnimatedCounter countTo={amount} />
                     </div>
                     <div className={styles.description}>
                       {description}

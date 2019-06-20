@@ -2,7 +2,6 @@ import React, { ReactNode } from 'react'
 import { Menu, IconMenu } from './header'
 
 import 'normalize.css'
-import 'hamburgers/dist/hamburgers.css'
 import '../styles/global.css'
 import '../styles/grid.css'
 import '../styles/typography.css'

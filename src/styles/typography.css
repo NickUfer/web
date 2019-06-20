@@ -66,6 +66,11 @@ a, a:visited {
     &:hover, &:active {
         color: var(--ory-brand-white);
     }
+    &.to-black {
+        &:hover, &:active {
+            color: var(--ory-brand-dark-primary);
+        }
+    }
 }
 
 a.inverse, a.inverse:visited, li a, li a:visited {

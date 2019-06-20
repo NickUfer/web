@@ -5,11 +5,23 @@
 .project {
     display: flex;
     margin-bottom: 32px;
+    cursor: pointer;
+    transition: color ease 200ms;
+
     & img {
         margin-right: 20px;
         max-width: 90px;
         max-height: 90px;
         width: 100%;
+        transition: transform ease 200ms;
+    }
+
+    &:hover p, &:hover h4 {
+        color: var(--ory-brand-tertiary);
+    }
+
+    &:hover img {
+        transform: rotate(90deg);
     }
 }
 

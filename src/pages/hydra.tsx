@@ -82,7 +82,7 @@ const HydraPage = () => (
           <p>
             ORY Hydra is Open Source and OpenID Connect Certified&reg; technology that
             integrates with any login system. Get started in minutes, and provide secure access
-            to your application and API endpoints. Head over to our documentation and learn more.
+            to your application and API endpoints. Head over to our <a className="to-black" href="https://www.ory.sh/docs/hydra">documentation</a> and learn more.
           </p>
         </>
       )}
@@ -101,7 +101,7 @@ const HydraPage = () => (
           <p className="mobile-offset-32">
             ORY Hydra is Open Source and OpenID Connect Certified&reg; technology that
             integrates with any login system. Get started in minutes, and provide secure access
-            to your application and API endpoints. Head over to our documentation and learn more.
+            to your application and API endpoints. Head over to our <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn more.
           </p>
         ),
       ]}
