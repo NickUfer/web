@@ -38,9 +38,9 @@ const Projects = () => (
             2.0 and is available for free on GitHub. Our core projects are ORY Hydra, ORY Oathkeeper and ORY Keto.
           </p>
           <p>
-            You can also become a sponsor or supporter of our open source efforts via
-            <a href="https://opencollective.com/ory">Open
-              Collective</a> or <a href="https://www.patreon.com/_ory">Patreon</a>.
+            You can also become a sponsor or supporter of our open source efforts
+            via <a href="https://opencollective.com/ory">Open
+            Collective</a> or <a href="https://www.patreon.com/_ory">Patreon</a>.
           </p>
         </div>
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
