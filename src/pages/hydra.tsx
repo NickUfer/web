@@ -51,6 +51,11 @@ const IntegrationCodeBox = () => (
 
 const HydraPage = () => (
   <Layout
+    announcement={(
+      <>
+        <a href="https://github.com/ory/hydra/releases/tag/v1.0.0">Version 1.0.0 has just been released!</a>
+      </>
+    )}
     tiny={process.env.GATSBY_DOMAIN === 'gethydra.sh'}
     menu={[
       { title: 'Get started', href: 'https://www.ory.sh/docs/hydra/5min-tutorial', className: 'hidden-sm' },

@@ -1,4 +1,5 @@
 declare const styles: {
+  readonly "toBlack": string;
   readonly "inverse": string;
   readonly "secondary": string;
   readonly "cta": string;
