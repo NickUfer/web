@@ -53,7 +53,7 @@ const HydraPage = () => (
   <Layout
     announcement={(
       <>
-        <a href="https://github.com/ory/hydra/releases/tag/v1.0.0">Version 1.0.0 has just been released!</a>
+        <a href="https://github.com/ory/hydra/releases/tag/v1.0.0">Announcing ORY Hydra version 1.0.0!</a>
       </>
     )}
     tiny={process.env.GATSBY_DOMAIN === 'gethydra.sh'}
