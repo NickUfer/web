@@ -70,22 +70,30 @@ const HydraPage = () => (
         for their invaluable feedback and trust in this open source project.
       </p>
       <p>
+        As part of this release, we are pleased to announce that {productName}
+        has been certified as an OpenID Provider by the{' '}
+        <a href="https://openid.net/foundation/">OpenID Foundation</a>!
+        Certified profiles include: Basic OP, Implicit OP, Hybrid OP, Config OP,
+        Dynamic OP.
+      </p>
+      <p>
         In the name of all the maintainers and contributors, we want to thank
         our sponsors <a href="https://www.raspberrypi.org/">Raspberry PI</a>,{' '}
         <a href="https://deutsche-boerse.com/dbg-de/">German Stock Exchange</a>,{' '}
         <a href="https://www.thoughtworks.com/">ThoughtWorks</a>,{' '}
-        <a href="https://tulip.com/">Tulip Retail</a>, {}
+        <a href="https://tulip.com/">Tulip Retail</a>,{' '}
         <a href="https://allmyfunds.com.au/">AllMyFunds</a> and everyone who
         helped financially with bringing this project forward.
       </p>
       <h3>What's next?</h3>
       <p>
         There are many exciting things coming up. We are currently in the
-        process of applying to become an incubating project of the{' '}
-        <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a>.
-        There are also several plans of improving interoperability with
-        Kubernetes through Custom Resources and Custom Controllers. We are also
-        planning of implementing several up-and-coming specs such as the{' '}
+        process of applying to become a
+        <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a>{' '}
+        incubating project. There are also several plans of improving
+        interoperability with Kubernetes through Custom Resources and Custom
+        Controllers. We are also planning of implementing several up-and-coming
+        specs such as the{' '}
         <a href="https://openid.net/wg/fapi/">Financial-grade API</a> proposals
         and the{' '}
         <a href="https://datatracker.ietf.org/doc/draft-ietf-oauth-mtls/">

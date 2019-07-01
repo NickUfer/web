@@ -222,7 +222,6 @@ class Stats extends Component<PropTypes, StateTypes> {
     ;(Object.keys(this.state.docker) as Array<keyof Docker>).forEach(repo => {
       this.fetchDockerImagePulls(repo)
     })
-
     ;(Object.keys(this.state.github) as Array<keyof GitHub>).forEach(repo => {
       this.fetchGitHubStars(repo)
     })
