@@ -3,14 +3,14 @@ import cn from 'classnames'
 import * as styles from './hero.module.css'
 
 interface CallToAction {
-  title: string,
-  href: string,
-  style?: 'primary' | 'secondary',
+  title: string
+  href: string
+  style?: 'primary' | 'secondary'
 }
 
 interface PropTypes {
-  title: string,
-  subtitle: string,
+  title: string
+  subtitle: string
   cta: CallToAction[]
 }
 
@@ -24,7 +24,9 @@ const Hero = ({ title, subtitle, cta }: PropTypes) => (
           <h2>{subtitle}</h2>
           <>
             {cta.map(({ title, href, style = 'secondary' }) => (
-              <a key={title} href={href} className={cn(style, 'cta')}>{title}</a>
+              <a key={title} href={href} className={cn(style, 'cta')}>
+                {title}
+              </a>
             ))}
           </>
         </div>

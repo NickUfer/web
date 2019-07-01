@@ -44,8 +44,8 @@ const Adopters = () => (
         <div className="mobile-offset-16 col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
           <h3 className="hidden-md hidden-sm">Developers love ORY</h3>
           <p>
-            Developers across different industries and companies use ORY to provide
-            secure access to their applications and endpoints.
+            Developers across different industries and companies use ORY to
+            provide secure access to their applications and endpoints.
           </p>
         </div>
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">

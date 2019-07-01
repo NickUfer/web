@@ -9,13 +9,24 @@ import '../styles/global.css'
 import '../styles/grid.css'
 import '../styles/typography.css'
 
-const Layout = ({ children, menu, icons, tiny, announcement }: { children: ReactNode, menu: Menu, icons: IconMenu, tiny: boolean, announcement?: ReactNode }) => (
+const Layout = ({
+  children,
+  menu,
+  icons,
+  tiny,
+  announcement,
+}: {
+  children: ReactNode
+  menu: Menu
+  icons: IconMenu
+  tiny: boolean
+  announcement?: ReactNode
+}) => (
   <>
     {announcement ? <Announcement>{announcement}</Announcement> : null}
-    <Header menu={menu} icons={icons} tiny={tiny}/>
+    <Header menu={menu} icons={icons} tiny={tiny} />
     <main>{children}</main>
-    <footer>
-    </footer>
+    <footer></footer>
   </>
 )
 

@@ -14,7 +14,7 @@ class Newsletter extends Component<{}, StateTypes> {
     e.preventDefault()
     window.open(
       'https://ory.us10.list-manage.com/subscribe?u=ffb1a878e4ec6c0ed312a3480&id=f605a41b53&MERGE0=' +
-      encodeURIComponent(this.state.email),
+        encodeURIComponent(this.state.email)
     )
   }
 
@@ -31,21 +31,33 @@ class Newsletter extends Component<{}, StateTypes> {
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <h3>Never miss a patch</h3>
               <p>
-                Keep your applications and systems up to date.
-                ORY ships regular product patches and updates.
-                Subscribe to our newsletter to get the “good stuff”.
+                Keep your applications and systems up to date. ORY ships regular
+                product patches and updates. Subscribe to our newsletter to get
+                the “good stuff”.
               </p>
             </div>
-            <div className={cn('col-lg-offset-2 col-lg-4  col-md-offset-1 col-sm-10  col-sm-offset-1 col-sm-10', styles.right)}>
+            <div
+              className={cn(
+                'col-lg-offset-2 col-lg-4  col-md-offset-1 col-sm-10  col-sm-offset-1 col-sm-10',
+                styles.right
+              )}
+            >
               <h3>Subscribe now</h3>
               <form className={styles.form}>
-                <input type="email"
+                <input
+                  type="email"
                   name={'email'}
                   placeholder={'Enter your email'}
                   required
                   onChange={this.onChange}
-                  value={this.state.email} />
-                <input type="button" name={'submit'} value={'Subscribe'} onClick={this.onSubmit} />
+                  value={this.state.email}
+                />
+                <input
+                  type="button"
+                  name={'submit'}
+                  value={'Subscribe'}
+                  onClick={this.onSubmit}
+                />
               </form>
               <p className="secondary">
                 We send you "the good stuff" to keep you up to date.

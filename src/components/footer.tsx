@@ -72,7 +72,7 @@ const Footer = () => (
             <a href="mailto:hi@ory.sh">hi@ory.sh</a>
           </p>
           <p className="secondary" style={{ marginTop: 2 }}>
-            &copy; 2015-2019 ORY GmbH
+            &copy; 2019 Ory Corp.
           </p>
         </div>
         <div className="col-lg-7 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile mobile-offset-64">

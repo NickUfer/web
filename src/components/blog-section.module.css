@@ -1,0 +1,31 @@
+@import "../styles/properties.css";
+
+.section {
+    padding: 96px 0;
+
+    background-color: var(--ory-brand-primary-light-05);
+
+    & h2, & h3, & h4, & h5, & h6, & li, & p {
+        color: var(--ory-brand-dark-primary);
+    }
+
+    & p + h3 {
+        margin-top: 32px;
+    }
+
+    & p a:hover, & p a:active {
+        color: var(--ory-brand-dark-primary);
+    }
+}
+
+@media (--sm-viewport) {
+    .section {
+        padding: 64px 0;
+    }
+}
+
+@media (--md-viewport) {
+    .section {
+        padding: 64px 0;
+    }
+}

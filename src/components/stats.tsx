@@ -12,7 +12,7 @@ import AnimatedCounter from './animated-counter'
 
 const countGitHubStars = (state: StateTypes) =>
   (Object.keys(state.github) as Array<keyof GitHub>)
-    .map((repo) => state.github[repo])
+    .map(repo => state.github[repo])
     .reduce((p: number, n: number) => p + n, 0)
 
 const countDockerImagePulls = (state: StateTypes) =>
@@ -31,15 +31,20 @@ const analyze = (raw: string): Promise<number[][]> =>
       // Remove header
       let data: any = csv.slice(1)
 
-
       // Sort by date
-      data.sort((a: number[], b: number[]) => new Date(a[0]).getTime() - new Date(b[0]).getTime())
+      data.sort(
+        (a: number[], b: number[]) =>
+          new Date(a[0]).getTime() - new Date(b[0]).getTime()
+      )
 
       // Now that it's sorted, get the first (oldest) date
       // const then = new Date(data[0][0])
 
       // Remove dupes, transform dates to integer keys
-      data = uniq(data).map((v: any) => [(new Date(v[0])).getTime(), parseInt(v[1])])
+      data = uniq(data).map((v: any) => [
+        new Date(v[0]).getTime(),
+        parseInt(v[1]),
+      ])
 
       resolve(data)
     })
@@ -59,7 +64,6 @@ const uniq = (raw: any) => {
 }
 //
 
-
 const stats = (state: StateTypes) => [
   {
     title: 'Requests secured',
@@ -78,23 +82,24 @@ const stats = (state: StateTypes) => [
   },
 ]
 
-interface PropTypes {
-}
+interface PropTypes {}
 
-type GitHubRepos = 'hydra' |
-  'fosite' |
-  'ladon' |
-  'dockertest' |
-  'oathkeeper' |
-  'keto' |
-  'hive' |
-  'docs' |
-  'examples'
+type GitHubRepos =
+  | 'hydra'
+  | 'fosite'
+  | 'ladon'
+  | 'dockertest'
+  | 'oathkeeper'
+  | 'keto'
+  | 'hive'
+  | 'docs'
+  | 'examples'
 
-type DockerImages = 'oryd/hydra' |
-  'oryam/hydra' |
-  'oryd/oathkeeper' |
-  'oryd/keto'
+type DockerImages =
+  | 'oryd/hydra'
+  | 'oryam/hydra'
+  | 'oryd/oathkeeper'
+  | 'oryd/keto'
 
 type GitHub = {
   [T in GitHubRepos]: number
@@ -108,9 +113,9 @@ interface StateTypes {
   docker: Docker
   github: GitHub
   requests: {
-    amount: number,
-    date: Date,
-  },
+    amount: number
+    date: Date
+  }
 }
 
 class Stats extends Component<PropTypes, StateTypes> {
@@ -150,14 +155,14 @@ class Stats extends Component<PropTypes, StateTypes> {
       })
       .catch(err =>
         console.error(
-          `An error occurred while trying to fetch "${url}": ${err}`,
-        ),
+          `An error occurred while trying to fetch "${url}": ${err}`
+        )
       )
   }
 
   fetchDockerImagePulls = (repo: DockerImages) => {
     fetch(
-      `https://corsar.herokuapp.com/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`,
+      `https://corsar.herokuapp.com/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`
     )
       .then(body => body.json())
       .then(({ pull_count }: { pull_count: number }) => {
@@ -170,8 +175,8 @@ class Stats extends Component<PropTypes, StateTypes> {
       })
       .catch(err =>
         console.error(
-          `An error occurred while trying to fetch "${repo}": ${err}`,
-        ),
+          `An error occurred while trying to fetch "${repo}": ${err}`
+        )
       )
   }
 
@@ -183,9 +188,11 @@ class Stats extends Component<PropTypes, StateTypes> {
     ]).then((services: number[][][]) => {
       const requests: { [key: number]: number } = {}
 
-      services.forEach((rows) => {
-        rows.forEach((row) => {
-          requests[row[0]] = requests[row[0]] ? requests[row[0]] + row[1] : row[1]
+      services.forEach(rows => {
+        rows.forEach(row => {
+          requests[row[0]] = requests[row[0]]
+            ? requests[row[0]] + row[1]
+            : row[1]
         })
       })
 
@@ -201,22 +208,22 @@ class Stats extends Component<PropTypes, StateTypes> {
       console.log(max, requests)
 
       this.setState(() => {
-        return ({
+        return {
           requests: {
             amount: max[1],
             date: new Date(max[0]),
           },
-        })
+        }
       })
     })
   }
 
   componentDidMount() {
-    (Object.keys(this.state.docker) as Array<keyof Docker>).forEach((repo) => {
+    ;(Object.keys(this.state.docker) as Array<keyof Docker>).forEach(repo => {
       this.fetchDockerImagePulls(repo)
-    });
+    })
 
-    (Object.keys(this.state.github) as Array<keyof GitHub>).forEach((repo) => {
+    ;(Object.keys(this.state.github) as Array<keyof GitHub>).forEach(repo => {
       this.fetchGitHubStars(repo)
     })
 
@@ -230,27 +237,22 @@ class Stats extends Component<PropTypes, StateTypes> {
           <div className="row">
             <VerticalDivider padding={96} />
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-              <h3>
-                Adoption rate
-              </h3>
+              <h3>Adoption rate</h3>
               <p>
-                All of our security-relevant code is open source, and our flows and
-                concepts are rooted in open standards and industry best practices.
+                All of our security-relevant code is open source, and our flows
+                and concepts are rooted in open standards and industry best
+                practices.
               </p>
             </div>
             <div className="mobile-offset-32 col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <div className={styles.items}>
                 {stats(this.state).map(({ title, amount, description }) => (
                   <div key={title} className={styles.item}>
-                    <div className={styles.title}>
-                      {title}
-                    </div>
+                    <div className={styles.title}>{title}</div>
                     <div className={styles.amount}>
                       <AnimatedCounter countTo={amount} />
                     </div>
-                    <div className={styles.description}>
-                      {description}
-                    </div>
+                    <div className={styles.description}>{description}</div>
                   </div>
                 ))}
               </div>
@@ -261,6 +263,5 @@ class Stats extends Component<PropTypes, StateTypes> {
     )
   }
 }
-
 
 export default Stats

@@ -1,0 +1,50 @@
+@import "../styles/properties.css";
+
+.title {
+    background: var(--ory-brand-primary);
+
+    & :global .container-fluid {
+        position: relative;
+        padding: 96px 0;
+    }
+
+    & h1 {
+        font-weight: 300;
+        font-size: 36px;
+        line-height: 126%;
+        margin-bottom: 32px;
+    }
+
+    & .date {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 168%;
+    }
+}
+
+@media (--sm-viewport) {
+    .title {
+        & :global .container-fluid {
+            padding: 64px 0;
+        }
+    }
+}
+
+@media (--md-viewport) {
+    .title {
+        & :global .container-fluid {
+            padding: 64px 0;
+        }
+    }
+}
+
+
+.teaser {
+    background: var(--ory-brand-ui-primary-dark-70);
+
+    & :global .container-fluid {
+        position: relative;
+        padding: 32px 0;
+    }
+}

@@ -6,13 +6,13 @@ import 'prismjs/themes/prism.css'
 import * as styles from './codebox.module.css'
 
 interface Tab {
-  filename: string,
-  code: string,
-  language: string,
+  filename: string
+  code: string
+  language: string
 }
 
 interface PropTypes {
-  tabs: Tab[    ]
+  tabs: Tab[]
 }
 
 interface StateTypes {
@@ -43,15 +43,26 @@ class CodeBox extends Component<PropTypes, StateTypes> {
             <div className={styles.windowAction} />
           </div>
           {tabs.map(({ filename }, index) => (
-            <div key={filename} className={cn(styles.tab, { [styles.selected]: index === this.state.active })} onClick={this.onSelectTab(index)}>
+            <div
+              key={filename}
+              className={cn(styles.tab, {
+                [styles.selected]: index === this.state.active,
+              })}
+              onClick={this.onSelectTab(index)}
+            >
               {filename}
             </div>
           ))}
         </div>
         <div className={styles.content}>
           {tabs.map(({ filename, code, language }, index) => (
-            <pre key={filename} className={cn(`language-${language}`, { [styles.active]: index === this.state.active })}>
-                <code dangerouslySetInnerHTML={{ __html: `${code}` }} />
+            <pre
+              key={filename}
+              className={cn(`language-${language}`, {
+                [styles.active]: index === this.state.active,
+              })}
+            >
+              <code dangerouslySetInnerHTML={{ __html: `${code}` }} />
             </pre>
           ))}
         </div>

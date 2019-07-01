@@ -3,6 +3,7 @@
 hydra:
 		mv src/pages/404.tsx src/build/
 		mv src/pages/hydra.tsx src/build/
+		mv src/pages/hydra-1.0-stable-release.tsx src/build/
 		rm src/pages/*
 		mv src/build/* src/pages/
 		mv src/pages/hydra.tsx src/pages/index.tsx

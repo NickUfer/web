@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react'
 import * as styles from './announcement.module.css'
 
 interface PropTypes {
-  children: ReactNode,
+  children: ReactNode
 }
 
 const Announcement = ({ children }: PropTypes) => (

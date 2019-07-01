@@ -4,8 +4,8 @@ import { Menu, IconMenu } from './header'
 import styles from './mobile-menu.module.css'
 
 interface PropTypes {
-  menu: Menu,
-  icons: IconMenu,
+  menu: Menu
+  icons: IconMenu
 }
 
 interface StateTypes {
@@ -27,19 +27,18 @@ class MobileMenu extends Component<PropTypes, StateTypes> {
       <div className="hidden-lg">
         <button
           onClick={this.toggle}
-          className={cn(
-            styles.navIcon,
-            { [styles.isActive]: this.state.open },
-          )}
+          className={cn(styles.navIcon, { [styles.isActive]: this.state.open })}
           type="button"
         >
-          <div/>
+          <div />
         </button>
-        <div className={cn(styles.navItems, { [styles.show]: this.state.open })}>
+        <div
+          className={cn(styles.navItems, { [styles.show]: this.state.open })}
+        >
           <div className="container-fluid">
             <div className="col-offset-sm-1 col-sm-10 col-md-offset-1 col-md-10">
               <div className={styles.navContainer}>
-                <div className={styles.divider}/>
+                <div className={styles.divider} />
                 <ul>
                   {menu.map(({ title, href }, index) => (
                     <li key={`menu-${index}`}>

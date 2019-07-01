@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 interface PropTypes {
-  description: string,
-  lang?: string,
-  meta?: any[],
+  description: string
+  lang?: string
+  meta?: any[]
   title: string
 }
 
@@ -17,7 +17,11 @@ const SEO = ({ description, lang = 'en', meta = [], title }: PropTypes) => (
       lang,
     }}
     title={title}
-    titleTemplate={`%s${process.env.GATSBY_DOMAIN === 'ory.sh' || !process.env.GATSBY_DOMAIN ? ' - ory.sh' : ''}`}
+    titleTemplate={`%s${
+      process.env.GATSBY_DOMAIN === 'ory.sh' || !process.env.GATSBY_DOMAIN
+        ? ' - ory.sh'
+        : ''
+    }`}
     meta={[
       {
         name: `description`,

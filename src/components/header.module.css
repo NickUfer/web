@@ -26,6 +26,7 @@
     color: var(--ory-brand-tertiary);
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .menu ul {

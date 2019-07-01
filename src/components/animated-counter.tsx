@@ -24,10 +24,7 @@ class AnimatedCounter extends Component<PropTypes, StateTypes> {
 
   render() {
     return (
-      <VisibilitySensor
-        delayedCall
-        onChange={this.onChange}
-      >
+      <VisibilitySensor delayedCall onChange={this.onChange}>
         <div>
           {this.state.visible ? (
             <CountUp
