@@ -3,16 +3,13 @@ import React from 'react'
 import BlogHero from '../components/blog-hero'
 import BlogSection from '../components/blog-section'
 import SEO from '../components/seo'
-import CodeBox from '../components/codebox'
 import discord from '../images/discord.svg'
 import github from '../images/github.svg'
 import discourse from '../images/discourse.svg'
-import integrationAnimation from '../images/hydra/animation.svg'
-import Stats from '../components/stats'
 import Footer from '../components/footer'
+import { brandPrefix } from '../config'
 
-const productName =
-  process.env.GATSBY_DOMAIN === 'gethydra.sh' ? 'Hydra' : 'ORY Hydra'
+const productName = `${brandPrefix}Hydra`
 const title = `${productName} v1.0 is here!`
 
 const HydraPage = () => (

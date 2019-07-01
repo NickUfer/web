@@ -1,7 +1,5 @@
-import React from "react"
+import React from 'react'
 
-const IndexPage = () => (
-  <>home</>
-)
+const IndexPage = () => <>home</>
 
 export default IndexPage

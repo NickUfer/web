@@ -5,24 +5,25 @@ import * as pstyles from './projects.module.css'
 import hydra from '../images/ory-hydra.svg'
 import keto from '../images/ory-keto.svg'
 import oathkeeper from '../images/ory-oathkeeper.svg'
+import { brandPrefix } from '../config'
 
 const projects = [
   {
-    title: 'ORY Hydra',
+    title: `${brandPrefix}Hydra`,
     description:
       'Secure access to your applications and APIs with OAuth 2.0 and OpenID Connect.',
     image: hydra,
     github: 'https://github.com/ory/hydra',
   },
   {
-    title: 'ORY Oathkeeper',
+    title: `${brandPrefix}Oathkeeper`,
     description:
       'Verify and allow identities to interact with your applications.',
     image: oathkeeper,
     github: 'https://github.com/ory/oathkeeper',
   },
   {
-    title: 'ORY Keto',
+    title: `${brandPrefix}Keto`,
     description: 'A best practice patterns based access control REST API.',
     image: keto,
     github: 'https://github.com/ory/keto',
@@ -38,8 +39,9 @@ const Projects = () => (
           <p>
             All of our code is open source, fueled by an engaged community of
             contributors. It is licensed under Apache 2.0 and is available for
-            free on GitHub. Our core projects are ORY Hydra, ORY Oathkeeper and
-            ORY Keto.
+            free on GitHub. Our core projects are {brandPrefix}Hydra,{' '}
+            {brandPrefix}Oathkeeper and
+            {brandPrefix}Keto.
           </p>
           <p>
             You can also become a sponsor or supporter of our open source

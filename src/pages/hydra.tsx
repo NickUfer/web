@@ -14,6 +14,7 @@ import discord from '../images/discord.svg'
 import github from '../images/github.svg'
 import discourse from '../images/discourse.svg'
 import integrationAnimation from '../images/hydra/animation.svg'
+import { brandPrefix } from '../config'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -56,11 +57,11 @@ const HydraPage = () => (
     announcement={
       <>
         <a href="https://github.com/ory/hydra/releases/tag/v1.0.0">
-          Announcing ORY Hydra version 1.0.0!
+          Announcing {brandPrefix}Hydra version 1.0.0!
         </a>
       </>
     }
-    tiny={process.env.GATSBY_DOMAIN === 'gethydra.sh'}
+    tiny={brandPrefix.length === 0}
     menu={[
       {
         title: 'Get started',
@@ -80,7 +81,7 @@ const HydraPage = () => (
       title={
         process.env.GATSBY_DOMAIN === 'gethydra.sh'
           ? 'Open Source OAuth 2.0 and OpenID Connect Server - gethydra.sh'
-          : 'ORY Hydra'
+          : `${brandPrefix}Hydra Open Source OAuth 2.0 and OpenID Connect Server - ory.sh`
       }
     />
     <Hero
@@ -103,9 +104,9 @@ const HydraPage = () => (
     <Section
       left={
         <>
-          <h3>How ORY Hydra works</h3>
+          <h3>How {brandPrefix}Hydra works</h3>
           <p>
-            ORY Hydra is Open Source and OpenID Connect Certified&reg;
+            {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
             technology that integrates with any login system. Get started in
             minutes, and provide secure access to your application and API
             endpoints. Head over to our{' '}
@@ -125,18 +126,19 @@ const HydraPage = () => (
         />
       }
       mobile={[
-        <h3>How ORY Hydra works</h3>,
+        <h3>How {brandPrefix}Hydra works</h3>,
         <img
           alt="The ORY Hydra login and consent flow"
           className="responsive"
           src={integrationAnimation}
         />,
         <p className="mobile-offset-32">
-          ORY Hydra is Open Source and OpenID Connect Certified&reg; technology
-          that integrates with any login system. Get started in minutes, and
-          provide secure access to your application and API endpoints. Head over
-          to our <a href="https://www.ory.sh/docs/hydra">documentation</a> and
-          learn more.
+          {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
+          technology that integrates with any login system. Get started in
+          minutes, and provide secure access to your application and API
+          endpoints. Head over to our{' '}
+          <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn
+          more.
         </p>,
       ]}
     />
@@ -148,11 +150,11 @@ const HydraPage = () => (
         <>
           <h3>Polyglot</h3>
           <p>
-            ORY Hydra is written in Go and we provide SDKs for every language.
-            We work with any login system and it is easy to customize the login
-            experience. Our{' '}
+            {brandPrefix}Hydra is written in Go and we provide SDKs for every
+            language. We work with any login system and it is easy to customize
+            the login experience. Our{' '}
             <a href="https://www.ory.sh/docs/hydra">documentation</a> makes
-            integrating ORY Hydra a snap.
+            integrating {brandPrefix}Hydra a snap.
           </p>
         </>
       }
@@ -160,11 +162,11 @@ const HydraPage = () => (
         <h3>Polyglot</h3>,
         <img className="responsive" src={codeAnimation} />,
         <p className="mobile-offset-32">
-          ORY Hydra is written in Go and we provide SDKs for every language. We
-          work with any login system and it is easy to customize the login
-          experience. Our{' '}
+          {brandPrefix}Hydra is written in Go and we provide SDKs for every
+          language. We work with any login system and it is easy to customize
+          the login experience. Our{' '}
           <a href="https://www.ory.sh/docs/hydra">documentation</a> makes
-          integrating ORY Hydra a snap.
+          integrating {brandPrefix}Hydra a snap.
         </p>,
       ]}
     />
@@ -173,8 +175,8 @@ const HydraPage = () => (
         <>
           <h3>Easy integration</h3>
           <p>
-            ORY Hydra works with any login system and only a few lines of code
-            are required.
+            {brandPrefix}Hydra works with any login system and only a few lines
+            of code are required.
           </p>
           <p>
             ORY technology works on the network. It interfaces as little as
@@ -198,8 +200,8 @@ const HydraPage = () => (
         <IntegrationCodeBox />,
         <div className={'mobile-offset-32'}>
           <p>
-            ORY Hydra works with any login system and only a few lines of code
-            are required.
+            {brandPrefix}Hydra works with any login system and only a few lines
+            of code are required.
           </p>
           <p>
             ORY technology works on the network. It interfaces as little as

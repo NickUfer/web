@@ -2,7 +2,9 @@ import React from 'react'
 import cn from 'classnames'
 
 import logo from '../images/logo-ory-footer.svg'
+import logoTiny from '../images/logo-ory-footer-tiny.svg'
 import styles from './footer.module.css'
+import { brandPrefix } from '../config'
 
 const menu = [
   {
@@ -43,19 +45,19 @@ const menu = [
     title: 'GitHub',
     items: [
       {
-        title: 'ORY Hydra',
+        title: `${brandPrefix}Hydra`,
         href: 'https://github.com/ory/hydra',
       },
       {
-        title: 'ORY Oathkeeper',
+        title: `${brandPrefix}Oathkeeper`,
         href: 'https://github.com/ory/oathkeeper',
       },
       {
-        title: 'ORY Keto',
+        title: `${brandPrefix}Keto`,
         href: 'https://github.com/ory/keto',
       },
       {
-        title: 'ORY Hive',
+        title: `${brandPrefix}Hive`,
         href: 'https://github.com/ory/keto',
       },
     ],
@@ -67,10 +69,18 @@ const Footer = () => (
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
-          <img src={logo} alt={'ORY logo'} />
-          <p className={cn('secondary', styles.contact)}>
-            <a href="mailto:hi@ory.sh">hi@ory.sh</a>
-          </p>
+          {brandPrefix.length > 0 ? (
+            <>
+              <img src={logo} alt={'ORY logo'} />
+              <p className={cn('secondary', styles.contact)}>
+                <a href="mailto:hi@ory.sh">hi@ory.sh</a>
+              </p>
+            </>
+          ) : (
+            <>
+              <img src={logoTiny} alt={'ORY logo'} />
+            </>
+          )}
           <p className="secondary" style={{ marginTop: 2 }}>
             &copy; 2019 Ory Corp.
           </p>
