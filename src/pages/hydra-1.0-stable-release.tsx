@@ -36,10 +36,11 @@ const HydraPage = () => (
       subtitle={
         <>
           <p>
-            We are very excited to announce the 1.0 release of {productName},
-            the open source OpenID Connect Certified&reg; certified OAuth 2.0
-            and OpenID Connect server that runs natively everywhere: Kubernetes,
-            Virtual Machines, Bare-Metal-Servers, Windows, IoT devices.
+            We are very excited to announce the 1.0 release of{' '}
+            <a href={'https://github.com/ory/hydra'}>{productName}</a>, the open
+            source OpenID Connect Certified&reg; certified OAuth 2.0 and OpenID
+            Connect server that runs natively everywhere: Kubernetes, Virtual
+            Machines, Bare-Metal-Servers, Windows, IoT devices.
           </p>
           <p>
             {productName} is available via{' '}
