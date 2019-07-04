@@ -58,7 +58,7 @@ const menu = [
       },
       {
         title: `${brandPrefix}Hive`,
-        href: 'https://github.com/ory/keto',
+        href: 'https://github.com/ory/hive',
       },
     ],
   },
