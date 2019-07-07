@@ -86,7 +86,7 @@ const HydraPage = () => (
       <h3>What's next?</h3>
       <p>
         There are many exciting things coming up. We are currently in the
-        process of applying to become a
+        process of applying to become a {' '}
         <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a>{' '}
         incubating project. There are also several plans of improving
         interoperability with Kubernetes through Custom Resources and Custom
