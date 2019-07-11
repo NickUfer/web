@@ -85,8 +85,8 @@ const HydraPage = () => (
       }
     />
     <Hero
-      title="Build secure cloud native applications and infrastructure"
-      subtitle="Open source and OpenID Certified&reg; access control and API security."
+      title="Secure access to your applications and APIs"
+      subtitle="OpenID Certified&reg; OAuth 2.0 and OpenID Connect access control and API security for cloud native applications."
       cta={[
         {
           title: 'Docs',
@@ -179,7 +179,7 @@ const HydraPage = () => (
             of code are required.
           </p>
           <p>
-            ORY technology works on the network. It interfaces as little as
+            ORY technology works on the network. It interferes as little as
             possible with your code so you can concentrate on building your
             applications.
           </p>
@@ -204,7 +204,7 @@ const HydraPage = () => (
             of code are required.
           </p>
           <p>
-            ORY technology works on the network. It interfaces as little as
+            ORY technology works on the network. It interferes as little as
             possible with your code so you can concentrate on building your
             applications.
           </p>
