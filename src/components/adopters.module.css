@@ -38,5 +38,6 @@
 
     & img {
         margin: 0 4px 16px 4px;
+        max-width: 128px;
     }
 }

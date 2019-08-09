@@ -3,6 +3,9 @@ import styles from './adopters.module.css'
 import VerticalDivider from './vertical-divider'
 
 import allmyfunds from '../images/adopters/allmyfunds.svg'
+import kyma from '../images/adopters/kyma.svg'
+import tw from '../images/adopters/tw.svg'
+import threerein from '../images/adopters/3R-horiz.svg'
 import arduino from '../images/adopters/arduino.svg'
 import hootsuite from '../images/adopters/hootsuite.svg'
 import raspi from '../images/adopters/raspi.svg'
@@ -10,6 +13,10 @@ import segment from '../images/adopters/segment.svg'
 import tulip from '../images/adopters/tulip.svg'
 
 const adopters = [
+  {
+    title: 'ThoughtWorks',
+    image: tw,
+  },
   {
     title: 'Tulip Retail',
     image: tulip,
@@ -33,6 +40,14 @@ const adopters = [
   {
     title: 'Hootsuite',
     image: hootsuite,
+  },
+  {
+    title: '3REIN',
+    image: threerein,
+  },
+  {
+    title: 'Kyma Project',
+    image: kyma,
   },
 ]
 
