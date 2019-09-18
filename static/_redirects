@@ -14,6 +14,10 @@ https://www.ory.am/sites https://editor.ory.sh 301!
 https://www.ory.sh/sites/* https://editor.ory.sh 301!
 https://www.ory.am/sites/* https://editor.ory.sh 301!
 
+https://www.ory.sh/docs/deprecated/* https://www.ory.sh/docs/ 302!
+https://www.ory.sh/docs/guides/* https://www.ory.sh/docs/ 302!
+https://www.ory.sh/docs/faq https://www.ory.sh/docs/ 302!
+
 ## Shortlinks
 
 https://www.ory.sh/pnp https://arekkas.typeform.com/to/H6sChj 302!
@@ -67,3 +71,4 @@ https://www.ory.sh/docs/guides/master/performance/ https://www.ory.sh/docs/perfo
 https://www.ory.sh/docs/guides/master/performance/1-hydra.html https://www.ory.sh/docs/performance/performance-hydra 302!
 
 https://www.ory.sh/docs/guides/master/telemetry/ https://www.ory.sh/docs/ecosystem/ecosystem-sqa 302!
+
