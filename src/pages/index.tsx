@@ -82,7 +82,7 @@ const IndexPage = () => (
             name="Aeneas Rekkas"
             description={
               <>
-                Nulla convallis massa ut nulla vulputate tempor. Duis accumsan.{' '}
+                <a href="https://github.com/aeneasr">github.com/aeneasr</a>
                 <a href="https://github.com/aeneasr">github.com/aeneasr</a>
               </>
             }
@@ -92,7 +92,7 @@ const IndexPage = () => (
             name="Thomas Aidan Curran"
             description={
               <>
-                Nulla convallis massa ut nulla vulputate tempor. Duis accumsan
+                <a href={"https://www.linkedin.com/in/thomasaidancurran/"}>linkedin.com/in/thomasaidancurran/</a>
               </>
             }
             img={thomas}
