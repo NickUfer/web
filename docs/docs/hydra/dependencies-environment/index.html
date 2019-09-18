@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Database Setup and Configuration · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;ORY Hydra is built cloud native and implements&lt;/p&gt;
+"/><meta name="docsearch:version" content="oryOS.12"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Database Setup and Configuration · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&lt;p&gt;ORY Hydra is built cloud native and implements&lt;/p&gt;
+"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.12</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Welcome</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/kubernetes">Kubernetes</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/persistence">Data Storage and Persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/usage">API Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Hydra</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/hydra/">Introduction to ORY Hydra, OAuth 2.0, and OpenID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/oauth2">Integrating with (existing) User Management</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/configuration">Configuration</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Oathkeeper</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/authn">Authenticators</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/authz">Authorizers</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/mutator">Mutators</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/configure-deploy">Configure and Deploy</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Keto</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/engines/">Access Controle Engines - Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Performance</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/dependencies-environment.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Database Setup and Configuration</h1></header><article><div><span><p>ORY Hydra is built cloud native and implements
+<a href="https://www.12factor.net/">12factor</a> principles. The Docker Image is 5 MB light
+and versioned with
+<a href="https://github.com/ory/hydra/blob/master/UPGRADE.md">verbose upgrade instructions</a>
+and
+<a href="https://github.com/ory/hydra/blob/master/CHANGELOG.md">detailed changelogs</a>.
+Auto-scaling, migrations, health checks, it all works with zero additional work
+required. It is possible to run ORY Hydra on any platform, including but not
+limited to OSX, Linux, Windows, ARM, FreeBSD and more.</p>
+<p>ORY Hydra has two operational modes:</p>
+<ul>
+<li>In-memory: This mode does not work with more than one instance (&quot;cluster&quot;) and
+any state is lost after restarting the instance.</li>
+<li>SQL: This mode works with more than one instance and state is not lost after
+restarts.</li>
+</ul>
+<p>No further dependencies are required for a production-ready instance.</p>
+<h2><a class="anchor" aria-hidden="true" id="sql"></a><a href="#sql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>SQL</h2>
+<p>The SQL adapter supports two DBMS: PostgreSQL 9.6+ and MySQL 5.7+. Please note
+that older MySQL versions have issues with ORY Hydra's database schema. For more
+information <a href="https://github.com/ory/hydra/issues/377">go here</a>.</p>
+<p>If you do run the SQL adapter, you must first create the database schema. The
+<code>hydra serve</code> command does not do this automatically, instead you must run
+<code>hydra migrate sql</code> to create the schemas. The <code>hydra migrate sql</code> command also
+runs database migrations in case of an upgrade. Please follow the
+<a href="https://github.com/ory/hydra/blob/master/UPGRADE.md">upgrade instructions</a> to
+see when you need to run this command. Always create a backup before running
+<code>hydra migrate sql</code>!</p>
+<p>Running SQL migrations in Docker is very easy, check out the
+<a href="https://github.com/ory/hydra/blob/master/quickstart-postgres.yml">docker-compose</a>
+example to see how we did it!</p>
+<h3><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h3>
+<p>Both MySQL and PostgreSQL adapters support the following settings. You can
+modify these settings by appending query parameters to your DSN
+(<code>postgres://user:pw@host:port/database?setting1=foo&amp;setting2=bar</code>):</p>
+<ul>
+<li><code>max_conns</code> sets the maximum number of open connections to the database.
+Defaults to the number of CPUs. Example
+<code>postgres://user:pw@host:port/database?max_conns=10</code>.</li>
+<li><code>max_idle_conns</code> sets the maximum number of connections in the idle connection
+pool. Defaults to the number of CPUs. Example
+<code>postgres://user:pw@host:port/database?max_idle_conns=5</code>.</li>
+<li><code>max_conn_lifetime</code> sets the maximum amount of time (<code>ms</code>, <code>s</code>, <code>m</code>, <code>h</code>) a
+connection may be reused. Defaults to 0. Example
+<code>postgres://user:pw@host:port/database?max_conn_lifetime=10s</code>.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="mysql"></a><a href="#mysql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>MySQL</h4>
+<blockquote>
+<p>DSN Layout:
+<code>mysql://user:pw@tcp(host:port)/database?someSetting=value&amp;foo=bar</code>.</p>
+</blockquote>
+<p>On top of the settings above, MySQL supports additional settings:</p>
+<ul>
+<li><code>sql_notes</code>, if set to <code>false</code>, ignores MySQL notices. If left empty or set to
+<code>true</code>, they will be treated as warnings. Example
+<code>mysql://user:pw@tcp(host:port)/database?sql_notes=false</code>.</li>
+<li><code>sql_mode</code> sets the server-side strict mode. Read more about possible values
+<a href="https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html">here</a>.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="postgresql"></a><a href="#postgresql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>PostgreSQL</h4>
+<blockquote>
+<p>DSN Layout: <code>postgres://user:pw@host:port/database?someSetting=value&amp;foo=bar</code>.</p>
+</blockquote>
+<p>On top of the settings above, PostgreSQL supports additional settings:</p>
+<ul>
+<li><code>sslmode</code> sets whether or not to use SSL (default is require, this is not the
+default for libpq). Valid values for sslmode are: _ <code>disable</code> - No SSL _
+<code>require</code> - Always SSL (skip verification) _ <code>verify-ca</code> - Always SSL (verify
+that the certificate presented by the server was signed by a trusted CA) _
+<code>verify-full</code> - Always SSL (verify that the certification presented by the
+server was signed by a trusted CA and the server host name matches the one in
+the certificate)</li>
+<li><code>fallback_application_name</code> - An application_name to fall back to if one isn't
+provided.</li>
+<li><code>connect_timeout</code> - Maximum wait for connection, in seconds. Zero or not
+specified means wait indefinitely.</li>
+<li><code>sslcert</code> - Cert file location. The file must contain PEM encoded data.</li>
+<li><code>sslkey</code> - Key file location. The file must contain PEM encoded data.</li>
+<li><code>sslrootcert</code> - The location of the root certificate file. The file must
+contain PEM encoded data.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="plugin"></a><a href="#plugin" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Plugin</h2>
+<p>It is possible to implement your own DBAL using Go Plugins.</p>
+<blockquote>
+<p>We strongly discourage you from implementing your own DBAL. Special knowledge
+is required and internal interfaces will break without notice and migration
+guides. This can lead to serious security issues and vulnerabilities. USE AT
+YOUR OWN RISK.</p>
+</blockquote>
+<p>Your plugin must implement interface <code>github.com/ory/hydra/driver.Registry</code>. You
+can load the plugin as follows:</p>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">dsn:</span> <span class="hljs-attr">plugin:///path/to/file.so</span>
+</code></pre>
+<p>We strongly discourage you from using this feature.</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/hydra/configure-deploy"><span class="arrow-prev">← </span><span>Installation and Setup</span></a><a class="docs-next button" href="/docs/hydra/production"><span>Preparing for Production</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#sql">SQL</a><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li></ul></li><li><a href="#plugin">Plugin</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

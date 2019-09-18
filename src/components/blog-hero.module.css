@@ -1,50 +1,78 @@
-@import "../styles/properties.css";
+@import '../styles/properties.css';
 
 .title {
-    background: var(--ory-brand-primary);
+  background: var(--colors-ui-dark-primary);
 
-    & :global .container-fluid {
-        position: relative;
-        padding: 96px 0;
-    }
+  color: var(--colors-ui-white);
 
-    & h1 {
-        font-weight: 300;
-        font-size: 36px;
-        line-height: 126%;
-        margin-bottom: 32px;
-    }
+  & :global .container-fluid {
+    position: relative;
+    padding: 96px 0;
+  }
 
-    & .date {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 12px;
-        line-height: 168%;
+  & h1 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 126%;
+    margin-bottom: 16px;
+  }
+
+  & .meta {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 168%;
+    color: var(--colors-ui-white);
+
+    & .author {
+      color: var(--colors-brand-secondary);
     }
+  }
+}
+
+.subtitle {
+  color: var(--colors-brand-secondary);
+  font-size: 12px;
+  line-height: 126%;
+  letter-spacing: 0.03em;
+  margin-bottom: 0;
+  font-weight: 600;
 }
 
 @media (--sm-viewport) {
-    .title {
-        & :global .container-fluid {
-            padding: 64px 0;
-        }
+  .title {
+    & :global .container-fluid {
+      padding: 64px 0;
     }
+  }
 }
 
 @media (--md-viewport) {
-    .title {
-        & :global .container-fluid {
-            padding: 64px 0;
-        }
+  .title {
+    & :global .container-fluid {
+      padding: 64px 0;
     }
+  }
 }
 
-
 .teaser {
-    background: var(--ory-brand-ui-primary-dark-70);
+  background: var(--colors-ui-primary-dark-70);
 
-    & :global .container-fluid {
-        position: relative;
-        padding: 32px 0;
+  color: var(--colors-ui-white);
+
+  & a:any-link {
+    color: var(--colors-brand-secondary);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colors-ui-white);
+      text-decoration: underline;
     }
+  }
+
+  & :global .container-fluid {
+    position: relative;
+    padding: 32px 0;
+  }
 }

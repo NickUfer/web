@@ -1,0 +1,801 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>JSON Web Keys (JWK) · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aeneas Rekkas">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-ory/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../4-install/" />
+    
+    
+    <link rel="prev" href="1-oauth2.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    ORY Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Hydra</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../1-tutorial/">
+            
+                <a href="../1-tutorial/">
+            
+                    
+                    5 Minute Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../2-environment/">
+            
+                <a href="../2-environment/">
+            
+                    
+                    Dependencies & Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.2.1" data-path="../2-environment/1-securing-ory-hydra.html">
+            
+                <a href="../2-environment/1-securing-ory-hydra.html">
+            
+                    
+                    Securing ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Concepts and Theory
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.3.1" data-path="1-oauth2.html">
+            
+                <a href="1-oauth2.html">
+            
+                    
+                    OAuth 2.0 & OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.3.2" data-path="2-jwk.html">
+            
+                <a href="2-jwk.html">
+            
+                    
+                    JSON Web Keys (JWK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../4-install/">
+            
+                <a href="../4-install/">
+            
+                    
+                    Install, Configure and Run ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.5" data-path="../5-security/">
+            
+                <a href="../5-security/">
+            
+                    
+                    Security Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.6" data-path="../6-how-to/">
+            
+                <a href="../6-how-to/">
+            
+                    
+                    How To
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.6.1" data-path="../6-how-to/1-production.html">
+            
+                <a href="../6-how-to/1-production.html">
+            
+                    
+                    ORY Hydra in production
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7" data-path="../7-sdk/">
+            
+                <a href="../7-sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.7.1" data-path="../7-sdk/1-go.html">
+            
+                <a href="../7-sdk/1-go.html">
+            
+                    
+                    Go SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7.2" data-path="../7-sdk/2-js.html">
+            
+                <a href="../7-sdk/2-js.html">
+            
+                    
+                    JavaScript SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.7.3" data-path="../7-sdk/3-php.html">
+            
+                <a href="../7-sdk/3-php.html">
+            
+                    
+                    PHP SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.8" data-path="../8-faq/">
+            
+                <a href="../8-faq/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Oathkeeper</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../oathkeeper/">
+            
+                <a href="../../oathkeeper/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../oathkeeper/1-overview/">
+            
+                <a href="../../oathkeeper/1-overview/">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1.1" data-path="../../oathkeeper/1-overview/1-rules.html">
+            
+                <a href="../../oathkeeper/1-overview/1-rules.html">
+            
+                    
+                    Access Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.2" data-path="../../oathkeeper/1-overview/2-installation.html">
+            
+                <a href="../../oathkeeper/1-overview/2-installation.html">
+            
+                    
+                    Installing ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.3" data-path="../../oathkeeper/1-overview/3-configuration.html">
+            
+                <a href="../../oathkeeper/1-overview/3-configuration.html">
+            
+                    
+                    Configuring and Running ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.1.4" data-path="../../oathkeeper/1-overview/4-deployment.html">
+            
+                <a href="../../oathkeeper/1-overview/4-deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Keto (wip)</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../keto/">
+            
+                <a href="../../keto/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../keto/1-overview/">
+            
+                <a href="../../keto/1-overview/">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../keto/1-overview/1-policies.html">
+            
+                <a href="../../keto/1-overview/1-policies.html">
+            
+                    
+                    Access Control Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../../keto/1-overview/2-warden.html">
+            
+                <a href="../../keto/1-overview/2-warden.html">
+            
+                    
+                    Access Control: The Warden API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../../keto/1-overview/3-roles.html">
+            
+                <a href="../../keto/1-overview/3-roles.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../../keto/1-overview/4-best-practices.html">
+            
+                <a href="../../keto/1-overview/4-best-practices.html">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../../keto/1-overview/5-conditions.html">
+            
+                <a href="../../keto/1-overview/5-conditions.html">
+            
+                    
+                    Conditions and Context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.6" data-path="../../keto/1-overview/6-installation.html">
+            
+                <a href="../../keto/1-overview/6-installation.html">
+            
+                    
+                    Installing ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.7" data-path="../../keto/1-overview/7-configuration.html">
+            
+                <a href="../../keto/1-overview/7-configuration.html">
+            
+                    
+                    Configuring and Running ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Telemetry</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../telemetry/">
+            
+                <a href="../../telemetry/">
+            
+                    
+                    Telemetry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >JSON Web Keys (JWK)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="json-web-keys-jwk">JSON Web Keys (JWK)</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#auto-generated-jwks">Auto-generated JWKs</a></li>
+</ul>
+
+</div><!-- tocstop -->
+<h2 id="overview">Overview</h2>
+<p>A JSON Web Key (JWK) is a JavaScript Object Notation (JSON) data structure that represents a cryptographic key and is
+specified at <a href="https://tools.ietf.org/html/rfc7517" target="_blank">IETF RFC7517</a>. If you&apos;ve heard of PEM files...</p>
+<pre><code>-----BEGIN ENCRYPTED PRIVATE KEY-----
+MIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDg
+MBQGCCqGSIb3DQMHBAgD1kGN4ZslJgSCBMi1xk9jhlPxPc
+9g73NQbtqZwI+9X5OhpSg/2ALxlCCjbqvzgSu8gfFZ4yo+
+A .... MANY LINES LIKE THAT ....
+X0R+meOaudPTBxoSgCCM51poFgaqt4l6VlTN4FRpj+c/Wc
+blK948UAda/bWVmZjXfY4Tztah0CuqlAldOQBzu8TwE7WD
+H0ga/iLNvWYexG7FHLRiq5hTj0g9mUPEbeTXuPtOkTEb/0
+GEs=
+-----END ENCRYPTED PRIVATE KEY-----
+</code></pre><p>... JWKs are the same, but formatted using JSON:</p>
+<pre><code>{
+  &quot;keys&quot;:
+  [
+   {&quot;kty&quot;:&quot;oct&quot;,
+    &quot;alg&quot;:&quot;A128KW&quot;,
+    &quot;k&quot;:&quot;GawgguFyGrWKav7AX4VKUg&quot;},
+
+   {&quot;kty&quot;:&quot;oct&quot;,
+    &quot;k&quot;:&quot;AyM1SysPpbyDfgZld3umj1qzKObwVMkoqQ-EstJQLr_T-1qS0gZH75
+  aKtMN3Yj0iPS4hcgUuTwjAzZr1Z9CAow&quot;,
+    &quot;kid&quot;:&quot;HMAC key used in JWS spec Appendix A.1 example&quot;}
+  ]
+}
+</code></pre><p>Hydra offers an API for generating and managing JWKs, the <a href="http://docs.hydra13.apiary.io/#reference/json-web-keys-jwk" target="_blank">JSON Web Keys API</a>.
+When using persistent storage backends, the keys are encrypted at rest using AES256-GCM and <em>the system secret</em>.
+The system secret is generated by default and overridden by the environment variable <code>SYSTEM_SECRET</code>.</p>
+<p>JWKs are well supported amongst all languages. This endpoint helps you managing
+certificates, private, public and symmetric keys. It is important to never transport keys over insecure channels such as http.</p>
+<p>The <a href="https://www.ory.sh/docs/api/hydra/" target="_blank">REST API Documentation</a> will give you details on the various endpoints.</p>
+<h2 id="auto-generated-jwks">Auto-generated JWKs</h2>
+<p>Hydra generates a couple of JSON Web Keys in order to operate correctly:</p>
+<ul>
+<li><code>http://localhost:4444/keys/hydra.openid.id-token</code>: A RSA public/private key pair for signing and validating OpenID Connect ID Tokens.</li>
+<li><code>http://localhost:4444/keys/https-tls</code>: A RSA public/private key pair and a certificate for signing HTTP over TLS.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1-oauth2.html" class="navigation navigation-prev " aria-label="Previous page: OAuth 2.0 & OpenID Connect">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../4-install/" class="navigation navigation-next " aria-label="Next page: Install, Configure and Run ORY Hydra">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"JSON Web Keys (JWK)","level":"2.1.3.2","depth":3,"next":{"title":"Install, Configure and Run ORY Hydra","level":"2.1.4","depth":2,"path":"hydra/4-install/README.md","ref":"hydra/4-install/README.md","articles":[]},"previous":{"title":"OAuth 2.0 & OpenID Connect","level":"2.1.3.1","depth":3,"path":"hydra/3-overview/1-oauth2.md","ref":"hydra/3-overview/1-oauth2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","auto-summary-ory","etoc","ga","sitemap-basepath","versions-ory","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":2,"header":1,"maxdepth":5,"mindepth":2,"notoc":false},"youtube":{},"versions-ory":{"type":"branches"},"auto-summary":{"parts":{"README.md":"Overview","hydra/**/*.md":"ORY Hydra","oathkeeper/**/*.md":"ORY Oathkeeper","keto/**/*.md":"ORY Keto (wip)","telemetry/*.md":"Telemetry"}},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-basepath":{"hostname":"https://www.ory.sh/","basePath":"/docs/guides/"},"auto-summary-ory":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-71865250-1"},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/ory/docs/master/guides/book.json","options":[{"value":"https://www.ory.sh/docs/guides/latest","text":"latest (stable)"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.2","text":"v1.0.0-beta.2"},{"value":"https://www.ory.sh/docs/guides/v0.11.12","text":"0.11.12"},{"value":"https://www.ory.sh/docs/guides/master","text":"master (unstable)"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit this page","base":"https://github.com/ory/docs/tree/master/guides"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Aeneas Rekkas","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"hydra/3-overview/2-jwk.md","mtime":"2018-05-29T14:12:07.600Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-05-29T14:13:34.675Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-ory/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

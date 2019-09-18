@@ -1,0 +1,966 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Access Control: The Warden API · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aeneas Rekkas">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-ory/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="3-roles.html" />
+    
+    
+    <link rel="prev" href="1-policies.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    ORY Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">updating</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../updating/">
+            
+                <a href="../../updating/">
+            
+                    
+                    Performing Software Updates
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Hydra</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../hydra/">
+            
+                <a href="../../hydra/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../hydra/1-tutorial/">
+            
+                <a href="../../hydra/1-tutorial/">
+            
+                    
+                    5 Minute Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../hydra/2-environment/">
+            
+                <a href="../../hydra/2-environment/">
+            
+                    
+                    Dependencies & Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../../hydra/2-environment/1-securing-ory-hydra.html">
+            
+                <a href="../../hydra/2-environment/1-securing-ory-hydra.html">
+            
+                    
+                    Securing ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../hydra/3-overview/">
+            
+                <a href="../../hydra/3-overview/">
+            
+                    
+                    Concepts and Theory
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../../hydra/3-overview/1-oauth2.html">
+            
+                <a href="../../hydra/3-overview/1-oauth2.html">
+            
+                    
+                    OAuth 2.0 & OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../../hydra/3-overview/2-jwk.html">
+            
+                <a href="../../hydra/3-overview/2-jwk.html">
+            
+                    
+                    JSON Web Keys (JWK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../hydra/4-install/">
+            
+                <a href="../../hydra/4-install/">
+            
+                    
+                    Install, Configure and Run ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../hydra/5-security/">
+            
+                <a href="../../hydra/5-security/">
+            
+                    
+                    Security Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../../hydra/6-how-to/">
+            
+                <a href="../../hydra/6-how-to/">
+            
+                    
+                    How To
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../../hydra/6-how-to/1-production.html">
+            
+                <a href="../../hydra/6-how-to/1-production.html">
+            
+                    
+                    ORY Hydra in production
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../../hydra/7-sdk/">
+            
+                <a href="../../hydra/7-sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.7.1" data-path="../../hydra/7-sdk/1-go.html">
+            
+                <a href="../../hydra/7-sdk/1-go.html">
+            
+                    
+                    Go SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.2" data-path="../../hydra/7-sdk/2-js.html">
+            
+                <a href="../../hydra/7-sdk/2-js.html">
+            
+                    
+                    JavaScript SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.3" data-path="../../hydra/7-sdk/3-php.html">
+            
+                <a href="../../hydra/7-sdk/3-php.html">
+            
+                    
+                    PHP SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../../hydra/8-faq/">
+            
+                <a href="../../hydra/8-faq/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Oathkeeper</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../oathkeeper/">
+            
+                <a href="../../oathkeeper/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../oathkeeper/1-overview/">
+            
+                <a href="../../oathkeeper/1-overview/">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../oathkeeper/1-overview/1-rules.html">
+            
+                <a href="../../oathkeeper/1-overview/1-rules.html">
+            
+                    
+                    Access Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../../oathkeeper/1-overview/2-installation.html">
+            
+                <a href="../../oathkeeper/1-overview/2-installation.html">
+            
+                    
+                    Installing ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../../oathkeeper/1-overview/3-configuration.html">
+            
+                <a href="../../oathkeeper/1-overview/3-configuration.html">
+            
+                    
+                    Configuring and Running ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../../oathkeeper/1-overview/4-deployment.html">
+            
+                <a href="../../oathkeeper/1-overview/4-deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Keto</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1.1" data-path="1-policies.html">
+            
+                <a href="1-policies.html">
+            
+                    
+                    Access Control Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.1.1.2" data-path="2-warden.html">
+            
+                <a href="2-warden.html">
+            
+                    
+                    Access Control: The Warden API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.3" data-path="3-roles.html">
+            
+                <a href="3-roles.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.4" data-path="4-best-practices.html">
+            
+                <a href="4-best-practices.html">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.5" data-path="5-conditions.html">
+            
+                <a href="5-conditions.html">
+            
+                    
+                    Conditions and Context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.6" data-path="6-installation.html">
+            
+                <a href="6-installation.html">
+            
+                    
+                    Installing ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.7" data-path="7-configuration.html">
+            
+                <a href="7-configuration.html">
+            
+                    
+                    Configuring and Running ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Performance Benchmarks</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../performance/">
+            
+                <a href="../../performance/">
+            
+                    
+                    Performance Benchmarks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../performance/1-hydra.html">
+            
+                <a href="../../performance/1-hydra.html">
+            
+                    
+                    ORY Hydra Performance Benchmarks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Telemetry</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../telemetry/">
+            
+                <a href="../../telemetry/">
+            
+                    
+                    Telemetry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Access Control: The Warden API</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="access-control-the-warden-api">Access Control: The Warden API</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#authentication">Authentication</a><ul>
+<li><a href="#subject-authenticator">Subject Authenticator</a></li>
+<li><a href="#oauth-20-access-token-authenticator">OAuth 2.0 Access Token Authenticator</a><ul>
+<li><a href="#configuration">Configuration</a></li>
+</ul>
+</li>
+<li><a href="#oauth-20-client-credentials-authenticator">OAuth 2.0 Client Credentials Authenticator</a><ul>
+<li><a href="#configuration-1">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<h2 id="overview">Overview</h2>
+<p>So far you learned how Access Control Policies work and how they are different from RBAC and ACL. Now, you will learn
+how to use the Warden API to perform access control (decide if a request should be allowed or not).</p>
+<p>Before making a decision, we have to authenticate the subject. ORY Keto supports different authentication mechanisms
+explained in the later sections. But first we&apos;ll look at how access requests work if we use &quot;plaintext&quot; authentication.</p>
+<p>Let&apos;s take a very simple policy:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;subjects&quot;</span>: [<span class="hljs-string">&quot;alice&quot;</span>],
+    <span class="hljs-string">&quot;resources&quot;</span>: [<span class="hljs-string">&quot;blog_posts:my-first-blog-post&quot;</span>],
+    <span class="hljs-string">&quot;actions&quot;</span>: [<span class="hljs-string">&quot;delete&quot;</span>]
+    <span class="hljs-string">&quot;effect&quot;</span>: <span class="hljs-string">&quot;allow&quot;</span>
+}
+</code></pre>
+<p>By the way, you can create this policy with the ORY Keto CLI:</p>
+<pre><code># We assume that your keto server runs at http://your-keto-server
+$ keto policies create --endpoint http://your-keto-server \
+    -a delete \
+    -s alice \
+    -r &quot;blog_posts:my-first-blog-post&quot;
+    --allow
+</code></pre><p>Ok, so let&apos;s say a request hits our blog post API. The subject (user) that made the request is <code>bob</code> and <code>bob</code> wants
+to delete the blog post <code>blog_posts:my-first-blog-post</code>. You will make a REST request to ORY Keto&apos;s Warden API:</p>
+<pre><code>$ curl -X POST http://your-keto-server/warden/subjects/authorize \
+    --header &quot;Content-Type: application/json&quot; \
+    -d @- &lt;&lt; EOF
+
+{
+  &quot;subject&quot;: &quot;bob&quot;,
+  &quot;action&quot; : &quot;delete&quot;,
+  &quot;resource&quot;: &quot;blog_posts:my-first-blog-post&quot;
+}
+EOF
+</code></pre><p>In this case, the response would be <code>{ &quot;allowed&quot;: false }</code> because no policy matching <code>bob</code>, <code>delete</code>,
+<code>blog_posts:my-first-blog-post</code> was found. If we were to make the same Warden API requests with alice</p>
+<pre><code># curl -X POST http://your-keto-server/warden/subjects/authorize \
+    --header &quot;Content-Type: application/json&quot; \
+    -d @- &lt;&lt; EOF
+
+{
+  &quot;subject&quot;: &quot;alice&quot;,
+  &quot;action&quot; : &quot;delete&quot;,
+  &quot;resource&quot;: &quot;blog_posts:my-first-blog-post&quot;
+}
+EOF
+</code></pre><p>the response would be true because a policy was found and the effect was <code>allow</code>: <code>{ &quot;allowed&quot;: true }</code>. You can
+use the ORY Keto CLI to make the same request:</p>
+<pre><code>$ keto warden authorize subject --endpoint http://your-keto-server \
+    --action delete \
+    --resource &quot;blog_posts:my-first-blog-post&quot; \
+    --subject alice
+</code></pre><h2 id="authentication">Authentication</h2>
+<p>ORY Keto supports different authentication methods at the Warden API. So far, we used the <code>subject</code> authenticator
+which does not authenticate at all but simply takes the value of <code>subject</code> key in the request body. Currently supported
+authenticators are:</p>
+<ul>
+<li><code>/warden/subjects/authorize</code>: The subject (&quot;plaintext&quot;) authenticator we already used.</li>
+<li><code>/warden/oauth2/access-tokens/authorize</code>: Validates OAuth 2.0 Access Token using the OAuth 2.0 Token Introspection
+standard to resolve Access Tokens to subjects.</li>
+<li><code>/warden/oauth2/clients/authorize</code>: Validates OAuth 2.0 Client Credentials using the OAuth 2.0 Client Credentials
+Grant to authenticate OAuth 2.0 Clients.</li>
+</ul>
+<p>We intend on adding more authenticators such as JSON Web Tokens, SAML Assertions, and others in time.</p>
+<p>Let&apos;s take a deeper look at all of the available authenticators</p>
+<h3 id="subject-authenticator">Subject Authenticator</h3>
+<p>You know this one already. The endpoint is located at <code>/warden/subjects/authorize</code> and you use request bodies such
+as:</p>
+<pre><code>{
+  &quot;subject&quot;: &quot;alice&quot;,
+  &quot;action&quot; : &quot;delete&quot;,
+  &quot;resource&quot;: &quot;blog_posts:my-first-blog-post&quot;
+}
+</code></pre><p>The <code>subject</code> key is used as <code>subject</code> when looking for policies. No magic here, it&apos;s like authenticating with just
+a username.</p>
+<h3 id="oauth-20-access-token-authenticator">OAuth 2.0 Access Token Authenticator</h3>
+<p>This authenticator is located at <code>/warden/oauth2/access-tokens/authorize</code> and is able to validate OAuth 2.0 Access Tokens
+using the OAuth 2.0 Token Introspection standard. Instead of supplying a <code>subject</code>, you add an OAuth 2.0 Token and
+optionally the OAuth 2.0 Scope to the request payload:</p>
+<pre><code>{
+  &quot;token&quot;: &quot;some.access.token.57jgoi19g&quot;,
+  &quot;scope&quot;: [&quot;scope-a&quot;, &quot;scope-b&quot;],
+
+  &quot;action&quot; : &quot;delete&quot;,
+  &quot;resource&quot;: &quot;blog_posts:my-first-blog-post&quot;
+}
+</code></pre><p>Let&apos;s assume for a second, that the token <code>some.access.token.57jgoi19g</code> was granted by subject <code>alice</code> with OAuth 2.0 Scope
+<code>scope-a</code> and <code>scope-b</code>. In this case, the OAuth 2.0 Token Introspection endpoint would return a positive response (the token
+is valid) and also the subject <code>alice</code>. So this authenticator looks for a policy that matches:</p>
+<pre><code>{
+  &quot;subject&quot;: &quot;alice&quot;,
+  &quot;action&quot; : &quot;delete&quot;,
+  &quot;resource&quot;: &quot;blog_posts:my-first-blog-post&quot;
+}
+</code></pre><h4 id="configuration">Configuration</h4>
+<p>You can configure this authenticator using the following environment variables:</p>
+<ul>
+<li><code>AUTHENTICATOR_OAUTH2_INTROSPECTION_CLIENT_ID</code>: The OAuth 2.0 Client ID that should be used to make the OAuth 2.0
+Introspection request.</li>
+<li><code>AUTHENTICATOR_OAUTH2_INTROSPECTION_CLIENT_SECRET</code>: The OAuth 2.0 Client Secret that should be used to make the OAuth 2.0
+Introspection request.</li>
+<li><code>AUTHENTICATOR_OAUTH2_INTROSPECTION_TOKEN_URL</code>: The URL of the OAuth 2.0 Token Endpoint (usually <code>/oauth2/token</code>).</li>
+<li><code>AUTHENTICATOR_OAUTH2_INTROSPECTION_URL</code>: The URL of the OAuth 2.0 Introspection Endpoint (usually <code>/oauth2/introspection</code>).</li>
+<li><code>AUTHENTICATOR_OAUTH2_INTROSPECTION_SCOPE</code>: If an OAuth 2.0 Scope is required to access the introspection URL, add that here.
+You can define a list using the comma delimiter: <code>AUTHENTICATOR_OAUTH2_INTROSPECTION_SCOPE=scope-a,scope-b</code>.</li>
+<li><code>AUTHENTICATOR_OAUTH2_INTROSPECTION_SCOPE_STRATEGY</code>: Since you can include a <code>scope</code> in the request body, ORY Keto
+allows you to configure a OAuth 2.0 strategy that defines how to compare OAuth 2.0 Scope:<ul>
+<li><code>hierarchic</code>: Scope <code>foo</code> matches <code>foo</code>, <code>foo.bar</code>, <code>foo.baz</code> but not <code>bar</code></li>
+<li><code>wildcard</code>: Scope <code>foo.*</code> matches <code>foo</code>, <code>foo.bar</code>, <code>foo.baz</code> but not <code>bar</code>. Scope <code>foo</code> matches <code>foo</code> but not <code>foo.bar</code> nor <code>bar</code></li>
+<li><code>exact</code>: Scope <code>foo</code> matches <code>foo</code> but not <code>bar</code> nor <code>foo.bar</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="oauth-20-client-credentials-authenticator">OAuth 2.0 Client Credentials Authenticator</h3>
+<p>This authenticator is located at <code>/warden/oauth2/clients/authorize</code> and is able to authenticate OAuth 2.0 Clients
+using the OAuth 2.0 Client Credentials grant. A request payload looks as follows:</p>
+<pre><code>{
+  &quot;client_id&quot;: &quot;client-id&quot;,
+  &quot;client_secret&quot;: &quot;client-secret&quot;,
+  &quot;scope&quot;: [&quot;scope-a&quot;, &quot;scope-b&quot;],
+
+  &quot;action&quot; : &quot;delete&quot;,
+  &quot;resource&quot;: &quot;blog_posts:my-first-blog-post&quot;
+}
+</code></pre><p>If the OAuth 2.0 Token endpoint returns an access token, the OAuth 2.0 Clients is considered authenticated. The OAuth 2.0
+Client ID is used as subject when querying for ACPs:</p>
+<pre><code>{
+  &quot;subject&quot;: &quot;client-id&quot;,
+  &quot;action&quot; : &quot;delete&quot;,
+  &quot;resource&quot;: &quot;blog_posts:my-first-blog-post&quot;
+}
+</code></pre><h4 id="configuration">Configuration</h4>
+<p>This endpoint needs only one environment variable:</p>
+<ul>
+<li><code>AUTHENTICATOR_OAUTH2_CLIENT_CREDENTIALS_TOKEN_URL</code>: The URL of the OAuth 2.0 Token Endpoint (usually <code>/oauth2/token</code>).</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="1-policies.html" class="navigation navigation-prev " aria-label="Previous page: Access Control Policies">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="3-roles.html" class="navigation navigation-next " aria-label="Next page: Roles">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Access Control: The Warden API","level":"5.1.1.2","depth":3,"next":{"title":"Roles","level":"5.1.1.3","depth":3,"path":"keto/1-overview/3-roles.md","ref":"keto/1-overview/3-roles.md","articles":[]},"previous":{"title":"Access Control Policies","level":"5.1.1.1","depth":3,"path":"keto/1-overview/1-policies.md","ref":"keto/1-overview/1-policies.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","auto-summary-ory","etoc","ga","sitemap-basepath","versions-ory","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":2,"header":1,"maxdepth":5,"mindepth":2,"notoc":false},"youtube":{},"versions-ory":{"type":"branches"},"auto-summary":{"parts":{"README.md":"Overview","updating/*.md":"updating","hydra/**/*.md":"ORY Hydra","oathkeeper/**/*.md":"ORY Oathkeeper","keto/**/*.md":"ORY Keto","performance/*.md":"Performance Benchmarks","telemetry/*.md":"Telemetry"}},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-basepath":{"hostname":"https://www.ory.sh/","basePath":"/docs/guides/"},"auto-summary-ory":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-71865250-1"},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/ory/docs/master/guides/book.json","options":[{"value":"https://www.ory.sh/docs/guides/latest","text":"latest (stable)"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.5","text":"v1.0.0-beta.5"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.4","text":"v1.0.0-beta.4"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.3","text":"v1.0.0-beta.3"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.2","text":"v1.0.0-beta.2"},{"value":"https://www.ory.sh/docs/guides/v0.11.12","text":"0.11.12"},{"value":"https://www.ory.sh/docs/guides/master","text":"master (unstable)"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit this page","base":"https://github.com/ory/docs/tree/master/guides"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Aeneas Rekkas","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"keto/1-overview/2-warden.md","mtime":"2018-07-17T12:25:21.418Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-17T12:26:54.024Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-ory/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

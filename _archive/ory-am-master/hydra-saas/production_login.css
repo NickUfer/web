@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html, body {
+  overflow: hidden;
+}
+
+/*background color none*/
+.box-main {
+  box-sizing: border-box;
+  position: relative;
+  width: 496px;
+}
+
+/*chronological order*/
+
+/*main descriptions*/
+.name-user {
+  text-align: center;
+  animation: text-fadein ease-in forwards .3s;
+  animation-delay: .7s;
+  opacity: 0;
+}
+
+.name-access {
+  text-align: center;
+  animation: text-fadein ease-in forwards .3s;
+  animation-delay: .7s;
+  opacity: 0;
+}
+
+.name-api {
+  text-align: center;
+  animation: text-fadein ease-in forwards .3s;
+  animation-delay: .7s;
+  opacity: 0;
+}
+
+/*user*/
+.object-user-body {
+  stroke-dasharray: 118.5;
+  stroke-dashoffset: 118.5;
+  animation: dash .7s linear forwards;
+}
+
+.object-user-head {
+  stroke-dasharray: 145.73;
+  stroke-dashoffset: -145.73;
+  animation: dash .7s linear forwards;
+}
+
+/*shield*/
+.object-shield-line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: -200;
+  animation: dash .7s linear forwards;
+}
+
+.object-shield-logo {
+  animation: fadein ease-in .5s;
+}
+
+/*api*/
+.object-api-lines {
+  stroke-dasharray: 7;
+  stroke-dashoffset: 7;
+  animation: dash .2s linear forwards;
+  animation-delay: .5s;
+}
+
+.object-api-lights {
+  stroke-dasharray: 3;
+  stroke-dashoffset: 3;
+  animation: dash .2s linear forwards;
+  animation-delay: .5s;
+}
+
+.object-api-node1 {
+  stroke-dasharray: 16;
+  stroke-dashoffset: 16;
+  animation: dash .5s linear forwards;
+}
+
+.object-api-node2 {
+  stroke-dasharray: 16;
+  stroke-dashoffset: -16;
+  animation: dash .5s linear forwards;
+}
+
+.object-api-node3 {
+  stroke-dasharray: 6;
+  stroke-dashoffset: 6;
+  animation: dash .5s linear forwards;
+  animation-delay: .2s;
+}
+
+.object-api-node {
+  stroke-dasharray: 31.42;
+  stroke-dashoffset: 31.42;
+  animation: dash .5s linear forwards;
+}
+
+.object-api-frame {
+  stroke-dasharray: 116;
+  stroke-dashoffset: 116;
+  animation: dash .5s linear forwards;
+  animation-delay: .2s;
+}
+
+.object-api-divi {
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  animation: dash .2s linear forwards;
+  animation-delay: .5s;
+}
+
+/* login */
+.log-1 {
+  stroke-dasharray: 212;
+  stroke-dashoffset: 212;
+  animation: dash .7s linear forwards;
+  animation-delay: 2s;
+}
+
+.desc-log {
+  text-align: center;
+  animation: text-fadein ease-in .3s forwards;
+  animation-delay: 2.7s;
+  opacity: 0;
+}
+
+.log-2 {
+  stroke-dasharray: 50.27;
+  stroke-dashoffset: 50.27;
+  animation: dash .3s linear forwards;
+  animation-delay: 2.7s;
+}
+
+.log-fill {
+  animation: filler .3s ease-in forwards;
+  animation-delay: 2.7s;
+}
+
+.log-3 {
+  stroke-dasharray: 212;
+  stroke-dashoffset: 212;
+  animation: dash .7s linear forwards;
+  animation-delay: 3s;
+}
+
+.log-arrow {
+  animation: appear-d 0.1s linear forwards;
+  animation-delay: 3.6s;
+  opacity: 0;
+}
+
+.object-api-fill {
+  animation: filler .3s ease-in forwards;
+  animation-delay: 4s;
+}
+
+.logvalid-1 {
+  stroke-dasharray: 60;
+  stroke-dashoffset: -60;
+  animation: dash .3s linear forwards;
+  animation-delay: 4s;
+}
+
+.logvalid-2 {
+  stroke-dasharray: 50.27;
+  stroke-dashoffset: 50.27;
+  animation: dash .3s linear forwards;
+  animation-delay: 4.3s;
+}
+
+.desc-logvalid {
+  text-align: center;
+  animation: text-fadein ease-in .3s forwards;
+  animation-delay: 4.3s;
+  opacity: 0;
+}
+
+.logvalid-fill {
+  animation: filler 0.3s ease-in forwards;
+  animation-delay: 4.3s;
+}
+
+.logvalid-3 {
+  stroke-dasharray: 60;
+  stroke-dashoffset: -60;
+  animation: dash .3s linear forwards;
+  animation-delay: 4.6s;
+}
+
+.logvalid-arrow {
+  animation: appear-l 0.1s linear forwards;
+  animation-delay: 4.8s;
+  opacity: 0;
+}
+
+/*loading @3seconds*/
+.object-shield-load {
+  transform-origin: 248px 88px;
+  animation: loader ease-in-out 1s;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+}
+
+.accto-1 {
+  stroke-dasharray: 60;
+  stroke-dashoffset: -60;
+  animation: dash .3s linear forwards;
+  animation-delay: 6s;
+}
+
+.accto-2 {
+  stroke-dasharray: 50.27;
+  stroke-dashoffset: 50.27;
+  animation: dash .3s linear forwards;
+  animation-delay: 6.3s;
+}
+
+.desc-accto {
+  text-align: center;
+  animation: text-fadein ease-in .3s forwards;
+  animation-delay: 6.3s;
+  opacity: 0;
+}
+
+.accto-fill {
+  animation: filler 0.3s ease-in forwards;
+  animation-delay: 6.3s;
+}
+
+.accto-3 {
+  stroke-dasharray: 60;
+  stroke-dashoffset: -60;
+  animation: dash .3s linear forwards;
+  animation-delay: 6.6s;
+}
+
+.accto-arrow {
+  animation: appear-l 0.1s linear forwards;
+  animation-delay: 6.8s;
+  opacity: 0;
+}
+
+@keyframes text-fadein {
+  from {
+    opacity: 0;
+    transform: translate(0, 5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes text-fadeinout {
+  0% {
+    transform: translate(0, -5px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+  0% {
+    transform: translate(0, 5px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(0, 2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(0, -2px);
+  }
+}
+
+@keyframes appear-r {
+  from {
+    opacity: 0;
+    transform: translate(-4px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes appear-l {
+  from {
+    opacity: 0;
+    transform: translate(4px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes appear-d {
+  from {
+    opacity: 0;
+    transform: translate(0px, -4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes appear-u {
+  from {
+    opacity: 0;
+    transform: translate(0px, 4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1080deg);
+  }
+}
+
+@keyframes filler {
+  to {
+    fill: #2ecc71;
+  }
+}

@@ -1,0 +1,1101 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Access Control Policies · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aeneas Rekkas">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-ory/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="2-warden.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    ORY Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">updating</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../updating/">
+            
+                <a href="../../updating/">
+            
+                    
+                    Performing Software Updates
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Hydra</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../../hydra/">
+            
+                <a href="../../hydra/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../../hydra/1-tutorial/">
+            
+                <a href="../../hydra/1-tutorial/">
+            
+                    
+                    5 Minute Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../../hydra/2-environment/">
+            
+                <a href="../../hydra/2-environment/">
+            
+                    
+                    Dependencies & Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../../hydra/2-environment/1-securing-ory-hydra.html">
+            
+                <a href="../../hydra/2-environment/1-securing-ory-hydra.html">
+            
+                    
+                    Securing ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../../hydra/3-overview/">
+            
+                <a href="../../hydra/3-overview/">
+            
+                    
+                    Concepts and Theory
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../../hydra/3-overview/1-oauth2.html">
+            
+                <a href="../../hydra/3-overview/1-oauth2.html">
+            
+                    
+                    OAuth 2.0 & OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../../hydra/3-overview/2-jwk.html">
+            
+                <a href="../../hydra/3-overview/2-jwk.html">
+            
+                    
+                    JSON Web Keys (JWK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.3" data-path="../../hydra/3-overview/3-limitations.html">
+            
+                <a href="../../hydra/3-overview/3-limitations.html">
+            
+                    
+                    Limitations
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.4" data-path="../../hydra/4-install/">
+            
+                <a href="../../hydra/4-install/">
+            
+                    
+                    Install, Configure and Run ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../../hydra/5-security/">
+            
+                <a href="../../hydra/5-security/">
+            
+                    
+                    Security Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../../hydra/6-how-to/">
+            
+                <a href="../../hydra/6-how-to/">
+            
+                    
+                    How To
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../../hydra/6-how-to/1-production.html">
+            
+                <a href="../../hydra/6-how-to/1-production.html">
+            
+                    
+                    ORY Hydra in Production
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.2" data-path="../../hydra/6-how-to/2-architecture.html">
+            
+                <a href="../../hydra/6-how-to/2-architecture.html">
+            
+                    
+                    Integrating ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.3" data-path="../../hydra/6-how-to/3-advanced.html">
+            
+                <a href="../../hydra/6-how-to/3-advanced.html">
+            
+                    
+                    Advanced Topics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6.4" data-path="../../hydra/6-how-to/4-debug.html">
+            
+                <a href="../../hydra/6-how-to/4-debug.html">
+            
+                    
+                    Debugging
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../../hydra/7-sdk/">
+            
+                <a href="../../hydra/7-sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.7.1" data-path="../../hydra/7-sdk/1-go.html">
+            
+                <a href="../../hydra/7-sdk/1-go.html">
+            
+                    
+                    Go SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.2" data-path="../../hydra/7-sdk/2-js.html">
+            
+                <a href="../../hydra/7-sdk/2-js.html">
+            
+                    
+                    JavaScript SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.3" data-path="../../hydra/7-sdk/3-php.html">
+            
+                <a href="../../hydra/7-sdk/3-php.html">
+            
+                    
+                    PHP SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../../hydra/8-faq/">
+            
+                <a href="../../hydra/8-faq/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.9" data-path="../../hydra/9-appendix/">
+            
+                <a href="../../hydra/9-appendix/">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Oathkeeper</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../oathkeeper/">
+            
+                <a href="../../oathkeeper/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../oathkeeper/1-overview/">
+            
+                <a href="../../oathkeeper/1-overview/">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../oathkeeper/1-overview/1-rules.html">
+            
+                <a href="../../oathkeeper/1-overview/1-rules.html">
+            
+                    
+                    Access Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../../oathkeeper/1-overview/2-installation.html">
+            
+                <a href="../../oathkeeper/1-overview/2-installation.html">
+            
+                    
+                    Installing ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../../oathkeeper/1-overview/3-configuration.html">
+            
+                <a href="../../oathkeeper/1-overview/3-configuration.html">
+            
+                    
+                    Configuring and Running ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../../oathkeeper/1-overview/4-deployment.html">
+            
+                <a href="../../oathkeeper/1-overview/4-deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.5" data-path="../../oathkeeper/1-overview/5-proxy-judge.html">
+            
+                <a href="../../oathkeeper/1-overview/5-proxy-judge.html">
+            
+                    
+                    Proxy & Judge
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Keto</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="5.1.1.1" data-path="1-policies.html">
+            
+                <a href="1-policies.html">
+            
+                    
+                    Access Control Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.2" data-path="2-warden.html">
+            
+                <a href="2-warden.html">
+            
+                    
+                    Access Control: The Warden API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.3" data-path="3-roles.html">
+            
+                <a href="3-roles.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.4" data-path="4-best-practices.html">
+            
+                <a href="4-best-practices.html">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.5" data-path="5-conditions.html">
+            
+                <a href="5-conditions.html">
+            
+                    
+                    Conditions and Context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.6" data-path="6-installation.html">
+            
+                <a href="6-installation.html">
+            
+                    
+                    Installing ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.7" data-path="7-configuration.html">
+            
+                <a href="7-configuration.html">
+            
+                    
+                    Configuring and Running ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Performance Benchmarks</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../performance/">
+            
+                <a href="../../performance/">
+            
+                    
+                    Performance Benchmarks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../performance/1-hydra.html">
+            
+                <a href="../../performance/1-hydra.html">
+            
+                    
+                    ORY Hydra Performance Benchmarks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Telemetry</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../telemetry/">
+            
+                <a href="../../telemetry/">
+            
+                    
+                    Telemetry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Access Control Policies</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="access-control-policies">Access Control Policies</h1>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#users--permissions">Users &amp; Permissions</a><ul>
+<li><a href="#access-control-lists-acl">Access Control Lists (ACL)</a></li>
+<li><a href="#role-based-access-control-rbac">Role Based Access Control (RBAC)</a></li>
+<li><a href="#access-control-policies-acp">Access Control Policies (ACP)</a><ul>
+<li><a href="#precedence">Precedence</a></li>
+<li><a href="#pattern-matching-with-regular-expressions">Pattern Matching with Regular Expressions</a></li>
+<li><a href="#conditions">Conditions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<h2 id="overview">Overview</h2>
+<p>If you have ever worked with cloud providers, you have probably encountered IAM (Identity &amp; Access Management) Policies.
+Amazon Web Services&apos; IAM services is the champion of enterprise IT which can be attributed to
+<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html" target="_blank">AWS IAM Policies</a>.</p>
+<p>ORY Keto uses our <a href="https://github.com/ory/ladon" target="_blank">Go SDK ORY Ladon</a> to provide a self-hosted service that implements
+a comparable experience to AWS IAM Policies, or more generally, Access Control Policies.</p>
+<h2 id="users--permissions">Users &amp; Permissions</h2>
+<p>Before we take a look at Access Control Policies in detail, let&apos;s get some of the basics figured out. Every app that
+has users usually assigns permissions to these users (&quot;Bob, Alice are allowed to write blog posts&quot;). There are
+various established practices for assigning one or more permissions to one or more users.</p>
+<p>In the context of access control, you&apos;ll often encounter <strong>identities</strong> or <strong>subjects</strong> as an alias for users. In this
+documentation we use the terminology <strong>subject</strong> as it summarizes users, robots, cronjobs, services, ... best. So
+whenever you read &quot;subject&quot; you can substitute it with users, if it helps your understanding.</p>
+<p>Let&apos;s begin with a short overview of the established concepts surrounding permissions. Please be aware that the next
+sections are merely an overview of those topics and aimed at giving you some context. They do not explain all the
+nuances of each respective approach.</p>
+<h3 id="access-control-lists-acl">Access Control Lists (ACL)</h3>
+<p>An <a href="https://en.wikipedia.org/wiki/Access_control_list" target="_blank">Access Control List (ACL)</a> is a matrix of users and permissions:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>blog_post.create</th>
+<th>blog_post.delete</th>
+<th>blog_post.modify</th>
+<th>blog_post.read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alice</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>bob</td>
+<td>no</td>
+<td>no</td>
+<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>peter</td>
+<td>yes</td>
+<td>no</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>In the example above, <code>alice</code> has the permission to create a blog post <code>(blog_post.create)</code> while bob des not. All three
+(alice, bob, peter) can read blog posts.</p>
+<p>Similarly, you can create a matrix of resources (e.g. blog articles) and each user&apos;s permissions
+(<code>c</code> for <code>create</code>, <code>m</code> for <code>modify</code>, ...) with regards to that resource:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>blog_post.1</th>
+<th>blog_post.2</th>
+<th>blog_post.3</th>
+<th>blog_post.4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alice</td>
+<td>c,r,m,d</td>
+<td>c,r,m,d</td>
+<td>c,r,m,d</td>
+<td>c,r,m,d</td>
+</tr>
+<tr>
+<td>bob</td>
+<td>r</td>
+<td>r</td>
+<td>r</td>
+<td>r</td>
+</tr>
+<tr>
+<td>peter</td>
+<td>c,r,m,d</td>
+<td>r</td>
+<td>c,r,m,d</td>
+<td>r</td>
+</tr>
+</tbody>
+</table>
+<p>ACLs are common in filesystems (<code>chmod</code> / <code>chown</code>) and in applications with few subjects. However, the matrix becomes
+unreadable and unmanagable if you have thousands or even millions of subjects. Therefore, ACLs are rarely used in
+web applications.</p>
+<h3 id="role-based-access-control-rbac">Role Based Access Control (RBAC)</h3>
+<p><a href="https://en.wikipedia.org/wiki/Role-based_access_control" target="_blank">Role Based Access Control (RBAC)</a> maps subjects to roles
+and roles to permissions. The goal of RBAC is to make permission management convenient by grouping subjects
+in roles and assigning permissions roles. This type of access control is very common in web applications, where you often
+encounter roles such as &quot;administrator&quot;, &quot;moderator&quot;, and so on.</p>
+<p>What&apos;s common in RBAC is that roles can inherit permissions from one another. The role administrator, for example,
+could inherit all permissions from role moderator. This further decreases management complexity as, instead of adding
+all permissions to administrator or assigning a user to both moderator and administrator roles, you simply point the
+administrator role to inherit from the moderator one.</p>
+<p>Let&apos;s come back to alice, bob, peter, and blog posts and the matrix from the ACL example, but this time we define
+roles &quot;reader&quot;, &quot;author&quot;, &quot;admin&quot; and model the ACL example using RBAC:</p>
+<p><img src="../images/rbac.png" alt="RBAC Example">.</p>
+<p>As you can see, <code>admin</code> inherits from <code>author</code>, which inherits from <code>reader</code>. Only <code>alice</code> (or rather <code>admin</code>) can delete blog posts,
+whereas <code>author</code> can create and modify blog posts. We assign the roles to our subjects <code>bob</code>, <code>peter</code>, <code>alice</code> and
+express the same permissions as in the ACL example.</p>
+<p>RBAC is everywhere. If you ever installed a forum software such as <a href="https://www.phpbb.com/support/docs/en/3.1/ug/adminguide/permissions_roles/" target="_blank">phpBB</a>,
+<a href="https://codex.wordpress.org/Roles_and_Capabilities" target="_blank">Wordpress</a> or others, you have definitely encountered ACL, RBAC, or both.</p>
+<p>RBAC reduces management complexity &amp; overhead with large user/subject bases. Sometimes however, RBAC is not enough as well.
+That&apos;s the case when you&apos;re trying to express ownership (e.g. <code>bob</code> can modify blog posts, but only his own), or
+have attributes (e.g. <code>bob</code> works in department <code>blog</code>), or multi-tenant environments.</p>
+<h3 id="access-control-policies-acp">Access Control Policies (ACP)</h3>
+<p>Access Control Policies (usually JSON &quot;documents&quot;) define an <code>effect</code>, <code>subject</code>, <code>action</code>, and <code>resource</code>. For example, <code>alice</code> (subject) is
+<code>allowed</code> (effect) to <code>delete</code> (action) blog article with ID <code>my-first-blog-post</code> (<code>resource</code>). This is very similar
+to how ACLs work:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;subjects&quot;</span>: [<span class="hljs-string">&quot;alice&quot;</span>],
+    <span class="hljs-string">&quot;resources&quot;</span>: [<span class="hljs-string">&quot;blog_posts:my-first-blog-post&quot;</span>],
+    <span class="hljs-string">&quot;actions&quot;</span>: [<span class="hljs-string">&quot;delete&quot;</span>]
+    <span class="hljs-string">&quot;effect&quot;</span>: <span class="hljs-string">&quot;allow&quot;</span>
+}
+</code></pre>
+<p>The policy above allows <code>alice</code> to <code>delete</code> <code>blog_posts:my-first-blog-post</code>. We could apply this policy to more subjects
+and also more actions or resources, if we want to:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;subjects&quot;</span>: [<span class="hljs-string">&quot;alice&quot;</span>, <span class="hljs-string">&quot;bob&quot;</span>],
+    <span class="hljs-string">&quot;resources&quot;</span>: [<span class="hljs-string">&quot;blog_posts:my-first-blog-post&quot;</span>, <span class="hljs-string">&quot;blog_posts:2&quot;</span>, <span class="hljs-string">&quot;blog_posts:3&quot;</span>],
+    <span class="hljs-string">&quot;actions&quot;</span>: [<span class="hljs-string">&quot;delete&quot;</span>, <span class="hljs-string">&quot;create&quot;</span>, <span class="hljs-string">&quot;read&quot;</span>, <span class="hljs-string">&quot;modify&quot;</span>]
+    <span class="hljs-string">&quot;effect&quot;</span>: <span class="hljs-string">&quot;allow&quot;</span>
+}
+</code></pre>
+<p>Well, this looks like ACL in disguise so far. So what&apos;s different?</p>
+<h4 id="precedence">Precedence</h4>
+<p>The first difference is that we can explicitly deny access:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;subjects&quot;</span>: [<span class="hljs-string">&quot;peter&quot;</span>],
+    <span class="hljs-string">&quot;resources&quot;</span>: [<span class="hljs-string">&quot;blog_posts:my-first-blog-post&quot;</span>, <span class="hljs-string">&quot;blog_posts:2&quot;</span>, <span class="hljs-string">&quot;blog_posts:3&quot;</span>],
+    <span class="hljs-string">&quot;actions&quot;</span>: [<span class="hljs-string">&quot;delete&quot;</span>, <span class="hljs-string">&quot;create&quot;</span>, <span class="hljs-string">&quot;read&quot;</span>, <span class="hljs-string">&quot;modify&quot;</span>]
+    <span class="hljs-string">&quot;effect&quot;</span>: <span class="hljs-string">&quot;deny&quot;</span>
+}
+</code></pre>
+<p>The policy decision point (the one checking if something is allowed or not) applies the following rule set when deciding if something is allowed or not:</p>
+<ol>
+<li>If at least one policy for a given subject, action, and resource matches, and the effect is <code>deny</code>, the request is always denied.</li>
+<li>If no policy matches with effect <code>deny</code>, but at least one policy with effect <code>allow</code>, the request is allowed.</li>
+<li>If no policy matches at all, the request is denied.</li>
+</ol>
+<h4 id="pattern-matching-with-regular-expressions">Pattern Matching with Regular Expressions</h4>
+<p>ORY Keto allows you to apply pattern matching with regular expressions as well. Depending on how you name your subjects,
+resources, and actions (for more on that topic go to the <a href="4-best-practices">Best Practices</a> section), you can apply
+pattern matching using regular expressions.</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;subjects&quot;</span>: [<span class="hljs-string">&quot;users:&lt;.*&gt;&quot;</span>]
+}
+</code></pre>
+<p>In the example above, the (incomplete) policy would match every subject that is prefixed with <code>users:</code>, so for example
+<code>users:alice</code>, <code>users:bob</code>. In ORY Ladon / ORY Keto, regular expressions are delimited with <code>&lt;</code> and <code>&gt;</code>.
+For example, <code>&quot;users:.*&quot;</code> is not a valid regular expression, just a simple string.</p>
+<p>The next example will allow all subjects with prefix <code>user:</code> to read (<code>actions:read</code>) all resources that match <code>resources:blog_posts:&lt;[0-9]+&gt;</code>
+(e.g. <code>resources:blog_posts:1234</code> but not <code>resources:blog_posts:abcde</code>):</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;subjects&quot;</span>: [<span class="hljs-string">&quot;users:&lt;.*&gt;&quot;</span>],
+    <span class="hljs-string">&quot;resources&quot;</span>: [<span class="hljs-string">&quot;resources:blog_posts:&lt;[0-9]+&gt;&quot;</span>],
+    <span class="hljs-string">&quot;actions&quot;</span>: [<span class="hljs-string">&quot;actions:read&quot;</span>]
+    <span class="hljs-string">&quot;effect&quot;</span>: <span class="hljs-string">&quot;allow&quot;</span>
+}
+</code></pre>
+<h4 id="conditions">Conditions</h4>
+<p>Conditions are another powerful concept. So far, we covered that an Access Control Policies applies to a list of
+<code>subjects</code>, <code>resources</code>, and <code>actions</code>. Conditions narrow down the use cases in which a certain ACP applies. A condition
+may, for example, mandate that the IP Address of the client making the request has to match e.g. <code>192.168.0.0/16</code> or that
+the subject is also the owner of the resource:</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;One policy to rule them all.&quot;</span>,
+  <span class="hljs-string">&quot;subjects&quot;</span>: [<span class="hljs-string">&quot;users:maria&quot;</span>],
+  <span class="hljs-string">&quot;actions&quot;</span> : [<span class="hljs-string">&quot;delete&quot;</span>, <span class="hljs-string">&quot;create&quot;</span>, <span class="hljs-string">&quot;update&quot;</span>],
+  <span class="hljs-string">&quot;effect&quot;</span>: <span class="hljs-string">&quot;allow&quot;</span>,
+  <span class="hljs-string">&quot;resources&quot;</span>: [<span class="hljs-string">&quot;resources:articles:&lt;.*&gt;&quot;</span>],
+  <span class="hljs-string">&quot;conditions&quot;</span>: {
+    <span class="hljs-string">&quot;remoteIPAddress&quot;</span>: {
+      <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;CIDRCondition&quot;</span>,
+      <span class="hljs-string">&quot;options&quot;</span>: {
+        <span class="hljs-string">&quot;cidr&quot;</span>: <span class="hljs-string">&quot;192.168.0.0/16&quot;</span>
+      }
+    }
+  }
+}
+</code></pre>
+<p>What conditions you can use and how you use is documented <a href="5-conditions">here</a>. Since that requires knowledge of the Warden API
+works, let&apos;s look at that first in the <a href="2-warden">next chapter</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Quickstart">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="2-warden.html" class="navigation navigation-next " aria-label="Next page: Access Control: The Warden API">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Access Control Policies","level":"5.1.1.1","depth":3,"next":{"title":"Access Control: The Warden API","level":"5.1.1.2","depth":3,"path":"keto/1-overview/2-warden.md","ref":"keto/1-overview/2-warden.md","articles":[]},"previous":{"title":"Quickstart","level":"5.1.1","depth":2,"path":"keto/1-overview/README.md","ref":"keto/1-overview/README.md","articles":[{"title":"Access Control Policies","level":"5.1.1.1","depth":3,"path":"keto/1-overview/1-policies.md","ref":"keto/1-overview/1-policies.md","articles":[]},{"title":"Access Control: The Warden API","level":"5.1.1.2","depth":3,"path":"keto/1-overview/2-warden.md","ref":"keto/1-overview/2-warden.md","articles":[]},{"title":"Roles","level":"5.1.1.3","depth":3,"path":"keto/1-overview/3-roles.md","ref":"keto/1-overview/3-roles.md","articles":[]},{"title":"Best Practices","level":"5.1.1.4","depth":3,"path":"keto/1-overview/4-best-practices.md","ref":"keto/1-overview/4-best-practices.md","articles":[]},{"title":"Conditions and Context","level":"5.1.1.5","depth":3,"path":"keto/1-overview/5-conditions.md","ref":"keto/1-overview/5-conditions.md","articles":[]},{"title":"Installing ORY Keto","level":"5.1.1.6","depth":3,"path":"keto/1-overview/6-installation.md","ref":"keto/1-overview/6-installation.md","articles":[]},{"title":"Configuring and Running ORY Keto","level":"5.1.1.7","depth":3,"path":"keto/1-overview/7-configuration.md","ref":"keto/1-overview/7-configuration.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["edit-link","auto-summary-ory","etoc","ga","sitemap-basepath","versions-ory","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":2,"header":1,"maxdepth":5,"mindepth":2,"notoc":false},"youtube":{},"versions-ory":{"type":"branches"},"auto-summary":{"parts":{"README.md":"Overview","updating/*.md":"updating","hydra/**/*.md":"ORY Hydra","oathkeeper/**/*.md":"ORY Oathkeeper","keto/**/*.md":"ORY Keto","performance/*.md":"Performance Benchmarks","telemetry/*.md":"Telemetry"}},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-basepath":{"hostname":"https://www.ory.sh/","basePath":"/docs/guides/"},"auto-summary-ory":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-71865250-1"},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/ory/docs/master/guides/book.json","options":[{"value":"https://www.ory.sh/docs/guides/latest","text":"latest (stable)"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.8","text":"v1.0.0-beta.8"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.7","text":"v1.0.0-beta.7"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.5","text":"v1.0.0-beta.5"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.4","text":"v1.0.0-beta.4"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.3","text":"v1.0.0-beta.3"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.2","text":"v1.0.0-beta.2"},{"value":"https://www.ory.sh/docs/guides/v0.11.12","text":"0.11.12"},{"value":"https://www.ory.sh/docs/guides/master","text":"master (unstable)"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit this page","base":"https://github.com/ory/docs/tree/master/guides"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Aeneas Rekkas","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"keto/1-overview/1-policies.md","mtime":"2018-06-13T12:16:41.365Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-08-10T11:57:02.713Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-ory/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

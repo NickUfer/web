@@ -53,29 +53,7 @@ const IntegrationCodeBox = () => (
 )
 
 const HydraPage = () => (
-  <Layout
-    announcement={
-      <>
-        <a href="https://github.com/ory/hydra/releases/tag/v1.0.0">
-          Announcing {brandPrefix}Hydra version 1.0.0!
-        </a>
-      </>
-    }
-    tiny={brandPrefix.length === 0}
-    menu={[
-      {
-        title: 'Get started',
-        href: 'https://www.ory.sh/docs/hydra/5min-tutorial',
-        className: 'hidden-sm',
-      },
-      { title: 'Docs', href: 'https://www.ory.sh/docs/hydra' },
-    ]}
-    icons={[
-      { title: 'GitHub', image: github, href: 'https://github.com/ory/hydra' },
-      { title: 'Chat', image: discord, href: 'https://www.ory.sh/chat' },
-      { title: 'Forum', image: discourse, href: 'https://community.ory.sh/' },
-    ]}
-  >
+  <Layout theme="hydra" appendix={'Hydra'}>
     <SEO
       description=""
       title={
@@ -214,7 +192,6 @@ const HydraPage = () => (
     <Projects />
     <Adopters />
     <Stats />
-    <Footer />
   </Layout>
 )
 

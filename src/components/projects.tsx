@@ -6,6 +6,7 @@ import hydra from '../images/ory-hydra.svg'
 import keto from '../images/ory-keto.svg'
 import oathkeeper from '../images/ory-oathkeeper.svg'
 import { brandPrefix } from '../config'
+import { Link } from 'gatsby'
 
 const projects = [
   {
@@ -13,25 +14,32 @@ const projects = [
     description:
       'Secure access to your applications and APIs with OAuth 2.0 and OpenID Connect.',
     image: hydra,
-    github: 'https://github.com/ory/hydra',
+    path: '/hydra',
   },
   {
     title: `${brandPrefix}Oathkeeper`,
     description:
       'Verify and allow identities to interact with your applications.',
     image: oathkeeper,
-    github: 'https://github.com/ory/oathkeeper',
+    url: 'https://github.com/ory/oathkeeper',
   },
   {
     title: `${brandPrefix}Keto`,
     description: 'A best practice patterns based access control REST API.',
     image: keto,
-    github: 'https://github.com/ory/keto',
+    url: 'https://github.com/ory/keto',
   },
 ]
 
 const Projects = () => (
-  <div className={cn(styles.section, styles.dark, pstyles.section)}>
+  <div
+    className={cn(
+      styles.section,
+      styles.dark,
+      pstyles.section,
+      'is-dark-background'
+    )}
+  >
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
@@ -51,15 +59,25 @@ const Projects = () => (
           </p>
         </div>
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-          {projects.map(({ github, title, description, image }) => (
-            <a key={title} className={pstyles.project} href={github}>
-              <img src={image} alt={title} />
-              <div>
-                <h4>{title}</h4>
-                <p className={pstyles.description}>{description}</p>
-              </div>
-            </a>
-          ))}
+          {projects.map(({ url, title, description, image, path }) =>
+            path ? (
+              <Link key={title} className={pstyles.project} to={path}>
+                <img src={image} alt={title} />
+                <div>
+                  <h4>{title}</h4>
+                  <p className={pstyles.description}>{description}</p>
+                </div>
+              </Link>
+            ) : (
+              <a key={title} className={pstyles.project} href={url}>
+                <img src={image} alt={title} />
+                <div>
+                  <h4>{title}</h4>
+                  <p className={pstyles.description}>{description}</p>
+                </div>
+              </a>
+            )
+          )}
         </div>
         <div className="hidden-lg col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
           <h3>Projects</h3>

@@ -1,0 +1,33 @@
+:root {
+  --colors-brand-primary: #6274f3;
+  --colors-brand-primary-light-05: #f7f8fe;
+  --colors-brand-primary-light-10: #f0f2fe;
+  --colors-brand-primary-light-12: #eceefe;
+  --colors-brand-primary-light-15: #e7ebfe;
+
+  --colors-brand-secondary: #50e3c2;
+  --colors-brand-secondary-shade-15: color-mod(#50e3c2 shade(15%));
+
+  --colors-brand-hydra: #f0486f;
+  --colors-brand-hydra-shade-15: color-mod(#f0486f shade(15%));
+
+  --colors-brand-oathkeeper: #63beff;
+  --colors-brand-keto: #54cca4;
+
+  --colors-ui-tertiary: #f0486f;
+  --colors-ui-tertiary-shade-10: color-mod(#f0486f shade(10%));
+  --colors-ui-tertiary-shade-15: color-mod(#f0486f shade(15%));
+
+  --colors-ui-black: #000000;
+
+  --colors-ui-white: #ffffff;
+  --colors-ui-white-shade-10: color-mod(#ffffff shade(10%));
+  --colors-ui-white-shade-15: color-mod(#ffffff shade(15%));
+
+  --colors-ui-grey: #c4c4c4;
+  --colors-ui-grey-light: #e5e5e5;
+
+  --colors-ui-dark-primary: #122232;
+  --colors-ui-primary-dark-70: #4551aa;
+  --colors-ui-primary-light-5: #f4f5fe;
+}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
 interface PropTypes {
-  description: string
+  description?: string
   lang?: string
   meta?: any[]
   title: string

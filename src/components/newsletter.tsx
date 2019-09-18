@@ -1,4 +1,4 @@
-import React, { ChangeEvent, MouseEvent, Component } from 'react'
+import React, { ChangeEvent, MouseEvent, Component, ReactNode } from 'react'
 import cn from 'classnames'
 import * as styles from './newsletter.module.css'
 import VerticalDivider from './vertical-divider'
@@ -7,7 +7,12 @@ interface StateTypes {
   email: string
 }
 
-class Newsletter extends Component<{}, StateTypes> {
+interface PropTypes {
+  left?: ReactNode
+  light?: boolean
+}
+
+class Newsletter extends Component<PropTypes, StateTypes> {
   state = { email: '' }
 
   private onSubmit = (e: MouseEvent<HTMLInputElement>) => {
@@ -23,18 +28,26 @@ class Newsletter extends Component<{}, StateTypes> {
   }
 
   render() {
+    const { left, light } = this.props
+
     return (
-      <div className={styles.newsletter}>
+      <div className={cn(styles.newsletter, { [styles.light]: light })}>
         <div className="container-fluid">
           <div className="row">
             <VerticalDivider padding={96} />
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-              <h3>Never miss a patch</h3>
-              <p>
-                Keep your applications and systems up to date. ORY ships regular
-                product patches and updates. Subscribe to our newsletter to get
-                the “good stuff”.
-              </p>
+              {left ? (
+                left
+              ) : (
+                <>
+                  <h3>Never miss a patch</h3>
+                  <p>
+                    Keep your applications and systems up to date. ORY ships
+                    regular product patches and updates. Subscribe to our
+                    newsletter to get the “good stuff”.
+                  </p>
+                </>
+              )}
             </div>
             <div
               className={cn(

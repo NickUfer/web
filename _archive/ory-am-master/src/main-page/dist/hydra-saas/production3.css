@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+html, body {
+  overflow: hidden;
+}
+
+.box-main {
+  box-sizing: border-box;
+  position: relative;  
+  width: 496px;
+}
+
+/*Names duration=.5s delay=.7s after=1s*/
+.name-attack {
+  text-align: center;
+  animation: text-fadein ease-in forwards .3s;
+  animation-delay: .7s;
+  opacity: 0;
+}
+
+.name-access {
+  text-align: center;
+  animation: text-fadein ease-in forwards .3s;
+  animation-delay: .7s;
+  opacity: 0;
+}
+
+.name-api {
+  text-align: center;
+  animation: text-fadein ease-in forwards .3s;
+  animation-delay: .7s;
+  opacity: 0;
+}
+
+/*Names duration=.5s delay=var after=var*/
+.desc-access {
+  text-align: center;
+  animation: text-fadein ease-in .3s forwards;
+  animation-delay: 1.8s;
+  opacity: 0;
+}
+
+.desc-access2 { /*plays after processing*/
+  text-align: center;
+  animation: text-fadein ease-in .3s forwards;
+  animation-delay: 5.5s;
+  opacity: 0;
+}
+
+.desc-token { /*fades in and out after processing*/
+  text-align: center;
+  animation: text-fadeinout ease-in 2.5s forwards; 
+  animation-delay: 2.7s;
+  opacity: 0;
+}
+
+.desc-token2 { /*plays after processing*/
+  text-align: center;
+  animation: text-fadein ease-in .3s forwards;
+  animation-delay: 5.5s;
+  opacity: 0;
+}
+
+
+@keyframes text-fadein {
+  from {
+    opacity: 0;
+    transform: translate(0, 5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes text-fadeinout {
+  0% {
+    transform: translate(0, -5px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: none;
+  }
+  90% {
+    opacity: 1;
+    transform: none;
+  }
+  0% {
+    transform: translate(0, 5px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(0, 2px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(0, -2px);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translate(-4px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes appearinout {
+  0% {
+    opacity: 0;
+    transform: translate(-4px, 0);
+  }
+
+  5% {
+    opacity: 1;
+    transform: none;
+  }
+  95% {
+    opacity: 1;
+    transform: none;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-4px, 0);
+  }
+}
+
+@keyframes appearX {
+  from {
+    opacity: 0;
+    transform: translate(0px, -4);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/*attacker*/
+.object-attack-line {
+  stroke-dasharray: 96;
+  stroke-dashoffset: -96;
+  animation: dash .7s linear forwards;
+}
+
+.object-attack-symbol {
+  animation: fadein ease-in .5s;
+}
+
+/*shield*/
+.object-shield-line {
+  stroke-dasharray: 200;
+  stroke-dashoffset: -200;
+  animation: dash .7s linear forwards;
+}
+
+.object-shield-logo {
+  animation: fadein ease-in .5s;
+}
+
+.object-shield-load {
+transform-origin: 248px 32px;
+animation: loader ease-in-out 1s;
+animation-iteration-count: 2;
+animation-delay: 3s;
+}
+
+@keyframes loader{
+  0% {
+    transform:  rotate(0deg);
+  }
+  100% {
+    transform:  rotate(1080deg);
+  }
+}
+
+/*api*/
+.object-api-lines {
+  stroke-dasharray: 7;
+  stroke-dashoffset: 7;
+  animation: dash .2s linear forwards;
+  animation-delay: .5s;
+}
+
+.object-api-lights {
+  stroke-dasharray: 3;
+  stroke-dashoffset: 3;
+  animation: dash .2s linear forwards;
+  animation-delay: .5s;
+}
+
+.object-api-node1 {
+  stroke-dasharray: 16;
+  stroke-dashoffset: 16;
+  animation: dash .5s linear forwards;
+}
+
+.object-api-node2 {
+  stroke-dasharray: 16;
+  stroke-dashoffset: -16;
+  animation: dash .5s linear forwards;
+}
+
+.object-api-node3 {
+  stroke-dasharray: 6;
+  stroke-dashoffset: 6;
+  animation: dash .5s linear forwards;
+  animation-delay: .2s;
+}
+
+.object-api-node {
+  stroke-dasharray: 31.42;
+  stroke-dashoffset: 31.42;
+  animation: dash .5s linear forwards;
+}
+
+.object-api-frame {
+  stroke-dasharray: 116;
+  stroke-dashoffset: 116;
+  animation: dash .5s linear forwards;
+  animation-delay: .2s;
+}
+
+.object-api-divi {
+  stroke-dasharray: 34;
+  stroke-dashoffset: 34;
+  animation: dash .2s linear forwards;
+  animation-delay: .5s;
+}
+
+/* A -> B 1.5s*/
+.accreq-line1 {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: dash .3s linear forwards;
+  animation-delay: 1.5s;
+}
+
+.accreq-segment {  
+  stroke-dasharray: 50.27;
+  stroke-dashoffset: 50.27;
+  animation: dash .3s linear forwards;
+  animation-delay: 1.8s;
+  }
+
+.accreq-line2 {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: dash .3s linear forwards;
+  animation-delay: 2.1s;
+}
+
+.accreq-arrow {
+  animation: appearinout 3.4s linear forwards;
+  animation-iteration-count: 1;
+  animation-delay: 2.4s;
+  opacity:0;
+}
+
+.accreq-closed {
+  animation: fadein ease-in .2s forwards;
+  animation-delay: 5.8s;
+  opacity: 0;
+}
+
+
+/* A -> B sub*/
+.accreq-sub {  
+  stroke-dasharray: 92;
+  stroke-dashoffset: 92;
+  animation: dash .3s linear forwards;
+  animation-delay: 2.4s;
+}
+
+.accreq-sub-segment {
+  stroke-dasharray: 100.53;
+  stroke-dashoffset: 100.53;
+  animation: dash .3s linear forwards;
+  animation-delay: 2.7s;
+}
+
+/* B -> B1*/
+.accon-line {
+  stroke-dasharray: 60;
+  stroke-dashoffset: 60;
+  animation: dash .4s linear forwards;
+  animation-delay: 5s;
+}
+
+.accon-arrow {
+  animation: appearX .05s linear forwards;
+  animation-iteration-count: 1;
+  animation-delay: 5.3s;
+  opacity: 0;
+}
+
+/* B1 */
+.object-denied-outline {
+  stroke-dasharray: 75.4;
+  stroke-dashoffset: -75.4;
+  animation: dash .5s linear forwards;
+  animation-delay: 5.5s;
+}
+
+.object-denied-2 {
+  stroke-dasharray: 17px;
+  stroke-dashoffset: 17px;
+  animation: dash .5s linear forwards;
+  animation-delay: 5.5s;
+}
+
+.object-denied-1 {
+  stroke-dasharray: 17px;
+  stroke-dashoffset: 17px;
+  animation: dash .3s linear forwards;
+  animation-delay: 5.5s;
+}

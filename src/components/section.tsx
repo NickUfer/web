@@ -23,6 +23,8 @@ const Section = ({
     className={cn(styles.section, {
       [styles.dark]: dark,
       [styles.light]: !dark,
+      ['is-dark-background']: dark,
+      ['is-light-background']: !dark,
     })}
   >
     <div className="container-fluid">

@@ -1,0 +1,1683 @@
+{
+  "id": "95b4922f-5375-4c7a-81a2-78839f6cbf8c",
+  "url": "products/account-takeover-detection-api.html",
+  "meta": {
+    "description": " Proactively detect and prevent account takeover attempts with one simple and free API call.",
+    "title": "Free & Simple Account Takeover API - ORY Cloud Security"
+  },
+  "design": {
+    "config": {
+      "ory-design-clarke": {
+        "headerBackgroundUrl": "images/pexels-photo-65125.jpeg",
+        "headerDarkenLevel": 0.6
+      }
+    }
+  },
+  "title": "ORY Cloud Security - Account Takeover Detection API",
+  "content": {
+    "header": {
+      "id": "fd191274-9ae6-4dba-bf7d-e62595a8b1f4",
+      "cells": [
+        {
+          "id": "4baa438d-058a-47b1-a2ab-2ba3bfa740a6",
+          "inline": null,
+          "size": 12,
+          "content": {
+            "plugin": {
+              "name": "ory/editor/core/content/slate",
+              "version": "0.0.1"
+            },
+            "state": {
+              "serialized": {
+                "nodes": [
+                  {
+                    "kind": "block",
+                    "type": "HEADINGS/HEADING-ONE",
+                    "nodes": [
+                      {
+                        "kind": "text",
+                        "text": "ORY Cloud Security"
+                      }
+                    ],
+                    "data": {
+                      "align": "center"
+                    }
+                  },
+                  {
+                    "kind": "block",
+                    "type": "HEADINGS/HEADING-TWO",
+                    "nodes": [
+                      {
+                        "kind": "text",
+                        "text": "Account takeover detection"
+                      }
+                    ],
+                    "data": {
+                      "align": "center"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "id": "4d2bfea2-3a46-44ff-8573-2a25448fc878",
+      "cells": [
+        {
+          "id": "479ae558-9428-4db0-bba1-62d56824d077",
+          "inline": null,
+          "size": 12,
+          "rows": [
+            {
+              "id": "5998cb97-2578-41ad-80b8-ce03b5d4ae81",
+              "cells": [
+                {
+                  "id": "59169b0c-fc75-4df6-9447-87a8aba2102d",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "dark"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "74dc2bc9-76e7-4f7f-85e9-25a0c065c54d",
+                      "cells": [
+                        {
+                          "id": "2d93bbe9-a8e1-4d50-992d-63f0022e5e40",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "ce12dd8a-f6c9-433a-a7d6-312f74428264",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "Proactively detect and prevent account takeover attempts with one "
+                                          },
+                                          {
+                                            "text": "simple and",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/EM",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " "
+                                          },
+                                          {
+                                            "text": "free ",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/EM",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": "API call"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "c5095aac-3a20-495f-bd39-491e47531a71",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "145be5cc-4215-4c64-b3fe-5ca5fa5a9983",
+              "cells": [
+                {
+                  "id": "7476123a-69b2-463e-8a82-1641f5b7993d",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "5fffda46-f4c2-48ea-af1e-057b85773eb5",
+                      "cells": [
+                        {
+                          "id": "77d418e5-1bce-417a-888d-d0f99765b18c",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Instant protection"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Use one API request to detect and prevent account takeover and other malicious authentication attempts."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Send a POST request containing the user's username or email, IP address, user agent, and the host where the log in occurred."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "We do not store user",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " "
+                                          },
+                                          {
+                                            "text": "ids",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ", only a cryptographic hash - making it impossible to recover the original user id or email."
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "85cd66e2-2405-43f4-b1ee-b1bf50cf3de3",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ curl https://ocs.ory.am/ato/inspect \\\n    -x POST\n    -d user=\"someone@example.com\" \\\n    -d ip=\"127.0.0.1\" \\\n    -d ua=\"Mozilla/5.0 (Windows NT 10.0)\" \\\n    -d host=\"login.ory.am\" \\\n    -d session=\"session-id\"\n"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "fa19d9b8-d418-42ee-84a7-79d03e94bd08",
+                      "cells": [
+                        {
+                          "id": "3cc2d0d8-dbc4-4bbc-a5d7-a3aca0ee2d84",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "3ecb1603-5fc0-4806-bd81-727c5a0c2877",
+                      "cells": [
+                        {
+                          "id": "bef8f060-0a74-44aa-9fca-825a5b5a1775",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "6c176d01-ebea-4403-9d01-82df2466c7fc",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "READ API DOCS",
+                              "url": "http://docs.atoapi.apiary.io/#"
+                            }
+                          }
+                        },
+                        {
+                          "id": "6fedfb92-f9a9-4083-8d67-4049bd78b5c4",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "WRITE US AN EMAIL",
+                              "url": "mailto:hi@ory.am"
+                            }
+                          }
+                        },
+                        {
+                          "id": "a137a7ae-b096-4c5d-8bdf-a8e679c008c5",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "041c92c4-1fb4-4dce-923e-c8700bbcb6f7",
+              "cells": [
+                {
+                  "id": "12ffc386-107b-4bc0-a6df-25e7bf6219f3",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {}
+                  },
+                  "rows": [
+                    {
+                      "id": "80e3c1c9-a58f-4450-a7ad-3712a402335f",
+                      "cells": [
+                        {
+                          "id": "ad1fcf5d-9213-4581-a57f-ac45e47ac85e",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Try now"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Use this widget to make exemplary requests and receive real scores. After the initial request, for example, update the IP Address and the User Agent and see how the risk value increases. Change the email address to see how the score goes down when an account was used that has not been involved in a data leak."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "left"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "86058c13-2743-4b53-a7c5-cab4c20118e7",
+                      "cells": [
+                        {
+                          "id": "fc297502-9d33-471c-bee3-d91bd71c3a33",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/divider",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "3ae2abd3-ca5a-4836-8814-905ccf630256",
+                      "cells": [
+                        {
+                          "id": "192f3d12-237c-49cc-b94b-faa86d278165",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/html",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "html": "<iframe style=\"margin: 0 auto; display: block; width: 100%; overflow-x: hidden; height: 510px;\" src=\"ato-widget.html\"></iframe>"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "b558ba79-d43e-445b-8816-f2494522c974",
+              "cells": [
+                {
+                  "id": "310f4831-96c5-45f9-960d-92823c136a4a",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "807f7466-4c41-471d-b0a9-4284ab9e94f9",
+                      "cells": [
+                        {
+                          "id": "e25957c8-85ed-4054-b03d-8b189cf3516f",
+                          "inline": null,
+                          "size": 7,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ curl https://ocs.ory.am/ato/inspect [...]\n\n{\n\"id\": \"Jk4Fa\",\n\"decision\": \"deny\",\n\"score\": 0.99,\n\"reasons\": [\n  \"IP origin has bad reputation\",\n  \"Credentials found in yahoo.com data breach\",\n  \"Traveled from Munich to L.A. in 5 minutes\" ]\n}"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "6c24bbb2-6d2e-4ef0-8464-921e5d030df0",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Clear response"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "The API returns a threat score ranging from 0 (no risk) to 1 (high risk), the reasons why we think that the attempt is malicious, an incident id, and a decision which can be one of"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "LISTS/UNORDERED-LIST",
+                                    "nodes": [
+                                      {
+                                        "kind": "block",
+                                        "type": "LISTS/LIST-ITEM",
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "ranges": [
+                                                  {
+                                                    "text": "deny: ",
+                                                    "marks": [
+                                                      {
+                                                        "type": "EMPHASIZE/STRONG",
+                                                        "data": {}
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "text": "high confidence that this login attempt is malicious and should be blocked."
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "LISTS/UNORDERED-LIST",
+                                    "nodes": [
+                                      {
+                                        "kind": "block",
+                                        "type": "LISTS/LIST-ITEM",
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "ranges": [
+                                                  {
+                                                    "text": "allow:",
+                                                    "marks": [
+                                                      {
+                                                        "type": "EMPHASIZE/STRONG",
+                                                        "data": {}
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "text": " high confidence that login attempt is genuine."
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "block",
+                                        "type": "LISTS/LIST-ITEM",
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "ranges": [
+                                                  {
+                                                    "text": "notify",
+                                                    "marks": [
+                                                      {
+                                                        "type": "EMPHASIZE/STRONG",
+                                                        "data": {}
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "text": ": medium confidence that login attempt is malicious and the account owner should be notified."
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": ""
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "611353e6-4192-4a88-ad09-0c5f25de3856",
+              "cells": [
+                {
+                  "id": "fde79106-d9e4-4162-8393-3a20d3c07e06",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "c48b31ff-ec56-4fb2-8611-f9ac8eada915",
+                      "cells": [
+                        {
+                          "id": "85d14e22-cb9b-4738-9dd3-fdcfe3e773e5",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Tailored threat models"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "We train our models specifically for your application and for each user independently."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "To improve detection rates, notify us if a user "
+                                          },
+                                          {
+                                            "text": "confirmed",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " or "
+                                          },
+                                          {
+                                            "text": "rejected",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " suspicious account activity with one simple API request."
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "7adf0511-ead0-400d-a119-527d42dc0353",
+                          "inline": null,
+                          "size": 7,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ curl -x POST \\\n  https://ocs.ory.am/ato/incidents/<id>/reject\n\n# Confirm threat\n$ curl -X POST \\\n  https://ocs.ory.am/ato/incidents/Jk4Fa/confirm\n\n# Reject threat\n$ curl -X POST \\\n  https://ocs.ory.am/ato/incidents/Jk4Fa/reject"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "a74cf32b-aab0-4483-ab52-495bc0fc0985",
+              "cells": [
+                {
+                  "id": "8984a0fa-cef7-4fc0-aa5c-502f42aaf438",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "ae31086a-2481-4b6f-ae1a-bb4060f787dd",
+                      "cells": [
+                        {
+                          "id": "66dca826-ffe2-40ca-83da-5a822565a725",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Risk assessment"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0774f924-b821-468e-b813-67f865a8dd2e",
+                      "cells": [
+                        {
+                          "id": "7c414824-78ff-4132-8267-530de4601164",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "099a2e7d-4423-4378-9a90-b0b41b87f2b3",
+                      "cells": [
+                        {
+                          "id": "e063c1e2-6055-42dd-9546-de39aeab4a43",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "b0885f63-3d24-423e-8177-aae2e6658380",
+                              "cells": [
+                                {
+                                  "id": "506bebec-4180-4013-9073-a35fe306d4cc",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "icon": "fingerprint",
+                                      "size": "84px"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "3fdc3917-ef09-49c3-a4df-d6b8ce9e80cf",
+                              "cells": [
+                                {
+                                  "id": "87d7cc55-4f64-4002-b18d-0e646664927a",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Fingerprint"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "We keep track of the devices used by an account and get suspicious when unknown devices are being used."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "9832b003-6f26-4bba-8354-fa4fafc5c99e",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "11a4354f-3952-41e2-9870-a25088c5428e",
+                              "cells": [
+                                {
+                                  "id": "65c092c3-33b9-4d40-8ec4-97bf49cca06c",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "icon": "error_outline",
+                                      "size": "84px"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "f7a8f667-48c1-4110-bc5f-9e9b8b1a6430",
+                              "cells": [
+                                {
+                                  "id": "ee14017f-1590-482c-9471-91c2dc56a745",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Data breach monitor"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "We detect compromised accounts by keeping track of data breaches and also rely on third-party databases such as Troy Hunt's haveibeenpwned.com."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "d2380f75-f737-40ca-8f2e-7591d7503301",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "5efea28f-f78a-41d6-bac2-f09cc9d5cb4e",
+                              "cells": [
+                                {
+                                  "id": "9bb76fca-b60e-40fc-89a1-3e43ca8f96c8",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "size": "84px",
+                                      "icon": "place"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "20b5a6f3-5760-4447-8556-93038ac040c7",
+                              "cells": [
+                                {
+                                  "id": "5eb15a46-e617-45f2-bc8d-3271e155fa7e",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Geolocation"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "We locate login attempts and identify suspicious activity when reaching unrealistic travel times or authenticating from previously unknown locations."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "1bb7a980-beed-4c8a-a94b-2d6f4892f854",
+                      "cells": [
+                        {
+                          "id": "d93c7327-40a9-43db-97b4-e2c75ab772fc",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "1e57c0c2-bef2-411d-af1d-ee547661f824",
+                      "cells": [
+                        {
+                          "id": "2134fafe-52a2-4970-b40b-d16d30ba7e84",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "57a3138a-e15e-44ef-9a6f-78765bbe097a",
+                              "cells": [
+                                {
+                                  "id": "34c5200d-4045-4eb6-bc0d-fd837b2f3c40",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "size": "84px",
+                                      "icon": "device_hub"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "ef0056ec-3508-4274-9193-7c37c222c04f",
+                              "cells": [
+                                {
+                                  "id": "f5a7a648-cd9e-4a16-be51-69b4ed5ca4cf",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "IP reputation"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "We become suspicious when IPs with bad reputation, such as botnets, known hackers, or Tor exit nodes are being used."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "1efcdb48-0fb7-4acc-aeb7-4969cf3372b8",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "8e5817cd-095d-46e1-a5e4-8343e9b910c7",
+                              "cells": [
+                                {
+                                  "id": "6853ca3d-52e5-4565-98c7-ed07c91c37b2",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "icon": "insert_chart",
+                                      "size": "84px"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "13d48bd6-a74c-462e-9bf0-c6e4d453c29c",
+                              "cells": [
+                                {
+                                  "id": "fad5d8c7-4961-43f4-b02e-2f95e17984b5",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Activity monitor"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Users being online during unusual times makes our algorithm suspicious and increases the risk score."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": null
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "eecabf9b-f7f3-4ad9-b1a1-be75a99df924",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "a78667f5-a842-4b3c-a50b-432512e9644f",
+                      "cells": [
+                        {
+                          "id": "0b08a8e8-8926-4774-8bae-9bb53bde4c24",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "c7d7a4d4-0992-46b6-9f08-aee1ac9c0322",
+              "cells": [
+                {
+                  "id": "bbc701b0-6493-479e-af80-22b2c47bb034",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "184755ba-645b-4286-9156-07f4197bb986",
+                      "cells": [
+                        {
+                          "id": "1e1bf51d-60bb-4ff5-82cb-c58eb2aefd74",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/image",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "src": "images/ory-security-console.png"
+                            }
+                          }
+                        },
+                        {
+                          "id": "f74f75b2-089e-4008-b22e-9d7663aeed71",
+                          "inline": null,
+                          "size": 6,
+                          "rows": [
+                            {
+                              "id": "dd31eb2f-01d0-44fe-b26b-cdda7df68628",
+                              "cells": [
+                                {
+                                  "id": "4f68f576-3986-4835-850a-296eed088e96",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-TWO",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "ORY Cloud Security"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "dc7ce0cb-99d6-48cc-8a88-f33eaf8cc716",
+                              "cells": [
+                                {
+                                  "id": "8d01883e-eaea-4076-8556-41f54440ce96",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "The Account Takeover Prevention API is part of ORY Cloud Security, a set of products that solve IoT, cloud and API security.\r"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Our open source flagship ORY Hydra secures production stacks facing millions of requests each day. To learn more, click the button below."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "ad0fa5a4-a741-4a52-9be9-1f94bc2187cb",
+                              "cells": [
+                                {
+                                  "id": "476856cd-a8e5-412d-8dd1-912ac3cd0d2d",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/button",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "url": "products/cloud-security",
+                                      "text": "OPEN SOURCE SECURITY"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0e706872-fc0a-4e51-b816-98bad01f6a7f",
+              "cells": [
+                {
+                  "id": "af9d9280-3301-4266-b88d-e1333cf51301",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "5396123d-d80e-47cd-994e-b9bfca240f73",
+                      "cells": [
+                        {
+                          "id": "18f61779-5e10-46de-909a-25a0f88ba898",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "006b1868-e564-4fd2-96b9-68b08be33324",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "The Account Takeover Prevention API is in\nearly access and free of charge."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "f0176451-194d-48cb-8965-21fdd99365ec",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "713126d6-22f5-437f-b368-1f17abe2e3c5",
+                      "cells": [
+                        {
+                          "id": "09627bec-a064-4384-a7df-1c7401687d08",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "32ba3dec-e570-4320-9cab-c17cc3a43cc3",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "WRITE US AN EMAIL",
+                              "url": "mailto:hi@ory.am"
+                            }
+                          }
+                        },
+                        {
+                          "id": "eb6e186c-d19d-4ee9-993f-b2067df86720",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "62fdb54f-8623-4025-ac1a-5746ccc05e93",
+                      "cells": [
+                        {
+                          "id": "cb1cd7f3-260a-425c-a5d6-758767f24326",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "f209436a-4e71-4a36-b8b3-3c61d20f971a",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-FOUR",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Please excuse outages, false positives / negatives.\nWe are improving the service every day."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-FOUR",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Requests are limited to one per second, "
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "contact us"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "mailto:hi@ory.am"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "text": " if you\nneed more or send us a quick chat message (blue icon bottom left)\n\n"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "0f4d29b4-55ff-4e2c-a396-3ac455a0a714",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

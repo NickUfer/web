@@ -1,78 +1,98 @@
-@import "../styles/properties.css";
-@import "../styles/grid.css";
-@import "../styles/global.css";
-@import "../styles/typography.css";
+@import '../styles/properties.css';
+@import '../styles/grid.css';
+@import '../styles/global.css';
+@import '../styles/typography.css';
 
 .newsletter {
-    background-color: var(--ory-brand-dark-primary);
-    padding: 96px 0;
-    position: relative;
-}
-
-.divider {
-    border: 1px solid #F04870;
-    position: absolute;
-    top: 96px;
-    bottom: 96px;
-    left: 50%;
+  background-color: var(--colors-ui-dark-primary);
+  padding: 96px 0;
+  position: relative;
+  color: var(--colors-ui-white);
 }
 
 @media (--sm-viewport) {
-    .newsletter {
-        padding: 64px 0;
-    }
+  .newsletter {
+    padding: 64px 0;
+  }
 
-    .right {
-        margin-top: 32px;
-    }
+  .right {
+    margin-top: 32px;
+  }
 }
 
 @media (--md-viewport) {
-    .newsletter {
-        padding: 64px 0;
-    }
+  .newsletter {
+    padding: 64px 0;
+  }
 
-    .right {
-        margin-top: 32px;
-    }
+  .right {
+    margin-top: 32px;
+  }
+}
+
+.light {
+  background-color: var(--colors-ui-primary-dark-70);
 }
 
 .form {
-    width: 100%;
-    margin-bottom: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 
-    & input {
-        font-style: normal;
-        font-size: 14px;
-        color: var(--ory-brand-white);
-        padding: 8px 16px;
-        border: none;
-        line-height: 168%;
+  & input {
+    font-style: normal;
+    font-size: 14px;
+    color: var(--colors-ui-white);
+    padding: 8px 16px;
+    border: none;
+    line-height: 168%;
+  }
+
+  & input[type='button'] {
+    font-weight: 500;
+    width: calc(40%);
+    cursor: pointer;
+    transition: color ease 200ms, background-color ease 200ms,
+      border-color ease 200ms;
+  }
+
+  & input[type='email'] {
+    background-color: rgba(255, 255, 255, 0.3);
+    width: calc(60% - 32px);
+
+    &::placeholder {
+      color: var(--colors-ui-white);
+    }
+  }
+}
+
+:global .theme-default {
+  & :local .form input[type='button'] {
+    background-color: var(--colors-brand-secondary);
+
+    &:hover,
+    &:focus {
+      color: var(--colors-brand-secondary);
+      background-color: var(--colors-ui-white);
     }
 
-    & input[type=button] {
-        background-color: var(--ory-brand-tertiary);
-        font-weight: 500;
-        width: calc(40%);
-        cursor: pointer;
-        transition: color ease 200ms, background-color ease 200ms, border-color ease 200ms;
+    &:active {
+      background-color: var(--colors-ui-white-shade-15);
+    }
+  }
+}
 
-        &:hover, &:focus {
-            background-color: var(--ory-brand-white);
-            color: var(--ory-brand-tertiary);
-        }
+:global .theme-hydra {
+  & :local .form input[type='button'] {
+    background-color: var(--colors-brand-hydra);
 
-        &:active {
-            background-color: var(--ory-brand-white-shade-15);
-        }
+    &:hover,
+    &:focus {
+      color: var(--colors-brand-hydra);
+      background-color: var(--colors-ui-white);
     }
 
-    & input[type=email] {
-        background-color: rgba(255, 255, 255, .3);
-        width: calc(60% - 32px);
-
-        &::placeholder {
-            color: var(--ory-brand-white);
-        }
+    &:active {
+      background-color: var(--colors-ui-white-shade-15);
     }
+  }
 }

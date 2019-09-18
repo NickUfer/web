@@ -1,0 +1,142 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+            type="text/css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+
+        pre:before {
+            content: " ";
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            background: #DAD9D9;
+            height: 24px;
+            border-radius: 4px 4px 0 0;
+        }
+
+        pre {
+            display: block;
+            margin: 1em !important;
+            overflow: visible !important;
+            background: #333;
+            border-radius: 0 0 4px 4px;
+            color: white;
+            padding: calc(20px + 1em) 1em 1em 1em !important;
+            position: relative;
+            white-space: pre-wrap;
+        }
+
+        pre code {
+            margin: 0;
+            padding: 0;
+            white-space: pre-wrap;
+            line-height: 1.25em;
+            max-height: 300px;
+            overflow-y: scroll;
+            display: block;
+        }
+
+        input {
+            font-size: 16px;
+            background: #191919;
+            border: #777 1px solid;
+            outline: none;
+            width: 100%;
+
+            color: #f4f4f4;
+            padding: 1em 1em;
+
+            display: block;
+            font-family: "PT Sans", sans-serif;
+        }
+
+        input[type=text] {
+            background: #333;
+        }
+
+        input[type=submit] {
+            text-align: center;
+            background: #333;
+        }
+
+        input[disabled] {
+
+        }
+    </style>
+</head>
+<body>
+<form id="checkform">
+    <div style="text-align: center; margin: 0 1em;">
+        <div class="row">
+            <div class="col-xs-3">
+                <input type="text" id="user" placeholder="user@example.org" name="user" />
+            </div>
+            <div class="col-xs-3">
+                <input type="text" id="ip" placeholder="172.217.21.14" name="ip" />
+            </div>
+            <div class="col-xs-3">
+                <input type="text" id="ua" placeholder="Chrome 56.0 (ato)" name="ua" />
+            </div>
+            <div class="col-xs-3"><input id="send" type="submit" value="CHECK"></div>
+        </div>
+    </div>
+    <div>
+        <pre style="white-space: pre-wrap">
+            <code id="result"></code>
+        </pre>
+    </div>
+</form>
+<script>
+  (function () {
+    document.getElementById('checkform').addEventListener('submit', function (e) {
+      e.preventDefault()
+      request()
+    })
+
+    var request = function () {
+      var request = new XMLHttpRequest();
+      request.open('POST', 'https://ocs.ory.am/ato/inspect', true);
+      request.setRequestHeader('Content-Type', 'application/json');
+
+      document.getElementById('send').disabled = true;
+      document.getElementById('send').innerHTML = 'CHECKING...';
+
+      request.onload = function () {
+        setTimeout(function() {
+          document.getElementById('send').disabled = false;
+          document.getElementById('send').innerHTML = 'CHECK';
+        }, 200)
+        var resp = JSON.parse(this.response)
+        document.getElementById('result').innerHTML = JSON.stringify(resp, false, 2)
+      }
+
+      request.onerror = function (e) {
+        document.getElementById('result').innerHTML = JSON.stringify({
+          error: 'Unable to open connection to backend server, try again later',
+          context: e,
+          request: this,
+        }, false, 2)
+      }
+
+      request.send(JSON.stringify({
+        user: document.getElementById('user').value || 'user@example.org',
+        ip: document.getElementById('ip').value || '172.217.21.14',
+        //session: document.getElementById('session').value || 'some-session-id',
+        ua: document.getElementById('ua').value || 'Chrome 56',
+        host: 'www.ory.am',
+      }));
+    }
+
+    request();
+  })()
+</script>
+</body>
+</html>

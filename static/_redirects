@@ -1,0 +1,69 @@
+# Redirect domain aliases to primary domain
+
+https://ory.sh/* https://www.ory.sh/:splat 301!
+https://www.ory.am/* https://www.ory.sh/:splat 301!
+https://ory.am/* https://www.ory.sh/:splat 301!
+
+https://www.ory.sh/chat https://discord.gg/PAMQWkr 302!
+https://www.ory.sh/forum https://community.ory.sh 302!
+
+https://www.ory.am/products/* https://www.ory.sh 301!
+https://www.ory.sh/products/* https://www.ory.sh 301!
+https://www.ory.sh/sites https://editor.ory.sh 301!
+https://www.ory.am/sites https://editor.ory.sh 301!
+https://www.ory.sh/sites/* https://editor.ory.sh 301!
+https://www.ory.am/sites/* https://editor.ory.sh 301!
+
+## Shortlinks
+
+https://www.ory.sh/pnp https://arekkas.typeform.com/to/H6sChj 302!
+
+## November 2018 docs change
+
+https://www.ory.sh/docs/api/hydra https://www.ory.sh/docs/hydra/sdk/hydra-sdk-api 302!
+https://www.ory.sh/docs/api/oathkeeper https://www.ory.sh/docs/oathkeeper/sdk/oathkeeper-sdk-api 302!
+https://www.ory.sh/docs/api/keto https://www.ory.sh/docs/keto/sdk/keto-sdk-api 302!
+
+https://www.ory.sh/docs/guides/master/ https://www.ory.sh/docs/ 302!
+https://www.ory.sh/docs/guides/master/updating/ https://www.ory.sh/docs/ecosystem/ecosystem-upgrading 302!
+
+https://www.ory.sh/docs/guides/master/hydra/ https://www.ory.sh/docs/hydra/hydra-index 302!
+https://www.ory.sh/docs/guides/master/hydra/1-tutorial/ https://www.ory.sh/docs/hydra/hydra-5min-tutorial 302!
+https://www.ory.sh/docs/guides/master/hydra/2-environment/ https://www.ory.sh/docs/hydra/hydra-dependencies-environment 302!
+https://www.ory.sh/docs/guides/master/hydra/2-environment/1-securing-ory-hydra.html https://www.ory.sh/docs/hydra/hydra-production 302!
+https://www.ory.sh/docs/guides/master/hydra/3-overview/ https://www.ory.sh/docs/hydra/hydra-oauth2 302!
+https://www.ory.sh/docs/guides/master/hydra/3-overview/ https://www.ory.sh/docs/hydra/hydra-oauth2 302!
+https://www.ory.sh/docs/guides/master/hydra/3-overview/2-jwk.html https://www.ory.sh/docs/hydra/hydra-jwks 302!
+https://www.ory.sh/docs/guides/master/hydra/3-overview/3-limitations.html https://www.ory.sh/docs/hydra/hydra-limitations 302!
+https://www.ory.sh/docs/guides/master/hydra/4-install/ https://www.ory.sh/docs/hydra/hydra-configure-deploy 302!
+https://www.ory.sh/docs/guides/master/hydra/5-security/ https://www.ory.sh/docs/hydra/hydra-security-architecture 302!
+https://www.ory.sh/docs/guides/master/hydra/6-how-to/1-production.html https://www.ory.sh/docs/hydra/hydra-production 302!
+https://www.ory.sh/docs/guides/master/hydra/6-how-to/2-architecture.html https://www.ory.sh/docs/hydra/hydra-integration 302!
+https://www.ory.sh/docs/guides/master/hydra/6-how-to/3-advanced.html https://www.ory.sh/docs/hydra/hydra-advanced 302!
+https://www.ory.sh/docs/guides/master/hydra/6-how-to/4-debug.html https://www.ory.sh/docs/hydra/hydra-debugging 302!
+https://www.ory.sh/docs/guides/master/hydra/7-sdk/ https://www.ory.sh/docs/hydra/sdk/hydra-sdk-index 302!
+https://www.ory.sh/docs/guides/master/hydra/7-sdk/1-go.html https://www.ory.sh/docs/hydra/sdk/hydra-sdk-go 302!
+https://www.ory.sh/docs/guides/master/hydra/7-sdk/2-js.html https://www.ory.sh/docs/hydra/sdk/hydra-sdk-js 302!
+https://www.ory.sh/docs/guides/master/hydra/8-faq/ https://www.ory.sh/docs/hydra/hydra-faq 302!
+https://www.ory.sh/docs/guides/master/hydra/9-appendix/ https://www.ory.sh/docs/hydra/hydra-appendix 302!
+
+https://www.ory.sh/docs/guides/master/oathkeeper/ https://www.ory.sh/docs/oathkeeper/oathkeeper-index 302!
+https://www.ory.sh/docs/guides/master/oathkeeper/1-overview/1-rules.html https://www.ory.sh/docs/oathkeeper/oathkeeper-api-access-rules 302!
+https://www.ory.sh/docs/guides/master/oathkeeper/1-overview/2-installation.html https://www.ory.sh/docs/oathkeeper/oathkeeper-configure-deploy 302!
+https://www.ory.sh/docs/guides/master/oathkeeper/1-overview/3-configuration.html https://www.ory.sh/docs/oathkeeper/oathkeeper-configure-deploy 302!
+# WITHOUT REPLACEMENT: https://www.ory.sh/docs/guides/master/oathkeeper/1-overview/4-deployment.html 302!
+https://www.ory.sh/docs/guides/master/oathkeeper/1-overview/5-proxy-judge.html https://www.ory.sh/docs/oathkeeper/oathkeeper-control-flow 302!
+
+https://www.ory.sh/docs/guides/master/keto/ https://www.ory.sh/docs/keto/keto-index 302!
+https://www.ory.sh/docs/guides/master/keto/1-overview/1-policies.html https://www.ory.sh/docs/keto/1-overview/keto-overview-1-policies 302!
+https://www.ory.sh/docs/guides/master/keto/1-overview/2-warden.html https://www.ory.sh/docs/keto/1-overview/keto-overview-2-warden 302!
+https://www.ory.sh/docs/guides/master/keto/1-overview/3-roles.html https://www.ory.sh/docs/keto/1-overview/keto-overview-3-roles 302!
+https://www.ory.sh/docs/guides/master/keto/1-overview/4-best-practices.html https://www.ory.sh/docs/keto/1-overview/keto-overview-4-best-practices 302!
+https://www.ory.sh/docs/guides/master/keto/1-overview/5-conditions.html https://www.ory.sh/docs/keto/1-overview/keto-overview-5-conditions 302!
+https://www.ory.sh/docs/guides/master/keto/1-overview/6-installation.html https://www.ory.sh/docs/keto/1-overview/keto-overview-6-installation 302!
+https://www.ory.sh/docs/guides/master/keto/1-overview/7-configuration.html https://www.ory.sh/docs/keto/1-overview/keto-overview-7-configuration 302!
+
+https://www.ory.sh/docs/guides/master/performance/ https://www.ory.sh/docs/performance/performance-index 302!
+https://www.ory.sh/docs/guides/master/performance/1-hydra.html https://www.ory.sh/docs/performance/performance-hydra 302!
+
+https://www.ory.sh/docs/guides/master/telemetry/ https://www.ory.sh/docs/ecosystem/ecosystem-sqa 302!

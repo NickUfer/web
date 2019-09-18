@@ -65,7 +65,7 @@ const menu = [
 ]
 
 const Footer = () => (
-  <footer className={styles.footer}>
+  <footer className={cn(styles.footer)}>
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">

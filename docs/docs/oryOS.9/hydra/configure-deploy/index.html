@@ -1,0 +1,415 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configure and Deploy · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;The goal of this chapter is to introduce you to a fully functional set up that&lt;/p&gt;
+"/><meta name="docsearch:version" content="oryOS.9"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configure and Deploy · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&lt;p&gt;The goal of this chapter is to introduce you to a fully functional set up that&lt;/p&gt;
+"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.9</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.9/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Welcome</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Hydra</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/oauth2">OAuth 2.0 &amp; Open ID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.9/hydra/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/production">Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/integration">Integration</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDK</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/dependencies-environment">Dependencies &amp; Environment</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/faq">FAQ</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/hydra/appendix">Appendix</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Oathkeeper</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/oathkeeper/">Introduction</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/oathkeeper/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/oathkeeper/control-flow">Control Flow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDK</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Keto</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/1-overview/policies">Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/1-overview/warden">Warden API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/1-overview/roles">Roles</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/1-overview/best-practices">Best Practices</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/1-overview/conditions">Conditions &amp; Context</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/1-overview/installation">Installing ORY Keto</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/1-overview/configuration">Configuring and Running ORY Keto</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDK</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Performance</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.9/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/configure-deploy.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Configure and Deploy</h1></header><article><div><span><p>The goal of this chapter is to introduce you to a fully functional set up that
+includes ORY Hydra as well as our User Login &amp; Consent Provider reference
+implementation.</p>
+<p>The goal of this section is to familiarize you with the specifics of setting up
+ORY Hydra in your environment. Before starting with this section, please check
+out the <a href="/docs/oryOS.9/hydra/5min-tutorial">tutorial</a>. It will teach you the most important
+flows and settings for Hydra.</p>
+<p>This guide will:</p>
+<ol>
+<li>Download and run a PostgreSQL container in Docker.</li>
+<li>Download and run ORY Hydra in Docker.</li>
+<li>Download and run our reference User Login &amp; Consent Provider.</li>
+<li>Create an OAuth 2.0 Client to perform the OAuth 2.0 Authorize Code Flow.</li>
+<li>Perform the OAuth 2.0 Authorize Code flow.</li>
+</ol>
+<p>Before starting with this guide, please install the most recent version of
+<a href="https://www.docker.com/community-edition#/download">Docker</a>. While docker is
+not required for running ORY Hydra, we recommend using it for this tutorial as
+it will greatly reduce the complexity of setting up a database on your system
+without virtualization, installing Go, and compiling ORY Hydra.</p>
+<h2><a class="anchor" aria-hidden="true" id="create-a-network"></a><a href="#create-a-network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Network</h2>
+<p>Before we can start, a network must be created which we will attach all our
+Docker containers to. That way, the containers can talk to one another.</p>
+<pre><code class="hljs">$ docker<span class="hljs-built_in"> network </span>create hydraguide
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="deploy-postgresql"></a><a href="#deploy-postgresql" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy PostgreSQL</h2>
+<p>For the purpose of this tutorial, we will use PostgreSQL as a database. As you
+probably already know, don't run databases in Docker in production! For the sake
+of this tutorial however, let's use Docker to quickly deploy the database.</p>
+<pre><code class="hljs">$ docker <span class="hljs-builtin-name">run</span> \
+  --network hydraguide \
+  --name ory-hydra-example--postgres \
+  -e <span class="hljs-attribute">POSTGRES_USER</span>=hydra \
+  -e <span class="hljs-attribute">POSTGRES_PASSWORD</span>=secret \
+  -e <span class="hljs-attribute">POSTGRES_DB</span>=hydra \
+  -d postgres:9.6
+</code></pre>
+<p>This command wil start a postgres instance with name
+<code>ory-hydra-example--postgres</code>, set up a database called <code>hydra</code> and create a
+user <code>hydra</code> with password <code>secret</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="deploy-ory-hydra"></a><a href="#deploy-ory-hydra" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy ORY Hydra</h2>
+<p>We highly recommend using Docker to run Hydra, as installing, configuring and
+running Hydra is easiest with Docker. ORY Hydra is available on
+<a href="https://hub.docker.com/r/oryd/hydra/">Docker Hub</a>.</p>
+<pre><code class="hljs"><span class="hljs-comment"># The system secret can only be set against a fresh database. Key rotation is currently not supported. This</span>
+<span class="hljs-comment"># secret is used to encrypt the database and needs to be set to the same value every time the process (re-)starts.</span>
+<span class="hljs-comment"># You can use /dev/urandom to generate a secret. But make sure that the secret must be the same anytime you define it.</span>
+<span class="hljs-comment"># You could, for example, store the value somewhere.</span>
+$ export SYSTEM_SECRET=$<span class="hljs-params">(export <span class="hljs-attr">LC_CTYPE</span>=C; cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 32 | head -n 1)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Alternatively you can obviously just set a secret:</span>
+<span class="hljs-comment"># $ export SYSTEM_SECRET=this_needs_to_be_the_same_always_and_also_very_$3cuR3-._</span>
+
+<span class="hljs-comment"># The database url points us at the postgres instance. This could also be an ephermal in-memory database (`export DATABASE_URL=memory`)</span>
+<span class="hljs-comment"># or a MySQL URI.</span>
+$ export DATABASE_URL=postgres:<span class="hljs-string">//hydra</span><span class="hljs-function">:secret</span>@ory-hydra-example<span class="hljs-params">--postgres</span><span class="hljs-function">:5432</span>/hydra?sslmode=disable
+
+<span class="hljs-comment"># Before starting, let's pull the latest ORY Hydra tag from docker.</span>
+$ docker pull oryd/hydra<span class="hljs-function">:v1.0.0-rc.4_oryOS.9</span>
+
+<span class="hljs-comment"># This command will show you all the environment variables that you can set. Read this carefully.</span>
+<span class="hljs-comment"># It is the equivalent to `hydra help serve`.</span>
+$ docker run -it <span class="hljs-params">--rm</span> <span class="hljs-params">--entrypoint</span> hydra oryd/hydra<span class="hljs-function">:v1.0.0-rc.4_oryOS.9</span> <span class="hljs-keyword">help</span> serve
+
+Starts all HTTP/2 APIs and connects to a database backend.
+[<span class="hljs-string">...</span>]
+
+<span class="hljs-comment"># ORY Hydra does not do magic, it requires conscious decisions, for example running SQL migrations which is required</span>
+<span class="hljs-comment"># when installing a new version of ORY Hydra, or upgrading an existing installation.</span>
+<span class="hljs-comment"># It is the equivalent to `hydra migrate sql postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable`</span>
+$ docker run -it <span class="hljs-params">--rm</span> \
+  <span class="hljs-params">--network</span> hydraguide \
+  oryd/hydra<span class="hljs-function">:v1.0.0-rc.4_oryOS.9</span> \
+  migrate sql $DATABASE_URL
+
+Applying `client` SQL migrations.<span class="hljs-string">..</span>
+[<span class="hljs-string">...</span>]
+Migration successful!
+
+<span class="hljs-comment"># Let's run the server (settings explained below):</span>
+$ docker run -d \
+  <span class="hljs-params">--name</span> ory-hydra-example<span class="hljs-params">--hydra</span> \
+  <span class="hljs-params">--network</span> hydraguide \
+  -p 9000<span class="hljs-function">:4444</span> \
+  -p 9001<span class="hljs-function">:4445</span> \
+  -e SYSTEM_SECRET=$SYSTEM_SECRET \
+  -e DATABASE_URL=$DATABASE_URL \
+  -e OAUTH2_ISSUER_URL=https:<span class="hljs-string">//localhost</span><span class="hljs-function">:9000</span>/ \
+  -e OAUTH2_CONSENT_URL=http:<span class="hljs-string">//localhost</span><span class="hljs-function">:9020</span>/consent \
+  -e OAUTH2_LOGIN_URL=http:<span class="hljs-string">//localhost</span><span class="hljs-function">:9020</span>/login \
+  oryd/hydra<span class="hljs-function">:v1.0.0-rc.4_oryOS.9</span> serve all
+
+<span class="hljs-comment"># And check if it's running:</span>
+$ docker logs ory-hydra-example<span class="hljs-params">--hydra</span>
+
+time=<span class="hljs-string">"2017-06-29T21:26:26Z"</span> level=info msg=<span class="hljs-string">"Connecting with postgres://*:*@postgres:5432/hydra?sslmode=disable"</span>
+time=<span class="hljs-string">"2017-06-29T21:26:26Z"</span> level=info msg=<span class="hljs-string">"Connected to SQL!"</span>
+[<span class="hljs-string">...</span>]
+time=<span class="hljs-string">"2017-06-29T21:26:34Z"</span> level=info msg=<span class="hljs-string">"Setting up http server on :4444"</span>
+</code></pre>
+<p>Let's dive into the various settings:</p>
+<ul>
+<li><code>--network hydraguide</code> connects this instance to the network and makes it
+possible to connect to the PostgreSQL database.</li>
+<li><code>-p 9000:4444</code> exposes ORY Hydra's public API on <code>https://localhost:9000/</code>.</li>
+<li><code>-p 9001:4445</code> exposes ORY Hydra's administrative API on
+<code>https://localhost:9001/</code>.</li>
+<li><code>-e SYSTEM_SECRET=$SYSTEM_SECRET</code> sets the system secret environment variable
+<strong>(required)</strong>.</li>
+<li><code>-e DATABASE_URL=$DATABASE_URL</code> sets the database url environment variable
+<strong>(required)</strong>.</li>
+<li><code>-e OAUTH2_ISSUER_URL=https://localhost:9000/</code> this value must be set to the
+publicly available URL of ORY Hydra <strong>(required)</strong>.</li>
+<li><code>-e OAUTH2_CONSENT_URL=http://localhost:9020/consent</code> this sets the URL of the
+consent provider <strong>(required)</strong>. We will set up the service that handles
+requests at that URL in the next sections.</li>
+<li><code>-e OAUTH2_LOGIN_URL=http://localhost:9020/login</code> this sets the URL of the
+login provider <strong>(required)</strong>. We will set up the service that handles
+requests at that URL in the next sections.</li>
+</ul>
+<p>Note: In this example we did not define a value for the optional setting
+<code>OAUTH2_ERROR_URL</code>. This URL can be used to provide an endpoint which will
+receive error messages from ORY Hydra that should be displayed to the end user.
+The URL receives <code>error</code> and <code>error_description</code> parameters. If this value is
+not set, Hydra uses the fallback endpoint <code>/oauth2/fallbacks/error</code> and displays
+a default error message. In order to obtain a uniform UI, you might want to
+include such an endpoint in your login or consent provider.</p>
+<p>To confirm that the instance is running properly,
+<a href="https://localhost:9001/health/status">open the health check</a>. If asked, accept
+the self signed certificate in your browser. You should simply see <code>ok</code>.</p>
+<p>On start up, ORY Hydra is initializing some values. Let's take a look at the
+logs:</p>
+<pre><code class="hljs">$ docker logs ory-hydra-example--hydra
+<span class="hljs-attribute">time</span>=<span class="hljs-string">"2017-06-30T09:06:34Z"</span> <span class="hljs-attribute">level</span>=info <span class="hljs-attribute">msg</span>=<span class="hljs-string">"Connecting with postgres://*:*@postgres:5432/hydra?sslmode=disable"</span>
+<span class="hljs-attribute">time</span>=<span class="hljs-string">"2017-06-30T09:06:34Z"</span> <span class="hljs-attribute">level</span>=info <span class="hljs-attribute">msg</span>=<span class="hljs-string">"Connected to SQL!"</span>
+<span class="hljs-attribute">time</span>=<span class="hljs-string">"2017-06-30T09:06:34Z"</span> <span class="hljs-attribute">level</span>=info <span class="hljs-attribute">msg</span>=<span class="hljs-string">"Key pair for signing hydra.openid.id-token is missing. Creating new one."</span>
+<span class="hljs-attribute">time</span>=<span class="hljs-string">"2017-06-30T09:06:41Z"</span> <span class="hljs-attribute">level</span>=warning <span class="hljs-attribute">msg</span>=<span class="hljs-string">"No TLS Key / Certificate for HTTPS found. Generating self-signed certificate."</span>
+<span class="hljs-attribute">time</span>=<span class="hljs-string">"2017-06-30T09:06:41Z"</span> <span class="hljs-attribute">level</span>=info <span class="hljs-attribute">msg</span>=<span class="hljs-string">"Setting up http server on :4444"</span>
+</code></pre>
+<p>As you can see, the following steps are performed when running ORY Hydra against
+a fresh database:</p>
+<ol>
+<li>If no system secret was given (in our case we provided one), a random one is
+generated and emitted to the logs. Note this down, otherwise you won't be
+able to restart Hydra.</li>
+<li>Cryptographic keys are generated for the OpenID Connect ID Token, the consent
+challenge and response, and TLS encryption using a self-signed certificate,
+which is why we need to run all commands using <code>--skip-tls-verify</code>.</li>
+</ol>
+<p>ORY Hydra can be managed using the Hydra Command Line Interface (CLI), which is
+using ORY Hydra's REST APIs. To see the available commands, run:</p>
+<pre><code class="hljs">$ docker run --rm -it --entrypoint hydra oryd/hydra:v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.4</span>_oryOS<span class="hljs-number">.9</span> help
+Hydra <span class="hljs-keyword">is</span> a cloud native high throughput OAuth2 <span class="hljs-keyword">and</span> OpenID Connect provider
+
+Usage:
+  hydra [command]
+
+[...]
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="without-docker"></a><a href="#without-docker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Without Docker</h3>
+<p>You can also install ORY Hydra without docker. For the purpose of this tutorial,
+<a href="#configure-ory-hydra">please skip this section for now</a>, and read it later.</p>
+<h4><a class="anchor" aria-hidden="true" id="download-binaries"></a><a href="#download-binaries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Download Binaries</h4>
+<p>The client and server <strong>binaries are downloadable at the
+<a href="https://github.com/ory/hydra/releases">releases tab</a></strong>. There is currently no
+installer available. You have to add the Hydra binary to the PATH environment
+variable yourself or put the binary in a location that is already in your
+<code>$PATH</code> (e.g. <code>/usr/bin</code>, ...).</p>
+<p>Once installed, you should be able to run:</p>
+<pre><code class="hljs">$ hydra <span class="hljs-keyword">help</span>
+
+Hydra <span class="hljs-keyword">is</span> a cloud <span class="hljs-keyword">native</span> <span class="hljs-keyword">high</span> throughput OAuth2 <span class="hljs-keyword">and</span> OpenID <span class="hljs-keyword">Connect</span> provider
+
+<span class="hljs-keyword">Usage</span>:
+  hydra [command]
+
+Available Commands:
+  clients     Manage OAuth2 clients
+...
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="build-from-source"></a><a href="#build-from-source" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build from Source</h4>
+<p>If you wish to compile ORY Hydra yourself, you need to install and set up
+<a href="https://golang.org/">Go 1.11+</a> and add <code>$GOPATH/bin</code> to your <code>$PATH</code>.</p>
+<p>The following commands will check out the latest release tag of ORY Hydra and
+compile it and set up flags so that <code>hydra version</code> works as expected. Please
+note that this will only work with a linux shell like bash or sh.</p>
+<pre><code class="hljs">go <span class="hljs-builtin-name">get</span> -d -u github.com/ory/hydra
+cd $(go env GOPATH)/src/github.com/ory/hydra
+<span class="hljs-attribute">HYDRA_LATEST</span>=$(git describe <span class="hljs-attribute">--abbrev</span>=0 --tags)
+git checkout <span class="hljs-variable">$HYDRA_LATEST</span>
+<span class="hljs-attribute">GO111MODULE</span>=on go install \
+    -ldflags <span class="hljs-string">"-X github.com/ory/hydra/cmd.Version=<span class="hljs-variable">$HYDRA_LATEST</span> -X github.com/ory/hydra/cmd.BuildTime=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'` -X github.com/ory/hydra/cmd.GitHash=`git rev-parse HEAD`"</span> \
+    github.com/ory/hydra
+git checkout master
+hydra help
+
+<span class="hljs-built_in">..</span>.
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="deploy-login-consent-app"></a><a href="#deploy-login-consent-app" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Deploy Login &amp; Consent App</h2>
+<p>The Login Provider and Consent Provider can be two separate web services. We
+provide a
+<a href="https://github.com/ory/hydra-login-consent-node">reference implementation</a>
+which combines both features in one app. Here, we will use deploy that app using
+Docker.</p>
+<pre><code class="hljs">$ docker pull oryd/hydra-login-consent-node:v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.4</span>
+$ docker run -d \
+  --name ory-hydra-example--consent \
+  -p <span class="hljs-number">9020</span>:<span class="hljs-number">3000</span> \
+  --network hydraguide \
+  -e HYDRA_URL=https:<span class="hljs-comment">//ory-hydra-example--hydra:4445 \</span>
+  -e NODE_TLS_REJECT_UNAUTHORIZED=<span class="hljs-number">0</span> \
+  oryd/hydra-login-consent-node:v1<span class="hljs-number">.0</span><span class="hljs-number">.0</span>-rc<span class="hljs-number">.4</span>
+
+# Let<span class="hljs-string">'s check if it'</span>s running ok:
+$ docker logs ory-hydra-example--consent
+</code></pre>
+<p>Let's take a look at the arguments:</p>
+<ul>
+<li><code>-p 9020:3000</code> exposes this service at port 9020. If you remember, that's the
+port of the <code>OAUTH2_CONSENT_URL</code> and <code>OAUTH2_LOGIN_URL</code> value from the ORY
+Hydra docker container (<code>OAUTH2_CONSENT_URL=http://localhost:9020/consent</code>,
+<code>OAUTH2_LOGIN_URL=http://localhost:9020/login</code>).</li>
+<li><code>HYDRA_URL=http://hydra:4445</code> point to the ORY Hydra Administrative API.</li>
+<li><code>NODE_TLS_REJECT_UNAUTHORIZED=0</code> disables TLS verification, because we are
+using self-signed certificates.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="perform-oauth-20-flow"></a><a href="#perform-oauth-20-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Perform OAuth 2.0 Flow</h2>
+<p>Great! Our infrastructure is all set up! Next it's time to perform the OAuth 2.0
+Authorize Code flow. For that purpose, the ORY Hydra CLI has a feature that sets
+up an OAuth 2.0 Consumer and an OAuth 2.0 callback URL. Typically, this would be
+a third-party application that requests access to a user's resources on your
+servers - for example a Facebook App you wrote that backs up a user's photos and
+thus requires read access to the user's photos.</p>
+<p>Before we go ahead, the OAuth 2.0 Client that performs the request has to be set
+up. Let's call the client <code>facebook-photo-backup</code>. We have to specify which
+OAuth 2.0 Grant Types, OAuth 2.0 Scope, OAuth 2.0 Response Types, and Callback
+URLs the client may request:</p>
+<pre><code class="hljs">$ docker run <span class="hljs-comment">--rm -it \</span>
+  -e HYDRA_ADMIN_URL=https://ory-hydra-example<span class="hljs-comment">--hydra:4445 \</span>
+  <span class="hljs-comment">--network hydraguide \</span>
+  oryd/hydra:v1.0.0-rc.4_oryOS.9 \
+  clients <span class="hljs-keyword">create</span> <span class="hljs-comment">--skip-tls-verify \</span>
+    <span class="hljs-comment">--id facebook-photo-backup \</span>
+    <span class="hljs-comment">--secret some-secret \</span>
+    <span class="hljs-comment">--grant-types authorization_code,refresh_token,client_credentials,implicit \</span>
+    <span class="hljs-comment">--response-types token,code,id_token \</span>
+    <span class="hljs-comment">--scope openid,offline,photos.read \</span>
+    <span class="hljs-comment">--callbacks http://127.0.0.1:9010/callback</span>
+
+<span class="hljs-keyword">Client</span> facebook-photo-<span class="hljs-keyword">backup</span>
+<span class="hljs-keyword">Client</span> Secret: <span class="hljs-keyword">some</span>-secret
+</code></pre>
+<p>Let's dive into some of the arguments:</p>
+<ul>
+<li><code>--skip-tls-verify</code> is supported by all management commands
+(create/delete/update/... OAuth 2.0 Client, JSON Web Key, ...) and tells the
+CLI to trust any certificate authority - even self-signed ones. We need this
+flag because the server uses a self-signed certificate. In production
+deployments, you would use a certificate signed by a trusted CA.</li>
+<li><code>--grant-types authorize_code,refresh_token,client_credentials,implicit</code> we
+want to be able to perform all of these OAuth 2.0 flows.</li>
+<li><code>--response-types token,code,id_token</code> allows us to receive authorize codes,
+access and refresh tokens, and OpenID Connect ID Tokens.</li>
+<li><code>--scope openid,offline,fotos.read</code> allows the client to request various
+permissions:
+<ul>
+<li><code>openid</code> allows the client to perform the OpenID Connect flow and request an
+OpenID Connect ID Token.</li>
+<li><code>offline</code> allows the client to request a refresh token. Because we want to
+continuously backup photos, the app must be able to refresh expired access
+tokens. This scope allows that.</li>
+<li><code>photos.read</code> this is an imaginary scope that is not handled by ORY Hydra
+but serves the purpose of making it clear that we could request read access
+to a user's photos. You can obviously omit this scope or use your own scope.</li>
+</ul></li>
+<li><code>--callbacks http://localhost:9010/callback</code> allows the client to request this
+redirect uri.</li>
+</ul>
+<p>Perfect, let's perform an exemplary OAuth 2.0 Authorize Code Flow! To make this
+easy, the ORY Hydra CLI provides a helper command called <code>hydra token user</code>.
+Just imagine this being, for example, passport.js that is generating an auth
+code url, redirecting the browser to it, and then exchanging the authorize code
+for an access token. The same thing happens with this command:</p>
+<pre><code class="hljs">$ docker run <span class="hljs-comment">--rm -it \</span>
+  <span class="hljs-comment">--network hydraguide \</span>
+  -p <span class="hljs-number">9010</span>:<span class="hljs-number">9010</span> \
+  oryd/hydra:v1.<span class="hljs-number">0.0</span>-rc.<span class="hljs-number">4_</span>oryOS.<span class="hljs-number">9</span> \
+  token user <span class="hljs-comment">--skip-tls-verify \</span>
+    <span class="hljs-comment">--port 9010 \</span>
+    <span class="hljs-comment">--auth-url https://localhost:9000/oauth2/auth \</span>
+    <span class="hljs-comment">--token-url https://ory-hydra-example--hydra:4444/oauth2/token \</span>
+    <span class="hljs-comment">--client-id facebook-photo-backup \</span>
+    <span class="hljs-comment">--client-secret some-secret \</span>
+    <span class="hljs-comment">--scope openid,offline,photos.read</span>
+
+Setting up callback listener <span class="hljs-keyword">on</span> http://localhost:<span class="hljs-number">9010</span>/callback
+Press ctrl + c <span class="hljs-keyword">on</span> Linux / Windows <span class="hljs-keyword">or</span> cmd + c <span class="hljs-keyword">on</span> OSX <span class="hljs-keyword">to</span> <span class="hljs-keyword">end</span> the <span class="hljs-keyword">process</span>.
+<span class="hljs-keyword">If</span> your browser does <span class="hljs-keyword">not</span> <span class="hljs-keyword">open</span> automatically, navigate <span class="hljs-keyword">to</span>:
+
+        https://localhost:<span class="hljs-number">9010</span>/
+</code></pre>
+<p>open the link, as prompted, in your browser, and follow the steps shown there.
+You might encounter a screen like the following one:</p>
+<p><img src="../../images/docs/hydra/insecure-connection.png" alt="Insecure connection"></p>
+<p>This happens because we run ORY Hydra with a self-signed TLS certificate. In
+production deployments, you would probably use a certificate signed by a trusted
+CA and not see this screen.</p>
+<p>When you see this screen, click on &quot;Advanced&quot; and &quot;Add Exception&quot; to continue.
+In some browsers, this might work differently, but it's always possible to
+proceed.</p>
+<p>When completed, you should land at a screen that looks like this one:</p>
+<p><img src="../../images/docs/hydra/install-result.png" alt="OAuth 2.0 result"></p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.9/hydra/jwks"><span class="arrow-prev">← </span><span>JSON Web Key Sets</span></a><a class="docs-next button" href="/docs/oryOS.9/hydra/advanced"><span>Advanced Topics</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-network">Create a Network</a></li><li><a href="#deploy-postgresql">Deploy PostgreSQL</a></li><li><a href="#deploy-ory-hydra">Deploy ORY Hydra</a><ul class="toc-headings"><li><a href="#without-docker">Without Docker</a></li></ul></li><li><a href="#deploy-login-consent-app">Deploy Login &amp; Consent App</a></li><li><a href="#perform-oauth-20-flow">Perform OAuth 2.0 Flow</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

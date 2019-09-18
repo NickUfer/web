@@ -1,0 +1,177 @@
+{
+  "title": "ORY",
+  "version": "0.3.7",
+  "plugins": {
+    "active": [
+      "ory-editor-plugins-slate",
+      "ory-editor-plugins-video",
+      "ory-editor-plugins-spacer",
+      "ory-editor-plugins-image"
+    ],
+    "fallback": "ory-editor-plugins-slate"
+  },
+  "baseUrl": "https://www.ory.am",
+  "design": {
+    "id": "ory-design-clarke",
+    "config": {
+      "ory-design-vipin": {
+        "headerTitle": "ORY"
+      },
+      "ory-design-clarke": {
+        "headerTitle": "https://storage.googleapis.com/ory.am/logo/ory_07_-26-no-border.png"
+      }
+    }
+  },
+  "menus": {
+    "main": [
+      {
+        "id": "c59af94f-be73-43ea-b064-60c303c87155",
+        "title": "Welcome",
+        "type": "PAGE",
+        "page": "8cb054f7-de25-45cf-bdd9-5053beea8af5",
+        "children": [],
+        "isDropIndicator": false
+      },
+      {
+        "id": "8c19652c-8cbb-4157-8a8a-19ee8cabb915",
+        "type": "PAGE",
+        "children": [],
+        "page": "f2b19a14-0e42-48cb-9413-dc963d4efd6a",
+        "title": "Open Source",
+        "isDropIndicator": false
+      },
+      {
+        "id": "807372c8-dc34-4a8b-a7b9-c7e50de10381",
+        "type": "FOLDER",
+        "children": [
+          {
+            "id": "55acac51-17f0-4113-860b-00226173cc84",
+            "type": "URL",
+            "title": "Overview",
+            "url": "products/cloud-security.html",
+            "children": [],
+            "isDropIndicator": false
+          },
+          {
+            "id": "589647ab-56ce-4165-baea-01280d94ddb7",
+            "type": "URL",
+            "url": "products/account-takeover-detection-api.html",
+            "title": "Account Takeover",
+            "children": [],
+            "isDropIndicator": false
+          }
+        ],
+        "title": "API Security",
+        "isDropIndicator": false
+      },
+      {
+        "id": "d73a99fd-92b3-410d-aa2b-30e68c447cf7",
+        "type": "URL",
+        "title": "Static Site Generator",
+        "isDropIndicator": false,
+        "url": "https://www.ory.am/sites",
+        "children": []
+      },
+      {
+        "id": "114d0c8d-7cb1-4794-9ae9-69f9a1dc6f2a",
+        "type": "FOLDER",
+        "title": "Articles",
+        "children": [
+          {
+            "id": "3247ebaf-2b9e-4e01-a35e-fb394d11a9e1",
+            "type": "URL",
+            "isDropIndicator": false,
+            "title": "Accurate Go Code Coverage",
+            "url": "golang-go-code-coverage-accurate.html",
+            "children": []
+          },
+          {
+            "id": "819a32d5-1a96-4b72-8877-9c0f205fe81d",
+            "type": "PAGE",
+            "page": "12d80bfe-203e-419b-b421-9e7549513b06",
+            "title": "Run and install ORY Hydra",
+            "isDropIndicator": false,
+            "children": []
+          }
+        ],
+        "isDropIndicator": false
+      },
+      {
+        "id": "684e3879-d70e-4400-862e-53b475f49ec8",
+        "type": "URL",
+        "title": "GitHub",
+        "url": "https://github.com/ory",
+        "isDropIndicator": false,
+        "children": []
+      }
+    ],
+    "footer": [
+      {
+        "id": "a3fc686f-c4f7-457c-b576-4eed857fe47d",
+        "type": "PAGE",
+        "page": "a2567ef5-a159-4026-90a8-b561d2e9f0c5",
+        "title": "Imprint",
+        "children": [],
+        "isDropIndicator": false
+      },
+      {
+        "id": "2c1f0ca2-cd2e-470e-aee2-03d7210a06ad",
+        "type": "URL",
+        "title": "Contact us",
+        "url": "mailto:hi@ory.am",
+        "children": [],
+        "isDropIndicator": false
+      },
+      {
+        "id": "280fdb81-86a5-488f-89d6-45d39d6e171c",
+        "type": "URL",
+        "title": "ORY on GitHub",
+        "url": "http://github.com/ory/",
+        "children": []
+      },
+      {
+        "id": "f998e002-0a6f-42b9-9ddd-43f38e1e1af8",
+        "type": "URL",
+        "isDropIndicator": false,
+        "title": "We ❤ Serlo Education",
+        "url": "https://en.serlo.org/serlo"
+      }
+    ]
+  },
+  "output": "dist",
+  "blocks": {
+    "footer": {
+      "id": "086c18c0-fd85-4099-8ef1-06d0ee54efa3",
+      "cells": [
+        {
+          "id": "2e2c4295-8387-40f9-b013-a1417a7d5597",
+          "inline": null,
+          "size": 12,
+          "content": {
+            "plugin": {
+              "name": "ory/editor/core/content/slate",
+              "version": "0.0.1"
+            },
+            "state": {
+              "serialized": {
+                "nodes": [
+                  {
+                    "kind": "block",
+                    "type": "PARAGRAPH/PARAGRAPH",
+                    "nodes": [
+                      {
+                        "kind": "text",
+                        "text": ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "id": "ae7b42ee-20ab-46d7-b475-89ef4f7716c2"
+}

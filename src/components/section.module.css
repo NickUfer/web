@@ -1,28 +1,67 @@
-@import "../styles/properties.css";
+@import '../styles/properties.css';
 
 .section {
-    padding: 192px 0;
+  padding: 192px 0;
 
-    &.light {
-        background-color: var(--ory-brand-primary-light-05);
-        & h3, & p {
-            color: var(--ory-brand-dark-primary);
-        }
+  & a:any-link {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &.light {
+    background-color: var(--colors-brand-primary-light-05);
+
+    & h3,
+    & p {
+      color: var(--colors-ui-dark-primary);
     }
 
-    &.dark {
-        background-color: var(--ory-brand-dark-primary);
+    & a:any-link {
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--colors-ui-dark-primary);
+      }
     }
+  }
+
+  &.dark {
+    color: var(--colors-ui-white);
+    background-color: var(--colors-ui-dark-primary);
+
+    & a:any-link {
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--colors-ui-white);
+      }
+    }
+  }
+}
+
+:global .theme-default :local .section a:any-link {
+  color: var(--colors-brand-secondary);
+}
+
+:global .theme-default :local .section.light a:any-link {
+  color: var(--colors-brand-primary);
+}
+
+:global .theme-hydra :local .section a:any-link {
+  color: var(--colors-brand-hydra);
 }
 
 @media (--sm-viewport) {
-    .section {
-        padding: 64px 0;
-    }
+  .section {
+    padding: 64px 0;
+  }
 }
 
 @media (--md-viewport) {
-    .section {
-        padding: 64px 0;
-    }
+  .section {
+    padding: 64px 0;
+  }
 }

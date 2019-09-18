@@ -1,45 +1,101 @@
-@import "../styles/properties.css";
+@import '../styles/properties.css';
 
 .hero {
-    background: var(--ory-brand-primary);
+  background: var(--colors-brand-primary);
+  color: var(--colors-ui-white);
+
+  & :global a.cta.secondary:any-link {
+    color: var(--colors-ui-white);
+    border-color: var(--colors-ui-white);
+  }
+
+  & :global a.cta.primary:any-link {
+    color: var(--colors-ui-white);
+  }
+
+  & :global .container-fluid {
+    position: relative;
+    padding: 112px 0;
+  }
+}
+
+:global .theme-default :local .hero :global a.cta {
+  &.primary:any-link {
+    background-color: var(--colors-brand-secondary);
+    border-color: var(--colors-brand-secondary);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--colors-ui-white);
+      border-color: var(--colors-ui-white);
+      color: var(--colors-brand-secondary);
+    }
+  }
+
+  &.secondary:any-link {
+    &:hover {
+      border-color: var(--colors-brand-secondary);
+      color: var(--colors-brand-secondary);
+    }
+  }
+}
+
+:global .theme-hydra :local .hero :global a.cta {
+  &.primary:any-link {
+    background-color: var(--colors-brand-hydra);
+    border-color: var(--colors-brand-hydra);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--colors-ui-white);
+      border-color: var(--colors-ui-white);
+      color: var(--colors-brand-hydra);
+    }
+  }
+
+  &.secondary:any-link {
+    &:hover,
+    &:focus {
+      border-color: var(--colors-brand-hydra);
+      color: var(--colors-brand-hydra);
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .hero {
     & :global .container-fluid {
-        position: relative;
-        padding: 112px 0;
+      padding: 64px 0;
     }
+  }
 }
 
-@media(--sm-viewport) {
-    .hero {
-        & :global .container-fluid {
-            padding: 64px 0;
-        }
+@media (--md-viewport) {
+  .hero {
+    & :global .container-fluid {
+      padding: 64px 0;
     }
-}
-
-@media(--md-viewport) {
-    .hero {
-        & :global .container-fluid {
-            padding: 64px 0;
-        }
-    }
+  }
 }
 
 .logo {
-    position: absolute;
-    content: " ";
-    right: 40px;
-    width: 461px;
-    height: 460px;
-    top: 54px;
-    background-image: url("../images/hero-logo-desktop.svg");
+  position: absolute;
+  content: ' ';
+  right: 40px;
+  width: 461px;
+  height: 460px;
+  top: 54px;
+  background-image: url('../images/hero-logo-desktop.svg');
 }
 
 @media (max-width: 1280px) {
-    .logo {
-        width: 164px;
-        height: 320px;
-        top: 64px;
-        right: 0;
-        background-image: url("../images/hero-logo-mobile.svg");
-    }
+  .logo {
+    width: 164px;
+    height: 320px;
+    top: 64px;
+    right: 0;
+    background-image: url('../images/hero-logo-mobile.svg');
+  }
 }

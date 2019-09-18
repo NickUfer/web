@@ -1,0 +1,24 @@
+.profile {
+  display: flex;
+  margin-bottom: 34px;
+  align-items: center;
+
+  & h4 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 168%;
+    padding-left: 20px;
+    color: var(--colors-ui-dark-primary);
+  }
+
+  & p {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  & img {
+    width: 90px;
+    height: 90px;
+  }
+}

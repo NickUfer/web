@@ -1,6 +1,6 @@
 import React from 'react'
 import MobileMenu from './mobile-menu'
-import { navigate } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 
 import * as styles from './header.module.css'
 import logoTiny from '../images/logo-ory-symbol.svg'
@@ -10,7 +10,8 @@ import cn from 'classnames'
 
 export type MenuItem = {
   title: string
-  href: string
+  href?: string
+  path?: string
   className?: string
 }
 
@@ -24,54 +25,40 @@ export type Menu = MenuItem[]
 export type IconMenu = IconMenuItem[]
 
 interface PropTypes {
-  tiny?: boolean
   menu: Menu
   icons: IconMenu
+  appendix: string
 }
 
-const Header = ({ tiny = false, menu = [], icons = [] }: PropTypes) => (
+const Header = ({ menu = [], icons = [], appendix }: PropTypes) => (
   <header className={styles.header}>
     <div className="container-fluid">
       <div className="row middle-sm">
         <div className="col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-sm-10 col-md-10 col-lg-10">
           <div className="row middle-sm">
             <div className={styles.logo} onClick={() => navigate('/')}>
-              {tiny ? (
-                <>
-                  <img src={logoTiny} />
-                  <span
-                    className={cn(styles.projectName, styles.projectNameTiny)}
-                  >
-                    Hydra
-                  </span>
-                </>
-              ) : (
-                <>
-                  <img src={logo} className="hidden-sm hidden-md" />
-                  <span
-                    className={cn(styles.projectName, 'hidden-sm hidden-md')}
-                  >
-                    / Hydra
-                  </span>
-                  <img src={logoTiny} className="hidden-lg" />
-                  <span
-                    className={cn(
-                      styles.projectName,
-                      styles.projectNameTiny,
-                      'hidden-lg'
-                    )}
-                  >
-                    Hydra
-                  </span>
-                </>
-              )}
+              <img src={logo} className="hidden-sm hidden-md" />
+              <span className={cn(styles.projectName, 'hidden-sm hidden-md')}>
+                {appendix ? `/ ${appendix}` : null}
+              </span>
+              <img src={logoTiny} className="hidden-lg" />
+              <span
+                className={cn(
+                  styles.projectName,
+                  styles.projectNameTiny,
+                  'hidden-lg'
+                )}
+              >
+                {appendix}
+              </span>
             </div>
             <div className={styles.leftMenu}>
               <nav className={styles.menu}>
                 <ul className="hidden-sm hidden-md">
-                  {menu.map(({ href, title, className = '' }) => (
-                    <li key={href} className={className}>
-                      <a href={href}>{title}</a>
+                  {menu.map(({ href, title, className = '', path }, k) => (
+                    <li key={k} className={className}>
+                      {path && <Link to={path}>{title}</Link>}
+                      {href && <a href={href}>{title}</a>}
                     </li>
                   ))}
                 </ul>
@@ -80,15 +67,14 @@ const Header = ({ tiny = false, menu = [], icons = [] }: PropTypes) => (
             <div className={styles.rightMenu}>
               <nav className={styles.iconMenu}>
                 <ul className="hidden-sm hidden-md">
-                  {icons.map(({ href, title, image }) => (
-                    <li key={href}>
+                  {icons.map(({ href, title, image }, k) => (
+                    <li key={k}>
                       <a href={href}>
                         <img src={image} alt={title} />
                       </a>
                     </li>
                   ))}
                 </ul>
-
                 <MobileMenu menu={menu} icons={icons} />
               </nav>
             </div>

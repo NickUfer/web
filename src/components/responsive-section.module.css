@@ -1,0 +1,84 @@
+@import '../styles/properties.css';
+
+.section {
+  padding: 192px 0;
+
+  & a:any-link {
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &.light {
+    background-color: var(--colors-brand-primary-light-05);
+
+    & h3,
+    & p {
+      color: var(--colors-ui-dark-primary);
+    }
+
+    & a:any-link {
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--colors-ui-dark-primary);
+      }
+    }
+  }
+
+  &.dark {
+    color: var(--colors-ui-white);
+    background-color: var(--colors-ui-dark-primary);
+
+    & a:any-link {
+      &:hover,
+      &:active,
+      &:focus {
+        color: var(--colors-ui-white);
+      }
+    }
+  }
+}
+
+:global .theme-default :local .section a:any-link {
+  color: var(--colors-brand-secondary);
+}
+
+:global .theme-default :local .section.light a:any-link {
+  color: var(--colors-brand-primary);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--colors-ui-dark-primary);
+  }
+}
+
+:global .theme-hydra :local .section a:any-link {
+  color: var(--colors-brand-hydra);
+}
+
+@media (--mobile-viewport) {
+  .section :global .container-fluid .row {
+    flex-direction: column-reverse;
+
+    & :global img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .section {
+    padding: 64px 0;
+  }
+}
+
+@media (--md-viewport) {
+  .section {
+    padding: 64px 0;
+  }
+}

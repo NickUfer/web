@@ -1,0 +1,16 @@
+{
+  "name": "application-name",
+  "version": "0.0.1",
+  "private": true,
+  "peerDependencies": {
+    "react": "~15.4.2",
+    "react-dom": "~15.4.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "css-loader": "^0.28.1",
+    "ory-editor-ui": "^0.2.10",
+    "react-sticky": "^6.0.1",
+    "style-loader": "^0.17.0"
+  }
+}

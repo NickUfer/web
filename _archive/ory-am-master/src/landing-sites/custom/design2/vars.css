@@ -1,0 +1,27 @@
+@import '../../common/css/vars.css';
+
+:root {
+  /* core settings */
+  --background-color: #F0F0F0;
+  --base-font-size: 16px;
+  --text-color: #888b8d;
+  --link-text-color: #2196f3;
+
+  /* header */
+  --header-background-color: white;
+
+  /* main section */
+  --main-max-width: 1088px;
+  --main-background-color: white;
+  --main-hero-background-color: #F8F8F8;
+
+  --container-hero-lg-padding: 192px 64px;
+  --container-hero-md-padding: 192px 64px;
+  --container-hero-ms-padding: 192px 64px;
+  --container-hero-xs-padding: 192px 64px;
+
+  --container-lg-padding: 48px 128px;
+  --container-md-padding: 48px 96px;
+  --container-sm-padding: 32px 32px;
+  --container-xs-padding: 32px 16px;
+}

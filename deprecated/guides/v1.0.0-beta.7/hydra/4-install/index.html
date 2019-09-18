@@ -1,0 +1,1088 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Install, Configure and Run ORY Hydra · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Aeneas Rekkas">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-etoc/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-versions-ory/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../5-security/" />
+    
+    
+    <link rel="prev" href="../3-overview/2-jwk.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Overview</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    ORY Developer Guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">updating</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../updating/">
+            
+                <a href="../../updating/">
+            
+                    
+                    Performing Software Updates
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Hydra</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.1" data-path="../1-tutorial/">
+            
+                <a href="../1-tutorial/">
+            
+                    
+                    5 Minute Tutorial
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.2" data-path="../2-environment/">
+            
+                <a href="../2-environment/">
+            
+                    
+                    Dependencies & Environment
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.2.1" data-path="../2-environment/1-securing-ory-hydra.html">
+            
+                <a href="../2-environment/1-securing-ory-hydra.html">
+            
+                    
+                    Securing ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3" data-path="../3-overview/">
+            
+                <a href="../3-overview/">
+            
+                    
+                    Concepts and Theory
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.3.1" data-path="../3-overview/1-oauth2.html">
+            
+                <a href="../3-overview/1-oauth2.html">
+            
+                    
+                    OAuth 2.0 & OpenID Connect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.3.2" data-path="../3-overview/2-jwk.html">
+            
+                <a href="../3-overview/2-jwk.html">
+            
+                    
+                    JSON Web Keys (JWK)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Install, Configure and Run ORY Hydra
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.5" data-path="../5-security/">
+            
+                <a href="../5-security/">
+            
+                    
+                    Security Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.6" data-path="../6-how-to/">
+            
+                <a href="../6-how-to/">
+            
+                    
+                    How To
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.6.1" data-path="../6-how-to/1-production.html">
+            
+                <a href="../6-how-to/1-production.html">
+            
+                    
+                    ORY Hydra in production
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7" data-path="../7-sdk/">
+            
+                <a href="../7-sdk/">
+            
+                    
+                    SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1.7.1" data-path="../7-sdk/1-go.html">
+            
+                <a href="../7-sdk/1-go.html">
+            
+                    
+                    Go SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.2" data-path="../7-sdk/2-js.html">
+            
+                <a href="../7-sdk/2-js.html">
+            
+                    
+                    JavaScript SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.7.3" data-path="../7-sdk/3-php.html">
+            
+                <a href="../7-sdk/3-php.html">
+            
+                    
+                    PHP SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.1.8" data-path="../8-faq/">
+            
+                <a href="../8-faq/">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Oathkeeper</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../oathkeeper/">
+            
+                <a href="../../oathkeeper/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1" data-path="../../oathkeeper/1-overview/">
+            
+                <a href="../../oathkeeper/1-overview/">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1.1.1" data-path="../../oathkeeper/1-overview/1-rules.html">
+            
+                <a href="../../oathkeeper/1-overview/1-rules.html">
+            
+                    
+                    Access Rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.2" data-path="../../oathkeeper/1-overview/2-installation.html">
+            
+                <a href="../../oathkeeper/1-overview/2-installation.html">
+            
+                    
+                    Installing ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.3" data-path="../../oathkeeper/1-overview/3-configuration.html">
+            
+                <a href="../../oathkeeper/1-overview/3-configuration.html">
+            
+                    
+                    Configuring and Running ORY Oathkeeper
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.1.1.4" data-path="../../oathkeeper/1-overview/4-deployment.html">
+            
+                <a href="../../oathkeeper/1-overview/4-deployment.html">
+            
+                    
+                    Deployment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ORY Keto</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../keto/">
+            
+                <a href="../../keto/">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1" data-path="../../keto/1-overview/">
+            
+                <a href="../../keto/1-overview/">
+            
+                    
+                    Quickstart
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1.1.1" data-path="../../keto/1-overview/1-policies.html">
+            
+                <a href="../../keto/1-overview/1-policies.html">
+            
+                    
+                    Access Control Policies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.2" data-path="../../keto/1-overview/2-warden.html">
+            
+                <a href="../../keto/1-overview/2-warden.html">
+            
+                    
+                    Access Control: The Warden API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.3" data-path="../../keto/1-overview/3-roles.html">
+            
+                <a href="../../keto/1-overview/3-roles.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.4" data-path="../../keto/1-overview/4-best-practices.html">
+            
+                <a href="../../keto/1-overview/4-best-practices.html">
+            
+                    
+                    Best Practices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.5" data-path="../../keto/1-overview/5-conditions.html">
+            
+                <a href="../../keto/1-overview/5-conditions.html">
+            
+                    
+                    Conditions and Context
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.6" data-path="../../keto/1-overview/6-installation.html">
+            
+                <a href="../../keto/1-overview/6-installation.html">
+            
+                    
+                    Installing ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.1.1.7" data-path="../../keto/1-overview/7-configuration.html">
+            
+                <a href="../../keto/1-overview/7-configuration.html">
+            
+                    
+                    Configuring and Running ORY Keto
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Performance Benchmarks</li>
+        
+        
+    
+        <li class="chapter " data-level="6.1" data-path="../../performance/">
+            
+                <a href="../../performance/">
+            
+                    
+                    Performance Benchmarks
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="6.1.1" data-path="../../performance/1-hydra.html">
+            
+                <a href="../../performance/1-hydra.html">
+            
+                    
+                    ORY Hydra Performance Benchmarks
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Telemetry</li>
+        
+        
+    
+        <li class="chapter " data-level="7.1" data-path="../../telemetry/">
+            
+                <a href="../../telemetry/">
+            
+                    
+                    Telemetry
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Install, Configure and Run ORY Hydra</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="install-configure-and-run-ory-hydra">Install, Configure and Run ORY Hydra</h1>
+<p>The goal of this chapter is to introduce you to a fully functional set up that includes ORY Hydra as well as our
+User Login &amp; Consent Provider reference implementation.</p>
+<!-- toc --><div id="toc" class="toc">
+
+<ul>
+<li><a href="#create-a-network">Create a Network</a></li>
+<li><a href="#start-a-postgresql-container">Start a PostgreSQL Container</a></li>
+<li><a href="#install-and-run-ory-hydra">Install and run ORY Hydra</a><ul>
+<li><a href="#install-ory-hydra-without-docker">Install ORY Hydra without Docker</a><ul>
+<li><a href="#download-binaries">Download Binaries</a></li>
+<li><a href="#build-from-source">Build from Source</a></li>
+</ul>
+</li>
+<li><a href="#lets-check-if-its-running-ok">Let&apos;s check if it&apos;s running ok:</a></li>
+</ul>
+</li>
+</ul>
+
+</div><!-- tocstop -->
+<p>The goal of this section is to familiarize you with the specifics of setting up ORY Hydra in your environment.
+Before starting with this section, please check out the <a href="../1-tutorial">tutorial</a>. It will teach you the most important flows
+and settings for Hydra.</p>
+<p>This guide will:</p>
+<ol>
+<li>Download and run a PostgreSQL container in Docker.</li>
+<li>Download and run ORY Hydra in Docker.</li>
+<li>Download and run our reference User Login &amp; Consent Provider.</li>
+<li>Create an OAuth 2.0 Client to perform the OAuth 2.0 Authorize Code Flow.</li>
+<li>Perform the OAuth 2.0 Authorize Code flow.</li>
+</ol>
+<p>Before starting with this guide, please install the most recent version of <a href="https://www.docker.com/community-edition#/download" target="_blank">Docker</a>.
+While docker is not required for running ORY Hydra, we recommend using it for this tutorial as it will greatly reduce
+the complexity of setting up a database on your system without virtualization, installing Go, and compiling ORY Hydra.</p>
+<h2 id="create-a-network">Create a Network</h2>
+<p>Before we can start, a network must be created which we will attach all our Docker containers to. That way, the containers
+can talk to one another.</p>
+<pre><code>$ docker network create hydraguide
+</code></pre><h2 id="start-a-postgresql-container">Start a PostgreSQL Container</h2>
+<p>For the purpose of this tutorial, we will use PostgreSQL as a database. As you probably already know, don&apos;t run databases in Docker in production!
+For the sake of this tutorial however, let&apos;s use Docker to quickly deploy the database.</p>
+<pre><code>$ docker run \
+  --network hydraguide \
+  --name ory-hydra-example--postgres \
+  -e POSTGRES_USER=hydra \
+  -e POSTGRES_PASSWORD=secret \
+  -e POSTGRES_DB=hydra \
+  -d postgres:9.6
+</code></pre><p>This command wil start a postgres instance with name <code>ory-hydra-example--postgres</code>, set up a database called <code>hydra</code>
+and create a user <code>hydra</code> with password <code>secret</code>.</p>
+<h2 id="install-and-run-ory-hydra">Install and run ORY Hydra</h2>
+<p>We highly recommend using Docker to run Hydra, as installing, configuring and running Hydra is easiest with Docker.
+ORY Hydra is available on <a href="https://hub.docker.com/r/oryd/hydra/" target="_blank">Docker Hub</a>.</p>
+<pre><code># The system secret can only be set against a fresh database. Key rotation is currently not supported. This
+# secret is used to encrypt the database and needs to be set to the same value every time the process (re-)starts.
+# You can use /dev/urandom to generate a secret. But make sure that the secret must be the same anytime you define it.
+# You could, for example, store the value somewhere.
+$ export SYSTEM_SECRET=$(export LC_CTYPE=C; cat /dev/urandom | tr -dc &apos;a-zA-Z0-9&apos; | fold -w 32 | head -n 1)
+#
+# Alternatively you can obviously just set a secret:
+# $ export SYSTEM_SECRET=this_needs_to_be_the_same_always_and_also_very_$3cuR3-._
+
+# The database url points us at the postgres instance. This could also be an ephermal in-memory database (`export DATABASE_URL=memory`)
+# or a MySQL URI.
+$ export DATABASE_URL=postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable
+
+# Before starting, let&apos;s pull the latest ORY Hydra tag from docker.
+$ docker pull oryd/hydra:v1.0.0-beta.5
+
+# This command will show you all the environment variables that you can set. Read this carefully.
+# It is the equivalent to `hydra help serve`.
+$ docker run -it --rm --entrypoint hydra oryd/hydra:v1.0.0-beta.5 help serve
+
+Starts all HTTP/2 APIs and connects to a database backend.
+[...]
+
+# ORY Hydra does not do magic, it requires conscious decisions, for example running SQL migrations which is required
+# when installing a new version of ORY Hydra, or upgrading an existing installation.
+# It is the equivalent to `hydra migrate sql postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable`
+$ docker run -it --rm \
+  --network hydraguide \
+  oryd/hydra:v1.0.0-beta.5 \
+  migrate sql $DATABASE_URL
+
+Applying `client` SQL migrations...
+[...]
+Migration successful!
+
+# Let&apos;s run the server (settings explained below):
+$ docker run -d \
+  --name ory-hydra-example--hydra \
+  --network hydraguide \
+  -p 9000:4444 \
+  -e SYSTEM_SECRET=$SYSTEM_SECRET \
+  -e DATABASE_URL=$DATABASE_URL \
+  -e OAUTH2_ISSUER_URL=https://localhost:9000/ \
+  -e OAUTH2_CONSENT_URL=http://localhost:9020/consent \
+  -e OAUTH2_LOGIN_URL=http://localhost:9020/login \
+  oryd/hydra:v1.0.0-beta.5 serve
+
+# And check if it&apos;s running:
+$ docker logs ory-hydra-example--hydra
+
+time=&quot;2017-06-29T21:26:26Z&quot; level=info msg=&quot;Connecting with postgres://*:*@postgres:5432/hydra?sslmode=disable&quot;
+time=&quot;2017-06-29T21:26:26Z&quot; level=info msg=&quot;Connected to SQL!&quot;
+[...]
+time=&quot;2017-06-29T21:26:34Z&quot; level=info msg=&quot;Setting up http server on :4444&quot;
+</code></pre><p>Let&apos;s dive into the various settings:</p>
+<ul>
+<li><code>--network hydraguide</code> connects this instance to the network and makes it possible to connect to the PostgreSQL database.</li>
+<li><code>-p 9000:4444</code> exposes ORY Hydra on <code>https://localhost:9000/</code>.</li>
+<li><code>-e SYSTEM_SECRET=$SYSTEM_SECRET</code> sets the system secret environment variable <strong>(required)</strong>.</li>
+<li><code>-e DATABASE_URL=$DATABASE_URL</code> sets the database url environment variable <strong>(required)</strong>.</li>
+<li><code>-e OAUTH2_ISSUER_URL=https://localhost:9000/</code> this value must be set to the publicly available URL of ORY Hydra <strong>(required)</strong>.</li>
+<li><code>-e OAUTH2_CONSENT_URL=http://localhost:9020/consent</code> this sets the URL of the consent provider <strong>(required)</strong>. We will set up the service
+that handles requests at that URL in the next sections.</li>
+<li><code>-e OAUTH2_LOGIN_URL=http://localhost:9020/login</code> this sets the URL of the login provider <strong>(required)</strong>. We will set up the service
+that handles requests at that URL in the next sections.</li>
+</ul>
+<p>Note: In this example we did not define a value for the optional setting <code>OAUTH2_ERROR_URL</code>. This URL can be used 
+to provide an endpoint which will receive error messages from ORY Hydra that should be displayed 
+to the end user. The URL receives <code>error</code> and <code>error_description</code> parameters. If this value is not set, 
+Hydra uses the fallback endpoint <code>/oauth2/fallbacks/error</code> and displays a default error message. In order to obtain 
+a uniform UI, you might want to include such an endpoint in your login or consent provider.</p>
+<p>To confirm that the instance is running properly, <a href="https://localhost:9000/health/status" target="_blank">open the health check</a>. If asked,
+accept the self signed certificate in your browser. You should simply see <code>ok</code>.</p>
+<p>On start up, ORY Hydra is initializing some values. Let&apos;s take a look at the logs:</p>
+<pre><code>$ docker logs ory-hydra-example--hydra
+time=&quot;2017-06-30T09:06:34Z&quot; level=info msg=&quot;Connecting with postgres://*:*@postgres:5432/hydra?sslmode=disable&quot;
+time=&quot;2017-06-30T09:06:34Z&quot; level=info msg=&quot;Connected to SQL!&quot;
+time=&quot;2017-06-30T09:06:34Z&quot; level=info msg=&quot;Key pair for signing hydra.openid.id-token is missing. Creating new one.&quot;
+time=&quot;2017-06-30T09:06:41Z&quot; level=warning msg=&quot;No TLS Key / Certificate for HTTPS found. Generating self-signed certificate.&quot;
+time=&quot;2017-06-30T09:06:41Z&quot; level=info msg=&quot;Setting up http server on :4444&quot;
+</code></pre><p>As you can see, the following steps are performed when running ORY Hydra against a fresh database:</p>
+<ol>
+<li>If no system secret was given (in our case we provided one), a random one is generated and emitted to the logs.
+Note this down, otherwise you won&apos;t be able to restart Hydra.</li>
+<li>Cryptographic keys are generated for the OpenID Connect ID Token, the consent challenge and response, and TLS encryption
+using a self-signed certificate, which is why we need to run all commands using <code>--skip-tls-verify</code>.</li>
+</ol>
+<p>ORY Hydra can be managed using the Hydra Command Line Interface (CLI), which is using ORY Hydra&apos;s REST APIs. To
+see the available commands, run:</p>
+<pre><code>$ docker run --rm -it --entrypoint hydra oryd/hydra:v1.0.0-beta.5 help
+Hydra is a cloud native high throughput OAuth2 and OpenID Connect provider
+
+Usage:
+  hydra [command]
+
+[...]
+</code></pre><h3 id="install-ory-hydra-without-docker">Install ORY Hydra without Docker</h3>
+<p>You can also install ORY Hydra without docker. For the purpose of this tutorial, <a href="#configure-ory-hydra">please skip this section for now</a>, and read
+it later.</p>
+<h4 id="download-binaries">Download Binaries</h4>
+<p>The client and server <strong>binaries are downloadable at the <a href="https://github.com/ory/hydra/releases" target="_blank">releases tab</a></strong>.
+There is currently no installer available. You have to add the Hydra binary to the PATH environment variable yourself or put
+the binary in a location that is already in your <code>$PATH</code> (e.g. <code>/usr/bin</code>, ...).</p>
+<p>Once installed, you should be able to run:</p>
+<pre><code>$ hydra help
+
+Hydra is a cloud native high throughput OAuth2 and OpenID Connect provider
+
+Usage:
+  hydra [command]
+
+Available Commands:
+  clients     Manage OAuth2 clients
+...
+</code></pre><h4 id="build-from-source">Build from Source</h4>
+<p>If you wish to compile ORY Hydra yourself, you need to install and set up <a href="https://golang.org/" target="_blank">Go 1.10+</a> and add <code>$GOPATH/bin</code>
+to your <code>$PATH</code> as well as <a href="http://github.com/golang/dep" target="_blank">golang/dep</a>.</p>
+<p>The following commands will check out the latest release tag of ORY Hydra and compile it and set up flags so that <code>hydra version</code>
+works as expected. Please note that this will only work with a linux shell like bash or sh.</p>
+<pre><code>```
+go get -d -u github.com/ory/hydra
+cd $(go env GOPATH)/src/github.com/ory/hydra
+HYDRA_LATEST=$(git describe --abbrev=0 --tags)
+git checkout $HYDRA_LATEST
+dep ensure -vendor-only
+go install \
+    -ldflags &quot;-X github.com/ory/hydra/cmd.Version=$HYDRA_LATEST -X github.com/ory/hydra/cmd.BuildTime=`TZ=UTC date -u &apos;+%Y-%m-%dT%H:%M:%SZ&apos;` -X github.com/ory/hydra/cmd.GitHash=`git rev-parse HEAD`&quot; \
+    github.com/ory/hydra
+git checkout master
+hydra help
+
+...
+</code></pre><h3 id="setting-up-the-login--consent-provider">Setting up the Login &amp; Consent Provider</h3>
+<p>The Login Provider and Consent Provider can be two separate web services. We provide a <a href="https://github.com/ory/hydra-login-consent-node" target="_blank">reference implementation</a> which
+combines both features in one app. Here, we will use deploy that app using Docker.</p>
+<pre><code>$ docker pull oryd/hydra-login-consent-node:v1.0.0-beta.5
+$ docker run -d \
+  --name ory-hydra-example--consent \
+  -p 9020:3000 \
+  --network hydraguide \
+  -e HYDRA_URL=https://ory-hydra-example--hydra:4444 \
+  -e NODE_TLS_REJECT_UNAUTHORIZED=0 \
+  oryd/hydra-login-consent-node:v1.0.0-beta.5
+
+# Let&apos;s check if it&apos;s running ok:
+$ docker logs ory-hydra-example--consent
+</code></pre><p>Let&apos;s take a look at the arguments:</p>
+<ul>
+<li><code>-p 9020:3000</code> exposes this service at port 9020. If you remember, that&apos;s the port of the <code>OAUTH2_CONSENT_URL</code> and <code>OAUTH2_LOGIN_URL</code> value
+from the ORY Hydra docker container (<code>OAUTH2_CONSENT_URL=http://localhost:9020/consent</code>, <code>OAUTH2_LOGIN_URL=http://localhost:9020/login</code>).</li>
+<li><code>HYDRA_URL=http://hydra:4444</code> point to the ORY Hydra container.</li>
+<li><code>NODE_TLS_REJECT_UNAUTHORIZED=0</code> disables TLS verification, because we are using self-signed certificates.</li>
+</ul>
+<h2 id="perform-oauth-20-flow">Perform OAuth 2.0 Flow</h2>
+<p>Great! Our infrastructure is all set up! Next it&apos;s time to perform the OAuth 2.0 Authorize Code flow. For that purpose,
+the ORY Hydra CLI has a feature that sets up an OAuth 2.0 Consumer and an OAuth 2.0 callback URL. Typically, this would
+be a third-party application that requests access to a user&apos;s resources on your servers - for example a Facebook App you wrote
+that backs up a user&apos;s photos and thus requires read access to the user&apos;s photos.</p>
+<p>Before we go ahead, the OAuth 2.0 Client that performs the request has to be set up. Let&apos;s call the client <code>facebook-photo-backup</code>.
+We have to specify which OAuth 2.0 Grant Types, OAuth 2.0 Scope, OAuth 2.0 Response Types, and Callback URLs the client may request:</p>
+<pre><code>$ docker run --rm -it \
+  -e HYDRA_URL=https://ory-hydra-example--hydra:4444 \
+  --network hydraguide \
+  oryd/hydra:v1.0.0-beta.5 \
+  clients create --skip-tls-verify \
+    --id facebook-photo-backup \
+    --secret some-secret \
+    --grant-types authorization_code,refresh_token,client_credentials,implicit \
+    --response-types token,code,id_token \
+    --scope openid,offline,photos.read \
+    --callbacks http://127.0.0.1:9010/callback
+
+Client ID: facebook-photo-backup
+Client Secret: some-secret
+</code></pre><p>Let&apos;s dive into some of the arguments:</p>
+<ul>
+<li><code>--skip-tls-verify</code> is supported by all management commands (create/delete/update/... OAuth 2.0 Client, JSON Web Key, ...)
+  and tells the CLI to trust any certificate authority - even self-signed ones. We need this flag because the server
+  uses a self-signed certificate. In production deployments, you would use a certificate signed by a trusted CA.</li>
+<li><code>--grant-types authorize_code,refresh_token,client_credentials,implicit</code> we want to be able to perform all of these
+OAuth 2.0 flows.</li>
+<li><code>--response-types token,code,id_token</code> allows us to receive authorize codes, access and refresh tokens, and
+OpenID Connect ID Tokens.</li>
+<li><code>--scope openid,offline,fotos.read</code> allows the client to request various permissions:<ul>
+<li><code>openid</code> allows the client to perform the OpenID Connect flow and request an OpenID Connect ID Token.</li>
+<li><code>offline</code> allows the client to request a refresh token. Because we want to continuously backup photos, the app must be
+able to refresh expired access tokens. This scope allows that.</li>
+<li><code>photos.read</code> this is an imaginary scope that is not handled by ORY Hydra but serves the purpose of making it clear that
+we could request read access to a user&apos;s photos. You can obviously omit this scope or use your own scope.</li>
+</ul>
+</li>
+<li><code>--callbacks http://localhost:9010/callback</code> allows the client to request this redirect uri.</li>
+</ul>
+<p>Perfect, let&apos;s perform an exemplary OAuth 2.0 Authorize Code Flow! To make this easy, the ORY Hydra CLI provides
+a helper command called <code>hydra token user</code>. Just imagine this being, for example, passport.js that is generating
+an auth code url, redirecting the browser to it, and then exchanging the authorize code for an access token. The
+same thing happens with this command:</p>
+<pre><code>$ docker run --rm -it \
+  --network hydraguide \
+  -p 9010:9010 \
+  oryd/hydra:v1.0.0-beta.5 \
+  token user --skip-tls-verify \
+    --port 9010 \
+    --auth-url https://localhost:9000/oauth2/auth \
+    --token-url https://ory-hydra-example--hydra:4444/oauth2/token \
+    --client-id facebook-photo-backup \
+    --client-secret some-secret \
+    --scope openid,offline,photos.read
+
+Setting up callback listener on http://localhost:9010/callback
+Press ctrl + c on Linux / Windows or cmd + c on OSX to end the process.
+If your browser does not open automatically, navigate to:
+
+        https://localhost:9010/
+</code></pre><p>open the link, as prompted, in your browser, and follow the steps shown there. You might encounter a screen like the following
+one:</p>
+<p><img src="../images/insecure-connection.jpg" alt="Insecure connection"></p>
+<p>This happens because we run ORY Hydra with a self-signed TLS certificate. In production deployments, you would probably
+use a certificate signed by a trusted CA and not see this screen.</p>
+<p>When you see this screen, click on &quot;Advanced&quot; and &quot;Add Exception&quot; to continue. In some browsers, this might work differently,
+but it&apos;s always possible to proceed.</p>
+<p>When completed, you should land at a screen that looks like this one:</p>
+<p><img src="../images/install-result.png" alt="OAuth 2.0 result"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../3-overview/2-jwk.html" class="navigation navigation-prev " aria-label="Previous page: JSON Web Keys (JWK)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../5-security/" class="navigation navigation-next " aria-label="Next page: Security Overview">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Install, Configure and Run ORY Hydra","level":"3.1.4","depth":2,"next":{"title":"Security Overview","level":"3.1.5","depth":2,"path":"hydra/5-security/README.md","ref":"hydra/5-security/README.md","articles":[]},"previous":{"title":"JSON Web Keys (JWK)","level":"3.1.3.2","depth":3,"path":"hydra/3-overview/2-jwk.md","ref":"hydra/3-overview/2-jwk.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","auto-summary-ory","etoc","ga","sitemap-basepath","versions-ory","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"etoc":{"h2lb":2,"header":1,"maxdepth":5,"mindepth":2,"notoc":false},"youtube":{},"versions-ory":{"type":"branches"},"auto-summary":{"parts":{"README.md":"Overview","updating/*.md":"updating","hydra/**/*.md":"ORY Hydra","oathkeeper/**/*.md":"ORY Oathkeeper","keto/**/*.md":"ORY Keto","performance/*.md":"Performance Benchmarks","telemetry/*.md":"Telemetry"}},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sitemap-basepath":{"hostname":"https://www.ory.sh/","basePath":"/docs/guides/"},"auto-summary-ory":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"ga":{"configuration":"auto","token":"UA-71865250-1"},"versions":{"gitbookConfigURL":"https://raw.githubusercontent.com/ory/docs/master/guides/book.json","options":[{"value":"https://www.ory.sh/docs/guides/latest","text":"latest (stable)"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.5","text":"v1.0.0-beta.5"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.4","text":"v1.0.0-beta.4"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.3","text":"v1.0.0-beta.3"},{"value":"https://www.ory.sh/docs/guides/v1.0.0-beta.2","text":"v1.0.0-beta.2"},{"value":"https://www.ory.sh/docs/guides/v0.11.12","text":"0.11.12"},{"value":"https://www.ory.sh/docs/guides/master","text":"master (unstable)"}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit this page","base":"https://github.com/ory/docs/tree/master/guides"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Aeneas Rekkas","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"gitbook":">=3.2.3"},"file":{"path":"hydra/4-install/README.md","mtime":"2018-07-17T12:25:21.410Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-17T12:26:54.024Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-etoc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-versions-ory/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

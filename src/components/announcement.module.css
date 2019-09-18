@@ -1,17 +1,18 @@
-@import "../styles/properties.css";
+@import '../styles/properties.css';
 
 .announcement {
-    text-align: center;
-    background-color: var(--ory-brand-tertiary);
-    padding: 16px 0;
-    color: var(--ory-brand-black);
-    font-size: 16px;
+  text-align: center;
+  background-color: var(--colors-ui-tertiary);
+  padding: 16px 0;
+  color: var(--colors-ui-black);
+  font-size: 16px;
 
-    & a, & a:visited {
-        color: var(--ory-brand-white);
-        text-decoration: underline;
-        &:hover, &:active {
-            color: var(--ory-brand-primary);
-        }
+  & a:any-link {
+    color: var(--colors-ui-white);
+    text-decoration: underline;
+    &:hover,
+    &:active {
+      color: var(--colors-brand-primary);
     }
+  }
 }

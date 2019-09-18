@@ -1,43 +1,74 @@
 .description {
-    margin: 0;
+  margin: 0;
 }
 
 .project {
-    display: flex;
-    margin-bottom: 32px;
-    cursor: pointer;
-    transition: color ease 200ms;
+  display: flex;
+  margin-bottom: 32px;
+  cursor: pointer;
+  transition: color ease 200ms;
+  align-items: center;
 
-    & img {
-        margin-right: 20px;
-        max-width: 90px;
-        max-height: 90px;
-        width: 100%;
-        transition: transform ease 200ms;
-    }
+  & img {
+    margin-right: 20px;
+    max-width: 53px;
+    max-height: 53px;
+    width: 100%;
+    transition: transform ease 200ms;
+  }
 
-    &:hover p, &:hover h4 {
-        color: var(--ory-brand-tertiary);
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none !important;
+  }
 
-    &:hover img {
-        transform: rotate(90deg);
+  & p,
+  & h4 {
+    color: var(--colors-ui-white);
+  }
+
+  &:hover img {
+    transform: rotate(90deg);
+  }
+}
+
+:global .theme-default :local a.project:any-link {
+  &:hover,
+  &:focus,
+  &:active {
+    & h4,
+    & p {
+      color: var(--colors-brand-secondary);
+      text-decoration: none;
     }
+  }
+}
+
+:global .theme-hydra :local a.project:any-link {
+  &:hover,
+  &:focus,
+  &:active {
+    & h4,
+    & p {
+      color: var(--colors-brand-hydra);
+    }
+  }
 }
 
 @media (--mobile-viewport) {
-    .section :global .container-fluid .row {
-        flex-direction: column-reverse;
-    }
+  .section :global .container-fluid .row {
+    flex-direction: column-reverse;
+  }
 
-    .project {
-        display: flex;
-        margin-bottom: 32px;
+  .project {
+    display: flex;
+    margin-bottom: 32px;
 
-        & img {
-            margin-right: 16px;
-            max-width: 50px;
-            max-height: 50px;
-        }
+    & img {
+      margin-right: 16px;
+      max-width: 50px;
+      max-height: 50px;
     }
+  }
 }

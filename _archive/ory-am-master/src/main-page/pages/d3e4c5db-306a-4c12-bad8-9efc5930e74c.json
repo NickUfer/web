@@ -1,0 +1,1303 @@
+{
+  "id": "d3e4c5db-306a-4c12-bad8-9efc5930e74c",
+  "url": "golang-go-code-coverage-accurate.html",
+  "meta": {
+    "description": "Get accurate code coverage reports using go-acc. Your test might perform better than you think!",
+    "title": ""
+  },
+  "design": {
+    "config": {
+      "ory-design-clarke": {
+        "headerBackgroundUrl": "images/pexels-photo-65125.jpeg",
+        "headerDarkenLevel": 0.4
+      }
+    }
+  },
+  "title": "How to get accurate code coverage in Golang (Go)",
+  "content": {
+    "header": {
+      "id": "35ba1a9a-b50b-4820-a437-c6c75ef4ef13",
+      "cells": [
+        {
+          "id": "522f267a-282b-450a-983b-78892a97cad9",
+          "inline": null,
+          "size": 12,
+          "content": {
+            "plugin": {
+              "name": "ory/editor/core/content/slate",
+              "version": "0.0.1"
+            },
+            "state": {
+              "serialized": {
+                "nodes": [
+                  {
+                    "kind": "block",
+                    "type": "HEADINGS/HEADING-ONE",
+                    "nodes": [
+                      {
+                        "kind": "text",
+                        "text": "ACCURATE CODE\nCoverage in go"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "block",
+                    "type": "HEADINGS/HEADING-TWO",
+                    "nodes": [
+                      {
+                        "kind": "text",
+                        "text": "Your GoLang tests might\nperform better than you think"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "main": {
+      "id": "6938ddd1-b5d4-4be5-91e2-40ff173011c9",
+      "cells": [
+        {
+          "id": "a30178bb-60fd-4bea-a08d-e81d8f88c4d8",
+          "inline": null,
+          "size": 12,
+          "rows": [
+            {
+              "id": "f52ca51d-ebe5-4cc1-ab21-ca66f2bc453b",
+              "cells": [
+                {
+                  "id": "a1f9449e-6924-46f8-834d-a51a46086a78",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {}
+                  },
+                  "rows": [
+                    {
+                      "id": "58afb9ef-9aca-425e-9869-2eaaa11d6004",
+                      "cells": [
+                        {
+                          "id": "f7de00a3-8afa-4be4-b026-3da739956888",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": ""
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Go"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "https://golang.org/"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "text": ", the programming language written and maintained by Google, shines with it's toolchain. However, some of the tools behave differently than expected and it may cost you several hours of debugging and experimenting to find the arguments and execution orders."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "This article introduces you to the problem of "
+                                          },
+                                          {
+                                            "text": "reporting accurate code coverage",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " using the Go programming language, and offers a solution that runs on any Operating System. If you have not worked with Code Coverage in Golang, consider reading the excellent "
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Go cover story"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "https://blog.golang.org/cover"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "text": " first."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "If you are looking for the "
+                                          },
+                                          {
+                                            "text": "solution only, run this",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ":"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "# Download and install go-acc\n$ go get -u github.com/ory/go-acc\n\n# Run it against some package(s)\n$ go-acc github.com/some/package\n$ go-acc .\n$ go-acc ./... \n$ go-acc $(glide novendor)"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "91bb3879-8b6b-47cb-bb29-20c322dee52a",
+                      "cells": [
+                        {
+                          "id": "70fadda7-b0fe-4ad7-8c30-013167ca7a48",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "f1d0c7f1-c1a8-4f3a-9c06-42e5e36012ec",
+                      "cells": [
+                        {
+                          "id": "ae9b06f8-eaf7-46e9-91c1-c10212368b01",
+                          "inline": "right",
+                          "size": 7,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/image",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "src": "images/articles/go-codecov/report.png"
+                            }
+                          }
+                        },
+                        {
+                          "id": "84c485df-0eee-47b7-8534-a6464880b666",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "The problem"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "While writing integration tests for one of our "
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "open source"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "https://github.com/ory/"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "text": " Go projects, I noticed that code coverage did not increase despite writing a lot of them."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "The reason for this was that "
+                                          },
+                                          {
+                                            "text": "go test -cover",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " is per default only recording code coverage for the package that is currently tested, not for all the packages from the project. If you have a lot of integration tests, "
+                                          },
+                                          {
+                                            "text": "your code coverage might be higher than you think",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": "!"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "0b3d9e71-2154-4abb-a3b5-37dc71874a77",
+              "cells": [
+                {
+                  "id": "8541c14c-c8fe-414c-a8f9-a1f5ce72e0c5",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "0bc1ebe9-ceb5-44af-b228-a9e32b63aea6",
+                      "cells": [
+                        {
+                          "id": "1fb9412c-0b8a-460e-9bff-ce4345431c2e",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "The code"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "First I want to take a look at some code. This repository is available on "
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "GitHub"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "https://github.com/arekkas/accurate-test-coverage"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": ". The repository consist of two packages "
+                                          },
+                                          {
+                                            "text": "pkg",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " and "
+                                          },
+                                          {
+                                            "text": "otherpkg",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ". The first package defines two functions, "
+                                          },
+                                          {
+                                            "text": "SayCode",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " and "
+                                          },
+                                          {
+                                            "text": "SayCoverage",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " and a test for "
+                                          },
+                                          {
+                                            "text": "SayCode",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ". The second package defines a function "
+                                          },
+                                          {
+                                            "text": "SayCodeCoverage",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " that uses "
+                                          },
+                                          {
+                                            "text": "SayCode",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " and "
+                                          },
+                                          {
+                                            "text": "SayCoverage",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ", and a test for "
+                                          },
+                                          {
+                                            "text": "SayCodeCoverage",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ":"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "441dbd7e-97ee-4810-8f1b-450bb99c1513",
+                      "cells": [
+                        {
+                          "id": "3d501d1f-f053-46b7-b963-d118521a3bc9",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "// funcs.go\npackage pkg\n\nfunc SayCode() string {\n    return \"code\"\n}\n\nfunc SayCoverage() string {\n    return \"coverage\"\n}"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "f3a07b7c-dbe1-4fe7-9163-561020531240",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "// funcs_test.go\npackage pkg\n\nimport \"testing\"\n\nfunc TestSayCode(t *testing.T) {\n    if SayCode() != \"code\" {\n        t.Fail()\n    }\n}"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2368b304-fa18-4b36-9485-cb44a123bc6b",
+                      "cells": [
+                        {
+                          "id": "ab4f5b27-681e-4105-93ea-38f5f6aad072",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "// cc.go\npackage otherpkg\n\nimport \"github.com/arekkas/accurate-test-coverage/pkg\"\n\nfunc SayCodeCoverage() string {\n    return pkg.SayCode() + \" \" + pkg.SayCoverage()\n}"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "4aff885f-9363-4f14-aeb7-9627628578ac",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "// cc_test.go\npackage otherpkg\n\nimport \"testing\"\n\nfunc TestSayCodeCoverage(t *testing.T) {\n    if SayCodeCoverage() != \"code coverage\" {\n        t.Fail()\n    }\n}"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "224d6484-b4ca-456b-8fdc-e9c1f19bc57e",
+              "cells": [
+                {
+                  "id": "22b98881-644c-4c76-b19f-8ca34f68340c",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {}
+                  },
+                  "rows": [
+                    {
+                      "id": "1729abaa-5eef-4327-a685-f22f5c5f6a25",
+                      "cells": [
+                        {
+                          "id": "d4994ca4-e041-4988-8404-23c818971775",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "The "
+                                          },
+                                          {
+                                            "text": "-coverpkg",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " flag"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "Let's use "
+                                          },
+                                          {
+                                            "text": "-covermod=atomic",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " to get a report of how well the tests cover the code. We expect 100% code coverage because every line is being touched by the tests:"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "8d82eb10-9390-431d-8872-b83766bb9ba2",
+                      "cells": [
+                        {
+                          "id": "a3d134ad-a24a-420d-9a84-af4d4283c92a",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ go get -d -u github.com/arekkas/accurate-test-coverage\n$ go test -covermode=atomic \\\n    github.com/arekkas/accurate-test-coverage/...\n\nok  github.com/arekkas/accurate-test-coverage/otherpkg  10.115s coverage: 100.0% of statements\nok  github.com/arekkas/accurate-test-coverage/pkg        0.485s coverage:  50.0% of statements"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "959a83da-9d89-4274-8199-1db396796b4d",
+                      "cells": [
+                        {
+                          "id": "e503d639-2240-4803-9867-3e5f793b5685",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "That didn't go as expected! Code coverage reports only 75% (100% + 50%) code coverage. That happens because "
+                                          },
+                                          {
+                                            "text": "go test -covermode",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " is not collecting coverage reports on code that doesn't belong to the package currently being tested. Of course, Go has a flag for that, it's called "
+                                          },
+                                          {
+                                            "text": "-coverpkg",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ". This flag accepts a list of packages to consider while computing code coverage:"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "cfae0c27-b74e-43c0-9a05-5b4ced02e7e3",
+                      "cells": [
+                        {
+                          "id": "991615e9-e880-4806-a54c-807c0cb50fc1",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ go test -covermode=atomic \\\n    -coverpkg $(go list github.com/arekkas/accurate-test-coverage/...) \\\n    github.com/arekkas/accurate-test-coverage/...\r\n\nok  github.com/arekkas/accurate-test-coverage/pkg       22.494s coverage:   0.0% of statements in github.com/arekkas/accurate-test-coverage/otherpkg\nok  github.com/arekkas/accurate-test-coverage/otherpkg  10.398s coverage: 100.0% of statements in github.com/arekkas/accurate-test-coverage/otherpkg"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "685d1a9b-3376-4e42-9bcb-7164c405e162",
+                      "cells": [
+                        {
+                          "id": "c9754519-4996-40ca-a7a2-c704929a2d24",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Awesome, we received true code coverage!"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "afcba4d3-b988-4571-bca8-ffc49ce833fd",
+              "cells": [
+                {
+                  "id": "a786d329-51b0-4287-a029-1df05506ba6e",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "2914ac7b-66ab-4958-ab32-12bbb63d58c7",
+                      "cells": [
+                        {
+                          "id": "dea1312d-41b4-43f7-b1ff-5a919ffe7d17",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "-coverprofile",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " is incompatible with "
+                                          },
+                                          {
+                                            "text": "-coverpgk",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "How about getting some nice code coverage reporting using, for example, "
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "coveralls.io"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "https://coveralls.io/"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "? Since "
+                                          },
+                                          {
+                                            "text": "go test",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " supports writing the coverage report to a file using "
+                                          },
+                                          {
+                                            "text": "-coverprofile",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ", this should be an easy one:"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": null
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "cd41c201-e2af-4687-9b80-c2dd01a10d84",
+                      "cells": [
+                        {
+                          "id": "b875e446-c4fe-4981-acd2-55a242014f7d",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ go test -covermode=atomic \\\n    -coverprofile=coverage.tmp \\\n    -coverpkg $(go list github.com/arekkas/accurate-test-coverage/...) \\\n    github.com/arekkas/accurate-test-coverage/...\n\ncannot use test profile flag with multiple packages"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "05ae82f8-2dab-489b-ba3f-4bd908f8abc9",
+                      "cells": [
+                        {
+                          "id": "f45c495e-18ac-4ba7-87e5-cc9b9864f72c",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "326d57cc-1bf5-4291-8e15-c9e26e0e89b2",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/image",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "src": "images/articles/go-codecov/tableflip.gif"
+                            }
+                          }
+                        },
+                        {
+                          "id": "25feca05-c764-4ffa-8074-98a69065e50e",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "d8136aa8-5e34-4048-a04c-e19801b3027e",
+                      "cells": [
+                        {
+                          "id": "9f075cdc-7566-4710-b68e-54c32e2b03cc",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "Using the flag "
+                                          },
+                                          {
+                                            "text": "-coverprofile",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ", "
+                                          },
+                                          {
+                                            "text": "go test",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " is unable to merge code coverage from multiple packages into one report. Thus, what needs to be done is loop through all the packages, and merge the outputs into one. Doing this either requires some bash magic (which does not work on windows), or "
+                                          },
+                                          {
+                                            "text": "go-acc",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ":"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "# Download and install go-acc\n$ go get -u github.com/ory/go-acc\n\n# Run it against some package(s)\n$ go-acc github.com/some/package\n$ go-acc .\n$ go-acc ./...\n\n# You can use your regular toolchain as well:\n$ go-acc $(go list ./...)\n$ go-acc $(glide novendor)"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Now, let's run this against the package from above:"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ go get -d -u github.com/arekkas/accurate-test-coverage/...\n$ go-acc github.com/arekkas/accurate-test-coverage/...\n\n\rok      github.com/arekkas/accurate-test-coverage/otherpkg  0.082s  coverage: 100.0% of statements in github.com/arekkas/accurate-test-coverage/otherpkg, github.com/arekkas/accurate-test-coverage/pkg\nok      github.com/arekkas/accurate-test-coverage/pkg       0.081s  coverage:  33.3% of statements in github.com/arekkas/accurate-test-coverage/otherpkg, github.com/arekkas/accurate-test-coverage/pkg\r"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "Running "
+                                          },
+                                          {
+                                            "text": "go tool cover -html=coverage.txt",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": " should open a browser and show that all code has been touched by the tests:"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0fa0e95a-3de7-4796-b1f3-e64dc8639686",
+                      "cells": [
+                        {
+                          "id": "fcdbccbd-ee8f-4ef7-b5ac-680c3c569389",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/image",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "src": "images/articles/go-codecov/result.png"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "2390f198-7cdb-46c4-aae6-a2cdefef9ff3",
+                      "cells": [
+                        {
+                          "id": "49a8f9ce-efc4-4527-b7e7-f497aa9ba6eb",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "That's it - thank you for reading! "
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

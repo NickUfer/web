@@ -16,38 +16,47 @@ const adopters = [
   {
     title: 'ThoughtWorks',
     image: tw,
+    url: 'https://www.thoughtworks.com',
   },
   {
     title: 'Tulip Retail',
     image: tulip,
+    url: 'https://tulip.com/',
   },
   {
     title: 'Segment',
     image: segment,
+    url: 'https://segment.com/',
   },
   {
     title: 'All My Funds',
     image: allmyfunds,
+    url: 'https://cashdeck.com.au/',
   },
   {
     title: 'Raspberry Pi',
     image: raspi,
+    url: 'https://www.raspberrypi.org/',
   },
   {
     title: 'Arduino',
     image: arduino,
+    url: 'https://arduino.cc/',
   },
   {
     title: 'Hootsuite',
     image: hootsuite,
+    url: 'https://hootsuite.com',
   },
   {
     title: '3REIN',
     image: threerein,
+    url: 'https://3rein.com/',
   },
   {
     title: 'Kyma Project',
     image: kyma,
+    url: 'https://kyma-project.io/',
   },
 ]
 
@@ -66,8 +75,10 @@ const Adopters = () => (
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
           <div className={styles.logos}>
             <div className={styles.logosInner}>
-              {adopters.map(({ title, image }) => (
-                <img key={title} src={image} alt={title} />
+              {adopters.map(({ title, image, url }) => (
+                <a href={url}>
+                  <img key={title} src={image} alt={title} />
+                </a>
               ))}
             </div>
           </div>

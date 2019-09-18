@@ -1,0 +1,1711 @@
+{
+  "id": "5facdd85-0386-4777-a1f3-b3757d3f403c",
+  "url": "products/api-security.html",
+  "meta": {
+    "description": "ORY Gatekeeper works like a firewall for your APIs. We detect and prevent malicious requests and make sure that no unauthorized request reaches your servers.",
+    "title": "ORY Gatekeeper - Protect Your API With OAuth2 In Minutes"
+  },
+  "design": {
+    "config": {
+      "ory-design-vipin": {
+        "headerBackgroundUrl": "images/sea-bg.jpg",
+        "headerDarkenLevel": 0.5
+      },
+      "ory-design-clarke": {
+        "headerBackgroundUrl": "images/pexels-photo-65125.jpeg",
+        "headerDarkenLevel": 0.6
+      }
+    },
+    "id": ""
+  },
+  "title": "ORY Gatekeeper",
+  "content": {
+    "header": {
+      "id": "72327f51-c460-4a5b-99fb-a2dc25b764a5",
+      "cells": [
+        {
+          "id": "9736b9f4-b691-40cf-aaad-5006a203daae",
+          "inline": null,
+          "size": 12,
+          "rows": [
+            {
+              "id": "edc929e6-fb64-4d1e-b229-281d562cac82",
+              "cells": [
+                {
+                  "id": "6553903f-df51-4481-9abd-6c98df5f80af",
+                  "inline": null,
+                  "size": 6,
+                  "content": {
+                    "plugin": {
+                      "name": "ory/editor/core/content/slate",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "serialized": {
+                        "nodes": [
+                          {
+                            "kind": "block",
+                            "type": "HEADINGS/HEADING-TWO",
+                            "nodes": [
+                              {
+                                "kind": "text",
+                                "text": "DON'T REINVENT API ACCESS CONTROL."
+                              }
+                            ],
+                            "data": {
+                              "align": "left"
+                            }
+                          },
+                          {
+                            "kind": "block",
+                            "type": "HEADINGS/HEADING-TWO",
+                            "nodes": [
+                              {
+                                "kind": "text",
+                                "text": "PROTECT YOUR APIs WITH OAuth2 and OPENID Connect IN MINUTES."
+                              }
+                            ],
+                            "data": {
+                              "align": "left"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "3bc6d652-a4d5-4f1b-aa10-1a6672312b3b",
+                  "inline": null,
+                  "size": 6,
+                  "content": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/content/html",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "html": "<iframe src=\"hydra-saas/production_threat_w.html\" style=\"width: 100%;\" onload=\"resizeIframe(this)\"></iframe>"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "main": {
+      "id": "fa74df8b-a90f-4e1d-9e8a-ff7241e67780",
+      "cells": [
+        {
+          "id": "6be391e5-4e60-4d12-977e-3c19346305dc",
+          "inline": null,
+          "size": 12,
+          "rows": [
+            {
+              "id": "c9b42ef0-2f68-4aa7-b5b1-b1bcdb9bb5d9",
+              "cells": [
+                {
+                  "id": "c933c0e4-b347-460a-8ccc-67ab02bf9854",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "dark"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "472d35a3-2b90-48a1-8f8e-269ee74b8665",
+                      "cells": [
+                        {
+                          "id": "d6b24777-cc4c-41a0-a669-8a3cd3d98b07",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "fb9de5b0-2d7c-4930-8221-1897e938e96d",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "SCHEDULE DEMO",
+                              "url": "https://arekkas.typeform.com/to/NZnnzu?ref=website_header"
+                            }
+                          }
+                        },
+                        {
+                          "id": "0c276613-7131-4a02-b651-c2b3ac971fe0",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "b97c41bf-0d03-49d6-a183-5a64ea05358a",
+              "cells": [
+                {
+                  "id": "58f5b4db-8ff8-400c-84e6-ad513fb71cb9",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "anchorName": "overview",
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "49239fec-65d5-4c65-b919-5fb39d62e2e6",
+                      "cells": [
+                        {
+                          "id": "26c1e54a-e2fd-47e5-8c38-4946a994e253",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Protect your APIs from attackers"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "ORY Gatekeeper works like a firewall for your APIs. We detect and prevent malicious requests and make sure that no unauthorized request reaches your servers."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "be9973ba-d14b-46d3-8bab-e5bd862c444b",
+                          "inline": null,
+                          "size": 7,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/html",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "html": "<iframe src=\"hydra-saas/production_threat.html\" style=\"width: 100%;\" onload=\"resizeIframe(this)\"></iframe>"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "7cff9bd2-03b1-49c9-bc79-e2e085f7b8e0",
+                      "cells": [
+                        {
+                          "id": "64f8011b-37d1-4b5e-beaa-bb2bdadd3d7f",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "height": 40
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "873e2c54-ac8e-40fe-8751-d29584b3e3ce",
+                      "cells": [
+                        {
+                          "id": "20b8f850-02aa-4c6b-8d8f-51baa1c0f18a",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Works with every existing system"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Are you using hosted identity solutions like Auth0 or AWS Cognito? Are you running your own identity management solution?"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "No problem, ORY Gatekeeper protects you no matter how your authentication process looks like. You only need one line of code and we will do the rest."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "d3e4055e-378d-484c-9864-ebd18ab58189",
+                          "inline": null,
+                          "size": 7,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/html",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "html": "<iframe src=\"hydra-saas/production_login.html\" style=\"width: 100%;\" onload=\"resizeIframe(this)\"></iframe>"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "21ee4c04-2f10-4b16-859a-81f10159a038",
+              "cells": [
+                {
+                  "id": "198a8f43-e14c-4d6a-9e46-1bc31ecc3799",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "e415f1b0-e509-4945-a002-334aa2b9dd96",
+                      "cells": [
+                        {
+                          "id": "0cf7f0a2-b9fb-4028-9bb3-ad34051c7258",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "c8ea4085-3429-4a0d-8f20-92dfa879c282",
+                          "inline": null,
+                          "size": 8,
+                          "rows": [
+                            {
+                              "id": "ec879de0-5fb2-4407-acd0-e76b0a2280a0",
+                              "cells": [
+                                {
+                                  "id": "65aa41c0-4cce-4351-b545-10c24c8fd558",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/html",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "html": "<iframe src=\"counter.html\" style=\"border: 0; outline: 0; width: 100%; height: auto; max-height: 90px;\" onload=\"resizeIframe(this)\"></iframe>"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "401426d9-46c6-452c-bec8-7a78c6537def",
+                              "cells": [
+                                {
+                                  "id": "70b663ee-cd4e-468a-9d75-b9b07d85021d",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/button",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "text": "TRY EARLY ACCESS FOR FREE",
+                                      "url": "https://arekkas.typeform.com/to/NZnnzu?ref=website_counter"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "51cecf78-c3dc-4271-982e-3f46a042edc1",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "f590a9f3-c5f8-4ad7-a7e3-5b80bb13d9c9",
+              "cells": [
+                {
+                  "id": "c94fa58e-3218-473a-9d8b-1335df4460d0",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "51411930-1817-47b0-9eee-60e84a7baa26",
+                      "cells": [
+                        {
+                          "id": "e20cf54a-1493-497b-936a-642479fbbff5",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Charge for calls to your API"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Connect your Stripe account and start charging money for API use. Create subscription plans or set up pay-per-use in no time."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "0c9fe879-8395-45a9-a51b-b37b40d89702",
+                          "inline": null,
+                          "size": 7,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/html",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "html": "<iframe src=\"hydra-saas/production_apibilling.html\" style=\"width: 100%;\" onload=\"resizeIframe(this)\"></iframe>"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "5ad24bcb-9af0-4819-82d8-06961747df65",
+                      "cells": [
+                        {
+                          "id": "bd120496-f032-4c8f-ae92-323d49661233",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "height": 40
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ee551803-94fe-4c8c-9f0a-fa4925839a9c",
+                      "cells": [
+                        {
+                          "id": "d05677d9-f057-43a4-8954-50f86ecb7c2b",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Use one protocol for all use cases"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Authorize requests from browsers, native mobile apps, IoT devices, and even third party apps within minutes, using a battle-tested and popular protocol: OAuth 2.0."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Become an social login provider like Google, Facebook, or LinkedIn with the identity federation standard OpenID Connect."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "0f456722-6843-4c01-bf56-ce36d9de4250",
+                          "inline": null,
+                          "size": 7,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/html",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "html": "<iframe src=\"hydra-saas/production_auth.html\" style=\"width: 100%;\" onload=\"resizeIframe(this)\"></iframe>"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "a6e73872-e33d-4d4b-800b-4ec7be229f99",
+              "cells": [
+                {
+                  "id": "81ad718c-2ad6-45a5-9381-204632dfe99f",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "0a7de235-c8d3-44f8-86e4-38c92ff5ab54",
+                      "cells": [
+                        {
+                          "id": "bc5b43f6-d389-417a-be38-0b0e59893904",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ac01146c-ffdb-4083-844e-ba2559883826",
+                      "cells": [
+                        {
+                          "id": "3acbbe1c-cf7c-4414-8a9d-7a60c9809c37",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/image",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "src": "images/ory-security-console.png"
+                            }
+                          }
+                        },
+                        {
+                          "id": "59182f2a-c585-4b4a-976f-fb078f7010a6",
+                          "inline": null,
+                          "size": 7,
+                          "rows": [
+                            {
+                              "id": "d851d14e-ea70-4c06-9c1f-02028861110d",
+                              "cells": [
+                                {
+                                  "id": "d3526e69-a25e-4b71-919b-b93c68064a73",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-TWO",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Easy administration"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "c38441b3-6c84-424b-b965-a049caf8cb1f",
+                              "cells": [
+                                {
+                                  "id": "ea293ed8-7de0-494e-8de6-76805c5ecfdb",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Our comprehensible administrator console makes it easy to configure the environment and set up rules."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "6eaf1c52-625a-4193-a418-a2a0db6c470f",
+                              "cells": [
+                                {
+                                  "id": "7eab7aac-4db7-4818-aaf3-03f75583d183",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-TWO",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Comprehensive reporting"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "15edc4a0-d97e-455c-bcdc-e5123f2c3fa5",
+                              "cells": [
+                                {
+                                  "id": "c211de4f-40b9-4630-88c2-aed82a81fa30",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Receive real-time statistics on business processes, transactions and security incidents. Compile comprehensive executive summaries for swift reviews."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "12063387-d9fc-4a89-a640-3d9e7e754554",
+                      "cells": [
+                        {
+                          "id": "e122999f-9645-4b4e-8aee-545d3eefc3ba",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "e7a59192-3364-472d-b768-ad43610004e7",
+              "cells": [
+                {
+                  "id": "6f1db18b-3e95-4936-98b3-4ab1bf443d1a",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white",
+                      "anchorName": "open-source"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "4ca1fd80-d6fb-4c63-900b-1267243b0798",
+                      "cells": [
+                        {
+                          "id": "5c3618b4-28a1-48ea-b126-5c63c7690cca",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "OPEN SOURCE"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "6dc81d63-91c1-4f12-8c6a-782f907020c9",
+                      "cells": [
+                        {
+                          "id": "3c0927cd-acef-4a25-978e-ac65d77e01c9",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "We open source all our software products and are thankful for the vivid community that helps making these products great."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "d1442e57-9d96-466f-93d3-5428c62b77fa",
+                      "cells": [
+                        {
+                          "id": "683737f2-bacb-4829-a2f8-3296dd7c9daa",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/divider",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4f600221-6605-4186-b895-158bbc469a2f",
+                      "cells": [
+                        {
+                          "id": "30d44a13-9985-4cba-9a76-e11b71ae31c4",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "c7e85d0f-ea32-421d-be2b-9c9764310c39",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "OUR OPEN SOURCE PROJECTS",
+                              "url": "products/open-source.html"
+                            }
+                          }
+                        },
+                        {
+                          "id": "19c40c38-13c9-438f-bca2-a1bfe60380ac",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "14b20e04-4922-4b7b-84cc-5c7c35d4460e",
+              "cells": [
+                {
+                  "id": "ecb6aacc-efbe-455d-af76-7db7ce0cfec3",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "dark"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "07d2557e-4f2c-4b31-a826-806ea4b6aa7b",
+                      "cells": [
+                        {
+                          "id": "3149e9c1-2db9-4bcd-9948-05960b4ad403",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Security & Longevity"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "32adba31-9342-463b-ac02-e8a32d7bc9d2",
+                      "cells": [
+                        {
+                          "id": "00fd5f22-dc0d-4a64-81eb-35de3a324a90",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/icon",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "icon": "security",
+                              "size": "96px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "8deca848-c6a8-4358-b8be-c24565c768dd",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/icon",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "icon": "phonelink_lock",
+                              "size": "96px"
+                            }
+                          }
+                        },
+                        {
+                          "id": "4a7dc45b-20b9-4936-907b-98dabdcac009",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/icon",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "size": "96px",
+                              "icon": "verified_user"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "f4eac88e-9bbb-48cc-8fd1-bd154297e5cd",
+                      "cells": [
+                        {
+                          "id": "a39e7ff7-b844-449a-b43c-6c09c9197288",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Security first"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "We use NIST (USA) & BSI (GER) approved cryptography and sophisticated security designs to prevent common and uncommon attack types."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "7384e145-fdb7-48ca-a382-e3a03a6b76ca",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "No vendor lock-in"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Our technology is open source with vivid communities and migration to open source is possible."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "2d0b06dc-7e7b-4a6e-9ddf-2757d80efb23",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Trusted"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Companies of all sizes trust our open source ecosystem. We secure over 400.000 requests each day."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "041ad99e-42a2-464d-91e3-344176b08703",
+              "cells": [
+                {
+                  "id": "b4b06679-7afd-4097-a5a2-eb01cce80f04",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey",
+                      "anchorName": "developer"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "85b88ba2-888a-4d9f-900d-bb41888be693",
+                      "cells": [
+                        {
+                          "id": "cdc44790-649b-4752-9050-5edaf40ba15b",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "For developers"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "By developers"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4434f419-4dbf-4d7f-996c-b94322c69394",
+                      "cells": [
+                        {
+                          "id": "79de3b3a-96cc-4202-9f8d-b4142a7d4992",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Integrate immediately"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "Our API is a real time-saver. It consists of only one method: "
+                                          },
+                                          {
+                                            "text": "ory().authorize",
+                                            "marks": [
+                                              {
+                                                "type": "CODE/CODE",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": ". You will call this method from your log in endpoint, to let us know who is trying to get authorization."
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "906c4ac4-4ebe-49e7-8964-5e55e3997e76",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "ory().authorize(request, {\n  user: \"jane.doe@example.org\"\n})"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "7b0a55d7-08ff-4f9e-a2a8-8b86d6bd944b",
+                      "cells": [
+                        {
+                          "id": "944e12da-f2eb-42b9-88f6-fdfabd25aecc",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "8316b891-a92b-4aee-8d5a-6768bfc3b81a",
+                      "cells": [
+                        {
+                          "id": "f74d637f-f1ec-4da0-9b17-4a43b0afef7c",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Don't worry about access control"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "You can trust us to only let users past who present proper authorization. Gone are the days where you have to deal with ACL, RBAC and other funkyness. Simply build your app."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "For easy processing, you receive user information via HTTP headers."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "f9cd49af-4cb7-4e71-8f52-9c4ba7ece4b3",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "const handler = (request, response) => {\n  const user = req.get('X-FIREWALL-SUBJECT');\n  // ...\n}"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "left"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "067f9c24-f1fa-4d40-bcc6-dfaf9e107d5c",
+                      "cells": [
+                        {
+                          "id": "92165b49-4bf2-4e3a-aabb-e92008111661",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "055d337f-b79c-45d6-b394-e8015d4f4430",
+                      "cells": [
+                        {
+                          "id": "2ce86b42-312e-48fd-9b58-26aba5fa5e89",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Works everywhere"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "The protocols we use have libraries in any major programming language. Authorizing users on the client side is a breeze. This particular example uses "
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "passportjs"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "http://passportjs.org/"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "text": "."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": ""
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "3c40e9df-a033-4219-bad9-853c49ebab0b",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "passport.authenticate('oauth2');"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "35f989bc-4487-4962-b804-6f383781269e",
+                      "cells": [
+                        {
+                          "id": "c5c49078-3d6e-4e2a-a92f-de1f64b33b2d",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Detailed documentation available soon."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "dd13cb9d-3bc9-4817-88aa-025ddad91901",
+              "cells": [
+                {
+                  "id": "abe924b0-040d-44a6-9316-278c7873264a",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white",
+                      "anchorName": "pricing"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "b46d0a0d-3b36-4b28-9f68-7dd34c82f053",
+                      "cells": [
+                        {
+                          "id": "babacc21-e3f7-4232-bcc0-779211ea713f",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "PRICING"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "5d3b5769-df7e-48ab-bbe2-e556facf5057",
+                      "cells": [
+                        {
+                          "id": "3e9f2732-be5b-466d-add1-122192f87327",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Plan ahead with our transparent pricing policy and experiment with the platform using the free plan."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "1f7df859-daa1-489e-97c4-5332395eab71",
+                      "cells": [
+                        {
+                          "id": "95410b34-90c6-4e29-a25e-2435354edcec",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/html",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "html": "<iframe src=\"hydra-saas/pricing.html\" style=\"border: 0; outline: 0; width: 100%; height: auto;\" onload=\"resizeIframe(this)\"></iframe>"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

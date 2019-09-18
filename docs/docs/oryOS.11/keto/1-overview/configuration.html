@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuring and Running ORY Keto · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;h1&gt;&lt;/h1&gt;
+"/><meta name="docsearch:version" content="oryOS.11"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuring and Running ORY Keto · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&lt;h1&gt;&lt;/h1&gt;
+"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.11</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class=""><a href="/docs/oryOS.11/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/keto/1-overview/7-configuration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Configuring and Running ORY Keto</h1></header><article><div><span><h1></h1>
+<p>ORY Keto supports two types of storage adapters:</p>
+<ul>
+<li>In-memory: This adapter does not work with more than one instance (&quot;cluster&quot;)
+and any state is lost after restarting the instance.</li>
+<li>SQL: This adapter works with more than one instance and state is not lost
+after restarts.</li>
+</ul>
+<p>The SQL adapter supports two DBMS: PostgreSQL 9.6+ and MySQL 5.7+. Please note
+that older MySQL versions have issues with the database schema. For more
+information <a href="https://github.com/ory/hydra/issues/377">go here</a>.</p>
+<p>ORY Keto supports various authentication strategies. Depending on what
+strategies you want to use, you will have to configure more services (e.g. ORY
+Hydra). In this tutorial, we will set up ORY Keto without any of the other
+services. Please refer to the <a href="keto/1-overview/2-warden.md">warden chapter</a> to
+see how to configure each authentication strategy.</p>
+<p>This guide will:</p>
+<ol>
+<li>Download and run a PostgreSQL container in Docker.</li>
+<li>Download and run ORY Keto using Docker.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="create-a-network"></a><a href="#create-a-network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Network</h2>
+<p>Before we can start, a network must be created which we will attach all our
+Docker containers to. That way, the containers can talk to one another.</p>
+<pre><code class="hljs">$ docker<span class="hljs-built_in"> network </span>create ketoguide
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="start-the-postgresql-container"></a><a href="#start-the-postgresql-container" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start the PostgreSQL Container</h2>
+<p>For the purpose of this tutorial, we will use PostgreSQL as a database. As you
+probably already know, don't run databases in Docker in production! For the sake
+of this tutorial however, let's use Docker to quickly deploy the database.</p>
+<pre><code class="hljs">$ docker <span class="hljs-builtin-name">run</span> \
+  --network ketoguide \
+  --name ory-keto-example--postgres \
+  -e <span class="hljs-attribute">POSTGRES_USER</span>=keto \
+  -e <span class="hljs-attribute">POSTGRES_PASSWORD</span>=secret \
+  -e <span class="hljs-attribute">POSTGRES_DB</span>=keto \
+  -d postgres:9.6
+</code></pre>
+<p>This command wil start a postgres instance with name
+<code>ory-keto-example--postgres</code>, set up a database called <code>keto</code> and create a user
+<code>keto</code> with password <code>secret</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="run-the-ory-keto-service"></a><a href="#run-the-ory-keto-service" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run the ORY Keto Service</h2>
+<pre><code class="hljs"><span class="hljs-comment"># The database url points us at the postgres instance. This could also be an ephermal in-memory database (`export DATABASE_URL=memory`)</span>
+<span class="hljs-comment"># or a MySQL URI.</span>
+$ <span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DATABASE_URL</span>=postgres://keto:secret@ory-keto-example--postgres:5432/keto?sslmode=disable
+
+<span class="hljs-comment"># This pulls the latest image from Docker Hub</span>
+$ docker pull oryd/keto:v0.1.5-sandbox_oryOS.5
+
+<span class="hljs-comment"># ORY Keto does not do magic, it requires conscious decisions, for example running SQL migrations which is required</span>
+<span class="hljs-comment"># when installing a new version of ORY Keto, or upgrading an existing installation.</span>
+<span class="hljs-comment"># It is the equivalent to `keto migrate sql postgres://keto:secret@ory-keto-example--postgres:5432/keto?sslmode=disable`</span>
+$ docker <span class="hljs-builtin-name">run</span> -it --rm \
+  --network ketoguide \
+  oryd/keto:v0.1.5-sandbox_oryOS.5 \
+  migrate sql <span class="hljs-variable">$DATABASE_URL</span>
+
+Applying `client` SQL migrations<span class="hljs-built_in">..</span>.
+[<span class="hljs-built_in">..</span>.]
+Migration successful!
+
+<span class="hljs-comment"># Next, let's run the server!</span>
+$ docker <span class="hljs-builtin-name">run</span> -d \
+  --name ory-keto-example--keto \
+  --network ketoguide \
+  -p 4466:4466 \
+  -e <span class="hljs-attribute">DATABASE_URL</span>=<span class="hljs-variable">$DATABASE_URL</span> \
+  oryd/keto:v0.1.5-sandbox_oryOS.5 \
+  serve
+</code></pre>
+<p>Great, the server running now! Make sure to check the logs and see if there were
+any errors or issues before going to the next steps:</p>
+<pre><code class="hljs">$ docker logs ory-keto-example<span class="hljs-comment">--keto</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="running-cli-commands"></a><a href="#running-cli-commands" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Running CLI Commands</h2>
+<p>You can now create your first policy:</p>
+<pre><code class="hljs">$ docker run -<span class="hljs-keyword">it</span> <span class="hljs-comment">--rm \</span>
+  <span class="hljs-comment">--network ketoguide \</span>
+  oryd/keto:v0<span class="hljs-number">.1</span><span class="hljs-number">.5</span>-sandbox_oryOS<span class="hljs-number">.5</span> \
+  policies <span class="hljs-built_in">create</span> <span class="hljs-comment">--endpoint http://ory-keto-example--keto:4466/ \</span>
+    <span class="hljs-comment">--id example-policy \</span>
+    <span class="hljs-comment">--allow \</span>
+    -<span class="hljs-keyword">a</span> <span class="hljs-built_in">delete</span> \
+    -s alice \
+    -r <span class="hljs-string">"blog_posts:my-first-blog-post"</span>
+</code></pre>
+<p>List all existing policies:</p>
+<pre><code class="hljs">$ docker <span class="hljs-built_in">run</span> -<span class="hljs-keyword">it</span> <span class="hljs-comment">--rm \</span>
+  <span class="hljs-comment">--network ketoguide \</span>
+  oryd/keto:v0<span class="hljs-number">.1</span><span class="hljs-number">.5</span>-sandbox_oryOS<span class="hljs-number">.5</span> \
+    <span class="hljs-comment">--endpoint http://ory-keto-example--keto:4466/ \</span>
+    policies <span class="hljs-keyword">get</span> example-policy
+</code></pre>
+<p>And make some Warden requests:</p>
+<pre><code class="hljs">$ docker <span class="hljs-built_in">run</span> -<span class="hljs-keyword">it</span> <span class="hljs-comment">--rm \</span>
+  <span class="hljs-comment">--network ketoguide \</span>
+  oryd/keto:v0<span class="hljs-number">.1</span><span class="hljs-number">.5</span>-sandbox_oryOS<span class="hljs-number">.5</span> \
+  warden authorize subject <span class="hljs-comment">--endpoint http://ory-keto-example--keto:4466/ \</span>
+      <span class="hljs-comment">--action delete \</span>
+      <span class="hljs-comment">--subject alice \</span>
+      <span class="hljs-comment">--resource "blog_posts:my-first-blog-post"</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="securing-ory-keto"></a><a href="#securing-ory-keto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Securing ORY Keto</h2>
+<p>Similar to other services in our ecosystem, ORY Keto has no native access
+control. This means that any request made to e.g. <code>/policies</code> or <code>/warden/...</code>
+is considered authenticated and thus executed. However, these endpoints are very
+sensitive as they define who is allowed to do what in your system.</p>
+<p>Please use an API Gateway or a similar mechanism to protect these endpoints. How
+you protect them, is up to you.</p>
+<p>If you require dedicated help with this, consider asking us for
+<a href="mailto:hi@ory.sh">consultancy</a>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-network">Create a Network</a></li><li><a href="#start-the-postgresql-container">Start the PostgreSQL Container</a></li><li><a href="#run-the-ory-keto-service">Run the ORY Keto Service</a></li><li><a href="#running-cli-commands">Running CLI Commands</a></li><li><a href="#securing-ory-keto">Securing ORY Keto</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

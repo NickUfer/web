@@ -1,0 +1,2543 @@
+{
+  "id": "6af7d9d7-34b1-4cb1-b918-dd8d65d80eb4",
+  "url": "sites/index.html",
+  "meta": {
+    "description": "Create stunning websites with cutting edge editing experience. No databases, no PHP, 100% open source!",
+    "title": "ORY Sites - next-gen static site generator"
+  },
+  "design": {
+    "config": {
+      "ory-design-clarke": {
+        "headerBackgroundUrl": "images/pexels-photo-65125.jpeg",
+        "headerDarkenLevel": 0.5
+      }
+    }
+  },
+  "title": "ORY Sites",
+  "content": {
+    "header": {
+      "id": "c00e26ae-6be4-49c4-9729-97ac5ce9da59",
+      "cells": [
+        {
+          "id": "1fbb6e3a-7127-4ac0-91e1-9e0883e156b2",
+          "inline": null,
+          "size": 12,
+          "rows": [
+            {
+              "id": "a223118d-6f1d-413d-a6d6-18ffb3d67f15",
+              "cells": [
+                {
+                  "id": "29b3a5ed-f680-4621-abc6-0993aa1cd9c8",
+                  "inline": null,
+                  "size": 6,
+                  "content": {
+                    "plugin": {
+                      "name": "ory/editor/core/content/slate",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "serialized": {
+                        "nodes": [
+                          {
+                            "kind": "block",
+                            "type": "HEADINGS/HEADING-ONE",
+                            "nodes": [
+                              {
+                                "kind": "text",
+                                "text": "ORY Sites"
+                              }
+                            ],
+                            "data": {
+                              "align": "left"
+                            }
+                          },
+                          {
+                            "kind": "block",
+                            "type": "HEADINGS/HEADING-THREE",
+                            "nodes": [
+                              {
+                                "kind": "text",
+                                "text": "Next-Gen Static site generator."
+                              }
+                            ],
+                            "data": {
+                              "align": "left"
+                            }
+                          },
+                          {
+                            "kind": "block",
+                            "type": "HEADINGS/HEADING-THREE",
+                            "nodes": [
+                              {
+                                "kind": "text",
+                                "text": "No Markdown, No databases, no php, 100% open source."
+                              }
+                            ],
+                            "data": {
+                              "align": "left"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                },
+                {
+                  "id": "34a2272d-6e60-4351-a68c-7398f21b5714",
+                  "inline": null,
+                  "size": 6,
+                  "content": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/content/html5-video",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "url": "images/sites/sites-demo.mp4"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "main": {
+      "id": "bc9a9cda-54a9-4739-9baa-d480d4a28578",
+      "cells": [
+        {
+          "id": "51e1fe96-7647-4c63-883d-d670ccf13c28",
+          "inline": null,
+          "size": 12,
+          "rows": [
+            {
+              "id": "075c2ecd-94a6-476e-9cc7-645045c943ca",
+              "cells": [
+                {
+                  "id": "711d937f-2093-4eee-87d6-dbbd34477833",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "dark"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "4d219ccf-97fc-4683-85d5-3545bd52e0fc",
+                      "cells": [
+                        {
+                          "id": "81c693d6-d301-4a14-a07d-3e12ba2de545",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "7673bdd6-bf4f-4cb3-9b34-65af0ce70493",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "TRY BETA FOR FREE",
+                              "url": "https://arekkas.typeform.com/to/CZB2lF?ref=website"
+                            }
+                          }
+                        },
+                        {
+                          "id": "ce52b6f4-6aa9-4b5e-b3d9-a73a2bf0ec00",
+                          "inline": null,
+                          "size": 3,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "534c2591-4add-4a34-92de-01de813fe858",
+              "cells": [
+                {
+                  "id": "fd4937d4-0792-440f-aa6f-94f05a890fd8",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {}
+                  },
+                  "rows": [
+                    {
+                      "id": "eefe2c59-9d7b-4868-a51c-d6fa8b483b85",
+                      "cells": [
+                        {
+                          "id": "cb1ca404-d8bd-4c54-ae57-6c834146e0f2",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "HOW IT WORKS"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "56b6faf0-1429-41df-abd2-2d796953eff6",
+                      "cells": [
+                        {
+                          "id": "e63c4e63-8eff-40a1-a1e8-23199c848058",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Installation"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "ranges": [
+                                          {
+                                            "text": "Install ORY Sites with one command. NodeJS needs to be installed on your system. Please be aware that ORY Sites for npm"
+                                          },
+                                          {
+                                            "text": " is not yet available ",
+                                            "marks": [
+                                              {
+                                                "type": "EMPHASIZE/STRONG",
+                                                "data": {}
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "text": "for the public."
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "left"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "820b6b3d-606e-4144-abbd-4ab5e13b91cf",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ npm install -g ory-sites"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "e35b1d39-5415-4bba-9626-e25f62f3984d",
+                      "cells": [
+                        {
+                          "id": "ea21c1a4-b569-4964-bf8f-386788c336e7",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4b24f738-19fa-4b13-9fad-f7fb3fc35040",
+                      "cells": [
+                        {
+                          "id": "d51f287d-3b26-48c3-a37b-f951795da588",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Getting started"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Create and open a project with ease using the command line interface. The project will open in your browser. Hot reloading, debugging tools and other useful utilities are enabled by default."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "left"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "b78c8325-ceab-4cbf-bc94-effa2c1ae7aa",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ ory-sites create my-project\n$ cd my-project\n$ ory-sites start\nPlease open your browser at http://localhost:4928"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "7679be3d-98ff-42f2-bbb3-98ad42cb6145",
+                      "cells": [
+                        {
+                          "id": "b711acab-f89c-4df7-82ba-0452bcde9ede",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "cb983227-bcb6-470b-9528-56488dae8481",
+                      "cells": [
+                        {
+                          "id": "26aa1161-c0d5-40e2-81eb-175c4f736f99",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Build and deploy static site"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Building and publishing your site is a matter of seconds. The result is static HTML, JavaScript and CSS."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "We support different hosting providers and will keep on adding new ones."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "8fa00bf0-32f4-44f9-8065-82c2e4dee503",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "$ ory-sites build\nBuild successful!\n\n$ ory-sites deploy netlify .\nSite now live at at example.com!"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "3c78b10f-5c57-4308-a47e-48762316800a",
+                      "cells": [
+                        {
+                          "id": "fb4f1e5f-3622-4f55-a25d-11269d6197eb",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "df0fab6b-c1f0-4bd3-a155-5fdb6faf05ea",
+              "cells": [
+                {
+                  "id": "d4c61589-e37e-416c-9d60-23cb80c45623",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "15dbfeaa-238d-42a7-96b8-7816f07a7d9e",
+                      "cells": [
+                        {
+                          "id": "5290c672-4f94-4041-9d1d-8f7a174f3252",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "efc08e48-e951-489c-b831-523d6ff41050",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Request access to the beta access program or check out the legacy version of ORY Sites: ORY Sites for Desktop."
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "517a876d-f3f3-4e7b-93dc-decd55e8178b",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "75ed5617-3a39-45f1-84eb-45782ac108e2",
+                      "cells": [
+                        {
+                          "id": "0f1a25be-41e8-42a9-95ea-1437c5bd3bb9",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "3f14f864-b406-469c-a53c-919ab46fcada",
+                      "cells": [
+                        {
+                          "id": "dc34cbd1-4868-43ab-aee5-2ea8361404db",
+                          "inline": null,
+                          "size": 1,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "284103f4-9531-4eb4-8348-841b57a4a142",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "REQUEST BETA ACCESS",
+                              "url": "https://arekkas.typeform.com/to/CZB2lF?ref=website"
+                            }
+                          }
+                        },
+                        {
+                          "id": "25b22d97-f6aa-4fb6-8449-484cbcf69b6b",
+                          "inline": null,
+                          "size": 5,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/button",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "text": "DOWNLOAD LEGACY APP",
+                              "url": "sites/index.html#legacy"
+                            }
+                          }
+                        },
+                        {
+                          "id": "0a4f8d8d-6e6e-4121-8379-2ffcc92c3498",
+                          "inline": null,
+                          "size": 1,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "806f23cd-e763-45e3-90e9-6cc4bfe22e44",
+                      "cells": [
+                        {
+                          "id": "65910656-7534-4338-8e4a-37637987fb0a",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "cbafe4b5-c4f7-475d-b305-5a472134d677",
+              "cells": [
+                {
+                  "id": "0e3bfef3-0995-4719-ad93-694599003b0b",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "db91f3f0-d4fd-43f4-9c27-49ce42196458",
+                      "cells": [
+                        {
+                          "id": "f83fdf18-ef1b-447e-8090-2e9d798c132d",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "POPULAR DESIGNS"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "bb67ae1d-113e-4cda-8fc8-ebe94b66b20b",
+                      "cells": [
+                        {
+                          "id": "87d40651-3ec0-43ee-9408-53b19b2f3f0e",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "a8bda3ed-3109-4340-84d4-99b7a485e988",
+                              "cells": [
+                                {
+                                  "id": "df2cd71f-ae82-4f14-870c-b3713bf09e09",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/html5-video",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "url": "images/sites/clarke-preview.mp4"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "1a04096e-a745-4817-a04a-03bc26cca49c",
+                              "cells": [
+                                {
+                                  "id": "5f3ff8a2-0ad6-4bd6-abd6-6b33405c5043",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Clarke"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-FOUR",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "1.99$ / month"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Clarke's black and white style give your personal or business website a professional look and feel."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "49ec6637-6a25-4d0c-82a3-52622b9877ec",
+                              "cells": [
+                                {
+                                  "id": "be2d8e2a-3bbf-441b-9c79-ac212420cd5e",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/button",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "text": "PREVIEW",
+                                      "url": "https://ory.github.io/sites-demos/clarke/dist/index.html"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "6cb67dc0-caae-4115-80de-5aa5e8ad0aa0",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "e8f6c8a6-5d12-4027-8d97-3fd449e83955",
+                              "cells": [
+                                {
+                                  "id": "d2327f2f-093c-4fc4-9649-7a641e2946eb",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/html5-video",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "url": "images/sites/khorana-preview.mp4"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "c64b8bcf-2af6-45c3-a3a8-a3cf15d5b7bc",
+                              "cells": [
+                                {
+                                  "id": "fc51fa91-dc4c-4c68-ae14-d8c36724db84",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Khorana"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-FOUR",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "2,99$ / month"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Khorana's accurately designed elements set your product presentation ahead from the competition."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "670f4cfd-5361-4142-afba-85bf1e065c08",
+                              "cells": [
+                                {
+                                  "id": "06f91df1-2d9f-44e6-8ca4-ccc289a5bc35",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/button",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "text": "PREVIEW",
+                                      "url": "https://ory.github.io/sites-demos/khorana/dist/index.html"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "7985f767-6fb0-4f5f-baa4-9d4d08f0b7fa",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "8b3a0491-173a-4c24-8ff6-614112cee9e0",
+                              "cells": [
+                                {
+                                  "id": "df9c83c6-b191-479f-83e9-be79b6de8062",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/html5-video",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "url": "images/sites/callisto-preview.mp4"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "1cd9a604-7efb-4a1d-8d79-bafa46890dfa",
+                              "cells": [
+                                {
+                                  "id": "e3a3298e-202a-465b-89fd-5d22efb7cc79",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Callisto"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-FOUR",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "FREE"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "A fresh design for personal websites that puts you in the center. Navigation bar location is toggleable."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "74a1b680-42e0-484b-bd50-13e2fa0b6bc5",
+                              "cells": [
+                                {
+                                  "id": "fa6606f7-f7c7-4f92-94a3-b3f40befc9f1",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/button",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "text": "PREVIEW",
+                                      "url": "https://ory.github.io/sites-demos/callisto/dist/index.html"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "6314d836-45ba-46ba-9151-8cd1c716070d",
+              "cells": [
+                {
+                  "id": "b56f4868-03a5-4d73-944a-15ebf0aec445",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "71d035dc-6fbf-4d71-ae85-a84b5029d436",
+                      "cells": [
+                        {
+                          "id": "213cc7cc-efd7-4420-9bf9-19819e9848c9",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "POPULAR PLUGINS"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "a69640f3-adbc-4c80-9e4c-07d3368b1f1a",
+                      "cells": [
+                        {
+                          "id": "24c606da-2330-404a-8828-e2f7c8e25c56",
+                          "inline": null,
+                          "size": 6,
+                          "rows": [
+                            {
+                              "id": "1a4c533a-37d0-41d7-b17f-22053858676b",
+                              "cells": [
+                                {
+                                  "id": "1943ed0c-a4af-4954-ac40-ba1662ccbfde",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/plugin/content/gallery",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "settings": {
+                                        "items": [
+                                          {
+                                            "original": "images/sites/22.jpeg",
+                                            "thumbnail": "images/sites/22.jpeg"
+                                          },
+                                          {
+                                            "original": "images/sites/21.jpeg",
+                                            "thumbnail": "images/sites/21.jpeg"
+                                          },
+                                          {
+                                            "original": "images/sites/20.jpeg",
+                                            "thumbnail": "images/sites/20.jpeg"
+                                          },
+                                          {
+                                            "original": "images/sites/19.jpeg",
+                                            "thumbnail": "images/sites/19.jpeg"
+                                          },
+                                          {
+                                            "original": "images/sites/18.jpeg",
+                                            "thumbnail": "images/sites/18.jpeg"
+                                          },
+                                          {
+                                            "original": "images/sites/17.jpeg",
+                                            "thumbnail": "images/sites/17.jpeg"
+                                          },
+                                          {
+                                            "original": "images/sites/16.jpeg",
+                                            "thumbnail": "images/sites/16.jpeg"
+                                          }
+                                        ],
+                                        "thumbnailPosition": "bottom",
+                                        "slideInterval": 3000,
+                                        "showPlayButton": true,
+                                        "itemsString": "images/sites/22.jpeg|images/sites/21.jpeg|images/sites/20.jpeg|images/sites/19.jpeg|images/sites/18.jpeg|images/sites/17.jpeg|images/sites/16.jpeg",
+                                        "showThumbnails": true,
+                                        "showNav": true,
+                                        "autoPlay": true
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "371a9cd4-a597-4df5-8a6c-a9f0ac0a7bf8",
+                              "cells": [
+                                {
+                                  "id": "d21cb126-d12b-4be7-ab1f-71c3a0b227f4",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Image Gallery (3,99$)"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Share stunning photography using this configurable image gallery."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "ef136dd1-cef9-46ec-981e-8cfefb18a461",
+                          "inline": null,
+                          "size": 6,
+                          "rows": [
+                            {
+                              "id": "216b7874-af8f-4bbd-a2df-ebd43ab04190",
+                              "cells": [
+                                {
+                                  "id": "3b1402f8-0935-4033-9422-181117f9e9bb",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/soundcloud",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "url": "https://soundcloud.com/flume/disclosure-you-me-flume-remix"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "e7f7a1f2-9608-41a9-bfde-cb0f131eae4f",
+                              "cells": [
+                                {
+                                  "id": "3bc7d91e-93fe-4be9-9e37-ad64b6cbb645",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "SoundCloud (free)"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Share music from the internet's largest music archive SoundCloud with a few clicks."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "1da3d517-09fe-453d-89f7-2fc86c3398c9",
+                              "cells": [
+                                {
+                                  "id": "f52c9558-9414-4dc4-a9b5-7d165c1edcf5",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/divider",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {}
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "e16c3510-094f-4514-af38-1501dae26995",
+                              "cells": [
+                                {
+                                  "id": "0bf58c25-1cd8-4841-b5de-c0ec8970c197",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/video",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "src": "https://vimeo.com/22439234"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "f804291e-4085-4df4-9ef1-c7aa692b15f1",
+                              "cells": [
+                                {
+                                  "id": "af4eefc6-d018-4f99-ac03-ce3b0c44bcbd",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "YouTube & Vimeo (free)"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Share content from the world's largest video hosting platforms, YouTube and Vimeo. "
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "538e1aba-c806-4f3a-835b-7e9cb1b47cf7",
+              "cells": [
+                {
+                  "id": "25a947c4-ed91-4a03-811b-64ea944aa894",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "dark"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "e907b955-fbe5-4d79-95a9-bad1a2957b51",
+                      "cells": [
+                        {
+                          "id": "e07f01d4-36ac-4395-b68e-1c2942097634",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        },
+                        {
+                          "id": "36917f4b-d0fa-4d10-bf5d-5243438d535f",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "... or create and sell your own designs and plugins. "
+                                      },
+                                      {
+                                        "kind": "inline",
+                                        "type": "LINK/LINK",
+                                        "nodes": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Contact us now"
+                                          }
+                                        ],
+                                        "data": {
+                                          "href": "https://arekkas.typeform.com/to/zMZgQX"
+                                        }
+                                      },
+                                      {
+                                        "kind": "text",
+                                        "text": " for details!"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "0b9e56f3-f37e-452f-80ae-192c5c0b5da9",
+                          "inline": null,
+                          "size": 2,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "bb90def5-06c0-4213-947d-d4bea3c24e36",
+              "cells": [
+                {
+                  "id": "19623384-d8ff-41d4-9556-b69f19a6942b",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "1df8b300-6ec3-4aa6-a6dd-7312aa533420",
+                      "cells": [
+                        {
+                          "id": "f0b09133-73b3-4de0-bb4e-08e02e551fab",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "FEATURES"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "5af9a68f-1703-4bf6-a515-bdb09c1682ca",
+                      "cells": [
+                        {
+                          "id": "4b9defa5-3c21-4a1f-a92a-36da5f029c04",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "2b95f7a5-ebb7-4b76-aa48-ff4f637797e8",
+                              "cells": [
+                                {
+                                  "id": "8543cd35-5c4d-4abe-b6a8-2194a08613a5",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/html",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "html": "<iframe src=\"animations/editing.html\" frameborder=\"0\" scrolling=\"no\" onload=\"resizeIframe(this)\" style=\"width: 80%; display: block; margin: 0 auto;\"></iframe>"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "aeb8db35-abba-42e4-abbd-fd3cd6d8a652",
+                              "cells": [
+                                {
+                                  "id": "834d2c27-680e-4798-8ba8-0f8383088122",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Fluid editing experience\r\r"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Add, edit, and rearrange content on your website and see the results in real time."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "4e165f0e-2487-4f85-96e3-248afe9b8cec",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "4f34d789-6207-45fd-a3ec-feed3c697d54",
+                              "cells": [
+                                {
+                                  "id": "7887ebb6-e045-4d72-b954-e3a9cd720b10",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/html",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "html": "<iframe src=\"animations/responsive.html\" frameborder=\"0\" scrolling=\"no\" onload=\"resizeIframe(this)\" style=\"width: 80%; display: block; margin: 0 auto;\"></iframe>"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "e2234a6a-8b41-446e-a93c-176aa0209045",
+                              "cells": [
+                                {
+                                  "id": "52c4da3d-fa96-425e-97a7-701633a111fc",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Natively responsive\r"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Your website looks the way it should on every device - all content you add is automatically responsive."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "5d6f3dc8-7160-42e3-9024-3868f99def46",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "d3a87675-2542-4e9b-b87d-02e414067139",
+                              "cells": [
+                                {
+                                  "id": "32e42d1c-f829-4615-94ca-389ba376c5f6",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/html",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "html": "<iframe src=\"animations/design.html\" frameborder=\"0\" scrolling=\"no\" onload=\"resizeIframe(this)\" style=\"width: 80%; display: block; margin: 0 auto;\"></iframe>"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "1c3572fd-9117-41aa-9930-868e9db0e836",
+                              "cells": [
+                                {
+                                  "id": "f94601ae-9328-448c-9a93-b67f3db4617b",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Compatible designs\r"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Switch between designs as you work on your website - don't worry, your content stays where it belongs."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "7b53a673-2d4f-4fc8-99e1-252173f9cf84",
+                      "cells": [
+                        {
+                          "id": "76c9e30d-d5e9-4e74-b01a-6e174729d38c",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "25be7c6b-618c-461d-beee-7bca8bb29576",
+                      "cells": [
+                        {
+                          "id": "36ee3f3a-7c8b-42c5-9806-2e44b3e957e2",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/divider",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "3b97eee8-8b61-495b-a276-8ea10863e46c",
+                      "cells": [
+                        {
+                          "id": "6abe9296-28a9-4d21-9a1c-7135a1e6dd51",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "978214f2-f7d6-473f-8769-ad1711674a2a",
+                      "cells": [
+                        {
+                          "id": "384092d8-5ac0-4f6b-9951-cb7db652bb10",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "6464b997-fe82-4966-9a16-d873c2fd96c3",
+                              "cells": [
+                                {
+                                  "id": "861573cc-2c7a-468d-9d1d-c87757719337",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "icon": "security",
+                                      "size": "64px"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "abe74303-e081-4f18-b23b-b7697cef80d6",
+                              "cells": [
+                                {
+                                  "id": "19c89b2d-0cd9-4d23-bc32-4de1fb42b604",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Not Hackable\r\r"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Static websites can not be hacked by user input, as no database or application server is required."
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "d592cb1c-bccd-4c2f-a6bb-b0d3d8e92887",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "0d2df2fc-b1f3-4b60-95a5-42d617f7a110",
+                              "cells": [
+                                {
+                                  "id": "d4a680b4-cfbf-45aa-9051-aa3310ecbaed",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "icon": "storage",
+                                      "size": "64px"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "9a34dd50-da1f-4660-8417-dc99c925ccc1",
+                              "cells": [
+                                {
+                                  "id": "f5ea2cc6-1c41-4997-9177-62d41bc4684f",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Independent Hosting\r\r"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Host your site wherever you want - GitHub Pages, AWS S3, Google Cloud Storage, Netlify, and others!"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "id": "e0631a13-c4f9-4073-a493-348e4278ba0c",
+                          "inline": null,
+                          "size": 4,
+                          "rows": [
+                            {
+                              "id": "4df65feb-5d6b-4663-adf3-5152981efad8",
+                              "cells": [
+                                {
+                                  "id": "53dd0c51-b9a2-43aa-bb62-139c7e655e92",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/icon",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "icon": "remove_red_eye",
+                                      "size": "64px"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "af2074cb-2cc3-4d7f-8bda-bee5d86cdec0",
+                              "cells": [
+                                {
+                                  "id": "a81f568e-1c8b-4afc-a860-2b48dd652ba3",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "HEADINGS/HEADING-THREE",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Smart SEO\r\r"
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "center"
+                                            }
+                                          },
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "Rank on top of Search Engine Result Pages with smart, automated Search Engine Optimization."
+                                              }
+                                            ],
+                                            "data": {
+                                              "align": "left"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "651b5188-c8c8-48a4-bffc-b584f02109b9",
+              "cells": [
+                {
+                  "id": "4b367d93-dec8-4fbe-8a9a-100bfb038ebf",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "white"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "a57cef84-d0fd-42e2-898e-c4bda5b78119",
+                      "cells": [
+                        {
+                          "id": "a5a31646-74ff-4050-9a28-aa0d87ba5679",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "FOR DEVELOPERS"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "0d764b96-d2b8-4b0a-ba02-90fb1b336631",
+                      "cells": [
+                        {
+                          "id": "b634952c-5b8d-40c6-8b76-2c9d7bf21106",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "08377d4d-b01f-498f-a85f-39cdd5dbc9d9",
+                      "cells": [
+                        {
+                          "id": "82f31a1e-014e-4751-8623-4597a863534d",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Sane output"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "It is important that HTML source code is sane and readable. It will improve SEO and browser compatiblity."
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Forget horrific WYSIWYG output, we use a sophisticated JSON document to save and transform content."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "9baebbf2-d971-4d15-bca9-8492532f6699",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "<div class=\"ory-row ory-cell-inner\">\n  <div div class=\"ory-cell ory-cell-sm-12 ory-cell-xs-12\">\n    <div class=\"ory-cell-inner ory-cell-leaf\">\n      <h2>Lorem ipsum dolor</h2>\n      <p>Excepteur sint occaecat cupidatat<a\n        href=\"https://www.ory.am/sites\">ORY\r Sites</a> non proident.\n      </p>\n    </div>\n  </div>\n</div>"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "4ac2f7df-0ba9-4e22-b534-5b550c77b3d1",
+                      "cells": [
+                        {
+                          "id": "c9984cc8-101c-4906-b4da-d570fe67d18c",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Friendly API"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Extend ORY Sites and create plugins and designs using ReactJS. Benefit from the enormous ReactJS Component ecosystem and include any ReactJS component in your website."
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "081427d7-5177-4899-8f5f-6816c795f783",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "const Component = () => (\n  <div>My first plugin</div>\n)\n\nexport default {\n  Component,\n  name: 'example/content/my-first-plugin',\n  version: '0.0.1',\n  title: 'My first plugin'\n}"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "59a96a01-cc06-4b82-8fa9-ea464c9e7d95",
+                      "cells": [
+                        {
+                          "id": "1912cf62-dbd9-42f7-a6e1-6c8d27b1678a",
+                          "inline": null,
+                          "size": 4,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-THREE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Hackable"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "kind": "block",
+                                    "type": "PARAGRAPH/PARAGRAPH",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "Quickly fix css bugs, add a jQuery animation, or add analytics to your site. Just modify the HTML skeleton!"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "id": "3ff5f4d2-c159-49cc-970f-f2ff3575724a",
+                          "inline": null,
+                          "size": 8,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "CODE/CODE",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "<html>\n<body data-page=\"{{page.id}}\">\n  <div id=\"root\">{{{content}}}</div>\n  {{{extra.body}}}\n\n  <style>.myClass { color: red; }</style>\n  <script>alert('hello world');</script>\n\n</body>\n</html>"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "708d259d-7dd3-49ca-aaf9-1a0161ba9530",
+                      "cells": [
+                        {
+                          "id": "596e02c1-a445-4199-b664-ab2f98c350a0",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/spacer",
+                              "version": "0.0.1"
+                            },
+                            "state": {}
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "206dd8e3-887e-4eac-8248-dbecd13cf786",
+              "cells": [
+                {
+                  "id": "d3b1690f-ffc6-4ed9-a400-5205522613a8",
+                  "inline": null,
+                  "size": 12,
+                  "layout": {
+                    "plugin": {
+                      "name": "ory/sites/plugin/layout/section",
+                      "version": "0.0.1"
+                    },
+                    "state": {
+                      "flavor": "grey",
+                      "anchorName": "legacy"
+                    }
+                  },
+                  "rows": [
+                    {
+                      "id": "d12a5397-e7d7-4463-9453-1999a9d842b6",
+                      "cells": [
+                        {
+                          "id": "ed770097-53dd-4000-b4b0-d36170823676",
+                          "inline": null,
+                          "size": 12,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/editor/core/content/slate",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "serialized": {
+                                "nodes": [
+                                  {
+                                    "kind": "block",
+                                    "type": "HEADINGS/HEADING-TWO",
+                                    "nodes": [
+                                      {
+                                        "kind": "text",
+                                        "text": "LEGACY APP: ORY Sites for Desktop"
+                                      }
+                                    ],
+                                    "data": {
+                                      "align": "center"
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "a46accee-fb1b-4b32-bc99-2f52e8d78347",
+                      "cells": [
+                        {
+                          "id": "946af780-39ef-45f3-b6be-ac71a7feec7d",
+                          "inline": null,
+                          "size": 6,
+                          "content": {
+                            "plugin": {
+                              "name": "ory/sites/plugin/content/html5-video",
+                              "version": "0.0.1"
+                            },
+                            "state": {
+                              "url": "images/sites/app-preview.mp4"
+                            }
+                          }
+                        },
+                        {
+                          "id": "8a87b9fa-fbcc-458e-a07b-ec37985cea94",
+                          "inline": null,
+                          "size": 6,
+                          "rows": [
+                            {
+                              "id": "90ef2e99-f13e-4dbc-a302-e825e4e4f6d1",
+                              "cells": [
+                                {
+                                  "id": "5d7c5e59-3493-487b-aec8-cc8ecff21b96",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "text": "ORY Sites' first version is built using Electron. While it is fully functional, we will strip electron and make it compatible to vanilla NodeJS. Interested in checking this version out, see what's to come, and give feedback?"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "78de3b58-4a37-4146-a53d-ac30939fde0d",
+                              "cells": [
+                                {
+                                  "id": "658082f1-8378-4143-9428-2c82647868a2",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/sites/plugin/content/button",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "text": "DOWNLOAD APP",
+                                      "url": "https://cloud.ory.am/downloads/sites/desktop/latest"
+                                    }
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "a4af5084-2819-4694-be32-5ea5107747c1",
+                              "cells": [
+                                {
+                                  "id": "e98a970d-cc26-4fbb-8df1-4972f4e8a2f7",
+                                  "inline": null,
+                                  "size": 12,
+                                  "content": {
+                                    "plugin": {
+                                      "name": "ory/editor/core/content/slate",
+                                      "version": "0.0.1"
+                                    },
+                                    "state": {
+                                      "serialized": {
+                                        "nodes": [
+                                          {
+                                            "kind": "block",
+                                            "type": "PARAGRAPH/PARAGRAPH",
+                                            "nodes": [
+                                              {
+                                                "kind": "text",
+                                                "ranges": [
+                                                  {
+                                                    "text": "Please be aware that this app is in a very early stage, will contain bugs, and does not represent the final user experience of ORY Sites.",
+                                                    "marks": [
+                                                      {
+                                                        "type": "EMPHASIZE/EM",
+                                                        "data": {}
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

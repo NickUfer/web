@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url> <loc>https://www.ory.sh/docs/guides/./</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/0-tutorial/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/1-environment/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/2-overview/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/2-overview/1-oauth2.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/2-overview/2-jwk.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/2-overview/3-access-control.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/3-install/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/4-security/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/5-telemetry/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/6-how-to/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/6-how-to/1-production.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/7-sdk/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/7-sdk/1-go.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/7-sdk/2-js.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/7-sdk/3-php.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/1-hydra/8-faq/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/1-Quickstart/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/1-Quickstart/1-INSTALLATION.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/1-Quickstart/2-EXECUTION.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/2-Concepts/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/2-Concepts/1-TERMINOLOGY.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/2-Concepts/2-RULES.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/3-Deyploment/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+<url> <loc>https://www.ory.sh/docs/guides/2-oathkeeper/4-Security/0-README.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> </url>
+</urlset>

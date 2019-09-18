@@ -1,0 +1,103 @@
+@import '../../css/vars.css';
+
+.benz {
+  .benz-header {
+    font-family: 'Montserrat', sans-serif;
+
+    .menu-sticky-top {
+      max-width: var(--main-max-width);
+      margin: 0 auto;
+
+      .menu-sticky-top-nav:not(.is-expanded) {
+        .menu-sticky-top-nav-items-container {
+          width: 100%;
+
+          .menu-sticky-top-nav-responsive-toggle {
+            float: right;
+          }
+
+          ul {
+            float: none;
+          }
+
+          .menu-sticky-top-brand {
+            float: none;
+          }
+        }
+
+        .menu-sticky-top-nav-inner {
+          display: flex;
+          flex-direction: row-reverse;
+        }
+      }
+
+      .menu-sticky-top-nav {
+        text-transform: uppercase;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .25);
+        z-index: 10;
+        background: var(--header-background-color);
+        position: relative;
+
+        .menu-sticky-top-nav-inner {
+          .menu-sticky-top-nav-items-container {
+
+            ul {
+              list-style-type: none;
+            }
+
+            ul li {
+              padding: 1em 0.5em;
+
+              a {
+                font-weight: 300;
+                font-size: 0.875em;
+                line-height: 1.2em;
+                color: var(--text-color);
+                text-decoration: none;
+                text-transform: uppercase;
+              }
+
+              &:last-child {
+                float: right;
+                background-color: var(--link-text-color);
+                padding: .7em 1em;
+                border-radius: 2px;
+                line-height: 1em;
+                margin: .5em 1em;
+
+                a {
+                  font-size: .875em;
+                  font-weight: 400;
+                  color: white;
+                }
+              }
+            }
+
+            ul li ul {
+              /* hide items on level 2 */
+              display: none;
+            }
+          }
+
+          .menu-sticky-top-brand {
+            padding: 1em 1.5em;
+
+            a {
+              white-space: nowrap;
+              font-size: 1.25em;
+              line-height: 1.2em;
+              color: var(--link-text-color);
+              text-transform: uppercase;
+              text-decoration: none;
+
+              strong {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

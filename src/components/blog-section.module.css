@@ -1,31 +1,155 @@
-@import "../styles/properties.css";
+@import '../styles/properties.css';
 
 .section {
-    padding: 96px 0;
+  padding: 64px 0;
 
-    background-color: var(--ory-brand-primary-light-05);
+  background-color: var(--colors-ui-white);
 
-    & h2, & h3, & h4, & h5, & h6, & li, & p {
-        color: var(--ory-brand-dark-primary);
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & li,
+  & code,
+  & dl,
+  & dd,
+  & dt,
+  & p {
+    margin-top: 0;
+    color: var(--colors-ui-dark-primary);
+  }
+
+  & p,
+  & li {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 168%;
+    margin-top: 0;
+
+    & strong {
+      font-weight: 500;
+    }
+  }
+
+  & pre {
+    margin-bottom: 32px !important;
+  }
+
+  & p,
+  & ul,
+  & ol {
+    margin-bottom: 32px;
+  }
+
+  & h2,
+  & h3,
+  & h4,
+  & h5,
+  & h6,
+  & li {
+    margin-bottom: 16px;
+  }
+
+  & h2 {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 126%;
+  }
+
+  & h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 168%;
+  }
+
+  & h4 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 168%;
+  }
+
+  & h5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 168%;
+  }
+
+  & h6 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 168%;
+  }
+
+  & p a {
+    transition: all ease 200ms;
+  }
+
+  & a:any-link {
+    color: var(--colors-brand-primary);
+  }
+
+  & p a:hover,
+  & p a:active {
+    color: var(--colors-ui-dark-primary);
+    text-decoration: underline;
+  }
+
+  & img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  & :not(pre) > code[class*='language-'] {
+    padding: 0 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 168%;
+    color: var(--colors-ui-primary-dark-70);
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  & p + p {
+    margin-top: -16px;
+  }
+
+  & blockquote p {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 168%;
+    padding-left: 34px;
+    margin-bottom: 32px;
+    border-left: 2px solid var(--colors-brand-primary);
+  }
+
+  & figure {
+    padding-top: 16px;
+    & img {
+      margin-bottom: 16px;
     }
 
-    & p + h3 {
-        margin-top: 32px;
+    & figcaption {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 168%;
+      margin-bottom: 32px;
     }
-
-    & p a:hover, & p a:active {
-        color: var(--ory-brand-dark-primary);
-    }
+  }
 }
 
 @media (--sm-viewport) {
-    .section {
-        padding: 64px 0;
-    }
+  .section {
+    padding: 64px 0;
+  }
 }
 
 @media (--md-viewport) {
-    .section {
-        padding: 64px 0;
-    }
+  .section {
+    padding: 64px 0;
+  }
 }

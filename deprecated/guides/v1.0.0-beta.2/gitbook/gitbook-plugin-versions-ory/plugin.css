@@ -1,0 +1,16 @@
+.versions-select {
+  width: 100%;
+  display: table;
+  height: 50px;
+  padding: 0px 12px;
+}
+
+.versions-select > div {
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.versions-select select {
+  width: 100%;
+}

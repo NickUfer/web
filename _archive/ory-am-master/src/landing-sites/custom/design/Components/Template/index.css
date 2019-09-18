@@ -1,0 +1,45 @@
+@import '../../css/vars.css';
+
+body {
+  background-color: var(--background-color) !important;
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+}
+
+.benz {
+  .editable-area {
+    font-family: 'Montserrat', sans-serif;
+
+    p, li, blockquote {
+      color: var(--text-color);
+      margin: 0 0 10px 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--text-color);
+    }
+
+    h1 {
+      font-size: 2.25em;
+      line-height: 1.2em;
+      font-weight: 300;
+      margin: 0 0 20px 0;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      line-height: 1.2em;
+      font-weight: 400;
+      margin: 0 0 10px 0;
+    }
+
+    h3 {
+      font-size: 1em;
+      line-height: 1.2em;
+      font-weight: 400;
+      margin: 10px 0;
+    }
+  }
+}
