@@ -1,5 +1,5 @@
 ---
-path: '/run-oauth2-server-open-source-api-security'
+path: '/run-oauth2-server-open-source-api-security/'
 title: >
   Run your own OAuth 2.0 Server
 

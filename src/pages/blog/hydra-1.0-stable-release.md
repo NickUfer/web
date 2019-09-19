@@ -1,5 +1,5 @@
 ---
-path: '/hydra-1.0-stable-release'
+path: '/hydra-1.0-stable-release/'
 title: 'ORY Hydra v1.0 is here!'
 metaTitle: 'ORY Hydra v1.0 is here!'
 publishedAt: '2019-06-01'

@@ -1,5 +1,5 @@
 ---
-path: '/tos'
+path: '/tos/'
 lastUpdatedAt: 'Aug 12th, 2019'
 title: 'Terms and Conditions'
 metaTitle: 'ORY Terms and Conditions'

@@ -1,5 +1,5 @@
 ---
-path: '/imprint'
+path: '/imprint/'
 title: 'Imprint'
 metaTitle: 'ORY Imprint'
 metaDescription: 'Read the ORY imprint.'

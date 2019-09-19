@@ -1,5 +1,5 @@
 ---
-path: '/oauth2-for-mobile-app-spa-browser'
+path: '/oauth2-for-mobile-app-spa-browser/'
 title: >
   Securely set up OAuth2 for Mobile Apps, Browser Apps, and Single Page Apps
 

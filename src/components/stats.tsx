@@ -205,8 +205,6 @@ class Stats extends Component<PropTypes, StateTypes> {
         }
       })
 
-      console.log(max, requests)
-
       this.setState(() => {
         return {
           requests: {

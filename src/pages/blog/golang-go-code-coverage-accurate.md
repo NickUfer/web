@@ -1,5 +1,5 @@
 ---
-path: '/golang-go-code-coverage-accurate'
+path: '/golang-go-code-coverage-accurate/'
 title: >
   Accurate code coverage in Go
 publishedAt: '2018-02-20'

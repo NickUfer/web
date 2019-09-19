@@ -1,5 +1,5 @@
 ---
-path: '/privacy'
+path: '/privacy/'
 title: 'ORY Privacy Policy'
 metaTitle: 'ORY Privacy Policy'
 metaDescription: 'Read the ORY Privacy Policy.'
