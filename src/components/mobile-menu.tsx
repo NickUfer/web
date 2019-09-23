@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import cn from 'classnames'
 import { Menu, IconMenu } from './header'
 import styles from './mobile-menu.module.css'
+import { Link } from 'gatsby'
 
 interface PropTypes {
   menu: Menu
@@ -40,9 +41,10 @@ class MobileMenu extends Component<PropTypes, StateTypes> {
               <div className={styles.navContainer}>
                 <div className={styles.divider} />
                 <ul>
-                  {menu.map(({ title, href }, index) => (
-                    <li key={`menu-${index}`}>
-                      <a href={href}>{title}</a>
+                  {menu.map(({ href, title, className = '', path }, index) => (
+                    <li key={`menu-${index}`} className={className}>
+                      {path && <Link to={path}>{title}</Link>}
+                      {href && <a href={href}>{title}</a>}
                     </li>
                   ))}
                   {icons.map(({ title, image, href }, index) => (

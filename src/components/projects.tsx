@@ -48,7 +48,7 @@ const Projects = () => (
             All of our code is open source, fueled by an engaged community of
             contributors. It is licensed under Apache 2.0 and is available for
             free on GitHub. Our core projects are {brandPrefix}Hydra,{' '}
-            {brandPrefix}Oathkeeper and
+            {brandPrefix}Oathkeeper and{' '}
             {brandPrefix}Keto.
           </p>
           <p>
