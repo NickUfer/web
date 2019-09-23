@@ -30,6 +30,7 @@
 <url> <loc>https://www.ory.sh/docs/next/hydra/sdk/go</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/next/hydra/sdk/go" /> </url>
 <url> <loc>https://www.ory.sh/docs/next/hydra/sdk/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/next/hydra/sdk/" /> </url>
 <url> <loc>https://www.ory.sh/docs/next/hydra/sdk/js</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/next/hydra/sdk/js" /> </url>
+<url> <loc>https://www.ory.sh/docs/next/hydra/sdk/php</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/next/hydra/sdk/php" /> </url>
 <url> <loc>https://www.ory.sh/docs/next/hydra/security-architecture</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/next/hydra/security-architecture" /> </url>
 <url> <loc>https://www.ory.sh/docs/next/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/next/" /> </url>
 <url> <loc>https://www.ory.sh/docs/next/keto/configuration</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/next/keto/configuration" /> </url>
@@ -96,6 +97,7 @@
 <url> <loc>https://www.ory.sh/docs/ecosystem/cloud-native</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/ecosystem/cloud-native" /> </url>
 <url> <loc>https://www.ory.sh/docs/ecosystem/kubernetes</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/ecosystem/kubernetes" /> </url>
 <url> <loc>https://www.ory.sh/docs/hydra/sdk/js</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/hydra/sdk/js" /> </url>
+<url> <loc>https://www.ory.sh/docs/hydra/sdk/php</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/hydra/sdk/php" /> </url>
 <url> <loc>https://www.ory.sh/docs/oathkeeper/configuration</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/oathkeeper/configuration" /> </url>
 <url> <loc>https://www.ory.sh/docs/oathkeeper/</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/oathkeeper/" /> </url>
 <url> <loc>https://www.ory.sh/docs/oathkeeper/pipeline/authn</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://www.ory.sh/docs/oathkeeper/pipeline/authn" /> </url>
