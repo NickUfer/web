@@ -148,8 +148,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_ALLOWED_ORIGINS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      allowed_origins:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">'*'</span>
+<span class="hljs-attr">      allowed_origins:</span> <span class="hljs-attr">https://example.com</span>
 
       <span class="hljs-comment">## Allowed HTTP Methods ##</span>
       <span class="hljs-comment">#</span>
@@ -321,7 +320,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_READ=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      read:</span> <span class="hljs-number">5</span><span class="hljs-string">s</span>
+<span class="hljs-attr">      read:</span> <span class="hljs-number">5</span><span class="hljs-string">m</span>
 
       <span class="hljs-comment">## HTTP Write Timeout ##</span>
       <span class="hljs-comment">#</span>
@@ -340,7 +339,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_WRITE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      write:</span> <span class="hljs-number">5</span><span class="hljs-string">h</span>
+<span class="hljs-attr">      write:</span> <span class="hljs-number">5</span><span class="hljs-string">s</span>
 
       <span class="hljs-comment">## HTTP Idle Timeout ##</span>
       <span class="hljs-comment">#</span>
@@ -397,7 +396,8 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_CORS_ALLOWED_ORIGINS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      allowed_origins:</span> <span class="hljs-attr">https://example.com</span>
+<span class="hljs-attr">      allowed_origins:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">'*'</span>
 
       <span class="hljs-comment">## Allowed HTTP Methods ##</span>
       <span class="hljs-comment">#</span>
@@ -706,7 +706,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_COOKIE_SESSION_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## JSON Web Token (jwt) ##</span>
   <span class="hljs-comment">#</span>
@@ -721,7 +721,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## OAuth 2.0 Client Credentials ##</span>
   <span class="hljs-comment">#</span>
@@ -941,7 +941,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_COOKIE_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## HTTP Header ##</span>
   <span class="hljs-comment">#</span>
@@ -971,7 +971,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## ID Token (JSON Web Token) ##</span>
   <span class="hljs-comment">#</span>
@@ -986,7 +986,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_ID_TOKEN_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
 <span class="hljs-comment">## Log ##</span>
 <span class="hljs-comment">#</span>
