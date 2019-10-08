@@ -43,9 +43,15 @@ looking to do something like in the gif on the right, or more specifically:
 We will use [ORY Hydra](https://github.com/ory/hydra) (open source), a
 security-first OAuth2 and OpenID Connect server written in Golang.
 
+
+
 <p>
 <figure>
-  <img src="/images/articles/oauth2/oauth2-flow.gif" alt="GitHub OAuth 2.0 visual flow" />
+  <video autoplay muted loop>
+     <source src="/images/articles/oauth2/oauth2-flow.mp4" type="video/mp4">
+     <source src="/images/articles/oauth2/oauth2-flow.webm" type="video/webm">
+     <img src="/images/articles/oauth2/oauth2-flow.gif" alt="GitHub OAuth 2.0 visual flow" />
+  </video>
   <figcaption>
     What OAuth 2.0 looks like in the wild: CircleCI performs
     API calls to GitHub on your behalf.

@@ -6,3 +6,7 @@ html {
 img.responsive {
   width: 100%;
 }
+
+video {
+  max-width: 100%;
+}

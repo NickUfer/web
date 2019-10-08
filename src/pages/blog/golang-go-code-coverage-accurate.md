@@ -169,7 +169,11 @@ $ go test -covermode=atomic \
 cannot use test profile flag with multiple packages
 ```
 
-![Tabelflip](/images/articles/code-coverage/tableflip.gif)
+<video autoplay muted loop>
+  <source src="/images/articles/code-coverage/tableflip.mp4" type="video/mp4">
+  <source src="/images/articles/code-coverage/tableflip.webm" type="video/webm">
+  <img src="/images/articles/code-coverage/tableflip.gif" alt="Tabelflip" />
+</video>
 
 Using the flag `-coverprofile`, `go test` is unable to merge code coverage from
 multiple packages into one report. Thus, what needs to be done is loop through
