@@ -13,6 +13,9 @@
   }
 
   & p {
+    word-break: break-all;
+    hyphens: auto;
+    overflow-wrap: break-word;
     margin: 0;
     padding-left: 20px;
   }

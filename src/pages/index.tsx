@@ -86,7 +86,6 @@ const IndexPage = ({ data }: any) => {
               description={
                 <>
                   <a href="https://github.com/aeneasr">github.com/aeneasr</a>
-                  <a href="https://github.com/aeneasr">github.com/aeneasr</a>
                 </>
               }
               img={data.aeneas.childImageSharp.fixed}
