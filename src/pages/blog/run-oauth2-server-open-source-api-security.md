@@ -48,9 +48,9 @@ security-first OAuth2 and OpenID Connect server written in Golang.
 <p>
 <figure>
   <video autoplay muted loop>
-     <source src="/images/articles/oauth2/oauth2-flow.mp4" type="video/mp4">
-     <source src="/images/articles/oauth2/oauth2-flow.webm" type="video/webm">
-     <img src="/images/articles/oauth2/oauth2-flow.gif" alt="GitHub OAuth 2.0 visual flow" />
+     <source src="../../images/articles/oauth2/oauth2-flow.mp4" type="video/mp4">
+     <source src="../../images/articles/oauth2/oauth2-flow.webm" type="video/webm">
+     <img src="../../images/articles/oauth2/oauth2-flow.gif" alt="GitHub OAuth 2.0 visual flow" />
   </video>
   <figcaption>
     What OAuth 2.0 looks like in the wild: CircleCI performs
@@ -338,7 +338,7 @@ limitations at scale. ORY Hydra solves OAuth2 and OpenID Connect only, but it
 solves it well and extemely scalable.
 
 To authenticate users, ORY Hydra defines the
-[user login & consent flow](docs/guides/latest/hydra/3-overview/1-oauth2#authenticating-users-and-requesting-consent).
+[user login & consent flow](https://www.ory.sh/docs/hydra/oauth2).
 You can find an
 [exemplary user login and consent application on our GitHub](https://github.com/ory/hydra-login-consent-node).
 
@@ -430,7 +430,7 @@ will see a simple screen asking you to authorize the application. If you
 remember the CircleCI example from the beginning of the article, this would be
 the "Log In with GitHub" button.
 
-![Consent App showing the login screen](/images/articles/oauth2/consent-1.png)
+![Consent App showing the login screen](../../images/articles/oauth2/consent-1.png)
 
 After clicking "Authorize application" you will be asked to log in. The screen
 you are seeing is provided by the exemplary User Login & Consent app
@@ -440,14 +440,14 @@ noted, the exemplary application has just one user. In a real-world scenario,
 you could probably sign up for a new account or use a social login provider
 (e.g. Google, Facebook) to sign in.
 
-![Consent App showing the login screen](/images/articles/oauth2/consent-2.png)
+![Consent App showing the login screen](../../images/articles/oauth2/consent-2.png)
 
 The consent screen is the second important screen shown by the User Login &
 Consent app. It asks the end user which permissions to authorize. If a user has
 privacy concerns, he/she could not grant access to personal details. Since our
 example only requests very basic permissions, you should grant them all.
 
-![Consent App asking the user to grant the requested scopes to the application](/images/articles/oauth2/consent-3.png)
+![Consent App asking the user to grant the requested scopes to the application](../../images/articles/oauth2/consent-3.png)
 
 Once logged in and authorized, ORY Hydra will issue an access, a refresh (if
 scope `offline` was granted), and an ID token (if scope `openid` was granted).

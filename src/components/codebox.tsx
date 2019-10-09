@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import Prism from 'prismjs'
 import cn from 'classnames'
 
-import 'prismjs/themes/prism.css'
 import * as styles from './codebox.module.css'
 
 interface Tab {

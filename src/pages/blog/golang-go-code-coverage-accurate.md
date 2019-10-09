@@ -24,7 +24,6 @@ teaser: >
 
 category: Code & Productivity
 ---
-
 [Go](https://golang.org/), the programming language written and maintained by
 [Google](https://www.google.com), shines with it's toolchain. However, some of
 the tools behave differently than expected and it may cost you several hours of
@@ -55,7 +54,7 @@ While writing integration tests for one of our
 [open source](https://github.com/ory/) Go projects, I noticed that code coverage
 did not increase despite writing a lot of them.
 
-![A code coverage report](/images/articles/code-coverage/report.png)
+![A code coverage report](../../images/articles/code-coverage/report.png)
 
 The reason for this was that `go test -cover` is per default only recording code
 coverage for the package that is currently tested, not for all the packages from
@@ -170,9 +169,9 @@ cannot use test profile flag with multiple packages
 ```
 
 <video autoplay muted loop>
-  <source src="/images/articles/code-coverage/tableflip.mp4" type="video/mp4">
-  <source src="/images/articles/code-coverage/tableflip.webm" type="video/webm">
-  <img src="/images/articles/code-coverage/tableflip.gif" alt="Tabelflip" />
+  <source src="../../images/articles/code-coverage/tableflip.mp4" type="video/mp4">
+  <source src="../../images/articles/code-coverage/tableflip.webm" type="video/webm">
+  <img src="../../images/articles/code-coverage/tableflip.gif" alt="Tabelflip" />
 </video>
 
 Using the flag `-coverprofile`, `go test` is unable to merge code coverage from
@@ -208,6 +207,6 @@ ok      github.com/arekkas/accurate-test-coverage/pkg       0.081s  coverage:  3
 Running `go tool cover -html=coverage.txt` should open a browser and show that
 all code has been touched by the tests:
 
-![Golang code coverage report](/images/articles/code-coverage/result.png)
+![Golang code coverage report](../../images/articles/code-coverage/result.png)
 
 That's it - thank you for reading!

@@ -76,20 +76,47 @@ apps are so common, there’s even an article on
 [Lifehacker (“How to Spot Fake Apps in Apple's App Store and Google Play”)](https://lifehacker.com/how-to-spot-fake-apps-in-apples-app-store-and-google-pl-1821428717)
 on this topic.
 
-<p>
-    <img width="45%" alt="Legitimate Application without Browser Authorization" src="/images/articles/mobile-oauth2/login-app.png" align="left"/>
-    <img width="45%" alt="Legitimate Application without Browser Authorization" src="/images/articles/mobile-oauth2/login-app.png"/>
-</p>
+
+<table width="100%">
+    <tr>
+        <td width="50%">
+            <img alt="Legitimate Application without Browser Authorization" src="../../images/articles/mobile-oauth2/login-app.png"/>
+        </td>
+        <td width="50%">
+            <img alt="Legitimate Application without Browser Authorization" src="../../images/articles/mobile-oauth2/login-app.png"/>
+        </td>
+    </tr>
+    <tr align="center">
+        <td colspan="2">
+        <p>
+            Without a browser address bar, there is no way to distinguish between a legitimate and an illegimitate app.
+        </p>
+        </td>
+    </tr>
+</table>
 
 If a browser is involved, the user will see the URL and be able to validate the
 TLS certificate if in doubt. Let’s take a look at the two login screens again,
 but this time in a browser. You should be able to spot which one is the phishing
 site and which one isn’t.
 
-<p>
-    <img width="45%" alt="Legitimate Application without Browser Authorization" src="/images/articles/mobile-oauth2/login-app-legitimate.png" align="left"/>
-    <img width="45%" alt="Legitimate Application without Browser Authorization" src="/images/articles/mobile-oauth2/login-app-counterfeit.png"/>
-</p>
+<table width="100%">
+    <tr>
+        <td width="50%">
+            <img alt="Legitimate Application with Browser Authorization" src="../../images/articles/mobile-oauth2/login-app-legitimate.png"/>
+        </td>
+        <td width="50%">
+            <img alt="Illegitimate Application with Browser Authorization" src="../../images/articles/mobile-oauth2/login-app-counterfeit.png"/>
+        </td>
+    </tr>
+    <tr align="center">
+        <td colspan="2">
+            <p>
+                Without the browser address bar, you can easily spot the illegitimate app (right).
+            </p>
+        </td>
+    </tr>
+</table>
 
 It becomes apparent that you should train the user’s eye and opt for
 authentication & authorization through a trusted environment (the browser).
@@ -187,7 +214,7 @@ and registers a custom URI scheme that is also used by the legitimate
 application, it is possible for the attacker to intercept the authorize code and
 obtain its access token.
 
-![Stylized PKCE Flow](/images/articles/mobile-oauth2/pkce.png)
+![Stylized PKCE Flow](../../images/articles/mobile-oauth2/pkce.png)
 
 To mitigate this attack, the legitimate app generates a so-called code challenge
 and code verifier. The code verifier is derived from the code challenge. There

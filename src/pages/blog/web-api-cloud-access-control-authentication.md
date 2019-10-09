@@ -101,7 +101,7 @@ authenticated.
 
 <p>
 <figure>
-    <img src="/images/articles/auth-guide/image9.png" alt="User exchanges credentials for a long/short-living session cookie which contains information on the user (e.g. the user’s ID)."/>
+    <img src="../../images/articles/auth-guide/image9.png" alt="User exchanges credentials for a long/short-living session cookie which contains information on the user (e.g. the user’s ID)."/>
     <figcaption>
         User exchanges credentials for a long/short-living session
         cookie which contains information on the user (e.g. the
@@ -127,7 +127,7 @@ phases:
   optionally check if the user has permission to access the protected resource
   (authorization).
 
-![Browser authentication and authorization flow](/images/articles/auth-guide/image10.png)
+![Browser authentication and authorization flow](../../images/articles/auth-guide/image10.png)
 
 Let’s take a short look at some pseudo code (NodeJS for simplicity) that
 implements this behaviour at the resource endpoint (not the login endpoint):
@@ -177,7 +177,7 @@ data is not rendered server-side but instead provided in a machine-readable form
 through an API (e.g. REST, GraphQL). The API itself is protected either through
 the already established cookie mechanism or a substitute (tokens).
 
-![SPA authentication and authorization flow](/images/articles/auth-guide/image5.png)
+![SPA authentication and authorization flow](../../images/articles/auth-guide/image5.png)
 
 Cookie-based authorization is legitimate for SPAs and even encouraged for apps
 that run in the browser. Most browsers support cookie flags httpOnly and secure
@@ -218,7 +218,7 @@ different token types later in this series.
 Let’s revisit the same flow but this time with a smartphone as a client (not a
 browser) and a token instead of a cookie:
 
-![Smartphone authentication and authorization flow](/images/articles/auth-guide/image6.png)
+![Smartphone authentication and authorization flow](../../images/articles/auth-guide/image6.png)
 
 Looks pretty much the same, right? Well, it is. Instead of sending the cookie in
 the HTTP header ( `Cookie: ...` ), we are now sending the token in the HTTP
@@ -242,7 +242,7 @@ As your team or company grows, you eventually add more services and applications
 to your infrastructure. Sometimes people talk about microservices or
 service-oriented architecture when referring to this.
 
-![Distributed application authentication and authorization](/images/articles/auth-guide/image1.png)
+![Distributed application authentication and authorization](../../images/articles/auth-guide/image1.png)
 
 Let’s take a look at how access control works in such an environment. If we
 assume the infrastructure from before, each service would have its own
@@ -266,7 +266,7 @@ temporary credentials. This is usually called Single Sign-On (SSO).
 
 <p>
 <figure>
-    <img src="/images/articles/auth-guide/image8.png" alt="Simplified Single Sign-On" />
+    <img src="../../images/articles/auth-guide/image8.png" alt="Simplified Single Sign-On" />
     <figcaption>Simplified Single Sign-On</figcaption>
 </figure>
 </p>
@@ -288,7 +288,7 @@ issue tokens which are sent on every request by the client:
 
 <p>
 <figure>
-    <img src="/images/articles/auth-guide/image3.png" alt="A variety of clients accessing the service ecosystem"/>
+    <img src="../../images/articles/auth-guide/image3.png" alt="A variety of clients accessing the service ecosystem"/>
     <figcaption>
         A variety of clients accessing the service ecosystem.
     </figcaption>
@@ -315,7 +315,7 @@ Especially when sharing access to APIs with 3rd party developers, you need to
 make sure that users actually want their data exposed to these 3rd parties. This
 is what specifically OAuth 2.0 was made for:
 
-![Google OAuth 2.0 Consent Screen](/images/articles/auth-guide/image7.png)
+![Google OAuth 2.0 Consent Screen](../../images/articles/auth-guide/image7.png)
 
 We will leave it at that for now. OAuth 2.0 and OpenID Connect have steep
 learning curves, so we will be looking at those in detail in a later part of
