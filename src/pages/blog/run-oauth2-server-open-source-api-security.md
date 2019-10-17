@@ -21,7 +21,7 @@ subtitle: >
   source technology.
 
 teaser:
-  In this guide, you will set up a hardened, fully functional OAuth2 (OAuth2)
+  In this guide, you will set up a hardened, fully functional OAuth2
   Server and OpenID Connect provider using open source only. It will take you
   about ~10 minutes. We will use ORY Hydra (open source), a security-first
   OAuth2 and OpenID Connect server written in Golang.
@@ -33,7 +33,6 @@ looking to do something like in the gif on the right, or more specifically:
 
 - You want to use OAuth2 for API security.
 - You want to open up your API to third party developers like
-  [Dropbox](https://www.dropbox.com/developers), or
   [GitHub](https://developer.github.com/v3/).
 - You want to become an identity provider like
   [Google](https://developers.google.com/identity/) ,
@@ -51,7 +50,7 @@ is a piece of software that implements network protocol flows which allow a clie
 a user.
 
 In plain english: When using [CircleCI](https://circleci.com) (the OAuth2 Client, you perform an OAuth2 Flow to grant
-CircleCI access to your repositories on [GitHub](https://github.com) (the OAuth2 Server, this would be ORY Hydra).
+CircleCI access to your repositories on GitHub (the OAuth2 Server, this would be ORY Hydra).
 GitHub will ask you what repositories you want to grant access to and if it is ok to grant other data
 (access to your email address, profile picture, ...) CircleCI has requested:
 
@@ -74,7 +73,6 @@ can be found in written form:
 
 - [DigitalOcean: An Introduction to OAuth 2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 - [Aaron Parecki: OAuth2 Simplified](https://aaronparecki.com/2012/07/29/2/oauth2-simplified)
-- [Zapier: Chapter 5: Authentication, Part 2](https://zapier.com/learn/apis/chapter-5-authentication-part-2/)
 
 and in visual form in this video:
 
@@ -141,8 +139,8 @@ $ docker network create hydraguide
 This docker command starts postgres container `ory-hydra-example--postgres` and
 sets up a database called `hydra` with user `hydra` and password `secret`.
 
-By the way, some code listings use `\` at the end of the line.
-[Shells like bash concatenate these to one line.](https://superuser.com/questions/508507/linux-bash-script-single-command-but-multiple-lines)
+By the way, some code listings use `\` at the end of the line. Shells like bash
+concatenate these to one line.
 
 ```shell
 $ docker run --network hydraguide \
@@ -155,8 +153,8 @@ $ docker run --network hydraguide \
 
 By the way, don't deploy databases using docker in production. It will make your
 life miserable. Use a managed solution like
-[Amazon RDS](https://aws.amazon.com/de/rds/) or
-[Google Cloud SQL](https://cloud.google.com/sql/docs/). Even small instances
+Amazon RDS or
+Google Cloud SQL. Even small instances
 will be able to serve a lot of traffic, check out some of the
 [benchmarks](https://www.ory.sh/docs/guides/master/performance/1-hydra).
 
@@ -447,7 +445,7 @@ If your browser does not open automatically, navigate to:
 
 ### Login & Consent
 
-Open [http://127.0.0.1:9010/](http://127.0.0.1:9010/) in your browser and you
+Open `http://127.0.0.1:9010/` in your browser and you
 will see a simple screen asking you to authorize the application. If you
 remember the CircleCI example from the beginning of the article, this would be
 the "Log In with GitHub" button.
