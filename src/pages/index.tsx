@@ -17,7 +17,6 @@ import Profile from '../components/profile'
 import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }: any) => {
-  console.log(data)
   return (
     <Layout>
       <SEO

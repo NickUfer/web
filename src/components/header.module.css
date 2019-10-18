@@ -108,6 +108,7 @@
     padding: 0;
     display: inline-block;
     margin: 0 8px;
+    font-size: 14px;
 
     & a img {
       transition: filter ease 200ms;

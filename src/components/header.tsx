@@ -70,7 +70,8 @@ const Header = ({ menu = [], icons = [], appendix }: PropTypes) => (
                   {icons.map(({ href, title, image }, k) => (
                     <li key={k}>
                       <a href={href}>
-                        <img src={image} alt={title} />
+                        {title}
+                        {/*<img src={image} alt={title} />*/}
                       </a>
                     </li>
                   ))}
