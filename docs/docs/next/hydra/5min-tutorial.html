@@ -119,15 +119,17 @@ public endpoint, the latter its administrative endpoint. For more information
 head over to
 <a href="/docs/next/hydra/production">Exposing Administrative and Public API Endpoints</a>.</p>
 <p>Let's create the OAuth 2.0 Client:</p>
-<pre><code class="hljs"><span class="hljs-meta">$</span> <span class="hljs-string">docker-compose -f quickstart.yml exec hydra \
+<pre><code class="hljs">$ docker-compose -f quickstart.yml exec hydra \
     hydra clients create \
-    --endpoint http://127.0.0.1:4445/ \
-    --id my-client \
-    --secret secret \
-    -g client_credentials</span>
-
-<span class="hljs-attr">OAuth2</span> <span class="hljs-string">client my-client</span>
-<span class="hljs-attr">OAuth2</span> <span class="hljs-string">client secret: secret</span>
+    -<span class="ruby">-endpoint <span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/127.0.0.1:4445/</span> \
+</span>    -<span class="ruby">-id my-client \
+</span>    -<span class="ruby">-secret secret \
+</span>    -<span class="ruby">g client_credentials
+</span></code></pre>
+<p>If you get an error message about a config file not being found, you can ignore
+it for now:</p>
+<pre><code class="hljs">Config file <span class="hljs-keyword">not</span> found because <span class="hljs-string">"Config File "</span>.hydra<span class="hljs-string">" Not Found in "</span>[/]<span class="hljs-string">""</span>
+OAuth2<span class="hljs-built_in"> client </span>my-client
 </code></pre>
 <p>Let's perform the client credentials grant:</p>
 <pre><code class="hljs">$ docker-compose -f quickstart.yml exec hydra \
@@ -201,7 +203,7 @@ order to avoid conflicts with other tutorials from this guide:</p>
 <pre><code class="hljs"><span class="hljs-meta">$</span><span class="bash"> docker-compose <span class="hljs-built_in">kill</span></span>
 <span class="hljs-meta">$</span><span class="bash"> docker-compose rm -f</span>
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9/16/2019 by prettifier[bot]</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/login-consent-flow"><span class="arrow-prev">← </span><span>Hydra workflow</span></a><a class="docs-next button" href="/docs/next/hydra/implementing-consent"><span>Login and Consent UI</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/22/2019 by prettifier[bot]</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/login-consent-flow"><span class="arrow-prev">← </span><span>Hydra workflow</span></a><a class="docs-next button" href="/docs/next/hydra/implementing-consent"><span>Login and Consent UI</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

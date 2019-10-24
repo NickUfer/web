@@ -101,7 +101,9 @@ mutators:
     config:
       headers:
         X-User: "{{ print .Subject }}"
-        X-Some-Arbitrary-Data: "{{ print .Extra.some.arbitrary.data }}"
+        # You could add some other headers, for example with data from the
+        # session.
+        # X-Some-Arbitrary-Data: "{{ print .Extra.some.arbitrary.data }}"
   noop:
     enabled: true
   id_token:
@@ -227,13 +229,13 @@ public/private key is required. Luckily, ORY Oathkeeper can assist you in
 creating such keys. All common JWT algorithms are supported (RS256, ES256,
 HS256, ...). Let's generate a key for the RS256 algorithm that will be used by
 the id_token mutator:</p>
-<pre><code class="hljs css language-sh">$ docker run oryd/oathkeeper:v0.19.1-beta.1 credentials generate --alg RS256 &gt; jwks.json
+<pre><code class="hljs css language-sh">$ docker run oryd/oathkeeper:v0.32.0-beta.1 credentials generate --alg RS256 &gt; jwks.json
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="dockerfile"></a><a href="#dockerfile" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dockerfile</h3>
 <p>Next we will be creating a custom Docker Image that adds these configuration
 files to the image:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> cat &lt;&lt; EOF &gt; Dockerfile</span>
-FROM oryd/oathkeeper:v0.19.1-beta.1
+FROM oryd/oathkeeper:v0.32.0-beta.1
 
 ADD config.yaml /config.yaml
 ADD rules.json /rules.json
@@ -249,7 +251,7 @@ apply these best practices.</p>
 <h2><a class="anchor" aria-hidden="true" id="build-run"></a><a href="#build-run" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Build &amp; Run</h2>
 <p>Before building the Docker Image, we need to make sure that the local ORY
 Oathkeeper Docker Image is on the most recent version:</p>
-<pre><code class="hljs css language-sh">$ docker pull oryd/oathkeeper:v0.19.1-beta.1
+<pre><code class="hljs css language-sh">$ docker pull oryd/oathkeeper:v0.32.0-beta.1
 </code></pre>
 <p>Next we will build our custom Docker Image</p>
 <pre><code class="hljs css language-sh">$ docker build -t ory-oathkeeper-demo .
@@ -323,7 +325,7 @@ $ curl -X GET http://<span class="hljs-number">127.0.0.1:4455</span>/anything/id
   <span class="hljs-string">"url"</span>: <span class="hljs-string">"https://httpbin.org/anything/id_token/anything/id_token"</span>
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/17/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/configuration"><span class="arrow-prev">← </span><span>Configuration</span></a><a class="docs-next button" href="/docs/next/oathkeeper/credentials"><span>oathkeeper/credentials</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#configure">Configure</a><ul class="toc-headings"><li><a href="#access-rules">Access Rules</a></li><li><a href="#cryptographic-keys">Cryptographic Keys</a></li><li><a href="#dockerfile">Dockerfile</a></li></ul></li><li><a href="#build-run">Build &amp; Run</a></li><li><a href="#authorizing-requests">Authorizing Requests</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/24/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/configuration"><span class="arrow-prev">← </span><span>Configuration</span></a><a class="docs-next button" href="/docs/next/oathkeeper/credentials"><span>oathkeeper/credentials</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#configure">Configure</a><ul class="toc-headings"><li><a href="#access-rules">Access Rules</a></li><li><a href="#cryptographic-keys">Cryptographic Keys</a></li><li><a href="#dockerfile">Dockerfile</a></li></ul></li><li><a href="#build-run">Build &amp; Run</a></li><li><a href="#authorizing-requests">Authorizing Requests</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

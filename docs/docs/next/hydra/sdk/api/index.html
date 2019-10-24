@@ -1051,6 +1051,7 @@ the libraries listed above!</p>
 <h4><a class="anchor" aria-hidden="true" id="request-body-1"></a><a href="#request-body-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request body</h4>
 <pre><code class="hljs css language-yaml"><span class="hljs-attr">grant_type:</span> <span class="hljs-string">string</span>
 <span class="hljs-attr">code:</span> <span class="hljs-string">string</span>
+<span class="hljs-attr">refresh_token:</span> <span class="hljs-string">string</span>
 <span class="hljs-attr">redirect_uri:</span> <span class="hljs-string">string</span>
 <span class="hljs-attr">client_id:</span> <span class="hljs-string">string</span>
 </code></pre>
@@ -1064,6 +1065,7 @@ the libraries listed above!</p>
 <tr><td>body</td><td>body</td><td>object</td><td>false</td><td>none</td></tr>
 <tr><td>» grant_type</td><td>body</td><td>string</td><td>true</td><td>none</td></tr>
 <tr><td>» code</td><td>body</td><td>string</td><td>false</td><td>none</td></tr>
+<tr><td>» refresh_token</td><td>body</td><td>string</td><td>false</td><td>none</td></tr>
 <tr><td>» redirect_uri</td><td>body</td><td>string</td><td>false</td><td>none</td></tr>
 <tr><td>» client_id</td><td>body</td><td>string</td><td>false</td><td>none</td></tr>
 </tbody>
@@ -1086,7 +1088,9 @@ the libraries listed above!</p>
 <pre><code class="hljs css language-json">{
   <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"expires_in"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"id_token"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_type"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -1143,6 +1147,7 @@ basic, oauth2
 const input = '{
   <span class="hljs-string">"grant_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"code"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-string">"refresh_token"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"redirect_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"client_id"</span>: <span class="hljs-string">"string"</span>
 }';
@@ -1474,6 +1479,8 @@ separated by a comma.</p>
 <tr><td>»»»» y</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»»» jwks_uri</td><td>string</td><td>false</td><td>none</td><td>URL for the Client's JSON Web Key Set [JWK] document. If the Client signs requests to the Server, it contains the signing key(s) the Server uses to validate signatures from the Client. The JWK Set MAY also contain the Client's encryption keys(s), which are used by the Server to encrypt responses to the Client. When both signing and encryption keys are made available, a use (Key Use) parameter value is REQUIRED for all keys in the referenced JWK Set to indicate each key's intended usage. Although some algorithms allow the same key to be used for both signatures and encryption, doing so is NOT RECOMMENDED, as it is less secure. The JWK x5c parameter MAY be used to provide X.509 representations of keys provided. When used, the bare key values MUST still be present and MUST match those in the certificate.</td></tr>
 <tr><td>»»» logo_uri</td><td>string</td><td>false</td><td>none</td><td>LogoURI is an URL string that references a logo for the client.</td></tr>
+<tr><td>»»» metadata</td><td>object</td><td>false</td><td>none</td><td>Metadata is arbitrary data.</td></tr>
+<tr><td>»»»» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»»» owner</td><td>string</td><td>false</td><td>none</td><td>Owner is a string identifying the owner of the OAuth 2.0 Client.</td></tr>
 <tr><td>»»» policy_uri</td><td>string</td><td>false</td><td>none</td><td>PolicyURI is a URL string that points to a human-readable privacy policy document that describes how the deployment organization collects, uses, retains, and discloses personal data.</td></tr>
 <tr><td>»»» post_logout_redirect_uris</td><td>[string]</td><td>false</td><td>none</td><td>Array of URLs supplied by the RP to which it MAY request that the End-User's User Agent be redirected using the post_logout_redirect_uri parameter after a logout has been performed.</td></tr>
@@ -1504,7 +1511,7 @@ separated by a comma.</p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -1533,6 +1540,10 @@ separated by a comma.</p>
     },
     <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"metadata"</span>: {
+      <span class="hljs-attr">"property1"</span>: {},
+      <span class="hljs-attr">"property2"</span>: {}
+    },
     <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -1545,7 +1556,7 @@ separated by a comma.</p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   }
 ]
@@ -1695,7 +1706,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -1724,6 +1735,10 @@ and only callable by first-party components.</p>
   },
   <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"metadata"</span>: {
+    <span class="hljs-attr">"property1"</span>: {},
+    <span class="hljs-attr">"property2"</span>: {}
+  },
   <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -1736,7 +1751,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -1777,7 +1792,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -1806,6 +1821,10 @@ and only callable by first-party components.</p>
   },
   <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"metadata"</span>: {
+    <span class="hljs-attr">"property1"</span>: {},
+    <span class="hljs-attr">"property2"</span>: {}
+  },
   <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -1818,7 +1837,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -1888,7 +1907,7 @@ const input = '{
   <span class="hljs-string">"contacts"</span>: [
     <span class="hljs-string">"string"</span>
   ],
-  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-string">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-string">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"grant_types"</span>: [
@@ -1921,6 +1940,10 @@ const input = '{
   },
   <span class="hljs-string">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-string">"metadata"</span>: {
+    <span class="hljs-string">"property1"</span>: {},
+    <span class="hljs-string">"property2"</span>: {}
+  },
   <span class="hljs-string">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"post_logout_redirect_uris"</span>: [
@@ -1941,7 +1964,7 @@ const input = '{
   <span class="hljs-string">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-string">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }';
 const headers = {
@@ -2063,7 +2086,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -2092,6 +2115,10 @@ and only callable by first-party components.</p>
   },
   <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"metadata"</span>: {
+    <span class="hljs-attr">"property1"</span>: {},
+    <span class="hljs-attr">"property2"</span>: {}
+  },
   <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -2104,7 +2131,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -2252,7 +2279,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -2281,6 +2308,10 @@ and only callable by first-party components.</p>
   },
   <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"metadata"</span>: {
+    <span class="hljs-attr">"property1"</span>: {},
+    <span class="hljs-attr">"property2"</span>: {}
+  },
   <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -2293,7 +2324,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -2333,7 +2364,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -2362,6 +2393,10 @@ and only callable by first-party components.</p>
   },
   <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"metadata"</span>: {
+    <span class="hljs-attr">"property1"</span>: {},
+    <span class="hljs-attr">"property2"</span>: {}
+  },
   <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -2374,7 +2409,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -2444,7 +2479,7 @@ const input = '{
   <span class="hljs-string">"contacts"</span>: [
     <span class="hljs-string">"string"</span>
   ],
-  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-string">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-string">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"grant_types"</span>: [
@@ -2477,6 +2512,10 @@ const input = '{
   },
   <span class="hljs-string">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-string">"metadata"</span>: {
+    <span class="hljs-string">"property1"</span>: {},
+    <span class="hljs-string">"property2"</span>: {}
+  },
   <span class="hljs-string">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"post_logout_redirect_uris"</span>: [
@@ -2497,7 +2536,7 @@ const input = '{
   <span class="hljs-string">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-string">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }';
 const headers = {
@@ -4410,7 +4449,7 @@ the subject accepted or rejected the request.</p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -4439,6 +4478,10 @@ the subject accepted or rejected the request.</p>
     },
     <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"metadata"</span>: {
+      <span class="hljs-attr">"property1"</span>: {},
+      <span class="hljs-attr">"property2"</span>: {}
+    },
     <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -4451,7 +4494,7 @@ the subject accepted or rejected the request.</p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"context"</span>: {
@@ -5061,7 +5104,7 @@ the requested authentication process.</p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -5090,6 +5133,10 @@ the requested authentication process.</p>
     },
     <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"metadata"</span>: {
+      <span class="hljs-attr">"property1"</span>: {},
+      <span class="hljs-attr">"property2"</span>: {}
+    },
     <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -5102,7 +5149,7 @@ the requested authentication process.</p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"oidc_context"</span>: {
@@ -6222,6 +6269,8 @@ and will be separated by a comma.</p>
 <tr><td>»»»»» y</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»»»» jwks_uri</td><td>string</td><td>false</td><td>none</td><td>URL for the Client's JSON Web Key Set [JWK] document. If the Client signs requests to the Server, it contains the signing key(s) the Server uses to validate signatures from the Client. The JWK Set MAY also contain the Client's encryption keys(s), which are used by the Server to encrypt responses to the Client. When both signing and encryption keys are made available, a use (Key Use) parameter value is REQUIRED for all keys in the referenced JWK Set to indicate each key's intended usage. Although some algorithms allow the same key to be used for both signatures and encryption, doing so is NOT RECOMMENDED, as it is less secure. The JWK x5c parameter MAY be used to provide X.509 representations of keys provided. When used, the bare key values MUST still be present and MUST match those in the certificate.</td></tr>
 <tr><td>»»»» logo_uri</td><td>string</td><td>false</td><td>none</td><td>LogoURI is an URL string that references a logo for the client.</td></tr>
+<tr><td>»»»» metadata</td><td>object</td><td>false</td><td>none</td><td>Metadata is arbitrary data.</td></tr>
+<tr><td>»»»»» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»»»» owner</td><td>string</td><td>false</td><td>none</td><td>Owner is a string identifying the owner of the OAuth 2.0 Client.</td></tr>
 <tr><td>»»»» policy_uri</td><td>string</td><td>false</td><td>none</td><td>PolicyURI is a URL string that points to a human-readable privacy policy document that describes how the deployment organization collects, uses, retains, and discloses personal data.</td></tr>
 <tr><td>»»»» post_logout_redirect_uris</td><td>[string]</td><td>false</td><td>none</td><td>Array of URLs supplied by the RP to which it MAY request that the End-User's User Agent be redirected using the post_logout_redirect_uri parameter after a logout has been performed.</td></tr>
@@ -6281,7 +6330,7 @@ and will be separated by a comma.</p>
         <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
         <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
         <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -6310,6 +6359,10 @@ and will be separated by a comma.</p>
         },
         <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+        <span class="hljs-attr">"metadata"</span>: {
+          <span class="hljs-attr">"property1"</span>: {},
+          <span class="hljs-attr">"property2"</span>: {}
+        },
         <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -6322,7 +6375,7 @@ and will be separated by a comma.</p>
         <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
         <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
       },
       <span class="hljs-attr">"context"</span>: {
@@ -6824,7 +6877,7 @@ keep recent tokens for auditing. Refresh tokens can not be flushed as they are
 deleted automatically when performing the refresh flow.</p>
 <h4><a class="anchor" aria-hidden="true" id="request-body-12"></a><a href="#request-body-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request body</h4>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>
+  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>
 }
 </code></pre>
 <p><a id="flush-expired-oauth2-access-tokens-parameters"></a></p>
@@ -6910,7 +6963,7 @@ This operation does not require authentication
 <div class="tab-pane" role="tabpanel"  id="tab-flushInactiveOAuth2Tokens-node">
 <pre><code class="hljs css language-nodejs">const <span class="hljs-keyword">fetch</span> = require(<span class="hljs-string">'node-fetch'</span>);
 const input = <span class="hljs-string">'{
-  "notAfter": "2019-10-17T14:15:13Z"
+  "notAfter": "2019-10-24T15:58:25Z"
 }'</span>;
 const headers = {
   <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
@@ -7400,6 +7453,7 @@ p JSON.parse(result)
   ]
 }
 </code></pre>
+<p><em>JSONWebKeySet represents a JWK Set object.</em></p>
 <h4><a class="anchor" aria-hidden="true" id="properties-1"></a><a href="#properties-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
@@ -7427,7 +7481,7 @@ p JSON.parse(result)
       <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
       <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-      <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+      <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
       <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -7456,6 +7510,10 @@ p JSON.parse(result)
       },
       <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"metadata"</span>: {
+        <span class="hljs-attr">"property1"</span>: {},
+        <span class="hljs-attr">"property2"</span>: {}
+      },
       <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -7468,7 +7526,7 @@ p JSON.parse(result)
       <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+      <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
       <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
     },
     <span class="hljs-attr">"context"</span>: {
@@ -7625,7 +7683,7 @@ request.</em></p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -7654,6 +7712,10 @@ request.</em></p>
     },
     <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"metadata"</span>: {
+      <span class="hljs-attr">"property1"</span>: {},
+      <span class="hljs-attr">"property2"</span>: {}
+    },
     <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -7666,7 +7728,7 @@ request.</em></p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"context"</span>: {
@@ -7745,7 +7807,7 @@ request.</em></p>
 <h4><a class="anchor" aria-hidden="true" id="flushinactiveoauth2tokensrequest"></a><a href="#flushinactiveoauth2tokensrequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>flushInactiveOAuth2TokensRequest</h4>
 <p><a id="schemaflushinactiveoauth2tokensrequest"></a></p>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>
+  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>
 }
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="properties-8"></a><a href="#properties-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
@@ -7852,7 +7914,7 @@ request.</em></p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -7881,6 +7943,10 @@ request.</em></p>
     },
     <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"metadata"</span>: {
+      <span class="hljs-attr">"property1"</span>: {},
+      <span class="hljs-attr">"property2"</span>: {}
+    },
     <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -7893,7 +7959,7 @@ request.</em></p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"oidc_context"</span>: {
@@ -7969,7 +8035,7 @@ request.</em></p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -7998,6 +8064,10 @@ request.</em></p>
   },
   <span class="hljs-attr">"jwks_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"logo_uri"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"metadata"</span>: {
+    <span class="hljs-attr">"property1"</span>: {},
+    <span class="hljs-attr">"property2"</span>: {}
+  },
   <span class="hljs-attr">"owner"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"policy_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"post_logout_redirect_uris"</span>: [<span class="hljs-string">"string"</span>],
@@ -8010,7 +8080,7 @@ request.</em></p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-17T14:15:13Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2019-10-24T15:58:25Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -8038,6 +8108,8 @@ request.</em></p>
 <tr><td>jwks</td><td><a href="#schemajsonwebkeyset">JSONWebKeySet</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>jwks_uri</td><td>string</td><td>false</td><td>none</td><td>URL for the Client's JSON Web Key Set [JWK] document. If the Client signs requests to the Server, it contains the signing key(s) the Server uses to validate signatures from the Client. The JWK Set MAY also contain the Client's encryption keys(s), which are used by the Server to encrypt responses to the Client. When both signing and encryption keys are made available, a use (Key Use) parameter value is REQUIRED for all keys in the referenced JWK Set to indicate each key's intended usage. Although some algorithms allow the same key to be used for both signatures and encryption, doing so is NOT RECOMMENDED, as it is less secure. The JWK x5c parameter MAY be used to provide X.509 representations of keys provided. When used, the bare key values MUST still be present and MUST match those in the certificate.</td></tr>
 <tr><td>logo_uri</td><td>string</td><td>false</td><td>none</td><td>LogoURI is an URL string that references a logo for the client.</td></tr>
+<tr><td>metadata</td><td>object</td><td>false</td><td>none</td><td>Metadata is arbitrary data.</td></tr>
+<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>owner</td><td>string</td><td>false</td><td>none</td><td>Owner is a string identifying the owner of the OAuth 2.0 Client.</td></tr>
 <tr><td>policy_uri</td><td>string</td><td>false</td><td>none</td><td>PolicyURI is a URL string that points to a human-readable privacy policy document that describes how the deployment organization collects, uses, retains, and discloses personal data.</td></tr>
 <tr><td>post_logout_redirect_uris</td><td>[string]</td><td>false</td><td>none</td><td>Array of URLs supplied by the RP to which it MAY request that the End-User's User Agent be redirected using the post_logout_redirect_uri parameter after a logout has been performed.</td></tr>
@@ -8106,7 +8178,9 @@ request.</em></p>
 <pre><code class="hljs css language-json">{
   <span class="hljs-attr">"access_token"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"expires_in"</span>: <span class="hljs-number">0</span>,
+  <span class="hljs-attr">"id_token"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"refresh_token"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_type"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -8119,7 +8193,9 @@ request.</em></p>
 <tbody>
 <tr><td>access_token</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>expires_in</td><td>integer(int64)</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>id_token</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>refresh_token</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>scope</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>token_type</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 </tbody>
 </table>
@@ -8338,7 +8414,7 @@ request.</em></p>
 <tr><td>userinfo_signing_alg_values_supported</td><td>[string]</td><td>false</td><td>none</td><td>JSON array containing a list of the JWS [JWS] signing algorithms (alg values) [JWA] supported by the UserInfo Endpoint to encode the Claims in a JWT [JWT].</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/17/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/hydra/sdk/go"><span>Go</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication">Authentication</a></li><li><a href="#public-endpoints">Public Endpoints</a><ul class="toc-headings"><li><a href="#json-web-keys-discovery">JSON Web Keys Discovery</a></li><li><a href="#openid-connect-discovery">OpenID Connect Discovery</a></li><li><a href="#check-readiness-status">Check readiness status</a></li><li><a href="#the-oauth-20-authorize-endpoint">The OAuth 2.0 authorize endpoint</a></li><li><a href="#revoke-oauth2-tokens">Revoke OAuth2 tokens</a></li><li><a href="#openid-connect-front-backchannel-enabled-logout">OpenID Connect Front-Backchannel enabled Logout</a></li><li><a href="#the-oauth-20-token-endpoint">The OAuth 2.0 token endpoint</a></li><li><a href="#openid-connect-userinfo">OpenID Connect Userinfo</a></li></ul></li><li><a href="#administrative-endpoints">Administrative Endpoints</a><ul class="toc-headings"><li><a href="#list-oauth-20-clients">List OAuth 2.0 Clients</a></li><li><a href="#create-an-oauth-20-client">Create an OAuth 2.0 client</a></li><li><a href="#get-an-oauth-20-client">Get an OAuth 2.0 Client.</a></li><li><a href="#update-an-oauth-20-client">Update an OAuth 2.0 Client</a></li><li><a href="#deletes-an-oauth-20-client">Deletes an OAuth 2.0 Client</a></li><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#retrieve-a-json-web-key-set">Retrieve a JSON Web Key Set</a></li><li><a href="#update-a-json-web-key-set">Update a JSON Web Key Set</a></li><li><a href="#generate-a-new-json-web-key">Generate a new JSON Web Key</a></li><li><a href="#delete-a-json-web-key-set">Delete a JSON Web Key Set</a></li><li><a href="#fetch-a-json-web-key">Fetch a JSON Web Key</a></li><li><a href="#update-a-json-web-key">Update a JSON Web Key</a></li><li><a href="#delete-a-json-web-key">Delete a JSON Web Key</a></li><li><a href="#get-snapshot-metrics-from-the-hydra-service-if-you-re-using-k8s-you-can-then-add-annotations-to">Get snapshot metrics from the Hydra service. If you're using k8s, you can then add annotations to</a></li><li><a href="#get-consent-request-information">Get consent request information</a></li><li><a href="#accept-an-consent-request">Accept an consent request</a></li><li><a href="#reject-an-consent-request">Reject an consent request</a></li><li><a href="#get-an-login-request">Get an login request</a></li><li><a href="#accept-an-login-request">Accept an login request</a></li><li><a href="#reject-a-login-request">Reject a login request</a></li><li><a href="#get-a-logout-request">Get a logout request</a></li><li><a href="#accept-a-logout-request">Accept a logout request</a></li><li><a href="#reject-a-logout-request">Reject a logout request</a></li><li><a href="#lists-all-consent-sessions-of-a-subject">Lists all consent sessions of a subject</a></li><li><a href="#revokes-consent-sessions-of-a-subject-for-a-specific-oauth-20-client">Revokes consent sessions of a subject for a specific OAuth 2.0 Client</a></li><li><a href="#invalidates-all-login-sessions-of-a-certain-user">Invalidates all login sessions of a certain user</a></li><li><a href="#flush-expired-oauth2-access-tokens">Flush Expired OAuth2 Access Tokens</a></li><li><a href="#introspect-oauth2-tokens">Introspect OAuth2 tokens</a></li><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/24/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/hydra/sdk/go"><span>Go</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication">Authentication</a></li><li><a href="#public-endpoints">Public Endpoints</a><ul class="toc-headings"><li><a href="#json-web-keys-discovery">JSON Web Keys Discovery</a></li><li><a href="#openid-connect-discovery">OpenID Connect Discovery</a></li><li><a href="#check-readiness-status">Check readiness status</a></li><li><a href="#the-oauth-20-authorize-endpoint">The OAuth 2.0 authorize endpoint</a></li><li><a href="#revoke-oauth2-tokens">Revoke OAuth2 tokens</a></li><li><a href="#openid-connect-front-backchannel-enabled-logout">OpenID Connect Front-Backchannel enabled Logout</a></li><li><a href="#the-oauth-20-token-endpoint">The OAuth 2.0 token endpoint</a></li><li><a href="#openid-connect-userinfo">OpenID Connect Userinfo</a></li></ul></li><li><a href="#administrative-endpoints">Administrative Endpoints</a><ul class="toc-headings"><li><a href="#list-oauth-20-clients">List OAuth 2.0 Clients</a></li><li><a href="#create-an-oauth-20-client">Create an OAuth 2.0 client</a></li><li><a href="#get-an-oauth-20-client">Get an OAuth 2.0 Client.</a></li><li><a href="#update-an-oauth-20-client">Update an OAuth 2.0 Client</a></li><li><a href="#deletes-an-oauth-20-client">Deletes an OAuth 2.0 Client</a></li><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#retrieve-a-json-web-key-set">Retrieve a JSON Web Key Set</a></li><li><a href="#update-a-json-web-key-set">Update a JSON Web Key Set</a></li><li><a href="#generate-a-new-json-web-key">Generate a new JSON Web Key</a></li><li><a href="#delete-a-json-web-key-set">Delete a JSON Web Key Set</a></li><li><a href="#fetch-a-json-web-key">Fetch a JSON Web Key</a></li><li><a href="#update-a-json-web-key">Update a JSON Web Key</a></li><li><a href="#delete-a-json-web-key">Delete a JSON Web Key</a></li><li><a href="#get-snapshot-metrics-from-the-hydra-service-if-you-re-using-k8s-you-can-then-add-annotations-to">Get snapshot metrics from the Hydra service. If you're using k8s, you can then add annotations to</a></li><li><a href="#get-consent-request-information">Get consent request information</a></li><li><a href="#accept-an-consent-request">Accept an consent request</a></li><li><a href="#reject-an-consent-request">Reject an consent request</a></li><li><a href="#get-an-login-request">Get an login request</a></li><li><a href="#accept-an-login-request">Accept an login request</a></li><li><a href="#reject-a-login-request">Reject a login request</a></li><li><a href="#get-a-logout-request">Get a logout request</a></li><li><a href="#accept-a-logout-request">Accept a logout request</a></li><li><a href="#reject-a-logout-request">Reject a logout request</a></li><li><a href="#lists-all-consent-sessions-of-a-subject">Lists all consent sessions of a subject</a></li><li><a href="#revokes-consent-sessions-of-a-subject-for-a-specific-oauth-20-client">Revokes consent sessions of a subject for a specific OAuth 2.0 Client</a></li><li><a href="#invalidates-all-login-sessions-of-a-certain-user">Invalidates all login sessions of a certain user</a></li><li><a href="#flush-expired-oauth2-access-tokens">Flush Expired OAuth2 Access Tokens</a></li><li><a href="#introspect-oauth2-tokens">Introspect OAuth2 tokens</a></li><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

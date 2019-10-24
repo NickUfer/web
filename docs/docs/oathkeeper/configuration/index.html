@@ -320,7 +320,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_READ=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      read:</span> <span class="hljs-number">5</span><span class="hljs-string">s</span>
+<span class="hljs-attr">      read:</span> <span class="hljs-number">5</span><span class="hljs-string">h</span>
 
       <span class="hljs-comment">## HTTP Write Timeout ##</span>
       <span class="hljs-comment">#</span>
@@ -339,7 +339,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_WRITE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      write:</span> <span class="hljs-number">5</span><span class="hljs-string">m</span>
+<span class="hljs-attr">      write:</span> <span class="hljs-number">120</span><span class="hljs-string">s</span>
 
       <span class="hljs-comment">## HTTP Idle Timeout ##</span>
       <span class="hljs-comment">#</span>
@@ -358,7 +358,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_IDLE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      idle:</span> <span class="hljs-number">5</span><span class="hljs-string">h</span>
+<span class="hljs-attr">      idle:</span> <span class="hljs-number">5</span><span class="hljs-string">m</span>
 
     <span class="hljs-comment">## Cross Origin Resource Sharing (CORS) ##</span>
     <span class="hljs-comment">#</span>
@@ -396,8 +396,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_CORS_ALLOWED_ORIGINS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      allowed_origins:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">'*'</span>
+<span class="hljs-attr">      allowed_origins:</span> <span class="hljs-attr">https://example.com</span>
 
       <span class="hljs-comment">## Allowed HTTP Methods ##</span>
       <span class="hljs-comment">#</span>
@@ -706,7 +705,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_COOKIE_SESSION_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## JSON Web Token (jwt) ##</span>
   <span class="hljs-comment">#</span>
@@ -736,7 +735,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## OAuth 2.0 Token Introspection ##</span>
   <span class="hljs-comment">#</span>
@@ -871,7 +870,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHORIZERS_KETO_ENGINE_ACP_ORY_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
 <span class="hljs-comment">## Mutators ##</span>
 <span class="hljs-comment">#</span>
@@ -941,7 +940,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_COOKIE_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## HTTP Header ##</span>
   <span class="hljs-comment">#</span>
@@ -956,7 +955,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_HEADER_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## Hydrator ##</span>
   <span class="hljs-comment">#</span>
@@ -1031,7 +1030,7 @@ using environment variables, as documented below.</p>
 <span class="hljs-comment"># - Windows Command Line (CMD):</span>
 <span class="hljs-comment">#    &gt; set PROFILING=&lt;value&gt;</span>
 <span class="hljs-comment">#</span>
-<span class="hljs-attr">profiling:</span> <span class="hljs-string">cpu</span>
+<span class="hljs-attr">profiling:</span> <span class="hljs-string">mem</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oathkeeper/pipeline/mutator"><span class="arrow-prev">← </span><span>Mutators</span></a><a class="docs-next button" href="/docs/oathkeeper/configure-deploy"><span>Configure and Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
