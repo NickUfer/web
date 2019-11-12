@@ -90,7 +90,7 @@ summarized as:</p>
 validating his or her credentials (e.g. username + password).</li>
 <li>The consent provider is responsible for allowing the OAuth 2.0 application to
 get a token on the user's behalf (&quot;Do you want to allow foobar-app access to
-all your personal messages and images?&quot;.</li>
+all your personal messages and images?&quot;).</li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="common-misconceptions"></a><a href="#common-misconceptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Misconceptions</h3>
 <h4><a class="anchor" aria-hidden="true" id="oauth-20-scope-permission"></a><a href="#oauth-20-scope-permission" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Scope != Permission</h4>
@@ -541,7 +541,7 @@ logout provider fetches information about the logout request:</p>
 challenge = req.url.query.logout_challenge;
 
 fetch(
-  <span class="hljs-string">"https://hydra/oauth2/auth/requests/logout?"</span> +
+  <span class="hljs-string">'https://hydra/oauth2/auth/requests/logout?'</span> +
     querystring.stringify({ logout_challenge: challenge })
 )
   .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(response)</span> {</span>
@@ -572,10 +572,10 @@ logout confirmation from the end-user when <code>rp_initiated</code> is set to t
 <p>When the logout provider decides to accept the logout request, the flow is
 completed as follows:</p>
 <pre><code class="hljs css language-node">fetch(
-  <span class="hljs-string">"https://hydra/oauth2/auth/requests/logout/accept?"</span> +
+  <span class="hljs-string">'https://hydra/oauth2/auth/requests/logout/accept?'</span> +
     querystring.stringify({ logout_challenge: challenge }),
   {
-    method: <span class="hljs-string">"PUT"</span>
+    method: <span class="hljs-string">'PUT'</span>,
   }
 )
   .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(response)</span> {</span>
@@ -587,14 +587,14 @@ completed as follows:</p>
   });
 </code></pre>
 <p>You can also reject a logout request (e.g. if the user chose to not log out):</p>
-<pre><code class="hljs css language-node">fetch(
-  <span class="hljs-string">"https://hydra/oauth2/auth/requests/logout/reject?"</span> +
-    querystring.stringify({ logout_challenge: challenge }),
+<pre><code class="hljs css language-node"><span class="hljs-selector-tag">fetch</span>(
+  <span class="hljs-string">'https://hydra/oauth2/auth/requests/logout/reject?'</span> +
+    querystring.stringify({ <span class="hljs-attribute">logout_challenge</span>: challenge }),
   {
-    method: <span class="hljs-string">"<span class="hljs-keyword">PUT</span>"</span>
+    <span class="hljs-attribute">method</span>: <span class="hljs-string">'PUT'</span>,
   }
-).then(function(response) {
-  // Now you can do whatever you want - redirect the user back to your home page or whatever comes to mind.
+)<span class="hljs-selector-class">.then</span>(function(response) {
+  <span class="hljs-comment">// Now you can do whatever you want - redirect the user back to your home page or whatever comes to mind.</span>
 });
 </code></pre>
 <p>If the logout request was granted and the user agent redirected back to ORY
@@ -884,7 +884,7 @@ and the end-user authorizes that scope, the phone number should be added to
 publicly visible as those of ID Tokens. It is therefore imperative to <strong>not
 expose sensitive information without end-user consent.</strong></p>
 </blockquote>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.11/hydra/5min-tutorial"><span class="arrow-prev">← </span><span>5 Minute Tutorial</span></a><a class="docs-next button" href="/docs/oryOS.11/hydra/configure-deploy"><span>Installation and Setup</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#oauth-20-and-openid-connect">OAuth 2.0 and OpenID Connect</a><ul class="toc-headings"><li><a href="#ory-hydra-does-not-manage-users">ORY Hydra does not manage Users</a></li><li><a href="#common-misconceptions">Common Misconceptions</a></li><li><a href="#glossary">Glossary</a></li></ul></li><li><a href="#authenticating-users-and-requesting-consent">Authenticating Users and Requesting Consent</a><ul class="toc-headings"><li><a href="#the-flow-from-a-user-s-point-of-view">The flow from a user's point of view</a></li><li><a href="#the-flow-from-a-network-perspective">The flow from a network perspective</a></li><li><a href="#implementing-a-login-consent-provider">Implementing a Login &amp; Consent Provider</a></li><li><a href="#logout">Logout</a></li><li><a href="#revoking-consent-and-login-sessions">Revoking consent and login sessions</a></li></ul></li><li><a href="#oauth-20">OAuth 2.0</a><ul class="toc-headings"><li><a href="#oauth-20-scope">OAuth 2.0 Scope</a></li><li><a href="#oauth-20-refresh-tokens">OAuth 2.0 Refresh Tokens</a></li><li><a href="#oauth-20-token-introspection">OAuth 2.0 Token Introspection</a></li><li><a href="#oauth-20-clients">OAuth 2.0 Clients</a></li></ul></li><li><a href="#openid-connect">OpenID Connect</a><ul class="toc-headings"><li><a href="#userinfo">Userinfo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/31/2019 by prettifier[bot]</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.11/hydra/5min-tutorial"><span class="arrow-prev">← </span><span>5 Minute Tutorial</span></a><a class="docs-next button" href="/docs/oryOS.11/hydra/configure-deploy"><span>Installation and Setup</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#oauth-20-and-openid-connect">OAuth 2.0 and OpenID Connect</a><ul class="toc-headings"><li><a href="#ory-hydra-does-not-manage-users">ORY Hydra does not manage Users</a></li><li><a href="#common-misconceptions">Common Misconceptions</a></li><li><a href="#glossary">Glossary</a></li></ul></li><li><a href="#authenticating-users-and-requesting-consent">Authenticating Users and Requesting Consent</a><ul class="toc-headings"><li><a href="#the-flow-from-a-user-s-point-of-view">The flow from a user's point of view</a></li><li><a href="#the-flow-from-a-network-perspective">The flow from a network perspective</a></li><li><a href="#implementing-a-login-consent-provider">Implementing a Login &amp; Consent Provider</a></li><li><a href="#logout">Logout</a></li><li><a href="#revoking-consent-and-login-sessions">Revoking consent and login sessions</a></li></ul></li><li><a href="#oauth-20">OAuth 2.0</a><ul class="toc-headings"><li><a href="#oauth-20-scope">OAuth 2.0 Scope</a></li><li><a href="#oauth-20-refresh-tokens">OAuth 2.0 Refresh Tokens</a></li><li><a href="#oauth-20-token-introspection">OAuth 2.0 Token Introspection</a></li><li><a href="#oauth-20-clients">OAuth 2.0 Clients</a></li></ul></li><li><a href="#openid-connect">OpenID Connect</a><ul class="toc-headings"><li><a href="#userinfo">Userinfo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

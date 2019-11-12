@@ -94,6 +94,39 @@ work at all:
 <li>Retry. <strong>This can help a lot if you are new to this!</strong></li>
 </ol></li>
 </ol>
+<h2><a class="anchor" aria-hidden="true" id="logout-is-not-working-as-expected"></a><a href="#logout-is-not-working-as-expected" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logout is not working as expected</h2>
+<p>Sometimes, calling <code>/oauth2/sessions/logout</code> does not behave as expected, for
+example:</p>
+<ul>
+<li>An error occurs.</li>
+<li>You are being redirected directly to the post_logout_url instead of the logout
+UI.</li>
+</ul>
+<p>First of all, there are two types of logout requests - one is called &quot;OP (OpenID
+Provider) Initiated&quot; and one &quot;RP (Relying Party) Initiated&quot;. The first flow MUST
+NEITHER contain the <code>id_token_hint</code>, nor a <code>state</code>, nor
+<code>post_logout_redirect_uri</code>.</p>
+<p>If no active authentication session is set at ORY Hydra, the browser will be
+redirected immediately to the system-wide configured post logout redirect URI.</p>
+<p>An active session may be missing because:</p>
+<ul>
+<li>You are mixing up domain names (e.g. 127.0.0.1 and localhost - <strong>this is a
+common mistake</strong>)</li>
+<li>You are running ORY Hydra behind a proxy that messes with Cookies</li>
+<li>You are using a Browser with a very strict privacy policy which makes it
+difficult or impossible for ORY Hydra to properly set cookies. We've observed
+that the <strong>Brave Browser</strong> is very, very difficult here.</li>
+<li>You did not set <code>remember: true</code> when accepting the login request</li>
+</ul>
+<p><strong>Before filing a bug report, make sure you actually have a cookie named
+<code>oauth2_authentication_session</code> for the URL ORY Hydra is running on, and
+especially for the domain that's in your <code>http://.../oauth2/sessions/logout</code></strong></p>
+<p>If <code>id_token_hint</code> is set, you may define both <code>state</code> and
+<code>post_logout_redirect_uri</code>. The same problems can cause this flow to behave
+unexpectedly as listed above, with the only difference that now ORY Hydra knows
+who the user to be logged out is (from the <code>id_token_hint</code>) and if any
+Front-/Back-channel Logout is configured for that client, it will be executed
+even if there is no valid authentication session for that user in ORY Hydra.</p>
 <h2><a class="anchor" aria-hidden="true" id="openid-connect-id-token-missing"></a><a href="#openid-connect-id-token-missing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OpenID Connect ID Token missing</h2>
 <p>If you expect an OAuth 2.0 ID Token but are not receiving one, this can have
 multiple reasons:</p>
@@ -291,7 +324,7 @@ supported values. Simply run:</p>
 <pre><code class="hljs">docker exec -<span class="hljs-keyword">it</span> hydra_hydra_1 hydra serve <span class="hljs-comment">--help</span>
 </code></pre>
 <p>And read the section on <code>DEBUG CONTROLS</code>.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/16/2019 by prettifier[bot]</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/production"><span class="arrow-prev">← </span><span>Preparing for Production</span></a><a class="docs-next button" href="/docs/next/hydra/advanced"><span>Advanced Topics</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#first-aid">First Aid</a></li><li><a href="#openid-connect-id-token-missing">OpenID Connect ID Token missing</a></li><li><a href="#oauth-20-refresh-token-is-missing">OAuth 2.0 Refresh Token is missing</a></li><li><a href="#oauth-20-authorize-code-flow-fails">OAuth 2.0 Authorize Code Flow fails</a><ul class="toc-headings"><li><a href="#wrong-or-misconfigured-oauth-20-client">Wrong or misconfigured OAuth 2.0 Client</a></li><li><a href="#redirect-url-is-not-whitelisted">Redirect URL is not whitelisted</a></li><li><a href="#oauth-20-client-id-and-secret-are-sent-in-body-instead-of-header">OAuth 2.0 Client ID and secret are sent in body instead of header</a></li></ul></li><li><a href="#distributed-tracing">Distributed Tracing</a><ul class="toc-headings"><li><a href="#what-is-this">What is this?</a></li><li><a href="#what-a-hydra-trace-includes">What a Hydra trace includes</a></li><li><a href="#alright-how-can-i-set-this-up-locally">Alright, how can I set this up locally?</a></li><li><a href="#tracing-configurations">Tracing configurations</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/12/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/production"><span class="arrow-prev">← </span><span>Preparing for Production</span></a><a class="docs-next button" href="/docs/next/hydra/advanced"><span>Advanced Topics</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#first-aid">First Aid</a></li><li><a href="#logout-is-not-working-as-expected">Logout is not working as expected</a></li><li><a href="#openid-connect-id-token-missing">OpenID Connect ID Token missing</a></li><li><a href="#oauth-20-refresh-token-is-missing">OAuth 2.0 Refresh Token is missing</a></li><li><a href="#oauth-20-authorize-code-flow-fails">OAuth 2.0 Authorize Code Flow fails</a><ul class="toc-headings"><li><a href="#wrong-or-misconfigured-oauth-20-client">Wrong or misconfigured OAuth 2.0 Client</a></li><li><a href="#redirect-url-is-not-whitelisted">Redirect URL is not whitelisted</a></li><li><a href="#oauth-20-client-id-and-secret-are-sent-in-body-instead-of-header">OAuth 2.0 Client ID and secret are sent in body instead of header</a></li></ul></li><li><a href="#distributed-tracing">Distributed Tracing</a><ul class="toc-headings"><li><a href="#what-is-this">What is this?</a></li><li><a href="#what-a-hydra-trace-includes">What a Hydra trace includes</a></li><li><a href="#alright-how-can-i-set-this-up-locally">Alright, how can I set this up locally?</a></li><li><a href="#tracing-configurations">Tracing configurations</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

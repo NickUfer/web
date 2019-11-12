@@ -138,6 +138,11 @@ endpoints include:</p>
 </ul>
 <p>None of the administrative endpoints have any built-in access control. You can
 do simple <code>curl</code> or Postman requests to talk to them.</p>
+<p>The Token Introspection endpoint requires authentication. But since there is no
+access control, any valid authentication enables the endpoint to be used. If you
+need to access this endpoint in production, you should configure your API
+Gateway or Application Proxy to restrict which clients have access to the
+endpoint.</p>
 <p>We generally advise to run ORY Hydra with <code>hydra serve all</code> which listens on
 both ports in one process. Please be aware that the <code>memory</code> backend will not
 work in this mode.</p>
@@ -153,7 +158,7 @@ like:</p>
 </ul>
 <p>ORY Hydra will try to create the socket file during startup and the socket will
 be writeable by the user running ORY Hydra.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/dependencies-environment"><span class="arrow-prev">← </span><span>Database Setup and Configuration</span></a><a class="docs-next button" href="/docs/next/hydra/debugging"><span>Debugging</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ory-hydra-behind-an-api-gateway">ORY Hydra behind an API Gateway</a><ul class="toc-headings"><li><a href="#tls-termination">TLS Termination</a></li><li><a href="#routing">Routing</a></li></ul></li><li><a href="#exposing-administrative-and-public-api-endpoints">Exposing Administrative and Public API Endpoints</a><ul class="toc-headings"><li><a href="#binding-to-different-interfaces-or-unix-sockets">Binding to different interfaces or UNIX sockets</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/12/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/dependencies-environment"><span class="arrow-prev">← </span><span>Database Setup and Configuration</span></a><a class="docs-next button" href="/docs/next/hydra/debugging"><span>Debugging</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ory-hydra-behind-an-api-gateway">ORY Hydra behind an API Gateway</a><ul class="toc-headings"><li><a href="#tls-termination">TLS Termination</a></li><li><a href="#routing">Routing</a></li></ul></li><li><a href="#exposing-administrative-and-public-api-endpoints">Exposing Administrative and Public API Endpoints</a><ul class="toc-headings"><li><a href="#binding-to-different-interfaces-or-unix-sockets">Binding to different interfaces or UNIX sockets</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

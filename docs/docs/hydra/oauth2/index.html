@@ -826,6 +826,9 @@ authorization server to determine the active state of an OAuth 2.0 token and to
 determine meta-information about this token. OAuth 2.0 deployments can use this
 method to convey information about the authorization context of the token from
 the authorization server to the protected resource.</p>
+<p>The usage of an access token or client credentials is required to access the
+endpoint. ORY Hydra will however accept any valid token or valid credentials as
+there is no built-in access control.</p>
 <p>You can find more details on this endpoint in the
 <a href="https://www.ory.sh/docs/">ORY Hydra API Docs</a>. You can also use the CLI command
 <code>hydra token introspect &lt;token&gt;</code>.</p>

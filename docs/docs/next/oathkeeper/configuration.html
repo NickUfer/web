@@ -247,23 +247,49 @@ using environment variables, as documented below.</p>
 <span class="hljs-attr">    tls:</span>
       <span class="hljs-comment">## Private Key (PEM) ##</span>
       <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export SERVE_API_TLS_KEY=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set SERVE_API_TLS_KEY=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      key:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">      key:</span>
+        <span class="hljs-comment">## path ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_API_TLS_KEY_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_API_TLS_KEY_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        path:</span> <span class="hljs-string">path/to/file.pem</span>
+
+        <span class="hljs-comment">## base64 ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_API_TLS_KEY_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_API_TLS_KEY_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tXG5NSUlEWlRDQ0FrMmdBd0lCQWdJRVY1eE90REFOQmdr...</span>
 
       <span class="hljs-comment">## TLS Certificate (PEM) ##</span>
       <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export SERVE_API_TLS_CERT=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set SERVE_API_TLS_CERT=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      cert:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">      cert:</span>
+        <span class="hljs-comment">## path ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_API_TLS_CERT_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_API_TLS_CERT_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        path:</span> <span class="hljs-string">path/to/file.pem</span>
+
+        <span class="hljs-comment">## base64 ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_API_TLS_CERT_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_API_TLS_CERT_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tXG5NSUlEWlRDQ0FrMmdBd0lCQWdJRVY1eE90REFOQmdr...</span>
 
   <span class="hljs-comment">## HTTP Reverse Proxy ##</span>
   <span class="hljs-comment">#</span>
@@ -296,7 +322,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set SERVE_PROXY_HOST=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    host:</span> <span class="hljs-string">''</span>
+<span class="hljs-attr">    host:</span> <span class="hljs-string">localhost</span>
 
     <span class="hljs-comment">## HTTP Timeouts ##</span>
     <span class="hljs-comment">#</span>
@@ -320,7 +346,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_READ=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      read:</span> <span class="hljs-number">5</span><span class="hljs-string">h</span>
+<span class="hljs-attr">      read:</span> <span class="hljs-number">5</span><span class="hljs-string">m</span>
 
       <span class="hljs-comment">## HTTP Write Timeout ##</span>
       <span class="hljs-comment">#</span>
@@ -339,7 +365,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_WRITE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      write:</span> <span class="hljs-number">120</span><span class="hljs-string">s</span>
+<span class="hljs-attr">      write:</span> <span class="hljs-number">5</span><span class="hljs-string">h</span>
 
       <span class="hljs-comment">## HTTP Idle Timeout ##</span>
       <span class="hljs-comment">#</span>
@@ -358,7 +384,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_IDLE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      idle:</span> <span class="hljs-number">5</span><span class="hljs-string">m</span>
+<span class="hljs-attr">      idle:</span> <span class="hljs-number">5</span><span class="hljs-string">s</span>
 
     <span class="hljs-comment">## Cross Origin Resource Sharing (CORS) ##</span>
     <span class="hljs-comment">#</span>
@@ -495,23 +521,49 @@ using environment variables, as documented below.</p>
 <span class="hljs-attr">    tls:</span>
       <span class="hljs-comment">## Private Key (PEM) ##</span>
       <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export SERVE_PROXY_TLS_KEY=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set SERVE_PROXY_TLS_KEY=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      key:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">      key:</span>
+        <span class="hljs-comment">## path ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_PROXY_TLS_KEY_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_PROXY_TLS_KEY_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        path:</span> <span class="hljs-string">path/to/file.pem</span>
+
+        <span class="hljs-comment">## base64 ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_PROXY_TLS_KEY_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_PROXY_TLS_KEY_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tXG5NSUlEWlRDQ0FrMmdBd0lCQWdJRVY1eE90REFOQmdr...</span>
 
       <span class="hljs-comment">## TLS Certificate (PEM) ##</span>
       <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export SERVE_PROXY_TLS_CERT=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set SERVE_PROXY_TLS_CERT=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      cert:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">      cert:</span>
+        <span class="hljs-comment">## path ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_PROXY_TLS_CERT_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_PROXY_TLS_CERT_PATH=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        path:</span> <span class="hljs-string">path/to/file.pem</span>
+
+        <span class="hljs-comment">## base64 ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SERVE_PROXY_TLS_CERT_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SERVE_PROXY_TLS_CERT_BASE64=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tXG5NSUlEWlRDQ0FrMmdBd0lCQWdJRVY1eE90REFOQmdr...</span>
 
 <span class="hljs-comment">## Access Rules ##</span>
 <span class="hljs-comment">#</span>
@@ -526,6 +578,8 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># - If the URL Scheme is `inline://`, the access rules (an array of access rules is expected) are expected to be a base64 encoded (with padding!) JSON/YAML string (base64_encode(`[{"id":"foo-rule","authenticators":[....]}]`)).</span>
   <span class="hljs-comment"># - If the URL Scheme is `http://` or `https://`, the access rules (an array of access rules is expected) will be fetched from the provided HTTP(s) location.</span>
   <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Default value:</span>
+  <span class="hljs-comment">#</span>
   <span class="hljs-comment"># Examples:</span>
   <span class="hljs-comment"># - '["file://path/to/rules.json","inline://W3siaWQiOiJmb28tcnVsZSIsImF1dGhlbnRpY2F0b3JzIjpbXX1d","https://path-to-my-rules/rules.json"]'</span>
   <span class="hljs-comment">#</span>
@@ -535,7 +589,7 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># - Windows Command Line (CMD):</span>
   <span class="hljs-comment">#    &gt; set ACCESS_RULES_REPOSITORIES=&lt;value&gt;</span>
   <span class="hljs-comment">#</span>
-<span class="hljs-attr">  repositories:</span> <span class="hljs-string">'["file://path/to/rules.json","inline://W3siaWQiOiJmb28tcnVsZSIsImF1dGhlbnRpY2F0b3JzIjpbXX1d","https://path-to-my-rules/rules.json"]'</span>
+<span class="hljs-attr">  repositories:</span> <span class="hljs-string">[]</span>
 
 <span class="hljs-comment">## Authenticators ##</span>
 <span class="hljs-comment">#</span>
@@ -547,157 +601,105 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># The [`anonymous` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#anonymous).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  anonymous:</span>
-    <span class="hljs-comment">## title ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_ANONYMOUS_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    $ export AUTHENTICATORS_ANONYMOUS_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_ANONYMOUS_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_ANONYMOUS_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    title:</span> <span class="hljs-string">Anonymous</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
-    <span class="hljs-comment">## description ##</span>
+    <span class="hljs-comment">## Anonymous Authenticator Configuration ##</span>
     <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_ANONYMOUS_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_ANONYMOUS_DESCRIPTION=&lt;value&gt;</span>
+    <span class="hljs-comment"># This section is optional when the authenticator is disabled.</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    description:</span>
-      <span class="hljs-string">The</span> <span class="hljs-string">[`anonymous`</span>
-      <span class="hljs-string">authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#anonymous).</span>
-
-    <span class="hljs-comment">## enabled ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span>
-      <span class="hljs-comment">## enabled ##</span>
+<span class="hljs-attr">    config:</span>
+      <span class="hljs-comment">## Anonymous Subject ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Sets the anonymous username.</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Default value: anonymous</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Examples:</span>
+      <span class="hljs-comment"># - guest</span>
+      <span class="hljs-comment"># - anon</span>
+      <span class="hljs-comment"># - anonymous</span>
+      <span class="hljs-comment"># - unknown</span>
       <span class="hljs-comment">#</span>
       <span class="hljs-comment"># Set this value using environment variables on</span>
       <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHENTICATORS_ANONYMOUS_ENABLED_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_ANONYMOUS_CONFIG_SUBJECT=&lt;value&gt;</span>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_ANONYMOUS_ENABLED_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_ANONYMOUS_CONFIG_SUBJECT=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
-
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_ANONYMOUS_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_ANONYMOUS_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">      subject:</span> <span class="hljs-string">anonymous</span>
 
   <span class="hljs-comment">## No Operation (noop) ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`noop` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#noop).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  noop:</span>
-    <span class="hljs-comment">## title ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_NOOP_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    $ export AUTHENTICATORS_NOOP_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_NOOP_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_NOOP_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    title:</span> <span class="hljs-literal">No</span> <span class="hljs-string">Operation</span> <span class="hljs-string">(noop)</span>
-
-    <span class="hljs-comment">## description ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_NOOP_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_NOOP_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    description:</span>
-      <span class="hljs-string">The</span> <span class="hljs-string">[`noop`</span>
-      <span class="hljs-string">authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#noop).</span>
-
-    <span class="hljs-comment">## enabled ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span>
-      <span class="hljs-comment">## enabled ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHENTICATORS_NOOP_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_NOOP_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
-
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_NOOP_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_NOOP_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## Unauthorized ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`unauthorized` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#unauthorized).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  unauthorized:</span>
-    <span class="hljs-comment">## title ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_UNAUTHORIZED_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    $ export AUTHENTICATORS_UNAUTHORIZED_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_UNAUTHORIZED_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_UNAUTHORIZED_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    title:</span> <span class="hljs-string">Unauthorized</span>
-
-    <span class="hljs-comment">## description ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_UNAUTHORIZED_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_UNAUTHORIZED_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    description:</span>
-      <span class="hljs-string">The</span> <span class="hljs-string">[`unauthorized`</span>
-      <span class="hljs-string">authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#unauthorized).</span>
-
-    <span class="hljs-comment">## enabled ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span>
-      <span class="hljs-comment">## enabled ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHENTICATORS_UNAUTHORIZED_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_UNAUTHORIZED_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
-
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHENTICATORS_UNAUTHORIZED_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHENTICATORS_UNAUTHORIZED_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## Cookie Session ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`cookie_session` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#cookie_session).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  cookie_session:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -712,7 +714,98 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># The [`jwt` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#jwt).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  jwt:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## config ##</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    config:</span>
+      <span class="hljs-comment">## jwks_urls ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      jwks_urls:</span> <span class="hljs-attr">https://my-other-website.com/.well-known/jwks.json</span>
+
+      <span class="hljs-comment">## required_scope ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      required_scope:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">minim</span> <span class="hljs-string">exercitation</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">consectetur</span> <span class="hljs-string">ut</span> <span class="hljs-string">sunt</span> <span class="hljs-string">id</span> <span class="hljs-string">laborum</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">id</span> <span class="hljs-string">cupidatat</span> <span class="hljs-string">do</span>
+
+      <span class="hljs-comment">## target_audience ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      target_audience:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">anim</span> <span class="hljs-string">dolor</span> <span class="hljs-string">pariatur</span>
+
+      <span class="hljs-comment">## trusted_issuers ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      trusted_issuers:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">esse</span>
+
+      <span class="hljs-comment">## allowed_algorithms ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      allowed_algorithms:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">in</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">laboris</span> <span class="hljs-string">ad</span> <span class="hljs-string">in</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">'ipsum '</span>
+
+      <span class="hljs-comment">## scope_strategy ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      scope_strategy:</span> <span class="hljs-string">none</span>
+
+      <span class="hljs-comment">## token_from ##</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      token_from:</span>
+        <span class="hljs-comment">## header ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_HEADER=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_HEADER=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        header:</span> <span class="hljs-string">aliqua</span>
+
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -720,14 +813,21 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## OAuth 2.0 Client Credentials ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`oauth2_client_credentials` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#oauth2_client_credentials).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  oauth2_client_credentials:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -735,14 +835,21 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## OAuth 2.0 Token Introspection ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`oauth2_introspection` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#oauth2_introspection).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  oauth2_introspection:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -750,7 +857,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
 <span class="hljs-comment">## Authorizers ##</span>
 <span class="hljs-comment">#</span>
@@ -762,107 +869,58 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># The [`allow` authorizer](https://www.ory.sh/docs/oathkeeper/pipeline/authz#allow).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  allow:</span>
-    <span class="hljs-comment">## title ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHORIZERS_ALLOW_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    $ export AUTHORIZERS_ALLOW_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHORIZERS_ALLOW_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    &gt; set AUTHORIZERS_ALLOW_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    title:</span> <span class="hljs-string">Allow</span>
-
-    <span class="hljs-comment">## description ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHORIZERS_ALLOW_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHORIZERS_ALLOW_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    description:</span>
-      <span class="hljs-string">The</span> <span class="hljs-string">[`allow`</span>
-      <span class="hljs-string">authorizer](https://www.ory.sh/docs/oathkeeper/pipeline/authz#allow).</span>
-
-    <span class="hljs-comment">## enabled ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span>
-      <span class="hljs-comment">## enabled ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHORIZERS_ALLOW_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHORIZERS_ALLOW_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
-
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHORIZERS_ALLOW_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHORIZERS_ALLOW_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## Deny ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`deny` authorizer](https://www.ory.sh/docs/oathkeeper/pipeline/authz#allow).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  deny:</span>
-    <span class="hljs-comment">## title ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHORIZERS_DENY_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    $ export AUTHORIZERS_DENY_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHORIZERS_DENY_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    &gt; set AUTHORIZERS_DENY_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    title:</span> <span class="hljs-string">Deny</span>
-
-    <span class="hljs-comment">## description ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHORIZERS_DENY_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHORIZERS_DENY_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    description:</span>
-      <span class="hljs-string">The</span> <span class="hljs-string">[`deny`</span>
-      <span class="hljs-string">authorizer](https://www.ory.sh/docs/oathkeeper/pipeline/authz#allow).</span>
-
-    <span class="hljs-comment">## enabled ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span>
-      <span class="hljs-comment">## enabled ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHORIZERS_DENY_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHORIZERS_DENY_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
-
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export AUTHORIZERS_DENY_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set AUTHORIZERS_DENY_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## ORY Keto Access Control Policies Engine ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`keto_engine_acp_ory` authorizer](https://www.ory.sh/docs/oathkeeper/pipeline/authz#keto_engine_acp_ory).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  keto_engine_acp_ory:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -882,57 +940,49 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># The [`noop` mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#noop).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  noop:</span>
-    <span class="hljs-comment">## title ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export MUTATORS_NOOP_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    $ export MUTATORS_NOOP_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set MUTATORS_NOOP_TITLE=&lt;value&gt;</span>
+    <span class="hljs-comment">#    &gt; set MUTATORS_NOOP_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    title:</span> <span class="hljs-literal">No</span> <span class="hljs-string">Operation</span> <span class="hljs-string">(noop)</span>
-
-    <span class="hljs-comment">## description ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export MUTATORS_NOOP_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set MUTATORS_NOOP_DESCRIPTION=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    description:</span>
-      <span class="hljs-string">The</span> <span class="hljs-string">[`noop`</span>
-      <span class="hljs-string">mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#noop).</span>
-
-    <span class="hljs-comment">## enabled ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span>
-      <span class="hljs-comment">## enabled ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export MUTATORS_NOOP_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set MUTATORS_NOOP_ENABLED_ENABLED=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
-
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-    <span class="hljs-comment"># Set this value using environment variables on</span>
-    <span class="hljs-comment"># - Linux/macOS:</span>
-    <span class="hljs-comment">#    $ export MUTATORS_NOOP_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-    <span class="hljs-comment">#    &gt; set MUTATORS_NOOP_CONFIG=&lt;value&gt;</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span> <span class="hljs-string">{}</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## HTTP Cookie ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`cookie` mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#cookie).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  cookie:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## config ##</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    config:</span>
+      <span class="hljs-comment">## cookies ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export MUTATORS_COOKIE_CONFIG_COOKIES=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set MUTATORS_COOKIE_CONFIG_COOKIES=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      cookies:</span> <span class="hljs-string">{}</span>
+
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -947,7 +997,27 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># The [`header` mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#header).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  header:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## config ##</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    config:</span>
+      <span class="hljs-comment">## headers ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export MUTATORS_HEADER_CONFIG_HEADERS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set MUTATORS_HEADER_CONFIG_HEADERS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      headers:</span> <span class="hljs-string">{}</span>
+
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -955,14 +1025,21 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_HEADER_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## Hydrator ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`hydrator` mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#hydrator).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  hydrator:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -970,14 +1047,64 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## ID Token (JSON Web Token) ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`id_token` mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#id_token).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  id_token:</span>
-    <span class="hljs-comment">## enabled ##</span>
+    <span class="hljs-comment">## config ##</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    config:</span>
+      <span class="hljs-comment">## jwks_url ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export MUTATORS_ID_TOKEN_CONFIG_JWKS_URL=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set MUTATORS_ID_TOKEN_CONFIG_JWKS_URL=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      jwks_url:</span> <span class="hljs-attr">file://../from/this/relative/location.json</span>
+
+      <span class="hljs-comment">## issuer_url ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export MUTATORS_ID_TOKEN_CONFIG_ISSUER_URL=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set MUTATORS_ID_TOKEN_CONFIG_ISSUER_URL=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      issuer_url:</span> <span class="hljs-string">ut</span> <span class="hljs-string">eu</span> <span class="hljs-string">sint</span> <span class="hljs-string">fugiat</span> <span class="hljs-string">ex</span>
+
+      <span class="hljs-comment">## claims ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export MUTATORS_ID_TOKEN_CONFIG_CLAIMS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set MUTATORS_ID_TOKEN_CONFIG_CLAIMS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      claims:</span> <span class="hljs-string">commodo</span>
+
+      <span class="hljs-comment">## ttl ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export MUTATORS_ID_TOKEN_CONFIG_TTL=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set MUTATORS_ID_TOKEN_CONFIG_TTL=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      ttl:</span> <span class="hljs-number">30</span><span class="hljs-string">s</span>
+
+    <span class="hljs-comment">## Enabled ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># En-/disables this component.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: false</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - true</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># Set this value using environment variables on</span>
     <span class="hljs-comment"># - Linux/macOS:</span>
@@ -1032,7 +1159,7 @@ using environment variables, as documented below.</p>
 <span class="hljs-comment">#</span>
 <span class="hljs-attr">profiling:</span> <span class="hljs-string">mem</span>
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/24/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/mutator"><span class="arrow-prev">← </span><span>Mutators</span></a><a class="docs-next button" href="/docs/next/oathkeeper/configure-deploy"><span>Configure and Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 11/12/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/mutator"><span class="arrow-prev">← </span><span>Mutators</span></a><a class="docs-next button" href="/docs/next/oathkeeper/configure-deploy"><span>Configure and Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

@@ -122,11 +122,11 @@ running Hydra is easiest with Docker. ORY Hydra is available on
 <span class="hljs-meta">$</span><span class="bash"> <span class="hljs-built_in">export</span> DSN=postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=<span class="hljs-built_in">disable</span></span>
 <span class="hljs-meta">
 #</span><span class="bash"> Before starting, <span class="hljs-built_in">let</span><span class="hljs-string">'s pull the latest ORY Hydra tag from docker.</span></span>
-<span class="hljs-meta">$</span><span class="bash"><span class="hljs-string"> docker pull oryd/hydra:v1.0.8</span></span>
+<span class="hljs-meta">$</span><span class="bash"><span class="hljs-string"> docker pull oryd/hydra:v1.0.9</span></span>
 <span class="hljs-meta">
 #</span><span class="bash"><span class="hljs-string"> This command will show you all the environment variables that you can set. Read this carefully.</span></span>
 <span class="hljs-meta">#</span><span class="bash"><span class="hljs-string"> It is the equivalent to `hydra help serve`.</span></span>
-<span class="hljs-meta">$</span><span class="bash"><span class="hljs-string"> docker run -it --rm --entrypoint hydra oryd/hydra:v1.0.8 help serve</span></span>
+<span class="hljs-meta">$</span><span class="bash"><span class="hljs-string"> docker run -it --rm --entrypoint hydra oryd/hydra:v1.0.9 help serve</span></span>
 
 Starts all HTTP/2 APIs and connects to a database backend.
 [...]
@@ -136,7 +136,7 @@ Starts all HTTP/2 APIs and connects to a database backend.
 <span class="hljs-meta">#</span><span class="bash"><span class="hljs-string"> It is the equivalent to `hydra migrate sql --yes postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable`</span></span>
 <span class="hljs-meta">$</span><span class="bash"><span class="hljs-string"> docker run -it --rm \</span></span>
   --network hydraguide \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.0.9 \
   migrate sql --yes $DSN
 
 Applying `client` SQL migrations...
@@ -154,7 +154,7 @@ Migration successful!
   -e URLS_SELF_ISSUER=https://localhost:9000/ \
   -e URLS_CONSENT=http://localhost:9020/consent \
   -e URLS_LOGIN=http://localhost:9020/login \
-  oryd/hydra:v1.0.8 serve all
+  oryd/hydra:v1.0.9 serve all
 <span class="hljs-meta">
 #</span><span class="bash"> And check <span class="hljs-keyword">if</span> it<span class="hljs-string">'s running:</span></span>
 <span class="hljs-meta">$</span><span class="bash"><span class="hljs-string"> docker logs ory-hydra-example--hydra</span></span>
@@ -214,7 +214,7 @@ which is why we need to run all commands using <code>--skip-tls-verify</code>.</
 </ol>
 <p>ORY Hydra can be managed using the Hydra Command Line Interface (CLI), which is
 using ORY Hydra's REST APIs. To see the available commands, run:</p>
-<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> docker run --rm -it --entrypoint hydra oryd/hydra:v1.0.8 <span class="hljs-built_in">help</span></span>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> docker run --rm -it --entrypoint hydra oryd/hydra:v1.0.9 <span class="hljs-built_in">help</span></span>
 Hydra is a cloud native high throughput OAuth2 and OpenID Connect provider
 
 Usage:
@@ -228,14 +228,14 @@ provide a
 <a href="https://github.com/ory/hydra-login-consent-node">reference implementation</a>
 which combines both features in one app. Here, we will use deploy that app using
 Docker.</p>
-<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> docker pull oryd/hydra-login-consent-node:v1.0.8</span>
+<pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> docker pull oryd/hydra-login-consent-node:v1.0.9</span>
 <span class="hljs-meta">$</span><span class="bash"> docker run -d \</span>
   --name ory-hydra-example--consent \
   -p 9020:3000 \
   --network hydraguide \
   -e HYDRA_ADMIN_URL=https://ory-hydra-example--hydra:4445 \
   -e NODE_TLS_REJECT_UNAUTHORIZED=0 \
-  oryd/hydra-login-consent-node:v1.0.8
+  oryd/hydra-login-consent-node:v1.0.9
 <span class="hljs-meta">
 #</span><span class="bash"> Let<span class="hljs-string">'s check if it'</span>s running ok:</span>
 <span class="hljs-meta">$</span><span class="bash"> docker logs ory-hydra-example--consent</span>
@@ -264,7 +264,7 @@ URLs the client may request:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> docker run --rm -it \</span>
   -e HYDRA_ADMIN_URL=https://ory-hydra-example--hydra:4445 \
   --network hydraguide \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.0.9 \
   clients create --skip-tls-verify \
     --id facebook-photo-backup \
     --secret some-secret \
@@ -310,7 +310,7 @@ for an access token. The same thing happens with this command:</p>
 <pre><code class="hljs css language-shell"><span class="hljs-meta">$</span><span class="bash"> docker run --rm -it \</span>
   --network hydraguide \
   -p 9010:9010 \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.0.9 \
   token user --skip-tls-verify \
     --port 9010 \
     --auth-url https://localhost:9000/oauth2/auth \
