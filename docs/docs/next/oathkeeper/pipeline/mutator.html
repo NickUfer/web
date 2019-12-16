@@ -536,10 +536,10 @@ in the <code>header</code> field will be added to the final request headers.</p>
 <span class="hljs-attr">        auth:</span>
 <span class="hljs-attr">          basic:</span>
 <span class="hljs-attr">            username:</span> <span class="hljs-string">someUserName</span>
-<span class="hljs-attr">            password:</span> <span class="hljs-number">50</span><span class="hljs-string">m3P455w0rd</span>
+<span class="hljs-attr">            password:</span> <span class="hljs-string">somePassword</span>
 <span class="hljs-attr">        retry:</span>
-<span class="hljs-attr">          number_of_retries:</span> <span class="hljs-number">5</span>
-<span class="hljs-attr">          delay_in_milliseconds:</span> <span class="hljs-number">1000</span>
+<span class="hljs-attr">          give_up_after:</span> <span class="hljs-number">2</span><span class="hljs-string">s</span>
+<span class="hljs-attr">          max_delay:</span> <span class="hljs-number">100</span><span class="hljs-string">ms</span>
 </code></pre>
 <pre><code class="hljs css language-yaml"><span class="hljs-comment"># Some Access Rule: access-rule-1.yaml</span>
 <span class="hljs-attr">id:</span> <span class="hljs-string">access-rule-1</span>
@@ -553,10 +553,10 @@ in the <code>header</code> field will be added to the final request headers.</p>
 <span class="hljs-attr">        auth:</span>
 <span class="hljs-attr">          basic:</span>
 <span class="hljs-attr">            username:</span> <span class="hljs-string">someUserName</span>
-<span class="hljs-attr">            password:</span> <span class="hljs-number">50</span><span class="hljs-string">m3P455w0rd</span>
+<span class="hljs-attr">            password:</span> <span class="hljs-string">somePassword</span>
 <span class="hljs-attr">        retry:</span>
-<span class="hljs-attr">          number_of_retries:</span> <span class="hljs-number">5</span>
-<span class="hljs-attr">          delay_in_milliseconds:</span> <span class="hljs-number">1000</span>
+<span class="hljs-attr">          give_up_after:</span> <span class="hljs-number">2</span><span class="hljs-string">s</span>
+<span class="hljs-attr">          max_delay:</span> <span class="hljs-number">100</span><span class="hljs-string">ms</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="access-rule-example-3"></a><a href="#access-rule-example-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Access Rule Example</h3>
 <pre><code class="hljs css language-json">{
@@ -596,7 +596,7 @@ in the <code>header</code> field will be added to the final request headers.</p>
   ]
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 9/23/2019 by prettifier[bot]</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/authz"><span class="arrow-prev">← </span><span>Authorizers</span></a><a class="docs-next button" href="/docs/next/oathkeeper/configuration"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#noop"><code>noop</code></a><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li><li><a href="#access-rule-example">Access Rule Example</a></li></ul></li><li><a href="#id_token"><code>id_token</code></a><ul class="toc-headings"><li><a href="#global-configuration">Global Configuration</a></li><li><a href="#configuration-1">Configuration</a></li><li><a href="#access-rule-example-1">Access Rule Example</a></li></ul></li><li><a href="#header"><code>header</code></a><ul class="toc-headings"><li><a href="#configuration-2">Configuration</a></li><li><a href="#access-rule-example-2">Access Rule Example</a></li></ul></li><li><a href="#cookie"><code>cookie</code></a><ul class="toc-headings"><li><a href="#configuration-3">Configuration</a></li><li><a href="#cookies">Cookies</a></li></ul></li><li><a href="#hydrator"><code>hydrator</code></a><ul class="toc-headings"><li><a href="#configuration-4">Configuration</a></li><li><a href="#access-rule-example-3">Access Rule Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/16/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/authz"><span class="arrow-prev">← </span><span>Authorizers</span></a><a class="docs-next button" href="/docs/next/oathkeeper/configuration"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#noop"><code>noop</code></a><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li><li><a href="#access-rule-example">Access Rule Example</a></li></ul></li><li><a href="#id_token"><code>id_token</code></a><ul class="toc-headings"><li><a href="#global-configuration">Global Configuration</a></li><li><a href="#configuration-1">Configuration</a></li><li><a href="#access-rule-example-1">Access Rule Example</a></li></ul></li><li><a href="#header"><code>header</code></a><ul class="toc-headings"><li><a href="#configuration-2">Configuration</a></li><li><a href="#access-rule-example-2">Access Rule Example</a></li></ul></li><li><a href="#cookie"><code>cookie</code></a><ul class="toc-headings"><li><a href="#configuration-3">Configuration</a></li><li><a href="#cookies">Cookies</a></li></ul></li><li><a href="#hydrator"><code>hydrator</code></a><ul class="toc-headings"><li><a href="#configuration-4">Configuration</a></li><li><a href="#access-rule-example-3">Access Rule Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

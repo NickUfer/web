@@ -1,0 +1,923 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Integrating with (existing) User Management · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;p&gt;Please read this chapter carefully, it is imperative to getting started and&lt;/p&gt;
+"/><meta name="docsearch:version" content="oryOS.12"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Integrating with (existing) User Management · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&lt;p&gt;Please read this chapter carefully, it is imperative to getting started and&lt;/p&gt;
+"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.12</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.12/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Welcome</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/usage">API Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/persistence">Data Storage and Persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Hydra</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/">Introduction to ORY Hydra, OAuth 2.0, and OpenID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.12/hydra/oauth2">Integrating with (existing) User Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Oathkeeper</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/control-flow">Control Flow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Keto</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Performance</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/oauth2.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 class="postHeaderTitle">Integrating with (existing) User Management</h1></header><article><div><span><p>Please read this chapter carefully, it is imperative to getting started and
+grasping all the concepts quickly. The next sections will give you an overview
+of this chapter and explain some concepts. Do not skip the chapters. Seriously!
+:)</p>
+<h2><a class="anchor" aria-hidden="true" id="oauth-20-and-openid-connect"></a><a href="#oauth-20-and-openid-connect" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 and OpenID Connect</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/996OiexHze0" frameborder="0" allowfullscreen></iframe>
+<h3><a class="anchor" aria-hidden="true" id="ory-hydra-does-not-manage-users"></a><a href="#ory-hydra-does-not-manage-users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ORY Hydra does not manage Users</h3>
+<p>The first important concept to understand is that ORY Hydra is an OAuth 2.0
+Authorization and OpenID Connect Server. Some mistake these capabilities for
+systems that store user data and log you in. This is not the case. Instead, such
+a server is responsible for &quot;translating&quot; user credentials (typically username
+and password) to OAuth 2.0 Access and Refresh Tokens as well as OpenID Connect
+ID Tokens. It's basically like you storing cookies with session data, but more
+flexible and it also works for third party applications.</p>
+<p>ORY Hydra does not store user profiles, usernames, passwords. This capability is
+up to you. ORY Hydra uses something we call a <strong>User Login and Consent Flow</strong>.
+This flow uses HTTP redirects to forward any incoming authorization request
+(&quot;Please give me an access token.&quot;) to the <strong>Login Provider</strong> and the <strong>Consent
+Provider</strong>. These applications are something you implement. It can be a new app
+or your existing login system. On a high level, these providers can be
+summarized as:</p>
+<ul>
+<li>The login provider is responsible for authenticating the user (&quot;login&quot;) by
+validating his or her credentials (e.g. username + password).</li>
+<li>The consent provider is responsible for allowing the OAuth 2.0 application to
+get a token on the user's behalf (&quot;Do you want to allow foobar-app access to
+all your personal messages and images?&quot;).</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="common-misconceptions"></a><a href="#common-misconceptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Misconceptions</h3>
+<h4><a class="anchor" aria-hidden="true" id="oauth-20-scope-permission"></a><a href="#oauth-20-scope-permission" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Scope != Permission</h4>
+<p>A second important concept is the OAuth 2.0 Scope.</p>
+<p>Often, developers confuse OAuth 2.0 Scope with regular Access Control. OAuth 2.0
+Scope and, for example, Role Based Access Control (RBAC) or Access Control Lists
+(ACL) cover different aspects of access control.</p>
+<p>Your internal access control will tell you what a user can do in your system. An
+administrator might modify everything, a regular user might only be allowed to
+read personal messages. The OAuth 2.0 Scope does not represent what a resource
+owner (&quot;user&quot;) is able to do in a system or not. They do not express things like
+administrative rights.</p>
+<p>The OAuth 2.0 Scope expresses what a user allowed an OAuth 2.0 Client (read:
+&quot;access token&quot;) to do on his/her behalf. For example, an access token might be
+allowed to see a user's pictures, but not upload new pictures on his/her behalf.
+The user him/herself however is generally allowed to view and upload pictures.
+<strong>The OAuth 2.0 Scope do not express a user's permissions.</strong> They express what
+an OAuth 2.0 Client may do on the user's behalf - independently of whether or
+not the user is actually allowed to do that. For example, the user could lie and
+say that the client is allowed to access some protected resource which he does
+not have access to (&quot;Read all classified documents&quot;, but he is not allowed to
+view any classified documents).</p>
+<p>This concludes the overview of the two most important pieces of ORY Hydra.</p>
+<p>To recap, ORY Hydra's primary feature is implementing the OAuth 2.0 and OpenID
+Connect spec, as well as related specs by the IETF and OpenID Foundation.</p>
+<p>The next sections explain how to connect your existing user management (user
+login, registration, logout, ...) with ORY Hydra in order to become an OAuth 2.0
+and OpenID Connect provider like Google, Dropbox, or Facebook.</p>
+<p>Again, please be aware that you must know how OAuth 2.0 and OpenID Connect work.
+This documentation will not teach you how these protocols work.</p>
+<h3><a class="anchor" aria-hidden="true" id="glossary"></a><a href="#glossary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Glossary</h3>
+<p>Before we get into the gritty details of how everything fits together, let's get
+some terminologies out of the way. You will find these terminologies scattered
+across the OAuth2 and OpenID Connect ecosystem.</p>
+<p>We decided, for this guide, to use simpler and easier to use terminologies like,
+for example, <em>user</em> instead of <em>resource owner</em>. If you are familiar with OAuth2
+details, you will find it easier to navigate these docs if you have read the
+glossary.</p>
+<ol>
+<li>The <strong>resource owner</strong> is the user who authorizes an application to access
+their account. The application's access to the user's account is limited to
+the &quot;scope&quot; of the authorization granted (e.g. read or write access). We will
+refer to the resource owner as a <em>user</em> or <em>end user</em> on this page.</li>
+<li>The <strong>OAuth 2.0 Authorization Server</strong> implements the OAuth 2.0 protocol (and
+optionally OpenID Connect) and serves endpoints such as <code>/oauth2/auth</code> or
+<code>/oauth2/token</code>. In our case, this is <strong>ORY Hydra</strong>.</li>
+<li>The <strong>resource provider</strong> is a service that - well - provides resources.
+These resources (e.g. a blog article, printer, todo list) are owned by a
+resource owner (user) mentioned above.</li>
+<li>The <strong>OAuth 2.0 Client</strong> is the <em>application</em> that wants access to a resource
+owner's resources (a.k.a. get write access to a user's images). Such a client
+can ask the authorization server to issue an access token on a resource
+owner's behalf. Typically, the authorization server will ask the user if
+he/she &quot;is ok with&quot; giving that application e.g. write access to personal
+images.</li>
+<li>The <strong>Identity Provider</strong> is a service (&quot;application&quot;/&quot;website&quot;) with a login
+interface. An identity provider typically allows users to register as well
+and might also have an administrative interface in order to manage the
+identities (delete user, ban user, create user, ...).</li>
+<li><strong>User Agent</strong> is usually a browser.</li>
+<li><strong>OpenID Connect</strong> is a protocol built on top of OAuth 2.0 which is capable
+of federating authentication.</li>
+</ol>
+<p>A typical OAuth 2.0 flow looks as follows:</p>
+<ol>
+<li>A developer registers an OAuth 2.0 Client at the Authorization Server (ORY
+Hydra) with the intention of obtaining information on behalf of a user.</li>
+<li>The application UI asks the user to authorize the application to access
+information/data on his/her behalf.</li>
+<li>The user is redirected to the Authorization Server.</li>
+<li>The Authorization Server confirms the user's identity and asks the user to
+grant the OAuth 2.0 Client certain permissions.</li>
+<li>The Authorization Server issues tokens that the OAuth 2.0 client uses to
+access resources on the user's behalf.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="authenticating-users-and-requesting-consent"></a><a href="#authenticating-users-and-requesting-consent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authenticating Users and Requesting Consent</h2>
+<p>As you already know by now, ORY Hydra does not come with any type of user
+management (login, registration, ...). Instead, it relies on the so-called User
+Login and Consent Flow. This flow describes a series of redirects where the
+user's user agent is redirect to your Login Provider and, once the user is
+authenticated, to the Consent Provider. The Login and Consent provider is
+implemented by you in a programming language of your choice. You could write,
+for example, a NodeJS app that handles HTTP requests to <code>/login</code> and <code>/consent</code>
+and it would thus be your Login &amp; Consent provider.</p>
+<p>The flow itself works as follows:</p>
+<ol>
+<li>The OAuth 2.0 Client initiates an Authorize Code, Hybrid, or Implicit flow.
+The user's user agent is redirect to
+<code>http://hydra/oauth2/auth?client_id=...&amp;...</code>.</li>
+<li>ORY Hydra, if unable to authenticate the user (= no session cookie exists),
+redirects the user's user agent to the Login Provider URL. The application
+&quot;sitting&quot; at that URL is implemented by you and typically shows a login user
+interface (&quot;Please enter your username and password&quot;). The URL the user is
+redirect to looks similar to
+<code>http://login-service/login?login_challenge=1234...</code>.</li>
+<li>The Login Provider, once the user has successfully logged in, tells ORY Hydra
+some information about who the user is (e.g. the user's ID) and also that the
+login attempt was successful. This is done using a REST request which
+includes another redirect URL along the lines of
+<code>http://hydra/oauth2/auth?client_id=...&amp;...&amp;login_verifier=4321</code>.</li>
+<li>The user's user agent follows the redirect and lands back at ORY Hydra. Next,
+ORY Hydra redirects the user's user agent to the Consent Provider, hosted
+at - for example - <code>http://consent-service/consent?consent_challenge=4567...</code></li>
+<li>The Consent Provider shows a user interface which asks the user if he/she
+would like to grant the OAuth 2.0 Client the requested permissions (&quot;OAuth
+2.0 Scope&quot;). You've probably seen this screen around, which is usually
+something similar to: <em>&quot;Would you like to grant Facebook Image Backup access
+to all your private and public images?&quot;</em>.</li>
+<li>The Consent Provider makes another REST request to ORY Hydra to let it know
+which permissions the user authorized, and if the user authorized the request
+at all. The user can usually choose to not grant an application any access to
+his/her personal data. In the response of that REST request, a redirect URL
+is included along the lines of
+<code>http://hydra/oauth2/auth?client_id=...&amp;...&amp;consent_verifier=7654...</code>.</li>
+<li>The user's user agent follows that redirect.</li>
+<li>Now, the user has successfully authenticated and authorized the application.
+Next, ORY Hydra will run some checks and if everything works out, issue
+access, refresh, and ID tokens.</li>
+</ol>
+<p>This flow allows you to take full control of the behaviour of your login system
+(e.g. 2FA, passwordless, ...) and consent screen. A well-documented reference
+implementation for both the Login and
+<a href="https://github.com/ory/hydra-login-consent-node">Consent Provider is available on GitHub</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="the-flow-from-a-user-s-point-of-view"></a><a href="#the-flow-from-a-user-s-point-of-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The flow from a user's point of view</h3>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/txUmfORzu8Y" frameborder="0" allowfullscreen></iframe>
+<h3><a class="anchor" aria-hidden="true" id="the-flow-from-a-network-perspective"></a><a href="#the-flow-from-a-network-perspective" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The flow from a network perspective</h3>
+<p><img src="/images/docs/hydra/login-consent-flow.png" alt="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gICAgT0F1dGgyIENsaWVudC0-Pk9SWSBIeWRyYTogSW5pdGlhdGVzIE9BdXRoMiBBdXRob3JpemUgQ29kZSBvciBJbXBsaWNpdCBGbG93XG4gICAgT1JZIEh5ZHJhLS0-Pk9SWSBIeWRyYTogTm8gZW5kIHVzZXIgc2Vzc2lvbiBhdmFpbGFibGUgKG5vdCBhdXRoZW50aWNhdGVkKVxuICAgIE9SWSBIeWRyYS0-PkxvZ2luIFByb3ZpZGVyOiBSZWRpcmVjdHMgZW5kIHVzZXIgd2l0aCBsb2dpbiBjaGFsbGVuZ2VcbiAgICBMb2dpbiBQcm92aWRlci0tPk9SWSBIeWRyYTogRmV0Y2hlcyBsb2dpbiBpbmZvXG4gICAgTG9naW4gUHJvdmlkZXItLT4-TG9naW4gUHJvdmlkZXI6IEF1dGhlbnRpY2F0ZXMgdXNlciB3aXRoIGNyZWRlbnRpYWxzXG4gICAgTG9naW4gUHJvdmlkZXItLT5PUlkgSHlkcmE6IFRyYW5zbWl0cyBsb2dpbiBpbmZvIGFuZCByZWNlaXZlcyByZWRpcmVjdCB1cmwgd2l0aCBsb2dpbiB2ZXJpZmllclxuICAgIExvZ2luIFByb3ZpZGVyLT4-T1JZIEh5ZHJhOiBSZWRpcmVjdHMgZW5kIHVzZXIgdG8gcmVkaXJlY3QgdXJsIHdpdGggbG9naW4gdmVyaWZpZXJcbiAgICBPUlkgSHlkcmEtLT4-T1JZIEh5ZHJhOiBGaXJzdCB0aW1lIHRoYXQgY2xpZW50IGFza3MgdXNlciBmb3IgcGVybWlzc2lvbnNcbiAgICBPUlkgSHlkcmEtPj5Db25zZW50IFByb3ZpZGVyOiBSZWRpcmVjdHMgZW5kIHVzZXIgd2l0aCBjb25zZW50IGNoYWxsZW5nZVxuICAgIENvbnNlbnQgUHJvdmlkZXItLT5PUlkgSHlkcmE6IEZldGNoZXMgY29uc2VudCBpbmZvICh3aGljaCB1c2VyLCB3aGF0IGFwcCwgd2hhdCBzY29wZXMpXG4gICAgQ29uc2VudCBQcm92aWRlci0tPj5Db25zZW50IFByb3ZpZGVyOiBBc2tzIGZvciBlbmQgdXNlcidzIHBlcm1pc3Npb24gdG8gZ3JhbnQgYXBwbGljYXRpb24gYWNjZXNzXG4gICAgQ29uc2VudCBQcm92aWRlci0tPk9SWSBIeWRyYTogVHJhbnNtaXRzIGNvbnNlbnQgcmVzdWx0IGFuZCByZWNlaXZlcyByZWRpcmVjdCB1cmwgd2l0aCBjb25zZW50IHZlcmlmaWVyXG4gICAgQ29uc2VudCBQcm92aWRlci0-Pk9SWSBIeWRyYTogUmVkaXJlY3RzIHRvIHJlZGlyZWN0IHVybCB3aXRoIGNvbnNlbnQgdmVyaWZpZXJcbiAgICBPUlkgSHlkcmEtLT4-T1JZIEh5ZHJhOiBWZXJpZmllcyBncmFudFxuICAgIE9SWSBIeWRyYS0-Pk9BdXRoMiBDbGllbnQ6IFRyYW5zbWl0cyBhdXRob3JpemF0aW9uIGNvZGUvdG9rZW4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ"></p>
+<h3><a class="anchor" aria-hidden="true" id="implementing-a-login-consent-provider"></a><a href="#implementing-a-login-consent-provider" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Implementing a Login &amp; Consent Provider</h3>
+<p>You should now have a high-level idea of how the login and consent providers
+work. Let's get into the details of it.</p>
+<h4><a class="anchor" aria-hidden="true" id="oauth-20-authorize-code-flow"></a><a href="#oauth-20-authorize-code-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Authorize Code Flow</h4>
+<p>Before anything happens, the OAuth 2.0 Authorize Code Flow is initiated by an
+OAuth 2.0 Client. This usually works by generating a URL in the form of
+<code>https://hydra/oauth2/auth?client_id=1234&amp;scope=foo+bar&amp;response_type=code&amp;...</code>.
+Then, the OAuth 2.0 Client points the end user's user agent to that URL.</p>
+<p>Next, the user agent (browser) opens that URL.</p>
+<h4><a class="anchor" aria-hidden="true" id="user-login"></a><a href="#user-login" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Login</h4>
+<p>As the user agent hits the URL, ORY Hydra checks if a session cookie is set
+containing information about a previously successful login. Additionally,
+parameters such as <code>id_token_hint</code>, <code>prompt</code>, and <code>max_age</code> are evaluated and
+processed.</p>
+<p>Next, the user will be redirect to the Login Provider which was set using the
+<code>OAUTH2_LOGIN_URL</code> environment variable. For example, the user is redirected to
+<code>https://login-provider/login?login_challenge=1234</code> if
+<code>OAUTH2_LOGIN_URL=https://login-provider/login</code>. This redirection happens
+<em>always</em> and regardless of whether the user has a valid login session or if the
+user needs to authenticate.</p>
+<p>The service which handles requests to <code>https://login-provider/login</code> must first
+fetch information on the authentication request using a REST API call. Please be
+aware that for reasons of brevity, the following code snippets are pseudo-code.
+For a fully working example, check out our reference
+<a href="https://github.com/ory/hydra-login-consent-node">User Login &amp; Consent Provider implementation</a>.</p>
+<p>The endpoint handler at <code>/login</code> <strong>must not remember previous sessions</strong>. This
+task is solved by ORY Hydra. If the REST API call tells you to show the login
+ui, you <strong>must show it</strong>. If the REST API tells you to not show the login ui,
+<strong>you must not show it</strong>. Again, <strong>do not implement any type of session here</strong>.</p>
+<pre><code class="hljs"><span class="hljs-comment">// This is node-js pseudo code and will not work if you copy it 1:1</span>
+
+router.get(<span class="hljs-string">'/login'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res, next)</span> {</span>
+    challenge = req.url.query.login_challenge;
+
+    fetch(<span class="hljs-string">'https://hydra/oauth2/auth/requests/login?'</span> + querystring.stringify({ login_challenge: challenge })).
+        <span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> {</span>
+            <span class="hljs-keyword">return</span> response.json()
+        }).
+        <span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> {</span>
+            <span class="hljs-comment">// ...</span>
+        })
+})
+</code></pre>
+<p>The server response is a JSON object with the following keys:</p>
+<pre><code class="hljs">{
+    // <span class="hljs-type">Skip</span>, <span class="hljs-keyword">if</span> <span class="hljs-literal">true</span>, <span class="hljs-keyword">let</span>'s us know that <span class="hljs-type">ORY</span> <span class="hljs-type">Hydra</span> has successfully authenticated the user <span class="hljs-keyword">and</span> we should <span class="hljs-keyword">not</span> show <span class="hljs-built_in">any</span> <span class="hljs-type">UI</span>
+    <span class="hljs-string">"skip"</span>: <span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>,
+
+    // <span class="hljs-type">The</span> user-id <span class="hljs-keyword">of</span> the already authenticated user - only <span class="hljs-built_in">set</span> <span class="hljs-keyword">if</span> skip <span class="hljs-keyword">is</span> <span class="hljs-literal">true</span>
+    <span class="hljs-string">"subject"</span>: <span class="hljs-string">"user-id"</span>,
+
+    // <span class="hljs-type">The</span> <span class="hljs-type">OAuth</span> <span class="hljs-number">2</span>.<span class="hljs-number">0</span> client that initiated the request
+    <span class="hljs-string">"client"</span>: {<span class="hljs-string">"id"</span>: <span class="hljs-string">"..."</span>, ...},
+
+    // <span class="hljs-type">The</span> initial <span class="hljs-type">OAuth</span> <span class="hljs-number">2</span>.<span class="hljs-number">0</span> request url
+    <span class="hljs-string">"request_url"</span>: <span class="hljs-string">"https://hydra/oauth2/auth?client_id=1234&amp;scope=foo+bar&amp;response_type=code&amp;..."</span>,
+
+    // <span class="hljs-type">The</span> <span class="hljs-type">OAuth</span> <span class="hljs-number">2</span>.<span class="hljs-number">0</span> <span class="hljs-type">Scope</span> requested by the client,
+    <span class="hljs-string">"requested_scope"</span>: [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>],
+
+    // <span class="hljs-type">Information</span> on the <span class="hljs-type">OpenID</span> <span class="hljs-type">Connect</span> request - only required to process <span class="hljs-keyword">if</span> your <span class="hljs-type">UI</span> should support these values.
+    <span class="hljs-string">"oidc_context"</span>: {<span class="hljs-string">"ui_locales"</span>: [...], ...},
+
+    // <span class="hljs-type">Context</span> <span class="hljs-keyword">is</span> an optional <span class="hljs-keyword">object</span> which can hold arbitrary data. <span class="hljs-type">The</span> data will be made available <span class="hljs-keyword">when</span> fetching the
+    // consent request under the <span class="hljs-string">"context"</span> field. <span class="hljs-type">This</span> <span class="hljs-keyword">is</span> useful <span class="hljs-keyword">in</span> scenarios where login <span class="hljs-keyword">and</span> consent endpoints share
+    // data.
+    <span class="hljs-string">"context"</span>: <span class="hljs-meta">{...}</span>
+}
+</code></pre>
+<p>For a full documentation on all available keys, please head over to the
+<a href="https://www.ory.sh/docs/api/hydra/">API documentation</a> (make sure to select the
+right API version).</p>
+<p>Depending of whether or not <code>skip</code> is true, you will prompt the user to log in
+by showing him/her a username/password form, or by using some other proof of
+identity.</p>
+<p>If <code>skip</code> is true, you <strong>should not</strong> show a user interface but accept the login
+request directly by making a REST call. You can use this step to update some
+internal count of how often a user logged in, or do some other custom business
+logic. But again, do not show the user interface.</p>
+<p>To accept the login request, do something along the lines of:</p>
+<pre><code class="hljs">// This <span class="hljs-keyword">is</span> node-js pseudo code <span class="hljs-keyword">and</span> will <span class="hljs-keyword">not</span> work <span class="hljs-keyword">if</span> you copy it <span class="hljs-number">1</span>:<span class="hljs-number">1</span>
+
+const <span class="hljs-keyword">body</span> = {
+    // This <span class="hljs-keyword">is</span> the user ID <span class="hljs-keyword">of</span> the user that authenticated. <span class="hljs-keyword">If</span> `skip` <span class="hljs-keyword">is</span> <span class="hljs-literal">true</span>, this must be the `subject`
+    // value from the `fetch(<span class="hljs-symbol">'https</span>://hydra/oauth2/auth/requests/login?' + querystring.stringify({ login_challenge: challenge }))` response:
+    //
+    // subject = response.subject
+    //
+    // Otherwise, this can be a value <span class="hljs-keyword">of</span> your choosing:
+    subject: <span class="hljs-string">"..."</span>,
+
+    // <span class="hljs-keyword">If</span> remember <span class="hljs-keyword">is</span> set to <span class="hljs-literal">true</span>, <span class="hljs-keyword">then</span> the authentication session will be persisted <span class="hljs-keyword">in</span> the user<span class="hljs-symbol">'s</span> browser by ORY Hydra. This will set the `skip` flag to <span class="hljs-literal">true</span> <span class="hljs-keyword">in</span> future requests that are coming from this user. This value has no effect <span class="hljs-keyword">if</span> `skip` was <span class="hljs-literal">true</span>.
+    remember: <span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>,
+
+    // The time (<span class="hljs-keyword">in</span> seconds) that the cookie should be valid <span class="hljs-keyword">for</span>. Only has an effect <span class="hljs-keyword">if</span> `remember` <span class="hljs-keyword">is</span> <span class="hljs-literal">true</span>.
+    remember_for: <span class="hljs-number">3600</span>,
+
+    // This value <span class="hljs-keyword">is</span> specified by OpenID connect <span class="hljs-keyword">and</span> optional - it tells OpenID Connect which level <span class="hljs-keyword">of</span> authentication the user performed - <span class="hljs-keyword">for</span> example <span class="hljs-number">2</span>FA <span class="hljs-keyword">or</span> using <span class="hljs-keyword">some</span> biometric data. The concrete values are up to you here.
+    acr: <span class="hljs-string">".."</span>
+}
+
+fetch(<span class="hljs-symbol">'https</span>://hydra/oauth2/auth/requests/login/<span class="hljs-keyword">accept</span>?' + querystring.stringify({ login_challenge: challenge }), {
+    method: <span class="hljs-symbol">'PUT</span>',
+    <span class="hljs-keyword">body</span>: JSON.stringify(<span class="hljs-keyword">body</span>),
+    headers: { <span class="hljs-symbol">'Content</span>-<span class="hljs-keyword">Type</span>': <span class="hljs-symbol">'application</span>/json' }
+}).
+    <span class="hljs-keyword">then</span>(<span class="hljs-keyword">function</span> <span class="hljs-title"></span>(response) {
+        <span class="hljs-keyword">return</span> <span class="hljs-type">response.json()</span>
+    }).
+    <span class="hljs-keyword">then</span>(<span class="hljs-keyword">function</span> <span class="hljs-title"></span>(response) {
+        // The response will contain a `redirect_to` key which contains the URL where the user's user agent must be redirected to next.
+        res.redirect(response.redirect_to);
+    })
+</code></pre>
+<p>You may also choose to deny the login request. This is possible regardless of
+the <code>skip</code> value.</p>
+<pre><code class="hljs"><span class="hljs-comment">// This is node-js pseudo code and will not work if you copy it 1:1</span>
+
+const body = {
+    <span class="hljs-built_in">error</span>: <span class="hljs-string">"..."</span>, <span class="hljs-comment">// This is an error ID like `login_required` or `invalid_request`</span>
+    error_description: <span class="hljs-string">"..."</span> <span class="hljs-comment">// This is a more detailed description of the error</span>
+}
+
+fetch(<span class="hljs-string">'https://hydra/oauth2/auth/requests/login/reject?'</span> + querystring.stringify({ login_challenge: challenge }), {
+    method: <span class="hljs-string">'PUT'</span>,
+    body: JSON.stringify(body),
+    headers: { <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span> }
+}).
+    <span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> {</span>
+        <span class="hljs-keyword">return</span> response.json()
+    }).
+    <span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> {</span>
+        <span class="hljs-comment">// The response will contain a `redirect_to` key which contains the URL where the user's user agent must be redirected to next.</span>
+        res.redirect(response.redirect_to);
+    })
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="user-consent"></a><a href="#user-consent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Consent</h4>
+<p>Now that we know who the user is, we must ask the user if he/she wants to grant
+the requested permissions to the OAuth 2.0 Client. To do so, we check if the
+user has previously granted that exact OAuth 2.0 Client the requested
+permissions. If the user has never granted any permissions to the client, or the
+client requires new permissions not previously granted, the user must visually
+confirm the request.</p>
+<p>This works very similar to the User Login Flow. First, the user will be redirect
+to the Consent Provider which was set using the <code>OAUTH2_CONSENT_PROVIDER</code>
+environment variable. For example, the user is redirected to
+<code>https://consent-provider/consent?consent_challenge=1234</code> if
+<code>OAUTH2_CONSENT_PROVIDER=https://consent-provider/consent</code>. This redirection
+happens <em>always</em> and regardless of whether the user has a valid login session or
+if the user needs to authorize the application or not.</p>
+<p>The service which handles requests to <code>https://consent-provider/consent</code> must
+first fetch information on the consent request using a REST API call. Please be
+aware that for reasons of brevity, the following code snippets are pseudo-code.
+For a fully working example, check out our reference
+<a href="https://github.com/ory/hydra-login-consent-node">User Login, Logout &amp; Consent Provider implementation</a>.</p>
+<pre><code class="hljs">// This <span class="hljs-keyword">is</span> node-js pseudo code <span class="hljs-keyword">and</span> will <span class="hljs-keyword">not</span> work <span class="hljs-keyword">if</span> you copy it <span class="hljs-number">1</span>:<span class="hljs-number">1</span>
+
+challenge = req.url.query.consent_challenge;
+
+fetch(<span class="hljs-symbol">'https</span>://hydra/oauth2/auth/requests/consent?' + querystring.stringify({ consent_challenge: challenge })).
+    <span class="hljs-keyword">then</span>(<span class="hljs-keyword">function</span> <span class="hljs-title"></span>(response) {
+        <span class="hljs-keyword">return</span> <span class="hljs-type">response.json()</span>
+    }).
+    <span class="hljs-keyword">then</span>(<span class="hljs-keyword">function</span> <span class="hljs-title"></span>(response) {
+        // ...
+    })
+</code></pre>
+<p>The server response is a JSON object with the following keys:</p>
+<pre><code class="hljs">{
+    // <span class="hljs-type">Skip</span>, <span class="hljs-keyword">if</span> <span class="hljs-literal">true</span>, <span class="hljs-keyword">let</span>'s us know that the client has previously been granted the requested permissions (scope) by the <span class="hljs-keyword">end</span>-user
+    <span class="hljs-string">"skip"</span>: <span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>,
+
+    // <span class="hljs-type">The</span> user-id <span class="hljs-keyword">of</span> the user that will grant (<span class="hljs-keyword">or</span> deny) the request
+    <span class="hljs-string">"subject"</span>: <span class="hljs-string">"user-id"</span>,
+
+    // <span class="hljs-type">The</span> <span class="hljs-type">OAuth</span> <span class="hljs-number">2</span>.<span class="hljs-number">0</span> client that initiated the request
+    <span class="hljs-string">"client"</span>: {<span class="hljs-string">"id"</span>: <span class="hljs-string">"..."</span>, ...},
+
+    // <span class="hljs-type">The</span> initial <span class="hljs-type">OAuth</span> <span class="hljs-number">2</span>.<span class="hljs-number">0</span> request url
+    <span class="hljs-string">"request_url"</span>: <span class="hljs-string">"https://hydra/oauth2/auth?client_id=1234&amp;scope=foo+bar&amp;response_type=code&amp;..."</span>,
+
+    // <span class="hljs-type">The</span> <span class="hljs-type">OAuth</span> <span class="hljs-number">2</span>.<span class="hljs-number">0</span> <span class="hljs-type">Scope</span> requested by the client,
+    <span class="hljs-string">"requested_scope"</span>: [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>],
+
+    // <span class="hljs-type">Information</span> on the <span class="hljs-type">OpenID</span> <span class="hljs-type">Connect</span> request - only required to process <span class="hljs-keyword">if</span> your <span class="hljs-type">UI</span> should support these values.
+    <span class="hljs-string">"oidc_context"</span>: {<span class="hljs-string">"ui_locales"</span>: [...], ...},
+
+    // <span class="hljs-type">Contains</span> arbitrary information <span class="hljs-built_in">set</span> by the login endpoint <span class="hljs-keyword">or</span> <span class="hljs-keyword">is</span> empty <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> <span class="hljs-built_in">set</span>.
+    <span class="hljs-string">"context"</span>: <span class="hljs-meta">{...}</span>
+}
+</code></pre>
+<p>If skip is true, you should not show any user interface to the user. Instead,
+you should accept (or deny) the consent request. Typically, you will accept the
+request unless you have a very good reason to deny it (e.g. the OAuth 2.0 Client
+is banned).</p>
+<p>If skip is false and you show the consent screen, you should use the
+<code>requested_scope</code> array to display a list of permissions which the user must
+grant (e.g. using a checkbox). Some people choose to always skip this step if
+the OAuth 2.0 Client is a first-party client - meaning that the client is used
+by you or your developers in an internal application.</p>
+<p>Assuming the user accepts the consent request, the code looks very familiar to
+the User Login Flow.</p>
+<pre><code class="hljs"><span class="hljs-comment">// This is node-js pseudo code and will not work if you copy it 1:1</span>
+
+<span class="hljs-keyword">const</span> body = {
+    <span class="hljs-comment">// A list of permissions the user granted to the OAuth 2.0 Client. This can be fewer permissions that initially requested, but are rarely more or other permissions than requested.</span>
+    grant_scope: [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>],
+
+    <span class="hljs-comment">// If remember is set to true, then the consent response will be remembered for future requests. This will set the `skip` flag to true in future requests that are coming from this user for the granted permissions and that particular client. This value has no effect if `skip` was true.</span>
+    remember: <span class="hljs-keyword">true</span>|<span class="hljs-keyword">false</span>,
+
+    <span class="hljs-comment">// The time (in seconds) that the cookie should be valid for. Only has an effect if `remember` is true.</span>
+    remember_for: <span class="hljs-number">3600</span>,
+
+    <span class="hljs-comment">// The session allows you to set additional data in the access and ID tokens.</span>
+    session: {
+        <span class="hljs-comment">// Sets session data for the access and refresh token, as well as any future tokens issued by the</span>
+        <span class="hljs-comment">// refresh grant. Keep in mind that this data will be available to anyone performing OAuth 2.0 Challenge Introspection.</span>
+        <span class="hljs-comment">// If only your services can perform OAuth 2.0 Challenge Introspection, this is usually fine. But if third parties</span>
+        <span class="hljs-comment">// can access that endpoint as well, sensitive data from the session might be exposed to them. Use with care!</span>
+        access_token: { ... },
+
+        <span class="hljs-comment">// Sets session data for the OpenID Connect ID token. Keep in mind that the session'id payloads are readable</span>
+        <span class="hljs-comment">// by anyone that has access to the ID Challenge. Use with care! Any information added here will be mirrored at</span>
+        <span class="hljs-comment">// the `/userinfo` endpoint.</span>
+        id_token: { ... },
+    }
+}
+
+fetch(<span class="hljs-string">'https://hydra/oauth2/auth/requests/consent/accept?'</span> + querystring.stringify({ consent_challenge: challenge }), {
+    method: <span class="hljs-string">'PUT'</span>,
+    body: JSON.stringify(body),
+    headers: { <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span> }
+}).
+    then(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> </span>{
+        <span class="hljs-keyword">return</span> response.json()
+    }).
+    then(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> </span>{
+        <span class="hljs-comment">// The response will contain a `redirect_to` key which contains the URL where the user's user agent must be redirected to next.</span>
+        res.redirect(response.redirect_to);
+    })
+</code></pre>
+<p>You may also choose to deny the consent request. This is possible regardless of
+the <code>skip</code> value.</p>
+<pre><code class="hljs"><span class="hljs-comment">// This is node-js pseudo code and will not work if you copy it 1:1</span>
+
+const body = {
+    <span class="hljs-comment">// This is an error ID like `consent_required` or `invalid_request`</span>
+    <span class="hljs-built_in">error</span>: <span class="hljs-string">"..."</span>,
+
+    <span class="hljs-comment">// This is a more detailed description of the error</span>
+    error_description: <span class="hljs-string">"..."</span>
+}
+
+fetch(<span class="hljs-string">'https://hydra/oauth2/auth/requests/consent/reject?'</span> + querystring.stringify({ consent_challenge: challenge }), {
+    method: <span class="hljs-string">'PUT'</span>,
+    body: JSON.stringify(body),
+    headers: { <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span> }
+}).
+    <span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> {</span>
+        <span class="hljs-keyword">return</span> response.json()
+    }).
+    <span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(response)</span> {</span>
+        <span class="hljs-comment">// The response will contain a `redirect_to` key which contains the URL where the user's user agent must be redirected to next.</span>
+        res.redirect(response.redirect_to);
+    })
+</code></pre>
+<p>Once the user agent is redirected back, the OAuth 2.0 flow will be finalized.</p>
+<h3><a class="anchor" aria-hidden="true" id="logout"></a><a href="#logout" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logout</h3>
+<p>ORY Hydra supports:</p>
+<ul>
+<li><a href="https://openid.net/specs/openid-connect-frontchannel-1_0.html">OpenID Connect Front-Channel Logout 1.0</a></li>
+<li><a href="https://openid.net/specs/openid-connect-backchannel-1_0.html">OpenID Connect Back-Channel Logout 1.0</a></li>
+</ul>
+<p>A log out request may be initiated by a RP (Relying Party, alias for OAuth 2.0
+Client) or by calling the logout endpoint without any parameters. In both cases,
+the high level flow looks as follows:</p>
+<ol>
+<li>A user-agent (browser) requests the logout endpoint
+(<code>/oauth2/sessions/logout</code>). If the request is done on behalf of a RP:</li>
+</ol>
+<ul>
+<li>The URL query MUST contain an ID Token issued by ORY Hydra as the
+<code>id_token_hint</code>: <code>/oauth2/sessions/logout?id_token_hint=...</code></li>
+<li>The URL query MAY contain key <code>post_logout_redirect_uri</code> indicating where the
+user agent should be redirected after the logout completed successfully. Each
+OAuth 2.0 Client can whitelist a list of URIs that can be used as the value
+using the <code>post_logout_redirect_uris</code> metadata field:
+<code>/oauth2/sessions/logout?id_token_hint=...&amp;post_logout_redirect_uri=https://i-must-be-whitelisted/</code></li>
+<li>If <code>post_logout_redirect_uri</code> is set, the URL query SHOULD contain a <code>state</code>
+value. On successful redirection, this state value will be appended to the
+<code>post_logout_redirect_uri</code>. The functionality is equal to the <code>state</code>
+parameter when performing OAuth2 flows.</li>
+</ul>
+<ol start="2">
+<li>The user-agent is redirected to the logout provider URL (configuration item
+<code>urls.logout</code>) and contains a challenge:
+<code>https://my-logout-provider/logout?challenge=...</code></li>
+<li>The logout provider uses the <code>challenge</code> query parameter to fetch metadata
+about the request. The logout provider may choose to show a UI where the user
+has to accept the logout request. Alternatively, the logout provider MAY
+choose to silently accept the logout request.</li>
+<li>To accept the logout request, the logout provider makes a <code>PUT</code> call to
+<code>/oauth2/auth/requests/logout/accept?challenge=...</code>. No request body is
+required.</li>
+<li>The response contains a <code>redirect_to</code> value where the logout provider
+redirects the user back to.</li>
+<li>ORY Hydra performs OpenID Connect Front- and Back-Channel logout.</li>
+<li>The user agent is being redirected to a specified redirect URL. This may
+either be the default redirect URL set by <code>urls.post_logout_redirect</code> or to
+the value specified by query parameter <code>post_logout_redirect_uri</code>.</li>
+</ol>
+<p><img src="/images/docs/hydra/logout-flow.png" alt="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gICAgVXNlciBBZ2VudC0-Pk9SWSBIeWRyYTogQ2FsbHMgbG9nb3V0IGVuZHBvaW50XG4gICAgT1JZIEh5ZHJhLS0-Pk9SWSBIeWRyYTogVmFsaWRhdGVzIGxvZ291dCBlbmRwb2ludFxuICAgIE9SWSBIeWRyYS0-PkxvZ291dCBQcm92aWRlcjogUmVkaXJlY3RzIGVuZCB1c2VyIHdpdGggbG9nb3V0IGNoYWxsZW5nZVxuICAgIExvZ291dCBQcm92aWRlci0tPk9SWSBIeWRyYTogRmV0Y2hlcyBsb2dvdXQgcmVxdWVzdCBpbmZvXG4gICAgTG9nb3V0IFByb3ZpZGVyLS0-PkxvZ291dCBQcm92aWRlcjogQWNxdWlyZXMgdXNlciBjb25zZW50IGZvciBsb2dvdXQgKG9wdGlvbmFsKVxuICAgIExvZ291dCBQcm92aWRlci0tPk9SWSBIeWRyYTogSW5mb3JtcyB0aGF0IGxvZ291dCByZXF1ZXN0IGlzIGdyYW50ZWRcbiAgICBMb2dvdXQgUHJvdmlkZXItPj5PUlkgSHlkcmE6IFJlZGlyZWN0cyBlbmQgdXNlciB0byByZWRpcmVjdCB1cmwgd2l0aCBsb2dvdXQgY2hhbGxlbmdlXG4gICAgT1JZIEh5ZHJhLS0-Pk9SWSBIeWRyYTogUGVyZm9ybXMgbG9nb3V0IHJvdXRpbmVzXG4gICAgT1JZIEh5ZHJhLS0-VXNlciBBZ2VudDogUmVkaXJlY3RzIHRvIHNwZWNpZmllZCByZWRpcmVjdCB1cmwiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ">)</p>
+<p>This endpoint does not remove any Access/Refresh Tokens.</p>
+<h4><a class="anchor" aria-hidden="true" id="logout-provider-example-nodejs-pseudo-code"></a><a href="#logout-provider-example-nodejs-pseudo-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logout Provider Example (NodeJS Pseudo-code)</h4>
+<p>Following step 1 from the flow above, the user-agent is redirected to the logout
+provider (e.g. <code>https://my-logout-provider/logout?challenge=...</code>). Next, the
+logout provider fetches information about the logout request:</p>
+<pre><code class="hljs css language-node"><span class="hljs-comment">// This is node-js pseudo code and will not work if you copy it 1:1</span>
+
+challenge = req.url.query.logout_challenge;
+
+fetch(
+  <span class="hljs-string">'https://hydra/oauth2/auth/requests/logout?'</span> +
+    querystring.stringify({ logout_challenge: challenge })
+)
+  .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(response)</span> {</span>
+    <span class="hljs-keyword">return</span> response.json();
+  })
+  .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(response)</span> {</span>
+    <span class="hljs-comment">// ...</span>
+  });
+</code></pre>
+<p>The server response is a JSON object with the following keys:</p>
+<pre><code class="hljs">{
+    // The <span class="hljs-keyword">user</span> <span class="hljs-keyword">for</span> whom the logout was request.
+    "subject": "user-id",
+
+    // The <span class="hljs-keyword">login</span> <span class="hljs-keyword">session</span> ID that was requested <span class="hljs-keyword">to</span> <span class="hljs-keyword">log</span> <span class="hljs-keyword">out</span>.
+    "sid": "abc..",
+
+    // The original request URL.
+    "request_url": "https://hydra/oauth2/sessions/logout?id_token_hint=...",
+
+    // <span class="hljs-keyword">True</span> <span class="hljs-keyword">if</span> the request was initiated <span class="hljs-keyword">by</span> a Relying Party (RP) / OAuth <span class="hljs-number">2.0</span> Client. <span class="hljs-keyword">False</span> otherwise.
+    "rp_initiated": <span class="hljs-keyword">true</span>|<span class="hljs-keyword">false</span>
+}
+</code></pre>
+<p>Next, the logout provider should decide if the end-user should perform a UI
+action such as confirming the logout request. It is RECOMMENDED to request
+logout confirmation from the end-user when <code>rp_initiated</code> is set to true.</p>
+<p>When the logout provider decides to accept the logout request, the flow is
+completed as follows:</p>
+<pre><code class="hljs css language-node">fetch(
+  <span class="hljs-string">'https://hydra/oauth2/auth/requests/logout/accept?'</span> +
+    querystring.stringify({ logout_challenge: challenge }),
+  {
+    method: <span class="hljs-string">'PUT'</span>,
+  }
+)
+  .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(response)</span> {</span>
+    <span class="hljs-keyword">return</span> response.json();
+  })
+  .<span class="hljs-keyword">then</span>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(response)</span> {</span>
+    <span class="hljs-comment">// The response will contain a `redirect_to` key which contains the URL where the user's user agent must be redirected to next.</span>
+    res.redirect(response.redirect_to);
+  });
+</code></pre>
+<p>You can also reject a logout request (e.g. if the user chose to not log out):</p>
+<pre><code class="hljs css language-node"><span class="hljs-selector-tag">fetch</span>(
+  <span class="hljs-string">'https://hydra/oauth2/auth/requests/logout/reject?'</span> +
+    querystring.stringify({ <span class="hljs-attribute">logout_challenge</span>: challenge }),
+  {
+    <span class="hljs-attribute">method</span>: <span class="hljs-string">'PUT'</span>,
+  }
+)<span class="hljs-selector-class">.then</span>(function(response) {
+  <span class="hljs-comment">// Now you can do whatever you want - redirect the user back to your home page or whatever comes to mind.</span>
+});
+</code></pre>
+<p>If the logout request was granted and the user agent redirected back to ORY
+Hydra, all OpenID Connect Front-/Back-channel logout flows (if set) will be
+performed and the user will be redirect back to his/her final destination.</p>
+<h4><a class="anchor" aria-hidden="true" id="openid-connect-front-channel-logout-10-https-openidnet-specs-openid-connect-frontchannel-1_0html"></a><a href="#openid-connect-front-channel-logout-10-https-openidnet-specs-openid-connect-frontchannel-1_0html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://openid.net/specs/openid-connect-frontchannel-1_0.html">OpenID Connect Front-Channel Logout 1.0</a></h4>
+<p>In summary
+(<a href="https://openid.net/specs/openid-connect-frontchannel-1_0.html">read the spec</a>)
+this feature allows an OAuth 2.0 Client to register fields
+<code>frontchannel_logout_uri</code> and <code>frontchannel_logout_session_required</code>.</p>
+<p>If <code>frontchannel_logout_uri</code> is set to a valid URL (the host, port, path must
+all match those of one of the Redirect URIs), ORY Hydra will redirect the
+user-agent (typically browser) to that URL after a logout occurred. This allows
+the OAuth 2.0 Client Application to log out the end-user in its own system as
+well - for example by deleting a Cookie or otherwise invalidating the user
+session.</p>
+<p>ORY Hydra always appends query parameters values <code>iss</code> and <code>sid</code> to the
+Front-Channel Logout URI, for example:</p>
+<pre><code class="hljs">https:<span class="hljs-comment">//rp.example.org/frontchannel_logout</span>
+  ?iss=https:<span class="hljs-comment">//server.example.com</span>
+  &amp;sid=<span class="hljs-number">08</span>a5019c<span class="hljs-number">-17e1</span><span class="hljs-number">-4977</span><span class="hljs-number">-8f</span>42<span class="hljs-number">-65</span>a12843ea02
+</code></pre>
+<p>Each OpenID Connect ID Token is issued with a <code>sid</code> claim that will match the
+<code>sid</code> value from the Front-Channel Logout URI.</p>
+<p>ORY Hydra will automatically execute the required HTTP Redirects to make this
+work. No extra work is required.</p>
+<h4><a class="anchor" aria-hidden="true" id="openid-connect-back-channel-logout-10-https-openidnet-specs-openid-connect-backchannel-1_0html"></a><a href="#openid-connect-back-channel-logout-10-https-openidnet-specs-openid-connect-backchannel-1_0html" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><a href="https://openid.net/specs/openid-connect-backchannel-1_0.html">OpenID Connect Back-Channel Logout 1.0</a></h4>
+<p>In summary
+(<a href="https://openid.net/specs/openid-connect-backchannel-1_0.html">read the spec</a>)
+this feature allows an OAuth 2.0 Client to register fields
+<code>backchannel_logout_uri</code> and <code>backchannel_logout_session_required</code>.</p>
+<p>If <code>backchannel_logout_uri</code> is set to a valid URL, a HTTP Post request with
+Content-Type <code>application/x-www-form-urlencoded</code> and a <code>logout_token</code> will be
+made to that URL when a end-user logs out. The <code>logout_token</code> is a JWT signed
+with the same key that is used to sign OpenID Connect ID Tokens. You should thus
+validate the <code>logout_token</code> using the ID Token Public Key (can be fetched from
+<code>/.well-known/jwks.json</code>). The <code>logout_token</code> contains the following claims:</p>
+<ul>
+<li><code>iss</code> - Issuer Identifier, as specified in Section 2 of [OpenID.Core].</li>
+<li><code>aud</code> - Audience(s), as specified in Section 2 of [OpenID.Core].</li>
+<li><code>iat</code> - Issued at time, as specified in Section 2 of [OpenID.Core].</li>
+<li><code>jti</code> - Unique identifier for the token, as specified in Section 9 of
+[OpenID.Core].</li>
+<li><code>events</code> - Claim whose value is a JSON object containing the member name
+<a href="http://schemas.openid.net/event/backchannel-logout">http://schemas.openid.net/event/backchannel-logout</a>. This declares that the JWT
+is a Logout Token. The corresponding member value MUST be a JSON object and
+SHOULD be the empty JSON object {}.</li>
+<li><code>sid</code> - Session ID - String identifier for a Session. This represents a
+Session of a User Agent or device for a logged-in End-User at an RP. Different
+sid values are used to identify distinct sessions at an OP. The sid value need
+only be unique in the context of a particular issuer. Its contents are opaque
+to the RP. Its syntax is the same as an OAuth 2.0 Client Identifier.</li>
+</ul>
+<pre><code class="hljs">{
+  <span class="hljs-attr">"iss"</span>: <span class="hljs-string">"https://server.example.com"</span>,
+  <span class="hljs-attr">"aud"</span>: <span class="hljs-string">"s6BhdRkqt3"</span>,
+  <span class="hljs-attr">"iat"</span>: <span class="hljs-number">1471566154</span>,
+  <span class="hljs-attr">"jti"</span>: <span class="hljs-string">"bWJq"</span>,
+  <span class="hljs-attr">"sid"</span>: <span class="hljs-string">"08a5019c-17e1-4977-8f42-65a12843ea02"</span>,
+  <span class="hljs-attr">"events"</span>: {
+     <span class="hljs-attr">"http://schemas.openid.net/event/backchannel-logout"</span>: {}
+   }
+}
+</code></pre>
+<p>An exemplary Back-Channel Logout Request looks as follows:</p>
+<pre><code class="hljs"><span class="hljs-keyword">POST</span> <span class="hljs-string">/backchannel_logout</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: rp.example.org
+<span class="hljs-attribute">Content-Type</span>: application/x-www-form-urlencoded
+
+<span class="jboss-cli">logout_token=eyJhbGci <span class="hljs-string">...</span> <span class="hljs-string">.eyJpc3Mi</span> <span class="hljs-string">...</span> <span class="hljs-string">.T3BlbklE</span> <span class="hljs-string">...</span>
+</span></code></pre>
+<p>The Logout Token must be validated as follows:</p>
+<ul>
+<li>Validate the Logout Token signature in the same way that an ID Token signature
+is validated, with the following refinements.</li>
+<li>Validate the iss, aud, and iat Claims in the same way they are validated in ID
+Tokens.</li>
+<li>Verify that the Logout Token contains a sid Claim.</li>
+<li>Verify that the Logout Token contains an events Claim whose value is JSON
+object containing the member name
+<a href="http://schemas.openid.net/event/backchannel-logout">http://schemas.openid.net/event/backchannel-logout</a>.</li>
+<li>Verify that the Logout Token does not contain a nonce Claim.</li>
+<li>Optionally verify that another Logout Token with the same jti value has not
+been recently received.</li>
+</ul>
+<p>The endpoint then returns a HTTP 200 OK response. Cache-Control headers should
+be set to:</p>
+<pre><code class="hljs"><span class="hljs-keyword">Cache</span>-Control: <span class="hljs-keyword">no</span>-<span class="hljs-keyword">cache</span>, <span class="hljs-keyword">no</span>-<span class="hljs-keyword">store</span>
+<span class="hljs-keyword">Pragma</span>: <span class="hljs-keyword">no</span>-<span class="hljs-keyword">cache</span>
+</code></pre>
+<p>Because the OpenID Connect Back-Channel Logout Flow is not executed using the
+user-agent (e.g. Browser) but from ORY Hydra directly, the session cookie of the
+end-user will not be available to the OAuth 2.0 Client and the session has to be
+invalidated by some other means (e.g. by blacklisting the session ID).</p>
+<h3><a class="anchor" aria-hidden="true" id="revoking-consent-and-login-sessions"></a><a href="#revoking-consent-and-login-sessions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Revoking consent and login sessions</h3>
+<h4><a class="anchor" aria-hidden="true" id="login"></a><a href="#login" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Login</h4>
+<p>You can revoke login sessions. Revoking a login session will remove all of the
+user's cookies at ORY Hydra and will require the user to re-authenticate when
+performing the next OAuth 2.0 Authorize Code Flow. Be aware that this option
+will remove all cookies from all devices.</p>
+<p>Revoking the login sessions of a user is as easy as sending
+<code>DELETE to</code>/oauth2/auth/sessions/login?subject={subject}`.</p>
+<p>This endpoint is not compatible with OpenID Connect Front-/Backchannel logout
+and does not revoke any tokens.</p>
+<h4><a class="anchor" aria-hidden="true" id="consent"></a><a href="#consent" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Consent</h4>
+<p>You can revoke a user's consent either on a per application basis or for all
+applications. Revoking the consent will automatically revoke all related access
+and refresh tokens.</p>
+<p>Revoking all consent sessions of a user is as easy as sending
+<code>DELETE to</code>/oauth2/auth/sessions/consent?subject={subject}`.</p>
+<p>Revoking the consent sessions of a user for a specific client is as easy as
+sending
+<code>DELETE to</code>/oauth2/auth/sessions/consent?subject={subject}&amp;client={client}`.</p>
+<h2><a class="anchor" aria-hidden="true" id="oauth-20"></a><a href="#oauth-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0</h2>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20-scope"></a><a href="#oauth-20-scope" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Scope</h3>
+<p>The scope of an OAuth 2.0 scope defines the permission the token was granted by
+the end-user. For example, a specific token might be allowed to access public
+pictures, but not private ones. The granted permissions are established during
+the consent screen.</p>
+<p>Additionally, ORY Hydra has pre-defined OAuth 2.0 Scope values:</p>
+<ul>
+<li><code>offline_access</code>: Include this scope if you wish to receive a refresh token</li>
+<li><code>openid</code>: Include this scope if you wish to perform an OpenID Connect request.</li>
+</ul>
+<blockquote>
+<p>A OAuth 2.0 Scope <strong>is not a permission</strong>:</p>
+<ul>
+<li>A permission allows an actor to perform a certain action in a system: <em>Bob
+is allowed to delete his own photos</em>.</li>
+<li>OAuth 2.0 Scope implies that an end-user granted certain privileges to a
+client: <em>Bob allowed the OAuth 2.0 Client to delete all users</em>.</li>
+</ul>
+<p>The OAuth 2.0 Scope can be granted without the end-user actually having the
+right permissions. In the examples above, Bob granted an OAuth 2.0 Client the
+permission (&quot;scope&quot;) to delete all users in his name. However, since Bob is
+not an administrator, that permission (&quot;access control&quot;) is not actually
+granted to Bob. Therefore any request by the OAuth 2.0 Client that tries to
+delete users on behalf of Bob should fail.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20-refresh-tokens"></a><a href="#oauth-20-refresh-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Refresh Tokens</h3>
+<p>OAuth 2.0 Refresh Tokens are issued only when an Authorize Code Flow
+(<code>response_type=code</code>) or an OpenID Connect Hybrid Flow with an Authorize Code
+Response Type (<code>response_type=code+...</code>) is executed. OAuth 2.0 Refresh Tokens
+are not returned for Implicit or Client Credentials grants:</p>
+<ul>
+<li>Capable of issuing an OAuth 2.0 Refresh Token:</li>
+<li><a href="https://ory-hydra.example/oauth2/auth?response_type=code&amp;">https://ory-hydra.example/oauth2/auth?response_type=code&amp;</a>...</li>
+<li><a href="https://ory-hydra.example/oauth2/auth?response_type=code+token&amp;">https://ory-hydra.example/oauth2/auth?response_type=code+token&amp;</a>...</li>
+<li><a href="https://ory-hydra.example/oauth2/auth?response_type=code+token+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=code+token+id_token&amp;</a>...</li>
+<li><a href="https://ory-hydra.example/oauth2/auth?response_type=code+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=code+id_token&amp;</a>...</li>
+<li>Will not issue an OAuth 2.0 Refresh Token</li>
+<li><a href="https://ory-hydra.example/oauth2/auth?response_type=token&amp;">https://ory-hydra.example/oauth2/auth?response_type=token&amp;</a>...</li>
+<li><a href="https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;</a>...</li>
+<li><a href="https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;</a>...</li>
+<li><a href="https://ory-hydra.example/oauth2/token?grant_type=client_redentials&amp;">https://ory-hydra.example/oauth2/token?grant_type=client_redentials&amp;</a>...</li>
+</ul>
+<p>Additionally, each OAuth 2.0 Client that wants to request an OAuth 2.0 Refresh
+Token must be allowed to request scope <code>offline_access</code>. When performing an
+OAuth 2.0 Authorize Code Flow, the <code>offline_access</code> value must be included in
+the requested OAuth 2.0 Scope:</p>
+<pre><code class="hljs"><span class="hljs-symbol">https:</span><span class="hljs-comment">//authorization-server.com/auth</span>
+ <span class="hljs-variable">&amp;scope</span>=offline_access
+ ?response_type=code
+ <span class="hljs-variable">&amp;client_id</span>=...
+ <span class="hljs-variable">&amp;redirect_uri</span>=...
+ <span class="hljs-variable">&amp;state</span>=...
+</code></pre>
+<p>When accepting the consent request, <code>offline_access</code> must be in the list of
+<code>grant_scope</code>:</p>
+<pre><code class="hljs"><span class="hljs-function"><span class="hljs-title">fetch</span><span class="hljs-params">(<span class="hljs-string">'https://hydra/oauth2/auth/requests/consent/accept?challenge='</span> + encodeURIComponent(challenge)</span></span>, {
+    method: <span class="hljs-string">'PUT'</span>,
+    <span class="hljs-selector-tag">body</span>: JSON.stringify(body),
+    headers: { <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span> }
+}).
+const <span class="hljs-selector-tag">body</span> = {
+    grant_scope: [<span class="hljs-string">"offline_access"</span>],
+}
+</code></pre>
+<p>Refresh Token Lifespan can be set using configuration key <code>ttl.refresh_token</code>.
+If set to -1, Refresh Tokens never expire.</p>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20-token-introspection"></a><a href="#oauth-20-token-introspection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Token Introspection</h3>
+<p>OAuth2 Token Introspection is an <a href="https://tools.ietf.org/html/rfc7662">IETF</a>
+standard. It defines a method for a protected resource to query an OAuth 2.0
+authorization server to determine the active state of an OAuth 2.0 token and to
+determine meta-information about this token. OAuth 2.0 deployments can use this
+method to convey information about the authorization context of the token from
+the authorization server to the protected resource.</p>
+<p>You can find more details on this endpoint in the
+<a href="https://www.ory.sh/docs/">ORY Hydra API Docs</a>. You can also use the CLI command
+<code>hydra token introspect &lt;token&gt;</code>.</p>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20-clients"></a><a href="#oauth-20-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Clients</h3>
+<p>You can manage <em>OAuth 2.0 clients</em> using the cli or the HTTP REST API:</p>
+<ul>
+<li><strong>CLI:</strong> <code>hydra help clients</code></li>
+<li><strong>REST:</strong> Read the <a href="https://www.ory.sh/docs/hydra/sdk/api">API Docs</a></li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h4>
+<p>This section provides a few examples to get you started with the most-used OAuth
+2.0 Clients:</p>
+<h5><a class="anchor" aria-hidden="true" id="authorize-code-flow-with-refresh-token"></a><a href="#authorize-code-flow-with-refresh-token" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authorize Code Flow with Refresh Token</h5>
+<p>The following command creates an OAuth 2.0 Client capable of executing the
+Authorize Code Flow, requesting ID and Refresh Tokens and performing the OAuth
+2.0 Refresh Grant:</p>
+<pre><code class="hljs css language-sh">hydra clients create \
+    --endpoint http://ory-hydra:4445 \
+    --id client-id \
+    --secret client-secret \
+    --grant-types authorization_code,refresh_token \
+    --response-types code \
+    --scope openid,offline \
+    --callbacks http://my-app.com/callback,http://my-other-app.com/callback
+</code></pre>
+<p>The OAuth 2.0 Client will be allowed to use values <code>http://my-app.com/callback</code>
+and <code>http://my-other-app.com/callback</code> as <code>redirect_url</code>.</p>
+<blockquote>
+<p>It is expected that the OAuth 2.0 Client sends its credentials using HTTP
+Basic Authorization.</p>
+</blockquote>
+<p>If you wish to send credentials in the POST Body, add the following flag to the
+command above:</p>
+<pre><code class="hljs">    --token-endpoint-auth-<span class="hljs-function"><span class="hljs-keyword">method</span> <span class="hljs-title">client_secret_post</span> \
+</span></code></pre>
+<p>The same can be achieved by setting
+<code>&quot;token_endpoint_auth_method&quot;: &quot;client_secret_post&quot;</code> in the the request body of
+<code>POST /clients</code> and <code>PUT /clients/&lt;id&gt;</code>.</p>
+<h5><a class="anchor" aria-hidden="true" id="client-credentials-flow"></a><a href="#client-credentials-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client Credentials Flow</h5>
+<p>A client only capable of performing the Client Credentials Flow can be created
+as follows:</p>
+<pre><code class="hljs"><span class="hljs-attr">hydra</span> <span class="hljs-string">clients create \
+    --endpoint http://ory-hydra:4445 \
+    --id my-client \
+    --secret secret \
+    -g client_credentials</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="openid-connect"></a><a href="#openid-connect" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OpenID Connect</h2>
+<h3><a class="anchor" aria-hidden="true" id="userinfo"></a><a href="#userinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Userinfo</h3>
+<p>The <code>/userinfo</code> endpoint returns information on a user given an access token.
+Since ORY Hydra is agnostic to any end-user data, the <code>/userinfo</code> endpoint
+returns only minimal information per default:</p>
+<pre><code class="hljs">GET <span class="hljs-string">https:</span><span class="hljs-comment">//ory-hydra:4444/userinfo</span>
+<span class="hljs-string">Authorization:</span> bearer access-token.xxxx
+
+{
+ <span class="hljs-string">"acr"</span>: <span class="hljs-string">"oauth2"</span>,
+ <span class="hljs-string">"sub"</span>: <span class="hljs-string">"xxx@xxx.com"</span>
+}
+</code></pre>
+<p>Any information set to the key <code>session.id_token</code> during accepting the consent
+request will also be included here.</p>
+<pre><code class="hljs css language-js">
+<span class="hljs-comment">// This is node-js pseudo code and will not work if you copy it 1:1</span>
+
+<span class="hljs-keyword">const</span> body = {
+    <span class="hljs-comment">// grant_scope: ["foo", "bar"],</span>
+    <span class="hljs-comment">// ...</span>
+    session: {
+        <span class="hljs-attr">id_token</span>: {
+            <span class="hljs-string">"foo"</span>: <span class="hljs-string">"bar"</span>
+        },
+    }
+}
+
+fetch(<span class="hljs-string">'https://hydra/oauth2/auth/requests/consent/'</span> + challenge + <span class="hljs-string">'/accept'</span>, {
+    <span class="hljs-attr">method</span>: <span class="hljs-string">'PUT'</span>,
+    <span class="hljs-attr">body</span>: <span class="hljs-built_in">JSON</span>.stringify(body),
+    <span class="hljs-attr">headers</span>: { <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span> }
+}).
+    <span class="hljs-comment">// then(function (response) {</span>
+</code></pre>
+<p>By making the <code>/userinfo</code> call with a token issued by this consent request, one
+would receive:</p>
+<pre><code class="hljs">GET <span class="hljs-string">https:</span><span class="hljs-comment">//ory-hydra:4444/userinfo</span>
+<span class="hljs-string">Authorization:</span> bearer <span class="hljs-keyword">new</span>-access-token.xxxx
+
+{
+ <span class="hljs-string">"acr"</span>: <span class="hljs-string">"oauth2"</span>,
+ <span class="hljs-string">"sub"</span>: <span class="hljs-string">"xxx@xxx.com"</span>,
+ <span class="hljs-string">"foo"</span>: <span class="hljs-string">"bar"</span>
+}
+</code></pre>
+<p>You should only include data that has been authorized by the end-user through an
+OAuth 2.0 Scope. If an OAuth 2.0 Client, for example, requests the <code>phone</code> scope
+and the end-user authorizes that scope, the phone number should be added to
+<code>session.id_token</code>.</p>
+<blockquote>
+<p>Be aware that the <code>/userinfo</code> endpoint is public. Its contents are thus as
+publicly visible as those of ID Tokens. It is therefore imperative to <strong>not
+expose sensitive information without end-user consent.</strong></p>
+</blockquote>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/31/2019 by prettifier[bot]</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.12/hydra/5min-tutorial"><span class="arrow-prev">← </span><span>5 Minute Tutorial</span></a><a class="docs-next button" href="/docs/oryOS.12/hydra/configure-deploy"><span>Installation and Setup</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#oauth-20-and-openid-connect">OAuth 2.0 and OpenID Connect</a><ul class="toc-headings"><li><a href="#ory-hydra-does-not-manage-users">ORY Hydra does not manage Users</a></li><li><a href="#common-misconceptions">Common Misconceptions</a></li><li><a href="#glossary">Glossary</a></li></ul></li><li><a href="#authenticating-users-and-requesting-consent">Authenticating Users and Requesting Consent</a><ul class="toc-headings"><li><a href="#the-flow-from-a-user-s-point-of-view">The flow from a user's point of view</a></li><li><a href="#the-flow-from-a-network-perspective">The flow from a network perspective</a></li><li><a href="#implementing-a-login-consent-provider">Implementing a Login &amp; Consent Provider</a></li><li><a href="#logout">Logout</a></li><li><a href="#revoking-consent-and-login-sessions">Revoking consent and login sessions</a></li></ul></li><li><a href="#oauth-20">OAuth 2.0</a><ul class="toc-headings"><li><a href="#oauth-20-scope">OAuth 2.0 Scope</a></li><li><a href="#oauth-20-refresh-tokens">OAuth 2.0 Refresh Tokens</a></li><li><a href="#oauth-20-token-introspection">OAuth 2.0 Token Introspection</a></li><li><a href="#oauth-20-clients">OAuth 2.0 Clients</a></li></ul></li><li><a href="#openid-connect">OpenID Connect</a><ul class="toc-headings"><li><a href="#userinfo">Userinfo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
