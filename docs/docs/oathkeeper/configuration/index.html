@@ -94,7 +94,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set SERVE_API_PORT=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    port:</span> <span class="hljs-number">50180321.95602608</span>
+<span class="hljs-attr">    port:</span> <span class="hljs-number">53187389.89123708</span>
 
     <span class="hljs-comment">## Host ##</span>
     <span class="hljs-comment">#</span>
@@ -110,7 +110,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set SERVE_API_HOST=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    host:</span> <span class="hljs-string">''</span>
+<span class="hljs-attr">    host:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>
 
     <span class="hljs-comment">## Cross Origin Resource Sharing (CORS) ##</span>
     <span class="hljs-comment">#</span>
@@ -129,7 +129,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_ENABLED=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">true</span>
 
       <span class="hljs-comment">## Allowed Origins ##</span>
       <span class="hljs-comment">#</span>
@@ -148,8 +148,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_ALLOWED_ORIGINS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      allowed_origins:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">'*'</span>
+<span class="hljs-attr">      allowed_origins:</span> <span class="hljs-attr">https://*.foo.example.com</span>
 
       <span class="hljs-comment">## Allowed HTTP Methods ##</span>
       <span class="hljs-comment">#</span>
@@ -164,9 +163,8 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_ALLOWED_METHODS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      allowed_methods:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">DELETE</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">POST</span>
 <span class="hljs-bullet">        -</span> <span class="hljs-string">CONNECT</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">TRACE</span>
 
       <span class="hljs-comment">## Allowed Request HTTP Headers ##</span>
       <span class="hljs-comment">#</span>
@@ -181,11 +179,8 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_ALLOWED_HEADERS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      allowed_headers:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">proi</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">non</span> <span class="hljs-string">quis</span> <span class="hljs-string">cupidatat</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">aliqua</span> <span class="hljs-string">dolore</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">Excepteur</span> <span class="hljs-string">sunt</span> <span class="hljs-string">in</span> <span class="hljs-string">Ut</span> <span class="hljs-string">ea</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">ut</span> <span class="hljs-string">in</span> <span class="hljs-string">fu</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">incididunt</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">Duis</span> <span class="hljs-string">ad</span> <span class="hljs-string">pariatur</span>
 
       <span class="hljs-comment">## Allowed Response HTTP Headers ##</span>
       <span class="hljs-comment">#</span>
@@ -200,9 +195,10 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_EXPOSED_HEADERS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      exposed_headers:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">dolor</span> <span class="hljs-string">nulla</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">magna</span> <span class="hljs-string">occaecat</span> <span class="hljs-string">incididunt</span> <span class="hljs-string">ex</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">labore</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">velit</span> <span class="hljs-string">dolore</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">anim</span> <span class="hljs-string">sunt</span> <span class="hljs-string">dolor</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">in</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">exercitation</span> <span class="hljs-string">ullamco</span>
 
       <span class="hljs-comment">## Allow HTTP Credentials ##</span>
       <span class="hljs-comment">#</span>
@@ -216,7 +212,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_ALLOW_CREDENTIALS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      allow_credentials:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">      allow_credentials:</span> <span class="hljs-literal">false</span>
 
       <span class="hljs-comment">## Maximum Age ##</span>
       <span class="hljs-comment">#</span>
@@ -228,7 +224,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_API_CORS_MAX_AGE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      max_age:</span> <span class="hljs-number">7630495.908602878</span>
+<span class="hljs-attr">      max_age:</span> <span class="hljs-bullet">-6801243.996200457</span>
 
       <span class="hljs-comment">## Enable Debugging ##</span>
       <span class="hljs-comment">#</span>
@@ -310,7 +306,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set SERVE_PROXY_PORT=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    port:</span> <span class="hljs-number">19750666.110282823</span>
+<span class="hljs-attr">    port:</span> <span class="hljs-bullet">-56785372.58103145</span>
 
     <span class="hljs-comment">## Host ##</span>
     <span class="hljs-comment">#</span>
@@ -388,7 +384,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_TIMEOUT_IDLE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      idle:</span> <span class="hljs-number">5</span><span class="hljs-string">s</span>
+<span class="hljs-attr">      idle:</span> <span class="hljs-number">5</span><span class="hljs-string">h</span>
 
     <span class="hljs-comment">## Cross Origin Resource Sharing (CORS) ##</span>
     <span class="hljs-comment">#</span>
@@ -426,8 +422,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_CORS_ALLOWED_ORIGINS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      allowed_origins:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">'*'</span>
+<span class="hljs-attr">      allowed_origins:</span> <span class="hljs-attr">https://example.com</span>
 
       <span class="hljs-comment">## Allowed HTTP Methods ##</span>
       <span class="hljs-comment">#</span>
@@ -443,10 +438,9 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      allowed_methods:</span>
 <span class="hljs-bullet">        -</span> <span class="hljs-string">CONNECT</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">HEAD</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">PATCH</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">DELETE</span>
 <span class="hljs-bullet">        -</span> <span class="hljs-string">TRACE</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">PATCH</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">PUT</span>
 
       <span class="hljs-comment">## Allowed Request HTTP Headers ##</span>
       <span class="hljs-comment">#</span>
@@ -461,11 +455,8 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_CORS_ALLOWED_HEADERS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      allowed_headers:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">veniam</span> <span class="hljs-string">consectetur</span> <span class="hljs-string">amet</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">tempor</span> <span class="hljs-string">est</span> <span class="hljs-string">ut</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">sed</span> <span class="hljs-string">aliquip</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">reprehenderit</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">elit</span> <span class="hljs-string">ut</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">sint</span> <span class="hljs-string">sunt</span> <span class="hljs-string">cillum</span> <span class="hljs-string">commodo</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">minim</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">sit</span> <span class="hljs-string">reprehenderit</span> <span class="hljs-string">ex</span>
 
       <span class="hljs-comment">## Allowed Response HTTP Headers ##</span>
       <span class="hljs-comment">#</span>
@@ -480,8 +471,10 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_CORS_EXPOSED_HEADERS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      exposed_headers:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">nulla</span> <span class="hljs-string">et</span> <span class="hljs-string">ex</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">enim</span> <span class="hljs-string">Duis</span> <span class="hljs-string">consectetur</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">sit</span> <span class="hljs-string">magna</span> <span class="hljs-string">aliqua</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">labore</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">quis</span> <span class="hljs-string">ut</span> <span class="hljs-string">laboris</span> <span class="hljs-string">elit</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">magna</span> <span class="hljs-string">Lorem</span> <span class="hljs-string">pariatur</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">ea</span> <span class="hljs-string">ullamco</span> <span class="hljs-string">Lorem</span>
 
       <span class="hljs-comment">## Allow HTTP Credentials ##</span>
       <span class="hljs-comment">#</span>
@@ -507,7 +500,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set SERVE_PROXY_CORS_MAX_AGE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      max_age:</span> <span class="hljs-number">92112962.81960961</span>
+<span class="hljs-attr">      max_age:</span> <span class="hljs-bullet">-31367837.389536664</span>
 
       <span class="hljs-comment">## Enable Debugging ##</span>
       <span class="hljs-comment">#</span>
@@ -587,8 +580,6 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment"># - If the URL Scheme is `inline://`, the access rules (an array of access rules is expected) are expected to be a base64 encoded (with padding!) JSON/YAML string (base64_encode(`[{"id":"foo-rule","authenticators":[....]}]`)).</span>
   <span class="hljs-comment"># - If the URL Scheme is `http://` or `https://`, the access rules (an array of access rules is expected) will be fetched from the provided HTTP(s) location.</span>
   <span class="hljs-comment">#</span>
-  <span class="hljs-comment"># Default value:</span>
-  <span class="hljs-comment">#</span>
   <span class="hljs-comment"># Examples:</span>
   <span class="hljs-comment"># - '["file://path/to/rules.json","inline://W3siaWQiOiJmb28tcnVsZSIsImF1dGhlbnRpY2F0b3JzIjpbXX1d","https://path-to-my-rules/rules.json"]'</span>
   <span class="hljs-comment">#</span>
@@ -650,7 +641,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set AUTHENTICATORS_ANONYMOUS_CONFIG_SUBJECT=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      subject:</span> <span class="hljs-string">unknown</span>
+<span class="hljs-attr">      subject:</span> <span class="hljs-string">anon</span>
 
   <span class="hljs-comment">## No Operation (noop) ##</span>
   <span class="hljs-comment">#</span>
@@ -716,13 +707,99 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_COOKIE_SESSION_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## JSON Web Token (jwt) ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`jwt` authenticator](https://www.ory.sh/docs/oathkeeper/pipeline/authn#jwt).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  jwt:</span>
+    <span class="hljs-comment">## config ##</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    config:</span>
+      <span class="hljs-comment">## jwks_urls ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      jwks_urls:</span> <span class="hljs-attr">file://path/to/local/jwks.json</span>
+
+      <span class="hljs-comment">## required_scope ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      required_scope:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">labore</span> <span class="hljs-string">proident</span> <span class="hljs-string">velit</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">do</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">ex</span>
+
+      <span class="hljs-comment">## target_audience ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      target_audience:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">dolore</span> <span class="hljs-string">aliqua</span> <span class="hljs-string">reprehenderit</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">labore</span> <span class="hljs-string">ut</span>
+
+      <span class="hljs-comment">## trusted_issuers ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      trusted_issuers:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">minim</span> <span class="hljs-string">laboris</span> <span class="hljs-string">incididunt</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">culpa</span> <span class="hljs-string">cup</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">reprehenderit</span> <span class="hljs-string">sint</span> <span class="hljs-string">ea</span> <span class="hljs-string">aliqua</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">ex</span> <span class="hljs-string">voluptate</span> <span class="hljs-string">sed</span> <span class="hljs-string">aliqua</span> <span class="hljs-string">officia</span>
+
+      <span class="hljs-comment">## allowed_algorithms ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      allowed_algorithms:</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">aute</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">exercitation</span>
+
+      <span class="hljs-comment">## scope_strategy ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      scope_strategy:</span> <span class="hljs-string">wildcard</span>
+
+      <span class="hljs-comment">## token_from ##</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      token_from:</span>
+        <span class="hljs-comment">## header ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_HEADER=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_HEADER=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        header:</span> <span class="hljs-string">'anim '</span>
+
     <span class="hljs-comment">## Enabled ##</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># En-/disables this component.</span>
@@ -738,7 +815,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_JWT_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## OAuth 2.0 Client Credentials ##</span>
   <span class="hljs-comment">#</span>
@@ -788,11 +865,41 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment"># - Windows Command Line (CMD):</span>
       <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_SCOPE_STRATEGY=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
-<span class="hljs-attr">      scope_strategy:</span> <span class="hljs-string">exact</span>
+<span class="hljs-attr">      scope_strategy:</span> <span class="hljs-string">hierarchic</span>
 
       <span class="hljs-comment">## pre_authorization ##</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      pre_authorization:</span>
+        <span class="hljs-comment">## client_id ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        client_id:</span> <span class="hljs-string">ad</span> <span class="hljs-string">dolor</span> <span class="hljs-string">reprehenderit</span> <span class="hljs-literal">null</span>
+
+        <span class="hljs-comment">## client_secret ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        client_secret:</span> <span class="hljs-string">'nisi ut '</span>
+
+        <span class="hljs-comment">## token_url ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        token_url:</span> <span class="hljs-attr">http://CDTHPzu.epuKzBW8xrvEjihykfXC5Eo6mxDiJr30kcfAH7ulKSE1eUVieoPny9Fk</span>
+
         <span class="hljs-comment">## enabled ##</span>
         <span class="hljs-comment">#</span>
         <span class="hljs-comment"># Set this value using environment variables on</span>
@@ -801,7 +908,7 @@ using environment variables, as documented below.</p>
         <span class="hljs-comment"># - Windows Command Line (CMD):</span>
         <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_ENABLED=&lt;value&gt;</span>
         <span class="hljs-comment">#</span>
-<span class="hljs-attr">        enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">        enabled:</span> <span class="hljs-literal">true</span>
 
         <span class="hljs-comment">## scope ##</span>
         <span class="hljs-comment">#</span>
@@ -823,8 +930,8 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_REQUIRED_SCOPE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      required_scope:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">esse</span> <span class="hljs-string">nisi</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">in</span> <span class="hljs-string">cupidatat</span> <span class="hljs-string">eiusmod</span> <span class="hljs-string">laboris</span> <span class="hljs-string">Lorem</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">cupidatat</span> <span class="hljs-string">esse</span> <span class="hljs-string">ad</span> <span class="hljs-string">in</span> <span class="hljs-string">exercitation</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">anim</span> <span class="hljs-string">dolore</span>
 
       <span class="hljs-comment">## target_audience ##</span>
       <span class="hljs-comment">#</span>
@@ -835,8 +942,11 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TARGET_AUDIENCE=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      target_audience:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">ullamco</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">eiusmod</span> <span class="hljs-string">tempor</span> <span class="hljs-string">sunt</span> <span class="hljs-string">sit</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">amet</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">laboris</span> <span class="hljs-string">aliqua</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">culpa</span> <span class="hljs-string">elit</span> <span class="hljs-string">dolore</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">non</span> <span class="hljs-string">nostrud</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">officia</span> <span class="hljs-string">ipsum</span>
 
       <span class="hljs-comment">## trusted_issuers ##</span>
       <span class="hljs-comment">#</span>
@@ -847,10 +957,7 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TRUSTED_ISSUERS=&lt;value&gt;</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      trusted_issuers:</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">incididunt</span> <span class="hljs-string">labore</span> <span class="hljs-string">deserunt</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">fugiat</span> <span class="hljs-string">sed</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">labore</span>
-<span class="hljs-bullet">        -</span> <span class="hljs-string">mollit</span> <span class="hljs-string">in</span> <span class="hljs-string">sit</span>
+<span class="hljs-bullet">        -</span> <span class="hljs-string">temp</span>
 
       <span class="hljs-comment">## introspection_request_headers ##</span>
       <span class="hljs-comment">#</span>
@@ -865,15 +972,15 @@ using environment variables, as documented below.</p>
       <span class="hljs-comment">## token_from ##</span>
       <span class="hljs-comment">#</span>
 <span class="hljs-attr">      token_from:</span>
-        <span class="hljs-comment">## query_parameter ##</span>
+        <span class="hljs-comment">## cookie ##</span>
         <span class="hljs-comment">#</span>
         <span class="hljs-comment"># Set this value using environment variables on</span>
         <span class="hljs-comment"># - Linux/macOS:</span>
-        <span class="hljs-comment">#    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_QUERY_PARAMETER=&lt;value&gt;</span>
+        <span class="hljs-comment">#    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_COOKIE=&lt;value&gt;</span>
         <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-        <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_QUERY_PARAMETER=&lt;value&gt;</span>
+        <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_COOKIE=&lt;value&gt;</span>
         <span class="hljs-comment">#</span>
-<span class="hljs-attr">        query_parameter:</span> <span class="hljs-string">elit</span> <span class="hljs-string">aliqua</span> <span class="hljs-string">proident</span> <span class="hljs-string">reprehenderit</span> <span class="hljs-string">Excepteur</span>
+<span class="hljs-attr">        cookie:</span> <span class="hljs-string">Ut</span> <span class="hljs-string">id</span>
 
     <span class="hljs-comment">## Enabled ##</span>
     <span class="hljs-comment">#</span>
@@ -890,7 +997,151 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHENTICATORS_OAUTH2_INTROSPECTION_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+
+<span class="hljs-comment">## Error Handling ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">errors:</span>
+  <span class="hljs-comment">## Error Handling Fallback ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># This array defines how to handle errors when no "when" clause matches. If you have, for example, enabled redirect and json in your access rule, you could tell ORY Oathkeeper to try sending JSON if the request does not match the access rule definition</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Default value: json</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Examples:</span>
+  <span class="hljs-comment"># - json</span>
+  <span class="hljs-comment"># - redirect</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export ERRORS_FALLBACK=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set ERRORS_FALLBACK=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+<span class="hljs-attr">  fallback:</span> <span class="hljs-string">redirect</span>
+
+  <span class="hljs-comment">## Individual Error Handler Configuration ##</span>
+  <span class="hljs-comment">#</span>
+<span class="hljs-attr">  handlers:</span>
+    <span class="hljs-comment">## HTTP WWW-Authenticate Handler ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Responds with the WWW-Authenticate HTTP Response</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    www_authenticate:</span>
+      <span class="hljs-comment">## Enabled ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># En-/disables this component.</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Default value: false</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Examples:</span>
+      <span class="hljs-comment"># - true</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export ERRORS_HANDLERS_WWW_AUTHENTICATE_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set ERRORS_HANDLERS_WWW_AUTHENTICATE_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">false</span>
+
+    <span class="hljs-comment">## HTTP Redirect Error Handler ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Responds with a 301/302 HTTP redirect.</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    redirect:</span>
+      <span class="hljs-comment">## config ##</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      config:</span>
+        <span class="hljs-comment">## to ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_TO=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set ERRORS_HANDLERS_REDIRECT_CONFIG_TO=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        to:</span> <span class="hljs-attr">http://LwwBMeNTQzzTAJBAi.btmr86q0.z</span>
+
+        <span class="hljs-comment">## code ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        code:</span> <span class="hljs-number">301</span>
+
+        <span class="hljs-comment">## when ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        when:</span>
+<span class="hljs-attr">          - error:</span>
+<span class="hljs-bullet">              -</span> <span class="hljs-string">internal_server_error</span>
+<span class="hljs-bullet">              -</span> <span class="hljs-string">unauthorized</span>
+<span class="hljs-bullet">              -</span> <span class="hljs-string">not_found</span>
+<span class="hljs-bullet">              -</span> <span class="hljs-string">forbidden</span>
+<span class="hljs-attr">            request:</span>
+<span class="hljs-attr">              cidr:</span>
+<span class="hljs-bullet">                -</span> <span class="hljs-string">in</span> <span class="hljs-string">ea</span> <span class="hljs-string">adipisicing</span>
+<span class="hljs-bullet">                -</span> <span class="hljs-string">consequat</span> <span class="hljs-string">aute</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">sint</span>
+<span class="hljs-attr">              header:</span>
+<span class="hljs-attr">                content_type:</span> <span class="hljs-string">[]</span>
+<span class="hljs-attr">                accept:</span> <span class="hljs-string">[]</span>
+<span class="hljs-attr">          - error:</span>
+<span class="hljs-bullet">              -</span> <span class="hljs-string">forbidden</span>
+<span class="hljs-attr">            request:</span>
+<span class="hljs-attr">              cidr:</span>
+<span class="hljs-bullet">                -</span> <span class="hljs-string">commodo</span> <span class="hljs-string">Lorem</span> <span class="hljs-string">aliqua</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">id</span>
+<span class="hljs-bullet">                -</span> <span class="hljs-string">cupidatat</span> <span class="hljs-string">velit</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">esse</span>
+<span class="hljs-attr">              header:</span>
+<span class="hljs-attr">                content_type:</span> <span class="hljs-string">[]</span>
+<span class="hljs-attr">                accept:</span> <span class="hljs-string">[]</span>
+
+      <span class="hljs-comment">## Enabled ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># En-/disables this component.</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Default value: false</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Examples:</span>
+      <span class="hljs-comment"># - true</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export ERRORS_HANDLERS_REDIRECT_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set ERRORS_HANDLERS_REDIRECT_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">true</span>
+
+    <span class="hljs-comment">## JSON Error Handler ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Responds with a JSON error response</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    json:</span>
+      <span class="hljs-comment">## Enabled ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># En-/disables this component.</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Default value: true</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Examples:</span>
+      <span class="hljs-comment"># - true</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export ERRORS_HANDLERS_JSON_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set ERRORS_HANDLERS_JSON_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      enabled:</span> <span class="hljs-literal">true</span>
 
 <span class="hljs-comment">## Authorizers ##</span>
 <span class="hljs-comment">#</span>
@@ -917,7 +1168,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHORIZERS_ALLOW_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## Deny ##</span>
   <span class="hljs-comment">#</span>
@@ -939,66 +1190,13 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set AUTHORIZERS_DENY_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## ORY Keto Access Control Policies Engine ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`keto_engine_acp_ory` authorizer](https://www.ory.sh/docs/oathkeeper/pipeline/authz#keto_engine_acp_ory).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  keto_engine_acp_ory:</span>
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span>
-      <span class="hljs-comment">## base_url ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      base_url:</span> <span class="hljs-attr">http://my-keto/</span>
-
-      <span class="hljs-comment">## required_action ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      required_action:</span> <span class="hljs-string">consequat</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">do</span>
-
-      <span class="hljs-comment">## required_resource ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      required_resource:</span> <span class="hljs-string">do</span> <span class="hljs-string">non</span> <span class="hljs-string">esse</span> <span class="hljs-string">in</span>
-
-      <span class="hljs-comment">## subject ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      subject:</span> <span class="hljs-string">magna</span> <span class="hljs-string">dolor</span> <span class="hljs-string">labore</span> <span class="hljs-string">qui</span>
-
-      <span class="hljs-comment">## flavor ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      flavor:</span> <span class="hljs-string">adipisicing</span> <span class="hljs-string">enim</span>
-
     <span class="hljs-comment">## Enabled ##</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># En-/disables this component.</span>
@@ -1041,7 +1239,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_NOOP_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## HTTP Cookie ##</span>
   <span class="hljs-comment">#</span>
@@ -1076,26 +1274,13 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_COOKIE_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## HTTP Header ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`header` mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#header).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  header:</span>
-    <span class="hljs-comment">## config ##</span>
-    <span class="hljs-comment">#</span>
-<span class="hljs-attr">    config:</span>
-      <span class="hljs-comment">## headers ##</span>
-      <span class="hljs-comment">#</span>
-      <span class="hljs-comment"># Set this value using environment variables on</span>
-      <span class="hljs-comment"># - Linux/macOS:</span>
-      <span class="hljs-comment">#    $ export MUTATORS_HEADER_CONFIG_HEADERS=&lt;value&gt;</span>
-      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
-      <span class="hljs-comment">#    &gt; set MUTATORS_HEADER_CONFIG_HEADERS=&lt;value&gt;</span>
-      <span class="hljs-comment">#</span>
-<span class="hljs-attr">      headers:</span> <span class="hljs-string">{}</span>
-
     <span class="hljs-comment">## Enabled ##</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># En-/disables this component.</span>
@@ -1111,13 +1296,78 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_HEADER_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
 
   <span class="hljs-comment">## Hydrator ##</span>
   <span class="hljs-comment">#</span>
   <span class="hljs-comment"># The [`hydrator` mutator](https://www.ory.sh/docs/oathkeeper/pipeline/mutator#hydrator).</span>
   <span class="hljs-comment">#</span>
 <span class="hljs-attr">  hydrator:</span>
+    <span class="hljs-comment">## config ##</span>
+    <span class="hljs-comment">#</span>
+<span class="hljs-attr">    config:</span>
+      <span class="hljs-comment">## api ##</span>
+      <span class="hljs-comment">#</span>
+<span class="hljs-attr">      api:</span>
+        <span class="hljs-comment">## url ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export MUTATORS_HYDRATOR_CONFIG_API_URL=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_CONFIG_API_URL=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        url:</span> <span class="hljs-attr">https://FnMov.dhzk</span>
+
+        <span class="hljs-comment">## auth ##</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        auth:</span>
+          <span class="hljs-comment">## basic ##</span>
+          <span class="hljs-comment">#</span>
+<span class="hljs-attr">          basic:</span>
+            <span class="hljs-comment">## username ##</span>
+            <span class="hljs-comment">#</span>
+            <span class="hljs-comment"># Set this value using environment variables on</span>
+            <span class="hljs-comment"># - Linux/macOS:</span>
+            <span class="hljs-comment">#    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=&lt;value&gt;</span>
+            <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+            <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=&lt;value&gt;</span>
+            <span class="hljs-comment">#</span>
+<span class="hljs-attr">            username:</span> <span class="hljs-string">id</span> <span class="hljs-string">Lorem</span> <span class="hljs-string">sit</span>
+
+            <span class="hljs-comment">## password ##</span>
+            <span class="hljs-comment">#</span>
+            <span class="hljs-comment"># Set this value using environment variables on</span>
+            <span class="hljs-comment"># - Linux/macOS:</span>
+            <span class="hljs-comment">#    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=&lt;value&gt;</span>
+            <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+            <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=&lt;value&gt;</span>
+            <span class="hljs-comment">#</span>
+<span class="hljs-attr">            password:</span> <span class="hljs-string">qui</span> <span class="hljs-string">eiusmod</span> <span class="hljs-string">enim</span>
+
+        <span class="hljs-comment">## retry ##</span>
+        <span class="hljs-comment">#</span>
+<span class="hljs-attr">        retry:</span>
+          <span class="hljs-comment">## give_up_after ##</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment"># Set this value using environment variables on</span>
+          <span class="hljs-comment"># - Linux/macOS:</span>
+          <span class="hljs-comment">#    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=&lt;value&gt;</span>
+          <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+          <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=&lt;value&gt;</span>
+          <span class="hljs-comment">#</span>
+<span class="hljs-attr">          give_up_after:</span> <span class="hljs-number">5195447</span><span class="hljs-string">us</span>
+
+          <span class="hljs-comment">## max_delay ##</span>
+          <span class="hljs-comment">#</span>
+          <span class="hljs-comment"># Set this value using environment variables on</span>
+          <span class="hljs-comment"># - Linux/macOS:</span>
+          <span class="hljs-comment">#    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=&lt;value&gt;</span>
+          <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+          <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=&lt;value&gt;</span>
+          <span class="hljs-comment">#</span>
+<span class="hljs-attr">          max_delay:</span> <span class="hljs-number">80951283026</span><span class="hljs-string">us</span>
+
     <span class="hljs-comment">## Enabled ##</span>
     <span class="hljs-comment">#</span>
     <span class="hljs-comment"># En-/disables this component.</span>
@@ -1133,7 +1383,7 @@ using environment variables, as documented below.</p>
     <span class="hljs-comment"># - Windows Command Line (CMD):</span>
     <span class="hljs-comment">#    &gt; set MUTATORS_HYDRATOR_ENABLED=&lt;value&gt;</span>
     <span class="hljs-comment">#</span>
-<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">false</span>
 
   <span class="hljs-comment">## ID Token (JSON Web Token) ##</span>
   <span class="hljs-comment">#</span>
@@ -1200,7 +1450,7 @@ using environment variables, as documented below.</p>
 <span class="hljs-comment"># - Windows Command Line (CMD):</span>
 <span class="hljs-comment">#    &gt; set PROFILING=&lt;value&gt;</span>
 <span class="hljs-comment">#</span>
-<span class="hljs-attr">profiling:</span> <span class="hljs-string">''</span>
+<span class="hljs-attr">profiling:</span> <span class="hljs-string">cpu</span>
 </code></pre>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oathkeeper/pipeline/mutator"><span class="arrow-prev">← </span><span>Mutators</span></a><a class="docs-next button" href="/docs/oathkeeper/configure-deploy"><span>Configure and Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2019 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {

@@ -93,44 +93,44 @@ variable <code>BCRYPT_COST</code>. For these benchmarks, we have set <code>BCRYP
 <h3><a class="anchor" aria-hidden="true" id="token-introspection"></a><a href="#token-introspection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Token Introspection</h3>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">3.3319</span> secs
-  Slowest:  <span class="hljs-number">0.0798</span> secs
-  Fastest:  <span class="hljs-number">0.0003</span> secs
-  Average:  <span class="hljs-number">0.0324</span> secs
-  Requests/sec: <span class="hljs-number">3001.3033</span>
+  Total:    <span class="hljs-number">2.8902</span> secs
+  Slowest:  <span class="hljs-number">0.0758</span> secs
+  Fastest:  <span class="hljs-number">0.0004</span> secs
+  Average:  <span class="hljs-number">0.0280</span> secs
+  Requests/sec: <span class="hljs-number">3459.9406</span>
 
   Total data:   <span class="hljs-number">1550000</span> bytes
   Size/request: <span class="hljs-number">155</span> bytes
 
 Response time histogram:
   <span class="hljs-number">0.000</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.008</span> [<span class="hljs-number">537</span>]   |■■■■■■■■■■■■
-  <span class="hljs-number">0.016</span> [<span class="hljs-number">1095</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.024</span> [<span class="hljs-number">1531</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.032</span> [<span class="hljs-number">1856</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.040</span> [<span class="hljs-number">1815</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.048</span> [<span class="hljs-number">1474</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.056</span> [<span class="hljs-number">985</span>]   |■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.064</span> [<span class="hljs-number">518</span>]   |■■■■■■■■■■■
-  <span class="hljs-number">0.072</span> [<span class="hljs-number">177</span>]   |■■■■
-  <span class="hljs-number">0.080</span> [<span class="hljs-number">11</span>]    |
+  <span class="hljs-number">0.008</span> [<span class="hljs-number">751</span>]   |■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.015</span> [<span class="hljs-number">1361</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.023</span> [<span class="hljs-number">1816</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.031</span> [<span class="hljs-number">1919</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.038</span> [<span class="hljs-number">1636</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.046</span> [<span class="hljs-number">1298</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.053</span> [<span class="hljs-number">731</span>]   |■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.061</span> [<span class="hljs-number">357</span>]   |■■■■■■■
+  <span class="hljs-number">0.068</span> [<span class="hljs-number">110</span>]   |■■
+  <span class="hljs-number">0.076</span> [<span class="hljs-number">20</span>]    |
 
 
 Latency distribution:
-  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0124</span> secs
-  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0211</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0320</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0435</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0530</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0586</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0667</span> secs
+  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0095</span> secs
+  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0172</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0271</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0382</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0475</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0530</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0621</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0003</span> secs, <span class="hljs-number">0.0798</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0031</span> secs
-  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0066</span> secs
-  resp wait:    <span class="hljs-number">0.0323</span> secs, <span class="hljs-number">0.0003</span> secs, <span class="hljs-number">0.0798</span> secs
-  resp read:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0043</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0004</span> secs, <span class="hljs-number">0.0758</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0032</span> secs
+  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0069</span> secs
+  resp wait:    <span class="hljs-number">0.0279</span> secs, <span class="hljs-number">0.0003</span> secs, <span class="hljs-number">0.0726</span> secs
+  resp read:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0052</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses
@@ -142,44 +142,44 @@ Status code distribution:
 <p>This endpoint uses <a href="#bcrypt">BCrypt</a>.</p>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">20.2258</span> secs
-  Slowest:  <span class="hljs-number">0.4195</span> secs
-  Fastest:  <span class="hljs-number">0.0173</span> secs
-  Average:  <span class="hljs-number">0.1974</span> secs
-  Requests/sec: <span class="hljs-number">494.4178</span>
+  Total:    <span class="hljs-number">20.1011</span> secs
+  Slowest:  <span class="hljs-number">0.3976</span> secs
+  Fastest:  <span class="hljs-number">0.0172</span> secs
+  Average:  <span class="hljs-number">0.1977</span> secs
+  Requests/sec: <span class="hljs-number">497.4842</span>
 
   Total data:   <span class="hljs-number">1570000</span> bytes
   Size/request: <span class="hljs-number">157</span> bytes
 
 Response time histogram:
   <span class="hljs-number">0.017</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.058</span> [<span class="hljs-number">280</span>]   |■■■■
-  <span class="hljs-number">0.098</span> [<span class="hljs-number">579</span>]   |■■■■■■■■
-  <span class="hljs-number">0.138</span> [<span class="hljs-number">1509</span>]  |■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.178</span> [<span class="hljs-number">1160</span>]  |■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.218</span> [<span class="hljs-number">2853</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.259</span> [<span class="hljs-number">1369</span>]  |■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.299</span> [<span class="hljs-number">1524</span>]  |■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.339</span> [<span class="hljs-number">504</span>]   |■■■■■■■
-  <span class="hljs-number">0.379</span> [<span class="hljs-number">177</span>]   |■■
-  <span class="hljs-number">0.420</span> [<span class="hljs-number">44</span>]    |■
+  <span class="hljs-number">0.055</span> [<span class="hljs-number">188</span>]   |■■
+  <span class="hljs-number">0.093</span> [<span class="hljs-number">253</span>]   |■■■
+  <span class="hljs-number">0.131</span> [<span class="hljs-number">1464</span>]  |■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.169</span> [<span class="hljs-number">775</span>]   |■■■■■■■■■
+  <span class="hljs-number">0.207</span> [<span class="hljs-number">3276</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.245</span> [<span class="hljs-number">1798</span>]  |■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.284</span> [<span class="hljs-number">1156</span>]  |■■■■■■■■■■■■■■
+  <span class="hljs-number">0.322</span> [<span class="hljs-number">955</span>]   |■■■■■■■■■■■■
+  <span class="hljs-number">0.360</span> [<span class="hljs-number">59</span>]    |■
+  <span class="hljs-number">0.398</span> [<span class="hljs-number">75</span>]    |■
 
 
 Latency distribution:
-  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1016</span> secs
-  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1428</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1994</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2488</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2910</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.3080</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.3640</span> secs
+  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1114</span> secs
+  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1618</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1995</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2303</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2857</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2985</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.3371</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0173</span> secs, <span class="hljs-number">0.4195</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0072</span> secs
-  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0405</span> secs
-  resp wait:    <span class="hljs-number">0.1972</span> secs, <span class="hljs-number">0.0172</span> secs, <span class="hljs-number">0.4194</span> secs
-  resp read:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0583</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0172</span> secs, <span class="hljs-number">0.3976</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0065</span> secs
+  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0449</span> secs
+  resp wait:    <span class="hljs-number">0.1976</span> secs, <span class="hljs-number">0.0171</span> secs, <span class="hljs-number">0.3976</span> secs
+  resp read:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0513</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses
@@ -197,44 +197,44 @@ secrets are set in the request as opposed to generated by ORY Hydra.</p>
 <h3><a class="anchor" aria-hidden="true" id="listing-oauth-20-clients"></a><a href="#listing-oauth-20-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listing OAuth 2.0 Clients</h3>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">0.4802</span> secs
-  Slowest:  <span class="hljs-number">0.0230</span> secs
+  Total:    <span class="hljs-number">0.4135</span> secs
+  Slowest:  <span class="hljs-number">0.0250</span> secs
   Fastest:  <span class="hljs-number">0.0001</span> secs
-  Average:  <span class="hljs-number">0.0045</span> secs
-  Requests/sec: <span class="hljs-number">20825.2023</span>
+  Average:  <span class="hljs-number">0.0039</span> secs
+  Requests/sec: <span class="hljs-number">24186.4535</span>
 
   Total data:   <span class="hljs-number">4820000</span> bytes
   Size/request: <span class="hljs-number">482</span> bytes
 
 Response time histogram:
   <span class="hljs-number">0.000</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.002</span> [<span class="hljs-number">4209</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.005</span> [<span class="hljs-number">893</span>]   |■■■■■■■■
-  <span class="hljs-number">0.007</span> [<span class="hljs-number">1926</span>]  |■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.009</span> [<span class="hljs-number">1587</span>]  |■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.012</span> [<span class="hljs-number">922</span>]   |■■■■■■■■■
-  <span class="hljs-number">0.014</span> [<span class="hljs-number">306</span>]   |■■■
-  <span class="hljs-number">0.016</span> [<span class="hljs-number">110</span>]   |■
-  <span class="hljs-number">0.018</span> [<span class="hljs-number">32</span>]    |
-  <span class="hljs-number">0.021</span> [<span class="hljs-number">10</span>]    |
-  <span class="hljs-number">0.023</span> [<span class="hljs-number">4</span>] |
+  <span class="hljs-number">0.003</span> [<span class="hljs-number">5097</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.005</span> [<span class="hljs-number">1203</span>]  |■■■■■■■■■
+  <span class="hljs-number">0.008</span> [<span class="hljs-number">1607</span>]  |■■■■■■■■■■■■■
+  <span class="hljs-number">0.010</span> [<span class="hljs-number">1149</span>]  |■■■■■■■■■
+  <span class="hljs-number">0.013</span> [<span class="hljs-number">596</span>]   |■■■■■
+  <span class="hljs-number">0.015</span> [<span class="hljs-number">250</span>]   |■■
+  <span class="hljs-number">0.018</span> [<span class="hljs-number">70</span>]    |■
+  <span class="hljs-number">0.020</span> [<span class="hljs-number">16</span>]    |
+  <span class="hljs-number">0.023</span> [<span class="hljs-number">5</span>] |
+  <span class="hljs-number">0.025</span> [<span class="hljs-number">6</span>] |
 
 
 Latency distribution:
   <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0001</span> secs
   <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0002</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0045</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0076</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0100</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0114</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0148</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0022</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0068</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0099</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0116</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0149</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0230</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0065</span> secs
-  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0101</span> secs
-  resp wait:    <span class="hljs-number">0.0043</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0208</span> secs
-  resp read:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0073</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0250</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0060</span> secs
+  req write:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0067</span> secs
+  resp wait:    <span class="hljs-number">0.0036</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0250</span> secs
+  resp read:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0074</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses
@@ -245,44 +245,44 @@ Status code distribution:
 <h3><a class="anchor" aria-hidden="true" id="fetching-a-specific-oauth-20-client"></a><a href="#fetching-a-specific-oauth-20-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetching a specific OAuth 2.0 Client</h3>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">0.4109</span> secs
-  Slowest:  <span class="hljs-number">0.0295</span> secs
+  Total:    <span class="hljs-number">0.3927</span> secs
+  Slowest:  <span class="hljs-number">0.0221</span> secs
   Fastest:  <span class="hljs-number">0.0001</span> secs
-  Average:  <span class="hljs-number">0.0038</span> secs
-  Requests/sec: <span class="hljs-number">24335.3317</span>
+  Average:  <span class="hljs-number">0.0036</span> secs
+  Requests/sec: <span class="hljs-number">25466.4341</span>
 
   Total data:   <span class="hljs-number">4800000</span> bytes
   Size/request: <span class="hljs-number">480</span> bytes
 
 Response time histogram:
   <span class="hljs-number">0.000</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.003</span> [<span class="hljs-number">5233</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.006</span> [<span class="hljs-number">1693</span>]  |■■■■■■■■■■■■■
-  <span class="hljs-number">0.009</span> [<span class="hljs-number">1737</span>]  |■■■■■■■■■■■■■
-  <span class="hljs-number">0.012</span> [<span class="hljs-number">936</span>]   |■■■■■■■
-  <span class="hljs-number">0.015</span> [<span class="hljs-number">260</span>]   |■■
-  <span class="hljs-number">0.018</span> [<span class="hljs-number">100</span>]   |■
-  <span class="hljs-number">0.021</span> [<span class="hljs-number">25</span>]    |
-  <span class="hljs-number">0.024</span> [<span class="hljs-number">10</span>]    |
-  <span class="hljs-number">0.027</span> [<span class="hljs-number">3</span>] |
-  <span class="hljs-number">0.030</span> [<span class="hljs-number">2</span>] |
+  <span class="hljs-number">0.002</span> [<span class="hljs-number">5072</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.004</span> [<span class="hljs-number">1125</span>]  |■■■■■■■■■
+  <span class="hljs-number">0.007</span> [<span class="hljs-number">1452</span>]  |■■■■■■■■■■■
+  <span class="hljs-number">0.009</span> [<span class="hljs-number">1140</span>]  |■■■■■■■■■
+  <span class="hljs-number">0.011</span> [<span class="hljs-number">719</span>]   |■■■■■■
+  <span class="hljs-number">0.013</span> [<span class="hljs-number">329</span>]   |■■■
+  <span class="hljs-number">0.016</span> [<span class="hljs-number">112</span>]   |■
+  <span class="hljs-number">0.018</span> [<span class="hljs-number">30</span>]    |
+  <span class="hljs-number">0.020</span> [<span class="hljs-number">14</span>]    |
+  <span class="hljs-number">0.022</span> [<span class="hljs-number">6</span>] |
 
 
 Latency distribution:
   <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0001</span> secs
   <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0002</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0022</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0068</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0098</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0114</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0156</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0020</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0064</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0094</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0111</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0144</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0295</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0057</span> secs
-  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0071</span> secs
-  resp wait:    <span class="hljs-number">0.0036</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0293</span> secs
-  resp read:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0091</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0221</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0077</span> secs
+  req write:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0078</span> secs
+  resp wait:    <span class="hljs-number">0.0033</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0216</span> secs
+  resp read:    <span class="hljs-number">0.0002</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0082</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses

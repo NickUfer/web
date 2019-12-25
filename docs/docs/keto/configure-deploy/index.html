@@ -115,7 +115,7 @@ $ <span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DSN
 $ docker <span class="hljs-builtin-name">run</span> -it --rm \
   --network ketoguide \
   -e <span class="hljs-attribute">DSN</span>=<span class="hljs-variable">$DSN</span> \
-  oryd/keto:v0.3.7-sandbox \
+  oryd/keto:v0.3.8-sandbox \
   migrate sql -e
 
 Applying `client` SQL migrations<span class="hljs-built_in">..</span>.
@@ -128,7 +128,7 @@ $ docker <span class="hljs-builtin-name">run</span> -d \
   --network ketoguide \
   -p 4466:4466 \
   -e <span class="hljs-attribute">DSN</span>=<span class="hljs-variable">$DSN</span> \
-  oryd/keto:v0.3.7-sandbox \
+  oryd/keto:v0.3.8-sandbox \
   serve
 </code></pre>
 <p>Great, the server is running now! Make sure to check the logs and see if there
@@ -159,14 +159,14 @@ EOL
   --network ketoguide \
   -v <span class="hljs-variable">$(</span>pwd)/<span class="hljs-symbol">policies:</span>/policies \
   -e KETO_URL=<span class="hljs-symbol">http:</span>/<span class="hljs-regexp">/ory-keto-example--keto:4466/</span> \
-  oryd/<span class="hljs-symbol">keto:</span>v<span class="hljs-number">0</span>.<span class="hljs-number">3.7</span>-sandbox \
+  oryd/<span class="hljs-symbol">keto:</span>v<span class="hljs-number">0</span>.<span class="hljs-number">3.8</span>-sandbox \
   engines acp ory policies <span class="hljs-keyword">import</span> exact /policies/example-policy.json
 </code></pre>
 <p>Check if the policy has been created:</p>
 <pre><code class="hljs">$ docker <span class="hljs-builtin-name">run</span> -it --rm \
   --network ketoguide \
   -e <span class="hljs-attribute">KETO_URL</span>=http://ory-keto-example--keto:4466/ \
-  oryd/keto:v0.3.7-sandbox \
+  oryd/keto:v0.3.8-sandbox \
   engines acp ory policies <span class="hljs-builtin-name">get</span> exact example-policy
 {
   <span class="hljs-string">"actions"</span>: [
@@ -178,7 +178,7 @@ EOL
 <pre><code class="hljs">$ docker run -it --rm \
   --network ketoguide \
   -e KETO_URL=<span class="hljs-string">http:</span><span class="hljs-comment">//ory-keto-example--keto:4466/ \</span>
-  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.3</span><span class="hljs-number">.7</span>-sandbox \
+  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.3</span><span class="hljs-number">.8</span>-sandbox \
   engines acp ory allowed exact alice <span class="hljs-string">blog_posts:</span>my-first-blog-post delete
 {
         <span class="hljs-string">"allowed"</span>: <span class="hljs-literal">true</span>
@@ -188,7 +188,7 @@ EOL
 <pre><code class="hljs">$ docker run -it --rm \
   --network ketoguide \
   -e KETO_URL=<span class="hljs-string">http:</span><span class="hljs-comment">//ory-keto-example--keto:4466/ \</span>
-  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.3</span><span class="hljs-number">.7</span>-sandbox \
+  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.3</span><span class="hljs-number">.8</span>-sandbox \
   engines acp ory allowed exact bob <span class="hljs-string">blog_posts:</span>my-first-blog-post delete
 {
         <span class="hljs-string">"allowed"</span>: <span class="hljs-literal">false</span>
