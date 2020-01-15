@@ -84,7 +84,7 @@
   position: absolute;
   content: ' ';
   right: 40px;
-  width: 461px;
+  width: 228px;
   height: 460px;
   top: 54px;
   background-image: url('../images/hero-logo-desktop.svg');
@@ -92,7 +92,7 @@
 
 @media (max-width: 1280px) {
   .logo {
-    width: 164px;
+    width: 80px;
     height: 320px;
     top: 64px;
     right: 0;
