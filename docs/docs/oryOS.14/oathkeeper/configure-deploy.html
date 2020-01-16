@@ -1,0 +1,237 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configure and Deploy · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="ORY Oathkeeper has two servers that run on separate ports:"/><meta name="docsearch:version" content="oryOS.14"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configure and Deploy · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="ORY Oathkeeper has two servers that run on separate ports:"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.14</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.14/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle">Welcome</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Ecosystem</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/usage">API Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/persistence">Data Storage and Persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Hydra</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/">Introduction to ORY Hydra, OAuth 2.0, and OpenID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/oauth2">Integrating with (existing) User Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Oathkeeper</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.14/oathkeeper/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/oathkeeper/control-flow">Control Flow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">ORY Keto</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/engines/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle">Performance</h3><ul class=""><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.14/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/oathkeeper/configure-deploy.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Configure and Deploy</h1></header><article><div><span><p>ORY Oathkeeper has two servers that run on separate ports:</p>
+<ul>
+<li>The api server: This server is responsible for exposing the management REST
+API.</li>
+<li>The proxy server: This server is responsible for evaluating access requests
+and forwarding them to the backend.</li>
+</ul>
+<p>For detailed documentation on the two servers, run <code>oathkeeper help serve api</code>
+and <code>oathkeeper help serve proxy</code>.</p>
+<p>ORY Oathkeeper supports two types of storage adapters:</p>
+<ul>
+<li>In-memory: This adapter does not work with more than one instance (&quot;cluster&quot;)
+and any state is lost after restarting the instance.</li>
+<li>SQL: This adapter works with more than one instance and state is not lost
+after restarts.</li>
+</ul>
+<p>The SQL adapter supports two DBMS: PostgreSQL 9.6+ and MySQL 5.7+. Please note
+that older MySQL versions have issues with the database schema. For more
+information <a href="https://github.com/ory/hydra/issues/377">go here</a>.</p>
+<p>ORY Oathkeeper supports various authentication, authorization, and credential
+strategies. Depending on what strategies you want to use, you will have to
+configure more services (e.g. ORY Hydra or ORY Keto). In this tutorial, we will
+set up ORY Oathkeeper without any of the other services. Please refer to the
+<a href="/docs/oryOS.14/oathkeeper/api-access-rules">authenticator, authorizer, and credentials issuer documentation</a>
+to see what you need to configure in order to get the strategies you need.</p>
+<p>This guide will:</p>
+<ol>
+<li>Download and run a PostgreSQL container in Docker.</li>
+<li>Download and run ORY Oathkeeper using Docker.</li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="installation"></a><a href="#installation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h2>
+<p>You can install ORY Oathkeeper by downloading the
+<a href="https://github.com/ory/oathkeeper/releases">binaries</a>, by using the precompiled
+Docker Image available at
+<a href="https://hub.docker.com/r/oryd/oathkeeper/">Docker Hub</a>, or by compiling the
+code yourself.</p>
+<h3><a class="anchor" aria-hidden="true" id="docker-hub"></a><a href="#docker-hub" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Docker Hub</h3>
+<p>The recommended way to install and run ORY Oathkeeper is via docker:</p>
+<pre><code class="hljs css language-sh">$ docker run oryd/oathkeeper:&lt;version&gt; <span class="hljs-built_in">help</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="without-docker"></a><a href="#without-docker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Without Docker</h3>
+<h4><a class="anchor" aria-hidden="true" id="binaries"></a><a href="#binaries" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binaries</h4>
+<p>If you <a href="https://github.com/ory/oathkeeper/releases">download the binaries</a>, make
+sure to add them to your path (e.g. <code>/usr/bin</code>). Then, run <code>oathkeeper help</code></p>
+<h4><a class="anchor" aria-hidden="true" id="from-source"></a><a href="#from-source" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>From Source</h4>
+<p>To install ORY Oathkeeper from source, you need to have Go 1.11+ installed.
+Then, run:</p>
+<pre><code class="hljs"><span class="hljs-keyword">go</span> <span class="hljs-built_in">get</span> -d -<span class="hljs-keyword">u</span> github.<span class="hljs-keyword">com</span>/ory/oathkeeper
+<span class="hljs-keyword">cd</span> $(<span class="hljs-keyword">go</span> env GOPATH)/src/github.<span class="hljs-keyword">com</span>/ory/oathkeeper
+OATHKEEPER_LATEST=$(git describe --abbrev=<span class="hljs-number">0</span> --<span class="hljs-keyword">tags</span>)
+git checkout $OATHKEEPER_LATEST
+GO111MODULE=<span class="hljs-keyword">on</span> <span class="hljs-keyword">go</span> install \
+    -ldflags <span class="hljs-string">"-X github.com/ory/oathkeeper/cmd.Version=$OATHKEEPER_LATEST -X github.com/ory/oathkeeper/cmd.BuildTime=`TZ=UTC date -u '+%Y-%m-%dT%H:%M:%SZ'` -X github.com/ory/oathkeeper/cmd.GitHash=`git rev-parse HEAD`"</span> \
+    github.<span class="hljs-keyword">com</span>/ory/oathkeeper
+git checkout master
+oathkeeper <span class="hljs-keyword">help</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="create-a-network"></a><a href="#create-a-network" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Create a Network</h2>
+<p>Before we can start, a network must be created which we will attach all our
+Docker containers to. That way, the containers can talk to one another.</p>
+<pre><code class="hljs">$ docker<span class="hljs-built_in"> network </span>create oathkeeperguide
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="start-the-postgresql-container"></a><a href="#start-the-postgresql-container" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Start the PostgreSQL Container</h2>
+<p>For the purpose of this tutorial, we will use PostgreSQL as a database. As you
+probably already know, don't run databases in Docker in production! For the sake
+of this tutorial however, let's use Docker to quickly deploy the database.</p>
+<pre><code class="hljs">$ docker <span class="hljs-builtin-name">run</span> \
+  --network oathkeeperguide \
+  --name ory-oathkeeper-example--postgres \
+  -e <span class="hljs-attribute">POSTGRES_USER</span>=oathkeeper \
+  -e <span class="hljs-attribute">POSTGRES_PASSWORD</span>=secret \
+  -e <span class="hljs-attribute">POSTGRES_DB</span>=oathkeeper \
+  -d postgres:9.6
+</code></pre>
+<p>This command wil start a postgres instance with name
+<code>ory-oathkeeper-example--postgres</code>, set up a database called <code>oathkeeper</code> and
+create a user <code>oathkeeper</code> with password <code>secret</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="run-the-ory-oathkeeper-api-proxy"></a><a href="#run-the-ory-oathkeeper-api-proxy" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Run the ORY Oathkeeper API Proxy</h2>
+<pre><code class="hljs"><span class="hljs-comment"># The database url points us at the postgres instance. This could also be an ephermal in-memory database (`export DATABASE_URL=memory`)</span>
+<span class="hljs-comment"># or a MySQL URI.</span>
+$ <span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DATABASE_URL</span>=postgres://oathkeeper:secret@ory-oathkeeper-example--postgres:5432/oathkeeper?sslmode=disable
+
+<span class="hljs-comment"># ORY Oathkeeper does not do magic, it requires conscious decisions, for example running SQL migrations which is required</span>
+<span class="hljs-comment"># when installing a new version of ORY Oathkeeper, or upgrading an existing installation.</span>
+<span class="hljs-comment"># It is the equivalent to `oathkeeper migrate sql postgres://oathkeeper:secret@ory-oathkeeper-example--postgres:5432/oathkeeper?sslmode=disable`</span>
+$ docker <span class="hljs-builtin-name">run</span> -it --rm \
+  --network oathkeeperguide \
+  oryd/oathkeeper:v0.15.2 \
+  migrate sql <span class="hljs-variable">$DATABASE_URL</span>
+
+Applying `client` SQL migrations<span class="hljs-built_in">..</span>.
+[<span class="hljs-built_in">..</span>.]
+Migration successful!
+
+<span class="hljs-comment"># Next, let's run the API server!</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Please make sure to use your own secret.</span>
+$ docker <span class="hljs-builtin-name">run</span> -d \
+  --name ory-oathkeeper-example--oathkeeper-api \
+  --network oathkeeperguide \
+  -p 4456:4456 \
+  -e <span class="hljs-attribute">DATABASE_URL</span>=<span class="hljs-variable">$DATABASE_URL</span> \
+  -e <span class="hljs-attribute">PORT</span>=4456 \
+  -e <span class="hljs-attribute">CREDENTIALS_ISSUER_ID_TOKEN_HS256_SECRET</span>=changemechangemechangemechangemedo \
+  oryd/oathkeeper:v0.15.2 \
+  serve api
+
+<span class="hljs-comment"># And the proxy server too - take not that we need to link the proxy serve with the API server!</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Please make sure to use your own secret.</span>
+$ docker <span class="hljs-builtin-name">run</span> -d \
+  --name ory-oathkeeper-example--oathkeeper-proxy \
+  --network oathkeeperguide \
+  -p 4455:4455 \
+  -e <span class="hljs-attribute">OATHKEEPER_API_URL</span>=http://ory-oathkeeper-example--oathkeeper-api:4456/ \
+  -e <span class="hljs-attribute">PORT</span>=4455 \
+  -e <span class="hljs-attribute">CREDENTIALS_ISSUER_ID_TOKEN_HS256_SECRET</span>=changemechangemechangemechangeme \
+  oryd/oathkeeper:v0.15.2 \
+  serve<span class="hljs-built_in"> proxy
+</span></code></pre>
+<p>Great, both the API and the proxy server are running now! Make sure to check the
+logs and see if there were any errors or issues before going to the next steps:</p>
+<pre><code class="hljs">$ docker logs ory-oathkeeper-example<span class="hljs-comment">--oathkeeper-api</span>
+$ docker logs ory-oathkeeper-example<span class="hljs-comment">--oathkeeper-proxy</span>
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="creating-your-first-access-rule"></a><a href="#creating-your-first-access-rule" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating your first access rule</h3>
+<p><strong>Sorry, this section is still work in progress.</strong></p>
+<ol>
+<li>Create the rule using <code>oathkeeper rules import</code> - need to figure out how to
+add the file to docker to make this work.</li>
+<li>Have a rule that works immediately, e.g. protect an Oathkeeper API URL using
+the Oathkeeper proxy</li>
+<li>Have two CURL requests where one fails and one passes. Explain why that
+happens</li>
+<li>Clean up</li>
+</ol>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/18/2019 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.14/oathkeeper/api-access-rules"><span class="arrow-prev">← </span><span>API Access Rules</span></a><a class="docs-next button" href="/docs/oryOS.14/oathkeeper/control-flow"><span>Next</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#installation">Installation</a><ul class="toc-headings"><li><a href="#docker-hub">Docker Hub</a></li><li><a href="#without-docker">Without Docker</a></li></ul></li><li><a href="#create-a-network">Create a Network</a></li><li><a href="#start-the-postgresql-container">Start the PostgreSQL Container</a></li><li><a href="#run-the-ory-oathkeeper-api-proxy">Run the ORY Oathkeeper API Proxy</a><ul class="toc-headings"><li><a href="#creating-your-first-access-rule">Creating your first access rule</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
