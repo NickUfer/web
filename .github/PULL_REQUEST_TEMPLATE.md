@@ -11,7 +11,7 @@ Prior to publishing changes to our live website at [ory.sh](https://ory.sh), it 
 **Links**
   - [ ] Every link in the navigation, external and internal, needs to be checked to work as intended
   - [ ] Every link in the footer, external and internal, needs to be checked to work as intended
-  - [ ] Every link in the across the entire website, external and internal, needs to be checked to work as intended
+  - [ ] Every link across the entire website, external and internal, needs to be checked to work as intended
     - Note: that ORY's Documentation is not managed within this repository and thus its content is not susceptible to changes made within this repository.
 
 **Functionality**
