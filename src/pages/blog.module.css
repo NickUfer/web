@@ -2,7 +2,7 @@
   font-weight: 300;
   font-size: 36px;
   line-height: 126%;
-  color: var(--colors-ui-dark-primary);
+  color: var(--colors-ory-dark);
 }
 
 .post-list {
@@ -31,7 +31,7 @@
 }
 
 p.post-overline {
-  color: var(--colors-ui-grey);
+  color: var(--colors-base-text);
   font-weight: 600;
   font-size: 10px;
   line-height: 126%;
@@ -48,12 +48,12 @@ h3.post-title {
 
   & a:any-link {
     transition: all ease 200ms;
-    color: var(--colors-brand-primary);
+    color: var(--colors-ory-default);
 
     &:hover,
     &:active,
     &:focus {
-      color: var(--colors-ui-dark-primary);
+      color: var(--colors-ory-dark);
     }
   }
 }
@@ -67,7 +67,7 @@ p.post-teaser {
 }
 
 p.post-link a:any-link {
-  color: var(--colors-brand-primary);
+  color: var(--colors-ory-default);
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
@@ -76,6 +76,6 @@ p.post-link a:any-link {
   &:hover,
   &:active,
   &:focus {
-    color: var(--colors-ui-dark-primary);
+    color: var(--colors-ory-dark);
   }
 }

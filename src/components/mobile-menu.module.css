@@ -18,7 +18,7 @@
 }
 
 .show .divider {
-  background-color: var(--colors-ui-tertiary);
+  background-color: var(--colors-hydra-default);
 }
 
 .nav-icon :global .container-fluid {
@@ -68,7 +68,7 @@
 
 .nav-items {
   transition: all ease-in 300ms;
-  background-color: var(--colors-ui-dark-primary);
+  background-color: var(--colors-ory-dark);
   position: absolute;
   z-index: 1;
   top: var(--nav-height);

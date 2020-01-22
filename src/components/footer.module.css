@@ -1,20 +1,20 @@
 @import '../styles/properties.css';
 
 .footer {
-  background-color: var(--colors-ui-dark-primary);
+  background-color: var(--colors-ory-dark);
   padding: 36px 0;
   color: var(--colors-ui-white);
 }
 
 .footer a:any-link {
-  color: var(--colors-ui-white);
+  color: var(--colors-base-white);
 }
 
 :global .theme-default :local .footer a:any-link {
   &:hover,
   &:active,
   &:focus {
-    color: var(--colors-brand-secondary);
+    color: var(--colors-ory-default);
   }
 }
 
@@ -22,7 +22,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: var(--colors-brand-secondary);
+    color: var(--colors-ory-default);
   }
 }
 

@@ -12,52 +12,52 @@
   }
 
   &.light {
-    background-color: var(--colors-brand-primary-light-05);
+    background-color: var(--colors-base-white);
 
     & h3,
     & p {
-      color: var(--colors-ui-dark-primary);
+      color: var(--colors-ory-dark);
     }
 
     & a:any-link {
       &:hover,
       &:active,
       &:focus {
-        color: var(--colors-ui-dark-primary);
+        color: var(--colors-ory-default);
       }
     }
   }
 
   &.dark {
-    color: var(--colors-ui-white);
-    background-color: var(--colors-ui-dark-primary);
+    color: var(--colors-base-white);
+    background-color: var(--colors-ory-dark);
 
     & a:any-link {
       &:hover,
       &:active,
       &:focus {
-        color: var(--colors-ui-white);
+        color: var(--colors-base-white);
       }
     }
   }
 }
 
 :global .theme-default :local .section a:any-link {
-  color: var(--colors-brand-secondary);
+  color: var(--colors-ory-default);
 }
 
 :global .theme-default :local .section.light a:any-link {
-  color: var(--colors-brand-primary);
+  color: var(--colors-ory-default);
 
   &:hover,
   &:active,
   &:focus {
-    color: var(--colors-ui-dark-primary);
+    color: var(--colors-ory-dark);
   }
 }
 
 :global .theme-hydra :local .section a:any-link {
-  color: var(--colors-brand-hydra);
+  color: var(--colors-hydra-default);
 }
 
 @media (--mobile-viewport) {

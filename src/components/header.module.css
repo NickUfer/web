@@ -3,14 +3,14 @@
 .header {
   height: var(--nav-height);
   width: 100%;
-  background: var(--colors-ui-dark-primary);
-  color: var(--colors-ui-white);
+  background: var(--colors-ory-dark);
+  color: var(--colors-base-white);
   display: flex;
   align-items: center;
 
   & a,
   & a:visited {
-    color: var(--colors-ui-white);
+    color: var(--colors-base-white);
   }
 }
 
@@ -20,12 +20,12 @@
     &:hover,
     &:focus,
     &:active {
-      color: var(--colors-brand-secondary);
+      color: var(--colors-ory-default);
     }
   }
 
   & .logo {
-    color: var(--colors-brand-secondary);
+    color: var(--colors-ory-default);
   }
 }
 
@@ -35,12 +35,12 @@
     &:hover,
     &:focus,
     &:active {
-      color: var(--colors-brand-hydra);
+      color: var(--colors-hydra-default);
     }
   }
 
   & .logo {
-    color: var(--colors-brand-hydra);
+    color: var(--colors-hydra-default);
   }
 }
 

@@ -25,7 +25,7 @@
 
   & p,
   & h4 {
-    color: var(--colors-ui-white);
+    color: var(--colors-base-white);
   }
 
   &:hover img {
@@ -39,7 +39,7 @@
   &:active {
     & h4,
     & p {
-      color: var(--colors-brand-secondary);
+      color: var(--colors-ory-default);
       text-decoration: none;
     }
   }
@@ -51,7 +51,7 @@
   &:active {
     & h4,
     & p {
-      color: var(--colors-brand-hydra);
+      color: var(--colors-hydra-default);
     }
   }
 }

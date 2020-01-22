@@ -1,6 +1,6 @@
 .box {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  background-color: var(--colors-ui-dark-primary);
+  background-color: var(--colors-ory-dark);
   border-radius: 15px;
   padding: 8px 16px;
   min-height: 360px;
@@ -9,7 +9,7 @@
 .tabs {
   display: flex;
   align-items: center;
-  color: var(--colors-ui-white);
+  color: var(--colors-base-white);
   & .tab {
     font-family: 'IBM Plex Mono', monospace;
     font-style: normal;
@@ -20,7 +20,7 @@
     padding: 0 8px;
     cursor: pointer;
     &.selected {
-      border-bottom: 1px solid var(--colors-ui-tertiary);
+      border-bottom: 1px solid var(--colors-hydra-default);
     }
   }
 }
@@ -34,11 +34,11 @@
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background-color: var(--colors-ui-primary-dark-70);
+    background-color: var(--colors-ory-dark);
     margin-right: 5px;
 
     &.primary {
-      background-color: var(--colors-ui-tertiary);
+      background-color: var(--colors-hydra-default);
     }
   }
 }
@@ -55,21 +55,21 @@
   &,
   & pre,
   & code {
-    color: var(--colors-ui-white);
+    color: var(--colors-base-white);
     font-family: 'IBM Plex Mono', monospace;
     text-shadow: none;
     font-style: normal;
     font-weight: 500;
     font-size: 11px;
     line-height: 175%;
-    background-color: var(--colors-ui-dark-primary);
+    background-color: var(--colors-ory-dark);
 
     word-wrap: break-word;
     white-space: pre-wrap;
   }
 
   & pre code :global .token.operator {
-    color: var(--colors-ui-white);
-    background-color: var(--colors-ui-dark-primary);
+    color: var(--colors-base-white);
+    background-color: var(--colors-ory-dark);
   }
 }

@@ -6,13 +6,13 @@
 
 :global .theme-default {
   & :local .divider {
-    border-color: var(--colors-brand-secondary);
+    border-color: var(--colors-ory-default);
   }
 }
 
 :global .theme-hydra {
   & :local .divider {
-    border-color: var(--colors-brand-hydra);
+    border-color: var(--colors-hydra-default);
   }
 }
 

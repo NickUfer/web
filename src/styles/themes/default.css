@@ -1,33 +1,48 @@
 :root {
-  --colors-brand-primary: #6274f3;
-  --colors-brand-primary-light-05: #f7f8fe;
-  --colors-brand-primary-light-10: #f0f2fe;
-  --colors-brand-primary-light-12: #eceefe;
-  --colors-brand-primary-light-15: #e7ebfe;
+  --colors-base-black: #000000;
+  --colors-base-dark: #19191D;
+  --colors-base-grey: #5A5B6A;
+  --colors-base-text: #99999E;
+  --colors-base-light: #F0F0F1;
+  --colors-base-white: #ffffff;
 
-  --colors-brand-secondary: #50e3c2;
-  --colors-brand-secondary-shade-15: color-mod(#50e3c2 shade(15%));
+  --colors-ory-dark: #15283B;
+  --colors-ory-default: #6274F3;
+  --colors-ory-weak: #C8CEFA;
+  --colors-ory-light: #EAECFE;
 
-  --colors-brand-hydra: #f0486f;
-  --colors-brand-hydra-shade-15: color-mod(#f0486f shade(15%));
+  --colors-kratos-dark: #452400;
+  --colors-kratos-default: #FB8200;
+  --colors-kratos-weak: #FFB86C;
+  --colors-kratos-light: #FEF3E7;
 
-  --colors-brand-oathkeeper: #63beff;
-  --colors-brand-keto: #54cca4;
+  --colors-hydra-dark: #470B25;
+  --colors-hydra-default: #DB2B56;
+  --colors-hydra-weak: #FFBDCD;
+  --colors-hydra-light: #FDE5EA;
 
-  --colors-ui-tertiary: #f0486f;
-  --colors-ui-tertiary-shade-10: color-mod(#f0486f shade(10%));
-  --colors-ui-tertiary-shade-15: color-mod(#f0486f shade(15%));
+  --colors-oathkeeper-dark: #0C2146;
+  --colors-oathkeeper-default: #2979FF;
+  --colors-oathkeeper-weak: #B3CFFF;
+  --colors-oathkeeper-light: #EBF2FF;
 
-  --colors-ui-black: #000000;
+  --colors-keto-dark: #002E1D;
+  --colors-keto-default: #00A571;
+  --colors-keto-weak: #6BE2BD;
+  --colors-keto-light: #E3F6EF;
 
-  --colors-ui-white: #ffffff;
-  --colors-ui-white-shade-10: color-mod(#ffffff shade(10%));
-  --colors-ui-white-shade-15: color-mod(#ffffff shade(15%));
+  --colors-green-dark: #132C14;
+  --colors-green-default: #43A047;
+  --colors-green-weak: #8BDC8E;
+  --colors-green-light: #EDF6EE;
 
-  --colors-ui-grey: #c4c4c4;
-  --colors-ui-grey-light: #e5e5e5;
+  --colors-yellow-dark: #463209;
+  --colors-yellow-default: #FFB41F;
+  --colors-yellow-weak: #FFDFA0;
+  --colors-yellow-light: #FFF8EA;
 
-  --colors-ui-dark-primary: #122232;
-  --colors-ui-primary-dark-70: #4551aa;
-  --colors-ui-primary-light-5: #f4f5fe;
+  --colors-red-dark: #43130F;
+  --colors-red-default: #F44336;
+  --colors-red-weak: #F99C95;
+  --colors-red-light: #FEEDEC;
 }

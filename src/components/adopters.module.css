@@ -1,11 +1,11 @@
 .adopters {
-  background-color: var(--colors-brand-primary-light-05);
+  background-color: var(--colors-base-white);
   padding: 96px 0;
   position: relative;
 
   & h3,
   & p {
-    color: var(--colors-ui-dark-primary);
+    color: var(--colors-ory-dark);
   }
 
   & a img {

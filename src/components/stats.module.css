@@ -1,8 +1,8 @@
 .stats {
-  background-color: var(--colors-ui-primary-dark-70);
+  background-color: var(--colors-ory-default);
   padding: 96px 0;
   position: relative;
-  color: var(--colors-ui-white);
+  color: var(--colors-ory-dark);
 }
 
 @media (--mobile-viewport) {
@@ -14,7 +14,7 @@
 :global .theme-default {
   & :local .items .item {
     & .amount * {
-      color: var(--colors-brand-secondary);
+      color: var(--colors-ory-dark);
     }
   }
 }
@@ -22,7 +22,7 @@
 :global .theme-hydra {
   & :local .items .item {
     & .amount * {
-      color: var(--colors-brand-hydra);
+      color: var(--colors-hydra-default);
     }
   }
 }
@@ -47,7 +47,7 @@
       font-size: 28px;
       line-height: 168%;
       text-align: center;
-      color: var(--colors-ui-tertiary);
+      color: var(--colors-hydra-default);
     }
 
     & .description {
@@ -56,7 +56,7 @@
       font-size: 14px;
       line-height: 168%;
       text-align: center;
-      color: var(--colors-ui-grey);
+      color: var(--colors-ory-light);
     }
   }
 }

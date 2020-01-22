@@ -1,9 +1,9 @@
 @import '../styles/properties.css';
 
 .title {
-  background: var(--colors-ui-dark-primary);
+  background: var(--colors-ory-dark);
 
-  color: var(--colors-ui-white);
+  color: var(--colors-base-white);
 
   & :global .container-fluid {
     position: relative;
@@ -22,16 +22,16 @@
     font-weight: 300;
     font-size: 14px;
     line-height: 168%;
-    color: var(--colors-ui-white);
+    color: var(--colors-base-white);
 
     & .author {
-      color: var(--colors-brand-secondary);
+      color: var(--colors-ory-default);
     }
   }
 }
 
 .subtitle {
-  color: var(--colors-brand-secondary);
+  color: var(--colors-ory-default);
   font-size: 12px;
   line-height: 126%;
   letter-spacing: 0.03em;
@@ -56,17 +56,17 @@
 }
 
 .teaser {
-  background: var(--colors-ui-primary-dark-70);
+  background: var(--colors-ory-dark);
 
-  color: var(--colors-ui-white);
+  color: var(--colors-base-white);
 
   & a:any-link {
-    color: var(--colors-brand-secondary);
+    color: var(--colors-ory-default);
 
     &:hover,
     &:active,
     &:focus {
-      color: var(--colors-ui-white);
+      color: var(--colors-base-white);
       text-decoration: underline;
     }
   }
