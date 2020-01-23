@@ -81,8 +81,8 @@ const Footer = () => (
               <img src={logoTiny} alt={'ORY logo'} />
             </>
           )}
-          <p className="secondary" style={{ marginTop: 2 }}>
-            &copy; 2019 Ory Corp.
+          <p className={cn('secondary', styles.copyright)} style={{ marginTop: 2 }}>
+            &copy; Copyright 2020 Ory Corp
           </p>
         </div>
         <div className="col-lg-7 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile mobile-offset-64">

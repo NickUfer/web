@@ -1,6 +1,7 @@
 declare const styles: {
   readonly "footer": string;
   readonly "contact": string;
+  readonly "copyright": string;
   readonly "listTitle": string;
   readonly "list": string;
   readonly "item": string;

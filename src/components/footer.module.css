@@ -31,7 +31,12 @@
   margin-bottom: 2px;
 }
 
+.footer .copyright {
+  color: var(--colors-base-white);
+}
+
 .list-title {
+  color: var(--colors-base-white);
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
