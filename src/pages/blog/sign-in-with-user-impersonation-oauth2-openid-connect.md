@@ -1,4 +1,5 @@
 ---
+published: true
 path: '/sign-in-with-user-impersonation-oauth2-openid-connect/'
 title: 'Impersonating users by abusing broken “Sign in with” implementations'
 publishedAt: '2018-11-27'

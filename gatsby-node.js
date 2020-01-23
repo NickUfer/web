@@ -12,7 +12,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     {
-      allMarkdownRemark(limit: 10) {
+      allMarkdownRemark(limit: 10, filter: {frontmatter: { published: {eq: true} }}) {
         edges {
           node {
             fileAbsolutePath

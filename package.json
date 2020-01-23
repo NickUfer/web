@@ -1,9 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "ory.sh",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "version": "0.0.0",
   "dependencies": {
     "@raae/gatsby-remark-oembed": "^0.1.1",
     "@types/classnames": "^2.2.9",
@@ -24,7 +22,7 @@
     "csv-parse": "^4.6.3",
     "dateformat": "^3.0.3",
     "fs-extra": "^8.1.0",
-    "gatsby": "^2.15.31",
+    "gatsby": "^2.19.2",
     "gatsby-image": "^2.2.24",
     "gatsby-plugin-force-trailing-slashes": "^1.0.4",
     "gatsby-plugin-manifest": "^2.2.20",
@@ -67,8 +65,8 @@
     "regression": "^2.0.1",
     "remark": "^11.0.1",
     "remark-html": "^10.0.0",
-    "typed-css-modules": "^0.5.1",
-    "typed-css-modules-loader": "0.0.17",
+    "typed-css-modules": "^0.6.3",
+    "typed-css-modules-loader": "0.0.18",
     "typed-css-modules-webpack-plugin": "^0.1.2"
   },
   "devDependencies": {

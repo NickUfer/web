@@ -1,4 +1,5 @@
 ---
+published: true
 path: '/web-api-cloud-access-control-authentication/'
 title: 'Approaching Access Control on the Web'
 metaTitle: 'Approaching Access Control on the Web: Authentication Overview'

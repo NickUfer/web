@@ -1,4 +1,5 @@
 ---
+published: true
 path: '/run-oauth2-server-open-source-api-security/'
 title: >
   Run your own OAuth2 Server

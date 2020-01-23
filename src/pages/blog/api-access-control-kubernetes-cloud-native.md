@@ -1,4 +1,5 @@
 ---
+published: true
 path: '/api-access-control-kubernetes-cloud-native/'
 title: 'Zero Trust API Access Control on Kubernetes'
 metaTitle: 'Zero Trust API Access Control on Kubernetes'

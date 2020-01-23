@@ -1,4 +1,5 @@
 ---
+published: true
 path: '/golang-go-code-coverage-accurate/'
 title: >
   Accurate code coverage in Go
