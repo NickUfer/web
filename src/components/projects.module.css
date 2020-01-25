@@ -7,52 +7,72 @@
   margin-bottom: 32px;
   cursor: pointer;
   transition: color ease 200ms;
-  align-items: center;
+  text-align: left;
 
   & img {
     margin-right: 20px;
-    max-width: 53px;
-    max-height: 53px;
-    width: 100%;
+    min-height: 40px;
+    max-height: 40px;
     transition: transform ease 200ms;
   }
 
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: none !important;
+  &.kratos {
+    &:hover,
+    &:focus,
+    &:active {
+      & h4,
+      & p {
+        color: var(--colors-kratos-default);
+        text-decoration: none;
+      }
+    }
   }
+
+  &.hydra {
+    &:hover,
+    &:focus,
+    &:active {
+      & h4,
+      & p {
+        color: var(--colors-hydra-default);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.oathkeeper {
+    &:hover,
+    &:focus,
+    &:active {
+      & h4,
+      & p {
+        color: var(--colors-oathkeeper-default);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &.keto {
+    &:hover,
+    &:focus,
+    &:active {
+      & h4,
+      & p {
+        color: var(--colors-keto-default);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &:hover,
+     &:focus,
+     &:active {
+       text-decoration: none !important;
+     }
 
   & p,
   & h4 {
     color: var(--colors-base-white);
-  }
-
-  &:hover img {
-    transform: rotate(90deg);
-  }
-}
-
-:global .theme-default :local a.project:any-link {
-  &:hover,
-  &:focus,
-  &:active {
-    & h4,
-    & p {
-      color: var(--colors-ory-default);
-      text-decoration: none;
-    }
-  }
-}
-
-:global .theme-hydra :local a.project:any-link {
-  &:hover,
-  &:focus,
-  &:active {
-    & h4,
-    & p {
-      color: var(--colors-hydra-default);
-    }
   }
 }
 
@@ -67,8 +87,8 @@
 
     & img {
       margin-right: 16px;
-      max-width: 50px;
-      max-height: 50px;
+      max-height: 40px;
+      min-height: 40px;
     }
   }
 }

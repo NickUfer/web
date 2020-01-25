@@ -2,14 +2,24 @@ import React from 'react'
 import cn from 'classnames'
 import * as styles from './section.module.css'
 import * as pstyles from './projects.module.css'
-import hydra from '../images/ory-hydra.svg'
-import keto from '../images/ory-keto.svg'
-import oathkeeper from '../images/ory-oathkeeper.svg'
+import kratos from '../images/ory_kratos.svg'
+import hydra from '../images/ory_hydra.svg'
+import oathkeeper from '../images/ory_oathkeeper.svg'
+import keto from '../images/ory_keto.svg'
 import { brandPrefix } from '../config'
 import { Link } from 'gatsby'
 
+
 const projects = [
   {
+    className: pstyles.kratos,
+    title: `${brandPrefix}Kratos`,
+    description: 'Cloud native Identity and User Management',
+    image: kratos,
+    url: 'https://github.com/ory/kratos',
+  },
+  {
+    className: pstyles.hydra,
     title: `${brandPrefix}Hydra`,
     description:
       'Secure access to your applications and APIs with OAuth 2.0 and OpenID Connect.',
@@ -17,6 +27,7 @@ const projects = [
     path: '/hydra',
   },
   {
+    className: pstyles.oathkeeper,
     title: `${brandPrefix}Oathkeeper`,
     description:
       'Verify and allow identities to interact with your applications.',
@@ -24,6 +35,7 @@ const projects = [
     url: 'https://github.com/ory/oathkeeper',
   },
   {
+    className: pstyles.keto,
     title: `${brandPrefix}Keto`,
     description: 'A best practice patterns based access control REST API.',
     image: keto,
@@ -37,19 +49,18 @@ const Projects = () => (
       styles.section,
       styles.dark,
       pstyles.section,
-      'is-dark-background'
+      'is-dark-background',
     )}
   >
     <div className="container-fluid">
       <div className="row">
         <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-          <h3 className="hidden-sm hidden-md">Projects</h3>
+          <h3 className="hidden-sm hidden-md">Open source projects</h3>
           <p>
             All of our code is open source, fueled by an engaged community of
             contributors. It is licensed under Apache 2.0 and is available for
-            free on GitHub. Our core projects are {brandPrefix}Hydra,{' '}
-            {brandPrefix}Oathkeeper and{' '}
-            {brandPrefix}Keto.
+            free on GitHub. Our core projects are {brandPrefix} Hydra,{' '}
+            {brandPrefix} Oathkeeper and {brandPrefix} Keto.
           </p>
           <p>
             You can also become a sponsor or supporter of our open source
@@ -59,24 +70,22 @@ const Projects = () => (
           </p>
         </div>
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-          {projects.map(({ url, title, description, image, path }) =>
+          {projects.map(({ url, title, description, path, className, image }) =>
             path ? (
-              <Link key={title} className={pstyles.project} to={path}>
-                <img src={image} alt={title} />
+              <Link key={title} className={cn(pstyles.project, className)} to={path}>
                 <div>
-                  <h4>{title}</h4>
+                  <img src={image} alt={title}/>
                   <p className={pstyles.description}>{description}</p>
                 </div>
               </Link>
             ) : (
-              <a key={title} className={pstyles.project} href={url}>
-                <img src={image} alt={title} />
+              <a key={title} className={cn(pstyles.project, className)} href={url}>
                 <div>
-                  <h4>{title}</h4>
+                  <img src={image} alt={title}/>
                   <p className={pstyles.description}>{description}</p>
                 </div>
               </a>
-            )
+            ),
           )}
         </div>
         <div className="hidden-lg col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">

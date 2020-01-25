@@ -9,10 +9,7 @@ import cn from 'classnames'
 import Projects from '../components/projects'
 import Adopters from '../components/adopters'
 import Stats from '../components/stats'
-import Footer from '../components/footer'
 import ResponsiveSection from '../components/responsive-section'
-import thomas from '../images/thomas.png'
-import aeneas from '../images/aeneas.png'
 import Profile from '../components/profile'
 import { graphql } from 'gatsby'
 
@@ -57,7 +54,7 @@ const IndexPage = ({ data }: any) => {
         right={
           <img
             alt="ORY is the open source and cloud native identity infrastructure."
-            className={cn('responsive', styles.whyOry)}
+            className={cn('responsive')}
             src={oryStack}
           />
         }

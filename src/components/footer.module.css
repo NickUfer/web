@@ -22,7 +22,7 @@
   &:hover,
   &:active,
   &:focus {
-    color: var(--colors-ory-default);
+    color: var(--colors-hydra-default);
   }
 }
 

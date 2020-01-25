@@ -1,5 +1,4 @@
 .stats {
-  background-color: var(--colors-ory-default);
   padding: 96px 0;
   position: relative;
   color: var(--colors-ory-dark);
@@ -12,14 +11,16 @@
 }
 
 :global .theme-default {
+  background-color: var(--colors-ory-weak);
   & :local .items .item {
     & .amount * {
-      color: var(--colors-ory-dark);
+      color: var(--colors-ory-default);
     }
   }
 }
 
 :global .theme-hydra {
+  background-color: var(--colors-hydra-weak);
   & :local .items .item {
     & .amount * {
       color: var(--colors-hydra-default);
@@ -47,7 +48,6 @@
       font-size: 28px;
       line-height: 168%;
       text-align: center;
-      color: var(--colors-hydra-default);
     }
 
     & .description {
@@ -56,7 +56,7 @@
       font-size: 14px;
       line-height: 168%;
       text-align: center;
-      color: var(--colors-ory-light);
+      color: var(--colors-ory-dark);
     }
   }
 }
