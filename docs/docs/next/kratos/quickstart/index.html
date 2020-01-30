@@ -122,7 +122,7 @@ your system. No other dependencies are required. Let's clone ORY Kratos and run
 <code>docker-compose</code>:</p>
 <pre><code class="hljs css language-shell script">git clone https://github.com/ory/kratos.git
 <span class="hljs-meta">#</span><span class="bash"> or <span class="hljs-keyword">if</span> you have git+ssh <span class="hljs-built_in">set</span> up:</span>
-<span class="hljs-meta">#</span><span class="bash">  git <span class="hljs-built_in">clone</span> https://github.com/ory/kratos.git</span>
+<span class="hljs-meta">#</span><span class="bash">  git <span class="hljs-built_in">clone</span> git@github.com:ory/kratos.git</span>
 cd kratos
 make quickstart
 <span class="hljs-meta">
@@ -206,7 +206,7 @@ redirects the browser to <code>http://127.0.0.1:4445/auth/login</code>, appendin
 <code>?request=...</code> query parameter. The endpoint at <code>/auth/login</code> (which belongs to
 our SecureApp) then fetches data important for rendering the forms from ORY
 Krato's Admin API:</p>
-<pre><code class="hljs css language-shell script"><span class="hljs-meta">$</span><span class="bash"> curl http://127.0.0.1:4434/auth/browser/requests/login?request=&lt;request-id&gt;</span>
+<pre><code class="hljs css language-shell script"><span class="hljs-meta">$</span><span class="bash"> curl http://127.0.0.1:4434/self-service/browser/flows/login?request=&lt;request-id&gt;</span>
 {
     "id": "27aa98bc-a074-418f-96fa-8b8146050209",
     "expires_at": "2020-01-20T21:10:12.7365393Z",
@@ -218,24 +218,24 @@ Krato's Admin API:</p>
             "config": {
                 "action": "http://127.0.0.1:4455/.ory/kratos/public/auth/browser/methods/password/login?request=27aa98bc-a074-418f-96fa-8b8146050209",
                 "method": "POST",
-                "fields": {
-                    "csrf_token": {
+                "fields": [
+                    {
                         "name": "csrf_token",
                         "type": "hidden",
                         "required": true,
                         "value": "Ii8iIEdnn12vVQ2vyz2YaHjmXMUK5eSQgw9pgENGxPjXi1PHC9gOG51x61o2GT9LGvC81ddvmNXYeLvlPxA04g=="
                     },
-                    "identifier": {
+                    {
                         "name": "identifier",
                         "type": "text",
                         "required": true
                     },
-                    "password": {
+                    {
                         "name": "password",
                         "type": "password",
                         "required": true
                     }
-                }
+                ]
             }
         }
     }
@@ -254,7 +254,7 @@ which initiates a flow similar to the one we just used:</p>
 will complain:</p>
 <p><img src="/docs/assets/images/kratos/secureapp-registration-pwpolicy.png" alt="Registration with network trace screen of your secured app"></p>
 <p>The error message is coming directly from ORY Krato's API:</p>
-<pre><code class="hljs css language-shell script"><span class="hljs-meta">$</span><span class="bash"> curl http://127.0.0.1:4434/auth/browser/requests/registration?request=&lt;request-id&gt;</span>
+<pre><code class="hljs css language-shell script"><span class="hljs-meta">$</span><span class="bash"> curl http://127.0.0.1:4434/self-service/browser/flows/requests/registration?request=&lt;request-id&gt;</span>
 {
     "id": "79349cbd-c785-476a-8db8-d0d71c5b003c",
     "expires_at": "2020-01-20T21:17:00.5077381Z",
@@ -266,34 +266,28 @@ will complain:</p>
             "config": {
                 "action": "http://127.0.0.1:4455/.ory/kratos/public/auth/browser/methods/password/registration?request=79349cbd-c785-476a-8db8-d0d71c5b003c",
                 "method": "POST",
-                "fields": {
-                    "csrf_token": {
+                "fields": [
+                    {
                         "name": "csrf_token",
                         "type": "hidden",
                         "required": true,
                         "value": "+ZQ8x5cVgdtt4xtPIRJXQPKMVU5c/S2Mj2MuudP32vsMME0g26oQnV/H/brcNvBjkJq1XoF3UcnUFPzcr6Eq4Q=="
                     },
-                    "password": {
+                    {
                         "name": "password",
                         "type": "password",
                         "required": true
                     },
-                    "request": {
-                        "name": "request",
-                        "type": "hidden",
-                        "required": true,
-                        "value": ""
-                    },
-                    "traits.email": {
+                    {
                         "name": "traits.email",
                         "type": "text",
                         "value": "hello@ory.sh"
                     },
-                    "traits.full_name": {
+                    {
                         "name": "traits.full_name",
                         "type": "text"
                     }
-                }
+                ]
             }
         }
     }
@@ -324,7 +318,7 @@ and remove all mounted volumes.</p>
 <pre><code class="hljs css language-shell script">docker-compose -f quickstart.yml down -v
 docker-compose -f quickstart.yml rm -f -s -v
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/28/2020 by aeneasr</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/kratos/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/next/kratos/install"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-case-you-want-login-and-registration-for-your-application">Use case: You want login and registration for your Application</a></li><li><a href="#setup">Setup</a><ul class="toc-headings"><li><a href="#clone-ory-kratos-and-run-it-in-docker">Clone ORY Kratos and run it in Docker</a></li><li><a href="#network-architecture">Network Architecture</a></li></ul></li><li><a href="#perform-registration-logout-login">Perform registration, logout, login</a><ul class="toc-headings"><li><a href="#understanding-how-login-and-registration-works">Understanding how Login and Registration works</a></li></ul></li><li><a href="#cleaning-up-docker">Cleaning up Docker</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/30/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/kratos/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/next/kratos/install"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-case-you-want-login-and-registration-for-your-application">Use case: You want login and registration for your Application</a></li><li><a href="#setup">Setup</a><ul class="toc-headings"><li><a href="#clone-ory-kratos-and-run-it-in-docker">Clone ORY Kratos and run it in Docker</a></li><li><a href="#network-architecture">Network Architecture</a></li></ul></li><li><a href="#perform-registration-logout-login">Perform registration, logout, login</a><ul class="toc-headings"><li><a href="#understanding-how-login-and-registration-works">Understanding how Login and Registration works</a></li></ul></li><li><a href="#cleaning-up-docker">Cleaning up Docker</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
