@@ -1,0 +1,2292 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>REST API · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Welcome to the ORY Kratos HTTP API documentation!"/><meta name="docsearch:version" content="oryOS.15"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="REST API · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="Welcome to the ORY Kratos HTTP API documentation!"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.15</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class=""><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/kratos/sdk/api.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">REST API</h1></header><article><div><span><p>Welcome to the ORY Kratos HTTP API documentation!</p>
+<blockquote>
+<p>You are viewing REST API documentation. This documentation is auto-generated
+from a swagger specification which itself is generated from annotations in the
+source code of the project. It is possible that this documentation includes
+bugs and that code samples are incomplete or wrong.</p>
+<p>If you find issues in the respective documentation, please do not edit the
+Markdown files directly (as they are generated) but raise an issue on the
+project's GitHub presence instead. This documentation will improve over time
+with your help! If you have ideas how to improve this part of the
+documentation, feel free to share them in a
+<a href="https://github.com/ory/docs/issues/new">GitHub issue</a> any time.</p>
+</blockquote>
+<p><a id="ory-kratos-public-endpoints"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="public-endpoints"></a><a href="#public-endpoints" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Public Endpoints</h2>
+<p><a id="opIdinitializeLoginFlow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="initialize-a-login-flow"></a><a href="#initialize-a-login-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialize a Login Flow</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/auth/browser/login</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint initializes a login flow. This endpoint <strong>should not be called
+from a programatic API</strong> but instead for the, for example, browser. It will
+redirect the user agent (e.g. browser) to the configured login UI, appending the
+login challenge.</p>
+<p>If the user-agent already has a valid authentication session, the server will
+respond with a 302 code redirecting to the config value of
+<code>urls.default_return_to</code>.</p>
+<p>For an in-depth look at ORY Krato's login flow, head over to:
+<a href="https://www.ory.sh/docs/kratos/selfservice/login">https://www.ory.sh/docs/kratos/selfservice/login</a></p>
+<h4><a class="anchor" aria-hidden="true" id="responses"></a><a href="#responses" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="initialize-a-login-flow-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview"></a><a href="#overview" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>302</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.4.3">Found</a></td><td>Empty responses are sent when, for example, resources are deleted. The HTTP status code for empty responses is</td></tr>
+<tr><td>typically 201.</td><td>None</td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples"></a><a href="#examples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="500-response"></a><a href="#500-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>500 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"error"</span>: <span class="hljs-string">"The requested resource could not be found"</span>,
+  <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">404</span>,
+  <span class="hljs-attr">"error_debug"</span>: <span class="hljs-string">"The database adapter was unable to find the element"</span>,
+  <span class="hljs-attr">"error_hint"</span>: <span class="hljs-string">"Object with RequestID 12345 does not exist"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples"></a><a href="#code-samples" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-initializeLoginFlow">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-initializeLoginFlow-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeLoginFlow-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeLoginFlow-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeLoginFlow-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeLoginFlow-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeLoginFlow-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-initializeLoginFlow-shell">
+<pre><code class="hljs css language-shell">curl -X GET /auth/browser/login \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeLoginFlow-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/auth/browser/login"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeLoginFlow-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/auth/browser/login'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeLoginFlow-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/auth/browser/login"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeLoginFlow-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/auth/browser/login'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeLoginFlow-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/auth/browser/login'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="opIdinitializeRegistrationFlow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="initialize-a-registration-flow"></a><a href="#initialize-a-registration-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialize a Registration Flow</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/auth/browser/registration</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint initializes a registration flow. This endpoint <strong>should not be
+called from a programatic API</strong> but instead for the, for example, browser. It
+will redirect the user agent (e.g. browser) to the configured registration UI,
+appending the registration challenge.</p>
+<p>For an in-depth look at ORY Krato's registration flow, head over to:
+<a href="https://www.ory.sh/docs/kratos/selfservice/registration">https://www.ory.sh/docs/kratos/selfservice/registration</a></p>
+<h4><a class="anchor" aria-hidden="true" id="responses-1"></a><a href="#responses-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="initialize-a-registration-flow-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-1"></a><a href="#overview-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>302</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.4.3">Found</a></td><td>Empty responses are sent when, for example, resources are deleted. The HTTP status code for empty responses is</td></tr>
+<tr><td>typically 201.</td><td>None</td></tr>
+<tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-1"></a><a href="#examples-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="404-response"></a><a href="#404-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>404 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"error"</span>: <span class="hljs-string">"The requested resource could not be found"</span>,
+  <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">404</span>,
+  <span class="hljs-attr">"error_debug"</span>: <span class="hljs-string">"The database adapter was unable to find the element"</span>,
+  <span class="hljs-attr">"error_hint"</span>: <span class="hljs-string">"Object with RequestID 12345 does not exist"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-1"></a><a href="#code-samples-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-initializeRegistrationFlow">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-initializeRegistrationFlow-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeRegistrationFlow-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeRegistrationFlow-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeRegistrationFlow-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeRegistrationFlow-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeRegistrationFlow-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-initializeRegistrationFlow-shell">
+<pre><code class="hljs css language-shell">curl -X GET /auth/browser/registration \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeRegistrationFlow-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/auth/browser/registration"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeRegistrationFlow-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/auth/browser/registration'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeRegistrationFlow-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/auth/browser/registration"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeRegistrationFlow-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/auth/browser/registration'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeRegistrationFlow-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/auth/browser/registration'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="opIdgetLoginRequest"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="get-login-request"></a><a href="#get-login-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Login Request</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/auth/browser/requests/login</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint returns a login request's context with, for example, error details
+and other information.</p>
+<p>For an in-depth look at ORY Krato's login flow, head over to:
+<a href="https://www.ory.sh/docs/kratos/selfservice/login">https://www.ory.sh/docs/kratos/selfservice/login</a></p>
+<h4><a class="anchor" aria-hidden="true" id="responses-2"></a><a href="#responses-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="get-login-request-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-2"></a><a href="#overview-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>loginRequest</td><td><a href="#schemaloginrequest">loginRequest</a></td></tr>
+<tr><td>302</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.4.3">Found</a></td><td>Empty responses are sent when, for example, resources are deleted. The HTTP status code for empty responses is</td></tr>
+<tr><td>typically 201.</td><td>None</td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-2"></a><a href="#examples-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="200-response"></a><a href="#200-response" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>200 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"active"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"expires_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"issued_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"methods"</span>: {
+    <span class="hljs-attr">"property1"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    },
+    <span class="hljs-attr">"property2"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    }
+  },
+  <span class="hljs-attr">"request_url"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-2"></a><a href="#code-samples-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-getLoginRequest">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-getLoginRequest-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getLoginRequest-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getLoginRequest-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getLoginRequest-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getLoginRequest-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getLoginRequest-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-getLoginRequest-shell">
+<pre><code class="hljs css language-shell">curl -X GET /auth/browser/requests/login \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getLoginRequest-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/auth/browser/requests/login"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getLoginRequest-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/auth/browser/requests/login'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getLoginRequest-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/auth/browser/requests/login"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getLoginRequest-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/auth/browser/requests/login'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getLoginRequest-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/auth/browser/requests/login'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="opIdgetRegistrationRequest"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="get-registration-request"></a><a href="#get-registration-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Registration Request</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/auth/browser/requests/registration</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint returns a registration request's context with, for example, error
+details and other information.</p>
+<p>For an in-depth look at ORY Krato's registration flow, head over to:
+<a href="https://www.ory.sh/docs/kratos/selfservice/registration">https://www.ory.sh/docs/kratos/selfservice/registration</a></p>
+<h4><a class="anchor" aria-hidden="true" id="responses-3"></a><a href="#responses-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="get-registration-request-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-3"></a><a href="#overview-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>registrationRequest</td><td><a href="#schemaregistrationrequest">registrationRequest</a></td></tr>
+<tr><td>404</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.5.4">Not Found</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-3"></a><a href="#examples-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="200-response-1"></a><a href="#200-response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>200 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"active"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"expires_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"issued_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"methods"</span>: {
+    <span class="hljs-attr">"property1"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    },
+    <span class="hljs-attr">"property2"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    }
+  },
+  <span class="hljs-attr">"request_url"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-3"></a><a href="#code-samples-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-getRegistrationRequest">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-getRegistrationRequest-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getRegistrationRequest-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getRegistrationRequest-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getRegistrationRequest-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getRegistrationRequest-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getRegistrationRequest-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-getRegistrationRequest-shell">
+<pre><code class="hljs css language-shell">curl -X GET /auth/browser/requests/registration \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getRegistrationRequest-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/auth/browser/requests/registration"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getRegistrationRequest-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/auth/browser/requests/registration'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getRegistrationRequest-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/auth/browser/requests/registration"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getRegistrationRequest-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/auth/browser/requests/registration'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getRegistrationRequest-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/auth/browser/requests/registration'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="opIdinitializeProfileManagementFlow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="initialize-profile-management-flow"></a><a href="#initialize-profile-management-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Initialize Profile Management Flow</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/profiles</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint initializes a profile update flow. This endpoint <strong>should not be
+called from a programatic API</strong> but instead for the, for example, browser. It
+will redirect the user agent (e.g. browser) to the configured login UI,
+appending the login challenge.</p>
+<p>If the user-agent does not have a valid authentication session, a 302 code will
+be returned which redirects to the initializeLoginFlow endpoint, appending this
+page as the return_to value.</p>
+<p>For an in-depth look at ORY Krato's profile management flow, head over to:
+<a href="https://www.ory.sh/docs/kratos/selfservice/profile">https://www.ory.sh/docs/kratos/selfservice/profile</a></p>
+<h4><a class="anchor" aria-hidden="true" id="responses-4"></a><a href="#responses-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="initialize-profile-management-flow-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-4"></a><a href="#overview-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>302</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.4.3">Found</a></td><td>Empty responses are sent when, for example, resources are deleted. The HTTP status code for empty responses is</td></tr>
+<tr><td>typically 201.</td><td>None</td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-4"></a><a href="#examples-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="500-response-1"></a><a href="#500-response-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>500 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"error"</span>: <span class="hljs-string">"The requested resource could not be found"</span>,
+  <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">404</span>,
+  <span class="hljs-attr">"error_debug"</span>: <span class="hljs-string">"The database adapter was unable to find the element"</span>,
+  <span class="hljs-attr">"error_hint"</span>: <span class="hljs-string">"Object with RequestID 12345 does not exist"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-4"></a><a href="#code-samples-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-initializeProfileManagementFlow">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-initializeProfileManagementFlow-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeProfileManagementFlow-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeProfileManagementFlow-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeProfileManagementFlow-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeProfileManagementFlow-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-initializeProfileManagementFlow-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-initializeProfileManagementFlow-shell">
+<pre><code class="hljs css language-shell">curl -X GET /profiles \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeProfileManagementFlow-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/profiles"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeProfileManagementFlow-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/profiles'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeProfileManagementFlow-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/profiles"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeProfileManagementFlow-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/profiles'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-initializeProfileManagementFlow-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/profiles'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="opIdcompleteProfileManagementFlow"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="complete-profile-management-flow"></a><a href="#complete-profile-management-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Complete Profile Management Flow</h3>
+<pre><code class="hljs"><span class="hljs-keyword">POST</span> <span class="hljs-string">/profiles</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint returns a login request's context with, for example, error details
+and other information.</p>
+<p>For an in-depth look at ORY Krato's profile management flow, head over to:
+<a href="https://www.ory.sh/docs/kratos/selfservice/profile">https://www.ory.sh/docs/kratos/selfservice/profile</a></p>
+<h4><a class="anchor" aria-hidden="true" id="responses-5"></a><a href="#responses-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="complete-profile-management-flow-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-5"></a><a href="#overview-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>302</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.4.3">Found</a></td><td>Empty responses are sent when, for example, resources are deleted. The HTTP status code for empty responses is</td></tr>
+<tr><td>typically 201.</td><td>None</td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-5"></a><a href="#examples-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="500-response-2"></a><a href="#500-response-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>500 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"error"</span>: <span class="hljs-string">"The requested resource could not be found"</span>,
+  <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">404</span>,
+  <span class="hljs-attr">"error_debug"</span>: <span class="hljs-string">"The database adapter was unable to find the element"</span>,
+  <span class="hljs-attr">"error_hint"</span>: <span class="hljs-string">"Object with RequestID 12345 does not exist"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-5"></a><a href="#code-samples-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-completeProfileManagementFlow">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-completeProfileManagementFlow-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-completeProfileManagementFlow-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-completeProfileManagementFlow-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-completeProfileManagementFlow-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-completeProfileManagementFlow-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-completeProfileManagementFlow-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-completeProfileManagementFlow-shell">
+<pre><code class="hljs css language-shell">curl -X POST /profiles \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-completeProfileManagementFlow-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"POST"</span>, <span class="hljs-string">"/profiles"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-completeProfileManagementFlow-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/profiles'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'POST'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-completeProfileManagementFlow-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/profiles"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"POST"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-completeProfileManagementFlow-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.post(
+  <span class="hljs-string">'/profiles'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-completeProfileManagementFlow-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.post <span class="hljs-string">'/profiles'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="opIdgetProfileManagementRequest"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="get-profile-management-request-via-cookie"></a><a href="#get-profile-management-request-via-cookie" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Profile Management Request (via cookie)</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/profiles/requests?request=string</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint returns a profile management request's context with, for example,
+error details and other information.</p>
+<p>It can be used from a Single Page Application or other applications running on a
+client device. The request must be made with valid authentication cookies or it
+will fail!</p>
+<p>If you wish to access this endpoint without the valid cookies (e.g. as part of a
+server) please call this path at the admin port.</p>
+<p>For an in-depth look at ORY Krato's profile management flow, head over to:
+<a href="https://www.ory.sh/docs/kratos/selfservice/profile">https://www.ory.sh/docs/kratos/selfservice/profile</a></p>
+<p><a id="get-profile-management-request-(via-cookie)-parameters"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="parameters"></a><a href="#parameters" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters</h5>
+<table>
+<thead>
+<tr><th>Parameter</th><th>In</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>request</td><td>query</td><td>string</td><td>true</td><td>Request should be set to the value of the <code>request</code> query parameter</td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="detailed-descriptions"></a><a href="#detailed-descriptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detailed descriptions</h5>
+<p><strong>request</strong>: Request should be set to the value of the <code>request</code> query parameter
+by the profile management UI.</p>
+<h4><a class="anchor" aria-hidden="true" id="responses-6"></a><a href="#responses-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="get-profile-management-request-(via-cookie)-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-6"></a><a href="#overview-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>profileManagementRequest</td><td><a href="#schemaprofilemanagementrequest">profileManagementRequest</a></td></tr>
+<tr><td>302</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.4.3">Found</a></td><td>Empty responses are sent when, for example, resources are deleted. The HTTP status code for empty responses is</td></tr>
+<tr><td>typically 201.</td><td>None</td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-6"></a><a href="#examples-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="200-response-2"></a><a href="#200-response-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>200 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"expires_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"form"</span>: {
+    <span class="hljs-attr">"action"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"errors"</span>: [
+      {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+      }
+    ],
+    <span class="hljs-attr">"fields"</span>: [
+      {
+        <span class="hljs-attr">"errors"</span>: [
+          {
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+          }
+        ],
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+        <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+        <span class="hljs-attr">"value"</span>: {}
+      }
+    ],
+    <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+  },
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"identity"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"traits"</span>: {},
+    <span class="hljs-attr">"traits_schema_id"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"traits_schema_url"</span>: <span class="hljs-string">"string"</span>
+  },
+  <span class="hljs-attr">"issued_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"request_url"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"update_successful"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-6"></a><a href="#code-samples-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-getProfileManagementRequest">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-getProfileManagementRequest-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getProfileManagementRequest-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getProfileManagementRequest-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getProfileManagementRequest-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getProfileManagementRequest-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getProfileManagementRequest-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-getProfileManagementRequest-shell">
+<pre><code class="hljs css language-shell">curl -X GET /profiles/requests?request=string \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getProfileManagementRequest-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/profiles/requests"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getProfileManagementRequest-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/profiles/requests?request=string'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getProfileManagementRequest-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/profiles/requests?request=string"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getProfileManagementRequest-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/profiles/requests'</span>,
+  params={
+    <span class="hljs-string">'request'</span>: <span class="hljs-string">'string'</span>},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getProfileManagementRequest-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/profiles/requests'</span>,
+  <span class="hljs-symbol">params:</span> {
+    <span class="hljs-string">'request'</span> =&gt; <span class="hljs-string">'string'</span>}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="ory-kratos-health"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="health"></a><a href="#health" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>health</h2>
+<p><a id="opIdisInstanceAlive"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="check-alive-status"></a><a href="#check-alive-status" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check alive status</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/health/alive</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint returns a 200 status code when the HTTP server is up running. This
+status does currently not include checks whether the database connection is
+working.</p>
+<p>If the service supports TLS Edge Termination, this endpoint does not require the
+<code>X-Forwarded-Proto</code> header to be set.</p>
+<p>Be aware that if you are running multiple nodes of this service, the health
+status will never refer to the cluster state, only to a single instance.</p>
+<h4><a class="anchor" aria-hidden="true" id="responses-7"></a><a href="#responses-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="check-alive-status-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-7"></a><a href="#overview-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>healthStatus</td><td><a href="#schemahealthstatus">healthStatus</a></td></tr>
+<tr><td>500</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.1">Internal Server Error</a></td><td>genericError</td><td><a href="#schemagenericerror">genericError</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-7"></a><a href="#examples-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="200-response-3"></a><a href="#200-response-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>200 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-7"></a><a href="#code-samples-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-isInstanceAlive">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-isInstanceAlive-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceAlive-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceAlive-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceAlive-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceAlive-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceAlive-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-isInstanceAlive-shell">
+<pre><code class="hljs css language-shell">curl -X GET /health/alive \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceAlive-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/health/alive"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceAlive-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/health/alive'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceAlive-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/health/alive"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceAlive-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/health/alive'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceAlive-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/health/alive'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="opIdisInstanceReady"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="check-readiness-status"></a><a href="#check-readiness-status" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Check readiness status</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/health/ready</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint returns a 200 status code when the HTTP server is up running and
+the environment dependencies (e.g. the database) are responsive as well.</p>
+<p>If the service supports TLS Edge Termination, this endpoint does not require the
+<code>X-Forwarded-Proto</code> header to be set.</p>
+<p>Be aware that if you are running multiple nodes of this service, the health
+status will never refer to the cluster state, only to a single instance.</p>
+<h4><a class="anchor" aria-hidden="true" id="responses-8"></a><a href="#responses-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="check-readiness-status-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-8"></a><a href="#overview-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>healthStatus</td><td><a href="#schemahealthstatus">healthStatus</a></td></tr>
+<tr><td>503</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.6.4">Service Unavailable</a></td><td>healthNotReadyStatus</td><td><a href="#schemahealthnotreadystatus">healthNotReadyStatus</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-8"></a><a href="#examples-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="200-response-4"></a><a href="#200-response-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>200 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-8"></a><a href="#code-samples-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-isInstanceReady">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-isInstanceReady-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceReady-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceReady-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceReady-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceReady-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-isInstanceReady-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-isInstanceReady-shell">
+<pre><code class="hljs css language-shell">curl -X GET /health/ready \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceReady-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/health/ready"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceReady-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/health/ready'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceReady-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/health/ready"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceReady-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/health/ready'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-isInstanceReady-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/health/ready'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<p><a id="ory-kratos-version"></a></p>
+<h2><a class="anchor" aria-hidden="true" id="version"></a><a href="#version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>version</h2>
+<p><a id="opIdgetVersion"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="get-service-version"></a><a href="#get-service-version" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get service version</h3>
+<pre><code class="hljs"><span class="hljs-keyword">GET</span> <span class="hljs-string">/version</span> HTTP/1.1
+<span class="hljs-attribute">Accept</span>: application/json
+
+</code></pre>
+<p>This endpoint returns the service version typically notated using semantic
+versioning.</p>
+<p>If the service supports TLS Edge Termination, this endpoint does not require the
+<code>X-Forwarded-Proto</code> header to be set.</p>
+<p>Be aware that if you are running multiple nodes of this service, the health
+status will never refer to the cluster state, only to a single instance.</p>
+<h4><a class="anchor" aria-hidden="true" id="responses-9"></a><a href="#responses-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Responses</h4>
+<p><a id="get-service-version-responses"></a></p>
+<h5><a class="anchor" aria-hidden="true" id="overview-9"></a><a href="#overview-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Overview</h5>
+<table>
+<thead>
+<tr><th>Status</th><th>Meaning</th><th>Description</th><th>Schema</th></tr>
+</thead>
+<tbody>
+<tr><td>200</td><td><a href="https://tools.ietf.org/html/rfc7231#section-6.3.1">OK</a></td><td>version</td><td><a href="#schemaversion">version</a></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="examples-9"></a><a href="#examples-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h5>
+<h6><a class="anchor" aria-hidden="true" id="200-response-5"></a><a href="#200-response-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>200 response</h6>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<aside class="success">
+This operation does not require authentication
+</aside>
+<h4><a class="anchor" aria-hidden="true" id="code-samples-9"></a><a href="#code-samples-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code samples</h4>
+<div class="tabs" id="tab-getVersion">
+<nav class="tabs-nav">
+<ul class="nav nav-tabs au-link-list au-link-list--inline">
+<li class="nav-item"><a class="nav-link active" role="tab" href="#tab-getVersion-shell">Shell</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getVersion-go">Go</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getVersion-node">Node.js</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getVersion-java">Java</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getVersion-python">Python</a></li>
+<li class="nav-item"><a class="nav-link" role="tab" href="#tab-getVersion-ruby">Ruby</a></li>
+</ul>
+</nav>
+<div class="tab-content">
+<div class="tab-pane active" role="tabpanel" id="tab-getVersion-shell">
+<pre><code class="hljs css language-shell">curl -X GET /version \
+  -H 'Accept: application/json'
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getVersion-go">
+<pre><code class="hljs css language-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">"bytes"</span>
+    <span class="hljs-string">"net/http"</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    headers := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>][]<span class="hljs-keyword">string</span>{
+        <span class="hljs-string">"Accept"</span>: []<span class="hljs-keyword">string</span>{<span class="hljs-string">"application/json"</span>},
+    }
+
+    <span class="hljs-keyword">var</span> body []<span class="hljs-keyword">byte</span>
+    <span class="hljs-comment">// body = ...</span>
+
+    req, err := http.NewRequest(<span class="hljs-string">"GET"</span>, <span class="hljs-string">"/version"</span>, bytes.NewBuffer(body))
+    req.Header = headers
+
+    client := &amp;http.Client{}
+    resp, err := client.Do(req)
+    <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getVersion-node">
+<pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+fetch(<span class="hljs-string">'/version'</span>, {
+  <span class="hljs-attr">method</span>: <span class="hljs-string">'GET'</span>,
+  headers
+})
+.then(<span class="hljs-function"><span class="hljs-params">r</span> =&gt;</span> r.json())
+.then(<span class="hljs-function">(<span class="hljs-params">body</span>) =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(body)
+})
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getVersion-java">
+<pre><code class="hljs css language-java"><span class="hljs-comment">// This sample needs improvement.</span>
+URL obj = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">"/version"</span>);
+
+HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+con.setRequestMethod(<span class="hljs-string">"GET"</span>);
+
+<span class="hljs-keyword">int</span> responseCode = con.getResponseCode();
+
+BufferedReader in = <span class="hljs-keyword">new</span> BufferedReader(
+    <span class="hljs-keyword">new</span> InputStreamReader(con.getInputStream())
+);
+
+String inputLine;
+StringBuffer response = <span class="hljs-keyword">new</span> StringBuffer();
+<span class="hljs-keyword">while</span> ((inputLine = in.readLine()) != <span class="hljs-keyword">null</span>) {
+    response.append(inputLine);
+}
+in.close();
+
+System.out.println(response.toString());
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getVersion-python">
+<pre><code class="hljs css language-python"><span class="hljs-keyword">import</span> requests
+
+headers = {
+  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
+}
+
+r = requests.get(
+  <span class="hljs-string">'/version'</span>,
+  params={},
+  headers = headers)
+
+<span class="hljs-keyword">print</span> r.json()
+</code></pre>
+</div>
+<div class="tab-pane" role="tabpanel"  id="tab-getVersion-ruby">
+<pre><code class="hljs css language-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">'rest-client'</span>
+<span class="hljs-keyword">require</span> <span class="hljs-string">'json'</span>
+
+headers = {
+  <span class="hljs-string">'Accept'</span> =&gt; <span class="hljs-string">'application/json'</span>
+}
+
+result = RestClient.get <span class="hljs-string">'/version'</span>,
+  <span class="hljs-symbol">params:</span> {}, <span class="hljs-symbol">headers:</span> headers
+
+p JSON.parse(result)
+</code></pre>
+</div>
+</div>
+</div>
+<h2><a class="anchor" aria-hidden="true" id="schemas"></a><a href="#schemas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schemas</h2>
+<p><a id="tocScredentialstype">CredentialsType</a></p>
+<h4><a class="anchor" aria-hidden="true" id="credentialstype"></a><a href="#credentialstype" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>CredentialsType</h4>
+<p><a id="schemacredentialstype"></a></p>
+<pre><code class="hljs css language-json"><span class="hljs-string">"string"</span>
+</code></pre>
+<p><em>CredentialsType represents several different credential types, like password
+credentials, passwordless credentials,</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>CredentialsType represents several different credential types, like password credentials, passwordless credentials,</td><td>string</td><td>false</td><td>none</td><td>and so on.</td></tr>
+</tbody>
+</table>
+<p><a id="tocSerror">Error</a></p>
+<h4><a class="anchor" aria-hidden="true" id="error"></a><a href="#error" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Error</h4>
+<p><a id="schemaerror"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<p><em>Error error</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-1"></a><a href="#properties-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>Code FormErrorCode <code>json:&quot;id,omitempty&quot;</code></td></tr>
+</tbody>
+</table>
+<p><a id="tocSidentity">Identity</a></p>
+<h4><a class="anchor" aria-hidden="true" id="identity"></a><a href="#identity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identity</h4>
+<p><a id="schemaidentity"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"traits"</span>: {},
+  <span class="hljs-attr">"traits_schema_id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"traits_schema_url"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<p><em>Identity identity</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-2"></a><a href="#properties-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>id</td><td><a href="#schemauuid">UUID</a></td><td>true</td><td>none</td><td>UUID UUID</td></tr>
+<tr><td>traits</td><td><a href="#schematraits">Traits</a></td><td>true</td><td>none</td><td>Traits traits</td></tr>
+<tr><td>traits_schema_id</td><td>string</td><td>false</td><td>none</td><td>TraitsSchemaID is the ID of the JSON Schema to be used for validating the identity's traits.</td></tr>
+<tr><td>traits_schema_url</td><td>string</td><td>false</td><td>none</td><td>TraitsSchemaURL is the URL of the endpoint where the identity's traits schema can be fetched from. format: url</td></tr>
+</tbody>
+</table>
+<p><a id="tocSloginrequestmethodconfigallof0">LoginRequestMethodConfigAllOf0</a></p>
+<h4><a class="anchor" aria-hidden="true" id="loginrequestmethodconfigallof0"></a><a href="#loginrequestmethodconfigallof0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LoginRequestMethodConfigAllOf0</h4>
+<p><a id="schemaloginrequestmethodconfigallof0"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>LoginRequestMethodConfigAllOf0 login request method config all of0</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-3"></a><a href="#properties-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSloginrequestmethodconfigallof1">LoginRequestMethodConfigAllOf1</a></p>
+<h4><a class="anchor" aria-hidden="true" id="loginrequestmethodconfigallof1"></a><a href="#loginrequestmethodconfigallof1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LoginRequestMethodConfigAllOf1</h4>
+<p><a id="schemaloginrequestmethodconfigallof1"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>LoginRequestMethodConfigAllOf1 login request method config all of1</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-4"></a><a href="#properties-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSloginrequestmethodconfigallof2">LoginRequestMethodConfigAllOf2</a></p>
+<h4><a class="anchor" aria-hidden="true" id="loginrequestmethodconfigallof2"></a><a href="#loginrequestmethodconfigallof2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LoginRequestMethodConfigAllOf2</h4>
+<p><a id="schemaloginrequestmethodconfigallof2"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>LoginRequestMethodConfigAllOf2 login request method config all of2</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-5"></a><a href="#properties-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSloginrequestmethodconfigallof3">LoginRequestMethodConfigAllOf3</a></p>
+<h4><a class="anchor" aria-hidden="true" id="loginrequestmethodconfigallof3"></a><a href="#loginrequestmethodconfigallof3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>LoginRequestMethodConfigAllOf3</h4>
+<p><a id="schemaloginrequestmethodconfigallof3"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>LoginRequestMethodConfigAllOf3 login request method config all of3</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-6"></a><a href="#properties-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSregistrationrequestmethodconfigallof0">RegistrationRequestMethodConfigAllOf0</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequestmethodconfigallof0"></a><a href="#registrationrequestmethodconfigallof0" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RegistrationRequestMethodConfigAllOf0</h4>
+<p><a id="schemaregistrationrequestmethodconfigallof0"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>RegistrationRequestMethodConfigAllOf0 registration request method config all
+of0</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-7"></a><a href="#properties-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSregistrationrequestmethodconfigallof1">RegistrationRequestMethodConfigAllOf1</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequestmethodconfigallof1"></a><a href="#registrationrequestmethodconfigallof1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RegistrationRequestMethodConfigAllOf1</h4>
+<p><a id="schemaregistrationrequestmethodconfigallof1"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>RegistrationRequestMethodConfigAllOf1 registration request method config all
+of1</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-8"></a><a href="#properties-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSregistrationrequestmethodconfigallof2">RegistrationRequestMethodConfigAllOf2</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequestmethodconfigallof2"></a><a href="#registrationrequestmethodconfigallof2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RegistrationRequestMethodConfigAllOf2</h4>
+<p><a id="schemaregistrationrequestmethodconfigallof2"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>RegistrationRequestMethodConfigAllOf2 registration request method config all
+of2</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-9"></a><a href="#properties-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSregistrationrequestmethodconfigallof3">RegistrationRequestMethodConfigAllOf3</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequestmethodconfigallof3"></a><a href="#registrationrequestmethodconfigallof3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RegistrationRequestMethodConfigAllOf3</h4>
+<p><a id="schemaregistrationrequestmethodconfigallof3"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>RegistrationRequestMethodConfigAllOf3 registration request method config all
+of3</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-10"></a><a href="#properties-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSregistrationrequestmethodconfigallof4">RegistrationRequestMethodConfigAllOf4</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequestmethodconfigallof4"></a><a href="#registrationrequestmethodconfigallof4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>RegistrationRequestMethodConfigAllOf4</h4>
+<p><a id="schemaregistrationrequestmethodconfigallof4"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>RegistrationRequestMethodConfigAllOf4 registration request method config all
+of4</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-11"></a><a href="#properties-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocStraits">Traits</a></p>
+<h4><a class="anchor" aria-hidden="true" id="traits"></a><a href="#traits" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Traits</h4>
+<p><a id="schematraits"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<p><em>Traits traits</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-12"></a><a href="#properties-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>None</em></p>
+<p><a id="tocSuuid">UUID</a></p>
+<h4><a class="anchor" aria-hidden="true" id="uuid"></a><a href="#uuid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UUID</h4>
+<p><a id="schemauuid"></a></p>
+<pre><code class="hljs css language-json"><span class="hljs-string">"string"</span>
+</code></pre>
+<p><em>UUID UUID</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-13"></a><a href="#properties-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>string(uuid4)</td><td>false</td><td>none</td><td>UUID UUID</td></tr>
+</tbody>
+</table>
+<p><a id="tocSform">form</a></p>
+<h4><a class="anchor" aria-hidden="true" id="form"></a><a href="#form" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>form</h4>
+<p><a id="schemaform"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"action"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"errors"</span>: [
+    {
+      <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+    }
+  ],
+  <span class="hljs-attr">"fields"</span>: [
+    {
+      <span class="hljs-attr">"errors"</span>: [
+        {
+          <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"value"</span>: {}
+    }
+  ],
+  <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<p><em>HTMLForm represents a HTML Form. The container can work with both HTTP Form and
+JSON requests</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-14"></a><a href="#properties-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>action</td><td>string</td><td>false</td><td>none</td><td>Action should be used as the form action URL (<form action="{{ .Action }}" method="post">).</td></tr>
+<tr><td>errors</td><td>[<a href="#schemaerror">Error</a>]</td><td>false</td><td>none</td><td>Errors contains all form errors. These will be duplicates of the individual field errors.</td></tr>
+<tr><td>fields</td><td><a href="#schemaformfields">formFields</a></td><td>false</td><td>none</td><td>Fields contains multiple fields</td></tr>
+<tr><td>method</td><td>string</td><td>false</td><td>none</td><td>Method is the form method (e.g. POST)</td></tr>
+</tbody>
+</table>
+<p><a id="tocSformfield">formField</a></p>
+<h4><a class="anchor" aria-hidden="true" id="formfield"></a><a href="#formfield" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>formField</h4>
+<p><a id="schemaformfield"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"errors"</span>: [
+    {
+      <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+    }
+  ],
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"value"</span>: {}
+}
+</code></pre>
+<p><em>Field represents a HTML Form Field</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-15"></a><a href="#properties-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>errors</td><td>[<a href="#schemaerror">Error</a>]</td><td>false</td><td>none</td><td>Errors contains all validation errors this particular field has caused.</td></tr>
+<tr><td>name</td><td>string</td><td>false</td><td>none</td><td>Name is the equivalent of <input name="{{.Name}}"></td></tr>
+<tr><td>required</td><td>boolean</td><td>false</td><td>none</td><td>Required is the equivalent of <input required="{{.Required}}"></td></tr>
+<tr><td>type</td><td>string</td><td>false</td><td>none</td><td>Type is the equivalent of <input type="{{.Type}}"></td></tr>
+<tr><td>value</td><td>object</td><td>false</td><td>none</td><td>Value is the equivalent of <input value="{{.Value}}"></td></tr>
+</tbody>
+</table>
+<p><a id="tocSformfields">formFields</a></p>
+<h4><a class="anchor" aria-hidden="true" id="formfields"></a><a href="#formfields" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>formFields</h4>
+<p><a id="schemaformfields"></a></p>
+<pre><code class="hljs css language-json">[
+  {
+    <span class="hljs-attr">"errors"</span>: [
+      {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+      }
+    ],
+    <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"value"</span>: {}
+  }
+]
+</code></pre>
+<p><em>Fields contains multiple fields</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-16"></a><a href="#properties-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>[<a href="#schemaformfield">formField</a>]</td><td>false</td><td>none</td><td>Fields contains multiple fields</td></tr>
+</tbody>
+</table>
+<p><a id="tocSgenericerror">genericError</a></p>
+<h4><a class="anchor" aria-hidden="true" id="genericerror"></a><a href="#genericerror" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>genericError</h4>
+<p><a id="schemagenericerror"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"error"</span>: <span class="hljs-string">"The requested resource could not be found"</span>,
+  <span class="hljs-attr">"error_code"</span>: <span class="hljs-number">404</span>,
+  <span class="hljs-attr">"error_debug"</span>: <span class="hljs-string">"The database adapter was unable to find the element"</span>,
+  <span class="hljs-attr">"error_hint"</span>: <span class="hljs-string">"Object with RequestID 12345 does not exist"</span>
+}
+</code></pre>
+<p><em>Error response</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-17"></a><a href="#properties-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>error</td><td>string</td><td>true</td><td>none</td><td>Name is the error name.</td></tr>
+<tr><td>error_code</td><td>integer(int64)</td><td>false</td><td>none</td><td>Code represents the error status code (404, 403, 401, ...).</td></tr>
+<tr><td>error_debug</td><td>string</td><td>false</td><td>none</td><td>Debug contains debug information. This is usually not available and has to be enabled.</td></tr>
+<tr><td>error_hint</td><td>string</td><td>false</td><td>none</td><td>Hint contains further information on the nature of the error.</td></tr>
+</tbody>
+</table>
+<p><a id="tocShealthnotreadystatus">healthNotReadyStatus</a></p>
+<h4><a class="anchor" aria-hidden="true" id="healthnotreadystatus"></a><a href="#healthnotreadystatus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>healthNotReadyStatus</h4>
+<p><a id="schemahealthnotreadystatus"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"errors"</span>: {
+    <span class="hljs-attr">"property1"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"property2"</span>: <span class="hljs-string">"string"</span>
+  }
+}
+</code></pre>
+<p><em>HealthNotReadyStatus health not ready status</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-18"></a><a href="#properties-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>errors</td><td>object</td><td>false</td><td>none</td><td>Errors contains a list of errors that caused the not ready status.</td></tr>
+<tr><td>» <strong>additionalProperties</strong></td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><a id="tocShealthstatus">healthStatus</a></p>
+<h4><a class="anchor" aria-hidden="true" id="healthstatus"></a><a href="#healthstatus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>healthStatus</h4>
+<p><a id="schemahealthstatus"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<p><em>HealthStatus health status</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-19"></a><a href="#properties-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>Status always contains &quot;ok&quot;.</td></tr>
+</tbody>
+</table>
+<p><a id="tocSloginrequest">loginRequest</a></p>
+<h4><a class="anchor" aria-hidden="true" id="loginrequest"></a><a href="#loginrequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>loginRequest</h4>
+<p><a id="schemaloginrequest"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"active"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"expires_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"issued_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"methods"</span>: {
+    <span class="hljs-attr">"property1"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    },
+    <span class="hljs-attr">"property2"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    }
+  },
+  <span class="hljs-attr">"request_url"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="properties-20"></a><a href="#properties-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>active</td><td><a href="#schemacredentialstype">CredentialsType</a></td><td>false</td><td>none</td><td>and so on.</td></tr>
+<tr><td>expires_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>ExpiresAt is the time (UTC) when the request expires. If the user still wishes to log in, a new request has to be initiated.</td></tr>
+<tr><td>id</td><td><a href="#schemauuid">UUID</a></td><td>false</td><td>none</td><td>UUID UUID</td></tr>
+<tr><td>issued_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>IssuedAt is the time (UTC) when the request occurred.</td></tr>
+<tr><td>methods</td><td>object</td><td>false</td><td>none</td><td>Methods contains context for all enabled login methods. If a login request has been processed, but for example the password is incorrect, this will contain error messages.</td></tr>
+<tr><td>» <strong>additionalProperties</strong></td><td><a href="#schemaloginrequestmethod">loginRequestMethod</a></td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>request_url</td><td>string</td><td>false</td><td>none</td><td>RequestURL is the initial URL that was requested from ORY Kratos. It can be used to forward information contained in the URL's path or query for example.</td></tr>
+</tbody>
+</table>
+<p><a id="tocSloginrequestmethod">loginRequestMethod</a></p>
+<h4><a class="anchor" aria-hidden="true" id="loginrequestmethod"></a><a href="#loginrequestmethod" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>loginRequestMethod</h4>
+<p><a id="schemaloginrequestmethod"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"config"</span>: {},
+  <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="properties-21"></a><a href="#properties-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>config</td><td><a href="#schemaloginrequestmethodconfig">loginRequestMethodConfig</a></td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>method</td><td><a href="#schemacredentialstype">CredentialsType</a></td><td>false</td><td>none</td><td>and so on.</td></tr>
+</tbody>
+</table>
+<p><a id="tocSloginrequestmethodconfig">loginRequestMethodConfig</a></p>
+<h4><a class="anchor" aria-hidden="true" id="loginrequestmethodconfig"></a><a href="#loginrequestmethodconfig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>loginRequestMethodConfig</h4>
+<p><a id="schemaloginrequestmethodconfig"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="properties-22"></a><a href="#properties-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>allOf</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><em>and</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><em>and</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><em>and</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><a id="tocSoidcstrategycredentialsconfig">oidcStrategyCredentialsConfig</a></p>
+<h4><a class="anchor" aria-hidden="true" id="oidcstrategycredentialsconfig"></a><a href="#oidcstrategycredentialsconfig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oidcStrategyCredentialsConfig</h4>
+<p><a id="schemaoidcstrategycredentialsconfig"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"provider"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"subject"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="properties-23"></a><a href="#properties-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>provider</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>subject</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><a id="tocSoidcstrategyrequestmethod">oidcStrategyRequestMethod</a></p>
+<h4><a class="anchor" aria-hidden="true" id="oidcstrategyrequestmethod"></a><a href="#oidcstrategyrequestmethod" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>oidcStrategyRequestMethod</h4>
+<p><a id="schemaoidcstrategyrequestmethod"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"action"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"errors"</span>: [
+    {
+      <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+    }
+  ],
+  <span class="hljs-attr">"fields"</span>: [
+    {
+      <span class="hljs-attr">"errors"</span>: [
+        {
+          <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"value"</span>: {}
+    }
+  ],
+  <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"providers"</span>: [
+    {
+      <span class="hljs-attr">"errors"</span>: [
+        {
+          <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+        }
+      ],
+      <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+      <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+      <span class="hljs-attr">"value"</span>: {}
+    }
+  ]
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="properties-24"></a><a href="#properties-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>action</td><td>string</td><td>false</td><td>none</td><td>Action should be used as the form action URL (<form action="{{ .Action }}" method="post">).</td></tr>
+<tr><td>errors</td><td>[<a href="#schemaerror">Error</a>]</td><td>false</td><td>none</td><td>Errors contains all form errors. These will be duplicates of the individual field errors.</td></tr>
+<tr><td>fields</td><td><a href="#schemaformfields">formFields</a></td><td>false</td><td>none</td><td>Fields contains multiple fields</td></tr>
+<tr><td>method</td><td>string</td><td>false</td><td>none</td><td>Method is the form method (e.g. POST)</td></tr>
+<tr><td>providers</td><td>[<a href="#schemaformfield">formField</a>]</td><td>false</td><td>none</td><td>[Field represents a HTML Form Field]</td></tr>
+</tbody>
+</table>
+<p><a id="tocSprofilemanagementrequest">profileManagementRequest</a></p>
+<h4><a class="anchor" aria-hidden="true" id="profilemanagementrequest"></a><a href="#profilemanagementrequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>profileManagementRequest</h4>
+<p><a id="schemaprofilemanagementrequest"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"expires_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"form"</span>: {
+    <span class="hljs-attr">"action"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"errors"</span>: [
+      {
+        <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+      }
+    ],
+    <span class="hljs-attr">"fields"</span>: [
+      {
+        <span class="hljs-attr">"errors"</span>: [
+          {
+            <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>
+          }
+        ],
+        <span class="hljs-attr">"name"</span>: <span class="hljs-string">"string"</span>,
+        <span class="hljs-attr">"required"</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">"type"</span>: <span class="hljs-string">"string"</span>,
+        <span class="hljs-attr">"value"</span>: {}
+      }
+    ],
+    <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+  },
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"identity"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"traits"</span>: {},
+    <span class="hljs-attr">"traits_schema_id"</span>: <span class="hljs-string">"string"</span>,
+    <span class="hljs-attr">"traits_schema_url"</span>: <span class="hljs-string">"string"</span>
+  },
+  <span class="hljs-attr">"issued_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"request_url"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"update_successful"</span>: <span class="hljs-literal">true</span>
+}
+</code></pre>
+<p><em>Request presents a profile management request</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-25"></a><a href="#properties-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>expires_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>ExpiresAt is the time (UTC) when the request expires. If the user still wishes to update the profile, a new request has to be initiated.</td></tr>
+<tr><td>form</td><td><a href="#schemaform">form</a></td><td>false</td><td>none</td><td>HTMLForm represents a HTML Form. The container can work with both HTTP Form and JSON requests</td></tr>
+<tr><td>id</td><td><a href="#schemauuid">UUID</a></td><td>false</td><td>none</td><td>UUID UUID</td></tr>
+<tr><td>identity</td><td><a href="#schemaidentity">Identity</a></td><td>false</td><td>none</td><td>Identity identity</td></tr>
+<tr><td>issued_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>IssuedAt is the time (UTC) when the request occurred.</td></tr>
+<tr><td>request_url</td><td>string</td><td>false</td><td>none</td><td>RequestURL is the initial URL that was requested from ORY Kratos. It can be used to forward information contained in the URL's path or query for example.</td></tr>
+<tr><td>update_successful</td><td>boolean</td><td>false</td><td>none</td><td>UpdateSuccessful, if true, indicates that the profile has been updated successfully with the provided data. Done will stay true when repeatedly checking. If set to true, done will revert back to false only when a request with invalid (e.g. &quot;please use a valid phone number&quot;) data was sent.</td></tr>
+</tbody>
+</table>
+<p><a id="tocSregistrationrequest">registrationRequest</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequest"></a><a href="#registrationrequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>registrationRequest</h4>
+<p><a id="schemaregistrationrequest"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"active"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"expires_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"string"</span>,
+  <span class="hljs-attr">"issued_at"</span>: <span class="hljs-string">"2020-01-30T07:01:51Z"</span>,
+  <span class="hljs-attr">"methods"</span>: {
+    <span class="hljs-attr">"property1"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    },
+    <span class="hljs-attr">"property2"</span>: {
+      <span class="hljs-attr">"config"</span>: {},
+      <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+    }
+  },
+  <span class="hljs-attr">"request_url"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="properties-26"></a><a href="#properties-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>active</td><td><a href="#schemacredentialstype">CredentialsType</a></td><td>false</td><td>none</td><td>and so on.</td></tr>
+<tr><td>expires_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>ExpiresAt is the time (UTC) when the request expires. If the user still wishes to log in, a new request has to be initiated.</td></tr>
+<tr><td>id</td><td><a href="#schemauuid">UUID</a></td><td>false</td><td>none</td><td>UUID UUID</td></tr>
+<tr><td>issued_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>IssuedAt is the time (UTC) when the request occurred.</td></tr>
+<tr><td>methods</td><td>object</td><td>false</td><td>none</td><td>Methods contains context for all enabled registration methods. If a registration request has been processed, but for example the password is incorrect, this will contain error messages.</td></tr>
+<tr><td>» <strong>additionalProperties</strong></td><td><a href="#schemaregistrationrequestmethod">registrationRequestMethod</a></td><td>false</td><td>none</td><td>RegistrationRequestMethod registration request method</td></tr>
+<tr><td>request_url</td><td>string</td><td>false</td><td>none</td><td>RequestURL is the initial URL that was requested from ORY Kratos. It can be used to forward information contained in the URL's path or query for example.</td></tr>
+</tbody>
+</table>
+<p><a id="tocSregistrationrequestmethod">registrationRequestMethod</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequestmethod"></a><a href="#registrationrequestmethod" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>registrationRequestMethod</h4>
+<p><a id="schemaregistrationrequestmethod"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"config"</span>: {},
+  <span class="hljs-attr">"method"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<p><em>RegistrationRequestMethod registration request method</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-27"></a><a href="#properties-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>config</td><td><a href="#schemaregistrationrequestmethodconfig">registrationRequestMethodConfig</a></td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>method</td><td><a href="#schemacredentialstype">CredentialsType</a></td><td>false</td><td>none</td><td>and so on.</td></tr>
+</tbody>
+</table>
+<p><a id="tocSregistrationrequestmethodconfig">registrationRequestMethodConfig</a></p>
+<h4><a class="anchor" aria-hidden="true" id="registrationrequestmethodconfig"></a><a href="#registrationrequestmethodconfig" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>registrationRequestMethodConfig</h4>
+<p><a id="schemaregistrationrequestmethodconfig"></a></p>
+<pre><code class="hljs css language-json">{}
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="properties-28"></a><a href="#properties-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>allOf</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><em>and</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><em>and</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><em>and</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><em>and</em></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td><em>anonymous</em></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
+</tbody>
+</table>
+<p><a id="tocSversion">version</a></p>
+<h4><a class="anchor" aria-hidden="true" id="version-1"></a><a href="#version-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>version</h4>
+<p><a id="schemaversion"></a></p>
+<pre><code class="hljs css language-json">{
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"string"</span>
+}
+</code></pre>
+<p><em>Version version</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-29"></a><a href="#properties-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>version</td><td>string</td><td>false</td><td>none</td><td>Version is the service's version.</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/28/2020 by hackerman</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#public-endpoints">Public Endpoints</a><ul class="toc-headings"><li><a href="#initialize-a-login-flow">Initialize a Login Flow</a></li><li><a href="#initialize-a-registration-flow">Initialize a Registration Flow</a></li><li><a href="#get-login-request">Get Login Request</a></li><li><a href="#get-registration-request">Get Registration Request</a></li><li><a href="#initialize-profile-management-flow">Initialize Profile Management Flow</a></li><li><a href="#complete-profile-management-flow">Complete Profile Management Flow</a></li><li><a href="#get-profile-management-request-via-cookie">Get Profile Management Request (via cookie)</a></li></ul></li><li><a href="#health">health</a><ul class="toc-headings"><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#check-readiness-status">Check readiness status</a></li></ul></li><li><a href="#version">version</a><ul class="toc-headings"><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

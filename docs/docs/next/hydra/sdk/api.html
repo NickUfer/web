@@ -1441,7 +1441,7 @@ separated by a comma.</p>
 </thead>
 <tbody>
 <tr><td><em>anonymous</em></td><td>[<a href="#schemaoauth2client">oAuth2Client</a>]</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>» Client represents an OAuth 2.0 Client.</td><td><a href="#schemaoauth2client">oAuth2Client</a></td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>» OAuth2Client OAuth2Client OAuth2Client Client represents an OAuth 2.0 Client.</td><td><a href="#schemaoauth2client">oAuth2Client</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»» allowed_cors_origins</td><td>[string]</td><td>false</td><td>none</td><td>AllowedCORSOrigins are one or more URLs (<a href="scheme://host">scheme://host</a>[:port]) which are allowed to make CORS requests to the /oauth/token endpoint. If this array is empty, the sever's CORS origin configuration (<code>CORS_ALLOWED_ORIGINS</code>) will be used instead. If this array is set, the allowed origins are appended to the server's CORS origin configuration. Be aware that environment variable <code>CORS_ENABLED</code> MUST be set to <code>true</code> for this to work.</td></tr>
 <tr><td>»» audience</td><td>[string]</td><td>false</td><td>none</td><td>Audience is a whitelist defining the audiences this client is allowed to request tokens for. An audience limits the applicability of an OAuth 2.0 Access Token to, for example, certain API endpoints. The value is a list of URLs. URLs MUST NOT contain whitespaces.</td></tr>
 <tr><td>»» backchannel_logout_session_required</td><td>boolean</td><td>false</td><td>none</td><td>Boolean value specifying whether the RP requires that a sid (session ID) Claim be included in the Logout Token to identify the RP session with the OP when the backchannel_logout_uri is used. If omitted, the default value is false.</td></tr>
@@ -1452,29 +1452,29 @@ separated by a comma.</p>
 <tr><td>»» client_secret_expires_at</td><td>integer(int64)</td><td>false</td><td>none</td><td>SecretExpiresAt is an integer holding the time at which the client secret will expire or 0 if it will not expire. The time is represented as the number of seconds from 1970-01-01T00:00:00Z as measured in UTC until the date/time of expiration. This feature is currently not supported and it's value will always be set to 0.</td></tr>
 <tr><td>»» client_uri</td><td>string</td><td>false</td><td>none</td><td>ClientURI is an URL string of a web page providing information about the client. If present, the server SHOULD display this URL to the end-user in a clickable fashion.</td></tr>
 <tr><td>»» contacts</td><td>[string]</td><td>false</td><td>none</td><td>Contacts is a array of strings representing ways to contact people responsible for this client, typically email addresses.</td></tr>
-<tr><td>»» created_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>CreatedAt returns the timestamp of the client's creation.</td></tr>
+<tr><td>»» created_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>CreatedAt returns the timestamp of the client's creation. Format: date-time Format: date-time Format: date-time</td></tr>
 <tr><td>»» frontchannel_logout_session_required</td><td>boolean</td><td>false</td><td>none</td><td>Boolean value specifying whether the RP requires that iss (issuer) and sid (session ID) query parameters be included to identify the RP session with the OP when the frontchannel_logout_uri is used. If omitted, the default value is false.</td></tr>
 <tr><td>»» frontchannel_logout_uri</td><td>string</td><td>false</td><td>none</td><td>RP URL that will cause the RP to log itself out when rendered in an iframe by the OP. An iss (issuer) query parameter and a sid (session ID) query parameter MAY be included by the OP to enable the RP to validate the request and to determine which of the potentially multiple sessions is to be logged out; if either is included, both MUST be.</td></tr>
 <tr><td>»» grant_types</td><td>[string]</td><td>false</td><td>none</td><td>GrantTypes is an array of grant types the client is allowed to use.</td></tr>
-<tr><td>»» jwks</td><td><a href="#schemajsonwebkeyset">JSONWebKeySet</a></td><td>false</td><td>none</td><td>JSONWebKeySet JSONWebKeySet JSON web key set</td></tr>
+<tr><td>»» jwks</td><td><a href="#schemajsonwebkeyset">JSONWebKeySet</a></td><td>false</td><td>none</td><td>JSONWebKeySet JSON web key set</td></tr>
 <tr><td>»»» keys</td><td>[<a href="#schemajsonwebkey">JSONWebKey</a>]</td><td>false</td><td>none</td><td>The value of the &quot;keys&quot; parameter is an array of JWK values. By default, the order of the JWK values within the array does not imply an order of preference among them, although applications of JWK Sets can choose to assign a meaning to the order for their purposes, if desired.</td></tr>
 <tr><td>»»»» alg</td><td>string</td><td>true</td><td>none</td><td>The &quot;alg&quot; (algorithm) parameter identifies the algorithm intended for use with the key. The values used should either be registered in the IANA &quot;JSON Web Signature and Encryption Algorithms&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name.</td></tr>
-<tr><td>»»»» crv</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» d</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» dp</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» dq</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» e</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» k</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»» crv</td><td>string</td><td>false</td><td>none</td><td>crv</td></tr>
+<tr><td>»»»» d</td><td>string</td><td>false</td><td>none</td><td>d</td></tr>
+<tr><td>»»»» dp</td><td>string</td><td>false</td><td>none</td><td>dp</td></tr>
+<tr><td>»»»» dq</td><td>string</td><td>false</td><td>none</td><td>dq</td></tr>
+<tr><td>»»»» e</td><td>string</td><td>false</td><td>none</td><td>e</td></tr>
+<tr><td>»»»» k</td><td>string</td><td>false</td><td>none</td><td>k</td></tr>
 <tr><td>»»»» kid</td><td>string</td><td>true</td><td>none</td><td>The &quot;kid&quot; (key ID) parameter is used to match a specific key. This is used, for instance, to choose among a set of keys within a JWK Set during key rollover. The structure of the &quot;kid&quot; value is unspecified. When &quot;kid&quot; values are used within a JWK Set, different keys within the JWK Set SHOULD use distinct &quot;kid&quot; values. (One example in which different keys might use the same &quot;kid&quot; value is if they have different &quot;kty&quot; (key type) values but are considered to be equivalent alternatives by the application using them.) The &quot;kid&quot; value is a case-sensitive string.</td></tr>
 <tr><td>»»»» kty</td><td>string</td><td>true</td><td>none</td><td>The &quot;kty&quot; (key type) parameter identifies the cryptographic algorithm family used with the key, such as &quot;RSA&quot; or &quot;EC&quot;. &quot;kty&quot; values should either be registered in the IANA &quot;JSON Web Key Types&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name. The &quot;kty&quot; value is a case-sensitive string.</td></tr>
-<tr><td>»»»» n</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» p</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» q</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»» qi</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»» n</td><td>string</td><td>false</td><td>none</td><td>n</td></tr>
+<tr><td>»»»» p</td><td>string</td><td>false</td><td>none</td><td>p</td></tr>
+<tr><td>»»»» q</td><td>string</td><td>false</td><td>none</td><td>q</td></tr>
+<tr><td>»»»» qi</td><td>string</td><td>false</td><td>none</td><td>qi</td></tr>
 <tr><td>»»»» use</td><td>string</td><td>true</td><td>none</td><td>Use (&quot;public key use&quot;) identifies the intended use of the public key. The &quot;use&quot; parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Values are commonly &quot;sig&quot; (signature) or &quot;enc&quot; (encryption).</td></tr>
-<tr><td>»»»» x</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»» x</td><td>string</td><td>false</td><td>none</td><td>x</td></tr>
 <tr><td>»»»» x5c</td><td>[string]</td><td>false</td><td>none</td><td>The &quot;x5c&quot; (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates [RFC5280]. The certificate chain is represented as a JSON array of certificate value strings. Each string in the array is a base64-encoded (Section 4 of [RFC4648] -- not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value. The PKIX certificate containing the key value MUST be the first certificate.</td></tr>
-<tr><td>»»»» y</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»» y</td><td>string</td><td>false</td><td>none</td><td>y</td></tr>
 <tr><td>»»» jwks_uri</td><td>string</td><td>false</td><td>none</td><td>URL for the Client's JSON Web Key Set [JWK] document. If the Client signs requests to the Server, it contains the signing key(s) the Server uses to validate signatures from the Client. The JWK Set MAY also contain the Client's encryption keys(s), which are used by the Server to encrypt responses to the Client. When both signing and encryption keys are made available, a use (Key Use) parameter value is REQUIRED for all keys in the referenced JWK Set to indicate each key's intended usage. Although some algorithms allow the same key to be used for both signatures and encryption, doing so is NOT RECOMMENDED, as it is less secure. The JWK x5c parameter MAY be used to provide X.509 representations of keys provided. When used, the bare key values MUST still be present and MUST match those in the certificate.</td></tr>
 <tr><td>»»» logo_uri</td><td>string</td><td>false</td><td>none</td><td>LogoURI is an URL string that references a logo for the client.</td></tr>
 <tr><td>»»» metadata</td><td>object</td><td>false</td><td>none</td><td>Metadata is arbitrary data.</td></tr>
@@ -1490,7 +1490,7 @@ separated by a comma.</p>
 <tr><td>»»» subject_type</td><td>string</td><td>false</td><td>none</td><td>SubjectType requested for responses to this Client. The subject_types_supported Discovery parameter contains a list of the supported subject_type values for this server. Valid types include <code>pairwise</code> and <code>public</code>.</td></tr>
 <tr><td>»»» token_endpoint_auth_method</td><td>string</td><td>false</td><td>none</td><td>Requested Client Authentication method for the Token Endpoint. The options are client_secret_post, client_secret_basic, private_key_jwt, and none.</td></tr>
 <tr><td>»»» tos_uri</td><td>string</td><td>false</td><td>none</td><td>TermsOfServiceURI is a URL string that points to a human-readable terms of service document for the client that describes a contractual relationship between the end-user and the client that the end-user accepts when authorizing the client.</td></tr>
-<tr><td>»»» updated_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>UpdatedAt returns the timestamp of the last update.</td></tr>
+<tr><td>»»» updated_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>UpdatedAt returns the timestamp of the last update. Format: date-time Format: date-time Format: date-time</td></tr>
 <tr><td>»»» userinfo_signed_response_alg</td><td>string</td><td>false</td><td>none</td><td>JWS alg algorithm [JWA] REQUIRED for signing UserInfo Responses. If this is specified, the response will be JWT [JWT] serialized, and signed using JWS. The default, if omitted, is for the UserInfo Response to return the Claims as a UTF-8 encoded JSON object using the application/json content-type.</td></tr>
 </tbody>
 </table>
@@ -1508,7 +1508,7 @@ separated by a comma.</p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:48Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -1550,7 +1550,7 @@ separated by a comma.</p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:48Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   }
 ]
@@ -1700,7 +1700,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -1742,7 +1742,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -1783,7 +1783,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -1825,7 +1825,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -1895,7 +1895,7 @@ const input = '{
   <span class="hljs-string">"contacts"</span>: [
     <span class="hljs-string">"string"</span>
   ],
-  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-string">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-string">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"grant_types"</span>: [
@@ -1949,7 +1949,7 @@ const input = '{
   <span class="hljs-string">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-string">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }';
 const headers = {
@@ -2071,7 +2071,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -2113,7 +2113,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -2261,7 +2261,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -2303,7 +2303,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -2343,7 +2343,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -2385,7 +2385,7 @@ and only callable by first-party components.</p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
@@ -2455,7 +2455,7 @@ const input = '{
   <span class="hljs-string">"contacts"</span>: [
     <span class="hljs-string">"string"</span>
   ],
-  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-string">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-string">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-string">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"grant_types"</span>: [
@@ -2509,7 +2509,7 @@ const input = '{
   <span class="hljs-string">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-string">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-string">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-string">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }';
 const headers = {
@@ -4422,7 +4422,7 @@ the subject accepted or rejected the request.</p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -4464,7 +4464,7 @@ the subject accepted or rejected the request.</p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"context"</span>: {
@@ -5074,7 +5074,7 @@ the requested authentication process.</p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -5116,7 +5116,7 @@ the requested authentication process.</p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"oidc_context"</span>: {
@@ -6196,7 +6196,7 @@ and will be separated by a comma.</p>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td><em>anonymous</em></td><td>[<a href="#schemapreviousconsentsession">PreviousConsentSession</a>]</td><td>false</td><td>none</td><td>[PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession The response used to return used consent requests same as HandledLoginRequest, just with consent_request exposed as json]</td></tr>
+<tr><td><em>anonymous</em></td><td>[<a href="#schemapreviousconsentsession">PreviousConsentSession</a>]</td><td>false</td><td>none</td><td>[PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession PreviousConsentSession The response used to return used consent requests same as HandledLoginRequest, just with consent_request exposed as json]</td></tr>
 <tr><td>» consent_request</td><td><a href="#schemaconsentrequest">consentRequest</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»» acr</td><td>string</td><td>false</td><td>none</td><td>ACR represents the Authentication AuthorizationContext Class Reference value for this authentication session. You can use it to express that, for example, a user authenticated using two factor authentication.</td></tr>
 <tr><td>»» challenge</td><td>string</td><td>false</td><td>none</td><td>Challenge is the identifier (&quot;authorization challenge&quot;) of the consent authorization request. It is used to identify the session.</td></tr>
@@ -6211,29 +6211,29 @@ and will be separated by a comma.</p>
 <tr><td>»»» client_secret_expires_at</td><td>integer(int64)</td><td>false</td><td>none</td><td>SecretExpiresAt is an integer holding the time at which the client secret will expire or 0 if it will not expire. The time is represented as the number of seconds from 1970-01-01T00:00:00Z as measured in UTC until the date/time of expiration. This feature is currently not supported and it's value will always be set to 0.</td></tr>
 <tr><td>»»» client_uri</td><td>string</td><td>false</td><td>none</td><td>ClientURI is an URL string of a web page providing information about the client. If present, the server SHOULD display this URL to the end-user in a clickable fashion.</td></tr>
 <tr><td>»»» contacts</td><td>[string]</td><td>false</td><td>none</td><td>Contacts is a array of strings representing ways to contact people responsible for this client, typically email addresses.</td></tr>
-<tr><td>»»» created_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>CreatedAt returns the timestamp of the client's creation.</td></tr>
+<tr><td>»»» created_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>CreatedAt returns the timestamp of the client's creation. Format: date-time Format: date-time Format: date-time</td></tr>
 <tr><td>»»» frontchannel_logout_session_required</td><td>boolean</td><td>false</td><td>none</td><td>Boolean value specifying whether the RP requires that iss (issuer) and sid (session ID) query parameters be included to identify the RP session with the OP when the frontchannel_logout_uri is used. If omitted, the default value is false.</td></tr>
 <tr><td>»»» frontchannel_logout_uri</td><td>string</td><td>false</td><td>none</td><td>RP URL that will cause the RP to log itself out when rendered in an iframe by the OP. An iss (issuer) query parameter and a sid (session ID) query parameter MAY be included by the OP to enable the RP to validate the request and to determine which of the potentially multiple sessions is to be logged out; if either is included, both MUST be.</td></tr>
 <tr><td>»»» grant_types</td><td>[string]</td><td>false</td><td>none</td><td>GrantTypes is an array of grant types the client is allowed to use.</td></tr>
-<tr><td>»»» jwks</td><td><a href="#schemajsonwebkeyset">JSONWebKeySet</a></td><td>false</td><td>none</td><td>JSONWebKeySet JSONWebKeySet JSON web key set</td></tr>
+<tr><td>»»» jwks</td><td><a href="#schemajsonwebkeyset">JSONWebKeySet</a></td><td>false</td><td>none</td><td>JSONWebKeySet JSON web key set</td></tr>
 <tr><td>»»»» keys</td><td>[<a href="#schemajsonwebkey">JSONWebKey</a>]</td><td>false</td><td>none</td><td>The value of the &quot;keys&quot; parameter is an array of JWK values. By default, the order of the JWK values within the array does not imply an order of preference among them, although applications of JWK Sets can choose to assign a meaning to the order for their purposes, if desired.</td></tr>
 <tr><td>»»»»» alg</td><td>string</td><td>true</td><td>none</td><td>The &quot;alg&quot; (algorithm) parameter identifies the algorithm intended for use with the key. The values used should either be registered in the IANA &quot;JSON Web Signature and Encryption Algorithms&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name.</td></tr>
-<tr><td>»»»»» crv</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» d</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» dp</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» dq</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» e</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» k</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»»» crv</td><td>string</td><td>false</td><td>none</td><td>crv</td></tr>
+<tr><td>»»»»» d</td><td>string</td><td>false</td><td>none</td><td>d</td></tr>
+<tr><td>»»»»» dp</td><td>string</td><td>false</td><td>none</td><td>dp</td></tr>
+<tr><td>»»»»» dq</td><td>string</td><td>false</td><td>none</td><td>dq</td></tr>
+<tr><td>»»»»» e</td><td>string</td><td>false</td><td>none</td><td>e</td></tr>
+<tr><td>»»»»» k</td><td>string</td><td>false</td><td>none</td><td>k</td></tr>
 <tr><td>»»»»» kid</td><td>string</td><td>true</td><td>none</td><td>The &quot;kid&quot; (key ID) parameter is used to match a specific key. This is used, for instance, to choose among a set of keys within a JWK Set during key rollover. The structure of the &quot;kid&quot; value is unspecified. When &quot;kid&quot; values are used within a JWK Set, different keys within the JWK Set SHOULD use distinct &quot;kid&quot; values. (One example in which different keys might use the same &quot;kid&quot; value is if they have different &quot;kty&quot; (key type) values but are considered to be equivalent alternatives by the application using them.) The &quot;kid&quot; value is a case-sensitive string.</td></tr>
 <tr><td>»»»»» kty</td><td>string</td><td>true</td><td>none</td><td>The &quot;kty&quot; (key type) parameter identifies the cryptographic algorithm family used with the key, such as &quot;RSA&quot; or &quot;EC&quot;. &quot;kty&quot; values should either be registered in the IANA &quot;JSON Web Key Types&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name. The &quot;kty&quot; value is a case-sensitive string.</td></tr>
-<tr><td>»»»»» n</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» p</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» q</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>»»»»» qi</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»»» n</td><td>string</td><td>false</td><td>none</td><td>n</td></tr>
+<tr><td>»»»»» p</td><td>string</td><td>false</td><td>none</td><td>p</td></tr>
+<tr><td>»»»»» q</td><td>string</td><td>false</td><td>none</td><td>q</td></tr>
+<tr><td>»»»»» qi</td><td>string</td><td>false</td><td>none</td><td>qi</td></tr>
 <tr><td>»»»»» use</td><td>string</td><td>true</td><td>none</td><td>Use (&quot;public key use&quot;) identifies the intended use of the public key. The &quot;use&quot; parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Values are commonly &quot;sig&quot; (signature) or &quot;enc&quot; (encryption).</td></tr>
-<tr><td>»»»»» x</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»»» x</td><td>string</td><td>false</td><td>none</td><td>x</td></tr>
 <tr><td>»»»»» x5c</td><td>[string]</td><td>false</td><td>none</td><td>The &quot;x5c&quot; (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates [RFC5280]. The certificate chain is represented as a JSON array of certificate value strings. Each string in the array is a base64-encoded (Section 4 of [RFC4648] -- not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value. The PKIX certificate containing the key value MUST be the first certificate.</td></tr>
-<tr><td>»»»»» y</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>»»»»» y</td><td>string</td><td>false</td><td>none</td><td>y</td></tr>
 <tr><td>»»»» jwks_uri</td><td>string</td><td>false</td><td>none</td><td>URL for the Client's JSON Web Key Set [JWK] document. If the Client signs requests to the Server, it contains the signing key(s) the Server uses to validate signatures from the Client. The JWK Set MAY also contain the Client's encryption keys(s), which are used by the Server to encrypt responses to the Client. When both signing and encryption keys are made available, a use (Key Use) parameter value is REQUIRED for all keys in the referenced JWK Set to indicate each key's intended usage. Although some algorithms allow the same key to be used for both signatures and encryption, doing so is NOT RECOMMENDED, as it is less secure. The JWK x5c parameter MAY be used to provide X.509 representations of keys provided. When used, the bare key values MUST still be present and MUST match those in the certificate.</td></tr>
 <tr><td>»»»» logo_uri</td><td>string</td><td>false</td><td>none</td><td>LogoURI is an URL string that references a logo for the client.</td></tr>
 <tr><td>»»»» metadata</td><td>object</td><td>false</td><td>none</td><td>Metadata is arbitrary data.</td></tr>
@@ -6249,7 +6249,7 @@ and will be separated by a comma.</p>
 <tr><td>»»»» subject_type</td><td>string</td><td>false</td><td>none</td><td>SubjectType requested for responses to this Client. The subject_types_supported Discovery parameter contains a list of the supported subject_type values for this server. Valid types include <code>pairwise</code> and <code>public</code>.</td></tr>
 <tr><td>»»»» token_endpoint_auth_method</td><td>string</td><td>false</td><td>none</td><td>Requested Client Authentication method for the Token Endpoint. The options are client_secret_post, client_secret_basic, private_key_jwt, and none.</td></tr>
 <tr><td>»»»» tos_uri</td><td>string</td><td>false</td><td>none</td><td>TermsOfServiceURI is a URL string that points to a human-readable terms of service document for the client that describes a contractual relationship between the end-user and the client that the end-user accepts when authorizing the client.</td></tr>
-<tr><td>»»»» updated_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>UpdatedAt returns the timestamp of the last update.</td></tr>
+<tr><td>»»»» updated_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>UpdatedAt returns the timestamp of the last update. Format: date-time Format: date-time Format: date-time</td></tr>
 <tr><td>»»»» userinfo_signed_response_alg</td><td>string</td><td>false</td><td>none</td><td>JWS alg algorithm [JWA] REQUIRED for signing UserInfo Responses. If this is specified, the response will be JWT [JWT] serialized, and signed using JWS. The default, if omitted, is for the UserInfo Response to return the Claims as a UTF-8 encoded JSON object using the application/json content-type.</td></tr>
 <tr><td>»»» context</td><td>object</td><td>false</td><td>none</td><td>Context contains arbitrary information set by the login endpoint or is empty if not set.</td></tr>
 <tr><td>»»»» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
@@ -6296,7 +6296,7 @@ and will be separated by a comma.</p>
         <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
         <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+        <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
         <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
         <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -6338,7 +6338,7 @@ and will be separated by a comma.</p>
         <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
         <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+        <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
         <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
       },
       <span class="hljs-attr">"context"</span>: {
@@ -6840,7 +6840,7 @@ keep recent tokens for auditing. Refresh tokens can not be flushed as they are
 deleted automatically when performing the refresh flow.</p>
 <h4><a class="anchor" aria-hidden="true" id="request-body-12"></a><a href="#request-body-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request body</h4>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>
+  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>
 }
 </code></pre>
 <p><a id="flush-expired-oauth2-access-tokens-parameters"></a></p>
@@ -6926,7 +6926,7 @@ This operation does not require authentication
 <div class="tab-pane" role="tabpanel"  id="tab-flushInactiveOAuth2Tokens-node">
 <pre><code class="hljs css language-nodejs"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
 <span class="hljs-keyword">const</span> input = <span class="hljs-string">'{
-  "notAfter": "2020-01-21T10:39:28Z"
+  "notAfter": "2020-01-30T07:01:49Z"
 }'</span>;
 <span class="hljs-keyword">const</span> headers = {
   <span class="hljs-string">'Content-Type'</span>: <span class="hljs-string">'application/json'</span>,  <span class="hljs-string">'Accept'</span>: <span class="hljs-string">'application/json'</span>
@@ -7339,24 +7339,6 @@ p JSON.parse(result)
 </div>
 </div>
 <h2><a class="anchor" aria-hidden="true" id="schemas"></a><a href="#schemas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schemas</h2>
-<p><a id="tocSdatetime">DateTime</a></p>
-<h4><a class="anchor" aria-hidden="true" id="datetime"></a><a href="#datetime" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DateTime</h4>
-<p><a id="schemadatetime"></a></p>
-<pre><code class="hljs css language-json"><span class="hljs-string">"2020-01-21T10:39:28Z"</span>
-</code></pre>
-<p><em>DateTime is a time but it serializes to ISO8601 format with millis It knows how
-to read 3 different variations of a RFC3339 date time. Most APIs we encounter
-want either millisecond or second precision times. This just tries to make it
-worry-free.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td><em>anonymous</em></td><td>string(date-time)</td><td>false</td><td>none</td><td>DateTime is a time but it serializes to ISO8601 format with millis It knows how to read 3 different variations of a RFC3339 date time. Most APIs we encounter want either millisecond or second precision times. This just tries to make it worry-free.</td></tr>
-</tbody>
-</table>
 <p><a id="tocSjsonwebkey">JSONWebKey</a></p>
 <h4><a class="anchor" aria-hidden="true" id="jsonwebkey"></a><a href="#jsonwebkey" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSONWebKey</h4>
 <p><a id="schemajsonwebkey"></a></p>
@@ -7380,29 +7362,30 @@ worry-free.</em></p>
   <span class="hljs-attr">"y"</span>: <span class="hljs-string">"x_FEzRu9m36HLN_tue659LNpXW6pCyStikYjKIWI5a0"</span>
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="properties-1"></a><a href="#properties-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>JSONWebKey JSONWebKey JSONWebKey JSONWebKey JSONWebKey JSON web key</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
 </thead>
 <tbody>
 <tr><td>alg</td><td>string</td><td>true</td><td>none</td><td>The &quot;alg&quot; (algorithm) parameter identifies the algorithm intended for use with the key. The values used should either be registered in the IANA &quot;JSON Web Signature and Encryption Algorithms&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name.</td></tr>
-<tr><td>crv</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>d</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>dp</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>dq</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>e</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>k</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>crv</td><td>string</td><td>false</td><td>none</td><td>crv</td></tr>
+<tr><td>d</td><td>string</td><td>false</td><td>none</td><td>d</td></tr>
+<tr><td>dp</td><td>string</td><td>false</td><td>none</td><td>dp</td></tr>
+<tr><td>dq</td><td>string</td><td>false</td><td>none</td><td>dq</td></tr>
+<tr><td>e</td><td>string</td><td>false</td><td>none</td><td>e</td></tr>
+<tr><td>k</td><td>string</td><td>false</td><td>none</td><td>k</td></tr>
 <tr><td>kid</td><td>string</td><td>true</td><td>none</td><td>The &quot;kid&quot; (key ID) parameter is used to match a specific key. This is used, for instance, to choose among a set of keys within a JWK Set during key rollover. The structure of the &quot;kid&quot; value is unspecified. When &quot;kid&quot; values are used within a JWK Set, different keys within the JWK Set SHOULD use distinct &quot;kid&quot; values. (One example in which different keys might use the same &quot;kid&quot; value is if they have different &quot;kty&quot; (key type) values but are considered to be equivalent alternatives by the application using them.) The &quot;kid&quot; value is a case-sensitive string.</td></tr>
 <tr><td>kty</td><td>string</td><td>true</td><td>none</td><td>The &quot;kty&quot; (key type) parameter identifies the cryptographic algorithm family used with the key, such as &quot;RSA&quot; or &quot;EC&quot;. &quot;kty&quot; values should either be registered in the IANA &quot;JSON Web Key Types&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name. The &quot;kty&quot; value is a case-sensitive string.</td></tr>
-<tr><td>n</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>p</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>q</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>qi</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>n</td><td>string</td><td>false</td><td>none</td><td>n</td></tr>
+<tr><td>p</td><td>string</td><td>false</td><td>none</td><td>p</td></tr>
+<tr><td>q</td><td>string</td><td>false</td><td>none</td><td>q</td></tr>
+<tr><td>qi</td><td>string</td><td>false</td><td>none</td><td>qi</td></tr>
 <tr><td>use</td><td>string</td><td>true</td><td>none</td><td>Use (&quot;public key use&quot;) identifies the intended use of the public key. The &quot;use&quot; parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Values are commonly &quot;sig&quot; (signature) or &quot;enc&quot; (encryption).</td></tr>
-<tr><td>x</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>x</td><td>string</td><td>false</td><td>none</td><td>x</td></tr>
 <tr><td>x5c</td><td>[string]</td><td>false</td><td>none</td><td>The &quot;x5c&quot; (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates [RFC5280]. The certificate chain is represented as a JSON array of certificate value strings. Each string in the array is a base64-encoded (Section 4 of [RFC4648] -- not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value. The PKIX certificate containing the key value MUST be the first certificate.</td></tr>
-<tr><td>y</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>y</td><td>string</td><td>false</td><td>none</td><td>y</td></tr>
 </tbody>
 </table>
 <p><a id="tocSjsonwebkeyset">JSONWebKeySet</a></p>
@@ -7432,8 +7415,8 @@ worry-free.</em></p>
   ]
 }
 </code></pre>
-<p><em>JSONWebKeySet JSONWebKeySet JSON web key set</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-2"></a><a href="#properties-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>JSONWebKeySet JSON web key set</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-1"></a><a href="#properties-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7460,7 +7443,7 @@ worry-free.</em></p>
       <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
       <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-      <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+      <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
       <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
       <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -7502,7 +7485,7 @@ worry-free.</em></p>
       <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
       <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-      <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+      <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
       <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
     },
     <span class="hljs-attr">"context"</span>: {
@@ -7546,10 +7529,10 @@ worry-free.</em></p>
 <p><em>PreviousConsentSession PreviousConsentSession PreviousConsentSession
 PreviousConsentSession PreviousConsentSession PreviousConsentSession
 PreviousConsentSession PreviousConsentSession PreviousConsentSession
-PreviousConsentSession PreviousConsentSession The response used to return used
-consent requests same as HandledLoginRequest, just with consent_request exposed
-as json</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-3"></a><a href="#properties-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+PreviousConsentSession PreviousConsentSession PreviousConsentSession
+PreviousConsentSession The response used to return used consent requests same as
+HandledLoginRequest, just with consent_request exposed as json</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-2"></a><a href="#properties-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7583,8 +7566,8 @@ as json</em></p>
   }
 }
 </code></pre>
-<p><em>The request payload used to accept a consent request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-4"></a><a href="#properties-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>AcceptConsentRequest The request payload used to accept a consent request.</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-3"></a><a href="#properties-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7612,9 +7595,9 @@ as json</em></p>
   <span class="hljs-attr">"subject"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>AcceptLoginRequest AcceptLoginRequest AcceptLoginRequest AcceptLoginRequest
-HandledLoginRequest is the request payload used to accept a login request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-5"></a><a href="#properties-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>AcceptLoginRequest HandledLoginRequest is the request payload used to accept a
+login request.</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-4"></a><a href="#properties-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7636,9 +7619,9 @@ HandledLoginRequest is the request payload used to accept a login request.</em><
   <span class="hljs-attr">"redirect_to"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>CompletedRequest The response payload sent when accepting or rejecting a login
-or consent request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-6"></a><a href="#properties-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>The response payload sent when accepting or rejecting a login or consent
+request.</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-5"></a><a href="#properties-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7664,7 +7647,7 @@ or consent request.</em></p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -7706,7 +7689,7 @@ or consent request.</em></p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"context"</span>: {
@@ -7732,8 +7715,8 @@ or consent request.</em></p>
   <span class="hljs-attr">"subject"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>Contains information on an ongoing consent request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-7"></a><a href="#properties-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>ConsentRequest Contains information on an ongoing consent request.</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-6"></a><a href="#properties-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7768,10 +7751,9 @@ or consent request.</em></p>
   }
 }
 </code></pre>
-<p><em>ConsentRequestSession ConsentRequestSession ConsentRequestSession
-ConsentRequestSession ConsentRequestSession Used to pass session data to a
+<p><em>ConsentRequestSession ConsentRequestSession Used to pass session data to a
 consent request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-8"></a><a href="#properties-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-7"></a><a href="#properties-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7787,18 +7769,17 @@ consent request.</em></p>
 <h4><a class="anchor" aria-hidden="true" id="flushinactiveoauth2tokensrequest"></a><a href="#flushinactiveoauth2tokensrequest" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>flushInactiveOAuth2TokensRequest</h4>
 <p><a id="schemaflushinactiveoauth2tokensrequest"></a></p>
 <pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>
+  <span class="hljs-attr">"notAfter"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>
 }
 </code></pre>
-<p><em>FlushInactiveOAuth2TokensRequest FlushInactiveOAuth2TokensRequest flush
-inactive o auth2 tokens request</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-9"></a><a href="#properties-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>FlushInactiveOAuth2TokensRequest flush inactive o auth2 tokens request</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-8"></a><a href="#properties-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
 </thead>
 <tbody>
-<tr><td>notAfter</td><td>string(date-time)</td><td>false</td><td>none</td><td>NotAfter sets after which point tokens should not be flushed. This is useful when you want to keep a history of recently issued tokens for auditing. Format: date-time Format: date-time</td></tr>
+<tr><td>notAfter</td><td>string(date-time)</td><td>false</td><td>none</td><td>NotAfter sets after which point tokens should not be flushed. This is useful when you want to keep a history of recently issued tokens for auditing. Format: date-time</td></tr>
 </tbody>
 </table>
 <p><a id="tocSgenericerror">genericError</a></p>
@@ -7811,8 +7792,8 @@ inactive o auth2 tokens request</em></p>
   <span class="hljs-attr">"status_code"</span>: <span class="hljs-number">404</span>
 }
 </code></pre>
-<p><em>GenericError Error response</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-10"></a><a href="#properties-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>Error response</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-9"></a><a href="#properties-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7834,7 +7815,7 @@ inactive o auth2 tokens request</em></p>
   }
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="properties-11"></a><a href="#properties-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-10"></a><a href="#properties-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7851,7 +7832,7 @@ inactive o auth2 tokens request</em></p>
   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="properties-12"></a><a href="#properties-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-11"></a><a href="#properties-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7869,9 +7850,8 @@ inactive o auth2 tokens request</em></p>
   <span class="hljs-attr">"use"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>JSONWebKeySetGeneratorRequest JSONWebKeySetGeneratorRequest json web key set
-generator request</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-13"></a><a href="#properties-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>JSONWebKeySetGeneratorRequest json web key set generator request</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-12"></a><a href="#properties-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7898,7 +7878,7 @@ generator request</em></p>
     <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
     <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
     <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -7940,7 +7920,7 @@ generator request</em></p>
     <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
     <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+    <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
     <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
   },
   <span class="hljs-attr">"oidc_context"</span>: {
@@ -7962,7 +7942,7 @@ generator request</em></p>
 }
 </code></pre>
 <p><em>Contains information on an ongoing login request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-14"></a><a href="#properties-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-13"></a><a href="#properties-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -7989,8 +7969,8 @@ generator request</em></p>
   <span class="hljs-attr">"subject"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>LogoutRequest Contains information about an ongoing logout request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-15"></a><a href="#properties-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>Contains information about an ongoing logout request.</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-14"></a><a href="#properties-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8016,7 +7996,7 @@ generator request</em></p>
   <span class="hljs-attr">"client_secret_expires_at"</span>: <span class="hljs-number">0</span>,
   <span class="hljs-attr">"client_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"contacts"</span>: [<span class="hljs-string">"string"</span>],
-  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"created_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"frontchannel_logout_session_required"</span>: <span class="hljs-literal">true</span>,
   <span class="hljs-attr">"frontchannel_logout_uri"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"grant_types"</span>: [<span class="hljs-string">"string"</span>],
@@ -8058,12 +8038,12 @@ generator request</em></p>
   <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"string"</span>,
   <span class="hljs-attr">"tos_uri"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-21T10:39:28Z"</span>,
+  <span class="hljs-attr">"updated_at"</span>: <span class="hljs-string">"2020-01-30T07:01:49Z"</span>,
   <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>Client represents an OAuth 2.0 Client.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-16"></a><a href="#properties-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>OAuth2Client OAuth2Client OAuth2Client Client represents an OAuth 2.0 Client.</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-15"></a><a href="#properties-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8079,11 +8059,11 @@ generator request</em></p>
 <tr><td>client_secret_expires_at</td><td>integer(int64)</td><td>false</td><td>none</td><td>SecretExpiresAt is an integer holding the time at which the client secret will expire or 0 if it will not expire. The time is represented as the number of seconds from 1970-01-01T00:00:00Z as measured in UTC until the date/time of expiration. This feature is currently not supported and it's value will always be set to 0.</td></tr>
 <tr><td>client_uri</td><td>string</td><td>false</td><td>none</td><td>ClientURI is an URL string of a web page providing information about the client. If present, the server SHOULD display this URL to the end-user in a clickable fashion.</td></tr>
 <tr><td>contacts</td><td>[string]</td><td>false</td><td>none</td><td>Contacts is a array of strings representing ways to contact people responsible for this client, typically email addresses.</td></tr>
-<tr><td>created_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>CreatedAt returns the timestamp of the client's creation.</td></tr>
+<tr><td>created_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>CreatedAt returns the timestamp of the client's creation. Format: date-time Format: date-time Format: date-time</td></tr>
 <tr><td>frontchannel_logout_session_required</td><td>boolean</td><td>false</td><td>none</td><td>Boolean value specifying whether the RP requires that iss (issuer) and sid (session ID) query parameters be included to identify the RP session with the OP when the frontchannel_logout_uri is used. If omitted, the default value is false.</td></tr>
 <tr><td>frontchannel_logout_uri</td><td>string</td><td>false</td><td>none</td><td>RP URL that will cause the RP to log itself out when rendered in an iframe by the OP. An iss (issuer) query parameter and a sid (session ID) query parameter MAY be included by the OP to enable the RP to validate the request and to determine which of the potentially multiple sessions is to be logged out; if either is included, both MUST be.</td></tr>
 <tr><td>grant_types</td><td>[string]</td><td>false</td><td>none</td><td>GrantTypes is an array of grant types the client is allowed to use.</td></tr>
-<tr><td>jwks</td><td><a href="#schemajsonwebkeyset">JSONWebKeySet</a></td><td>false</td><td>none</td><td>JSONWebKeySet JSONWebKeySet JSON web key set</td></tr>
+<tr><td>jwks</td><td><a href="#schemajsonwebkeyset">JSONWebKeySet</a></td><td>false</td><td>none</td><td>JSONWebKeySet JSON web key set</td></tr>
 <tr><td>jwks_uri</td><td>string</td><td>false</td><td>none</td><td>URL for the Client's JSON Web Key Set [JWK] document. If the Client signs requests to the Server, it contains the signing key(s) the Server uses to validate signatures from the Client. The JWK Set MAY also contain the Client's encryption keys(s), which are used by the Server to encrypt responses to the Client. When both signing and encryption keys are made available, a use (Key Use) parameter value is REQUIRED for all keys in the referenced JWK Set to indicate each key's intended usage. Although some algorithms allow the same key to be used for both signatures and encryption, doing so is NOT RECOMMENDED, as it is less secure. The JWK x5c parameter MAY be used to provide X.509 representations of keys provided. When used, the bare key values MUST still be present and MUST match those in the certificate.</td></tr>
 <tr><td>logo_uri</td><td>string</td><td>false</td><td>none</td><td>LogoURI is an URL string that references a logo for the client.</td></tr>
 <tr><td>metadata</td><td>object</td><td>false</td><td>none</td><td>Metadata is arbitrary data.</td></tr>
@@ -8099,7 +8079,7 @@ generator request</em></p>
 <tr><td>subject_type</td><td>string</td><td>false</td><td>none</td><td>SubjectType requested for responses to this Client. The subject_types_supported Discovery parameter contains a list of the supported subject_type values for this server. Valid types include <code>pairwise</code> and <code>public</code>.</td></tr>
 <tr><td>token_endpoint_auth_method</td><td>string</td><td>false</td><td>none</td><td>Requested Client Authentication method for the Token Endpoint. The options are client_secret_post, client_secret_basic, private_key_jwt, and none.</td></tr>
 <tr><td>tos_uri</td><td>string</td><td>false</td><td>none</td><td>TermsOfServiceURI is a URL string that points to a human-readable terms of service document for the client that describes a contractual relationship between the end-user and the client that the end-user accepts when authorizing the client.</td></tr>
-<tr><td>updated_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>UpdatedAt returns the timestamp of the last update.</td></tr>
+<tr><td>updated_at</td><td>string(date-time)</td><td>false</td><td>none</td><td>UpdatedAt returns the timestamp of the last update. Format: date-time Format: date-time Format: date-time</td></tr>
 <tr><td>userinfo_signed_response_alg</td><td>string</td><td>false</td><td>none</td><td>JWS alg algorithm [JWA] REQUIRED for signing UserInfo Responses. If this is specified, the response will be JWT [JWT] serialized, and signed using JWS. The default, if omitted, is for the UserInfo Response to return the Claims as a UTF-8 encoded JSON object using the application/json content-type.</td></tr>
 </tbody>
 </table>
@@ -8127,7 +8107,7 @@ generator request</em></p>
 </code></pre>
 <p><em>Introspection contains an access token's session data as specified by IETF RFC
 7662, see:</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-17"></a><a href="#properties-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-16"></a><a href="#properties-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8161,9 +8141,8 @@ generator request</em></p>
   <span class="hljs-attr">"token_type"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>Oauth2TokenResponse Oauth2TokenResponse Oauth2TokenResponse The Access Token
-Response</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-18"></a><a href="#properties-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>Oauth2TokenResponse The Access Token Response</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-17"></a><a href="#properties-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8190,7 +8169,7 @@ Response</em></p>
 }
 </code></pre>
 <p><em>The token response</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-19"></a><a href="#properties-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-18"></a><a href="#properties-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8218,9 +8197,8 @@ Response</em></p>
   <span class="hljs-attr">"ui_locales"</span>: [<span class="hljs-string">"string"</span>]
 }
 </code></pre>
-<p><em>OpenIDConnectContext OpenIDConnectContext OpenIDConnectContext Contains
-optional information about the OpenID Connect request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-20"></a><a href="#properties-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>Contains optional information about the OpenID Connect request.</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-19"></a><a href="#properties-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8246,7 +8224,7 @@ optional information about the OpenID Connect request.</em></p>
 }
 </code></pre>
 <p><em>The request payload used to accept a login or consent request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-21"></a><a href="#properties-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-20"></a><a href="#properties-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8284,9 +8262,9 @@ optional information about the OpenID Connect request.</em></p>
   <span class="hljs-attr">"zoneinfo"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>UserinfoResponse UserinfoResponse UserinfoResponse UserinfoResponse The
-userinfo response</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-22"></a><a href="#properties-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>UserinfoResponse UserinfoResponse UserinfoResponse UserinfoResponse
+UserinfoResponse UserinfoResponse The userinfo response</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-21"></a><a href="#properties-21" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8320,7 +8298,8 @@ userinfo response</em></p>
   <span class="hljs-attr">"version"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="properties-23"></a><a href="#properties-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>Version version</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-22"></a><a href="#properties-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8360,9 +8339,8 @@ userinfo response</em></p>
   <span class="hljs-attr">"userinfo_signing_alg_values_supported"</span>: [<span class="hljs-string">"string"</span>]
 }
 </code></pre>
-<p><em>WellKnown WellKnown WellKnown represents important OpenID Connect discovery
-metadata</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-24"></a><a href="#properties-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<p><em>WellKnown represents important OpenID Connect discovery metadata</em></p>
+<h4><a class="anchor" aria-hidden="true" id="properties-23"></a><a href="#properties-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -8395,7 +8373,7 @@ metadata</em></p>
 <tr><td>userinfo_signing_alg_values_supported</td><td>[string]</td><td>false</td><td>none</td><td>JSON array containing a list of the JWS [JWS] signing algorithms (alg values) [JWA] supported by the UserInfo Endpoint to encode the Claims in a JWT [JWT].</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/21/2020 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/hydra/sdk/go"><span>Go</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication">Authentication</a></li><li><a href="#public-endpoints">Public Endpoints</a><ul class="toc-headings"><li><a href="#json-web-keys-discovery">JSON Web Keys Discovery</a></li><li><a href="#openid-connect-discovery">OpenID Connect Discovery</a></li><li><a href="#check-readiness-status">Check readiness status</a></li><li><a href="#the-oauth-20-authorize-endpoint">The OAuth 2.0 authorize endpoint</a></li><li><a href="#revoke-oauth2-tokens">Revoke OAuth2 tokens</a></li><li><a href="#openid-connect-front-backchannel-enabled-logout">OpenID Connect Front-Backchannel enabled Logout</a></li><li><a href="#the-oauth-20-token-endpoint">The OAuth 2.0 token endpoint</a></li><li><a href="#openid-connect-userinfo">OpenID Connect Userinfo</a></li></ul></li><li><a href="#administrative-endpoints">Administrative Endpoints</a><ul class="toc-headings"><li><a href="#list-oauth-20-clients">List OAuth 2.0 Clients</a></li><li><a href="#create-an-oauth-20-client">Create an OAuth 2.0 client</a></li><li><a href="#get-an-oauth-20-client">Get an OAuth 2.0 Client.</a></li><li><a href="#update-an-oauth-20-client">Update an OAuth 2.0 Client</a></li><li><a href="#deletes-an-oauth-20-client">Deletes an OAuth 2.0 Client</a></li><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#retrieve-a-json-web-key-set">Retrieve a JSON Web Key Set</a></li><li><a href="#update-a-json-web-key-set">Update a JSON Web Key Set</a></li><li><a href="#generate-a-new-json-web-key">Generate a new JSON Web Key</a></li><li><a href="#delete-a-json-web-key-set">Delete a JSON Web Key Set</a></li><li><a href="#fetch-a-json-web-key">Fetch a JSON Web Key</a></li><li><a href="#update-a-json-web-key">Update a JSON Web Key</a></li><li><a href="#delete-a-json-web-key">Delete a JSON Web Key</a></li><li><a href="#get-snapshot-metrics-from-the-hydra-service-if-youre-using-k8s-you-can-then-add-annotations-to">Get snapshot metrics from the Hydra service. If you're using k8s, you can then add annotations to</a></li><li><a href="#get-consent-request-information">Get consent request information</a></li><li><a href="#accept-a-consent-request">Accept a consent request</a></li><li><a href="#reject-a-consent-request">Reject a consent request</a></li><li><a href="#get-a-login-request">Get a login request</a></li><li><a href="#accept-a-login-request">Accept a login request</a></li><li><a href="#reject-a-login-request">Reject a login request</a></li><li><a href="#get-a-logout-request">Get a logout request</a></li><li><a href="#accept-a-logout-request">Accept a logout request</a></li><li><a href="#reject-a-logout-request">Reject a logout request</a></li><li><a href="#lists-all-consent-sessions-of-a-subject">Lists all consent sessions of a subject</a></li><li><a href="#revokes-consent-sessions-of-a-subject-for-a-specific-oauth-20-client">Revokes consent sessions of a subject for a specific OAuth 2.0 Client</a></li><li><a href="#invalidates-all-login-sessions-of-a-certain-user">Invalidates all login sessions of a certain user</a></li><li><a href="#flush-expired-oauth2-access-tokens">Flush Expired OAuth2 Access Tokens</a></li><li><a href="#introspect-oauth2-tokens">Introspect OAuth2 tokens</a></li><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/30/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/hydra/sdk/go"><span>Go</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authentication">Authentication</a></li><li><a href="#public-endpoints">Public Endpoints</a><ul class="toc-headings"><li><a href="#json-web-keys-discovery">JSON Web Keys Discovery</a></li><li><a href="#openid-connect-discovery">OpenID Connect Discovery</a></li><li><a href="#check-readiness-status">Check readiness status</a></li><li><a href="#the-oauth-20-authorize-endpoint">The OAuth 2.0 authorize endpoint</a></li><li><a href="#revoke-oauth2-tokens">Revoke OAuth2 tokens</a></li><li><a href="#openid-connect-front-backchannel-enabled-logout">OpenID Connect Front-Backchannel enabled Logout</a></li><li><a href="#the-oauth-20-token-endpoint">The OAuth 2.0 token endpoint</a></li><li><a href="#openid-connect-userinfo">OpenID Connect Userinfo</a></li></ul></li><li><a href="#administrative-endpoints">Administrative Endpoints</a><ul class="toc-headings"><li><a href="#list-oauth-20-clients">List OAuth 2.0 Clients</a></li><li><a href="#create-an-oauth-20-client">Create an OAuth 2.0 client</a></li><li><a href="#get-an-oauth-20-client">Get an OAuth 2.0 Client.</a></li><li><a href="#update-an-oauth-20-client">Update an OAuth 2.0 Client</a></li><li><a href="#deletes-an-oauth-20-client">Deletes an OAuth 2.0 Client</a></li><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#retrieve-a-json-web-key-set">Retrieve a JSON Web Key Set</a></li><li><a href="#update-a-json-web-key-set">Update a JSON Web Key Set</a></li><li><a href="#generate-a-new-json-web-key">Generate a new JSON Web Key</a></li><li><a href="#delete-a-json-web-key-set">Delete a JSON Web Key Set</a></li><li><a href="#fetch-a-json-web-key">Fetch a JSON Web Key</a></li><li><a href="#update-a-json-web-key">Update a JSON Web Key</a></li><li><a href="#delete-a-json-web-key">Delete a JSON Web Key</a></li><li><a href="#get-snapshot-metrics-from-the-hydra-service-if-youre-using-k8s-you-can-then-add-annotations-to">Get snapshot metrics from the Hydra service. If you're using k8s, you can then add annotations to</a></li><li><a href="#get-consent-request-information">Get consent request information</a></li><li><a href="#accept-a-consent-request">Accept a consent request</a></li><li><a href="#reject-a-consent-request">Reject a consent request</a></li><li><a href="#get-a-login-request">Get a login request</a></li><li><a href="#accept-a-login-request">Accept a login request</a></li><li><a href="#reject-a-login-request">Reject a login request</a></li><li><a href="#get-a-logout-request">Get a logout request</a></li><li><a href="#accept-a-logout-request">Accept a logout request</a></li><li><a href="#reject-a-logout-request">Reject a logout request</a></li><li><a href="#lists-all-consent-sessions-of-a-subject">Lists all consent sessions of a subject</a></li><li><a href="#revokes-consent-sessions-of-a-subject-for-a-specific-oauth-20-client">Revokes consent sessions of a subject for a specific OAuth 2.0 Client</a></li><li><a href="#invalidates-all-login-sessions-of-a-certain-user">Invalidates all login sessions of a certain user</a></li><li><a href="#flush-expired-oauth2-access-tokens">Flush Expired OAuth2 Access Tokens</a></li><li><a href="#introspect-oauth2-tokens">Introspect OAuth2 tokens</a></li><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

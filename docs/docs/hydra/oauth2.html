@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Integrating with (existing) User Management · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="Please read this chapter carefully, it is imperative to getting started and"/><meta name="docsearch:version" content="oryOS.15"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Integrating with (existing) User Management · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="Please read this chapter carefully, it is imperative to getting started and"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>OAuth 2.0 and OpenID Connect · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="This section describes on a high level what OAuth 2.0 and OpenID Connect 1.0 are"/><meta name="docsearch:version" content="oryOS.15"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="OAuth 2.0 and OpenID Connect · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="This section describes on a high level what OAuth 2.0 and OpenID Connect 1.0 are"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -6,7 +6,7 @@
 
               ga('create', 'UA-71865250-1', 'auto');
               ga('send', 'pageview');
-            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.15</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/usage">API Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/persistence">Data Storage and Persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/hydra/">Introduction to ORY Hydra, OAuth 2.0, and OpenID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/hydra/oauth2">Integrating with (existing) User Management</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/control-flow">Control Flow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/engines/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.15</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Concepts</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ecosystem/projects">Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/software-architecture-philosophy">Software Architecture and Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/deployment">Deployment Fundamentals and Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/versioning">Software Versions and Project Maturity</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/api-design">API Design</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/hydra/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/hydra/oauth2">OAuth 2.0</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/login-consent-flow">Hydra workflow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Integrating Hydra into your stack</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/5min-tutorial">5 Minute Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/implementing-consent">Login, Consent &amp; Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/case-study">OAuth 2.0 Case Study</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/js">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/php">PHP</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/authn">Authenticators</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/authz">Authorizers</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/mutator">Mutators</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/error">Error Handlers</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/configure-deploy">Configure and Deploy</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/engines/">Access Control Engines - Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
             var coll = document.getElementsByClassName('collapsible');
             var checkActiveCategory = true;
             for (var i = 0; i < coll.length; i++) {
@@ -62,56 +62,83 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/oauth2.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Integrating with (existing) User Management</h1></header><article><div><span><p>Please read this chapter carefully, it is imperative to getting started and
-grasping all the concepts quickly. The next sections will give you an overview
-of this chapter and explain some concepts. Do not skip the chapters. Seriously!
-:)</p>
-<h2><a class="anchor" aria-hidden="true" id="oauth-20-and-openid-connect"></a><a href="#oauth-20-and-openid-connect" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 and OpenID Connect</h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/996OiexHze0" frameborder="0" allowfullscreen></iframe>
-<h3><a class="anchor" aria-hidden="true" id="ory-hydra-does-not-manage-users"></a><a href="#ory-hydra-does-not-manage-users" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ORY Hydra does not manage Users</h3>
-<p>The first important concept to understand is that ORY Hydra is an OAuth 2.0
-Authorization and OpenID Connect Server. Some mistake these capabilities for
-systems that store user data and log you in. This is not the case. Instead, such
-a server is responsible for &quot;translating&quot; user credentials (typically username
-and password) to OAuth 2.0 Access and Refresh Tokens as well as OpenID Connect
-ID Tokens. It's basically like you storing cookies with session data, but more
-flexible and it also works for third party applications.</p>
-<p>ORY Hydra does not store user profiles, usernames, passwords. This capability is
-up to you. ORY Hydra uses something we call a <strong>User Login and Consent Flow</strong>.
-This flow uses HTTP redirects to forward any incoming authorization request
-(&quot;Please give me an access token.&quot;) to the <strong>Login Provider</strong> and the <strong>Consent
-Provider</strong>. These applications are something you implement. It can be a new app
-or your existing login system. On a high level, these providers can be
-summarized as:</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/oauth2.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">OAuth 2.0 and OpenID Connect</h1></header><article><div><span><p>This section describes on a high level what OAuth 2.0 and OpenID Connect 1.0 are
+for and how they work.</p>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20"></a><a href="#oauth-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0</h3>
+<p><a href="https://tools.ietf.org/html/rfc6749">The OAuth 2.0 authorization framework</a> is
+specified in <a href="https://tools.ietf.org/html/rfc6749">IETF RFC 6749</a>. OAuth 2.0
+enables a third-party application to obtain limited access to resources on an
+HTTP server on behalf of the owner of those resources.</p>
+<p>Why is this important? Without OAuth 2.0, a resource owner who wants to share
+resources in their account with a third party would have to share their
+credentials with that third party. As an example, let's say you (a resource
+owner) have some photos (resources) stored on a social network (the resource
+server). Now you want to print them using a third-party printing service. Before
+OAuth 2.0 existed, you would have to enter your social network password into the
+printing service so that it can access and print your photos. Sharing secret
+passwords with third parties is obviously very problematic.</p>
+<p>OAuth addresses this problem by introducing:</p>
 <ul>
-<li>The login provider is responsible for authenticating the user (&quot;login&quot;) by
-validating his or her credentials (e.g. username + password).</li>
-<li>The consent provider is responsible for allowing the OAuth 2.0 application to
-get a token on the user's behalf (&quot;Do you want to allow foobar-app access to
-all your personal messages and images?&quot;).</li>
+<li>the distinction between resource ownership and resource access for clients</li>
+<li>the ability to define fine-grained access privileges (called OAuth scopes)
+instead of full account access for third parties</li>
+<li>an authorization layer and workflow that allows resource owners to grant
+particular clients particular types of access to particular resources.</li>
 </ul>
-<h3><a class="anchor" aria-hidden="true" id="common-misconceptions"></a><a href="#common-misconceptions" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Common Misconceptions</h3>
-<h4><a class="anchor" aria-hidden="true" id="oauth-20-scope--permission"></a><a href="#oauth-20-scope--permission" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Scope != Permission</h4>
-<p>A second important concept is the OAuth 2.0 Scope.</p>
-<p>Often, developers confuse OAuth 2.0 Scope with regular Access Control. OAuth 2.0
-Scope and, for example, Role Based Access Control (RBAC) or Access Control Lists
-(ACL) cover different aspects of access control.</p>
-<p>Your internal access control will tell you what a user can do in your system. An
-administrator might modify everything, a regular user might only be allowed to
-read personal messages. The OAuth 2.0 Scope does not represent what a resource
-owner (&quot;user&quot;) is able to do in a system or not. They do not express things like
-administrative rights.</p>
-<p>The OAuth 2.0 Scope expresses what a user allowed an OAuth 2.0 Client (read:
-&quot;access token&quot;) to do on his/her behalf. For example, an access token might be
-allowed to see a user's pictures, but not upload new pictures on his/her behalf.
-The user him/herself however is generally allowed to view and upload pictures.
-<strong>The OAuth 2.0 Scope do not express a user's permissions.</strong> They express what
-an OAuth 2.0 Client may do on the user's behalf - independently of whether or
-not the user is actually allowed to do that. For example, the user could lie and
-say that the client is allowed to access some protected resource which he does
-not have access to (&quot;Read all classified documents&quot;, but he is not allowed to
-view any classified documents).</p>
-<p>This concludes the overview of the two most important pieces of ORY Hydra.</p>
+<p>With OAuth, clients can request access to resources on a server, and the owner
+of these resources can grant the requested access together with dedicated
+credentials. In our example, you could grant the printing service read-only
+access to your photos (only your photos, not your friend list) on the social
+network. These credentials come in the form of an access token -- a string
+denoting a specific scope, lifetime, and other access attributes. The client
+(printing service) can use this access token to request the protected resources
+(your photos) from the resource server (the social network).</p>
+<h3><a class="anchor" aria-hidden="true" id="what-is-openid-connect-10"></a><a href="#what-is-openid-connect-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is OpenID Connect 1.0?</h3>
+<p>OAuth 2.0 is a complex protocol for authorizing access to resources. If all you
+need is authentication, OpenID Connect 1.0 enables clients to verify the
+identity of the end user based on the authentication performed by an
+Authorization Server and obtain basic profile information in an interoperable
+and REST-like manner.</p>
+<p>OpenID Connect allows clients of all types, including web and mobile, to receive
+information about authenticated sessions and end users. The specification is
+extensible, allowing participants to add encryption of identity data, discovery
+of OpenID Providers, and session management as needed.</p>
+<p>There are different work flows for OpenID Connect 1.0. We recommend checking out
+the OpenID Connect sandbox at <a href="https://openidconnect.net/">openidconnect.net</a>.</p>
+<p>A more detailed introduction of both OAuth 2.0 and OpenID Connect is available
+in the following video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/996OiexHze0" frameborder="0" allowfullscreen></iframe>
+<p>More details about the various OAuth2 flows can be found in these articles:</p>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2">DigitalOcean: An Introduction to OAuth 2</a></li>
+<li><a href="https://aaronparecki.com/2012/07/29/2/oauth2-simplified">Aaron Parecki: OAuth2 Simplified</a></li>
+<li><a href="https://zapier.com/learn/apis/chapter-5-authentication-part-2/">Zapier: Chapter 5: Authentication, Part 2</a></li>
+</ul>
+<ol>
+<li>ORY Hydra does not manage user accounts. Your application does that. Hydra
+exposes an OAuth 2.0 and OpenID Connect endpoint for the user accounts of
+your application.</li>
+<li>OAuth Scopes are not access permissions to resources. They entitle an
+external application to act in the name of a user on a particular type of
+resource.</li>
+</ol>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20-scope--permission"></a><a href="#oauth-20-scope--permission" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Scope != Permission</h3>
+<p>A second important concept is the OAuth 2.0 Scope. Many people confuse OAuth 2.0
+Scope with internal Access Control like for example Role Based Access Control
+(RBAC) or Access Control Lists (ACL). Both concepts cover different aspects of
+access control.</p>
+<p>Internal access control (RBAC, ACL, etc) decides what a user can do in your
+system. An administrator might be allowed to modify everything. A regular user
+might only be allowed to read their own messages.</p>
+<p>OAuth 2.0 Scopes, on the other hand, describe what a user allowed an external
+application (OAuth 2.0 client) to do on his/her behalf. For example, an access
+token might grant the external application to see a user's pictures, but not
+upload new pictures on his/her behalf (which we assume a user could do herself).</p>
+<p>In an extreme case, the user could lie and grant an external application OAuth
+scopes that he himself doesn't have permission to (&quot;read all classified
+documents&quot;). The OAuth Access Token with those scopes wouldn't help the external
+application read those documents because it can only act in the name of the
+user, and that user doesn't have these access privileges.</p>
 <p>To recap, ORY Hydra's primary feature is implementing the OAuth 2.0 and OpenID
 Connect spec, as well as related specs by the IETF and OpenID Foundation.</p>
 <p>The next sections explain how to connect your existing user management (user
@@ -119,43 +146,35 @@ login, registration, logout, ...) with ORY Hydra in order to become an OAuth 2.0
 and OpenID Connect provider like Google, Dropbox, or Facebook.</p>
 <p>Again, please be aware that you must know how OAuth 2.0 and OpenID Connect work.
 This documentation will not teach you how these protocols work.</p>
-<h3><a class="anchor" aria-hidden="true" id="glossary"></a><a href="#glossary" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Glossary</h3>
-<p>Before we get into the gritty details of how everything fits together, let's get
-some terminologies out of the way. You will find these terminologies scattered
-across the OAuth2 and OpenID Connect ecosystem.</p>
-<p>We decided, for this guide, to use simpler and easier to use terminologies like,
-for example, <em>user</em> instead of <em>resource owner</em>. If you are familiar with OAuth2
-details, you will find it easier to navigate these docs if you have read the
-glossary.</p>
+<h3><a class="anchor" aria-hidden="true" id="terminology"></a><a href="#terminology" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Terminology</h3>
+<p>To read more natural, this guide uses simpler terminologies like <em>user</em> instead
+of <em>resource owner</em>. Here is a full list of terms.</p>
 <ol>
-<li>The <strong>resource owner</strong> is the user who authorizes an application to access
-their account. The application's access to the user's account is limited to
-the &quot;scope&quot; of the authorization granted (e.g. read or write access). We will
-refer to the resource owner as a <em>user</em> or <em>end user</em> on this page.</li>
+<li>A <strong>resource owner</strong> is the user account who authorizes an external
+application to access their account. This access is limited (scoped) to
+particular actions (the granted &quot;scopes&quot; like read photos or write messages).
+This guide refers to resource owners as <em>users</em> or <em>end users</em>.</li>
 <li>The <strong>OAuth 2.0 Authorization Server</strong> implements the OAuth 2.0 protocol (and
-optionally OpenID Connect) and serves endpoints such as <code>/oauth2/auth</code> or
-<code>/oauth2/token</code>. In our case, this is <strong>ORY Hydra</strong>.</li>
-<li>The <strong>resource provider</strong> is a service that - well - provides resources.
-These resources (e.g. a blog article, printer, todo list) are owned by a
+optionally OpenID Connect). In our case, this is <strong>ORY Hydra</strong>.</li>
+<li>The <strong>resource provider</strong> is the service that hosts (provides) the resources.
+These resources (e.g. blog articles, printers, todo lists) are owned by a
 resource owner (user) mentioned above.</li>
-<li>The <strong>OAuth 2.0 Client</strong> is the <em>application</em> that wants access to a resource
-owner's resources (a.k.a. get write access to a user's images). Such a client
-can ask the authorization server to issue an access token on a resource
-owner's behalf. Typically, the authorization server will ask the user if
-he/she &quot;is ok with&quot; giving that application e.g. write access to personal
-images.</li>
-<li>The <strong>Identity Provider</strong> is a service (&quot;application&quot;/&quot;website&quot;) with a login
-interface. An identity provider typically allows users to register as well
-and might also have an administrative interface in order to manage the
-identities (delete user, ban user, create user, ...).</li>
+<li>The <strong>OAuth 2.0 Client</strong> is the <em>external application</em> that wants to access a
+resource owner's resources (read a user's images). To do that, it asks the
+OAuth 2.0 Authorization Server for an access token in a resource owner's
+behalf. The authorization server will ask the user if he/she &quot;is ok with&quot;
+giving that external application e.g. write access to personal images.</li>
+<li>The <strong>Identity Provider</strong> is a service that allows users to register
+accounts, log in, etc.</li>
 <li><strong>User Agent</strong> is usually a browser.</li>
-<li><strong>OpenID Connect</strong> is a protocol built on top of OAuth 2.0 which is capable
-of federating authentication.</li>
+<li><strong>OpenID Connect</strong> is a protocol built on top of OAuth 2.0 for just
+authentication (instead of authorizing access to resources).</li>
 </ol>
 <p>A typical OAuth 2.0 flow looks as follows:</p>
 <ol>
-<li>A developer registers an OAuth 2.0 Client at the Authorization Server (ORY
-Hydra) with the intention of obtaining information on behalf of a user.</li>
+<li>A developer registers an OAuth 2.0 Client (external application) with the
+Authorization Server (ORY Hydra) the intention to obtain information on
+behalf of a user.</li>
 <li>The application UI asks the user to authorize the application to access
 information/data on his/her behalf.</li>
 <li>The user is redirected to the Authorization Server.</li>
@@ -176,13 +195,13 @@ and it would thus be your Login &amp; Consent provider.</p>
 <p>The flow itself works as follows:</p>
 <ol>
 <li>The OAuth 2.0 Client initiates an Authorize Code, Hybrid, or Implicit flow.
-The user's user agent is redirect to
+The user's user agent is redirected to
 <code>http://hydra/oauth2/auth?client_id=...&amp;...</code>.</li>
-<li>ORY Hydra, if unable to authenticate the user (= no session cookie exists),
-redirects the user's user agent to the Login Provider URL. The application
-&quot;sitting&quot; at that URL is implemented by you and typically shows a login user
-interface (&quot;Please enter your username and password&quot;). The URL the user is
-redirect to looks similar to
+<li>ORY Hydra, if unable to authenticate the user (meaning no session cookie
+exists), redirects the user's user agent to the Login Provider URL. The
+application &quot;sitting&quot; at that URL is implemented by you and typically shows a
+login user interface (&quot;Please enter your username and password&quot;). The URL the
+user is redirected to looks similar to
 <code>http://login-service/login?login_challenge=1234...</code>.</li>
 <li>The Login Provider, once the user has successfully logged in, tells ORY Hydra
 some information about who the user is (e.g. the user's ID) and also that the
@@ -210,8 +229,8 @@ access, refresh, and ID tokens.</li>
 </ol>
 <p>This flow allows you to take full control of the behaviour of your login system
 (e.g. 2FA, passwordless, ...) and consent screen. A well-documented reference
-implementation for both the Login and
-<a href="https://github.com/ory/hydra-login-consent-node">Consent Provider is available on GitHub</a>.</p>
+implementation for both the Login and Consent Provider is
+<a href="https://github.com/ory/hydra-login-consent-node">available on GitHub</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="the-flow-from-a-users-point-of-view"></a><a href="#the-flow-from-a-users-point-of-view" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The flow from a user's point of view</h3>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/txUmfORzu8Y" frameborder="0" allowfullscreen></iframe>
 <h3><a class="anchor" aria-hidden="true" id="the-flow-from-a-network-perspective"></a><a href="#the-flow-from-a-network-perspective" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The flow from a network perspective</h3>
@@ -231,11 +250,11 @@ containing information about a previously successful login. Additionally,
 parameters such as <code>id_token_hint</code>, <code>prompt</code>, and <code>max_age</code> are evaluated and
 processed.</p>
 <p>Next, the user will be redirect to the Login Provider which was set using the
-<code>OAUTH2_LOGIN_URL</code> environment variable. For example, the user is redirected to
+<code>URLS_LOGIN</code> environment variable. For example, the user is redirected to
 <code>https://login-provider/login?login_challenge=1234</code> if
-<code>OAUTH2_LOGIN_URL=https://login-provider/login</code>. This redirection happens
-<em>always</em> and regardless of whether the user has a valid login session or if the
-user needs to authenticate.</p>
+<code>URLS_LOGIN=https://login-provider/login</code>. This redirection happens <em>always</em> and
+regardless of whether the user has a valid login session or if the user needs to
+authenticate.</p>
 <p>The service which handles requests to <code>https://login-provider/login</code> must first
 fetch information on the authentication request using a REST API call. Please be
 aware that for reasons of brevity, the following code snippets are pseudo-code.
@@ -359,13 +378,13 @@ user has previously granted that exact OAuth 2.0 Client the requested
 permissions. If the user has never granted any permissions to the client, or the
 client requires new permissions not previously granted, the user must visually
 confirm the request.</p>
-<p>This works very similar to the User Login Flow. First, the user will be redirect
-to the Consent Provider which was set using the <code>OAUTH2_CONSENT_PROVIDER</code>
+<p>This works very similar to the User Login Flow. First, the user will be
+redirected to the Consent Provider which was set using the <code>URLS_CONSENT</code>
 environment variable. For example, the user is redirected to
 <code>https://consent-provider/consent?consent_challenge=1234</code> if
-<code>OAUTH2_CONSENT_PROVIDER=https://consent-provider/consent</code>. This redirection
-happens <em>always</em> and regardless of whether the user has a valid login session or
-if the user needs to authorize the application or not.</p>
+<code>URLS_CONSENT=https://consent-provider/consent</code>. This redirection happens
+<em>always</em> and regardless of whether the user has a valid login session or if the
+user needs to authorize the application or not.</p>
 <p>The service which handles requests to <code>https://consent-provider/consent</code> must
 first fetch information on the consent request using a REST API call. Please be
 aware that for reasons of brevity, the following code snippets are pseudo-code.
@@ -397,8 +416,11 @@ fetch(<span class="hljs-string">'https://hydra/oauth2/auth/requests/consent?'</s
     <span class="hljs-comment">// The initial OAuth 2.0 request url</span>
     <span class="hljs-string">"request_url"</span>: <span class="hljs-string">"https://hydra/oauth2/auth?client_id=1234&amp;scope=foo+bar&amp;response_type=code&amp;..."</span>,
 
-    <span class="hljs-comment">// The OAuth 2.0 Scope requested by the client,</span>
+    <span class="hljs-comment">// The OAuth 2.0 Scope requested by the client.</span>
     <span class="hljs-string">"requested_scope"</span>: [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>],
+
+    <span class="hljs-comment">// Contains the access token audience as requested by the OAuth 2.0 Client.</span>
+    requested_access_token_audience: [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>]
 
     <span class="hljs-comment">// Information on the OpenID Connect request - only required to process if your UI should support these values.</span>
     <span class="hljs-string">"oidc_context"</span>: {<span class="hljs-string">"ui_locales"</span>: [...], ...},
@@ -423,6 +445,9 @@ the User Login Flow.</p>
 <span class="hljs-keyword">const</span> body = {
     <span class="hljs-comment">// A list of permissions the user granted to the OAuth 2.0 Client. This can be fewer permissions that initially requested, but are rarely more or other permissions than requested.</span>
     grant_scope: [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>],
+
+    <span class="hljs-comment">// Sets the audience the user authorized the client to use. Should be a subset of `requested_access_token_audience`.</span>
+    grant_access_token_audience: [<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>],
 
     <span class="hljs-comment">// If remember is set to true, then the consent response will be remembered for future requests. This will set the `skip` flag to true in future requests that are coming from this user for the granted permissions and that particular client. This value has no effect if `skip` was true.</span>
     remember: <span class="hljs-keyword">true</span>|<span class="hljs-keyword">false</span>,
@@ -528,7 +553,7 @@ redirects the user back to.</li>
 either be the default redirect URL set by <code>urls.post_logout_redirect</code> or to
 the value specified by query parameter <code>post_logout_redirect_uri</code>.</li>
 </ol>
-<p><img src="/images/docs/hydra/logout-flow.png" alt="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gICAgVXNlciBBZ2VudC0-Pk9SWSBIeWRyYTogQ2FsbHMgbG9nb3V0IGVuZHBvaW50XG4gICAgT1JZIEh5ZHJhLS0-Pk9SWSBIeWRyYTogVmFsaWRhdGVzIGxvZ291dCBlbmRwb2ludFxuICAgIE9SWSBIeWRyYS0-PkxvZ291dCBQcm92aWRlcjogUmVkaXJlY3RzIGVuZCB1c2VyIHdpdGggbG9nb3V0IGNoYWxsZW5nZVxuICAgIExvZ291dCBQcm92aWRlci0tPk9SWSBIeWRyYTogRmV0Y2hlcyBsb2dvdXQgcmVxdWVzdCBpbmZvXG4gICAgTG9nb3V0IFByb3ZpZGVyLS0-PkxvZ291dCBQcm92aWRlcjogQWNxdWlyZXMgdXNlciBjb25zZW50IGZvciBsb2dvdXQgKG9wdGlvbmFsKVxuICAgIExvZ291dCBQcm92aWRlci0tPk9SWSBIeWRyYTogSW5mb3JtcyB0aGF0IGxvZ291dCByZXF1ZXN0IGlzIGdyYW50ZWRcbiAgICBMb2dvdXQgUHJvdmlkZXItPj5PUlkgSHlkcmE6IFJlZGlyZWN0cyBlbmQgdXNlciB0byByZWRpcmVjdCB1cmwgd2l0aCBsb2dvdXQgY2hhbGxlbmdlXG4gICAgT1JZIEh5ZHJhLS0-Pk9SWSBIeWRyYTogUGVyZm9ybXMgbG9nb3V0IHJvdXRpbmVzXG4gICAgT1JZIEh5ZHJhLS0-VXNlciBBZ2VudDogUmVkaXJlY3RzIHRvIHNwZWNpZmllZCByZWRpcmVjdCB1cmwiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ">)</p>
+<p><img src="/images/docs/hydra/logout-flow.png" alt="https://mermaidjs.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gICAgVXNlciBBZ2VudC0-Pk9SWSBIeWRyYTogQ2FsbHMgbG9nb3V0IGVuZHBvaW50XG4gICAgT1JZIEh5ZHJhLS0-Pk9SWSBIeWRyYTogVmFsaWRhdGVzIGxvZ291dCBlbmRwb2ludFxuICAgIE9SWSBIeWRyYS0-PkxvZ291dCBQcm92aWRlcjogUmVkaXJlY3RzIGVuZCB1c2VyIHdpdGggbG9nb3V0IGNoYWxsZW5nZVxuICAgIExvZ291dCBQcm92aWRlci0tPk9SWSBIeWRyYTogRmV0Y2hlcyBsb2dvdXQgcmVxdWVzdCBpbmZvXG4gICAgTG9nb3V0IFByb3ZpZGVyLS0-PkxvZ291dCBQcm92aWRlcjogQWNxdWlyZXMgdXNlciBjb25zZW50IGZvciBsb2dvdXQgKG9wdGlvbmFsKVxuICAgIExvZ291dCBQcm92aWRlci0tPk9SWSBIeWRyYTogSW5mb3JtcyB0aGF0IGxvZ291dCByZXF1ZXN0IGlzIGdyYW50ZWRcbiAgICBMb2dvdXQgUHJvdmlkZXItPj5PUlkgSHlkcmE6IFJlZGlyZWN0cyBlbmQgdXNlciB0byByZWRpcmVjdCB1cmwgd2l0aCBsb2dvdXQgY2hhbGxlbmdlXG4gICAgT1JZIEh5ZHJhLS0-Pk9SWSBIeWRyYTogUGVyZm9ybXMgbG9nb3V0IHJvdXRpbmVzXG4gICAgT1JZIEh5ZHJhLS0-VXNlciBBZ2VudDogUmVkaXJlY3RzIHRvIHNwZWNpZmllZCByZWRpcmVjdCB1cmwiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9fQ"></p>
 <p>This endpoint does not remove any Access/Refresh Tokens.</p>
 <h4><a class="anchor" aria-hidden="true" id="logout-provider-example-nodejs-pseudo-code"></a><a href="#logout-provider-example-nodejs-pseudo-code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Logout Provider Example (NodeJS Pseudo-code)</h4>
 <p>Following step 1 from the flow above, the user-agent is redirected to the logout
@@ -706,7 +731,7 @@ and refresh tokens.</p>
 <p>Revoking the consent sessions of a user for a specific client is as easy as
 sending
 <code>DELETE to</code>/oauth2/auth/sessions/consent?subject={subject}&amp;client={client}`.</p>
-<h2><a class="anchor" aria-hidden="true" id="oauth-20"></a><a href="#oauth-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0</h2>
+<h2><a class="anchor" aria-hidden="true" id="oauth-20-1"></a><a href="#oauth-20-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0</h2>
 <h3><a class="anchor" aria-hidden="true" id="oauth-20-scope"></a><a href="#oauth-20-scope" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Scope</h3>
 <p>The scope of an OAuth 2.0 scope defines the permission the token was granted by
 the end-user. For example, a specific token might be allowed to access public
@@ -717,6 +742,9 @@ the consent screen.</p>
 <li><code>offline_access</code>: Include this scope if you wish to receive a refresh token</li>
 <li><code>openid</code>: Include this scope if you wish to perform an OpenID Connect request.</li>
 </ul>
+<p>When performing an OAuth 2.0 Flow where the end-user is involved (e.g. Implicit
+or Authorize Code), the granted OAuth 2.0 Scope must be set when accepting the
+consent using the <code>grant_scope</code> key.</p>
 <blockquote>
 <p>A OAuth 2.0 Scope <strong>is not a permission</strong>:</p>
 <ul>
@@ -732,20 +760,36 @@ not an administrator, that permission (&quot;access control&quot;) is not actual
 granted to Bob. Therefore any request by the OAuth 2.0 Client that tries to
 delete users on behalf of Bob should fail.</p>
 </blockquote>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20-access-token-audience"></a><a href="#oauth-20-access-token-audience" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Access Token Audience</h3>
+<p>The Audience of an Access Token refers to the Resource Servers that this token
+is intended for. The audience usually refers to one or more URLs such as</p>
+<ul>
+<li><code>https://api.mydomain.com/blog/posts</code></li>
+<li><code>https://api.mydomain.com/users</code></li>
+</ul>
+<p>but may also refer to a subset of resources:</p>
+<ul>
+<li><code>https://api.mydomain.com/tenants/foo/users</code></li>
+</ul>
+<p>When performing an OAuth 2.0 Flow where the end-user is involved (e.g. Implicit
+or Authorize Code), the granted audience must be set when accepting the consent
+using the <code>grant_access_token_audience</code> key. In most cases, it is ok to grant
+the audience without user-interaction.</p>
 <h3><a class="anchor" aria-hidden="true" id="oauth-20-refresh-tokens"></a><a href="#oauth-20-refresh-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Refresh Tokens</h3>
 <p>OAuth 2.0 Refresh Tokens are issued only when an Authorize Code Flow
 (<code>response_type=code</code>) or an OpenID Connect Hybrid Flow with an Authorize Code
 Response Type (<code>response_type=code+...</code>) is executed. OAuth 2.0 Refresh Tokens
 are not returned for Implicit or Client Credentials grants:</p>
+<p>Capable of issuing an OAuth 2.0 Refresh Token:</p>
 <ul>
-<li>Capable of issuing an OAuth 2.0 Refresh Token:</li>
 <li><a href="https://ory-hydra.example/oauth2/auth?response_type=code&amp;">https://ory-hydra.example/oauth2/auth?response_type=code&amp;</a>...</li>
 <li><a href="https://ory-hydra.example/oauth2/auth?response_type=code+token&amp;">https://ory-hydra.example/oauth2/auth?response_type=code+token&amp;</a>...</li>
 <li><a href="https://ory-hydra.example/oauth2/auth?response_type=code+token+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=code+token+id_token&amp;</a>...</li>
 <li><a href="https://ory-hydra.example/oauth2/auth?response_type=code+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=code+id_token&amp;</a>...</li>
-<li>Will not issue an OAuth 2.0 Refresh Token</li>
+</ul>
+<p>Will not issue an OAuth 2.0 Refresh Token:</p>
+<ul>
 <li><a href="https://ory-hydra.example/oauth2/auth?response_type=token&amp;">https://ory-hydra.example/oauth2/auth?response_type=token&amp;</a>...</li>
-<li><a href="https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;</a>...</li>
 <li><a href="https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;">https://ory-hydra.example/oauth2/auth?response_type=token+id_token&amp;</a>...</li>
 <li><a href="https://ory-hydra.example/oauth2/token?grant_type=client_redentials&amp;">https://ory-hydra.example/oauth2/token?grant_type=client_redentials&amp;</a>...</li>
 </ul>
@@ -780,6 +824,9 @@ authorization server to determine the active state of an OAuth 2.0 token and to
 determine meta-information about this token. OAuth 2.0 deployments can use this
 method to convey information about the authorization context of the token from
 the authorization server to the protected resource.</p>
+<p>The usage of an access token or client credentials is required to access the
+endpoint. ORY Hydra will however accept any valid token or valid credentials as
+there is no built-in access control.</p>
 <p>You can find more details on this endpoint in the
 <a href="https://www.ory.sh/docs/">ORY Hydra API Docs</a>. You can also use the CLI command
 <code>hydra token introspect &lt;token&gt;</code>.</p>
@@ -816,7 +863,7 @@ command above:</p>
 <pre><code class="hljs">    --token-endpoint-auth-<span class="hljs-function"><span class="hljs-keyword">method</span> <span class="hljs-title">client_secret_post</span> \
 </span></code></pre>
 <p>The same can be achieved by setting
-<code>&quot;token_endpoint_auth_method&quot;: &quot;client_secret_post&quot;</code> in the the request body of
+<code>&quot;token_endpoint_auth_method&quot;: &quot;client_secret_post&quot;</code> in the request body of
 <code>POST /clients</code> and <code>PUT /clients/&lt;id&gt;</code>.</p>
 <h5><a class="anchor" aria-hidden="true" id="client-credentials-flow"></a><a href="#client-credentials-flow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client Credentials Flow</h5>
 <p>A client only capable of performing the Client Credentials Flow can be created
@@ -882,7 +929,7 @@ and the end-user authorizes that scope, the phone number should be added to
 publicly visible as those of ID Tokens. It is therefore imperative to <strong>not
 expose sensitive information without end-user consent.</strong></p>
 </blockquote>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 10/31/2019 by prettifier[bot]</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/hydra/5min-tutorial"><span class="arrow-prev">← </span><span>5 Minute Tutorial</span></a><a class="docs-next button" href="/docs/hydra/configure-deploy"><span>Installation and Setup</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#oauth-20-and-openid-connect">OAuth 2.0 and OpenID Connect</a><ul class="toc-headings"><li><a href="#ory-hydra-does-not-manage-users">ORY Hydra does not manage Users</a></li><li><a href="#common-misconceptions">Common Misconceptions</a></li><li><a href="#glossary">Glossary</a></li></ul></li><li><a href="#authenticating-users-and-requesting-consent">Authenticating Users and Requesting Consent</a><ul class="toc-headings"><li><a href="#the-flow-from-a-users-point-of-view">The flow from a user's point of view</a></li><li><a href="#the-flow-from-a-network-perspective">The flow from a network perspective</a></li><li><a href="#implementing-a-login--consent-provider">Implementing a Login &amp; Consent Provider</a></li><li><a href="#logout">Logout</a></li><li><a href="#revoking-consent-and-login-sessions">Revoking consent and login sessions</a></li></ul></li><li><a href="#oauth-20">OAuth 2.0</a><ul class="toc-headings"><li><a href="#oauth-20-scope">OAuth 2.0 Scope</a></li><li><a href="#oauth-20-refresh-tokens">OAuth 2.0 Refresh Tokens</a></li><li><a href="#oauth-20-token-introspection">OAuth 2.0 Token Introspection</a></li><li><a href="#oauth-20-clients">OAuth 2.0 Clients</a></li></ul></li><li><a href="#openid-connect">OpenID Connect</a><ul class="toc-headings"><li><a href="#userinfo">Userinfo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/7/2020 by Mark Lee</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/hydra/install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/hydra/login-consent-flow"><span>Hydra workflow</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authenticating-users-and-requesting-consent">Authenticating Users and Requesting Consent</a><ul class="toc-headings"><li><a href="#the-flow-from-a-users-point-of-view">The flow from a user's point of view</a></li><li><a href="#the-flow-from-a-network-perspective">The flow from a network perspective</a></li><li><a href="#implementing-a-login--consent-provider">Implementing a Login &amp; Consent Provider</a></li><li><a href="#logout">Logout</a></li><li><a href="#revoking-consent-and-login-sessions">Revoking consent and login sessions</a></li></ul></li><li><a href="#oauth-20-1">OAuth 2.0</a><ul class="toc-headings"><li><a href="#oauth-20-scope">OAuth 2.0 Scope</a></li><li><a href="#oauth-20-access-token-audience">OAuth 2.0 Access Token Audience</a></li><li><a href="#oauth-20-refresh-tokens">OAuth 2.0 Refresh Tokens</a></li><li><a href="#oauth-20-token-introspection">OAuth 2.0 Token Introspection</a></li><li><a href="#oauth-20-clients">OAuth 2.0 Clients</a></li></ul></li><li><a href="#openid-connect">OpenID Connect</a><ul class="toc-headings"><li><a href="#userinfo">Userinfo</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

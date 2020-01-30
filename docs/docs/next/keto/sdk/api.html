@@ -319,7 +319,7 @@ p JSON.parse(result)
 </thead>
 <tbody>
 <tr><td><em>anonymous</em></td><td>[<a href="#schemaoryaccesscontrolpolicy">oryAccessControlPolicy</a>]</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>» oryAccessControlPolicy specifies an ORY Access Policy document.</td><td><a href="#schemaoryaccesscontrolpolicy">oryAccessControlPolicy</a></td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>» OryAccessControlPolicy oryAccessControlPolicy specifies an ORY Access Policy document.</td><td><a href="#schemaoryaccesscontrolpolicy">oryAccessControlPolicy</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»» actions</td><td>[string]</td><td>false</td><td>none</td><td>Actions is an array representing all the actions this ORY Access Policy applies to.</td></tr>
 <tr><td>»» conditions</td><td>object</td><td>false</td><td>none</td><td>Conditions represents a keyed object of conditions under which this ORY Access Policy is active.</td></tr>
 <tr><td>»»» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
@@ -3144,8 +3144,8 @@ control policy role internal server error body</em></p>
   <span class="hljs-attr">"allowed"</span>: <span class="hljs-literal">true</span>
 }
 </code></pre>
-<p><em>AuthorizationResult AuthorizationResult AuthorizationResult AuthorizationResult
-is the result of an access control decision. It contains the decision outcome.</em></p>
+<p><em>AuthorizationResult is the result of an access control decision. It contains
+the decision outcome.</em></p>
 <h4><a class="anchor" aria-hidden="true" id="properties-15"></a><a href="#properties-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
@@ -3183,6 +3183,7 @@ is the result of an access control decision. It contains the decision outcome.</
   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
+<p><em>HealthStatus health status</em></p>
 <h4><a class="anchor" aria-hidden="true" id="properties-17"></a><a href="#properties-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
@@ -3208,7 +3209,8 @@ is the result of an access control decision. It contains the decision outcome.</
   <span class="hljs-attr">"subjects"</span>: [<span class="hljs-string">"string"</span>]
 }
 </code></pre>
-<p><em>oryAccessControlPolicy specifies an ORY Access Policy document.</em></p>
+<p><em>OryAccessControlPolicy oryAccessControlPolicy specifies an ORY Access Policy
+document.</em></p>
 <h4><a class="anchor" aria-hidden="true" id="properties-18"></a><a href="#properties-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
@@ -3238,8 +3240,7 @@ is the result of an access control decision. It contains the decision outcome.</
   <span class="hljs-attr">"subject"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>OryAccessControlPolicyAllowedInput Input for checking if a request is allowed
-or not.</em></p>
+<p><em>Input for checking if a request is allowed or not.</em></p>
 <h4><a class="anchor" aria-hidden="true" id="properties-19"></a><a href="#properties-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
@@ -3290,7 +3291,7 @@ other sort of role.</em></p>
 <tr><td>version</td><td>string</td><td>false</td><td>none</td><td>Version is the service's version.</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/16/2020 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/keto/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/performance/index"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#engines">engines</a><ul class="toc-headings"><li><a href="#check-if-a-request-is-allowed">Check if a request is allowed</a></li><li><a href="#listoryaccesscontrolpolicies">listOryAccessControlPolicies</a></li><li><a href="#upsertoryaccesscontrolpolicy">upsertOryAccessControlPolicy</a></li><li><a href="#getoryaccesscontrolpolicy">getOryAccessControlPolicy</a></li><li><a href="#deleteoryaccesscontrolpolicy">deleteOryAccessControlPolicy</a></li><li><a href="#list-ory-access-control-policy-roles">List ORY Access Control Policy Roles</a></li><li><a href="#upsert-an-ory-access-control-policy-role">Upsert an ORY Access Control Policy Role</a></li><li><a href="#get-an-ory-access-control-policy-role">Get an ORY Access Control Policy Role</a></li><li><a href="#delete-an-ory-access-control-policy-role">Delete an ORY Access Control Policy Role</a></li><li><a href="#add-a-member-to-an-ory-access-control-policy-role">Add a member to an ORY Access Control Policy Role</a></li><li><a href="#remove-a-member-from-an-ory-access-control-policy-role">Remove a member from an ORY Access Control Policy Role</a></li></ul></li><li><a href="#health">health</a><ul class="toc-headings"><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#check-readiness-status">Check readiness status</a></li></ul></li><li><a href="#version">version</a><ul class="toc-headings"><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/30/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/keto/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/performance/index"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#engines">engines</a><ul class="toc-headings"><li><a href="#check-if-a-request-is-allowed">Check if a request is allowed</a></li><li><a href="#listoryaccesscontrolpolicies">listOryAccessControlPolicies</a></li><li><a href="#upsertoryaccesscontrolpolicy">upsertOryAccessControlPolicy</a></li><li><a href="#getoryaccesscontrolpolicy">getOryAccessControlPolicy</a></li><li><a href="#deleteoryaccesscontrolpolicy">deleteOryAccessControlPolicy</a></li><li><a href="#list-ory-access-control-policy-roles">List ORY Access Control Policy Roles</a></li><li><a href="#upsert-an-ory-access-control-policy-role">Upsert an ORY Access Control Policy Role</a></li><li><a href="#get-an-ory-access-control-policy-role">Get an ORY Access Control Policy Role</a></li><li><a href="#delete-an-ory-access-control-policy-role">Delete an ORY Access Control Policy Role</a></li><li><a href="#add-a-member-to-an-ory-access-control-policy-role">Add a member to an ORY Access Control Policy Role</a></li><li><a href="#remove-a-member-from-an-ory-access-control-policy-role">Remove a member from an ORY Access Control Policy Role</a></li></ul></li><li><a href="#health">health</a><ul class="toc-headings"><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#check-readiness-status">Check readiness status</a></li></ul></li><li><a href="#version">version</a><ul class="toc-headings"><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

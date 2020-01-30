@@ -113,7 +113,7 @@ $ <span class="hljs-builtin-name">export</span> <span class="hljs-attribute">DSN
 $ docker <span class="hljs-builtin-name">run</span> -it --rm \
   --network ketoguide \
   -e <span class="hljs-attribute">DSN</span>=<span class="hljs-variable">$DSN</span> \
-  oryd/keto:v0.4.2-alpha.1 \
+  oryd/keto:v0.4.3-alpha.1 \
   migrate sql -e
 
 Applying `client` SQL migrations<span class="hljs-built_in">..</span>.
@@ -126,7 +126,7 @@ $ docker <span class="hljs-builtin-name">run</span> -d \
   --network ketoguide \
   -p 4466:4466 \
   -e <span class="hljs-attribute">DSN</span>=<span class="hljs-variable">$DSN</span> \
-  oryd/keto:v0.4.2-alpha.1 \
+  oryd/keto:v0.4.3-alpha.1 \
   serve
 </code></pre>
 <p>Great, the server is running now! Make sure to check the logs and see if there
@@ -157,14 +157,14 @@ $ docker <span class="hljs-keyword">run</span> -it --<span class="hljs-keyword">
   --network ketoguide \
   -v $(<span class="hljs-keyword">pwd</span>)/policies:/policies \
   -<span class="hljs-keyword">e</span> KETO_URL=http:<span class="hljs-comment">//ory-keto-example--keto:4466/ \</span>
-  oryd/keto:v0.4.2-<span class="hljs-keyword">alpha</span>.1 \
+  oryd/keto:v0.4.3-<span class="hljs-keyword">alpha</span>.1 \
   engines acp ory policies import exact /policies/example-policy.json
 </code></pre>
 <p>Check if the policy has been created:</p>
 <pre><code class="hljs">$ docker <span class="hljs-builtin-name">run</span> -it --rm \
   --network ketoguide \
   -e <span class="hljs-attribute">KETO_URL</span>=http://ory-keto-example--keto:4466/ \
-  oryd/keto:v0.4.2-alpha.1 \
+  oryd/keto:v0.4.3-alpha.1 \
   engines acp ory policies <span class="hljs-builtin-name">get</span> exact example-policy
 {
   <span class="hljs-string">"actions"</span>: [
@@ -176,7 +176,7 @@ $ docker <span class="hljs-keyword">run</span> -it --<span class="hljs-keyword">
 <pre><code class="hljs">$ docker run -it --rm \
   --network ketoguide \
   -e KETO_URL=<span class="hljs-string">http:</span><span class="hljs-comment">//ory-keto-example--keto:4466/ \</span>
-  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.4</span><span class="hljs-number">.2</span>-alpha<span class="hljs-number">.1</span> \
+  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.4</span><span class="hljs-number">.3</span>-alpha<span class="hljs-number">.1</span> \
   engines acp ory allowed exact alice <span class="hljs-string">blog_posts:</span>my-first-blog-post delete
 {
         <span class="hljs-string">"allowed"</span>: <span class="hljs-literal">true</span>
@@ -186,13 +186,13 @@ $ docker <span class="hljs-keyword">run</span> -it --<span class="hljs-keyword">
 <pre><code class="hljs">$ docker run -it --rm \
   --network ketoguide \
   -e KETO_URL=<span class="hljs-string">http:</span><span class="hljs-comment">//ory-keto-example--keto:4466/ \</span>
-  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.4</span><span class="hljs-number">.2</span>-alpha<span class="hljs-number">.1</span> \
+  oryd/<span class="hljs-string">keto:</span>v0<span class="hljs-number">.4</span><span class="hljs-number">.3</span>-alpha<span class="hljs-number">.1</span> \
   engines acp ory allowed exact bob <span class="hljs-string">blog_posts:</span>my-first-blog-post delete
 {
         <span class="hljs-string">"allowed"</span>: <span class="hljs-literal">false</span>
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/16/2020 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/keto/install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/next/keto/configuration"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-network">Create a Network</a></li><li><a href="#start-the-postgresql-container">Start the PostgreSQL Container</a></li><li><a href="#run-the-ory-keto-service">Run the ORY Keto Service</a></li><li><a href="#working-with-the-cli">Working with the CLI</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/30/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/keto/install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/next/keto/configuration"><span>Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#create-a-network">Create a Network</a></li><li><a href="#start-the-postgresql-container">Start the PostgreSQL Container</a></li><li><a href="#run-the-ory-keto-service">Run the ORY Keto Service</a></li><li><a href="#working-with-the-cli">Working with the CLI</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

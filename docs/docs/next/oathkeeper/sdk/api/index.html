@@ -529,14 +529,14 @@ place.</p>
 <tr><td>»» authenticators</td><td>[<a href="#schemarulehandler">ruleHandler</a>]</td><td>false</td><td>none</td><td>Authenticators is a list of authentication handlers that will try and authenticate the provided credentials. Authenticators are checked iteratively from index 0 to n and if the first authenticator to return a positive result will be the one used. If you want the rule to first check a specific authenticator before &quot;falling back&quot; to others, have that authenticator as the first item in the array.</td></tr>
 <tr><td>»»» config</td><td>object</td><td>false</td><td>none</td><td>Config contains the configuration for the handler. Please read the user guide for a complete list of each handler's available settings.</td></tr>
 <tr><td>»»» handler</td><td>string</td><td>false</td><td>none</td><td>Handler identifies the implementation which will be used to handle this specific request. Please read the user guide for a complete list of available handlers.</td></tr>
-<tr><td>»» authorizer</td><td><a href="#schemarulehandler">ruleHandler</a></td><td>false</td><td>none</td><td>RuleHandler rule handler</td></tr>
+<tr><td>»» authorizer</td><td><a href="#schemarulehandler">ruleHandler</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»» description</td><td>string</td><td>false</td><td>none</td><td>Description is a human readable description of this rule.</td></tr>
 <tr><td>»» id</td><td>string</td><td>false</td><td>none</td><td>ID is the unique id of the rule. It can be at most 190 characters long, but the layout of the ID is up to you. You will need this ID later on to update or delete the rule.</td></tr>
-<tr><td>»» match</td><td><a href="#schemarulematch">ruleMatch</a></td><td>false</td><td>none</td><td>RuleMatch rule match</td></tr>
+<tr><td>»» match</td><td><a href="#schemarulematch">ruleMatch</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»»» methods</td><td>[string]</td><td>false</td><td>none</td><td>An array of HTTP methods (e.g. GET, POST, PUT, DELETE, ...). When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the HTTP method of the incoming request with the HTTP methods of each rules. If a match is found, the rule is considered a partial match. If the matchesUrl field is satisfied as well, the rule is considered a full match.</td></tr>
 <tr><td>»»» url</td><td>string</td><td>false</td><td>none</td><td>This field represents the URL pattern this rule matches. When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the full request URL (e.g. <a href="https://mydomain.com/api/resource">https://mydomain.com/api/resource</a>) without query parameters of the incoming request with this field. If a match is found, the rule is considered a partial match. If the matchesMethods field is satisfied as well, the rule is considered a full match. You can use regular expressions in this field to match more than one url. Regular expressions are encapsulated in brackets &lt; and &gt;. The following example matches all paths of the domain <code>mydomain.com</code>: <code>https://mydomain.com/&lt;.*&gt;</code>.</td></tr>
 <tr><td>»» mutators</td><td>[<a href="#schemarulehandler">ruleHandler</a>]</td><td>false</td><td>none</td><td>Mutators is a list of mutation handlers that transform the HTTP request. A common use case is generating a new set of credentials (e.g. JWT) which then will be forwarded to the upstream server. Mutations are performed iteratively from index 0 to n and should all succeed in order for the HTTP request to be forwarded.</td></tr>
-<tr><td>»» upstream</td><td><a href="#schemaupstream">Upstream</a></td><td>false</td><td>none</td><td>Upstream Upstream Upstream Upstream Upstream Upstream upstream</td></tr>
+<tr><td>»» upstream</td><td><a href="#schemaupstream">Upstream</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>»»» preserve_host</td><td>boolean</td><td>false</td><td>none</td><td>PreserveHost, if false (the default), tells ORY Oathkeeper to set the upstream request's Host header to the hostname of the API's upstream's URL. Setting this flag to true instructs ORY Oathkeeper not to do so.</td></tr>
 <tr><td>»»» strip_path</td><td>string</td><td>false</td><td>none</td><td>StripPath if set, replaces the provided path prefix when forwarding the requested URL to the upstream URL.</td></tr>
 <tr><td>»»» url</td><td>string</td><td>false</td><td>none</td><td>URL is the URL the request will be proxied to.</td></tr>
@@ -1383,305 +1383,6 @@ p JSON.parse(result)
 </div>
 </div>
 <h2><a class="anchor" aria-hidden="true" id="schemas"></a><a href="#schemas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Schemas</h2>
-<p><a id="tocSdecisionsforbiddenbody">DecisionsForbiddenBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="decisionsforbiddenbody"></a><a href="#decisionsforbiddenbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DecisionsForbiddenBody</h4>
-<p><a id="schemadecisionsforbiddenbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>DecisionsForbiddenBody decisions forbidden body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSdecisionsinternalservererrorbody">DecisionsInternalServerErrorBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="decisionsinternalservererrorbody"></a><a href="#decisionsinternalservererrorbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DecisionsInternalServerErrorBody</h4>
-<p><a id="schemadecisionsinternalservererrorbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>DecisionsInternalServerErrorBody decisions internal server error body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-1"></a><a href="#properties-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSdecisionsnotfoundbody">DecisionsNotFoundBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="decisionsnotfoundbody"></a><a href="#decisionsnotfoundbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DecisionsNotFoundBody</h4>
-<p><a id="schemadecisionsnotfoundbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>DecisionsNotFoundBody decisions not found body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-2"></a><a href="#properties-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSdecisionsunauthorizedbody">DecisionsUnauthorizedBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="decisionsunauthorizedbody"></a><a href="#decisionsunauthorizedbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>DecisionsUnauthorizedBody</h4>
-<p><a id="schemadecisionsunauthorizedbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>DecisionsUnauthorizedBody decisions unauthorized body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-3"></a><a href="#properties-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSgetruleinternalservererrorbody">GetRuleInternalServerErrorBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="getruleinternalservererrorbody"></a><a href="#getruleinternalservererrorbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetRuleInternalServerErrorBody</h4>
-<p><a id="schemagetruleinternalservererrorbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>GetRuleInternalServerErrorBody get rule internal server error body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-4"></a><a href="#properties-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSgetrulenotfoundbody">GetRuleNotFoundBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="getrulenotfoundbody"></a><a href="#getrulenotfoundbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetRuleNotFoundBody</h4>
-<p><a id="schemagetrulenotfoundbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>GetRuleNotFoundBody get rule not found body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-5"></a><a href="#properties-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSgetwellknownjsonwebkeysinternalservererrorbody">GetWellKnownJSONWebKeysInternalServerErrorBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="getwellknownjsonwebkeysinternalservererrorbody"></a><a href="#getwellknownjsonwebkeysinternalservererrorbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>GetWellKnownJSONWebKeysInternalServerErrorBody</h4>
-<p><a id="schemagetwellknownjsonwebkeysinternalservererrorbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>GetWellKnownJSONWebKeysInternalServerErrorBody get well known JSON web keys
-internal server error body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-6"></a><a href="#properties-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSisinstancealiveinternalservererrorbody">IsInstanceAliveInternalServerErrorBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="isinstancealiveinternalservererrorbody"></a><a href="#isinstancealiveinternalservererrorbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IsInstanceAliveInternalServerErrorBody</h4>
-<p><a id="schemaisinstancealiveinternalservererrorbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>IsInstanceAliveInternalServerErrorBody is instance alive internal server error
-body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-7"></a><a href="#properties-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
-<p><a id="tocSlistrulesinternalservererrorbody">ListRulesInternalServerErrorBody</a></p>
-<h4><a class="anchor" aria-hidden="true" id="listrulesinternalservererrorbody"></a><a href="#listrulesinternalservererrorbody" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ListRulesInternalServerErrorBody</h4>
-<p><a id="schemalistrulesinternalservererrorbody"></a></p>
-<pre><code class="hljs css language-json">{
-  <span class="hljs-attr">"code"</span>: <span class="hljs-number">0</span>,
-  <span class="hljs-attr">"details"</span>: [
-    {
-      <span class="hljs-attr">"property1"</span>: {},
-      <span class="hljs-attr">"property2"</span>: {}
-    }
-  ],
-  <span class="hljs-attr">"message"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"reason"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"request"</span>: <span class="hljs-string">"string"</span>,
-  <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
-}
-</code></pre>
-<p><em>ListRulesInternalServerErrorBody list rules internal server error body</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-8"></a><a href="#properties-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
-<table>
-<thead>
-<tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
-</thead>
-<tbody>
-<tr><td>code</td><td>integer(int64)</td><td>false</td><td>none</td><td>code</td></tr>
-<tr><td>details</td><td>[object]</td><td>false</td><td>none</td><td>details</td></tr>
-<tr><td>» <strong>additionalProperties</strong></td><td>object</td><td>false</td><td>none</td><td>none</td></tr>
-<tr><td>message</td><td>string</td><td>false</td><td>none</td><td>message</td></tr>
-<tr><td>reason</td><td>string</td><td>false</td><td>none</td><td>reason</td></tr>
-<tr><td>request</td><td>string</td><td>false</td><td>none</td><td>request</td></tr>
-<tr><td>status</td><td>string</td><td>false</td><td>none</td><td>status</td></tr>
-</tbody>
-</table>
 <p><a id="tocSupstream">Upstream</a></p>
 <h4><a class="anchor" aria-hidden="true" id="upstream"></a><a href="#upstream" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upstream</h4>
 <p><a id="schemaupstream"></a></p>
@@ -1691,8 +1392,7 @@ body</em></p>
   <span class="hljs-attr">"url"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>Upstream Upstream Upstream Upstream Upstream Upstream upstream</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-9"></a><a href="#properties-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties"></a><a href="#properties" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -1713,7 +1413,7 @@ body</em></p>
   }
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="properties-10"></a><a href="#properties-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-1"></a><a href="#properties-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -1730,8 +1430,7 @@ body</em></p>
   <span class="hljs-attr">"status"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>HealthStatus HealthStatus HealthStatus HealthStatus health status</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-11"></a><a href="#properties-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-2"></a><a href="#properties-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -1763,29 +1462,29 @@ body</em></p>
   <span class="hljs-attr">"y"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="properties-12"></a><a href="#properties-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-3"></a><a href="#properties-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
 </thead>
 <tbody>
 <tr><td>alg</td><td>string</td><td>false</td><td>none</td><td>The &quot;alg&quot; (algorithm) parameter identifies the algorithm intended for use with the key. The values used should either be registered in the IANA &quot;JSON Web Signature and Encryption Algorithms&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name.</td></tr>
-<tr><td>crv</td><td>string</td><td>false</td><td>none</td><td>crv</td></tr>
-<tr><td>d</td><td>string</td><td>false</td><td>none</td><td>d</td></tr>
-<tr><td>dp</td><td>string</td><td>false</td><td>none</td><td>dp</td></tr>
-<tr><td>dq</td><td>string</td><td>false</td><td>none</td><td>dq</td></tr>
-<tr><td>e</td><td>string</td><td>false</td><td>none</td><td>e</td></tr>
-<tr><td>k</td><td>string</td><td>false</td><td>none</td><td>k</td></tr>
+<tr><td>crv</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>d</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>dp</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>dq</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>e</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>k</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>kid</td><td>string</td><td>false</td><td>none</td><td>The &quot;kid&quot; (key ID) parameter is used to match a specific key. This is used, for instance, to choose among a set of keys within a JWK Set during key rollover. The structure of the &quot;kid&quot; value is unspecified. When &quot;kid&quot; values are used within a JWK Set, different keys within the JWK Set SHOULD use distinct &quot;kid&quot; values. (One example in which different keys might use the same &quot;kid&quot; value is if they have different &quot;kty&quot; (key type) values but are considered to be equivalent alternatives by the application using them.) The &quot;kid&quot; value is a case-sensitive string.</td></tr>
 <tr><td>kty</td><td>string</td><td>false</td><td>none</td><td>The &quot;kty&quot; (key type) parameter identifies the cryptographic algorithm family used with the key, such as &quot;RSA&quot; or &quot;EC&quot;. &quot;kty&quot; values should either be registered in the IANA &quot;JSON Web Key Types&quot; registry established by [JWA] or be a value that contains a Collision- Resistant Name. The &quot;kty&quot; value is a case-sensitive string.</td></tr>
-<tr><td>n</td><td>string</td><td>false</td><td>none</td><td>n</td></tr>
-<tr><td>p</td><td>string</td><td>false</td><td>none</td><td>p</td></tr>
-<tr><td>q</td><td>string</td><td>false</td><td>none</td><td>q</td></tr>
-<tr><td>qi</td><td>string</td><td>false</td><td>none</td><td>qi</td></tr>
+<tr><td>n</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>p</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>q</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
+<tr><td>qi</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>use</td><td>string</td><td>false</td><td>none</td><td>The &quot;use&quot; (public key use) parameter identifies the intended use of the public key. The &quot;use&quot; parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Values are commonly &quot;sig&quot; (signature) or &quot;enc&quot; (encryption).</td></tr>
-<tr><td>x</td><td>string</td><td>false</td><td>none</td><td>x</td></tr>
+<tr><td>x</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>x5c</td><td>[string]</td><td>false</td><td>none</td><td>The &quot;x5c&quot; (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates [RFC5280]. The certificate chain is represented as a JSON array of certificate value strings. Each string in the array is a base64-encoded (Section 4 of [RFC4648] -- not base64url-encoded) DER [ITU.X690.1994] PKIX certificate value. The PKIX certificate containing the key value MUST be the first certificate.</td></tr>
-<tr><td>y</td><td>string</td><td>false</td><td>none</td><td>y</td></tr>
+<tr><td>y</td><td>string</td><td>false</td><td>none</td><td>none</td></tr>
 </tbody>
 </table>
 <p><a id="tocSjsonwebkeyset">jsonWebKeySet</a></p>
@@ -1815,8 +1514,7 @@ body</em></p>
   ]
 }
 </code></pre>
-<p><em>JSONWebKeySet json web key set</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-13"></a><a href="#properties-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-4"></a><a href="#properties-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -1859,19 +1557,19 @@ body</em></p>
 }
 </code></pre>
 <p><em>swaggerRule is a single rule that will get checked on every HTTP request.</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-14"></a><a href="#properties-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-5"></a><a href="#properties-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
 </thead>
 <tbody>
 <tr><td>authenticators</td><td>[<a href="#schemarulehandler">ruleHandler</a>]</td><td>false</td><td>none</td><td>Authenticators is a list of authentication handlers that will try and authenticate the provided credentials. Authenticators are checked iteratively from index 0 to n and if the first authenticator to return a positive result will be the one used. If you want the rule to first check a specific authenticator before &quot;falling back&quot; to others, have that authenticator as the first item in the array.</td></tr>
-<tr><td>authorizer</td><td><a href="#schemarulehandler">ruleHandler</a></td><td>false</td><td>none</td><td>RuleHandler rule handler</td></tr>
+<tr><td>authorizer</td><td><a href="#schemarulehandler">ruleHandler</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>description</td><td>string</td><td>false</td><td>none</td><td>Description is a human readable description of this rule.</td></tr>
 <tr><td>id</td><td>string</td><td>false</td><td>none</td><td>ID is the unique id of the rule. It can be at most 190 characters long, but the layout of the ID is up to you. You will need this ID later on to update or delete the rule.</td></tr>
-<tr><td>match</td><td><a href="#schemarulematch">ruleMatch</a></td><td>false</td><td>none</td><td>RuleMatch rule match</td></tr>
+<tr><td>match</td><td><a href="#schemarulematch">ruleMatch</a></td><td>false</td><td>none</td><td>none</td></tr>
 <tr><td>mutators</td><td>[<a href="#schemarulehandler">ruleHandler</a>]</td><td>false</td><td>none</td><td>Mutators is a list of mutation handlers that transform the HTTP request. A common use case is generating a new set of credentials (e.g. JWT) which then will be forwarded to the upstream server. Mutations are performed iteratively from index 0 to n and should all succeed in order for the HTTP request to be forwarded.</td></tr>
-<tr><td>upstream</td><td><a href="#schemaupstream">Upstream</a></td><td>false</td><td>none</td><td>Upstream Upstream Upstream Upstream Upstream Upstream upstream</td></tr>
+<tr><td>upstream</td><td><a href="#schemaupstream">Upstream</a></td><td>false</td><td>none</td><td>none</td></tr>
 </tbody>
 </table>
 <p><a id="tocSrulehandler">ruleHandler</a></p>
@@ -1882,8 +1580,7 @@ body</em></p>
   <span class="hljs-attr">"handler"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>RuleHandler rule handler</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-15"></a><a href="#properties-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-6"></a><a href="#properties-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -1901,8 +1598,7 @@ body</em></p>
   <span class="hljs-attr">"url"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>RuleMatch rule match</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-16"></a><a href="#properties-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-7"></a><a href="#properties-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -1919,8 +1615,7 @@ body</em></p>
   <span class="hljs-attr">"version"</span>: <span class="hljs-string">"string"</span>
 }
 </code></pre>
-<p><em>Version Version Version Version version</em></p>
-<h4><a class="anchor" aria-hidden="true" id="properties-17"></a><a href="#properties-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
+<h4><a class="anchor" aria-hidden="true" id="properties-8"></a><a href="#properties-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Properties</h4>
 <table>
 <thead>
 <tr><th>Name</th><th>Type</th><th>Required</th><th>Restrictions</th><th>Description</th></tr>
@@ -1929,7 +1624,7 @@ body</em></p>
 <tr><td>version</td><td>string</td><td>false</td><td>none</td><td>Version is the service's version.</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/16/2020 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/keto/index"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api">api</a><ul class="toc-headings"><li><a href="#lists-cryptographic-keys">Lists cryptographic keys</a></li><li><a href="#access-control-decision-api">Access Control Decision API</a></li><li><a href="#list-all-rules">List all rules</a></li><li><a href="#retrieve-a-rule">Retrieve a rule</a></li></ul></li><li><a href="#health">health</a><ul class="toc-headings"><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#check-readiness-status">Check readiness status</a></li></ul></li><li><a href="#version">version</a><ul class="toc-headings"><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/30/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/sdk/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/next/keto/index"><span>Introduction</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#api">api</a><ul class="toc-headings"><li><a href="#lists-cryptographic-keys">Lists cryptographic keys</a></li><li><a href="#access-control-decision-api">Access Control Decision API</a></li><li><a href="#list-all-rules">List all rules</a></li><li><a href="#retrieve-a-rule">Retrieve a rule</a></li></ul></li><li><a href="#health">health</a><ul class="toc-headings"><li><a href="#check-alive-status">Check alive status</a></li><li><a href="#check-readiness-status">Check readiness status</a></li></ul></li><li><a href="#version">version</a><ul class="toc-headings"><li><a href="#get-service-version">Get service version</a></li></ul></li><li><a href="#schemas">Schemas</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
