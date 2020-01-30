@@ -29,8 +29,6 @@ For a full comparison with other open and closed source systems, head over to th
 [Comparison Chapter](../further-reading/comparison.md).
 
 
-<!--
-
 ## Avoiding OAuth2 and OpenID Connect
 
 ## Comparison
