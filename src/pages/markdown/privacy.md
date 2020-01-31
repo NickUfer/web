@@ -1,4 +1,5 @@
 ---
+published: true
 path: '/privacy/'
 title: 'ORY Privacy Policy'
 metaTitle: 'ORY Privacy Policy'
