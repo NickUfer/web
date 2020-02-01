@@ -4,17 +4,15 @@ import Hero from '../components/hero'
 import Newsletter from '../components/newsletter'
 import Section from '../components/section'
 import SEO from '../components/seo'
-import codeAnimation from '../images/hydra/code.svg'
+import hydraPolyglot from '../images/hydra/hydra_polyglot.svg'
 import Projects from '../components/projects'
 import Adopters from '../components/adopters'
 import Stats from '../components/stats'
-import Footer from '../components/footer'
 import CodeBox from '../components/codebox'
-import discord from '../images/discord.svg'
-import github from '../images/github.svg'
-import discourse from '../images/discourse.svg'
-import integrationAnimation from '../images/hydra/animation.svg'
+import integrationProcess from '../images/hydra/hydra_process.svg'
 import { brandPrefix } from '../config'
+import cn from 'classnames'
+import ResponsiveSection from '../components/responsive-section'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -100,7 +98,7 @@ const HydraPage = () => (
         <img
           alt="The ORY Hydra login and consent flow"
           className="responsive"
-          src={integrationAnimation}
+          src={integrationProcess}
         />
       }
       mobile={[
@@ -108,7 +106,7 @@ const HydraPage = () => (
         <img
           alt="The ORY Hydra login and consent flow"
           className="responsive"
-          src={integrationAnimation}
+          src={integrationProcess}
         />,
         <p className="mobile-offset-32">
           {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
@@ -123,7 +121,7 @@ const HydraPage = () => (
     <Section
       dark
       leftWide
-      left={<img className="responsive" src={codeAnimation} />}
+      left={<img className="responsive" src={hydraPolyglot} />}
       right={
         <>
           <h3>Polyglot</h3>
@@ -138,7 +136,7 @@ const HydraPage = () => (
       }
       mobile={[
         <h3>Polyglot</h3>,
-        <img className="responsive" src={codeAnimation} />,
+        <img className="responsive" src={hydraPolyglot} />,
         <p className="mobile-offset-32">
           {brandPrefix}Hydra is written in Go and we provide SDKs for every
           language. We work with any login system and it is easy to customize
@@ -192,6 +190,28 @@ const HydraPage = () => (
     <Projects />
     <Adopters />
     <Stats />
+    <ResponsiveSection
+      title={<h3>Open Source Contributors</h3>}
+      left={
+        <>
+          <p className="mobile-offset-32">
+            ORY is the open source and cloud native identity infrastructure.
+            ORY is written in Go and open standards and consensus are the
+            foundation. It is language and platform independent, extremely
+            lightweight, starts up in seconds and doesn’t interfere with your
+            code. See our <a href="https://www.ory.sh/docs">documentation</a>{' '}
+            to get started.
+          </p>
+        </>
+      }
+      right={
+        <img
+          alt="ORY Open Source Contributors"
+          className={cn('responsive')}
+          src="https://opencollective.com/ory/contributors.svg?avatarHeight=30&width=540&button=false"
+        />
+      }
+    />
   </Layout>
 )
 

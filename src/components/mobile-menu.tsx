@@ -47,7 +47,7 @@ class MobileMenu extends Component<PropTypes, StateTypes> {
                       {href && <a href={href}>{title}</a>}
                     </li>
                   ))}
-                  {icons.map(({ title, image, href }, index) => (
+                  {icons.map(({ title, href }, index) => (
                     <li key={`icon-${index}`}>
                       <a href={href}>{title}</a>
                     </li>

@@ -54,6 +54,10 @@
   color: var(--colors-hydra-default);
 }
 
+:global .theme-kratos :local .section a:any-link {
+  color: var(--colors-kratos-default);
+}
+
 @media (--sm-viewport) {
   .section {
     padding: 64px 0;

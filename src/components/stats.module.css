@@ -1,7 +1,7 @@
 .stats {
   padding: 96px 0;
   position: relative;
-  color: var(--colors-ory-dark);
+  color: var(--colors-base-white);
 }
 
 @media (--mobile-viewport) {
@@ -11,7 +11,7 @@
 }
 
 :global .theme-default {
-  background-color: var(--colors-ory-weak);
+  background-color: var(--colors-ory-dark);
   & :local .items .item {
     & .amount * {
       color: var(--colors-ory-default);
@@ -20,10 +20,19 @@
 }
 
 :global .theme-hydra {
-  background-color: var(--colors-hydra-weak);
+  background-color: var(--colors-ory-dark);
   & :local .items .item {
     & .amount * {
       color: var(--colors-hydra-default);
+    }
+  }
+}
+
+:global .theme-kratos {
+  background-color: var(--colors-ory-dark);
+  & :local .items .item {
+    & .amount * {
+      color: var(--colors-kratos-default);
     }
   }
 }
@@ -56,7 +65,7 @@
       font-size: 14px;
       line-height: 168%;
       text-align: center;
-      color: var(--colors-ory-dark);
+      color: var(--colors-base-white);
     }
   }
 }
@@ -73,12 +82,4 @@
       margin-top: 0;
     }
   }
-}
-
-.divider {
-  border: 1px solid #f04870;
-  position: absolute;
-  top: 96px;
-  bottom: 96px;
-  left: 50%;
 }

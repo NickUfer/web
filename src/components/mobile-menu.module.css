@@ -18,7 +18,7 @@
 }
 
 .show .divider {
-  background-color: var(--colors-hydra-default);
+  background-color: var(--colors-base-white);
 }
 
 .nav-icon :global .container-fluid {

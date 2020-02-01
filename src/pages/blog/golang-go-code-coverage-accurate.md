@@ -25,6 +25,7 @@ teaser: >
 
 category: Code & Productivity
 ---
+
 [Go](https://golang.org/), the programming language written and maintained by
 [Google](https://www.google.com), shines with it's toolchain. However, some of
 the tools behave differently than expected and it may cost you several hours of

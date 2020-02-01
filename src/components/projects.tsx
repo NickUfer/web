@@ -9,14 +9,13 @@ import keto from '../images/ory_keto.svg'
 import { brandPrefix } from '../config'
 import { Link } from 'gatsby'
 
-
 const projects = [
   {
     className: pstyles.kratos,
     title: `${brandPrefix}Kratos`,
     description: 'Cloud native Identity and User Management',
     image: kratos,
-    url: 'https://github.com/ory/kratos',
+    path: '/kratos',
   },
   {
     className: pstyles.hydra,
@@ -49,7 +48,7 @@ const Projects = () => (
       styles.section,
       styles.dark,
       pstyles.section,
-      'is-dark-background',
+      'is-dark-background'
     )}
   >
     <div className="container-fluid">
@@ -59,8 +58,9 @@ const Projects = () => (
           <p>
             All of our code is open source, fueled by an engaged community of
             contributors. It is licensed under Apache 2.0 and is available for
-            free on GitHub. Our core projects are {brandPrefix} Hydra,{' '}
-            {brandPrefix} Oathkeeper and {brandPrefix} Keto.
+            free on GitHub. Our core projects are {brandPrefix} Kratos,{' '}
+            {brandPrefix} Hydra, {brandPrefix} Oathkeeper and {brandPrefix}{' '}
+            Keto.
           </p>
           <p>
             You can also become a sponsor or supporter of our open source
@@ -72,24 +72,32 @@ const Projects = () => (
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
           {projects.map(({ url, title, description, path, className, image }) =>
             path ? (
-              <Link key={title} className={cn(pstyles.project, className)} to={path}>
+              <Link
+                key={title}
+                className={cn(pstyles.project, className)}
+                to={path}
+              >
                 <div>
-                  <img src={image} alt={title}/>
+                  <img src={image} alt={title} />
                   <p className={pstyles.description}>{description}</p>
                 </div>
               </Link>
             ) : (
-              <a key={title} className={cn(pstyles.project, className)} href={url}>
+              <a
+                key={title}
+                className={cn(pstyles.project, className)}
+                href={url}
+              >
                 <div>
-                  <img src={image} alt={title}/>
+                  <img src={image} alt={title} />
                   <p className={pstyles.description}>{description}</p>
                 </div>
               </a>
-            ),
+            )
           )}
         </div>
         <div className="hidden-lg col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
-          <h3>Projects</h3>
+          <h3>Open source projects</h3>
         </div>
       </div>
     </div>

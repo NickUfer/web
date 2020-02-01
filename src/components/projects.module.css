@@ -11,8 +11,8 @@
 
   & img {
     margin-right: 20px;
-    min-height: 40px;
-    max-height: 40px;
+    min-height: 32px;
+    max-height: 32px;
     transition: transform ease 200ms;
   }
 
@@ -65,10 +65,10 @@
   }
 
   &:hover,
-     &:focus,
-     &:active {
-       text-decoration: none !important;
-     }
+  &:focus,
+  &:active {
+    text-decoration: none !important;
+  }
 
   & p,
   & h4 {
@@ -87,8 +87,8 @@
 
     & img {
       margin-right: 16px;
-      max-height: 40px;
-      min-height: 40px;
+      max-height: 32px;
+      min-height: 32px;
     }
   }
 }

@@ -1,27 +1,38 @@
 .box {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  background-color: var(--colors-ory-dark);
-  border-radius: 15px;
+  background-color: var(--colors-base-black);
+  border-radius: 4px;
   padding: 8px 16px;
   min-height: 360px;
 }
 
-.tabs {
+.editor-header {
   display: flex;
-  align-items: center;
+  align-items: bottom;
   color: var(--colors-base-white);
+  & .tabs {
+    overflow: auto;
+  }
   & .tab {
     font-family: 'IBM Plex Mono', monospace;
     font-style: normal;
     font-weight: 500;
     font-size: 11px;
-    line-height: 168%;
+    line-height: 250%;
     margin-right: 16px;
-    padding: 0 8px;
     cursor: pointer;
-    &.selected {
-      border-bottom: 1px solid var(--colors-hydra-default);
+    display: inline;
     }
+  }
+
+:global .theme-hydra :local .tab {
+  &.selected {
+    border-bottom: 1px solid var(--colors-hydra-default);
+  }
+}
+
+:global .theme-kratos :local .tab {
+  &.selected {
+    border-bottom: 1px solid var(--colors-kratos-default);
   }
 }
 
@@ -29,17 +40,25 @@
   display: flex;
   align-items: center;
   height: 20px;
-  margin-right: 5px;
+  margin-right: 16px;
   & .window-action {
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background-color: var(--colors-ory-dark);
+    background-color: var(--colors-ory-default);
     margin-right: 5px;
+  }
+}
 
-    &.primary {
-      background-color: var(--colors-hydra-default);
-    }
+:global .theme-hydra :local .window-action {
+  &.primary {
+    background-color: var(--colors-hydra-default);
+  }
+}
+
+:global .theme-kratos :local .window-action {
+  &.primary {
+    background-color: var(--colors-kratos-default);
   }
 }
 
@@ -62,7 +81,7 @@
     font-weight: 500;
     font-size: 11px;
     line-height: 175%;
-    background-color: var(--colors-ory-dark);
+    background-color: var(--colors-base-black);
 
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -70,6 +89,6 @@
 
   & pre code :global .token.operator {
     color: var(--colors-base-white);
-    background-color: var(--colors-ory-dark);
+    background-color: var(--colors-base-black);
   }
 }

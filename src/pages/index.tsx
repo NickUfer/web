@@ -36,18 +36,18 @@ const IndexPage = ({ data }: any) => {
           },
         ]}
       />
-      <Newsletter/>
+      <Newsletter />
       <ResponsiveSection
         title={<h3>Why ORY</h3>}
         left={
           <>
             <p className="mobile-offset-32">
-              ORY is the open source and cloud native identity infrastructure. ORY
-              is written in Go and open standards and consensus are the
+              ORY is the open source and cloud native identity infrastructure.
+              ORY is written in Go and open standards and consensus are the
               foundation. It is language and platform independent, extremely
               lightweight, starts up in seconds and doesn’t interfere with your
-              code. See our <a href="https://www.ory.sh/docs">documentation</a> to
-              get started.
+              code. See our <a href="https://www.ory.sh/docs">documentation</a>{' '}
+              to get started.
             </p>
           </>
         }
@@ -59,9 +59,9 @@ const IndexPage = ({ data }: any) => {
           />
         }
       />
-      <Projects/>
-      <Adopters/>
-      <Stats/>
+      <Projects />
+      <Adopters />
+      <Stats />
       <ResponsiveSection
         title={<h3>About us</h3>}
         left={
@@ -90,7 +90,9 @@ const IndexPage = ({ data }: any) => {
               name="Thomas Aidan Curran"
               description={
                 <>
-                  <a href={'https://www.linkedin.com/in/thomasaidancurran/'}>linkedin.com/in/thomasaidancurran/</a>
+                  <a href={'https://www.linkedin.com/in/thomasaidancurran/'}>
+                    linkedin.com/in/thomasaidancurran/
+                  </a>
                 </>
               }
               img={data.thomas.childImageSharp.fixed}

@@ -26,6 +26,14 @@
   }
 }
 
+:global .theme-kratos :local .footer a:any-link {
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--colors-kratos-default);
+  }
+}
+
 .footer .contact {
   margin-top: 16px;
   margin-bottom: 2px;

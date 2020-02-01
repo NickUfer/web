@@ -77,7 +77,6 @@ apps are so common, there’s even an article on
 [Lifehacker (“How to Spot Fake Apps in Apple's App Store and Google Play”)](https://lifehacker.com/how-to-spot-fake-apps-in-apples-app-store-and-google-pl-1821428717)
 on this topic.
 
-
 <table width="100%">
     <tr>
         <td width="50%">

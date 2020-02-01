@@ -45,6 +45,10 @@ const menu = [
     title: 'GitHub',
     items: [
       {
+        title: `${brandPrefix}Kratos`,
+        href: 'https://github.com/ory/kratos',
+      },
+      {
         title: `${brandPrefix}Hydra`,
         href: 'https://github.com/ory/hydra',
       },
@@ -55,10 +59,6 @@ const menu = [
       {
         title: `${brandPrefix}Keto`,
         href: 'https://github.com/ory/keto',
-      },
-      {
-        title: `${brandPrefix}Hive`,
-        href: 'https://github.com/ory/hive',
       },
     ],
   },
@@ -81,7 +81,10 @@ const Footer = () => (
               <img src={logoTiny} alt={'ORY logo'} />
             </>
           )}
-          <p className={cn('secondary', styles.copyright)} style={{ marginTop: 2 }}>
+          <p
+            className={cn('secondary', styles.copyright)}
+            style={{ marginTop: 2 }}
+          >
             &copy; Copyright 2020 Ory Corp
           </p>
         </div>

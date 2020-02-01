@@ -2,7 +2,7 @@
 
 .hero {
   background-color: var(--colors-ory-default);
-  color: var(--colors-ory-dark);
+  color: var(--colors-base-white);
 
   & :global a.cta.secondary:any-link {
     color: var(--colors-ory-dark);
@@ -60,6 +60,33 @@
       background-color: var(--colors-base-white);
       border-color: var(--colors-base-white);
       color: var(--colors-hydra-default);
+    }
+  }
+
+  &.secondary:any-link {
+    &:hover,
+    &:focus {
+      border-color: var(--colors-base-white);
+      color: var(--colors-base-white);
+    }
+  }
+}
+
+:global .theme-kratos :local .hero {
+  background-color: var(--colors-kratos-default);
+}
+
+:global .theme-kratos :local .hero :global a.cta {
+  &.primary:any-link {
+    background-color: var(--colors-ory-dark);
+    border-color: var(--colors-ory-dark);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--colors-base-white);
+      border-color: var(--colors-base-white);
+      color: var(--colors-kratos-default);
     }
   }
 

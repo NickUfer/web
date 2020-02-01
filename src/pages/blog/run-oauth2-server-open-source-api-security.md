@@ -5,8 +5,8 @@ title: >
   Run your own OAuth2 Server
 
 metaDescription: >
-  Run your own OAuth2 Server and OpenID Connect Provider (OIDC) using
-  scalable and secure open source software in under 10 minutes.
+  Run your own OAuth2 Server and OpenID Connect Provider (OIDC) using scalable
+  and secure open source software in under 10 minutes.
 
 metaTitle: >
   Run your own OAuth2 Server using open source - step by step
@@ -18,19 +18,20 @@ overline: >
 
 category: Tutorial
 subtitle: >
-  Run your own OAuth2 Server and OpenID Connect Provider using secure and scalable open
-  source technology.
+  Run your own OAuth2 Server and OpenID Connect Provider using secure and
+  scalable open source technology.
 
 teaser:
-  In this guide, you will set up a hardened, fully functional OAuth2
-  Server and OpenID Connect provider using open source only. It will take you
-  about ~10 minutes. We will use ORY Hydra (open source), a security-first
-  OAuth2 and OpenID Connect server written in Golang.
+  In this guide, you will set up a hardened, fully functional OAuth2 Server and
+  OpenID Connect provider using open source only. It will take you about ~10
+  minutes. We will use ORY Hydra (open source), a security-first OAuth2 and
+  OpenID Connect server written in Golang.
 ---
 
-In this guide you will set up a hardened, fully functional OAuth2 Server and OpenID Connect Provider (OIDC / OP)
-using open source only. It will take you about ~15 minutes. This guide is for you, if you are
-looking to do something like in the gif on the right, or more specifically:
+In this guide you will set up a hardened, fully functional OAuth2 Server and
+OpenID Connect Provider (OIDC / OP) using open source only. It will take you
+about ~15 minutes. This guide is for you, if you are looking to do something
+like in the gif on the right, or more specifically:
 
 - You want to use OAuth2 for API security.
 - You want to open up your API to third party developers like
@@ -41,18 +42,21 @@ looking to do something like in the gif on the right, or more specifically:
   [Twitter](https://dev.twitter.com/web/sign-in).
 - You need to federate (delegate) authentication or authorization.
 
-We will use open source [ORY Hydra](https://github.com/ory/hydra) (7k+ GitHub Stars, 5M+ Docker Downloads),
-a hardened production-ready, security-first OAuth2 Server and OpenID Connect Provider written in Go (Golang).
+We will use open source [ORY Hydra](https://github.com/ory/hydra) (7k+ GitHub
+Stars, 5M+ Docker Downloads), a hardened production-ready, security-first OAuth2
+Server and OpenID Connect Provider written in Go (Golang).
 
 ## Refresh your OAuth2 knowledge
 
-A OAuth2 Server, sometimes also referred to as an OAuth 2.0 Server, OAuth Server, Authorization Server,
-is a piece of software that implements network protocol flows which allow a client (piece of software) to act on behalf of
-a user.
+A OAuth2 Server, sometimes also referred to as an OAuth 2.0 Server, OAuth
+Server, Authorization Server, is a piece of software that implements network
+protocol flows which allow a client (piece of software) to act on behalf of a
+user.
 
-In plain english: When using [CircleCI](https://circleci.com) (the OAuth2 Client, you perform an OAuth2 Flow to grant
-CircleCI access to your repositories on GitHub (the OAuth2 Server, this would be ORY Hydra).
-GitHub will ask you what repositories you want to grant access to and if it is ok to grant other data
+In plain english: When using [CircleCI](https://circleci.com) (the OAuth2
+Client, you perform an OAuth2 Flow to grant CircleCI access to your repositories
+on GitHub (the OAuth2 Server, this would be ORY Hydra). GitHub will ask you what
+repositories you want to grant access to and if it is ok to grant other data
 (access to your email address, profile picture, ...) CircleCI has requested:
 
 <p>
@@ -69,8 +73,9 @@ GitHub will ask you what repositories you want to grant access to and if it is o
 </figure>
 </p>
 
-A more technical overview of the protocol and related terminologies - such asOAuth2 Server, OAuth2 Client, OpenID Connect Provider -
-can be found in written form:
+A more technical overview of the protocol and related terminologies - such
+asOAuth2 Server, OAuth2 Client, OpenID Connect Provider - can be found in
+written form:
 
 - [DigitalOcean: An Introduction to OAuth 2](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 - [Aaron Parecki: OAuth2 Simplified](https://aaronparecki.com/2012/07/29/2/oauth2-simplified)
@@ -79,19 +84,18 @@ and in visual form in this video:
 
 `youtube:https://www.youtube.com/embed/996OiexHze0`
 
-
 ### This is how ORY Hydra works
 
 We originally built ORY Hydra because all other OAuth2 Servers imposed their
 user management on us. But we had a user management in place already, and did
 not want to migrate away from it.
 
-ORY Hydra defines a user login and consent flow which let's you implement the bridge between
-ORY Hydra and your user management easily using only a few lines of code. If you
-want, you could say that ORY Hydra translates the user information you provide
-to OAuth2 Access Tokens and OpenID Connect ID Tokens, which are then reusable
-across all your applications (web app, mobile app, CRM, Mail, ...) and also by
-third-party developers.
+ORY Hydra defines a user login and consent flow which let's you implement the
+bridge between ORY Hydra and your user management easily using only a few lines
+of code. If you want, you could say that ORY Hydra translates the user
+information you provide to OAuth2 Access Tokens and OpenID Connect ID Tokens,
+which are then reusable across all your applications (web app, mobile app, CRM,
+Mail, ...) and also by third-party developers.
 
 ### Sounds good, let's go!
 
@@ -153,10 +157,8 @@ $ docker run --network hydraguide \
 ```
 
 By the way, don't deploy databases using docker in production. It will make your
-life miserable. Use a managed solution like
-Amazon RDS or
-Google Cloud SQL. Even small instances
-will be able to serve a lot of traffic, check out some of the
+life miserable. Use a managed solution like Amazon RDS or Google Cloud SQL. Even
+small instances will be able to serve a lot of traffic, check out some of the
 [benchmarks](https://www.ory.sh/docs/guides/master/performance/1-hydra).
 
 ## Configure the environment
@@ -281,9 +283,9 @@ $ docker run --rm -it \
 ```
 
 Great! Our infrastructure is all set up! Next it's time to perform the OAuth2
-Client Credentials Flow. For that to work you have to createn an OAuth2
-Client that is able to perform this flow. For that purpose, you can use the ORY
-Hydra CLI.
+Client Credentials Flow. For that to work you have to createn an OAuth2 Client
+that is able to perform this flow. For that purpose, you can use the ORY Hydra
+CLI.
 
 We are passing several flags to the command, for example
 `--grant-types client_credentials` which allows the client to perform the OAuth
@@ -339,9 +341,8 @@ vectors. You can set arbitrary data in the token, if you want. For more
 information on this head over to the
 [developer guide](https://www.ory.sh/docs/guides/master/hydra/).
 
-You can validate access tokens using the OAuth2 Introspection API,
-standardized as
-[IETF OAuth2 Token Introspection](https://tools.ietf.org/html/rfc7662).
+You can validate access tokens using the OAuth2 Introspection API, standardized
+as [IETF OAuth2 Token Introspection](https://tools.ietf.org/html/rfc7662).
 
 Please make sure to replace `>INSERT-TOKEN-HERE<` with the token you just
 received.
@@ -359,8 +360,8 @@ limitations at scale. ORY Hydra solves OAuth2 and OpenID Connect only, but it
 solves it well and extemely scalable.
 
 To authenticate users, ORY Hydra defines the
-[user login & consent flow](https://www.ory.sh/docs/hydra/oauth2).
-You can find an
+[user login & consent flow](https://www.ory.sh/docs/hydra/oauth2). You can find
+an
 [exemplary user login and consent application on our GitHub](https://github.com/ory/hydra-login-consent-node).
 
 `youtube:https://www.youtube.com/embed/txUmfORzu8Y`
@@ -411,13 +412,13 @@ Client Secret: consumer-secret
 
 ### Perform OAuth2 Authorize Code Flow
 
-To initialize an OAuth2 authorize code flow, use the `hydra token user`
-command. It will generate the authorization url which the user must open in the
-browser. Requesting the authorization is the first step of the OAuth2
-authorize code flow.
+To initialize an OAuth2 authorize code flow, use the `hydra token user` command.
+It will generate the authorization url which the user must open in the browser.
+Requesting the authorization is the first step of the OAuth2 authorize code
+flow.
 
-Requesting OAuth2 Access and Refresh tokens is usually done using a library
-for your programming language. Do not write this on your own. Here are some
+Requesting OAuth2 Access and Refresh tokens is usually done using a library for
+your programming language. Do not write this on your own. Here are some
 libraries for different languages: [Golang](https://github.com/golang/oauth2),
 [NodeJS](https://github.com/lelylan/simple-oauth2),
 [PHP](https://github.com/thephpleague/oauth2-client).
@@ -446,10 +447,10 @@ If your browser does not open automatically, navigate to:
 
 ### Login & Consent
 
-Open `http://127.0.0.1:9010/` in your browser and you
-will see a simple screen asking you to authorize the application. If you
-remember the CircleCI example from the beginning of the article, this would be
-the "Log In with GitHub" button.
+Open `http://127.0.0.1:9010/` in your browser and you will see a simple screen
+asking you to authorize the application. If you remember the CircleCI example
+from the beginning of the article, this would be the "Log In with GitHub"
+button.
 
 ![Consent App showing the login screen](../../images/articles/oauth2/consent-1.png)
 
@@ -480,8 +481,8 @@ and performed an OAuth2 request! You can use the token from the last request and
 pass it to `hydra token introspect` as we did earlier with the OAuth2 Client
 Credentials flow.
 
-ORY Hydra is an Apache 2.0 licensed Go server solving OAuth2, OpenID Connect
-and API security in general. It secures millions of requests per day and has a
+ORY Hydra is an Apache 2.0 licensed Go server solving OAuth2, OpenID Connect and
+API security in general. It secures millions of requests per day and has a
 vibrant and welcoming online community.
 
 Check out [ORY Hydra at Github](https://github.com/ory/hydra) and our other

@@ -42,10 +42,6 @@
   }
 }
 
-:global .theme-default :local .section a:any-link {
-  color: var(--colors-ory-default);
-}
-
 :global .theme-default :local .section.light a:any-link {
   color: var(--colors-ory-default);
 
@@ -55,9 +51,28 @@
     color: var(--colors-ory-dark);
   }
 }
+:global .theme-default :local .section a:any-link {
+  color: var(--colors-ory-default);
+}
 
 :global .theme-hydra :local .section a:any-link {
   color: var(--colors-hydra-default);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--colors-ory-dark);
+  }
+}
+
+:global .theme-kratos :local .section a:any-link {
+  color: var(--colors-kratos-default);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--colors-ory-dark);
+  }
 }
 
 @media (--mobile-viewport) {

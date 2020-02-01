@@ -44,6 +44,21 @@
   }
 }
 
+:global .theme-kratos :local .header {
+  & a,
+  & a:visited {
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--colors-kratos-default);
+    }
+  }
+
+  & .logo {
+    color: var(--colors-kratos-default);
+  }
+}
+
 .project-name {
   font-family: 'Open Sans', sans-serif;
   font-style: normal;

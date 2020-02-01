@@ -16,6 +16,12 @@
   }
 }
 
+:global .theme-kratos {
+  & :local .divider {
+    border-color: var(--colors-kratos-default);
+  }
+}
+
 @media (--sm-viewport) {
   .divider {
     display: none;

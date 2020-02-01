@@ -35,13 +35,13 @@ class CodeBox extends Component<PropTypes, StateTypes> {
     const { tabs } = this.props
     return (
       <div className={styles.box}>
-        <div className={styles.tabs}>
+        <div className={styles.editorHeader}>
           <div className={styles.windowActions}>
             <div className={cn(styles.windowAction, styles.primary)} />
             <div className={styles.windowAction} />
             <div className={styles.windowAction} />
           </div>
-          {tabs.map(({ filename }, index) => (
+          <div className={styles.tabs}>{tabs.map(({ filename }, index) => (
             <div
               key={filename}
               className={cn(styles.tab, {
@@ -51,7 +51,7 @@ class CodeBox extends Component<PropTypes, StateTypes> {
             >
               {filename}
             </div>
-          ))}
+          ))}</div>
         </div>
         <div className={styles.content}>
           {tabs.map(({ filename, code, language }, index) => (

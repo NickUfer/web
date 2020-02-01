@@ -18,7 +18,6 @@ export type MenuItem = {
 export type IconMenuItem = {
   title: string
   href: string
-  image: string
 }
 
 export type Menu = MenuItem[]
@@ -67,7 +66,7 @@ const Header = ({ menu = [], icons = [], appendix }: PropTypes) => (
             <div className={styles.rightMenu}>
               <nav className={styles.iconMenu}>
                 <ul className="hidden-sm hidden-md">
-                  {icons.map(({ href, title, image }, k) => (
+                  {icons.map(({ href, title }, k) => (
                     <li key={k}>
                       <a href={href}>
                         {title}

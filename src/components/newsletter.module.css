@@ -96,3 +96,19 @@
     }
   }
 }
+
+:global .theme-kratos {
+  & :local .form input[type='button'] {
+    background-color: var(--colors-kratos-default);
+
+    &:hover,
+    &:focus {
+      color: var(--colors-kratos-default);
+      background-color: var(--colors-base-white);
+    }
+
+    &:active {
+      background-color: var(--colors-base-white);
+    }
+  }
+}

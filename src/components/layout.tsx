@@ -13,10 +13,6 @@ import Header from './header'
 import Announcement from './announcement'
 import Footer from './footer'
 
-import github from '../images/github.svg'
-import discord from '../images/discord.svg'
-import discourse from '../images/discourse.svg'
-
 const defaultMenu: Menu = [
   {
     title: 'Home',
@@ -29,9 +25,9 @@ const defaultMenu: Menu = [
 ]
 
 const defaultIconMenu: IconMenu = [
-  { title: 'Chat', image: discord, href: 'https://www.ory.sh/chat' },
-  { title: 'Forum', image: discourse, href: 'https://community.ory.sh/' },
-  { title: 'GitHub', image: github, href: 'https://github.com/ory/hydra' },
+  { title: 'Chat', href: 'https://www.ory.sh/chat' },
+  { title: 'Forum', href: 'https://community.ory.sh/' },
+  { title: 'GitHub', href: 'https://github.com/ory/hydra' },
 ]
 
 const Layout = ({
