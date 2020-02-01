@@ -195,12 +195,12 @@ const HydraPage = () => (
       left={
         <>
           <p className="mobile-offset-32">
-            ORY is the open source and cloud native identity infrastructure.
-            ORY is written in Go and open standards and consensus are the
+            ORY is the open source and cloud native identity infrastructure. ORY
+            is written in Go and open standards and consensus are the
             foundation. It is language and platform independent, extremely
             lightweight, starts up in seconds and doesn’t interfere with your
-            code. See our <a href="https://www.ory.sh/docs">documentation</a>{' '}
-            to get started.
+            code. See our <a href="https://www.ory.sh/docs">documentation</a> to
+            get started.
           </p>
         </>
       }

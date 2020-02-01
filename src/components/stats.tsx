@@ -91,7 +91,7 @@ type GitHubRepos =
   | 'dockertest'
   | 'oathkeeper'
   | 'keto'
-  | 'hive'
+  | 'kratos'
   | 'docs'
   | 'examples'
 
@@ -134,7 +134,7 @@ class Stats extends Component<PropTypes, StateTypes> {
       dockertest: 786,
       oathkeeper: 1373,
       keto: 292,
-      hive: 24,
+      kratos: 261,
       docs: 8,
       examples: 70,
     },

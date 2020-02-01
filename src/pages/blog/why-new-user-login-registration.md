@@ -20,14 +20,15 @@ subtitle: ''
 
 ## Approaches to solving Identity
 
-Before going ahead let's look at the "Identity Landscape" of today. The disclaimer is probably obvious, but please take
-our findings and arguments as an opinion. We do have lots of experience in this space, but every system has its use case
-and place. We do want to bash other systems to gain competitive advantage, but it is important to understand what technology
-to use and what drawbacks (and upsides) you get.
+Before going ahead let's look at the "Identity Landscape" of today. The
+disclaimer is probably obvious, but please take our findings and arguments as an
+opinion. We do have lots of experience in this space, but every system has its
+use case and place. We do want to bash other systems to gain competitive
+advantage, but it is important to understand what technology to use and what
+drawbacks (and upsides) you get.
 
-For a full comparison with other open and closed source systems, head over to the
-[Comparison Chapter](../further-reading/comparison.md).
-
+For a full comparison with other open and closed source systems, head over to
+the [Comparison Chapter](../further-reading/comparison.md).
 
 ## Avoiding OAuth2 and OpenID Connect
 
@@ -124,27 +125,28 @@ in front of the screen. By asking the identity to login in again for the sole
 purpose of changing the password, both intent and authenticity of the request
 are confirmed.
 
-
-
-
 To text below can perhpas be used in another place
 
 ## Approaches to solving Identity
 
-Before going ahead let's look at the "Identity Landscape" of today. The disclaimer is probably obvious, but please take
-our findings and arguments as an opinion. We do have lots of experience in this space, but every system has its use case
-and place. We do want to bash other systems to gain competitive advantage, but it is important to understand what technology
-to use and what drawbacks (and upsides) you get.
+Before going ahead let's look at the "Identity Landscape" of today. The
+disclaimer is probably obvious, but please take our findings and arguments as an
+opinion. We do have lots of experience in this space, but every system has its
+use case and place. We do want to bash other systems to gain competitive
+advantage, but it is important to understand what technology to use and what
+drawbacks (and upsides) you get.
 
-For a full comparison with other open and closed source systems, head over to the
-[Comparison Chapter](../further-reading/comparison.md).
+For a full comparison with other open and closed source systems, head over to
+the [Comparison Chapter](../further-reading/comparison.md).
 
-Several proprietary SaaS companies have established themselves over the past decade including Auth0 and Okta.
-AWS Cognito and GCP CICP (Cloud Identity for Customers and Partners - it's basically Firebase on the Google Cloud Platform)
-are the products provided by the big players.
-Because of the nature of their product, they act as a third-party login. It's like "Login with Google" but you can
-re-brand the "Google" part. Therefore, these systems typically choose OAuth2 and OpenID Connect as their primary
-protocol. It fits the use case - the user logs in on a different system than your own. But are OAuth2 and OpenID Connect
-really the best protocol at hand for this? Keep in mind that these protocols were designed for the "ACME Corp's Facebook
-Photo Backups" and "GitHub Continuous Integrations" of the world - not for first-party login!
-
+Several proprietary SaaS companies have established themselves over the past
+decade including Auth0 and Okta. AWS Cognito and GCP CICP (Cloud Identity for
+Customers and Partners - it's basically Firebase on the Google Cloud Platform)
+are the products provided by the big players. Because of the nature of their
+product, they act as a third-party login. It's like "Login with Google" but you
+can re-brand the "Google" part. Therefore, these systems typically choose OAuth2
+and OpenID Connect as their primary protocol. It fits the use case - the user
+logs in on a different system than your own. But are OAuth2 and OpenID Connect
+really the best protocol at hand for this? Keep in mind that these protocols
+were designed for the "ACME Corp's Facebook Photo Backups" and "GitHub
+Continuous Integrations" of the world - not for first-party login!

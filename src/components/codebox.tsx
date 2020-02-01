@@ -41,17 +41,19 @@ class CodeBox extends Component<PropTypes, StateTypes> {
             <div className={styles.windowAction} />
             <div className={styles.windowAction} />
           </div>
-          <div className={styles.tabs}>{tabs.map(({ filename }, index) => (
-            <div
-              key={filename}
-              className={cn(styles.tab, {
-                [styles.selected]: index === this.state.active,
-              })}
-              onClick={this.onSelectTab(index)}
-            >
-              {filename}
-            </div>
-          ))}</div>
+          <div className={styles.tabs}>
+            {tabs.map(({ filename }, index) => (
+              <div
+                key={filename}
+                className={cn(styles.tab, {
+                  [styles.selected]: index === this.state.active,
+                })}
+                onClick={this.onSelectTab(index)}
+              >
+                {filename}
+              </div>
+            ))}
+          </div>
         </div>
         <div className={styles.content}>
           {tabs.map(({ filename, code, language }, index) => (

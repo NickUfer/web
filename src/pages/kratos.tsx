@@ -56,7 +56,7 @@ export const registrationRoute = (req, res) => {
     &lt;button type=&quot;submit&quot;&gt;Sign In&lt;/button&gt;
   &lt;/form&gt;
 &lt;/div&gt;`,
-      }
+      },
     ]}
   />
 )
@@ -197,10 +197,11 @@ const KratosPage = () => (
       left={
         <>
           <p className="mobile-offset-32">
-            The ORY community stands on the shoulders of individuals, companies, and maintainers.
-            We thank everyone involved - from submitting bug reports and feature requests,
-            to contributing patches, to sponsoring our work. Our small team would have never
-            been able to achieve this without each and everyone of you.
+            The ORY community stands on the shoulders of individuals, companies,
+            and maintainers. We thank everyone involved - from submitting bug
+            reports and feature requests, to contributing patches, to sponsoring
+            our work. Our small team would have never been able to achieve this
+            without each and everyone of you.
           </p>
         </>
       }
