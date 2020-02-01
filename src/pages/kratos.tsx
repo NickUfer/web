@@ -197,12 +197,10 @@ const KratosPage = () => (
       left={
         <>
           <p className="mobile-offset-32">
-            ORY is the open source and cloud native identity infrastructure.
-            ORY is written in Go and open standards and consensus are the
-            foundation. It is language and platform independent, extremely
-            lightweight, starts up in seconds and doesn’t interfere with your
-            code. See our <a href="https://www.ory.sh/docs">documentation</a>{' '}
-            to get started.
+            The ORY community stands on the shoulders of individuals, companies, and maintainers.
+            We thank everyone involved - from submitting bug reports and feature requests,
+            to contributing patches, to sponsoring our work. Our small team would have never
+            been able to achieve this without each and everyone of you.
           </p>
         </>
       }
