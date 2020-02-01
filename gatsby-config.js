@@ -40,7 +40,7 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 860,
-              tracedSVG: true
+              tracedSVG: true,
             },
           },
           {
@@ -132,7 +132,44 @@ module.exports = {
     // },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    `gatsby-plugin-offline`,
+
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: 'src/images/icon/favicon-196x196.png',
+        name: `ORY Website and Documentation`,
+        short_name: `ORY`,
+        start_url: `/`,
+        background_color: `#15283B`,
+        theme_color: `#6274F3`,
+        display: `browser`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        workboxConfig: {
+          importWorkboxFrom: `cdn`,
+          runtimeCaching: [
+            {
+              // Do not cache ads
+              urlPattern: /^https?:\/\/codefund\.io/,
+              handler: `NetworkOnly`,
+            },
+            {
+              // Cache docs css etc
+              urlPattern: /^.+\/docs\/.+\.(css|js|png|svg|jpg)/,
+              handler: `StaleWhileRevalidate`,
+            },
+            {
+              // Cache docs pages
+              urlPattern: /^.+\/docs\/([a-zA-Z0-9\-_\/]+)(\/||\.html|\.htm)/,
+              handler: `StaleWhileRevalidate`,
+            },
+          ]
+        },
+      },
+    },
     `gatsby-plugin-force-trailing-slashes`,
   ],
 }
