@@ -92,16 +92,16 @@ established <a href="/docs/next/kratos/self-service/flows/#network-flows-for-bro
 follows for Profile Management:</p>
 <ol>
 <li>An initial HTTP Request is made to
-<code>https://example.org/.ory/kratos/public/profiles</code>.</li>
+<code>https://example.org/.ory/kratos/public/self-service/browser/flows/profile</code>.</li>
 <li>ORY Kratos redirects the browser to the URL set in <code>urls.profile_ui</code> and
 appends the <code>request</code> URL Query Parameter (e.g.
 <code>https://example.org/profile?request=abcde</code>).</li>
 <li>The Endpoint at <code>/profile</code> makes a HTTP GET Request to
-<code>https://ory-kratos-admin.example-org.vpc/profiles/requests?request=abcde</code>
+<code>https://ory-kratos-admin.example-org.vpc/self-service/browser/flows/requests/profile?request=abcde</code>
 and fetches Profile Management Request JSON Payload that represent the
 individual fields that can be updated.</li>
 <li>The User updates the profile data and sends a HTTP POST request to
-<code>https://example.org/.ory/kratos/public/profiles/requests?request=abcde</code>.
+<code>https://example.org/.ory/kratos/public/self-service/browser/flows/profile/update?request=abcde</code>.
 <ul>
 <li>If the profile data is invalid, all validation errors will be collected and
 added to the Profile Management JSON Payload. The Browser is redirected to
@@ -149,7 +149,7 @@ process is complete.</li>
 }
 </code></pre>
 <p>the resulting JSON Payload coming from
-<code>https://ory-kratos-admin.example-org.vpc/profiles/requests?request=abcde</code> would
+<code>https://ory-kratos-admin.example-org.vpc/self-service/browser/flows/requests/profile?request=abcde</code> would
 look something along the lines of:</p>
 <pre><code class="hljs css language-json">{
   <span class="hljs-attr">"id"</span>: <span class="hljs-string">"48068b5d-3438-4d6f-9955-331b96c41762"</span>,
@@ -233,9 +233,9 @@ ORY Kratos.</p>
 API, they must use the ORY Kratos Public API instead. The flow for a Client-Side
 Browser Application is almost the exact same as the one for Server-Side
 Applications, with the small difference that
-<code>https://example.org/.ory/kratos/public/profiles/requests?request=abcde</code> would
+<code>https://example.org/.ory/kratos/public/self-service/browser/flows/requests/profile?request=abcde</code> would
 be called via AJAX instead of making a request to
-<code>https://ory-kratos-admin.example-org.vpc/profiles/requests?request=abcde</code>.</p>
+<code>https://ory-kratos-admin.example-org.vpc/self-service/browser/flows/requests/profile?request=abcde</code>.</p>
 <blockquote>
 <p>To prevent brute force, guessing, session injection, and other attacks, it is
 required that cookies are working for this endpoint. The cookie set in the
@@ -244,7 +244,7 @@ MUST be set and available when calling this endpoint!</p>
 </blockquote>
 <h2><a class="anchor" aria-hidden="true" id="self-service-user-profile-management-for-api-clients"></a><a href="#self-service-user-profile-management-for-api-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Self-Service User Profile Management for API Clients</h2>
 <p>Will be addressed in a future release.</p>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/28/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/kratos/self-service/flows/user-logout"><span class="arrow-prev">← </span><span>User Logout</span></a><a class="docs-next button" href="/docs/next/kratos/self-service/flows/password-reset-account-recovery"><span>Account Recovery</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#self-service-user-profile-management-for-browser-applications">Self-Service User Profile Management for Browser Applications</a><ul class="toc-headings"><li><a href="#server-side-browser-applications">Server-Side Browser Applications</a></li><li><a href="#client-side-browser-applications">Client-Side Browser Applications</a></li></ul></li><li><a href="#self-service-user-profile-management-for-api-clients">Self-Service User Profile Management for API Clients</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/3/2020 by zepatrik</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/kratos/self-service/flows/user-logout"><span class="arrow-prev">← </span><span>User Logout</span></a><a class="docs-next button" href="/docs/next/kratos/self-service/flows/password-reset-account-recovery"><span>Account Recovery</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#self-service-user-profile-management-for-browser-applications">Self-Service User Profile Management for Browser Applications</a><ul class="toc-headings"><li><a href="#server-side-browser-applications">Server-Side Browser Applications</a></li><li><a href="#client-side-browser-applications">Client-Side Browser Applications</a></li></ul></li><li><a href="#self-service-user-profile-management-for-api-clients">Self-Service User Profile Management for API Clients</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
