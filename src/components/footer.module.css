@@ -1,36 +1,17 @@
 @import '../styles/properties.css';
 
 .footer {
-  background-color: var(--colors-ory-dark);
+  background-color: var(--colors-base-dark);
   padding: 36px 0;
-  color: var(--colors-ui-white);
+  color: var(--colors-base-white);
 }
 
 .footer a:any-link {
   color: var(--colors-base-white);
-}
-
-:global .theme-default :local .footer a:any-link {
   &:hover,
   &:active,
   &:focus {
-    color: var(--colors-ory-default);
-  }
-}
-
-:global .theme-hydra :local .footer a:any-link {
-  &:hover,
-  &:active,
-  &:focus {
-    color: var(--colors-hydra-default);
-  }
-}
-
-:global .theme-kratos :local .footer a:any-link {
-  &:hover,
-  &:active,
-  &:focus {
-    color: var(--colors-kratos-default);
+    color: var(--colors-themed-default);
   }
 }
 

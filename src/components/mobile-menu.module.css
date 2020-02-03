@@ -68,7 +68,7 @@
 
 .nav-items {
   transition: all ease-in 300ms;
-  background-color: var(--colors-ory-dark);
+  background-color: var(--colors-base-dark);
   position: absolute;
   z-index: 1;
   top: var(--nav-height);

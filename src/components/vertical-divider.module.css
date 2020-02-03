@@ -2,24 +2,7 @@
   border-left: 1px solid;
   position: absolute;
   left: 50%;
-}
-
-:global .theme-default {
-  & :local .divider {
-    border-color: var(--colors-ory-default);
-  }
-}
-
-:global .theme-hydra {
-  & :local .divider {
-    border-color: var(--colors-hydra-default);
-  }
-}
-
-:global .theme-kratos {
-  & :local .divider {
-    border-color: var(--colors-kratos-default);
-  }
+  border-color: var(--colors-themed-default);
 }
 
 @media (--sm-viewport) {

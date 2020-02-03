@@ -10,30 +10,9 @@
   }
 }
 
-:global .theme-default {
-  background-color: var(--colors-ory-dark);
-  & :local .items .item {
-    & .amount * {
-      color: var(--colors-ory-default);
-    }
-  }
-}
-
-:global .theme-hydra {
-  background-color: var(--colors-ory-dark);
-  & :local .items .item {
-    & .amount * {
-      color: var(--colors-hydra-default);
-    }
-  }
-}
-
-:global .theme-kratos {
-  background-color: var(--colors-ory-dark);
-  & :local .items .item {
-    & .amount * {
-      color: var(--colors-kratos-default);
-    }
+.items .item {
+  & .amount * {
+    color: var(--colors-themed-default);
   }
 }
 

@@ -7,7 +7,7 @@
 
 .editor-header {
   display: flex;
-  align-items: bottom;
+  align-items: baseline;
   color: var(--colors-base-white);
   & .tabs {
     overflow: auto;
@@ -21,18 +21,10 @@
     margin-right: 16px;
     cursor: pointer;
     display: inline;
-  }
-}
 
-:global .theme-hydra :local .tab {
-  &.selected {
-    border-bottom: 1px solid var(--colors-hydra-default);
-  }
-}
-
-:global .theme-kratos :local .tab {
-  &.selected {
-    border-bottom: 1px solid var(--colors-kratos-default);
+    &.selected {
+      border-bottom: 1px solid var(--colors-themed-default);
+    }
   }
 }
 
@@ -45,20 +37,12 @@
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background-color: var(--colors-ory-default);
+    background-color: var(--colors-themed-weak);
     margin-right: 5px;
-  }
-}
 
-:global .theme-hydra :local .window-action {
-  &.primary {
-    background-color: var(--colors-hydra-default);
-  }
-}
-
-:global .theme-kratos :local .window-action {
-  &.primary {
-    background-color: var(--colors-kratos-default);
+    &.primary {
+      background-color: var(--colors-themed-default);
+    }
   }
 }
 

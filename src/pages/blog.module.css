@@ -2,7 +2,7 @@
   font-weight: 300;
   font-size: 36px;
   line-height: 126%;
-  color: var(--colors-ory-dark);
+  color: var(--colors-base-dark);
 }
 
 .post-list {
@@ -48,12 +48,12 @@ h3.post-title {
 
   & a:any-link {
     transition: all ease 200ms;
-    color: var(--colors-ory-default);
+    color: var(--colors-themed-default);
 
     &:hover,
     &:active,
     &:focus {
-      color: var(--colors-ory-dark);
+      color: var(--colors-base-dark);
     }
   }
 }
@@ -67,7 +67,7 @@ p.post-teaser {
 }
 
 p.post-link a:any-link {
-  color: var(--colors-ory-default);
+  color: var(--colors-themed-default);
   font-weight: 500;
   font-size: 14px;
   line-height: 140%;
@@ -76,6 +76,6 @@ p.post-link a:any-link {
   &:hover,
   &:active,
   &:focus {
-    color: var(--colors-ory-dark);
+    color: var(--colors-base-dark);
   }
 }

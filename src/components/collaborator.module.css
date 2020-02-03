@@ -5,7 +5,7 @@
 
   & h3,
   & p {
-    color: var(--colors-ory-dark);
+    color: var(--colors-base-dark);
   }
 }
 

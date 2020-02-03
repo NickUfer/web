@@ -9,7 +9,7 @@
     font-size: 18px;
     line-height: 168%;
     padding-left: 20px;
-    color: var(--colors-ory-dark);
+    color: var(--colors-base-dark);
   }
 
   & p {

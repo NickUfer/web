@@ -2,49 +2,60 @@
   --alpha-20: 20;
 
   --colors-base-black: #000000;
-  --colors-base-dark: #19191D;
+  --colors-base-dark: #15283B;
   --colors-base-grey: #5A5B6A;
   --colors-base-text: #99999E;
   --colors-base-light: #F0F0F1;
+  --colors-base-offblack: #19191D;
   --colors-base-white: #ffffff;
 
-  --colors-ory-dark: #15283B;
-  --colors-ory-default: #6274F3;
-  --colors-ory-weak: #C8CEFA;
-  --colors-ory-light: #EAECFE;
+  --colors-themed-default: #6274F3;
+  --colors-themed-weak: #C8CEFA;
+  --colors-themed-light: #EAECFE;
 
-  --colors-kratos-dark: #452400;
-  --colors-kratos-default: #FB8200;
-  --colors-kratos-weak: #FFB86C;
-  --colors-kratos-light: #FEF3E7;
-
-  --colors-hydra-dark: #470B25;
-  --colors-hydra-default: #DB2B56;
-  --colors-hydra-weak: #FFBDCD;
-  --colors-hydra-light: #FDE5EA;
-
-  --colors-oathkeeper-dark: #0C2146;
-  --colors-oathkeeper-default: #2979FF;
-  --colors-oathkeeper-weak: #B3CFFF;
-  --colors-oathkeeper-light: #EBF2FF;
-
-  --colors-keto-dark: #002E1D;
-  --colors-keto-default: #00A571;
-  --colors-keto-weak: #6BE2BD;
-  --colors-keto-light: #E3F6EF;
-
-  --colors-green-dark: #132C14;
   --colors-green-default: #43A047;
   --colors-green-weak: #8BDC8E;
   --colors-green-light: #EDF6EE;
 
-  --colors-yellow-dark: #463209;
   --colors-yellow-default: #FFB41F;
   --colors-yellow-weak: #FFDFA0;
   --colors-yellow-light: #FFF8EA;
 
-  --colors-red-dark: #43130F;
   --colors-red-default: #F44336;
   --colors-red-weak: #F99C95;
   --colors-red-light: #FEEDEC;
+
+  --colors-kratos-default: #FB8200;
+  --colors-kratos-weak: #FFB86C;
+  --colors-kratos-light: #FEF3E7;
+
+  --colors-hydra-default: #DB2B56;
+  --colors-hydra-weak: #FFBDCD;
+  --colors-hydra-light: #FDE5EA;
+
+  --colors-oathkeeper-default: #2979FF;
+  --colors-oathkeeper-weak: #B3CFFF;
+  --colors-oathkeeper-light: #EBF2FF;
+
+  --colors-keto-default: #00A571;
+  --colors-keto-weak: #6BE2BD;
+  --colors-keto-light: #E3F6EF;
+}
+
+.theme-hydra {
+  --colors-themed-default: var(--colors-hydra-default);
+  --colors-themed-weak: var(--colors-hydra-weak);
+  --colors-themed-light: var(--colors-hydra-light);
+}
+
+.theme-oathkeeper {
+  --colors-themed-default: var(--colors-oathkeeper-default);
+  --colors-themed-weak: var(--colors-oathkeeper-weak);
+  --colors-themed-light: var(--colors-oathkeeper-light);
+}
+
+.theme-kratos {
+  --colors-themed-default: var(--colors-kratos-default);
+  --colors-themed-weak: var(--colors-kratos-weak);
+  --colors-themed-light: var(--colors-kratos-light);
 }

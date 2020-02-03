@@ -4,7 +4,7 @@
 @import '../styles/typography.css';
 
 .newsletter {
-  background-color: var(--colors-ory-dark);
+  background-color: var(--colors-base-dark);
   padding: 96px 0;
   position: relative;
   color: var(--colors-base-white);
@@ -31,7 +31,7 @@
 }
 
 .light {
-  background-color: var(--colors-ory-dark);
+  background-color: var(--colors-base-dark);
 }
 
 .form {
@@ -53,6 +53,18 @@
     cursor: pointer;
     transition: color ease 200ms, background-color ease 200ms,
       border-color ease 200ms;
+
+    background-color: var(--colors-themed-default);
+
+    &:hover,
+    &:focus {
+      color: var(--colors-themed-default);
+      background-color: var(--colors-base-white);
+    }
+
+    &:active {
+      background-color: var(--colors-base-white);
+    }
   }
 
   & input[type='email'] {
@@ -61,54 +73,6 @@
 
     &::placeholder {
       color: var(--colors-base-white);
-    }
-  }
-}
-
-:global .theme-default {
-  & :local .form input[type='button'] {
-    background-color: var(--colors-ory-default);
-
-    &:hover,
-    &:focus {
-      color: var(--colors-ory-default);
-      background-color: var(--colors-base-white);
-    }
-
-    &:active {
-      background-color: var(--colors-base-white);
-    }
-  }
-}
-
-:global .theme-hydra {
-  & :local .form input[type='button'] {
-    background-color: var(--colors-hydra-default);
-
-    &:hover,
-    &:focus {
-      color: var(--colors-hydra-default);
-      background-color: var(--colors-base-white);
-    }
-
-    &:active {
-      background-color: var(--colors-base-white);
-    }
-  }
-}
-
-:global .theme-kratos {
-  & :local .form input[type='button'] {
-    background-color: var(--colors-kratos-default);
-
-    &:hover,
-    &:focus {
-      color: var(--colors-kratos-default);
-      background-color: var(--colors-base-white);
-    }
-
-    &:active {
-      background-color: var(--colors-base-white);
     }
   }
 }

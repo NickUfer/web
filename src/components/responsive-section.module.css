@@ -16,62 +16,33 @@
 
     & h3,
     & p {
-      color: var(--colors-ory-dark);
+      color: var(--colors-base-dark);
     }
 
     & a:any-link {
+      color: var(--colors-themed-default);
+
       &:hover,
       &:active,
       &:focus {
-        color: var(--colors-ory-default);
+        color: var(--colors-base-dark);
       }
     }
   }
 
   &.dark {
     color: var(--colors-base-white);
-    background-color: var(--colors-ory-dark);
+    background-color: var(--colors-base-dark);
 
     & a:any-link {
+      color: var(--colors-themed-default);
+
       &:hover,
       &:active,
       &:focus {
         color: var(--colors-base-white);
       }
     }
-  }
-}
-
-:global .theme-default :local .section.light a:any-link {
-  color: var(--colors-ory-default);
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: var(--colors-ory-dark);
-  }
-}
-:global .theme-default :local .section a:any-link {
-  color: var(--colors-ory-default);
-}
-
-:global .theme-hydra :local .section a:any-link {
-  color: var(--colors-hydra-default);
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: var(--colors-ory-dark);
-  }
-}
-
-:global .theme-kratos :local .section a:any-link {
-  color: var(--colors-kratos-default);
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: var(--colors-ory-dark);
   }
 }
 

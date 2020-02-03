@@ -12,7 +12,7 @@
     text-decoration: underline;
     &:hover,
     &:active {
-      color: var(--colors-ory-default);
+      color: var(--colors-themed-default);
     }
   }
 }

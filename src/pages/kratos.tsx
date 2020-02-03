@@ -11,8 +11,6 @@ import Stats from '../components/stats'
 import CodeBox from '../components/codebox'
 import kratosProcess from '../images/kratos_process.svg'
 import { brandPrefix } from '../config'
-import cn from 'classnames'
-import ResponsiveSection from '../components/responsive-section'
 import Collaborator from '../components/collaborator'
 
 const IntegrationCodeBox = () => (

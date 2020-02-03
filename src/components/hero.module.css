@@ -1,101 +1,36 @@
 @import '../styles/properties.css';
 
 .hero {
-  background-color: var(--colors-ory-default);
+  background-color: var(--colors-themed-default);
   color: var(--colors-base-white);
 
   & :global a.cta.secondary:any-link {
-    color: var(--colors-ory-dark);
-    border-color: var(--colors-ory-dark);
-  }
+    color: var(--colors-base-dark);
+    border-color: var(--colors-base-dark);
 
-  & :global a.cta.primary:any-link {
-    color: var(--colors-base-white);
-  }
-
-  & :global .container-fluid {
-    position: relative;
-    padding: 112px 0;
-  }
-}
-
-:global .theme-default :local .hero {
-  background-color: var(--colors-ory-default);
-}
-
-:global .theme-default :local .hero :global a.cta {
-  &.primary:any-link {
-    background-color: var(--colors-ory-dark);
-    border-color: var(--colors-ory-dark);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--colors-base-white);
-      border-color: var(--colors-base-white);
-      color: var(--colors-ory-dark);
-    }
-  }
-
-  &.secondary:any-link {
     &:hover {
       border-color: var(--colors-base-white);
       color: var(--colors-base-white);
     }
   }
-}
 
-:global .theme-hydra :local .hero {
-  background-color: var(--colors-hydra-default);
-}
-
-:global .theme-hydra :local .hero :global a.cta {
-  &.primary:any-link {
-    background-color: var(--colors-ory-dark);
-    border-color: var(--colors-ory-dark);
+  & :global a.cta.primary:any-link {
+    color: var(--colors-base-white);
+    background-color: var(--colors-base-dark);
+    border-color: var(--colors-base-dark);
 
     &:hover,
     &:focus,
     &:active {
       background-color: var(--colors-base-white);
       border-color: var(--colors-base-white);
-      color: var(--colors-hydra-default);
+      color: var(--colors-themed-default);
     }
   }
 
-  &.secondary:any-link {
-    &:hover,
-    &:focus {
-      border-color: var(--colors-base-white);
-      color: var(--colors-base-white);
-    }
-  }
-}
-
-:global .theme-kratos :local .hero {
-  background-color: var(--colors-kratos-default);
-}
-
-:global .theme-kratos :local .hero :global a.cta {
-  &.primary:any-link {
-    background-color: var(--colors-ory-dark);
-    border-color: var(--colors-ory-dark);
-
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: var(--colors-base-white);
-      border-color: var(--colors-base-white);
-      color: var(--colors-kratos-default);
-    }
-  }
-
-  &.secondary:any-link {
-    &:hover,
-    &:focus {
-      border-color: var(--colors-base-white);
-      color: var(--colors-base-white);
-    }
+  & :global .container-fluid {
+    position: relative;
+    padding: 112px 0;
   }
 }
 

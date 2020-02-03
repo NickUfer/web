@@ -1,6 +1,5 @@
 declare const styles: {
-  readonly "collaborator": string;
-  readonly "image": string;
-};
-export = styles;
-
+  readonly collaborator: string
+  readonly image: string
+}
+export = styles
