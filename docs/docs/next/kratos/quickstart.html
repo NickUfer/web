@@ -127,7 +127,7 @@ cd kratos
 make quickstart
 <span class="hljs-meta">
 #</span><span class="bash"> or <span class="hljs-keyword">if</span> you don<span class="hljs-string">'t have make installed:</span></span>
-docker pull oryd/kratos:latest
+docker pull oryd/kratos:latest-sqlite
 docker pull oryd/kratos-selfservice-ui-node:latest
 docker-compose -f quickstart.yml up --build --force-recreate
 </code></pre>
@@ -322,7 +322,7 @@ and remove all mounted volumes.</p>
 <pre><code class="hljs css language-shell script">docker-compose -f quickstart.yml down -v
 docker-compose -f quickstart.yml rm -f -s -v
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/31/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/kratos/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/next/kratos/install"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-case-you-want-login-and-registration-for-your-application">Use case: You want login and registration for your Application</a></li><li><a href="#setup">Setup</a><ul class="toc-headings"><li><a href="#clone-ory-kratos-and-run-it-in-docker">Clone ORY Kratos and run it in Docker</a></li><li><a href="#network-architecture">Network Architecture</a></li></ul></li><li><a href="#perform-registration-logout-login">Perform registration, logout, login</a><ul class="toc-headings"><li><a href="#understanding-how-login-and-registration-works">Understanding how Login and Registration works</a></li></ul></li><li><a href="#cleaning-up-docker">Cleaning up Docker</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/3/2020 by Patrik</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/kratos/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/next/kratos/install"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-case-you-want-login-and-registration-for-your-application">Use case: You want login and registration for your Application</a></li><li><a href="#setup">Setup</a><ul class="toc-headings"><li><a href="#clone-ory-kratos-and-run-it-in-docker">Clone ORY Kratos and run it in Docker</a></li><li><a href="#network-architecture">Network Architecture</a></li></ul></li><li><a href="#perform-registration-logout-login">Perform registration, logout, login</a><ul class="toc-headings"><li><a href="#understanding-how-login-and-registration-works">Understanding how Login and Registration works</a></li></ul></li><li><a href="#cleaning-up-docker">Cleaning up Docker</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
