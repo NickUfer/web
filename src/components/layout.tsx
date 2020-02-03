@@ -27,7 +27,7 @@ const defaultMenu: Menu = [
 const defaultIconMenu: IconMenu = [
   { title: 'Chat', href: 'https://www.ory.sh/chat' },
   { title: 'Forum', href: 'https://community.ory.sh/' },
-  { title: 'GitHub', href: 'https://github.com/ory/hydra' },
+  { title: 'GitHub', href: 'https://github.com/ory' },
 ]
 
 const Layout = ({

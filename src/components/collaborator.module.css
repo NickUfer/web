@@ -1,0 +1,32 @@
+.collaborator {
+  background-color: var(--colors-base-white);
+  padding: 96px 0;
+  position: relative;
+
+  & h3,
+  & p {
+    color: var(--colors-ory-dark);
+  }
+}
+
+.image {
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+
+  & :global img {
+    display: block;
+    margin: 0 auto;
+    max-width: 540px;
+  }
+}
+
+@media (--mobile-viewport) {
+  .collaborator {
+    padding: 64px 0;
+  }
+  .collaborator :global .container-fluid .row {
+    flex-direction: column-reverse;
+  }
+}

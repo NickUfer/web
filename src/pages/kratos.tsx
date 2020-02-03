@@ -13,6 +13,7 @@ import kratosProcess from '../images/kratos_process.svg'
 import { brandPrefix } from '../config'
 import cn from 'classnames'
 import ResponsiveSection from '../components/responsive-section'
+import Collaborator from '../components/collaborator'
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -192,27 +193,7 @@ const KratosPage = () => (
     <Projects />
     <Adopters />
     <Stats />
-    <ResponsiveSection
-      title={<h3>Open Source Contributors</h3>}
-      left={
-        <>
-          <p className="mobile-offset-32">
-            The ORY community stands on the shoulders of individuals, companies,
-            and maintainers. We thank everyone involved - from submitting bug
-            reports and feature requests, to contributing patches, to sponsoring
-            our work. Our small team would have never been able to achieve this
-            without each and everyone of you.
-          </p>
-        </>
-      }
-      right={
-        <img
-          alt="ORY Open Source Contributors"
-          className={cn('responsive')}
-          src="https://opencollective.com/ory/contributors.svg?avatarHeight=30&width=540&button=false"
-        />
-      }
-    />
+    <Collaborator />
   </Layout>
 )
 
