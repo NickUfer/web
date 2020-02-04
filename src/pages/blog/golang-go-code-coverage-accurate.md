@@ -50,7 +50,7 @@ $ go-acc ./...
 $ go-acc $(glide novendor)
 ```
 
-## The Problem
+## Missing Cross-Package Coverage
 
 While writing integration tests for one of our
 [open source](https://github.com/ory/) Go projects, I noticed that code coverage
@@ -63,7 +63,7 @@ coverage for the package that is currently tested, not for all the packages from
 the project. If you have a lot of integration tests, **your code coverage might
 be higher than you think!**
 
-## The Code
+## Code Example
 
 First I want to take a look at some code. This repository is available on
 [GitHub](https://github.com/arekkas/accurate-test-coverage) . The repository
@@ -122,7 +122,7 @@ func TestSayCodeCoverage(t *testing.T) {
 }
 ```
 
-### The `-coverpkg` flag
+### The Golang `go test -coverpkg` Flag
 
 Let's use `-covermod=atomic` to get a report of how well the tests cover the
 code. We expect 100% code coverage because every line is being touched by the
@@ -155,7 +155,7 @@ ok  github.com/arekkas/accurate-test-coverage/otherpkg  10.398s coverage: 100.0%
 
 Awesome, we received true code coverage!
 
-### `-coverprofile` is incompatible with `-coverpgk`
+### Golang flag `-coverprofile` is incompatible with `-coverpgk`
 
 How about getting some nice code coverage reporting using, for example,
 [coveralls.io](https://coveralls.io/) ? Since `go test` supports writing the

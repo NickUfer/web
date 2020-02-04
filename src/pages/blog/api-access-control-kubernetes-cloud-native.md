@@ -26,7 +26,7 @@ category: Tutorial
 :warning: ORY Oathkeeper has improved a lot recently and this guide does not yet
 reflect those changes. :warning:
 
-## Introduction
+## Zero-Trust on the Network
 
 The web application and web service landscape is changing radically as large
 software companies are making their internal infrastructure and software

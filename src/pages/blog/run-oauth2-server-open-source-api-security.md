@@ -46,7 +46,7 @@ We will use open source [ORY Hydra](https://github.com/ory/hydra) (7k+ GitHub
 Stars, 5M+ Docker Downloads), a hardened production-ready, security-first OAuth2
 Server and OpenID Connect Provider written in Go (Golang).
 
-## Refresh your OAuth2 knowledge
+## Refresh your OAuth2 Knowledge
 
 A OAuth2 Server, sometimes also referred to as an OAuth 2.0 Server, OAuth
 Server, Authorization Server, is a piece of software that implements network
@@ -84,30 +84,31 @@ and in visual form in this video:
 
 `youtube:https://www.youtube.com/embed/996OiexHze0`
 
-### This is how ORY Hydra works
+### ORY Hydra: A Headless OAuth2 and OpenID Connect Provider
 
-We originally built ORY Hydra because all other OAuth2 Servers imposed their
-user management on us. But we had a user management in place already, and did
-not want to migrate away from it.
+ORY Hydra is a OAuth2 Server and OpenID Certified™ OpenID Connect Provider written in Go.
 
-ORY Hydra defines a user login and consent flow which let's you implement the
-bridge between ORY Hydra and your user management easily using only a few lines
-of code. If you want, you could say that ORY Hydra translates the user
-information you provide to OAuth2 Access Tokens and OpenID Connect ID Tokens,
-which are then reusable across all your applications (web app, mobile app, CRM,
-Mail, ...) and also by third-party developers.
+Compared to other OAuth2 and OpenID Connect Providers it does not implement its
+own user database and management (for user login, user registration, password reset,
+2fa, ...) but uses the [Login and Consent Flow](https://www.ory.sh/docs/hydra/implementing-consent)
+to delegate rendering the Login UI ("Please enter your email and password") and Consent UI
+("Should application MyDropboxDownload be allowed to access all your private
+Dropbox Documents?") to another application, typically written by
+you in your favorite programming language (Java, PHP, Go, NodeJS, ...) and
+UI framework (ReactJS, AngularJS, ...)
 
-### Sounds good, let's go!
+All [ORY technology follows architecture principles](https://www.ory.sh/docs/ecosystem/software-architecture-philosophy) that work best on
+Container Orchestration Systems such as Kubernetes, CloudFoundry, OpenShift,
+and similar projects. While it is possible to run the ORY stack on a RaspberryPI, the integration with the Docker and Container ecosystem is best documented
+and supported.
+ORY's architecture is designed along several guiding principles:
 
-You're hooked? Great! Let's start by downloading some docker images. By the way,
-this tutorial relies heavily on docker. If you haven't already, please install
-docker now.
+- Minimal dependencies (no system dependencies; might need a database backend)
+- Runs everywhere (Linux, macOS, FreeBSD, Windows; AMD64, i386, ARMv5, ...)
+- Scales without effort (no memcached, etcd, required, ...)
+- Minimize room for human and network errors
 
-_Sidenote:_ Please be aware that this tutorial is making extensive use of
-Docker. As such, this tutorial assumes that you have some knowledge of how
-Docker works.
-
-## Preparations
+## Prepare Deployment in Docker
 
 Before we head into it, you need to make sure that there are no conflicts with
 existing docker containers or other open ports. Please make sure that ports
@@ -130,7 +131,7 @@ $ docker ps | grep 'hydra'
 # docker ps | findstr "hydra"
 ```
 
-## Create a Network
+## Create a Docker Network
 
 Before we can start, a network must be created which we will attach all our
 Docker containers to. That way, the containers can talk to one another.
@@ -139,7 +140,7 @@ Docker containers to. That way, the containers can talk to one another.
 $ docker network create hydraguide
 ```
 
-## Install and run PostgreSQL
+## Install and Run PostgreSQL in Docker
 
 This docker command starts postgres container `ory-hydra-example--postgres` and
 sets up a database called `hydra` with user `hydra` and password `secret`.
@@ -161,7 +162,7 @@ life miserable. Use a managed solution like Amazon RDS or Google Cloud SQL. Even
 small instances will be able to serve a lot of traffic, check out some of the
 [benchmarks](https://www.ory.sh/docs/guides/master/performance/1-hydra).
 
-## Configure the environment
+## Configure the ORY Hydra OAuth2 and OpenID Connect Provider
 
 The **system secret** is used to **encrypt data at rest**, and to **sign tokens
 and authorize codes**. Once a database is initialized with a system secret, you
@@ -178,7 +179,7 @@ $ export SECRETS_SYSTEM=$(export LC_CTYPE=C; cat /dev/urandom | tr -dc 'a-zA-Z0-
 # $ export SECRETS_SYSTEM=this_needs_to_be_the_same_always_and_also_very_$3cuR3-._
 ```
 
-### Database
+### Define the Data Source Name (DSN)
 
 The database url must point to the postgres container we created above. The
 database will be used to persist and query data. **ORY Hydra prevents data
@@ -189,7 +190,7 @@ both payload and signature are required.
 $ export DSN=postgres://hydra:secret@ory-hydra-example--postgres:5432/hydra?sslmode=disable
 ```
 
-### Initialize the database
+### Run SQL Migrations
 
 Next, the database needs to be initialized. This can be achieved with
 `hydra migrate sql`. Here we pull the latest docker image for ORY Hydra and run
@@ -205,7 +206,7 @@ $ docker run -it --rm \
 To prevent bad things from happening, SQL migrations are never run without you
 explicitly telling them to. This is the case for new and existing databases.
 
-## Run the OAuth2 Server
+## Run the ORY Hydra OAuth2 and OpenID Connect Provider
 
 Besides setting the system secret (`SECRETS_SYSTEM` ), the database url (`DSN`
 ), the public url (`URLS_SELF_ISSUER`) of the server, the user login endpoint (
@@ -347,7 +348,7 @@ as [IETF OAuth2 Token Introspection](https://tools.ietf.org/html/rfc7662).
 Please make sure to replace `>INSERT-TOKEN-HERE<` with the token you just
 received.
 
-## The user login & consent flow
+## The User Login & Consent Flow
 
 ORY Hydra is not an
 [Identity Management](https://en.wikipedia.org/wiki/Identity_management)
@@ -445,7 +446,7 @@ If your browser does not open automatically, navigate to:
         http://127.0.0.1:9010/
 ```
 
-### Login & Consent
+### User Login and User Consent
 
 Open `http://127.0.0.1:9010/` in your browser and you will see a simple screen
 asking you to authorize the application. If you remember the CircleCI example
@@ -474,7 +475,7 @@ example only requests very basic permissions, you should grant them all.
 Once logged in and authorized, ORY Hydra will issue an access, a refresh (if
 scope `offline` was granted), and an ID token (if scope `openid` was granted).
 
-## You made it!
+## Continue Learning about ORY Hydra OAuth2 and OpenID Connect Server
 
 That's it, you have a running OAuth2 server with an exemplary identity provider,
 and performed an OAuth2 request! You can use the token from the last request and

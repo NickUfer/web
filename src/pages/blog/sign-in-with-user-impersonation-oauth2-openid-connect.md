@@ -36,7 +36,7 @@ gaining access to the application in your name.
 
 Those applications we found vulnerable to this issue have been contacted.
 
-## Details
+## OAuth2 / OpenID Connect Sign In Flow
 
 Using OAuth 2.0 or OpenID Connect for federated login is common practice, and
 many web apps allow you to “Sign in with X”. The vulnerability that was found

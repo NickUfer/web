@@ -29,7 +29,7 @@ overline: Mobile & Native App Security
 category: Mobile & Native App Security
 ---
 
-## Introduction
+## What is OAuth2 and PKCE?
 
 You might ask yourself: “Why do I need a guide to mobile and native app
 authorization and OAuth2? I’ll simply use the OAuth 2.0 Implicit flow and I’m
@@ -44,7 +44,7 @@ Authorize Code flow with Proof Key for Code Exchange (PKCE) for public clients.
 Third, you will be supplied with links to open source software capable of
 solving the introduced flows and features.
 
-## What To Avoid From Now On
+## Mobile Login Bad Practices
 
 As author & maintainer of various open source projects in the area of OAuth2,
 OpenID Connect, Access Control and API Security, I have seen a lot of questions,
@@ -182,7 +182,7 @@ and use external user-agents, typically the browser. Here is why:
 > and copy session cookies and use them to perform authenticated actions as the
 > user. - [Source](https://tools.ietf.org/html/rfc8252%23section-8.12)
 
-## What To Do Instead
+## Use OAuth2 with PKCE instead
 
 Now you know what to avoid. Let’s talk about what to do instead!
 
@@ -262,7 +262,7 @@ check out the [project on GitHub.](https://github.com/ory/hydra)
 [iOS](https://github.com/openid/AppAuth-iOS) that supports public clients and
 PKCE.
 
-## Where can I find help?
+## Open Source and other Resources
 
 Besides the obvious ones like Stackoverflow or Reddit, you can ask questions
 related to these topics at [community.ory.sh](https://community.ory.sh/), in our
