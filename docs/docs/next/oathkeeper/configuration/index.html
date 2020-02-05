@@ -587,6 +587,18 @@ using environment variables, as documented below.</p>
   <span class="hljs-comment">#</span>
   <span class="hljs-attr">repositories:</span> <span class="hljs-string">'["file://path/to/rules.json","inline://W3siaWQiOiJmb28tcnVsZSIsImF1dGhlbnRpY2F0b3JzIjpbXX1d","https://path-to-my-rules/rules.json"]'</span>
 
+  <span class="hljs-comment">## Matching Strategy ##</span>
+  <span class="hljs-comment"># Determines a matching strategy for the access rules. Currently supported values are `glob` and `regexp`.</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Default value: "regexp"</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using enrinment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export ACCESS_RULES_MATCHING_STRATEGY=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set ACCESS_RULES_MATCHING_STRATEGY=&lt;value&gt;</span>
+  <span class="hljs-attr">matching_strategy:</span> <span class="hljs-string">glob</span>
+
 <span class="hljs-comment">## Authenticators ##</span>
 <span class="hljs-comment">#</span>
 <span class="hljs-comment"># For more information on authenticators head over to: https://www.ory.sh/docs/oathkeeper/pipeline/authn</span>
@@ -1368,7 +1380,7 @@ using environment variables, as documented below.</p>
 <span class="hljs-comment">#</span>
 <span class="hljs-attr">profiling:</span> <span class="hljs-string">''</span>
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/31/2020 by aeneasr</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/error"><span class="arrow-prev">← </span><span>Error Handlers</span></a><a class="docs-next button" href="/docs/next/oathkeeper/configure-deploy"><span>Configure and Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/5/2020 by Aynur Zulkarnaev</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/error"><span class="arrow-prev">← </span><span>Error Handlers</span></a><a class="docs-next button" href="/docs/next/oathkeeper/configure-deploy"><span>Configure and Deploy</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

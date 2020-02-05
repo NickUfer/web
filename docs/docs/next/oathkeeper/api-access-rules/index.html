@@ -80,6 +80,8 @@ in the configuration file (<code>oathkeeper -c ./path/to/config.yml ...</code>)<
     <span class="hljs-comment"># If the URL Scheme is `http://` or `https://`, the access rules (an array of access rules is expected) will be</span>
     <span class="hljs-comment"># fetched from the provided HTTP(s) location.</span>
     <span class="hljs-bullet">-</span> <span class="hljs-string">https://path-to-my-rules/rules.json</span>
+  <span class="hljs-comment"># Determines a matching strategy for the access rules . Currently supported values are `glob` and `regexp`. Empty string defaults to regexp.</span>
+  <span class="hljs-attr">matching_strategy:</span> <span class="hljs-string">glob</span>
 </code></pre>
 <p>or by setting the equivalent environment variable:</p>
 <pre><code class="hljs css language-bash">$ <span class="hljs-built_in">export</span> ACCESS_RULES_REPOSITORIES=<span class="hljs-string">'file://path/to/rules.json,https://path-to-my-rules/rules.json,inline://W3siaWQiOiJmb28tcnVsZSIsImF1dGhlbnRpY2F0b3JzIjpbXX1d'</span>
@@ -131,21 +133,30 @@ at <code>/api/v1/users</code>.</li>
 <ul>
 <li><code>methods</code> (string[]): Array of HTTP methods (e.g. GET, POST, PUT, DELETE,
 ...).</li>
-<li><code>url</code> (string): The URL that should be matched. Currently supports <code>regex</code>
-templates and will support glob matching in the future:
+<li><code>url</code> (string): The URL that should be matched. You can use regular
+expressions or glob patterns in this field to match more than one url. The
+matching strategy (glob or regexp) is defined in the global configuration
+file as <code>access_rules.matching_strategy</code>. This matcher ignores query
+parameters. Regular expressions (or glob patterns) are encapsulated in
+brackets <code>&lt;</code> and <code>&gt;</code>.
+Regular expressions examples:
 <ul>
-<li><code>regex</code>: Matches the URL against the string. You can use regular
-expressions in this field to match more than one url. This matcher ignores
-query parameters. Regular expressions are encapsulated in brackets <code>&lt;</code> and
-<code>&gt;</code>: _ <code>https://mydomain.com/</code> _ matches: <code>https://mydomain.com/</code>. _ does
-not match: <code>https://mydomain.com/foo</code>. _ does not match:
-<code>https://mydomain.com</code>. _
-<code>&lt;https|http&gt;://mydomain.com/&lt;._&gt;</code>* matches:<code>https://mydomain.com/</code>. _
-matches: <code>http://mydomain.com/</code>. _ matches: <code>http://mydomain.com/foo</code>. _
-does not match: <code>https://other-domain.com/</code>. _ does not match:
+<li><code>https://mydomain.com/</code> matches <code>https://mydomain.com/</code> and does not match
+<code>https://mydomain.com/foo</code> or <code>https://mydomain.com</code>.</li>
+<li><code>&lt;https|http&gt;://mydomain.com/&lt;.*&gt;</code> matches:<code>https://mydomain.com/</code> or
+<code>http://mydomain.com/foo</code>. Does not match: <code>https://other-domain.com/</code> or
 <code>https://mydomain.com</code>.</li>
-<li><code>glob</code> (NOT YET AVAILABLE): Matches the URL against the string and
-supports glob matching.</li>
+<li><code>http://mydomain.com/&lt;[[:digit:]]+&gt;</code> matches <code>http://mydomain.com/123</code> and
+does not match <code>http://mydomain/abc</code>.</li>
+<li><code>http://mydomain.com/&lt;(?!protected).*&gt;</code> matches
+<code>http://mydomain.com/resource</code> and does not match
+<code>http://mydomain.com/protected</code>
+<a href="http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm">Glop</a> patterns
+examples:</li>
+<li><code>https://mydomain.com/&lt;m?n&gt;</code> matches <code>https://mydomain.com/man</code> and does
+not match <code>http://mydomain.com/foo</code>.</li>
+<li><code>https://mydomain.com/&lt;{foo*,bar*}&gt;</code> matches <code>https://mydomain.com/foo</code> or
+<code>https://mydomain.com/bar</code> and does not match <code>https://mydomain.com/any</code>.</li>
 </ul></li>
 </ul></li>
 <li><code>authenticators</code>: A list of authentication handlers that authenticate the
@@ -257,7 +268,7 @@ Scope <code>foo</code> matches <code>foo</code> but not <code>foo.bar</code> nor
 <li><code>none</code>: Scope validation is disabled. If however a scope is configured to be
 validated, the request will fail with an error message.</li>
 </ul>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 12/26/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/next/oathkeeper/pipeline/authn"><span>Authenticators</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#access-rule-format">Access Rule Format</a></li><li><a href="#handler-configuration">Handler configuration</a></li><li><a href="#scoped-credentials">Scoped Credentials</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/5/2020 by Aynur Zulkarnaev</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/next/oathkeeper/pipeline/authn"><span>Authenticators</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#access-rule-format">Access Rule Format</a></li><li><a href="#handler-configuration">Handler configuration</a></li><li><a href="#scoped-credentials">Scoped Credentials</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
