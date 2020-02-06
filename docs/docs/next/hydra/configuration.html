@@ -283,6 +283,9 @@
     <span class="hljs-comment"># For more information head over to: https://www.ory.sh/docs/hydra/production#tls-termination</span>
     <span class="hljs-attr">allow_termination_from:</span>
       <span class="hljs-bullet">-</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">/32</span>
+  <span class="hljs-attr">cookies:</span>
+    <span class="hljs-comment"># specify the SameSite mode that cookies should be sent with</span>
+    <span class="hljs-attr">same_site_mode:</span> <span class="hljs-string">Lax</span>
 
 <span class="hljs-comment"># dsn sets the data source name. This configures the backend where ORY Hydra persists data.</span>
 <span class="hljs-comment">#</span>
@@ -488,7 +491,7 @@
         <span class="hljs-comment"># The address of jaeger-agent's HTTP sampling server</span>
         <span class="hljs-attr">server_url:</span> <span class="hljs-string">http://localhost:5778/sampling</span>
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/28/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/configure-deploy"><span class="arrow-prev">← </span><span>Installation and Setup</span></a><a class="docs-next button" href="/docs/next/hydra/dependencies-environment"><span>Database Setup and Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/6/2020 by Matthew Fawcett</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/configure-deploy"><span class="arrow-prev">← </span><span>Installation and Setup</span></a><a class="docs-next button" href="/docs/next/hydra/dependencies-environment"><span>Database Setup and Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
