@@ -138,8 +138,7 @@ expressions or glob patterns in this field to match more than one url. The
 matching strategy (glob or regexp) is defined in the global configuration
 file as <code>access_rules.matching_strategy</code>. This matcher ignores query
 parameters. Regular expressions (or glob patterns) are encapsulated in
-brackets <code>&lt;</code> and <code>&gt;</code>.
-Regular expressions examples:
+brackets <code>&lt;</code> and <code>&gt;</code>. Regular expressions examples:
 <ul>
 <li><code>https://mydomain.com/</code> matches <code>https://mydomain.com/</code> and does not match
 <code>https://mydomain.com/foo</code> or <code>https://mydomain.com</code>.</li>
@@ -151,8 +150,8 @@ does not match <code>http://mydomain/abc</code>.</li>
 <li><code>http://mydomain.com/&lt;(?!protected).*&gt;</code> matches
 <code>http://mydomain.com/resource</code> and does not match
 <code>http://mydomain.com/protected</code>
-<a href="http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm">Glop</a> patterns
-examples:</li>
+<a href="http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm">Glop</a>
+patterns examples:</li>
 <li><code>https://mydomain.com/&lt;m?n&gt;</code> matches <code>https://mydomain.com/man</code> and does
 not match <code>http://mydomain.com/foo</code>.</li>
 <li><code>https://mydomain.com/&lt;{foo*,bar*}&gt;</code> matches <code>https://mydomain.com/foo</code> or
@@ -268,7 +267,7 @@ Scope <code>foo</code> matches <code>foo</code> but not <code>foo.bar</code> nor
 <li><code>none</code>: Scope validation is disabled. If however a scope is configured to be
 validated, the request will fail with an error message.</li>
 </ul>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/5/2020 by Aynur Zulkarnaev</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/next/oathkeeper/pipeline/authn"><span>Authenticators</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#access-rule-format">Access Rule Format</a></li><li><a href="#handler-configuration">Handler configuration</a></li><li><a href="#scoped-credentials">Scoped Credentials</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/5/2020 by aeneasr</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/install"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/docs/next/oathkeeper/pipeline/authn"><span>Authenticators</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#access-rule-format">Access Rule Format</a></li><li><a href="#handler-configuration">Handler configuration</a></li><li><a href="#scoped-credentials">Scoped Credentials</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
