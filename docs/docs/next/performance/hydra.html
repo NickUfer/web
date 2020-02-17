@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ORY Hydra · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this document you will find benchmark results for different endpoints of ORY"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ORY Hydra · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="In this document you will find benchmark results for different endpoints of ORY"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>ORY Hydra · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="In this document you will find benchmark results for different endpoints of ORY Hydra. All benchmarks are executed"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="ORY Hydra · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="In this document you will find benchmark results for different endpoints of ORY Hydra. All benchmarks are executed"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -62,73 +62,65 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/performance/hydra.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">ORY Hydra</h1></header><article><div><span><p>In this document you will find benchmark results for different endpoints of ORY
-Hydra. All benchmarks are executed using
-<a href="https://github.com/rakyll/hey">rakyll/hey</a>. Please note that these benchmarks
-run against the in-memory storage adapter of ORY Hydra. These benchmarks
-represent what performance you would get with a zero-overhead database
-implementation.</p>
-<p>We do not include benchmarks against databases (e.g. MySQL, PostgreSQL or
-CockroachDB) as the performance greatly differs between deployments (e.g.
-request latency, database configuration) and tweaking individual things may
-greatly improve performance. We believe, for that reason, that benchmark results
-for these database adapters are difficult to generalize and potentially
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/performance/hydra.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">ORY Hydra</h1></header><article><div><span><p>In this document you will find benchmark results for different endpoints of ORY Hydra. All benchmarks are executed
+using <a href="https://github.com/rakyll/hey">rakyll/hey</a>. Please note that these benchmarks run against the in-memory storage
+adapter of ORY Hydra. These benchmarks represent what performance you would get with a zero-overhead database implementation.</p>
+<p>We do not include benchmarks against databases (e.g. MySQL, PostgreSQL or CockroachDB) as the performance greatly differs between
+deployments (e.g. request latency, database configuration) and tweaking individual things may greatly improve performance.
+We believe, for that reason, that benchmark results for these database adapters are difficult to generalize and potentially
 deceiving. They are thus not included.</p>
-<p>This file is updated on every push to master. It thus represents the benchmark
-data for the latest version.</p>
-<p>All benchmarks run 10.000 requests in total, with 100 concurrent requests. All
-benchmarks run on Circle-CI with a
+<p>This file is updated on every push to master. It thus represents the benchmark data for the latest version.</p>
+<p>All benchmarks run 10.000 requests in total, with 100 concurrent requests. All benchmarks run on Circle-CI with a
 <a href="https://support.circleci.com/hc/en-us/articles/360000489307-Why-do-my-tests-take-longer-to-run-on-CircleCI-than-locally-">&quot;2 CPU cores and 4GB RAM&quot;</a>
 configuration.</p>
 <h2><a class="anchor" aria-hidden="true" id="bcrypt"></a><a href="#bcrypt" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>BCrypt</h2>
-<p>ORY Hydra uses BCrypt to obfuscate secrets of OAuth 2.0 Clients. When using
-flows such as the OAuth 2.0 Client Credentials Grant, ORY Hydra validates the
-client credentials using BCrypt which causes (by design) CPU load. CPU load and
-performance depend on the BCrypt cost which can be set using the environment
-variable <code>BCRYPT_COST</code>. For these benchmarks, we have set <code>BCRYPT_COST=8</code>.</p>
+<p>ORY Hydra uses BCrypt to obfuscate secrets of OAuth 2.0 Clients. When using flows such as the OAuth 2.0 Client Credentials
+Grant, ORY Hydra validates the client credentials using BCrypt which causes (by design) CPU load. CPU load and performance
+depend on the BCrypt cost which can be set using the environment variable <code>BCRYPT_COST</code>. For these benchmarks,
+we have set <code>BCRYPT_COST=8</code>.</p>
 <h2><a class="anchor" aria-hidden="true" id="oauth-20"></a><a href="#oauth-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0</h2>
 <p>This section contains various benchmarks against OAuth 2.0 endpoints</p>
 <h3><a class="anchor" aria-hidden="true" id="token-introspection"></a><a href="#token-introspection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Token Introspection</h3>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">4.2082</span> secs
-  Slowest:  <span class="hljs-number">0.1695</span> secs
-  Fastest:  <span class="hljs-number">0.0004</span> secs
-  Average:  <span class="hljs-number">0.0409</span> secs
-  Requests/sec: <span class="hljs-number">2376.2953</span>
-
+  Total:    <span class="hljs-number">2.7472</span> secs
+  Slowest:  <span class="hljs-number">0.0729</span> secs
+  Fastest:  <span class="hljs-number">0.0003</span> secs
+  Average:  <span class="hljs-number">0.0266</span> secs
+  Requests/sec: <span class="hljs-number">3640.1013</span>
+  
   Total data:   <span class="hljs-number">1550000</span> bytes
   Size/request: <span class="hljs-number">155</span> bytes
 
 Response time histogram:
   <span class="hljs-number">0.000</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.017</span> [<span class="hljs-number">1239</span>]  |■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.034</span> [<span class="hljs-number">2721</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.051</span> [<span class="hljs-number">3269</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.068</span> [<span class="hljs-number">1952</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.085</span> [<span class="hljs-number">527</span>]   |■■■■■■
-  <span class="hljs-number">0.102</span> [<span class="hljs-number">107</span>]   |■
-  <span class="hljs-number">0.119</span> [<span class="hljs-number">74</span>]    |■
-  <span class="hljs-number">0.136</span> [<span class="hljs-number">53</span>]    |■
-  <span class="hljs-number">0.153</span> [<span class="hljs-number">37</span>]    |
-  <span class="hljs-number">0.170</span> [<span class="hljs-number">20</span>]    |
+  <span class="hljs-number">0.008</span> [<span class="hljs-number">897</span>]   |■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.015</span> [<span class="hljs-number">1374</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.022</span> [<span class="hljs-number">1833</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.029</span> [<span class="hljs-number">1905</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.037</span> [<span class="hljs-number">1562</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.044</span> [<span class="hljs-number">1155</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.051</span> [<span class="hljs-number">700</span>]   |■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.058</span> [<span class="hljs-number">399</span>]   |■■■■■■■■
+  <span class="hljs-number">0.066</span> [<span class="hljs-number">146</span>]   |■■■
+  <span class="hljs-number">0.073</span> [<span class="hljs-number">28</span>]    |■
 
 
 Latency distribution:
-  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0149</span> secs
-  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0260</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0393</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0528</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0656</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0731</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1222</span> secs
+  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0083</span> secs
+  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0158</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0255</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0362</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0463</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0519</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0613</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0004</span> secs, <span class="hljs-number">0.1695</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0095</span> secs
-  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0276</span> secs
-  resp wait:    <span class="hljs-number">0.0406</span> secs, <span class="hljs-number">0.0004</span> secs, <span class="hljs-number">0.1694</span> secs
-  resp read:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0193</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0003</span> secs, <span class="hljs-number">0.0729</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0026</span> secs
+  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0061</span> secs
+  resp wait:    <span class="hljs-number">0.0265</span> secs, <span class="hljs-number">0.0003</span> secs, <span class="hljs-number">0.0707</span> secs
+  resp read:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0061</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses
@@ -140,44 +132,44 @@ Status code distribution:
 <p>This endpoint uses <a href="#bcrypt">BCrypt</a>.</p>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">20.7015</span> secs
-  Slowest:  <span class="hljs-number">0.6767</span> secs
-  Fastest:  <span class="hljs-number">0.0178</span> secs
-  Average:  <span class="hljs-number">0.2020</span> secs
-  Requests/sec: <span class="hljs-number">483.0564</span>
-
+  Total:    <span class="hljs-number">19.9146</span> secs
+  Slowest:  <span class="hljs-number">0.4157</span> secs
+  Fastest:  <span class="hljs-number">0.0174</span> secs
+  Average:  <span class="hljs-number">0.1956</span> secs
+  Requests/sec: <span class="hljs-number">502.1430</span>
+  
   Total data:   <span class="hljs-number">1570000</span> bytes
   Size/request: <span class="hljs-number">157</span> bytes
 
 Response time histogram:
-  <span class="hljs-number">0.018</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.084</span> [<span class="hljs-number">821</span>]   |■■■■■■■■■■■
-  <span class="hljs-number">0.150</span> [<span class="hljs-number">2007</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.215</span> [<span class="hljs-number">2958</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.281</span> [<span class="hljs-number">2379</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.347</span> [<span class="hljs-number">1411</span>]  |■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.413</span> [<span class="hljs-number">303</span>]   |■■■■
-  <span class="hljs-number">0.479</span> [<span class="hljs-number">81</span>]    |■
-  <span class="hljs-number">0.545</span> [<span class="hljs-number">22</span>]    |
-  <span class="hljs-number">0.611</span> [<span class="hljs-number">8</span>] |
-  <span class="hljs-number">0.677</span> [<span class="hljs-number">9</span>] |
+  <span class="hljs-number">0.017</span> [<span class="hljs-number">1</span>] |
+  <span class="hljs-number">0.057</span> [<span class="hljs-number">207</span>]   |■■
+  <span class="hljs-number">0.097</span> [<span class="hljs-number">272</span>]   |■■■
+  <span class="hljs-number">0.137</span> [<span class="hljs-number">1713</span>]  |■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.177</span> [<span class="hljs-number">759</span>]   |■■■■■■■
+  <span class="hljs-number">0.217</span> [<span class="hljs-number">4165</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.256</span> [<span class="hljs-number">848</span>]   |■■■■■■■■
+  <span class="hljs-number">0.296</span> [<span class="hljs-number">1552</span>]  |■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.336</span> [<span class="hljs-number">400</span>]   |■■■■
+  <span class="hljs-number">0.376</span> [<span class="hljs-number">56</span>]    |■
+  <span class="hljs-number">0.416</span> [<span class="hljs-number">27</span>]    |
 
 
 Latency distribution:
-  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0909</span> secs
-  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1392</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2012</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2614</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.3080</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.3385</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.4229</span> secs
+  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1116</span> secs
+  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1623</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.1979</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2234</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2839</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.2957</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.3241</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0178</span> secs, <span class="hljs-number">0.6767</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0262</span> secs
-  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0267</span> secs
-  resp wait:    <span class="hljs-number">0.2017</span> secs, <span class="hljs-number">0.0178</span> secs, <span class="hljs-number">0.6766</span> secs
-  resp read:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0350</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0174</span> secs, <span class="hljs-number">0.4157</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0102</span> secs
+  req write:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0486</span> secs
+  resp wait:    <span class="hljs-number">0.1955</span> secs, <span class="hljs-number">0.0173</span> secs, <span class="hljs-number">0.4156</span> secs
+  resp read:    <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0014</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses
@@ -187,52 +179,51 @@ Status code distribution:
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="oauth-20-client-management"></a><a href="#oauth-20-client-management" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Client Management</h2>
 <h3><a class="anchor" aria-hidden="true" id="creating-oauth-20-clients"></a><a href="#creating-oauth-20-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creating OAuth 2.0 Clients</h3>
-<p>This endpoint uses <a href="#bcrypt">BCrypt</a> and generates IDs and secrets by reading
-from which negatively impacts performance. Performance will be better if IDs and
-secrets are set in the request as opposed to generated by ORY Hydra.</p>
+<p>This endpoint uses <a href="#bcrypt">BCrypt</a> and generates IDs and secrets by reading from  which negatively impacts
+performance. Performance will be better if IDs and secrets are set in the request as opposed to generated by ORY Hydra.</p>
 <pre><code class="hljs">This test <span class="hljs-keyword">is</span> currently disabled due <span class="hljs-keyword">to</span> issues <span class="hljs-keyword">with</span> /dev/urandom being inaccessible <span class="hljs-keyword">in</span> <span class="hljs-keyword">the</span> CI.
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="listing-oauth-20-clients"></a><a href="#listing-oauth-20-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Listing OAuth 2.0 Clients</h3>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">0.6766</span> secs
-  Slowest:  <span class="hljs-number">0.0687</span> secs
+  Total:    <span class="hljs-number">0.4152</span> secs
+  Slowest:  <span class="hljs-number">0.0248</span> secs
   Fastest:  <span class="hljs-number">0.0001</span> secs
-  Average:  <span class="hljs-number">0.0063</span> secs
-  Requests/sec: <span class="hljs-number">14780.1633</span>
-
+  Average:  <span class="hljs-number">0.0038</span> secs
+  Requests/sec: <span class="hljs-number">24085.6346</span>
+  
   Total data:   <span class="hljs-number">4820000</span> bytes
   Size/request: <span class="hljs-number">482</span> bytes
 
 Response time histogram:
   <span class="hljs-number">0.000</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.007</span> [<span class="hljs-number">5895</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.014</span> [<span class="hljs-number">2981</span>]  |■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.021</span> [<span class="hljs-number">798</span>]   |■■■■■
-  <span class="hljs-number">0.028</span> [<span class="hljs-number">212</span>]   |■
-  <span class="hljs-number">0.034</span> [<span class="hljs-number">54</span>]    |
-  <span class="hljs-number">0.041</span> [<span class="hljs-number">17</span>]    |
-  <span class="hljs-number">0.048</span> [<span class="hljs-number">29</span>]    |
-  <span class="hljs-number">0.055</span> [<span class="hljs-number">0</span>] |
-  <span class="hljs-number">0.062</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.069</span> [<span class="hljs-number">12</span>]    |
+  <span class="hljs-number">0.003</span> [<span class="hljs-number">4914</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.005</span> [<span class="hljs-number">1377</span>]  |■■■■■■■■■■■
+  <span class="hljs-number">0.007</span> [<span class="hljs-number">1757</span>]  |■■■■■■■■■■■■■■
+  <span class="hljs-number">0.010</span> [<span class="hljs-number">1086</span>]  |■■■■■■■■■
+  <span class="hljs-number">0.012</span> [<span class="hljs-number">584</span>]   |■■■■■
+  <span class="hljs-number">0.015</span> [<span class="hljs-number">192</span>]   |■■
+  <span class="hljs-number">0.017</span> [<span class="hljs-number">70</span>]    |■
+  <span class="hljs-number">0.020</span> [<span class="hljs-number">15</span>]    |
+  <span class="hljs-number">0.022</span> [<span class="hljs-number">2</span>] |
+  <span class="hljs-number">0.025</span> [<span class="hljs-number">2</span>] |
 
 
 Latency distribution:
-  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0002</span> secs
-  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0003</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0053</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0102</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0143</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0185</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0290</span> secs
+  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0001</span> secs
+  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0002</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0028</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0065</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0095</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0113</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0146</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0687</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0341</span> secs
-  req write:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0356</span> secs
-  resp wait:    <span class="hljs-number">0.0054</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0309</span> secs
-  resp read:    <span class="hljs-number">0.0005</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0424</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0248</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0075</span> secs
+  req write:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0095</span> secs
+  resp wait:    <span class="hljs-number">0.0034</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0228</span> secs
+  resp read:    <span class="hljs-number">0.0002</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0098</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses
@@ -243,44 +234,44 @@ Status code distribution:
 <h3><a class="anchor" aria-hidden="true" id="fetching-a-specific-oauth-20-client"></a><a href="#fetching-a-specific-oauth-20-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Fetching a specific OAuth 2.0 Client</h3>
 <pre><code class="hljs">
 Summary:
-  Total:    <span class="hljs-number">0.5926</span> secs
-  Slowest:  <span class="hljs-number">0.0324</span> secs
+  Total:    <span class="hljs-number">0.3832</span> secs
+  Slowest:  <span class="hljs-number">0.0309</span> secs
   Fastest:  <span class="hljs-number">0.0001</span> secs
-  Average:  <span class="hljs-number">0.0056</span> secs
-  Requests/sec: <span class="hljs-number">16873.6953</span>
-
+  Average:  <span class="hljs-number">0.0036</span> secs
+  Requests/sec: <span class="hljs-number">26097.8584</span>
+  
   Total data:   <span class="hljs-number">4800000</span> bytes
   Size/request: <span class="hljs-number">480</span> bytes
 
 Response time histogram:
   <span class="hljs-number">0.000</span> [<span class="hljs-number">1</span>] |
-  <span class="hljs-number">0.003</span> [<span class="hljs-number">3929</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.007</span> [<span class="hljs-number">1645</span>]  |■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.010</span> [<span class="hljs-number">2465</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■
-  <span class="hljs-number">0.013</span> [<span class="hljs-number">1239</span>]  |■■■■■■■■■■■■■
-  <span class="hljs-number">0.016</span> [<span class="hljs-number">466</span>]   |■■■■■
-  <span class="hljs-number">0.019</span> [<span class="hljs-number">174</span>]   |■■
-  <span class="hljs-number">0.023</span> [<span class="hljs-number">33</span>]    |
-  <span class="hljs-number">0.026</span> [<span class="hljs-number">11</span>]    |
-  <span class="hljs-number">0.029</span> [<span class="hljs-number">17</span>]    |
-  <span class="hljs-number">0.032</span> [<span class="hljs-number">20</span>]    |
+  <span class="hljs-number">0.003</span> [<span class="hljs-number">5677</span>]  |■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.006</span> [<span class="hljs-number">2081</span>]  |■■■■■■■■■■■■■■■
+  <span class="hljs-number">0.009</span> [<span class="hljs-number">1232</span>]  |■■■■■■■■■
+  <span class="hljs-number">0.012</span> [<span class="hljs-number">582</span>]   |■■■■
+  <span class="hljs-number">0.015</span> [<span class="hljs-number">248</span>]   |■■
+  <span class="hljs-number">0.019</span> [<span class="hljs-number">50</span>]    |
+  <span class="hljs-number">0.022</span> [<span class="hljs-number">50</span>]    |
+  <span class="hljs-number">0.025</span> [<span class="hljs-number">49</span>]    |
+  <span class="hljs-number">0.028</span> [<span class="hljs-number">21</span>]    |
+  <span class="hljs-number">0.031</span> [<span class="hljs-number">9</span>] |
 
 
 Latency distribution:
-  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0002</span> secs
-  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0004</span> secs
-  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0055</span> secs
-  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0091</span> secs
-  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0118</span> secs
-  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0143</span> secs
-  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0189</span> secs
+  <span class="hljs-number">10</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0001</span> secs
+  <span class="hljs-number">25</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0002</span> secs
+  <span class="hljs-number">50</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0015</span> secs
+  <span class="hljs-number">75</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0058</span> secs
+  <span class="hljs-number">90</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0093</span> secs
+  <span class="hljs-number">95</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0119</span> secs
+  <span class="hljs-number">99</span>% <span class="hljs-keyword">in</span> <span class="hljs-number">0.0203</span> secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0324</span> secs
-  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0042</span> secs
-  req write:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0234</span> secs
-  resp wait:    <span class="hljs-number">0.0051</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0233</span> secs
-  resp read:    <span class="hljs-number">0.0003</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0156</span> secs
+  DNS+dialup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0309</span> secs
+  DNS-lookup:   <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0112</span> secs
+  req write:    <span class="hljs-number">0.0001</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0187</span> secs
+  resp wait:    <span class="hljs-number">0.0030</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0272</span> secs
+  resp read:    <span class="hljs-number">0.0003</span> secs, <span class="hljs-number">0.0000</span> secs, <span class="hljs-number">0.0188</span> secs
 
 Status code distribution:
   [<span class="hljs-number">200</span>] <span class="hljs-number">10000</span> responses
@@ -288,7 +279,7 @@ Status code distribution:
 
 
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/16/2020 by aeneasr</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/performance/index"><span class="arrow-prev">← </span><span>Introduction</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#bcrypt">BCrypt</a></li><li><a href="#oauth-20">OAuth 2.0</a><ul class="toc-headings"><li><a href="#token-introspection">Token Introspection</a></li><li><a href="#client-credentials-grant">Client Credentials Grant</a></li></ul></li><li><a href="#oauth-20-client-management">OAuth 2.0 Client Management</a><ul class="toc-headings"><li><a href="#creating-oauth-20-clients">Creating OAuth 2.0 Clients</a></li><li><a href="#listing-oauth-20-clients">Listing OAuth 2.0 Clients</a></li><li><a href="#fetching-a-specific-oauth-20-client">Fetching a specific OAuth 2.0 Client</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/17/2020 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/performance/index"><span class="arrow-prev">← </span><span>Introduction</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#bcrypt">BCrypt</a></li><li><a href="#oauth-20">OAuth 2.0</a><ul class="toc-headings"><li><a href="#token-introspection">Token Introspection</a></li><li><a href="#client-credentials-grant">Client Credentials Grant</a></li></ul></li><li><a href="#oauth-20-client-management">OAuth 2.0 Client Management</a><ul class="toc-headings"><li><a href="#creating-oauth-20-clients">Creating OAuth 2.0 Clients</a></li><li><a href="#listing-oauth-20-clients">Listing OAuth 2.0 Clients</a></li><li><a href="#fetching-a-specific-oauth-20-client">Fetching a specific OAuth 2.0 Client</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
