@@ -4,12 +4,12 @@ import Hero from '../components/hero'
 import Newsletter from '../components/newsletter'
 import Section from '../components/section'
 import SEO from '../components/seo'
-import kratosPolyglot from '../images/kratos_polyglot.svg'
+import kratosPolyglot from '../images/kratos/svg_kratos_p.svg'
 import Projects from '../components/projects'
 import Adopters from '../components/adopters'
 import Stats from '../components/stats'
 import CodeBox from '../components/codebox'
-import kratosProcess from '../images/kratos_process.svg'
+import kratosProcess from '../images/kratos/svg_kratos.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
 
@@ -62,7 +62,7 @@ export const registrationRoute = (req, res) => {
 
 const KratosPage = () => (
   <Layout theme="kratos" appendix={'Kratos'}>
-    <SEO description="" title={`ORY Kratos - ory.sh`} />
+    <SEO description="" title={`ORY Kratos Cloud Native Identity and User Management System`} />
     <Hero
       title="Cloud Native Identity and  User Management System"
       subtitle="Use a variety of configurable authentication mechanisms to master user management in the cloud."

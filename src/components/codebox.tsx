@@ -38,8 +38,8 @@ class CodeBox extends Component<PropTypes, StateTypes> {
         <div className={styles.editorHeader}>
           <div className={styles.windowActions}>
             <div className={cn(styles.windowAction, styles.primary)} />
-            <div className={styles.windowAction} />
-            <div className={styles.windowAction} />
+            <div className={cn(styles.windowAction)} />
+            <div className={cn(styles.windowAction)} />
           </div>
           <div className={styles.tabs}>
             {tabs.map(({ filename }, index) => (

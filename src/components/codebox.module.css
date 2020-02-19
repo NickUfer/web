@@ -1,29 +1,31 @@
 .box {
-  background-color: var(--colors-base-black);
-  border-radius: 4px;
-  padding: 8px 16px;
+  background-color: var(--colors-base-offblack);
+  box-shadow: 0px 4px 8px rgba(00,00,00,0.4);
+  padding: 0px 16px;
+  border-radius: 3px;
   min-height: 360px;
 }
 
 .editor-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   color: var(--colors-base-white);
+
   & .tabs {
     overflow: auto;
   }
   & .tab {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Sans', sans-serif;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 11px;
-    line-height: 250%;
-    margin-right: 16px;
+    line-height: 200%;
+    margin-right: 24px;
     cursor: pointer;
     display: inline;
 
     &.selected {
-      border-bottom: 1px solid var(--colors-themed-default);
+      color: var(--colors-themed-default);
     }
   }
 }
@@ -31,13 +33,13 @@
 .window-actions {
   display: flex;
   align-items: center;
-  height: 20px;
+  height: 36px;
   margin-right: 16px;
   & .window-action {
     width: 8px;
     height: 8px;
     border-radius: 4px;
-    background-color: var(--colors-themed-weak);
+    background-color: var(--colors-base-grey);
     margin-right: 5px;
 
     &.primary {
@@ -58,14 +60,14 @@
   &,
   & pre,
   & code {
-    color: var(--colors-base-white);
+    color: var(--colors-base-light);
     font-family: 'IBM Plex Mono', monospace;
     text-shadow: none;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 11px;
     line-height: 175%;
-    background-color: var(--colors-base-black);
+    background-color: var(--colors-base-offblack);
 
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -73,6 +75,6 @@
 
   & pre code :global .token.operator {
     color: var(--colors-base-white);
-    background-color: var(--colors-base-black);
+    background-color: var(--colors-base-offblack);
   }
 }
