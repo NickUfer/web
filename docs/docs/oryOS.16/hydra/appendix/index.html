@@ -1,0 +1,332 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Appendix · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="## `hydra serve`"/><meta name="docsearch:version" content="oryOS.16"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Appendix · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="## `hydra serve`"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.16</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class=""><a href="/docs/oryOS.16/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/appendix.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Appendix</h1></header><article><div><span><h2><a class="anchor" aria-hidden="true" id="hydra-serve"></a><a href="#hydra-serve" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>hydra serve</code></h2>
+<pre><code class="hljs">$ hydra <span class="hljs-keyword">help</span> serve
+
+ORY Hydra exposes two ports, a <span class="hljs-keyword">public</span> <span class="hljs-keyword">and</span> an administrative port. The <span class="hljs-keyword">public</span> port <span class="hljs-keyword">is</span> responsible
+<span class="hljs-keyword">for</span> handling requests <span class="hljs-keyword">from</span> the <span class="hljs-keyword">public</span> internet, such <span class="hljs-keyword">as</span> the OAuth <span class="hljs-number">2.0</span> Authorize <span class="hljs-keyword">and</span> Token URLs. The administrative
+port handles administrative requests <span class="hljs-keyword">like</span> creating OAuth <span class="hljs-number">2.0</span> Clients, managing <span class="hljs-keyword">JSON</span> Web <span class="hljs-keyword">Keys</span>, <span class="hljs-keyword">and</span> managing <span class="hljs-keyword">User</span> Login
+<span class="hljs-keyword">and</span> Consent sessions.
+
+It <span class="hljs-keyword">is</span> recommended <span class="hljs-keyword">to</span> run <span class="hljs-string">"hydra serve all"</span>. <span class="hljs-keyword">If</span> you need granular control <span class="hljs-keyword">over</span> CORS <span class="hljs-keyword">settings</span> <span class="hljs-keyword">or</span> similar, you may
+want <span class="hljs-keyword">to</span> run <span class="hljs-string">"hydra serve admin"</span> <span class="hljs-keyword">and</span> <span class="hljs-string">"admin serve public"</span> separately.
+
+<span class="hljs-keyword">To</span> learn more about <span class="hljs-keyword">each</span> individual command, run:
+
+- hydra <span class="hljs-keyword">help</span> serve <span class="hljs-keyword">all</span>
+- hydra <span class="hljs-keyword">help</span> serve <span class="hljs-keyword">admin</span>
+- hydra <span class="hljs-keyword">help</span> serve <span class="hljs-keyword">public</span>
+
+<span class="hljs-keyword">All</span> sub-commands <span class="hljs-keyword">share</span> command line flags <span class="hljs-keyword">and</span> the <span class="hljs-keyword">following</span> environment <span class="hljs-keyword">variable</span> <span class="hljs-keyword">names</span>:
+
+CORE CONTROLS
+=============
+
+- DATABASE_URL: A <span class="hljs-keyword">URL</span> <span class="hljs-keyword">to</span> a persistent backend. Hydra supports various backends:
+  - <span class="hljs-keyword">Memory</span>: <span class="hljs-keyword">If</span> DATABASE_URL <span class="hljs-keyword">is</span> <span class="hljs-string">"memory"</span>, <span class="hljs-keyword">data</span> will be written <span class="hljs-keyword">to</span> <span class="hljs-keyword">memory</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">is</span> lost <span class="hljs-keyword">when</span> you restart this instance.
+    Example: DATABASE_URL=<span class="hljs-keyword">memory</span>
+
+  - Postgres: <span class="hljs-keyword">If</span> DATABASE_URL <span class="hljs-keyword">is</span> a DSN <span class="hljs-keyword">starting</span> <span class="hljs-keyword">with</span> postgres:// PostgreSQL will be used <span class="hljs-keyword">as</span> <span class="hljs-keyword">storage</span> backend.
+    Example: DATABASE_URL=postgres://<span class="hljs-keyword">user</span>:<span class="hljs-keyword">password</span>@host:<span class="hljs-number">123</span>/<span class="hljs-keyword">database</span>
+
+    <span class="hljs-keyword">If</span> PostgreSQL <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> serving TLS, append ?sslmode=<span class="hljs-keyword">disable</span> <span class="hljs-keyword">to</span> the <span class="hljs-keyword">url</span>:
+    DATABASE_URL=postgres://<span class="hljs-keyword">user</span>:<span class="hljs-keyword">password</span>@host:<span class="hljs-number">123</span>/<span class="hljs-keyword">database</span>?sslmode=<span class="hljs-keyword">disable</span>
+
+  - MySQL: <span class="hljs-keyword">If</span> DATABASE_URL <span class="hljs-keyword">is</span> a DSN <span class="hljs-keyword">starting</span> <span class="hljs-keyword">with</span> mysql:// MySQL will be used <span class="hljs-keyword">as</span> <span class="hljs-keyword">storage</span> backend.
+    Example: DATABASE_URL=mysql://<span class="hljs-keyword">user</span>:<span class="hljs-keyword">password</span>@tcp(host:<span class="hljs-number">123</span>)/<span class="hljs-keyword">database</span>?parseTime=<span class="hljs-literal">true</span>
+
+    Be aware that the ?parseTime=<span class="hljs-literal">true</span> parameter <span class="hljs-keyword">is</span> mandatory, <span class="hljs-keyword">or</span> timestamps will <span class="hljs-keyword">not</span> work.
+
+- SYSTEM_SECRET: A secret that <span class="hljs-keyword">is</span> <span class="hljs-keyword">at</span> <span class="hljs-keyword">least</span> <span class="hljs-number">16</span> <span class="hljs-keyword">characters</span> long. <span class="hljs-keyword">If</span> <span class="hljs-keyword">none</span> <span class="hljs-keyword">is</span> provided, one will be generated. They <span class="hljs-keyword">key</span>
+    <span class="hljs-keyword">is</span> used <span class="hljs-keyword">to</span> <span class="hljs-keyword">encrypt</span> sensitive <span class="hljs-keyword">data</span> <span class="hljs-keyword">using</span> AES-GCM (<span class="hljs-number">256</span> <span class="hljs-built_in">bit</span>) <span class="hljs-keyword">and</span> <span class="hljs-keyword">validate</span> HMAC signatures.
+    Example: SYSTEM_SECRET=jf89-jgklAS9gk3rkAF90dfsk
+
+- COOKIE_SECRET: A secret that <span class="hljs-keyword">is</span> used <span class="hljs-keyword">to</span> <span class="hljs-keyword">encrypt</span> cookie sessions. <span class="hljs-keyword">Defaults</span> <span class="hljs-keyword">to</span> SYSTEM_SECRET. It <span class="hljs-keyword">is</span> recommended <span class="hljs-keyword">to</span> <span class="hljs-keyword">use</span>
+    a separate secret <span class="hljs-keyword">in</span> production.
+    Example: COOKIE_SECRET=fjah8uFhgjSiuf-<span class="hljs-keyword">AS</span>
+
+- PORT: The port hydra should listen on.
+    <span class="hljs-keyword">Defaults</span> <span class="hljs-keyword">to</span> PORT=<span class="hljs-number">4444</span>
+
+- HOST: The host <span class="hljs-keyword">interface</span> hydra should listen on. Leave <span class="hljs-keyword">empty</span> <span class="hljs-keyword">to</span> listen <span class="hljs-keyword">on</span> <span class="hljs-keyword">all</span> interfaces.
+    Example: HOST=localhost
+
+- BCRYPT_COST: <span class="hljs-keyword">Set</span> the bcrypt hashing cost. This <span class="hljs-keyword">is</span> a trade <span class="hljs-keyword">off</span> <span class="hljs-keyword">between</span>
+    <span class="hljs-keyword">security</span> <span class="hljs-keyword">and</span> performance. <span class="hljs-keyword">Range</span> <span class="hljs-keyword">is</span> <span class="hljs-number">4</span> =&lt; x =&lt; <span class="hljs-number">31.</span>
+    <span class="hljs-keyword">Defaults</span> <span class="hljs-keyword">to</span> BCRYPT_COST=<span class="hljs-number">10</span>
+
+- LOG_LEVEL: <span class="hljs-keyword">Set</span> the <span class="hljs-keyword">log</span> <span class="hljs-keyword">level</span>, supports <span class="hljs-string">"panic"</span>, <span class="hljs-string">"fatal"</span>, <span class="hljs-string">"error"</span>, <span class="hljs-string">"warn"</span>, <span class="hljs-string">"info"</span> <span class="hljs-keyword">and</span> <span class="hljs-string">"debug"</span>. <span class="hljs-keyword">Defaults</span> <span class="hljs-keyword">to</span> <span class="hljs-string">"info"</span>.
+    Example: LOG_LEVEL=panic
+
+- LOG_FORMAT: Leave <span class="hljs-keyword">empty</span> <span class="hljs-keyword">for</span> <span class="hljs-built_in">text</span> based <span class="hljs-keyword">log</span> <span class="hljs-keyword">format</span>, <span class="hljs-keyword">or</span> <span class="hljs-keyword">set</span> <span class="hljs-keyword">to</span> <span class="hljs-string">"json"</span> <span class="hljs-keyword">for</span> <span class="hljs-keyword">JSON</span> formatting.
+    Example: LOG_FORMAT=<span class="hljs-string">"json"</span>
+
+- DISABLE_TELEMETRY: <span class="hljs-keyword">Set</span> <span class="hljs-keyword">to</span> <span class="hljs-string">"1"</span> <span class="hljs-keyword">to</span> <span class="hljs-keyword">disable</span> telemetry collection <span class="hljs-keyword">and</span> sharing - <span class="hljs-keyword">for</span> more information please
+    visit https://ory.gitbooks.io/hydra/<span class="hljs-keyword">content</span>/telemetry.html
+    Example: DISABLE_TELEMETRY=<span class="hljs-string">"1"</span>
+
+- RESOURCE_NAME_PREFIX: Allows the alternation <span class="hljs-keyword">of</span> the <span class="hljs-string">"rn:hydra:"</span> prefix <span class="hljs-keyword">in</span> <span class="hljs-keyword">all</span> <span class="hljs-keyword">resource</span> <span class="hljs-keyword">names</span> declared <span class="hljs-keyword">by</span> ORY Hydra.
+    <span class="hljs-keyword">Defaults</span> <span class="hljs-keyword">to</span> <span class="hljs-string">"rn:hydra"</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">empty</span> <span class="hljs-keyword">and</span> removes the <span class="hljs-keyword">last</span> trailing colon.
+    Example: RESOURCE_NAME_PREFIX=<span class="hljs-string">"resources:my-domain.com"</span>
+
+
+OAUTH2 CONTROLS
+===============
+
+- OAUTH2_ERROR_URL: A dedicated endpoint that shows <span class="hljs-keyword">critical</span> <span class="hljs-keyword">errors</span> <span class="hljs-keyword">in</span> a <span class="hljs-keyword">user</span>-friendly way.
+    Example: OAUTH2_ERROR_URL=https://id.myapp.com/<span class="hljs-keyword">error</span>
+
+- OAUTH2_CONSENT_URL: The consent provider<span class="hljs-string">'s URL.
+    Example: OAUTH2_CONSENT_URL=https://id.myapp.com/consent
+
+- OAUTH2_LOGIN_URL: The login provider'</span>s URL.
+    Example: OAUTH2_LOGIN_URL=https://id.myapp.com/login
+
+- OAUTH2_LOGOUT_REDIRECT_URL: The <span class="hljs-keyword">URL</span> <span class="hljs-keyword">where</span> the <span class="hljs-keyword">user</span><span class="hljs-string">'s browser will be redirected to after successfully logging out
+    of ORY Hydra.
+    Example: OAUTH2_LOGOUT_REDIRECT_URL=https://myapp.com/
+
+- OAUTH2_ISSUER_URL: This is the public URL of your ORY Hydra installation. It is used for OAuth2 and OpenID Connect and must be
+    specified and using HTTPS protocol, unless --dangerous-force-http is set.
+    Example: OAUTH2_ISSUER_URL=https://hydra.myapp.com/
+
+- OAUTH2_CLIENT_REGISTRATION_URL: This is the path to the OAuth 2.0 Client Registration endpoint (as defined by OpenID
+    Connect Dynamic Client Registration). Leave this value empty, if that endpoint is not publicly accessible.
+
+- AUTH_CODE_LIFESPAN: Lifespan of OAuth2 authorize codes. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
+    Defaults to AUTH_CODE_LIFESPAN=10m
+
+- ID_TOKEN_LIFESPAN: Lifespan of OpenID Connect ID Tokens. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
+    Defaults to ID_TOKEN_LIFESPAN=1h
+
+- ACCESS_TOKEN_LIFESPAN: Lifespan of OAuth2 Access Tokens. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
+    Defaults to ACCESS_TOKEN_LIFESPAN=1h
+
+- REFRESH_TOKEN_LIFESPAN: Lifespan of OAuth2 Refresh Tokens. Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
+    Set REFRESH_TOKEN_LIFESPAN=-1 to disable refresh token expiry (not recommended for high traffic environments).
+    Defaults to REFRESH_TOKEN_LIFESPAN=720h
+
+- LOGIN_CONSENT_REQUEST_LIFESPAN: Maximum lifespan of a login and consent request. This specifies the maximum time a user
+    may take to complete the login and consent flow, before that requests times out and results in an error. Valid time
+    units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
+    Defaults to LOGIN_CONSENT_REQUEST_LIFESPAN=15m
+
+- SCOPE_STRATEGY: Set this to DEPRECATED_HIERARCHICAL_SCOPE_STRATEGY to enable the deprecated hierarchical scope strategy.
+    This is required if you do not want to migrate to the new wildcard strategy.
+
+- OAUTH2_SHARE_ERROR_DEBUG: Set this to true if you want to share error debugging information with your OAuth 2.0 clients.
+    Keep in mind that debug information is very valuable when dealing with errors, but might also expose database error
+    codes and similar errors.
+    Defaults to OAUTH2_SHARE_ERROR_DEBUG=false
+
+- OAUTH2_ACCESS_TOKEN_STRATEGY: Sets the Access Token Strategy. Defaults to "opaque" which is the recommended strategy
+    for usage with ORY Hydra. If set to "jwt", then Access Tokens will be a signed JSON Web Token. The public key
+    for verifying the token can be obtained from "./well-known/jwks.json". Please note that the "jwt" strategy is currently
+    in BETA and not recommended for production just yet.
+    Defaults to OAUTH2_ACCESS_TOKEN_STRATEGY="opaque"
+
+
+OPENID CONNECT CONTROLS
+===============
+
+- OIDC_DISCOVERY_CLAIMS_SUPPORTED: A comma separated list of supported claims to be advertised at the OpenID Connect
+    Discovery endpoint /.well-known/openid-configuration. Always adds "sub" to the supported claims.
+
+- OIDC_DISCOVERY_SCOPES_SUPPORTED: A comma separated list of supported scopes to be advertised at the OpenID Connect
+    Discovery endpoint /.well-known/openid-configuration. Always adds "offline", "openid" to the supported scopes.
+
+- OIDC_DISCOVERY_USERINFO_ENDPOINT: A URL of the userinfo endpoint to be advertised at the OpenID Connect
+    Discovery endpoint /.well-known/openid-configuration. Defaults to ORY Hydra'</span>s userinfo endpoint <span class="hljs-keyword">at</span> /userinfo.
+    <span class="hljs-keyword">Set</span> this <span class="hljs-keyword">value</span> <span class="hljs-keyword">if</span> you want <span class="hljs-keyword">to</span> handle this endpoint yourself.
+
+- OIDC_DYNAMIC_CLIENT_REGISTRATION_DEFAULT_SCOPE: The OpenID <span class="hljs-keyword">Connect</span> Dynamic <span class="hljs-keyword">Client</span> Registration specification
+    has <span class="hljs-keyword">no</span> concept <span class="hljs-keyword">of</span> whitelisting OAuth <span class="hljs-number">2.0</span> Scope. <span class="hljs-keyword">If</span> you want <span class="hljs-keyword">to</span> expose Dynamic <span class="hljs-keyword">Client</span> Registration, you should <span class="hljs-keyword">set</span> the <span class="hljs-keyword">default</span>
+    <span class="hljs-keyword">scope</span> enabled <span class="hljs-keyword">for</span> newly registered clients. <span class="hljs-keyword">Keep</span> <span class="hljs-keyword">in</span> mind that <span class="hljs-keyword">users</span> can overwrite this <span class="hljs-keyword">default</span> <span class="hljs-keyword">by</span> setting the
+    <span class="hljs-string">"scope"</span> <span class="hljs-keyword">key</span> <span class="hljs-keyword">in</span> the registration payload, effectively disabling the concept <span class="hljs-keyword">of</span> whitelisted scopes.
+    Example: OIDC_DYNAMIC_CLIENT_REGISTRATION_DEFAULT_SCOPE=openid,<span class="hljs-keyword">offline</span>,<span class="hljs-keyword">scope</span>-a,<span class="hljs-keyword">scope</span>-b
+
+- OIDC_SUBJECT_TYPES_SUPPORTED: <span class="hljs-keyword">Sets</span> which identifier algorithms (comma-separated) should be supported.
+    Can be <span class="hljs-string">"public"</span> <span class="hljs-keyword">or</span> <span class="hljs-string">"pairwise"</span> <span class="hljs-keyword">or</span> both. <span class="hljs-keyword">Defaults</span> <span class="hljs-keyword">to</span> <span class="hljs-string">"public"</span>. Please note that <span class="hljs-string">"pairwise"</span> does <span class="hljs-keyword">not</span> <span class="hljs-keyword">work</span> <span class="hljs-keyword">with</span> the
+    JWT OAuth <span class="hljs-number">2.0</span> <span class="hljs-keyword">Access</span> Token Strategy.
+    Example: OIDC_SUBJECT_TYPES_SUPPORTED=<span class="hljs-keyword">public</span>,pairwise
+
+- OIDC_SUBJECT_TYPE_PAIRWISE_SALT: <span class="hljs-keyword">Is</span> the <span class="hljs-keyword">salt</span> <span class="hljs-keyword">of</span> the pairwise identifier algorithm <span class="hljs-keyword">and</span> must be <span class="hljs-keyword">set</span> <span class="hljs-keyword">if</span> pairwise <span class="hljs-keyword">is</span> enabled.
+    The <span class="hljs-keyword">length</span> must be longer <span class="hljs-keyword">than</span> <span class="hljs-number">8</span> characters.
+
+    !! <span class="hljs-keyword">Warning</span> !!
+    This <span class="hljs-keyword">value</span> should <span class="hljs-keyword">not</span> be <span class="hljs-keyword">changed</span> once <span class="hljs-keyword">set</span> <span class="hljs-keyword">in</span> production. Changing it will cause <span class="hljs-keyword">all</span> <span class="hljs-keyword">client</span> applications
+    <span class="hljs-keyword">to</span> receive <span class="hljs-keyword">new</span> <span class="hljs-keyword">user</span> IDs <span class="hljs-keyword">from</span> ORY Hydra which will <span class="hljs-keyword">lead</span> <span class="hljs-keyword">to</span> serious complications <span class="hljs-keyword">with</span> <span class="hljs-keyword">authentication</span> <span class="hljs-keyword">on</span> their side!
+
+    Example: OIDC_SUBJECT_TYPE_PAIRWISE_SALT=<span class="hljs-number">5</span>be780ef690045aebf50845d56acd72c
+
+HTTPS CONTROLS
+==============
+
+- HTTPS_ALLOW_TERMINATION_FROM: Whitelist one <span class="hljs-keyword">or</span> multiple CIDR address ranges <span class="hljs-keyword">and</span> <span class="hljs-keyword">allow</span> them <span class="hljs-keyword">to</span> terminate TLS connections.
+    Be aware that the X-Forwarded-Proto header must be <span class="hljs-keyword">set</span> <span class="hljs-keyword">and</span> must <span class="hljs-keyword">never</span> be modifiable <span class="hljs-keyword">by</span> anyone but
+    your proxy / gateway / <span class="hljs-keyword">load</span> balancer. Supports ipv4 <span class="hljs-keyword">and</span> ipv6.
+    Hydra serves <span class="hljs-keyword">http</span> instead <span class="hljs-keyword">of</span> https <span class="hljs-keyword">when</span> this <span class="hljs-keyword">option</span> <span class="hljs-keyword">is</span> set.
+    Example: HTTPS_ALLOW_TERMINATION_FROM=<span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>/<span class="hljs-number">32</span>,<span class="hljs-number">192.168</span><span class="hljs-number">.178</span><span class="hljs-number">.0</span>/<span class="hljs-number">24</span>,<span class="hljs-number">2620</span>:<span class="hljs-number">0</span>:<span class="hljs-number">2</span>d0:<span class="hljs-number">200</span>::<span class="hljs-number">7</span>/<span class="hljs-number">32</span>
+
+- HTTPS_TLS_CERT_PATH: The <span class="hljs-keyword">path</span> <span class="hljs-keyword">to</span> the TLS certificate (pem encoded).
+    Example: HTTPS_TLS_CERT_PATH=~/cert.pem
+
+- HTTPS_TLS_KEY_PATH: The <span class="hljs-keyword">path</span> <span class="hljs-keyword">to</span> the TLS <span class="hljs-keyword">private</span> <span class="hljs-keyword">key</span> (pem encoded).
+    Example: HTTPS_TLS_KEY_PATH=~/key.pem
+
+- HTTPS_TLS_CERT: Base64 encoded (<span class="hljs-keyword">without</span> padding) <span class="hljs-keyword">string</span> <span class="hljs-keyword">of</span> the TLS certificate (PEM encoded) <span class="hljs-keyword">to</span> be used <span class="hljs-keyword">for</span> <span class="hljs-keyword">HTTP</span> <span class="hljs-keyword">over</span> TLS (HTTPS).
+    Example: HTTPS_TLS_CERT=<span class="hljs-string">"-----BEGIN CERTIFICATE-----\nMIIDZTCCAk2gAwIBAgIEV5xOtDANBgkqhkiG9w0BAQ0FADA0MTIwMAYDVQQDDClP..."</span>
+
+- HTTPS_TLS_KEY: Base64 encoded (<span class="hljs-keyword">without</span> padding) <span class="hljs-keyword">string</span> <span class="hljs-keyword">of</span> the <span class="hljs-keyword">private</span> <span class="hljs-keyword">key</span> (PEM encoded) <span class="hljs-keyword">to</span> be used <span class="hljs-keyword">for</span> <span class="hljs-keyword">HTTP</span> <span class="hljs-keyword">over</span> TLS (HTTPS).
+    Example: HTTPS_TLS_KEY=<span class="hljs-string">"-----BEGIN ENCRYPTED PRIVATE KEY-----\nMIIFDjBABgkqhkiG9w0BBQ0wMzAbBgkqhkiG9w0BBQwwDg..."</span>
+
+
+CORS CONTROLS
+==============
+
+- CORS_ENABLED: <span class="hljs-keyword">Switch</span> CORS support <span class="hljs-keyword">on</span> (<span class="hljs-literal">true</span>) <span class="hljs-keyword">or</span> <span class="hljs-keyword">off</span> (<span class="hljs-literal">false</span>). <span class="hljs-keyword">Default</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">off</span> (<span class="hljs-literal">false</span>).
+
+    Example: CORS_ENABLED=<span class="hljs-literal">true</span>
+
+- CORS_ALLOWED_ORIGINS: A <span class="hljs-keyword">list</span> <span class="hljs-keyword">of</span> origins (comma separated <span class="hljs-keyword">values</span>) a <span class="hljs-keyword">cross</span>-<span class="hljs-keyword">domain</span> request can be executed from.
+    <span class="hljs-keyword">If</span> the special * <span class="hljs-keyword">value</span> <span class="hljs-keyword">is</span> <span class="hljs-keyword">present</span> <span class="hljs-keyword">in</span> the <span class="hljs-keyword">list</span>, <span class="hljs-keyword">all</span> origins will be allowed. An origin may contain a wildcard (*)
+    <span class="hljs-keyword">to</span> <span class="hljs-keyword">replace</span> <span class="hljs-number">0</span> <span class="hljs-keyword">or</span> more <span class="hljs-keyword">characters</span> (i.e.: <span class="hljs-keyword">http</span>:/<span class="hljs-comment">/*.domain.com). Usage of wildcards implies a small performance penality.
+    Only one wildcard can be used per origin. The default value is *.
+
+    Example: CORS_ALLOWED_ORIGINS=http://*.domain.com,http://*.domain2.com
+
+- CORS_ALLOWED_METHODS: A list of methods  (comma separated values) the client is allowed to use with cross-domain
+    requests. Default value is simple methods (GET and POST).
+
+    Example: CORS_ALLOWED_METHODS=POST,GET,PUT
+
+- CORS_ALLOWED_CREDENTIALS: Indicates whether the request can include user credentials like cookies, HTTP authentication
+    or client side SSL certificates.
+
+    Default: CORS_ALLOWED_CREDENTIALS=false
+    Example: CORS_ALLOWED_CREDENTIALS=true
+
+- CORS_DE<span class="hljs-doctag">BUG:</span> Debugging flag adds additional output to debug server side CORS issues.
+
+    Default: CORS_DEBUG=false
+    Example: CORS_DEBUG=true
+
+- CORS_MAX_AGE: Indicates how long (in seconds) the results of a preflight request can be cached. The default is 0
+    which stands for no max age.
+
+    Default: CORS_MAX_AGE=0
+    Example: CORS_MAX_AGE=10
+
+- CORS_ALLOWED_HEADERS: A list of non simple headers (comma separated values) the client is allowed to use with
+    cross-domain requests.
+
+- CORS_EXPOSED_HEADERS: Indicates which headers (comma separated values) are safe to expose to the API of a
+    CORS API specification.
+
+DEBUG CONTROLS
+==============
+
+- TRACING_PROVIDER: Set this to the tracing backend you wish to use.
+
+    Supported tracing backends: [jaeger]
+
+    Example: TRACING_PROVIDER=jaeger
+
+- TRACING_PROVIDER_JAEGER_SAMPLING_SERVER_URL: The address of jaeger-agent's HTTP sampling server
+
+    Example: TRACING_PROVIDER_JAEGER_SAMPLING_SERVER_URL=http://localhost:5778/sampling
+
+- TRACING_PROVIDER_JAEGER_SAMPLING_TYPE: The type of the sampler you want to use
+
+    Supported values: [const, probabilistic, ratelimiting]
+
+    Default: const
+
+    Example: TRACING_PROVIDER_JAEGER_SAMPLING_TYPE=const
+
+- TRACING_PROVIDER_JAEGER_SAMPLING_VALUE: The value passed to the sampler type that has been configured.
+
+    Supported values: This is dependant on the sampling strategy used:
+        - const: 0 or 1 (all or nothing)
+        - rateLimiting: a constant rate (e.g. setting this to 3 will sample requests with the rate of 3 traces per second)
+        - probabilistic: a value between 0..1
+
+    Example: TRACING_PROVIDER_JAEGER_SAMPLING_VALUE=1
+
+- TRACING_PROVIDER_JAEGER_LOCAL_AGENT_ADDRESS: The address of the jaeger-agent where spans should be sent to
+
+    Example: TRACING_PROVIDER_JAEGER_LOCAL_AGENT_ADDRESS=127.0.0.1:6831
+
+- TRACING_SERVICE_NAME: Specifies the service name to use on the tracer.
+
+    Default: ORY Hydra
+
+    Example: TRACING_SERVICE_NAME="ORY Hydra"
+
+
+- PROFILING: Set "PROFILING=cpu" to enable cpu profiling and "PROFILING=memory" to enable memory profiling.
+    It is not possible to do both at the same time. DProfiling is disabled per default.
+
+    Example: PROFILING=cpu
+
+Usage:
+  hydra serve [command]
+
+Available Commands:
+  admin       Serves Administrative HTTP/2 APIs
+  all         Serves both public and administrative HTTP/2 APIs
+  public      Serves Public HTTP/2 APIs
+
+Flags:
+      --dangerous-force-http   Disable HTTP/2 over TLS (HTTPS) and serve HTTP instead. Never use this in production.
+      --disable-telemetry      Disable anonymized telemetry reports - for more information please visit https://www.ory.sh/docs/guides/telemetry
+  -h, --help                   help for serve
+
+Global Flags:
+      --skip-tls-verify   Foolishly accept TLS certificates signed by unkown certificate authorities
+
+Use "hydra serve [command] --help" for more information about a command.
+</span></code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#hydra-serve"><code>hydra serve</code></a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

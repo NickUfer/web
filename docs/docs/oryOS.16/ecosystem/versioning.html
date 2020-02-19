@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Software Versions and Project Maturity · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; Running security-critical open source technology in a self-service format"/><meta name="docsearch:version" content="oryOS.16"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Software Versions and Project Maturity · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&gt; Running security-critical open source technology in a self-service format"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.16</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.16/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Ecosystem</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/ecosystem/projects">Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/ecosystem/software-architecture-philosophy">Software Architecture and Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/ecosystem/deployment">Deployment Fundamentals and Requirements</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.16/ecosystem/versioning">Software Versions and Project Maturity</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/ecosystem/api-design">API Design</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Kratos<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Introduction</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/quickstart">Quickstart</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/install">Installation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/concepts/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/concepts/ui-user-interface">User Interface</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/concepts/identity-user-model">Identity and User Model</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/concepts/credentials">Credentials</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/concepts/email-sms">Out-of-band communication via E-Mail and SMS</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/concepts/federation">Federation</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/concepts/security">Threat Models and Security Profiles</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Flows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/flows/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/flows/user-login-user-registration">User Login and User Registration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/flows/user-logout">User Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/flows/user-profile-management">Profile Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/flows/password-reset-account-recovery">Account Recovery</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/flows/user-facing-errors">User-Facing Errors</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Strategies</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/strategies/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/strategies/username-email-password">Username or Email and Password</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/strategies/openid-connect-social-sign-in-oauth2">Social Sign In with OpenID Connect and OAuth2</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Jobs and Workflows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/workflows/jobs/before">Before Jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/self-service/workflows/jobs/after">After Jobs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/reference/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/reference/json-schema-json-paths">JSON Schema and JSON Paths</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/reference/html-forms">HTML Form Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/sdk/api">REST API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/sdk/">Overview</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/kratos/further-reading/comparison">Comparison</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/oauth2">OAuth 2.0</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/login-consent-flow">Hydra workflow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Integrating Hydra into your stack</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/5min-tutorial">5 Minute Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/implementing-consent">Login, Consent &amp; Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/case-study">OAuth 2.0 Case Study</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/sdk/js">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/sdk/php">PHP</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/pipeline/authn">Authenticators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/pipeline/authz">Authorizers</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/pipeline/mutator">Mutators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/pipeline/error">Error Handlers</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/configure-deploy">Configure and Deploy</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/engines/">Access Control Engines - Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.16/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/ecosystem/versioning.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Software Versions and Project Maturity</h1></header><article><div><span><blockquote>
+<p>Running security-critical open source technology in a self-service format
+requires vigilance. We make your life easier by announcing important software
+updates via the
+<a href="https://ory.us10.list-manage.com/subscribe?u=ffb1a878e4ec6c0ed312a3480&amp;id=f605a41b53">ORY Security Newsletter</a>.
+Never miss an update and
+<strong><a href="https://ory.us10.list-manage.com/subscribe?u=ffb1a878e4ec6c0ed312a3480&amp;id=f605a41b53">sign up now to important release updates!</a></strong></p>
+</blockquote>
+<p>The ORY ecosystem consists of multiple services versioned using
+<a href="https://semver.org">semantic versioning</a>. This section explains how we define
+service versions and what they mean.</p>
+<p>To make deployment easier but stay compatible with semantic versioning, each
+service is equipped with a <code>oryOS</code> version number denoted by <code>+oryOS.X</code> where
+<code>X</code> represents the &quot;ecosystem&quot; version. This is especially useful if you use
+more than one service from the ORY ecosystem. Let's look at some examples:</p>
+<ul>
+<li>ORY Hydra <code>v1.0.1+oryOS.6</code> is best compatible with ORY Oathkeeper
+<code>v0.13.1+oryOS.6</code> and ORY Keto <code>v0.5.1+oryOS.6</code>.</li>
+<li>ORY Hydra <code>v1.0.2+oryOS.7</code> is best compatible with ORY Oathkeeper
+<code>v0.13.2+oryOS.7</code> and ORY Keto <code>v0.6.0+oryOS.7</code>.</li>
+<li>ORY Hydra <code>v1.0.3+oryOS.8</code> is probably not fully compatible with ORY
+Oathkeeper <code>v0.13.1+oryOS.6</code> nor with ORY Keto <code>v0.5.1+oryOS.6</code>.</li>
+<li>ORY Hydra <code>v1.1.0+oryOS.9</code> is best compatible with ORY Oathkeeper
+<code>v1.1.0+oryOS.9</code> and ORY Keto <code>v1.1.0+oryOS.9</code>.</li>
+</ul>
+<p>It is possible that a number of releases are versioned with the same <code>oryOS.x</code>
+version metadata:</p>
+<ul>
+<li>ORY Hydra <code>v1.0.1+oryOS.10</code>, <code>v1.0.2+oryOS.10</code> is guaranteed compatible with
+ORY Oathkeeper <code>v0.15.5+oryOS.10</code>, <code>v1.16.0+oryOS.10</code> and ORY Keto
+<code>v0.1.1+oryOS.10</code>, <code>v0.1.2+oryOS.10</code>.</li>
+</ul>
+<p>We always provide ways to migrate breaking changes, and all breaking changes are
+meticulously described in each project's <code>UPGRADE.md</code> as well as <code>HISTORY.md</code>.</p>
+<h2><a class="anchor" aria-hidden="true" id="maturity"></a><a href="#maturity" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Maturity</h2>
+<p>There are three maturity levels for services:</p>
+<ul>
+<li><strong>Graduated:</strong> Mature, stable implementations of proven concepts. They rarely
+change in backwards incompatible ways. A software is considered graduated if
+the major version is &gt;= 1, e.g. <code>v1.0.1</code>, <code>v2.2.2</code>. Backwards incompatible
+changes are indicated by a bump of the major version number. Most, if not all,
+REST APIs will provide backwards compatible transformations that make it
+possible to interact with the server using older API versions.</li>
+<li><strong>Incubating:</strong> Implements well defined but not fully matured concepts.
+Incubating software has a major version number of <code>0</code>, e.g. <code>v0.10.0</code>. You may
+see a pre-release version such as <code>v0.10.0-beta.1</code>. Incubating software has a
+higher (but overall moderate) probability for larger changes that can break
+backwards compatibility, for which there are upgrade guides.</li>
+<li><strong>Sandbox:</strong> Implements concepts, APIs and CLIs at the experimental stage and
+may change in unpredictable ways. Sandbox software has a major version number
+of <code>0</code> with a <code>alpha</code> or <code>beta</code> pre-release indicator, e.g. <code>v0.10.0-alpha.1</code>.
+It is more likely that you'll encounter a version tag with a <code>alpha</code>
+pre-release version We will provide upgrade guides wherever possible,
+especially when they are used in production already.</li>
+</ul>
+<p>The following is a list of maturity level per project:</p>
+<ul>
+<li><a href="https://github.com/ory/hydra">ORY Hydra</a> is a <strong>graduated</strong> project.</li>
+<li><a href="https://github.com/ory/oathkeeper">ORY Oathkeeper</a> is a <strong>incubating</strong>
+project.</li>
+<li><a href="https://github.com/ory/kratos">ORY Kratos</a> is a <strong>sandbox</strong> project.</li>
+<li><a href="https://github.com/ory/keto">ORY Keto</a> is a <strong>sandbox</strong> project.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="compatibility"></a><a href="#compatibility" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Compatibility</h2>
+<p>This compatibility matrix shows which versions are compatible with one another.</p>
+<table>
+<thead>
+<tr><th>oryOS</th><th>Documentation</th><th>ORY Hydra</th><th>ORY Keto</th><th>ORY Oathkeeper</th><th>ORY Kratos</th></tr>
+</thead>
+<tbody>
+<tr><td><code>oryOS.16</code></td><td><code>oryOS.16</code></td><td><code>v1.2.3</code></td><td><code>v0.4.3-alpha.2</code></td><td><code>v0.35.5-beta.2</code></td><td><code>v0.1.0-alpha.1</code></td></tr>
+<tr><td><code>oryOS.15</code></td><td><code>oryOS.15</code></td><td><code>v1.2.1</code>, <code>v1.2.0</code>, <code>v1.2.0-alpha.3</code>, <code>v1.2.0-alpha.2</code>, <code>v1.2.0-alpha.1</code>, <code>v1.2.2</code></td><td><code>v0.4.2-alpha.1</code>, <code>v0.4.0-sandbox</code>, <code>v0.4.0-alpha.1</code>, <code>v0.4.3-alpha.1</code></td><td><code>v0.35.1-beta.1</code>, <code>v0.35.0-alpha.1</code>, <code>v0.35.5-beta.1</code>, <code>v0.35.4-beta.1</code></td><td><code>v0.0.3-alpha.10</code>, <code>v0.0.3-alpha.9</code>, <code>v0.0.3-alpha.7</code>, <code>v0.0.3-alpha.5</code>, <code>v0.0.3-alpha.4</code>, <code>v0.0.3-alpha.3</code>, <code>v0.0.3-alpha.2</code>, <code>v0.0.3-alpha.1</code>, <code>v0.0.1-alpha.11</code>, <code>v0.0.1-alpha.9</code>, <code>v0.0.2-alpha.1</code>, <code>v0.0.1-alpha.8</code>, <code>v0.0.1-alpha.6</code>, <code>v0.0.1-alpha.5</code>, <code>v0.0.1-alpha.3</code>, <code>v0.0.1-alpha.2</code>, <code>v0.0.1-alpha.1</code></td></tr>
+<tr><td><code>oryOS.14</code></td><td><code>oryOS.14</code></td><td><code>v1.1.1</code></td><td><code>v0.3.10-sandbox</code>, <code>v0.3.9-sandbox</code>, <code>v0.3.8-sandbox</code></td><td><code>v0.34.0-beta.1</code></td><td></td></tr>
+<tr><td><code>oryOS.13</code></td><td><code>oryOS.13</code></td><td><code>v1.1.0</code></td><td><code>v0.3.8-sandbox</code>, <code>v0.3.7-sandbox</code></td><td><code>v0.33.1-beta.1</code>, <code>v0.33.0-beta.1</code></td><td></td></tr>
+<tr><td><code>oryOS.12</code></td><td><code>oryOS.12</code></td><td><code>v1.0.0-rc.14</code>, <code>v1.0.0-rc.15</code>, <code>v1.0.0</code>, <code>v1.0.0-rc.16</code>, <code>v1.0.3</code>, <code>v1.0.2</code>, <code>v1.0.1</code>, <code>v1.0.8</code>, <code>v1.0.7</code>, <code>v1.0.6</code>, <code>v1.0.5</code>, <code>v1.0.4</code>, <code>v1.0.9</code></td><td><code>v0.3.3-sandbox</code>, <code>v0.3.6-sandbox</code>, <code>v0.3.5-sandbox</code></td><td><code>v0.16.0-beta.3</code>, <code>v0.16.0-beta.4</code>, <code>v0.16.0-beta.5</code>, <code>v0.19.0-beta.1</code>, <code>v0.18.0-beta.1</code>, <code>v0.17.4-beta.1</code>, <code>v0.17.3-beta.1</code>, <code>v0.17.2-beta.1</code>, <code>v0.17.1-beta.1</code>, <code>v0.17.0-beta.1</code>, <code>v0.19.3-beta.1</code>, <code>v0.32.0-beta.1</code>, <code>v0.31.0-beta.1</code>, <code>v0.32.1-beta.1</code></td><td></td></tr>
+<tr><td><code>oryOS.11</code></td><td><code>oryOS.11</code></td><td><code>v1.0.0-rc.10</code>, <code>v1.0.0-rc.11</code>, <code>v1.0.0-rc.12</code></td><td><code>v0.3.0-sandbox</code>, <code>v0.3.1-sandbox</code></td><td><code>v0.15.0</code>, <code>v0.15.1</code>, <code>v0.15.2</code></td><td></td></tr>
+<tr><td><code>oryOS.10</code></td><td><code>oryOS.10</code></td><td><code>v1.0.0-rc.5</code>, <code>v1.0.0-rc.6</code>, <code>v1.0.0-rc.7</code>, <code>v1.0.0-rc.8</code>, <code>v1.0.0-rc.9</code></td><td><code>v0.2.2-sandbox</code>, <code>v0.2.3-sandbox</code>, <code>v0.2.1-sandbox</code>, <code>v0.2.0-sandbox</code></td><td><code>v0.14.2</code>, <code>v0.14.1</code>, <code>v0.14.0</code></td><td></td></tr>
+<tr><td><code>oryOS.9</code></td><td><code>oryOS.9</code></td><td><code>v1.0.0-beta.9</code>, <code>v1.0.0-rc.2</code>, <code>v1.0.0-rc.3</code>, <code>v1.0.0-rc.4</code></td><td><code>v0.1.9-sandbox</code></td><td><code>v0.13.9</code></td><td></td></tr>
+<tr><td><code>oryOS.8</code></td><td><code>oryOS.8</code></td><td><code>v1.0.0-beta.8</code></td><td><code>v0.1.8-sandbox</code></td><td><code>v0.13.8</code></td><td></td></tr>
+<tr><td><code>oryOS.7</code></td><td><code>oryOS.7</code></td><td><code>v1.0.0-beta.7</code></td><td><code>v0.1.7-sandbox</code></td><td><code>v0.13.7</code></td><td></td></tr>
+<tr><td><code>oryOS.6</code></td><td><code>oryOS.6</code></td><td><code>v1.0.0-beta.6</code></td><td><code>v0.1.6-sandbox</code></td><td><code>v0.13.6</code></td><td></td></tr>
+<tr><td><code>oryOS.5</code></td><td><code>oryOS.5</code></td><td><code>v1.0.0-beta.5</code></td><td><code>v0.1.5-sandbox</code></td><td><code>v0.13.5</code></td><td></td></tr>
+<tr><td><code>oryOS.4</code></td><td><code>oryOS.4</code></td><td><code>v1.0.0-beta.4</code></td><td><code>v0.1.4-sandbox</code></td><td><code>v0.13.4</code></td><td></td></tr>
+<tr><td><code>oryOS.3</code></td><td><code>oryOS.3</code></td><td><code>v1.0.0-beta.3</code></td><td><code>v0.1.3-sandbox</code></td><td><code>v0.13.3</code></td><td></td></tr>
+<tr><td><code>oryOS.2</code></td><td><code>oryOS.2</code></td><td><code>v1.0.0-beta.2</code></td><td><code>v0.1.2-sandbox</code></td><td><code>v0.13.2</code></td><td></td></tr>
+<tr><td><code>oryOS.1</code></td><td><code>oryOS.1</code></td><td><code>v1.0.0-beta.1</code></td><td><code>v0.1.1-sandbox</code></td><td><code>v0.13.1</code></td><td></td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="package-repository-limitations"></a><a href="#package-repository-limitations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Package repository limitations</h3>
+<p>Several package repositories such as
+<a href="https://github.com/moby/moby/issues/16304">Docker Hub</a>, NPM, and others do not
+allow build metadata in the version tag.</p>
+<p>Therefore, we generally strip the <code>oryOS</code> metadata from the versions published
+on package repositories (e.g. NPM, Ruby Gems, Packagist, Maven Central, Go ...).</p>
+<h2><a class="anchor" aria-hidden="true" id="changelog"></a><a href="#changelog" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Changelog</h2>
+<h3><a class="anchor" aria-hidden="true" id="january-2020-change"></a><a href="#january-2020-change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>January 2020 Change</h3>
+<p>As of January 2020 (oryOS.15) we will no longer use <code>-sandbox</code> to indicate the
+sandbox stage. Instead, please check the <a href="#maturity">maturity</a> section. We made
+this change because some package manager (e.g. Ruby Gems) do not allow the
+<code>-sandbox</code> suffix in the version.</p>
+<h3><a class="anchor" aria-hidden="true" id="november-2018-change"></a><a href="#november-2018-change" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>November 2018 Change</h3>
+<p>If you are an adopter of the ORY Keto ory ORY Oathkeeper prior to November 2018,
+this section is for you.</p>
+<h4><a class="anchor" aria-hidden="true" id="why"></a><a href="#why" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Why</h4>
+<p>Before November 2018, ORY Keto and ORY Oathkeeper were available as versions
+<code>v1.0.0-beta.1</code> through <code>v1.0.0-beta.9</code>. We wanted to make versioning as easy as
+possible across all services. For example, if you ran ORY Hydra <code>v1.2.3</code> and ORY
+Oathkeeper <code>v1.2.3</code> both versions would be guaranteed compatible.</p>
+<p>This turned out to be a bad decision because of multiple factors:</p>
+<ol>
+<li>As ORY Hydra was moving towards <code>v1.0.0</code>, ORY Oathkeeper and ORY Keto were
+still rather new projects and some of them required breaking changes to
+improve the value of the technology. But semantic versioning, which is a
+de-facto standard, has strong implications on breaking changes in software
+labeled as <code>v1.x.y</code>. While we had plans to add tags like <code>-sandbox</code> to
+software, labeled as <code>v1</code> but not fully matured, we quickly realized that
+this would only add to confusion.</li>
+<li>While certain services matured rather quickly and the community was eagerly
+awaiting the next release, we had to hold back because of unfinished changes
+to other projects. ORY Hydra <code>v1.0.0-rc.2</code> was put on delay because we wanted
+other systems to feel <code>v1</code>-ish, which required a lot of work, stress and
+caused delays. This lead to a misalignment between what the community wants
+(ORY Hydra rc1) and what had to be added to the roadmap in order to comply
+with the versioning concept.</li>
+<li>We are working towards an open source identity management system (ORY Hive)
+which will stay in sandbox and incubation for a while due to its complexity.
+We definitely did not want to give the impression that early MVPs are <code>v1</code> or
+even <code>v2</code>.</li>
+</ol>
+<p>Our plan to help developers understand which versions are compatible with one
+another backfired and instead we delayed releases and developers were confused
+as to the maturity of the individual services.</p>
+<h4><a class="anchor" aria-hidden="true" id="upgrading"></a><a href="#upgrading" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Upgrading</h4>
+<p>The new versioning framework was published in November 2018 at the top of this
+page. This is an overview of the things that changed.</p>
+<h5><a class="anchor" aria-hidden="true" id="ory-hydra"></a><a href="#ory-hydra" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ORY Hydra</h5>
+<p>No changes to the versioning will be made. The next release will remain
+<code>v1.0.0-rc.2+oryOS.9</code>.</p>
+<p>Going forward, the npm package <code>ory-hydra-sdk</code> will no longer be continued.
+Instead, new versions will be pushed to <code>@oryd/hydra</code>. Version <code>v1.0.0-beta.9</code>
+will be the last available version at <code>ory-hydra-sdk</code>. Version
+<code>v1.0.0-rc.2+oryOS.9</code> will be the first version available at <code>@oryd/hydra</code>.</p>
+<h6><a class="anchor" aria-hidden="true" id="version-matrix"></a><a href="#version-matrix" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version Matrix</h6>
+<table>
+<thead>
+<tr><th>Old version</th><th>Re-released as</th><th>NPM</th><th>Docker Hub</th></tr>
+</thead>
+<tbody>
+<tr><td><code>v1.0.0-beta.9</code></td><td>-</td><td><code>ory-hydra-sdk:v1.0.0-beta.9</code></td><td><code>oryd/hydra:v1.0.0-beta.9</code></td></tr>
+<tr><td>-</td><td><code>v1.0.0-rc.2+oryOS.9</code> (example)</td><td><code>@oryd/hydra:v1.0.0-rc.2</code></td><td><code>oryd/hydra:v1.0.0-rc.2_oryOS.9</code></td></tr>
+</tbody>
+</table>
+<h5><a class="anchor" aria-hidden="true" id="ory-oathkeeper"></a><a href="#ory-oathkeeper" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ORY Oathkeeper</h5>
+<p>ORY Oathkeeper is a service in incubation phase. To comply with the new
+versioning framework, the following changes will be made:</p>
+<ul>
+<li><a href="https://github.com/ory/oathkeeper/releases">GitHub Releases</a> <code>v1.0.0-beta.1</code>
+to <code>v1.0.0-beta.9</code> have been removed as well as their binaries uploaded to
+GitHub Releases. Releases <code>v1.0.0-beta.1</code> to <code>v1.0.0-beta.9</code>, including
+binaries, have been re-released as <code>v0.13.1+oryOS.1</code> to <code>v0.13.9+oryOS.9</code>.
+Binaries, code, and functionality for versions <code>v1.0.0-beta.2+oryOS.2</code> and
+<code>v0.13.2+oryOS.2</code> are equal.</li>
+<li><a href="https://github.com/ory/oathkeeper/tags">Git Tags</a> will be removed on <strong>Jan
+15th 2019</strong>. Until then, you will be able to check out the specific commits
+using e.g. <code>git checkout v1.0.0-beta.2 -b my-branch</code>. Tags <code>v1.0.0-beta.1</code> to
+<code>v1.0.0-beta.9</code> will be re-released as <code>v0.13.1+oryOS.1</code> to <code>v0.13.9+oryOS.2</code>.
+After Jan 15th 2019 you will be able to get the same functionality as before,
+but you have to change the tag from <code>v1.0.0-beta.x</code> to <code>v0.13.x+oryOS.x</code>.</li>
+<li>Versions <code>v1.0.0-beta.1</code> to <code>v1.0.0-beta.9</code> will be removed from
+<a href="https://hub.docker.com/r/oryd/oathkeeper/">Docker Hub <code>oryd/oathkeeper</code></a> on
+<strong>Jan 15th 2019</strong>. These have been re-released according to the same rules
+that apply for Git Tags, but with <code>_oryOS.x</code> instead of <code>+oryOS.x</code>. Image
+<code>oryd/oathkeeper:v1.0.0-beta.2</code> will thus be available as
+<code>oryd/oathkeeper:v0.13.2_oryOS.2</code>.</li>
+<li>The npm package
+<a href="https://www.npmjs.com/package/ory-oathkeeper-sdk"><code>ory-oathkeeper-sdk</code></a> will
+be deprecated. The new npm package will be available at <code>@oryd/oathkeeper</code>.
+The new npm package will only serve versions under the new format
+<code>v0.13.x+oryOS.x</code>.</li>
+</ul>
+<h6><a class="anchor" aria-hidden="true" id="version-matrix-1"></a><a href="#version-matrix-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version Matrix</h6>
+<table>
+<thead>
+<tr><th>Old version</th><th>Re-released as</th><th>NPM</th><th>Docker Hub</th></tr>
+</thead>
+<tbody>
+<tr><td><code>v1.0.0-beta.1</code></td><td><code>v0.13.1+oryOS.1</code></td><td><code>@oryd/oathkeeper:v0.13.1</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.1</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.1_oryOS.1</code>, <code>oryd/oathkeeper:v1.0.0-beta.1</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.2</code></td><td><code>v0.13.2+oryOS.2</code></td><td><code>@oryd/oathkeeper:v0.13.2</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.2</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.2_oryOS.2</code>, <code>oryd/oathkeeper:v1.0.0-beta.2</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.3</code></td><td><code>v0.13.3+oryOS.3</code></td><td><code>@oryd/oathkeeper:v0.13.3</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.3</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.3_oryOS.3</code>, <code>oryd/oathkeeper:v1.0.0-beta.3</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.4</code></td><td><code>v0.13.4+oryOS.4</code></td><td><code>@oryd/oathkeeper:v0.13.4</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.4</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.4_oryOS.4</code>, <code>oryd/oathkeeper:v1.0.0-beta.4</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.5</code></td><td><code>v0.13.5+oryOS.5</code></td><td><code>@oryd/oathkeeper:v0.13.5</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.5</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.5_oryOS.5</code>, <code>oryd/oathkeeper:v1.0.0-beta.5</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.6</code></td><td><code>v0.13.6+oryOS.6</code></td><td><code>@oryd/oathkeeper:v0.13.6</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.6</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.6_oryOS.6</code>, <code>oryd/oathkeeper:v1.0.0-beta.6</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.7</code></td><td><code>v0.13.7+oryOS.7</code></td><td><code>@oryd/oathkeeper:v0.13.7</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.7</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.7_oryOS.7</code>, <code>oryd/oathkeeper:v1.0.0-beta.7</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.8</code></td><td><code>v0.13.8+oryOS.8</code></td><td><code>@oryd/oathkeeper:v0.13.8</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.8</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.8_oryOS.8</code>, <code>oryd/oathkeeper:v1.0.0-beta.8</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.9</code></td><td><code>v0.13.9+oryOS.9</code></td><td><code>@oryd/oathkeeper:v0.13.9</code>, <code>ory-oathkeeper-sdk:v1.0.0-beta.9</code> (deprecated!)</td><td><code>oryd/oathkeeper:v0.13.9_oryOS.9</code>, <code>oryd/oathkeeper:v1.0.0-beta.9</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td>-</td><td><code>v0.13.10+oryOS.10</code> (example)</td><td><code>@oryd/oathkeeper:v0.13.10</code></td><td><code>oryd/oathkeeper:v0.13.10_oryOS.10</code></td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>No code or database changes will be required when moving from <code>v1.0.0-beta.x</code>
+to <code>v0.13.x+oryOS.x</code></p>
+</blockquote>
+<h5><a class="anchor" aria-hidden="true" id="ory-keto"></a><a href="#ory-keto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ORY Keto</h5>
+<p>ORY Keto is a service in sandbox phase. To comply with the new versioning rules,
+the following changes will be made:</p>
+<ul>
+<li><a href="https://github.com/ory/keto/releases">GitHub Releases</a> <code>v1.0.0-beta.1</code> to
+<code>v1.0.0-beta.9</code> have been removed as well as their binaries uploaded to GitHub
+Releases. Releases <code>v1.0.0-beta.1</code> to <code>v1.0.0-beta.9</code>, including binaries,
+have been re-released as <code>v0.1.1-sandbox+oryOS.1</code> to <code>v0.1.9-sandbox+oryOS.9</code>.
+Binaries, code, and functionality for versions <code>v1.0.0-beta.2</code> and
+<code>v0.1.2-sandbox+oryOS.2</code> are equal.</li>
+<li><a href="https://github.com/ory/keto/tags">Git Tags</a> will be removed on <strong>Jan 15th
+2019</strong>. Until then, you will be able to check out the specific commits using
+e.g. <code>git checkout v1.0.0-beta.2 -b my-branch</code>. Tags <code>v1.0.0-beta.1</code> to
+<code>v1.0.0-beta.9</code> will be re-released as <code>v0.1.1-sandbox+oryOS.1</code> to
+<code>v0.1.9-sandbox+oryOS.9</code>. After Jan 15th 2019 you will be able to get the same
+functionality as before, but you have to change the tag from <code>v1.0.0-beta.x</code>
+to <code>v0.1.x-sandbox+oryOS.x</code>.</li>
+<li>Versions <code>v1.0.0-beta.1</code> to <code>v1.0.0-beta.9</code> will be removed from
+<a href="https://hub.docker.com/r/oryd/keto/">Docker Hub <code>oryd/keto</code></a> on <strong>Jan 15th
+2019</strong>. These have been re-released according to the same rules that apply for
+Git Tags. Image <code>oryd/keto:v1.0.0-beta.2</code> will thus be available as
+<code>oryd/keto:v0.1.2-sandbox_oryOS.2</code>.</li>
+<li>The npm package <a href="https://www.npmjs.com/package/ory-keto-sdk"><code>ory-keto-sdk</code></a>
+will be deprecated. The new npm package will be available at <code>@oryd/keto</code>. The
+new npm package will only serve versions under the new format
+<code>v0.1.x-sandbox+oryOS.x</code>.</li>
+</ul>
+<h6><a class="anchor" aria-hidden="true" id="version-matrix-2"></a><a href="#version-matrix-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Version Matrix</h6>
+<table>
+<thead>
+<tr><th>Old version</th><th>Re-released as</th><th>NPM</th><th>Docker Hub</th></tr>
+</thead>
+<tbody>
+<tr><td><code>v1.0.0-beta.1</code></td><td><code>v0.1.1-sandbox+oryOS.1</code></td><td><code>@oryd/keto:v0.1.1-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.1</code> (deprecated!)</td><td><code>oryd/keto:v0.1.1-sandbox_oryOS.1</code>, <code>oryd/keto:v1.0.0-beta.1</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.2</code></td><td><code>v0.1.2-sandbox+oryOS.2</code></td><td><code>@oryd/keto:v0.1.2-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.2</code> (deprecated!)</td><td><code>oryd/keto:v0.1.2-sandbox_oryOS.2</code>, <code>oryd/keto:v1.0.0-beta.2</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.3</code></td><td><code>v0.1.3-sandbox+oryOS.3</code></td><td><code>@oryd/keto:v0.1.3-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.3</code> (deprecated!)</td><td><code>oryd/keto:v0.1.3-sandbox_oryOS.3</code>, <code>oryd/keto:v1.0.0-beta.3</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.4</code></td><td><code>v0.1.4-sandbox+oryOS.4</code></td><td><code>@oryd/keto:v0.1.4-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.4</code> (deprecated!)</td><td><code>oryd/keto:v0.1.4-sandbox_oryOS.4</code>, <code>oryd/keto:v1.0.0-beta.4</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.5</code></td><td><code>v0.1.5-sandbox+oryOS.5</code></td><td><code>@oryd/keto:v0.1.5-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.5</code> (deprecated!)</td><td><code>oryd/keto:v0.1.5-sandbox_oryOS.5</code>, <code>oryd/keto:v1.0.0-beta.5</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.6</code></td><td><code>v0.1.6-sandbox+oryOS.6</code></td><td><code>@oryd/keto:v0.1.6-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.6</code> (deprecated!)</td><td><code>oryd/keto:v0.1.6-sandbox_oryOS.6</code>, <code>oryd/keto:v1.0.0-beta.6</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.7</code></td><td><code>v0.1.7-sandbox+oryOS.7</code></td><td><code>@oryd/keto:v0.1.7-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.7</code> (deprecated!)</td><td><code>oryd/keto:v0.1.7-sandbox_oryOS.7</code>, <code>oryd/keto:v1.0.0-beta.7</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.8</code></td><td><code>v0.1.8-sandbox+oryOS.8</code></td><td><code>@oryd/keto:v0.1.8-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.8</code> (deprecated!)</td><td><code>oryd/keto:v0.1.8-sandbox_oryOS.8</code>, <code>oryd/keto:v1.0.0-beta.8</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td><code>v1.0.0-beta.9</code></td><td><code>v0.1.9-sandbox+oryOS.9</code></td><td><code>@oryd/keto:v0.1.9-sandbox</code>, <code>ory-keto-sdk:v1.0.0-beta.9</code> (deprecated!)</td><td><code>oryd/keto:v0.1.9-sandbox_oryOS.9</code>, <code>oryd/keto:v1.0.0-beta.9</code> (deleted Jan 15th 2019)</td></tr>
+<tr><td>-</td><td><code>v0.1.10-sandbox+oryOS.10</code> (example)</td><td><code>@oryd/keto:v0.1.10-sandbox</code></td><td><code>oryd/keto:v0.1.10-sandbox_oryOS.10</code></td></tr>
+</tbody>
+</table>
+<blockquote>
+<p>No code or database changes will be required when moving from <code>v1.0.0-beta.x</code>
+to <code>v0.1.x-sandbox</code></p>
+</blockquote>
+<h5><a class="anchor" aria-hidden="true" id="ory-docs"></a><a href="#ory-docs" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ORY Docs</h5>
+<blockquote>
+<p>If you are looking for the old developer guide,
+<a href="https://www.ory.sh/docs/deprecated/latest/">click here</a>.</p>
+</blockquote>
+<p>The documentation got a major overhaul. We completely deprecated GitBook, which
+is no longer being developed, and moved to <a href="https://docusaurus.io/">Docusaurus</a>.
+Additionally, the API documentation is now integrated in Docusaurus using
+<a href="https://github.com/Mermade/widdershins">widdershins</a> with custom templates, and
+no longer uses SwaggerUI. This is great, because everything is now in one
+place - and we added code examples for consuming the REST API for all major
+programming languages!</p>
+<p>The new documentation will serve documentation the latest version (new version
+semantics) only, this will be <code>oryOS.9</code>. This means that the following versions
+will be documented in the new docs:</p>
+<ul>
+<li>ORY Hydra <code>v1.0.0-beta.9</code></li>
+<li>ORY Oathkeeper <code>v0.13.9+oryOS.9</code></li>
+<li>ORY Keto <code>v0.1.9-sandbox+oryOS.9</code></li>
+</ul>
+<p>If you need to look up documentation on older versions (in the old format), you
+will be able to do so <a href="https://www.ory.sh/docs/deprecated/latest/">here</a>. This
+documentation will be available for a reasonable amount of time and you will
+receive a notice with ample time if we shut that down. You can view the legacy
+REST API Documentation by browsing to the
+<a href="https://petstore.swagger.io/">hosted swagger ui</a> and entering, for example,
+<code>https://raw.githubusercontent.com/ory/keto/v1.0.0-beta.8/docs/api.swagger.json</code>
+in the top bar.</p>
+<h5><a class="anchor" aria-hidden="true" id="ory-security-console"></a><a href="#ory-security-console" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>ORY Security Console</h5>
+<p>The ORY Security Console will be compatible with <code>oryOS.9</code>. While we work on
+implementing the new changes there you might see error messages regarding
+compatibility. You may ignore them for now.</p>
+<h5><a class="anchor" aria-hidden="true" id="outlook"></a><a href="#outlook" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Outlook</h5>
+<p>Versions <code>v1.0.0-beta.1</code> to <code>v1.0.0-beta.9</code> are blacklisted for ORY Oathkeeper
+and ORY Keto. No future release will have those versions. This will prevent
+potential future conflicts.</p>
+<h5><a class="anchor" aria-hidden="true" id="conflict-resolution"></a><a href="#conflict-resolution" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conflict Resolution</h5>
+<p>If you need help with these changes or want us to handle these updates for you,
+<a href="mailto:hi@ory.sh">write us now</a>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/31/2020 by aeneasr</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.16/ecosystem/deployment"><span class="arrow-prev">← </span><span>Deployment Fundamentals and Requirements</span></a><a class="docs-next button" href="/docs/oryOS.16/ecosystem/upgrading"><span>Software Updates</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#maturity">Maturity</a></li><li><a href="#compatibility">Compatibility</a><ul class="toc-headings"><li><a href="#package-repository-limitations">Package repository limitations</a></li></ul></li><li><a href="#changelog">Changelog</a><ul class="toc-headings"><li><a href="#january-2020-change">January 2020 Change</a></li><li><a href="#november-2018-change">November 2018 Change</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
