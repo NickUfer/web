@@ -1,66 +1,66 @@
-.description {
-  margin: 0;
+.information {
+  margin-bottom: 64px;
+}
+
+.projects {
+  display: flex;
+  align-content: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  & :nth-child(2n) {
+    margin-right: 0;
+  }
 }
 
 .project {
-  display: flex;
+  background: var(--alpha-20);
+  padding: 16px;
   margin-bottom: 32px;
+  height: calc(100% - 32px);
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
   transition: color ease 200ms;
   text-align: left;
 
-  & img {
-    margin-right: 20px;
-    min-height: 32px;
-    max-height: 32px;
-    transition: transform ease 200ms;
-  }
-
   &.kratos {
+    border-bottom: 2px solid var(--colors-kratos-default);
     &:hover,
     &:focus,
     &:active {
-      & h4,
-      & p {
-        color: var(--colors-kratos-default);
-        text-decoration: none;
-      }
+      background: var(--colors-kratos-default);
     }
   }
 
   &.hydra {
+    border-bottom: 2px solid var(--colors-hydra-default);
     &:hover,
     &:focus,
     &:active {
-      & h4,
-      & p {
-        color: var(--colors-hydra-default);
-        text-decoration: none;
-      }
+      background: var(--colors-hydra-default);
     }
   }
 
   &.oathkeeper {
+    border-bottom: 2px solid var(--colors-oathkeeper-default);
     &:hover,
     &:focus,
     &:active {
-      & h4,
-      & p {
-        color: var(--colors-oathkeeper-default);
-        text-decoration: none;
-      }
+      background: var(--colors-oathkeeper-default);
     }
   }
 
   &.keto {
+    border-bottom: 2px solid var(--colors-keto-default);
     &:hover,
     &:focus,
     &:active {
-      & h4,
-      & p {
-        color: var(--colors-keto-default);
-        text-decoration: none;
-      }
+      background: var(--colors-keto-default);
     }
   }
 
@@ -71,24 +71,22 @@
   }
 
   & p,
+  & h3 {
+    color: var(--colors-base-white);
+  }
   & h4 {
     color: var(--colors-base-white);
+    margin-bottom: 32px;
   }
 }
 
 @media (--mobile-viewport) {
-  .section :global .container-fluid .row {
-    flex-direction: column-reverse;
+  .information {
+    margin-bottom: 32px;
   }
 
   .project {
-    display: flex;
+    display: inline-flex;
     margin-bottom: 32px;
-
-    & img {
-      margin-right: 16px;
-      max-height: 32px;
-      min-height: 32px;
-    }
   }
 }

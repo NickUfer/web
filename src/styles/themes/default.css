@@ -1,5 +1,5 @@
 :root {
-  --alpha-20: 20;
+  --alpha-20: rgba(0,0,0,0.2);
 
   --colors-base-black: #000000;
   --colors-base-dark: #15283B;

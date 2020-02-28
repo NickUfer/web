@@ -21,8 +21,8 @@ const IndexPage = ({ data }: any) => {
         title="ORY - Open Source OAuth2 and OpenID Connect Access Control & API Security"
       />
       <Hero
-        title="Build secure cloud native applications and infrastructure"
-        subtitle="Modern identity services and infrastructure to help developers master the cloud."
+        title="Open source identity infrastructure and services for the cloud"
+        subtitle="Manage, secure and configure your cloud native applications."
         cta={[
           {
             title: 'GitHub',
@@ -38,16 +38,16 @@ const IndexPage = ({ data }: any) => {
       />
       <Newsletter />
       <ResponsiveSection
-        title={<h3>Why ORY</h3>}
+        title={<h3>Why use ORY technology?</h3>}
         left={
           <>
             <p className="mobile-offset-32">
-              ORY is the open source and cloud native identity infrastructure.
-              ORY is written in Go and open standards and consensus are the
-              foundation. It is language and platform independent, extremely
-              lightweight, starts up in seconds and doesn’t interfere with your
-              code. See our <a href="https://www.ory.sh/docs">documentation</a>{' '}
-              to get started.
+              ORY is open source, written in Go, founded in open standards and
+              consensus, and is cloud native. ORY is language and platform
+              independent, extremely lightweight, starts up in seconds and
+              doesn’t interfere with your code. See our{' '}
+              <a href="https://www.ory.sh/docs">documentation</a> to get
+              started.
             </p>
           </>
         }
@@ -67,11 +67,12 @@ const IndexPage = ({ data }: any) => {
         left={
           <>
             <p>
-              Our mission is to help make the cloud more manageable, useful and
-              safe and to give developers access to infrastructure and services
-              that makes developing for the cloud easier. We consider it a
-              privilege to be able to help developers push the boundaries of
-              modern cloud technology.
+              Our mission is to provide a common identity infrastructure to help
+              shape the way data is managed and exchanged in the cloud. We
+              provide access to infrastructure and services to help solve the
+              hardest problems in emerging cloud standards. It is our goal to
+              help developers push the boundaries of modern cloud technology and
+              engineering.
             </p>
           </>
         }

@@ -60,8 +60,8 @@ const HydraPage = () => (
       }
     />
     <Hero
-      title="Secure access to your applications and APIs"
-      subtitle="OpenID Certified&reg; OAuth 2.0 and OpenID Connect access control and API security for cloud native applications."
+      title="OAuth 2.0 and OpenID Certified® OpenID Connect Server"
+      subtitle="Secure access to your applications and APIs, and authenticate third party users."
       cta={[
         {
           title: 'Docs',
@@ -79,7 +79,7 @@ const HydraPage = () => (
     <Section
       left={
         <>
-          <h3>How {brandPrefix}Hydra works</h3>
+          <h3>What is {brandPrefix}Hydra?</h3>
           <p>
             {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
             technology that integrates with any login system. Get started in
@@ -119,9 +119,8 @@ const HydraPage = () => (
     />
     <Section
       dark
-      leftWide
-      left={<img className="responsive" src={hydraPolyglot} />}
-      right={
+      right={<img className="responsive" src={hydraPolyglot} />}
+      left={
         <>
           <h3>Polyglot</h3>
           <p>

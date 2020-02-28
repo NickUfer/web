@@ -42,9 +42,8 @@ class Newsletter extends Component<PropTypes, StateTypes> {
                 <>
                   <h3>Never miss a patch</h3>
                   <p>
-                    Keep your applications and systems up to date. ORY ships
-                    regular product patches and updates. Subscribe to our
-                    newsletter to get the “good stuff”.
+                    ORY ships regular product patches and updates. Subscribe to
+                    our newsletter to get the good stuff, and stay up to date.
                   </p>
                 </>
               )}
@@ -72,9 +71,6 @@ class Newsletter extends Component<PropTypes, StateTypes> {
                   onClick={this.onSubmit}
                 />
               </form>
-              <p className="secondary">
-                We send you "the good stuff" to keep you up to date.
-              </p>
             </div>
           </div>
         </div>

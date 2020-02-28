@@ -86,22 +86,26 @@ and in visual form in this video:
 
 ### ORY Hydra: A Headless OAuth2 and OpenID Connect Provider
 
-ORY Hydra is a OAuth2 Server and OpenID Certified™ OpenID Connect Provider written in Go.
+ORY Hydra is a OAuth2 Server and OpenID Certified™ OpenID Connect Provider
+written in Go.
 
 Compared to other OAuth2 and OpenID Connect Providers it does not implement its
-own user database and management (for user login, user registration, password reset,
-2fa, ...) but uses the [Login and Consent Flow](https://www.ory.sh/docs/hydra/implementing-consent)
-to delegate rendering the Login UI ("Please enter your email and password") and Consent UI
-("Should application MyDropboxDownload be allowed to access all your private
-Dropbox Documents?") to another application, typically written by
-you in your favorite programming language (Java, PHP, Go, NodeJS, ...) and
-UI framework (ReactJS, AngularJS, ...)
+own user database and management (for user login, user registration, password
+reset, 2fa, ...) but uses the
+[Login and Consent Flow](https://www.ory.sh/docs/hydra/implementing-consent) to
+delegate rendering the Login UI ("Please enter your email and password") and
+Consent UI ("Should application MyDropboxDownload be allowed to access all your
+private Dropbox Documents?") to another application, typically written by you in
+your favorite programming language (Java, PHP, Go, NodeJS, ...) and UI framework
+(ReactJS, AngularJS, ...)
 
-All [ORY technology follows architecture principles](https://www.ory.sh/docs/ecosystem/software-architecture-philosophy) that work best on
-Container Orchestration Systems such as Kubernetes, CloudFoundry, OpenShift,
-and similar projects. While it is possible to run the ORY stack on a RaspberryPI, the integration with the Docker and Container ecosystem is best documented
-and supported.
-ORY's architecture is designed along several guiding principles:
+All
+[ORY technology follows architecture principles](https://www.ory.sh/docs/ecosystem/software-architecture-philosophy)
+that work best on Container Orchestration Systems such as Kubernetes,
+CloudFoundry, OpenShift, and similar projects. While it is possible to run the
+ORY stack on a RaspberryPI, the integration with the Docker and Container
+ecosystem is best documented and supported. ORY's architecture is designed along
+several guiding principles:
 
 - Minimal dependencies (no system dependencies; might need a database backend)
 - Runs everywhere (Linux, macOS, FreeBSD, Windows; AMD64, i386, ARMv5, ...)

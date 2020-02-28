@@ -23,6 +23,12 @@ const Collaborator = () => (
             our work. Our small team would have never been able to achieve this
             without each and everyone of you.
           </p>
+          <p>
+            If you like, consider becoming a sponsor or supporter of our open
+            source efforts via{' '}
+            <a href="https://opencollective.com/ory">Open Collective</a> or{' '}
+            <a href="https://www.patreon.com/_ory">Patreon</a>.
+          </p>
         </div>
         <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
           <div className={styles.image}>

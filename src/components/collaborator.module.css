@@ -7,6 +7,15 @@
   & p {
     color: var(--colors-base-dark);
   }
+  & a:any-link {
+    color: var(--colors-themed-default);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colors-base-dark);
+    }
+  }
 }
 
 .image {

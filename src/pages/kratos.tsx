@@ -62,10 +62,13 @@ export const registrationRoute = (req, res) => {
 
 const KratosPage = () => (
   <Layout theme="kratos" appendix={'Kratos'}>
-    <SEO description="" title={`ORY Kratos Cloud Native Identity and User Management System`} />
+    <SEO
+      description=""
+      title={`ORY Kratos Cloud Native Identity and User Management System`}
+    />
     <Hero
       title="Cloud Native Identity and  User Management System"
-      subtitle="Use a variety of configurable authentication mechanisms to master user management in the cloud."
+      subtitle="Use configurable authentication mechanisms and master user management in the cloud."
       cta={[
         {
           title: 'Docs',
@@ -83,14 +86,14 @@ const KratosPage = () => (
     <Section
       left={
         <>
-          <h3>How {brandPrefix}Kratos works</h3>
+          <h3>What is {brandPrefix}Kratos?</h3>
           <p>
-            {brandPrefix}Kratos is a user login and registration service that
-            uses a variety of configurable authentications for instance "Sign in
-            with GitHub." Its multi-factor authentication supports a wide range
-            of protocols such as Google Authenticator. Kratos stores user
-            information using JSON schema, and its headless API is so nice and
-            easy. Take a look at our{' '}
+            {brandPrefix}Kratos is a cloud native user management system. It
+            provides user login and registration, multi-factor authentication,
+            and user information storage with a headless API. It is fully
+            configurable and supports a wide range of protocols such as Google
+            Authenticator, and stores user information using JSON Schema. Take a
+            look at our{' '}
             <a href="https://www.ory.sh/docs/kratos">documentation</a> and learn
             more.
           </p>
@@ -124,9 +127,8 @@ const KratosPage = () => (
     />
     <Section
       dark
-      leftWide
-      left={<img className="responsive" src={kratosPolyglot} />}
-      right={
+      right={<img className="responsive" src={kratosPolyglot} />}
+      left={
         <>
           <h3>Polyglot</h3>
           <p>
