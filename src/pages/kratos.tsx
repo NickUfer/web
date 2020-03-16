@@ -64,7 +64,7 @@ const KratosPage = () => (
   <Layout theme="kratos" appendix={'Kratos'}>
     <SEO
       description=""
-      title={`ORY Kratos Cloud Native Identity and User Management System`}
+      title={`${brandPrefix}Kratos Cloud Native Identity and User Management System`}
     />
     <Hero
       title="Cloud Native Identity and  User Management System"
@@ -108,7 +108,7 @@ const KratosPage = () => (
         />
       }
       mobile={[
-        <h3>How {brandPrefix}Kratos works</h3>,
+        <h3>What is {brandPrefix}Kratos?</h3>,
         <img
           alt="The ORY Kratos user login and registration service"
           className="responsive"

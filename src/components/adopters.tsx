@@ -76,8 +76,8 @@ const Adopters = () => (
           <div className={styles.logos}>
             <div className={styles.logosInner}>
               {adopters.map(({ title, image, url }) => (
-                <a href={url}>
-                  <img key={title} src={image} alt={title} />
+                <a href={url} key={title}>
+                  <img src={image} alt={title} />
                 </a>
               ))}
             </div>

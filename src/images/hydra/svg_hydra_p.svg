@@ -19,13 +19,13 @@
 @keyframes a14_o { 0% { opacity: 0; } 75% { opacity: 0; animation-timing-function: cubic-bezier(0.4,0,1,1); } 76.136% { opacity: 1; } 85.227% { opacity: 1; animation-timing-function: cubic-bezier(0,0,0.6,1); } 86.364% { opacity: 0; } 100% { opacity: 0; } }
 @keyframes a15_o { 0% { opacity: 0; } 87.5% { opacity: 0; animation-timing-function: cubic-bezier(0.4,0,1,1); } 88.636% { opacity: 1; } 97.727% { opacity: 1; animation-timing-function: cubic-bezier(0,0,0.6,1); } 98.864% { opacity: 0; } 100% { opacity: 0; } }
     </style>
-    <rect width="203.5" height="137.5" fill="#15283B" stroke="#F0F0F1" stroke-width="0.5" opacity="0" transform="translate(8,-8) translate(188.2,133.2)" style="animation: 17.6s linear infinite both a0_t, 17.6s linear infinite both a0_o;"/>
-    <rect width="203.5" height="137.5" fill="#15283B" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(188.2,133.2)" style="animation: 17.6s linear infinite both a1_t;"/>
-    <rect width="203.5" height="137.5" fill="#15283B" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(180.2,141.2)" style="animation: 17.6s linear infinite both a2_t;"/>
-    <rect width="203.5" height="137.5" fill="#15283B" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(172.2,149.2)" style="animation: 17.6s linear infinite both a3_t;"/>
-    <rect width="203.5" height="137.5" fill="#15283B" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(164.2,157.2)" style="animation: 17.6s linear infinite both a4_t;"/>
-    <rect width="203.5" height="137.5" fill="#15283B" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(156.2,165.2)" style="animation: 17.6s linear infinite both a5_t;"/>
-    <rect width="203.5" height="137.5" fill="#15283B" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(148.2,173.2)" style="animation: 17.6s linear infinite both a6_t, 17.6s linear infinite both a6_o;"/>
+    <rect width="203.5" height="137.5" fill="#19191D" stroke="#F0F0F1" stroke-width="0.5" opacity="0" transform="translate(8,-8) translate(188.2,133.2)" style="animation: 17.6s linear infinite both a0_t, 17.6s linear infinite both a0_o;"/>
+    <rect width="203.5" height="137.5" fill="#19191D" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(188.2,133.2)" style="animation: 17.6s linear infinite both a1_t;"/>
+    <rect width="203.5" height="137.5" fill="#19191D" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(180.2,141.2)" style="animation: 17.6s linear infinite both a2_t;"/>
+    <rect width="203.5" height="137.5" fill="#19191D" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(172.2,149.2)" style="animation: 17.6s linear infinite both a3_t;"/>
+    <rect width="203.5" height="137.5" fill="#19191D" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(164.2,157.2)" style="animation: 17.6s linear infinite both a4_t;"/>
+    <rect width="203.5" height="137.5" fill="#19191D" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(156.2,165.2)" style="animation: 17.6s linear infinite both a5_t;"/>
+    <rect width="203.5" height="137.5" fill="#19191D" stroke="#F0F0F1" stroke-width="0.5" transform="translate(0,0) translate(148.2,173.2)" style="animation: 17.6s linear infinite both a6_t, 17.6s linear infinite both a6_o;"/>
     <g opacity="0" transform="translate(148,173.2)" style="isolation: isolate; animation: 17.6s linear infinite both a7_o;">
         <rect x="2.2" y="2" width="4" height="4" fill="#db2b56" rx="4"/>
         <path stroke="#F0F0F1" stroke-width="0.5" d="M0,7.5L204,7.5"/>

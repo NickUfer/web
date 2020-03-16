@@ -25,7 +25,7 @@ const projects = [
     title: `${brandPrefix}/ Oathkeeper`,
     description:
       'Identity and Access Proxy (IAP). Authenticate and authorize all traffic, to interact with your applications.',
-    url: 'https://github.com/ory/oathkeeper',
+    path: '/oathkeeper',
   },
   {
     className: pstyles.keto,
@@ -60,10 +60,7 @@ const Projects = () => (
               free on GitHub. Our core projects are {brandPrefix} Kratos,{' '}
               {brandPrefix} Hydra, {brandPrefix} Oathkeeper and {brandPrefix}{' '}
               Keto.{' '}
-              <a href="https://github.com/ory">
-                {' '}
-                See all our repositories
-              </a>
+              <a href="https://github.com/ory"> See all our repositories</a>
             </p>
           </div>
           <div className="row">
@@ -71,10 +68,9 @@ const Projects = () => (
               className={`${pstyles.projects} col-lg-12 col-md-12 col-sm-12`}
             >
               {projects.map(({ url, title, description, path, className }) => (
-                <div className="col-lg-6 col-md-12 col-sm-12">
+                <div className="col-lg-6 col-md-12 col-sm-12" key={title}>
                   {path ? (
                     <Link
-                      key={title}
                       className={cn(pstyles.project, className)}
                       to={path}
                     >
@@ -85,7 +81,6 @@ const Projects = () => (
                     </Link>
                   ) : (
                     <a
-                      key={title}
                       className={cn(pstyles.project, className)}
                       href={url}
                     >

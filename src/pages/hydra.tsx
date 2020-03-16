@@ -101,7 +101,7 @@ const HydraPage = () => (
         />
       }
       mobile={[
-        <h3>How {brandPrefix}Hydra works</h3>,
+        <h3>What is {brandPrefix}Hydra?</h3>,
         <img
           alt="The ORY Hydra login and consent flow"
           className="responsive"
