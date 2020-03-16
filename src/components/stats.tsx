@@ -34,7 +34,7 @@ const analyze = (raw: string): Promise<number[][]> =>
       // Sort by date
       data.sort(
         (a: number[], b: number[]) =>
-          new Date(a[0]).getTime() - new Date(b[0]).getTime()
+          new Date(a[0]).getTime() - new Date(b[0]).getTime(),
       )
 
       // Now that it's sorted, get the first (oldest) date
@@ -82,7 +82,8 @@ const stats = (state: StateTypes) => [
   },
 ]
 
-interface PropTypes {}
+interface PropTypes {
+}
 
 type GitHubRepos =
   | 'hydra'
@@ -94,12 +95,17 @@ type GitHubRepos =
   | 'kratos'
   | 'docs'
   | 'examples'
+  | 'hydra-login-consent-node'
 
 type DockerImages =
   | 'oryd/hydra'
   | 'oryam/hydra'
   | 'oryd/oathkeeper'
   | 'oryd/keto'
+  | 'oryd/kratos'
+  | 'oryd/hydra-maester'
+  | 'oryd/hydra-login-consent-node'
+  | 'oryd/oathkeeper-maester'
 
 type GitHub = {
   [T in GitHubRepos]: number
@@ -122,21 +128,26 @@ class Stats extends Component<PropTypes, StateTypes> {
   state = {
     requests: { amount: 0, date: new Date() },
     docker: {
-      ['oryd/hydra']: 3031913,
-      ['oryam/hydra']: 84275,
-      ['oryd/oathkeeper']: 478875,
-      ['oryd/keto']: 189907,
+      'oryd/hydra': 8442239,
+      'oryam/hydra': 84625,
+      'oryd/oathkeeper': 1124223,
+      'oryd/keto': 254239,
+      'oryd/kratos': 4109,
+      'oryd/hydra-maester': 80570,
+      'oryd/hydra-login-consent-node': 24175,
+      'oryd/oathkeeper-maester': 76182,
     },
     github: {
-      hydra: 6307,
-      fosite: 1230,
-      ladon: 1452,
-      dockertest: 786,
-      oathkeeper: 1373,
-      keto: 292,
-      kratos: 261,
-      docs: 8,
-      examples: 70,
+      hydra: 8154,
+      fosite: 1361,
+      ladon: 1624,
+      dockertest: 1055,
+      oathkeeper: 1662,
+      keto: 502,
+      kratos: 379,
+      docs: 17,
+      examples: 107,
+      'hydra-login-consent-node': 125,
     },
   }
 
@@ -155,14 +166,14 @@ class Stats extends Component<PropTypes, StateTypes> {
       })
       .catch(err =>
         console.error(
-          `An error occurred while trying to fetch "${url}": ${err}`
-        )
+          `An error occurred while trying to fetch "${url}": ${err}`,
+        ),
       )
   }
 
   fetchDockerImagePulls = (repo: DockerImages) => {
     fetch(
-      `https://corsar.herokuapp.com/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`
+      `https://corsar.herokuapp.com/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`,
     )
       .then(body => body.json())
       .then(({ pull_count }: { pull_count: number }) => {
@@ -175,8 +186,8 @@ class Stats extends Component<PropTypes, StateTypes> {
       })
       .catch(err =>
         console.error(
-          `An error occurred while trying to fetch "${repo}": ${err}`
-        )
+          `An error occurred while trying to fetch "${repo}": ${err}`,
+        ),
       )
   }
 
@@ -228,11 +239,12 @@ class Stats extends Component<PropTypes, StateTypes> {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className={styles.stats}>
         <div className="container-fluid">
           <div className="row">
-            <VerticalDivider padding={96} />
+            <VerticalDivider padding={96}/>
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <h3>Adoption rate</h3>
               <p>
@@ -241,13 +253,14 @@ class Stats extends Component<PropTypes, StateTypes> {
                 practices.
               </p>
             </div>
-            <div className="mobile-offset-32 col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
+            <div
+              className="mobile-offset-32 col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <div className={styles.items}>
                 {stats(this.state).map(({ title, amount, description }) => (
                   <div key={title} className={styles.item}>
                     <div className={styles.title}>{title}</div>
                     <div className={styles.amount}>
-                      <AnimatedCounter countTo={amount} />
+                      <AnimatedCounter countTo={amount}/>
                     </div>
                     <div className={styles.description}>{description}</div>
                   </div>
