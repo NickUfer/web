@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
 import Prism from 'prismjs'
 import cn from 'classnames'
+import 'prismjs/components/prism-javascript.js'
+import 'prismjs/components/prism-go.js'
+import 'prismjs/components/prism-yaml.js'
 
 import * as styles from './codebox.module.css'
+
+export enum Languages {
+  HTML = 'html',
+  YML = 'yml',
+  JavaScript = 'javascript',
+}
 
 interface Tab {
   filename: string
   code: string
-  language: string
+  language: Languages
 }
 
 interface PropTypes {
@@ -16,23 +25,38 @@ interface PropTypes {
 
 interface StateTypes {
   active: number
+  tabs: Tab[]
 }
 
 class CodeBox extends Component<PropTypes, StateTypes> {
   state = {
     active: 0,
+    tabs: [],
   }
 
   componentDidMount() {
-    Prism.highlightAll()
+    this.setState({
+      tabs: this.props.tabs.map(this.highlight),
+    })
   }
 
   onSelectTab = (index: number) => () => {
     this.setState({ active: index })
   }
 
+  highlight(tab: Tab) {
+    return {
+      ...tab,
+      code: Prism.highlight(
+        tab.code,
+        Prism.languages[tab.language],
+        tab.language
+      ),
+    }
+  }
+
   render() {
-    const { tabs } = this.props
+    const { tabs } = this.state
     return (
       <div className={styles.box}>
         <div className={styles.editorHeader}>

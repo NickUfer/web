@@ -70,20 +70,14 @@ const Projects = () => (
               {projects.map(({ url, title, description, path, className }) => (
                 <div className="col-lg-6 col-md-12 col-sm-12" key={title}>
                   {path ? (
-                    <Link
-                      className={cn(pstyles.project, className)}
-                      to={path}
-                    >
+                    <Link className={cn(pstyles.project, className)} to={path}>
                       <div>
                         <h4 className={pstyles.description}>{title}</h4>
                         <p className={pstyles.description}>{description}</p>
                       </div>
                     </Link>
                   ) : (
-                    <a
-                      className={cn(pstyles.project, className)}
-                      href={url}
-                    >
+                    <a className={cn(pstyles.project, className)} href={url}>
                       <div>
                         <h4 className={pstyles.description}>{title}</h4>
                         <p className={pstyles.description}>{description}</p>

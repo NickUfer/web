@@ -8,7 +8,7 @@ import oathkeeperPolyglot from '../images/oathkeeper/svg_oathkeeper_p.svg'
 import Projects from '../components/projects'
 import Adopters from '../components/adopters'
 import Stats from '../components/stats'
-import CodeBox from '../components/codebox'
+import CodeBox, { Languages } from '../components/codebox'
 import oathkeeperProcess from '../images/oathkeeper/svg_oathkeeper.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
@@ -17,20 +17,44 @@ const IntegrationCodeBox = () => (
   <CodeBox
     tabs={[
       {
-        filename: 'config.yaml',
-        language: 'yaml',
-        code: `upstream:
-  url: http://my-backend-service
-match:
-  url: http://my-app/some-route/<.*>
-  methods:
-    - GET
+        filename: 'access-rules.yml',
+        language: Languages.YML,
+        code: `---
+- upstream:
+    url: http://my-backend-service
+  match:
+    url: http://my-app/some-route/<.*>
+    methods:
+      - GET
+  authenticators:
+    - handler: jwt
+  authorizer:
+    hander: allow
+  mutators:
+    - handler: headers
+      config:
+        headers:
+          X-User: "{{ print .Subject }}"
+# ...`,
+      },
+      {
+        filename: 'config.yml',
+        language: Languages.YML,
+        code: `---
+daemon:
+  proxy:
+    port: 4455
+access_rules:
+  repositories:
+    - access-rules.yml
 authenticators:
-  - handler: jwt
-authorizer:
-  hander: allow
-mutators:
-  - handler: headers`,
+  jwt:
+    enabled: true
+    config:
+      jwks_urls:
+        - https://my-website.com/.well-known/jwks.json
+# ...
+`,
       },
     ]}
   />

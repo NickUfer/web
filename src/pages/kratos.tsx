@@ -8,7 +8,7 @@ import kratosPolyglot from '../images/kratos/svg_kratos_p.svg'
 import Projects from '../components/projects'
 import Adopters from '../components/adopters'
 import Stats from '../components/stats'
-import CodeBox from '../components/codebox'
+import CodeBox, { js, html, Languages } from '../components/codebox'
 import kratosProcess from '../images/kratos/svg_kratos.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
@@ -18,7 +18,7 @@ const IntegrationCodeBox = () => (
     tabs={[
       {
         filename: 'login.js',
-        language: 'js',
+        language: Languages.JavaScript,
         code: `const kratosAdminURL = process.env.KRATOS_ADMIN_URL
 // express.get('/auth/login', loginRoute)
 export const loginRoute = (req, res) => {
@@ -32,7 +32,7 @@ export const loginRoute = (req, res) => {
       },
       {
         filename: 'registration.js',
-        language: 'js',
+        language: Languages.JavaScript,
         code: `const kratosAdminURL = process.env.KRATOS_ADMIN_URL
 // express.get('/auth/registration', registrationRoute)
 export const registrationRoute = (req, res) => {
@@ -46,7 +46,7 @@ export const registrationRoute = (req, res) => {
       },
       {
         filename: 'login.tmpl',
-        language: 'html',
+        language: Languages.HTML,
         code: `&lt;div class=&quot;login-view&quot;&gt;
   &lt;form action=&quot;{{kratos.methods.password.config.action}}&quot; method=&quot;{{kratos.methods.password.config.method}}&quot;&gt;
     {{#each kratos.methods.password.config.fields}}

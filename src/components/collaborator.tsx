@@ -34,11 +34,7 @@ const Collaborator = () => (
           <div className={styles.image}>
             {collaborator.map(({ title, image, url }) => (
               <a href={url} key={title}>
-                <img
-                  src={image}
-                  alt={title}
-                  className="responsive"
-                />
+                <img src={image} alt={title} className="responsive" />
               </a>
             ))}
           </div>

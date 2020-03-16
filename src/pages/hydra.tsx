@@ -8,7 +8,7 @@ import hydraPolyglot from '../images/hydra/svg_hydra_p.svg'
 import Projects from '../components/projects'
 import Adopters from '../components/adopters'
 import Stats from '../components/stats'
-import CodeBox from '../components/codebox'
+import CodeBox, { Languages } from '../components/codebox'
 import integrationProcess from '../images/hydra/svg_hydra.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
@@ -18,7 +18,7 @@ const IntegrationCodeBox = () => (
     tabs={[
       {
         filename: 'login.js',
-        language: 'js',
+        language: Languages.JavaScript,
         code: `fetch('https://hydra-admin-api/oauth2/auth/requests/login/accept?login_challenge=12345', {
     method: 'PUT',
     headers: {'Content-Type': 'application/json'},
@@ -31,7 +31,7 @@ const IntegrationCodeBox = () => (
       },
       {
         filename: 'consent.js',
-        language: 'js',
+        language: Languages.JavaScript,
         code: `fetch('https://hydra-admin-api/oauth2/auth/requests/consent/accept?consent_challenge=12345', {
     method: 'PUT',
     headers: {'Content-Type': 'application/json'},
