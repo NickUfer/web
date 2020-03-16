@@ -47,14 +47,14 @@ export const registrationRoute = (req, res) => {
       {
         filename: 'login.tmpl',
         language: Languages.HTML,
-        code: `&lt;div class=&quot;login-view&quot;&gt;
-  &lt;form action=&quot;{{kratos.methods.password.config.action}}&quot; method=&quot;{{kratos.methods.password.config.method}}&quot;&gt;
+        code: `<div class="login-view">
+  <form action="{{kratos.methods.password.config.action}}" method="{{kratos.methods.password.config.method}}">
     {{#each kratos.methods.password.config.fields}}
-      &lt;input name=&quot;{{name}}&quot; type=&quot;{{type}}&quot; value=&quot;{{value}}&quot;&gt;
+      <input name="{{name}}" type="{{type}}" value="{{value}}">
     {{/each}}
-    &lt;button type=&quot;submit&quot;&gt;Sign In&lt;/button&gt;
-  &lt;/form&gt;
-&lt;/div&gt;`,
+    <button type="submit">Sign In</button>
+  </form>
+</div>`,
       },
     ]}
   />
