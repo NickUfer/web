@@ -50,7 +50,11 @@ const IntegrationCodeBox = () => (
 )
 
 const HydraPage = () => (
-  <Layout theme="hydra" appendix={'Hydra'}>
+  <Layout
+    theme="hydra"
+    appendix={'Hydra'}
+    githubLink="https://github.com/ory/hydra"
+  >
     <SEO
       description=""
       title={
@@ -64,13 +68,13 @@ const HydraPage = () => (
       subtitle="Secure access to your applications and APIs, and authenticate third party users."
       cta={[
         {
-          title: 'Docs',
-          href: 'https://www.ory.sh/docs/hydra',
+          title: 'Get started',
+          href: 'https://www.ory.sh/docs/hydra/5min-tutorial',
           style: 'primary',
         },
         {
-          title: 'Tutorial',
-          href: 'https://www.ory.sh/docs/hydra/5min-tutorial',
+          title: 'GitHub',
+          href: 'https://github.com/ory/hydra',
           style: 'secondary',
         },
       ]}

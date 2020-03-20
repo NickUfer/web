@@ -61,7 +61,11 @@ authenticators:
 )
 
 const OathkeeperPage = () => (
-  <Layout theme="oathkeeper" appendix={'Oathkeeper'}>
+  <Layout
+    theme="oathkeeper"
+    appendix={'Oathkeeper'}
+    githubLink="https://github.com/ory/oathkeeper"
+  >
     <SEO
       description=""
       title={`${brandPrefix} Oathkeeper Open Source Identity and Access Proxy (IAP).`}
@@ -71,13 +75,13 @@ const OathkeeperPage = () => (
       subtitle="Identity and Access Proxy (IAP). Authenticate and authorize all traffic, to interact with your applications."
       cta={[
         {
-          title: 'Docs',
+          title: 'Get started',
           href: 'https://www.ory.sh/docs/oathkeeper',
           style: 'primary',
         },
         {
-          title: 'Tutorial',
-          href: 'https://www.ory.sh/docs/oathkeeper/install',
+          title: 'GitHub',
+          href: 'https://github.com/ory/oathkeeper',
           style: 'secondary',
         },
       ]}

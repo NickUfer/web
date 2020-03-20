@@ -34,7 +34,7 @@ const analyze = (raw: string): Promise<number[][]> =>
       // Sort by date
       data.sort(
         (a: number[], b: number[]) =>
-          new Date(a[0]).getTime() - new Date(b[0]).getTime(),
+          new Date(a[0]).getTime() - new Date(b[0]).getTime()
       )
 
       // Now that it's sorted, get the first (oldest) date
@@ -82,8 +82,7 @@ const stats = (state: StateTypes) => [
   },
 ]
 
-interface PropTypes {
-}
+interface PropTypes {}
 
 type GitHubRepos =
   | 'hydra'
@@ -166,14 +165,14 @@ class Stats extends Component<PropTypes, StateTypes> {
       })
       .catch(err =>
         console.error(
-          `An error occurred while trying to fetch "${url}": ${err}`,
-        ),
+          `An error occurred while trying to fetch "${url}": ${err}`
+        )
       )
   }
 
   fetchDockerImagePulls = (repo: DockerImages) => {
     fetch(
-      `https://corsar.herokuapp.com/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`,
+      `https://corsar.herokuapp.com/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`
     )
       .then(body => body.json())
       .then(({ pull_count }: { pull_count: number }) => {
@@ -186,8 +185,8 @@ class Stats extends Component<PropTypes, StateTypes> {
       })
       .catch(err =>
         console.error(
-          `An error occurred while trying to fetch "${repo}": ${err}`,
-        ),
+          `An error occurred while trying to fetch "${repo}": ${err}`
+        )
       )
   }
 
@@ -244,7 +243,7 @@ class Stats extends Component<PropTypes, StateTypes> {
       <div className={styles.stats}>
         <div className="container-fluid">
           <div className="row">
-            <VerticalDivider padding={96}/>
+            <VerticalDivider padding={96} />
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <h3>Adoption rate</h3>
               <p>
@@ -253,14 +252,13 @@ class Stats extends Component<PropTypes, StateTypes> {
                 practices.
               </p>
             </div>
-            <div
-              className="mobile-offset-32 col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
+            <div className="mobile-offset-32 col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <div className={styles.items}>
                 {stats(this.state).map(({ title, amount, description }) => (
                   <div key={title} className={styles.item}>
                     <div className={styles.title}>{title}</div>
                     <div className={styles.amount}>
-                      <AnimatedCounter countTo={amount}/>
+                      <AnimatedCounter countTo={amount} />
                     </div>
                     <div className={styles.description}>{description}</div>
                   </div>

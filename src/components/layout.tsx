@@ -14,20 +14,17 @@ import Announcement from './announcement'
 import Footer from './footer'
 
 const defaultMenu: Menu = [
-  {
-    title: 'Home',
-    path: '/',
-    className: 'hidden-sm',
-  },
   { title: 'Docs', href: '/docs' },
   { title: 'Blog', path: '/blog' },
   { title: 'Jobs', href: 'https://github.com/ory/jobs' },
 ]
 
-const defaultIconMenu: IconMenu = [
+const defaultIconMenu = ({
+  githubLink = 'https://github.com/ory',
+}): IconMenu => [
   { title: 'Chat', href: 'https://www.ory.sh/chat' },
   { title: 'Forum', href: 'https://community.ory.sh/' },
-  { title: 'GitHub', href: 'https://github.com/ory' },
+  { title: 'GitHub', href: githubLink },
 ]
 
 const Layout = ({
@@ -37,17 +34,19 @@ const Layout = ({
   announcement,
   appendix = '',
   theme = 'default',
+  githubLink,
 }: {
   children: ReactNode
   menu?: Menu
-  icons?: IconMenu
+  icons?: typeof defaultIconMenu
   announcement?: ReactNode
   theme?: string
   appendix?: string
+  githubLink?: string
 }) => (
   <div className={`theme-${theme}`}>
     {announcement ? <Announcement>{announcement}</Announcement> : null}
-    <Header appendix={appendix} menu={menu} icons={icons} />
+    <Header appendix={appendix} menu={menu} icons={icons({ githubLink })} />
     <main>{children}</main>
     <Footer />
   </div>

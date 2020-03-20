@@ -61,7 +61,11 @@ export const registrationRoute = (req, res) => {
 )
 
 const KratosPage = () => (
-  <Layout theme="kratos" appendix={'Kratos'}>
+  <Layout
+    theme="kratos"
+    appendix={'Kratos'}
+    githubLink="https://github.com/ory/kratos"
+  >
     <SEO
       description=""
       title={`${brandPrefix}Kratos Cloud Native Identity and User Management System`}
@@ -71,13 +75,13 @@ const KratosPage = () => (
       subtitle="Use configurable authentication mechanisms and master user management in the cloud."
       cta={[
         {
-          title: 'Docs',
-          href: 'https://www.ory.sh/docs/kratos',
+          title: 'Get started',
+          href: 'https://www.ory.sh/docs/next/kratos/quickstart',
           style: 'primary',
         },
         {
-          title: 'Tutorial',
-          href: 'https://www.ory.sh/docs/next/kratos/quickstart',
+          title: 'GitHub',
+          href: 'https://github.com/ory/kratos',
           style: 'secondary',
         },
       ]}
