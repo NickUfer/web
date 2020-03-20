@@ -21,17 +21,17 @@ const IndexPage = ({ data }: any) => {
         title="ORY - Open Source OAuth2 and OpenID Connect Access Control & API Security"
       />
       <Hero
-        title="Open source identity infrastructure and services for the cloud"
-        subtitle="Manage, secure and configure your cloud native applications."
+        title="Open Source Identity Infrastructure and Services"
+        subtitle="Run User Management, Permission and Role Management, and OAuth 2.0 & OpenID Connect anywhere from your cloud to a Raspberry Pi."
         cta={[
           {
-            title: 'GitHub',
-            href: 'https://github.com/ory',
+            title: 'Contact Us',
+            href: 'https://docs.google.com/forms/d/1uLkfr3BUNzLWYdYnf2hvRy_bpjRTGOGQj2cfmjtTwMY',
             style: 'primary',
           },
           {
-            title: 'Docs',
-            href: 'https://www.ory.sh/docs',
+            title: 'GitHub',
+            href: 'https://github.com/ory',
             style: 'secondary',
           },
         ]}
