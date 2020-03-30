@@ -151,7 +151,7 @@ class Stats extends Component<PropTypes, StateTypes> {
   }
 
   fetchGitHubStars = (repo: GitHubRepos) => {
-    const url = `https://corsar.herokuapp.com/repos/ory/${repo}?__host=api.github.com&__proto=https`
+    const url = `https://corsar.ory.sh/repos/ory/${repo}?__host=api.github.com&__proto=https`
     // const url = `https://api.github.com/repos/ory/${repo}`
     fetch(url)
       .then(body => body.json())
@@ -172,7 +172,7 @@ class Stats extends Component<PropTypes, StateTypes> {
 
   fetchDockerImagePulls = (repo: DockerImages) => {
     fetch(
-      `https://corsar.herokuapp.com/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`
+      `https://corsar.ory.sh/v2/repositories/${repo}/?__host=hub.docker.com&__proto=https`
     )
       .then(body => body.json())
       .then(({ pull_count }: { pull_count: number }) => {
