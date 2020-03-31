@@ -1,0 +1,59 @@
+@import '../styles/properties.css';
+
+.compressed-hero {
+  background-color: var(--colors-themed-default);
+  padding: 112px 0;
+
+  & h2,
+  & h3,
+  & p {
+    color: var(--colors-base-white);
+  }
+
+  & a:any-link {
+    color: var(--colors-themed-default);
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--colors-base-white);
+      text-decoration: underline;
+    }
+  }
+
+  & :global a.cta.secondary:any-link {
+    color: var(--colors-base-dark);
+    border-color: var(--colors-base-dark);
+
+    &:hover {
+      border-color: var(--colors-base-white);
+      color: var(--colors-base-white);
+    }
+  }
+
+  & :global a.cta.primary:any-link {
+    color: var(--colors-base-white);
+    background-color: var(--colors-base-dark);
+    border-color: var(--colors-base-dark);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: var(--colors-themed-default);
+      border-color: var(--colors-themed-default);
+      color: var(--colors-base-white);
+    }
+  }
+}
+
+@media (--sm-viewport) {
+  .compressed-hero {
+    padding: 64px 0;
+  }
+}
+
+@media (--md-viewport) {
+  .compressed-hero {
+    padding: 64px 0;
+  }
+}

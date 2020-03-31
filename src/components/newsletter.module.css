@@ -5,7 +5,7 @@
 
 .newsletter {
   background-color: var(--colors-base-dark);
-  padding: 96px 0;
+  padding: 64px 0;
   position: relative;
   color: var(--colors-base-white);
 }

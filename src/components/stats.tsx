@@ -243,7 +243,6 @@ class Stats extends Component<PropTypes, StateTypes> {
       <div className={styles.stats}>
         <div className="container-fluid">
           <div className="row">
-            <VerticalDivider padding={96} />
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               <h3>Adoption rate</h3>
               <p>

@@ -34,7 +34,7 @@ class Newsletter extends Component<PropTypes, StateTypes> {
       <div className={cn(styles.newsletter, { [styles.light]: light })}>
         <div className="container-fluid">
           <div className="row">
-            <VerticalDivider padding={96} />
+            <VerticalDivider padding={64} />
             <div className="col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
               {left ? (
                 left

@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "collaborator": string;
+  readonly "compressedHero": string;
 };
 export = styles;
 

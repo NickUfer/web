@@ -1,6 +1,13 @@
-.collaborator {
+@import '../styles/properties.css';
+
+.compressed {
   background-color: var(--colors-themed-light);
-  padding: 112px 0;
+  padding: 64px 0;
+
+  &.expanded {
+    background-color: var(--colors-base-white);
+    padding: 112px 0;
+  }
 
   & h3,
   & p {
@@ -20,21 +27,13 @@
 }
 
 @media (--sm-viewport) {
-  .collaborator {
+  .compressed {
     padding: 32px 0;
-
-    & img {
-      margin-bottom: 32px;
-    }
   }
 }
 
 @media (--md-viewport) {
-  .collaborator {
+  .compressed {
     padding: 32px 0;
-
-    & img {
-      margin-bottom: 32px;
-    }
   }
 }

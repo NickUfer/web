@@ -26,7 +26,8 @@ const IndexPage = ({ data }: any) => {
         cta={[
           {
             title: 'Contact Us',
-            href: 'https://docs.google.com/forms/d/e/1FAIpQLSe2KHAYSv0K0syWNCWjL3Sv3Nqf5VKBt4Hfq_thvaULqFrVlA/viewform',
+            href:
+              'https://docs.google.com/forms/d/e/1FAIpQLSe2KHAYSv0K0syWNCWjL3Sv3Nqf5VKBt4Hfq_thvaULqFrVlA/viewform',
             style: 'primary',
           },
           {

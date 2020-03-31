@@ -1,5 +1,5 @@
 :root {
-  --alpha-20: rgba(0,0,0,0.2);
+  --alpha-20: rgba(0,0,0,0.05);
 
   --colors-base-black: #000000;
   --colors-base-dark: #19191D;
@@ -26,15 +26,15 @@
 
   --colors-kratos-default: #FB8200;
   --colors-kratos-weak: #FFB86C;
-  --colors-kratos-light: #FEF3E7;
+  --colors-kratos-light: #fff9f2;
 
   --colors-hydra-default: #DB2B56;
   --colors-hydra-weak: #FFBDCD;
-  --colors-hydra-light: #FDE5EA;
+  --colors-hydra-light: #fffafb;
 
   --colors-oathkeeper-default: #2979FF;
   --colors-oathkeeper-weak: #B3CFFF;
-  --colors-oathkeeper-light: #EBF2FF;
+  --colors-oathkeeper-light: #f7faff;
 
   --colors-keto-default: #00A571;
   --colors-keto-weak: #6BE2BD;

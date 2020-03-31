@@ -1,17 +1,27 @@
 import Layout from '../components/layout'
 import React from 'react'
-import Hero from '../components/hero'
+import CompressedHero from '../components/compressed-hero'
 import Newsletter from '../components/newsletter'
-import Section from '../components/section'
+import CompressedSection from '../components/compressed-section'
 import SEO from '../components/seo'
 import hydraPolyglot from '../images/hydra/svg_hydra_p.svg'
-import Projects from '../components/projects'
-import Adopters from '../components/adopters'
 import Stats from '../components/stats'
 import CodeBox, { Languages } from '../components/codebox'
 import integrationProcess from '../images/hydra/svg_hydra.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
+
+const HydraAnimation = () => (
+  <img
+    alt="The ORY Hydra login and consent flow"
+    className="responsive"
+    src={integrationProcess}
+  />
+)
+
+const HydraSdk = () => (
+  <img alt="ORY Hydra SDKs" className="responsive" src={hydraPolyglot} />
+)
 
 const IntegrationCodeBox = () => (
   <CodeBox
@@ -63,7 +73,8 @@ const HydraPage = () => (
           : `${brandPrefix}Hydra Open Source OAuth 2.0 and OpenID Connect Server - ory.sh`
       }
     />
-    <Hero
+
+    <CompressedHero
       title="OAuth 2.0 and OpenID Certified® OpenID Connect Server"
       subtitle="Secure access to your applications and APIs, and authenticate third party users."
       cta={[
@@ -78,52 +89,53 @@ const HydraPage = () => (
           style: 'secondary',
         },
       ]}
+      visual={<HydraAnimation />}
+      mobile={[<HydraAnimation />]}
     />
+
     <Newsletter />
-    <Section
+    <CompressedSection
+      expanded
       left={
         <>
-          <h3>What is {brandPrefix}Hydra?</h3>
+          <h3>Easy integration</h3>
           <p>
             {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
             technology that integrates with any login system. Get started in
             minutes, and provide secure access to your application and API
-            endpoints. Head over to our{' '}
-            <a className="to-black" href="https://www.ory.sh/docs/hydra">
-              documentation
-            </a>{' '}
-            and learn more.
+            endpoints.
+          </p>
+          <p>
+            {brandPrefix}Hydra works with any login system and only a few lines
+            of code are required. Head over to our{' '}
+            <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn
+            more.{' '}
           </p>
         </>
       }
-      wide
-      right={
-        <img
-          alt="The ORY Hydra login and consent flow"
-          className="responsive"
-          src={integrationProcess}
-        />
-      }
+      right={<IntegrationCodeBox />}
       mobile={[
-        <h3>What is {brandPrefix}Hydra?</h3>,
-        <img
-          alt="The ORY Hydra login and consent flow"
-          className="responsive"
-          src={integrationProcess}
-        />,
-        <p className="mobile-offset-32">
-          {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
-          technology that integrates with any login system. Get started in
-          minutes, and provide secure access to your application and API
-          endpoints. Head over to our{' '}
-          <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn
-          more.
-        </p>,
+        <h3>Easy integration</h3>,
+        <IntegrationCodeBox />,
+        <div className={'mobile-offset-32'}>
+          <p>
+            {brandPrefix}Hydra is Open Source and OpenID Connect Certified&reg;
+            technology that integrates with any login system. Get started in
+            minutes, and provide secure access to your application and API
+            endpoints.
+          </p>
+          <p>
+            {brandPrefix}Hydra works with any login system and only a few lines
+            of code are required. Head over to our{' '}
+            <a href="https://www.ory.sh/docs/hydra">documentation</a> and learn
+            more.{' '}
+          </p>
+        </div>,
       ]}
     />
-    <Section
-      dark
-      right={<img className="responsive" src={hydraPolyglot} />}
+
+    <CompressedSection
+      right={<HydraSdk />}
       left={
         <>
           <h3>Polyglot</h3>
@@ -131,66 +143,24 @@ const HydraPage = () => (
             {brandPrefix}Hydra is written in Go and we provide SDKs for every
             language. We work with any login system and it is easy to customize
             the login experience. Our{' '}
-            <a href="https://www.ory.sh/docs/hydra">documentation</a> makes
+            <a href="https://www.ory.sh/docs/hydra/sdk/">documentation</a> makes
             integrating {brandPrefix}Hydra a snap.
           </p>
         </>
       }
       mobile={[
         <h3>Polyglot</h3>,
-        <img className="responsive" src={hydraPolyglot} />,
+        <HydraSdk />,
         <p className="mobile-offset-32">
           {brandPrefix}Hydra is written in Go and we provide SDKs for every
           language. We work with any login system and it is easy to customize
           the login experience. Our{' '}
-          <a href="https://www.ory.sh/docs/hydra">documentation</a> makes
+          <a href="https://www.ory.sh/docs/hydra/sdk/">documentation</a> makes
           integrating {brandPrefix}Hydra a snap.
         </p>,
       ]}
     />
-    <Section
-      left={
-        <>
-          <h3>Easy integration</h3>
-          <p>
-            {brandPrefix}Hydra works with any login system and only a few lines
-            of code are required.
-          </p>
-          <p>
-            ORY technology works on the network. It interferes as little as
-            possible with your code so you can concentrate on building your
-            applications.
-          </p>
-          <p>
-            <a
-              href="https://www.ory.sh/docs/hydra/oauth2"
-              className="cta tertiary"
-            >
-              Learn more
-            </a>
-          </p>
-        </>
-      }
-      wide
-      right={<IntegrationCodeBox />}
-      mobile={[
-        <h3>Easy integration</h3>,
-        <IntegrationCodeBox />,
-        <div className={'mobile-offset-32'}>
-          <p>
-            {brandPrefix}Hydra works with any login system and only a few lines
-            of code are required.
-          </p>
-          <p>
-            ORY technology works on the network. It interferes as little as
-            possible with your code so you can concentrate on building your
-            applications.
-          </p>
-        </div>,
-      ]}
-    />
-    <Projects />
-    <Adopters />
+
     <Stats />
     <Collaborator />
   </Layout>

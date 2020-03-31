@@ -1,7 +1,8 @@
 .stats {
+  background-color: var(--colors-base-white);
   padding: 96px 0;
   position: relative;
-  color: var(--colors-base-white);
+  color: var(--colors-base-dark);
 }
 
 @media (--mobile-viewport) {
