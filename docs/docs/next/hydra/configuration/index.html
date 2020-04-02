@@ -364,7 +364,6 @@
 
   <span class="hljs-comment"># dynamic_client_registration configures OpenID Connect Dynamic Client Registration (exposed as admin endpoints /clients/...)</span>
   <span class="hljs-attr">dynamic_client_registration:</span>
-
     <span class="hljs-comment"># The OpenID Connect Dynamic Client Registration specification has no concept of whitelisting OAuth 2.0 Scope. If you</span>
     <span class="hljs-comment"># want to expose Dynamic Client Registration, you should set the default scope enabled for newly registered clients.</span>
     <span class="hljs-comment"># Keep in mind that users can overwrite this default by setting the "scope" key in the registration payload,</span>
@@ -376,7 +375,6 @@
 
 <span class="hljs-attr">urls:</span>
   <span class="hljs-attr">self:</span>
-
     <span class="hljs-comment"># This value will be used as the "issuer" in access and ID tokens. It must be</span>
     <span class="hljs-comment"># specified and using HTTPS protocol, unless --dangerous-force-http is set. This should typically be equal</span>
     <span class="hljs-comment"># to the public value.</span>
@@ -462,7 +460,6 @@
     <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-an-old-secret</span>
     <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-another-old-secret</span>
 
-
 <span class="hljs-comment"># Enables profiling if set. Use "cpu" to enable cpu profiling and "mem" to enable memory profiling. For more details</span>
 <span class="hljs-comment"># on profiling, head over to: https://blog.golang.org/profiling-go-programs</span>
 <span class="hljs-attr">profiling:</span> <span class="hljs-string">cpu</span>
@@ -497,7 +494,7 @@
         <span class="hljs-comment"># The address of jaeger-agent's HTTP sampling server</span>
         <span class="hljs-attr">server_url:</span> <span class="hljs-string">http://localhost:5778/sampling</span>
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/2/2020 by ORY Continuous Integration</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/configure-deploy"><span class="arrow-prev">← </span><span>Installation and Setup</span></a><a class="docs-next button" href="/docs/next/hydra/dependencies-environment"><span>Database Setup and Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/2/2020 by aeneasr</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/hydra/configure-deploy"><span class="arrow-prev">← </span><span>Installation and Setup</span></a><a class="docs-next button" href="/docs/next/hydra/dependencies-environment"><span>Database Setup and Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();

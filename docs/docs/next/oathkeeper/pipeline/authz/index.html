@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Authorizers · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="An authorizer is responsible for authorizing a subject. ORY Oathkeeper supports"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Authorizers · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="An authorizer is responsible for authorizing a subject. ORY Oathkeeper supports"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Authorizers · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="An &quot;authorizer&quot; is responsible for properly permissioning a subject. ORY Oathkeeper supports"/><meta name="docsearch:version" content="next"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Authorizers · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="An &quot;authorizer&quot; is responsible for properly permissioning a subject. ORY Oathkeeper supports"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
               (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
               (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
               m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -62,16 +62,16 @@
                 };
               }
             });
-        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/oathkeeper/pipeline/authz.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Authorizers</h1></header><article><div><span><p>An authorizer is responsible for authorizing a subject. ORY Oathkeeper supports
-different authorizers and we will add more as the project progresses.</p>
-<p>Conceptually, an authorizer makes sure that a subject (&quot;user&quot;) has the right
-permissions. For example, a specific endpoint might only be accessible to
-subjects (&quot;users&quot;) from group &quot;admin&quot;. The authorizer handles that logic.</p>
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/oathkeeper/pipeline/authz.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Authorizers</h1></header><article><div><span><p>An &quot;authorizer&quot; is responsible for properly permissioning a subject. ORY Oathkeeper supports
+different kinds of authorizers. The list of authorizers increases over time due to new features and requirements.</p>
+<p>Authorizers assure that a subject, for instance a &quot;user&quot;,  has the
+permissions necessary to access or perform a particular service. For example, an authorizer can permit access to an endpoint or URL for specific
+subjects or &quot;users&quot; from a specific group &quot;admin&quot;. The authorizer permits the subjects the desired access to the endpoint.</p>
 <p>Each authorizer has two keys:</p>
 <ul>
-<li><code>handler</code> (string, required): Defines the handler (e.g. <code>noop</code>) to be used.</li>
-<li><code>config</code> (object, optional): Configures the handler. Configuration keys vary
-per handler.</li>
+<li><code>handler</code> (string, required): Defines the handler, e.g. <code>noop</code>, to be used.</li>
+<li><code>config</code> (object, optional): Configures the handler. Configuration keys can vary
+for each handler.</li>
 </ul>
 <p><strong>Example</strong></p>
 <pre><code class="hljs css language-json">{
@@ -81,16 +81,16 @@ per handler.</li>
   }
 }
 </code></pre>
-<p>It is not possible to configure more than one authorizer per Access Rule.</p>
-<h2><a class="anchor" aria-hidden="true" id="allow"></a><a href="#allow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>allow</code></h2>
-<p>This authorizer considers every action authorized.</p>
+<p>There is a 1:1 mandatory relationship between an authoriser and an access rule. It is not possible to configure more than one authorizer per Access Rule.</p>
+<h2><a class="anchor" aria-hidden="true" id="authorizer-allow"></a><a href="#authorizer-allow" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authorizer <code>allow</code></h2>
+<p>This authorizer permits every action allowed.</p>
 <h3><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h3>
 <p>This handler is not configurable.</p>
-<p>To enable this handler, set:</p>
+<p>To enable this handler, set as follows:</p>
 <pre><code class="hljs css language-yaml"><span class="hljs-comment"># Global configuration file oathkeeper.yml</span>
 <span class="hljs-attr">authorizers:</span>
   <span class="hljs-attr">allow:</span>
-    <span class="hljs-comment"># Set enabled to true if the authenticator should be enabled and false to disable the authenticator. Defaults to false.</span>
+   <span class="hljs-comment"># Set enabled to "true" to enable the authenticator, and "false" to disable the authenticator. Defaults to "false".</span>
     <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="access-rule-example"></a><a href="#access-rule-example" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Access Rule Example</h3>
@@ -117,16 +117,16 @@ $ curl -X GET http://my-app/some-route
 HTTP/1.0 200 Status OK
 The request has been allowed!
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="deny"></a><a href="#deny" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>deny</code></h2>
-<p>This authorizer considers every action unauthorized (&quot;forbidden&quot; /
-&quot;disallowed&quot;).</p>
+<h2><a class="anchor" aria-hidden="true" id="authorizerdeny"></a><a href="#authorizerdeny" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authorizer<code>deny</code></h2>
+<p>This authorizer considers every action unauthorized therefore &quot;forbidden&quot; or
+&quot;disallowed&quot;.</p>
 <h3><a class="anchor" aria-hidden="true" id="configuration-1"></a><a href="#configuration-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h3>
 <p>This handler is not configurable.</p>
 <p>To enable this handler, set:</p>
 <pre><code class="hljs css language-yaml"><span class="hljs-comment"># Global configuration file oathkeeper.yml</span>
 <span class="hljs-attr">authorizers:</span>
   <span class="hljs-attr">deny:</span>
-    <span class="hljs-comment"># Set enabled to true if the authenticator should be enabled and false to disable the authenticator. Defaults to false.</span>
+   <span class="hljs-comment"># Set enabled to "true" to enable the authenticator, and "false" to disable the authenticator. Defaults to "false".</span>
     <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span>
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="access-rule-example-1"></a><a href="#access-rule-example-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Access Rule Example</h3>
@@ -153,14 +153,14 @@ $ curl -X GET http://my-app/some-route
 HTTP/1.0 403 Forbidden
 The request is forbidden!
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="keto_engine_acp_ory"></a><a href="#keto_engine_acp_ory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>keto_engine_acp_ory</code></h2>
-<p>This authorizer uses the ORY Keto API to perform access control using
-ORY-flavored Access Control Policies. Please familiarize yourself with the ORY
-Keto project before you set up this authorizer.</p>
+<h2><a class="anchor" aria-hidden="true" id="authorizer-keto_engine_acp_ory"></a><a href="#authorizer-keto_engine_acp_ory" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Authorizer <code>keto_engine_acp_ory</code></h2>
+<p>This authorizer uses the ORY Keto API to carry out access control using
+&quot;ORY-flavored&quot; Access Control Policies. The conventions used in the ORY
+Keto project are located on <a href="https://github.com/ory/keto">GitHub ORY Keto</a> for consultation prior to using this authorizer.</p>
 <h3><a class="anchor" aria-hidden="true" id="configuration-2"></a><a href="#configuration-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h3>
 <ul>
 <li><code>base_url</code> (string, required) - The base URL of ORY Keto, typically something
-like http(s)://<host>[:<port>]/</li>
+like <a href="https://hostname">https://hostname</a>:port/</li>
 <li><code>required_action</code> (string, required) - See section below.</li>
 <li><code>required_resource</code> (string, required) - See section below.</li>
 <li><code>subject</code> (string, optional) - See section below.</li>
@@ -180,7 +180,7 @@ like http(s)://<host>[:<port>]/</li>
 }
 </code></pre>
 <p>All configuration options except <code>flavor</code> support Go
-<a href="https://golang.org/pkg/text/template/"><code>text/template</code></a>. Let's say you have the
+<a href="https://golang.org/pkg/text/template/"><code>text/template</code></a>. For example in the
 following match configuration:</p>
 <pre><code class="hljs css language-json">{
   <span class="hljs-attr">"match"</span>: {
@@ -189,8 +189,8 @@ following match configuration:</p>
   }
 }
 </code></pre>
-<p>Here, you have two regular expressions, <code>&lt;[0-9]+&gt;</code> and <code>&lt;[a-zA-Z]+&gt;</code>. You can
-reference the values matched by the regular expression using the
+<p>The following example shows how to reference the values matched by or resulting from the two regular expressions, <code>&lt;[0-9]+&gt;</code> and <code>&lt;[a-zA-Z]+&gt;</code>.
+using the
 <code>AuthenticationSession</code> struct:</p>
 <pre><code class="hljs css language-json">{
   <span class="hljs-attr">"handler"</span>: <span class="hljs-string">"keto_engine_acp_ory"</span>,
@@ -210,7 +210,7 @@ from above would expand to:</p>
   }
 }
 </code></pre>
-<p>The <code>subject</code> field configures what subject is passed on to the ORY Keto
+<p>The <code>subject</code> field configures the subject that passes to the ORY Keto
 endpoint. If <code>subject</code> is not specified it will default to
 <code>AuthenticationSession.Subject</code>.</p>
 <p>For more details about supported Go template substitution, see.
@@ -219,7 +219,7 @@ endpoint. If <code>subject</code> is not specified it will default to
 <pre><code class="hljs css language-yaml"><span class="hljs-comment"># Global configuration file oathkeeper.yml</span>
 <span class="hljs-attr">authorizers:</span>
   <span class="hljs-attr">keto_engine_acp_ory:</span>
-    <span class="hljs-comment"># Set enabled to true if the authenticator should be enabled and false to disable the authenticator. Defaults to false.</span>
+    <span class="hljs-comment"># Set enabled to "true" to enable the authenticator, and "false" to disable the authenticator. Defaults to "false".</span>
     <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span>
 
     <span class="hljs-attr">config:</span>
@@ -279,15 +279,15 @@ endpoint. If <code>subject</code> is not specified it will default to
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="remote_json"></a><a href="#remote_json" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>remote_json</code></h2>
 <p>This authorizer performs authorization using a remote authorizer. The authorizer
-makes an HTTP POST request to a remote endpoint with a JSON body. If the
-endpoint returns a 200 OK response code, the access is allowed, if it returns a
-403 Forbidden response code, the access is denied.</p>
+makes a HTTP POST request to a remote endpoint with a JSON body. If the
+endpoint returns a &quot;200 OK&quot; response code, the access is allowed, if it returns a
+&quot;403 Forbidden&quot; response code, the access is denied.</p>
 <h3><a class="anchor" aria-hidden="true" id="configuration-3"></a><a href="#configuration-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h3>
 <ul>
-<li><code>remote</code> (string, required) - The URL of the remote authorizer. The remote
-authorizer is expected to return either 200 OK or 403 Forbidden to allow/deny
+<li><code>remote</code> (string, required) - The remote authorizer's URL. The remote
+authorizer is expected to return either &quot;200 OK&quot; or &quot;403 Forbidden&quot; to allow/deny
 access.</li>
-<li><code>payload</code> (string, required) - The JSON payload of the request sent to the
+<li><code>payload</code> (string, required) - The request's JSON payload sent to the
 remote authorizer. The string will be parsed by the Go
 <a href="https://golang.org/pkg/text/template/"><code>text/template</code></a> package and applied
 to an
@@ -298,7 +298,7 @@ object. See <a href="/docs/next/oathkeeper/pipeline/#session">Session</a> for mo
 <pre><code class="hljs css language-yaml"><span class="hljs-comment"># Global configuration file oathkeeper.yml</span>
 <span class="hljs-attr">authorizers:</span>
   <span class="hljs-attr">remote_json:</span>
-    <span class="hljs-comment"># Set enabled to true if the authenticator should be enabled and false to disable the authenticator. Defaults to false.</span>
+    <span class="hljs-comment"># Set enabled to "true" to enable the authenticator, and "false" to disable the authenticator. Defaults to "false".</span>
     <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span>
 
     <span class="hljs-attr">config:</span>
@@ -352,7 +352,7 @@ object. See <a href="/docs/next/oathkeeper/pipeline/#session">Session</a> for mo
   ]
 }
 </code></pre>
-</span></div></article></div><div class="docLastUpdate"><em>Last updated on 3/28/2020 by Satoshi Matsumoto</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/authn"><span class="arrow-prev">← </span><span>Authenticators</span></a><a class="docs-next button" href="/docs/next/oathkeeper/pipeline/mutator"><span>Mutators</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#allow"><code>allow</code></a><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li><li><a href="#access-rule-example">Access Rule Example</a></li></ul></li><li><a href="#deny"><code>deny</code></a><ul class="toc-headings"><li><a href="#configuration-1">Configuration</a></li><li><a href="#access-rule-example-1">Access Rule Example</a></li></ul></li><li><a href="#keto_engine_acp_ory"><code>keto_engine_acp_ory</code></a><ul class="toc-headings"><li><a href="#configuration-2">Configuration</a></li><li><a href="#access-rule-example-2">Access Rule Example</a></li></ul></li><li><a href="#remote_json"><code>remote_json</code></a><ul class="toc-headings"><li><a href="#configuration-3">Configuration</a></li><li><a href="#access-rule-example-3">Access Rule Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 4/2/2020 by Thomas Aidan Curran</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/next/oathkeeper/pipeline/authn"><span class="arrow-prev">← </span><span>Authenticators</span></a><a class="docs-next button" href="/docs/next/oathkeeper/pipeline/mutator"><span>Mutators</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#authorizer-allow">Authorizer <code>allow</code></a><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li><li><a href="#access-rule-example">Access Rule Example</a></li></ul></li><li><a href="#authorizerdeny">Authorizer<code>deny</code></a><ul class="toc-headings"><li><a href="#configuration-1">Configuration</a></li><li><a href="#access-rule-example-1">Access Rule Example</a></li></ul></li><li><a href="#authorizer-keto_engine_acp_ory">Authorizer <code>keto_engine_acp_ory</code></a><ul class="toc-headings"><li><a href="#configuration-2">Configuration</a></li><li><a href="#access-rule-example-2">Access Rule Example</a></li></ul></li><li><a href="#remote_json"><code>remote_json</code></a><ul class="toc-headings"><li><a href="#configuration-3">Configuration</a></li><li><a href="#access-rule-example-3">Access Rule Example</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
   document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
     t.addEventListener("click", function (e) {
       e.preventDefault();
