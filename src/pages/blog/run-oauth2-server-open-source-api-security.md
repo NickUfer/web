@@ -209,7 +209,7 @@ a container that executes the migrate command.
 ```shell
 $ docker run -it --rm \
   --network hydraguide \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.4.2 \
   migrate sql --yes $DSN
 ```
 
@@ -248,7 +248,7 @@ $ docker run -d \
   -e URLS_SELF_ISSUER=http://127.0.0.1:9000/ \
   -e URLS_CONSENT=http://127.0.0.1:9020/consent \
   -e URLS_LOGIN=http://127.0.0.1:9020/login \
-  oryd/hydra:v1.0.8 serve all --dangerous-force-http
+  oryd/hydra:v1.4.2 serve all --dangerous-force-http
 ```
 
 ### Is it alive?
@@ -273,7 +273,7 @@ command.
 
 ```shell
 $ docker run --rm -it \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.4.2 \
   help
 ```
 
@@ -284,7 +284,7 @@ $ docker run --rm -it \
 ```shell
 $ docker run --rm -it \
   --network hydraguide \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.4.2 \
   clients create \
     --endpoint http://ory-hydra-example--hydra:4445 \
     --id some-consumer \
@@ -307,7 +307,7 @@ We are passing several flags to the command, for example
 ```shell
 $ docker run --rm -it \
   --network hydraguide \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.4.2 \
   token client \
     --client-id some-consumer \
     --client-secret some-secret \
@@ -328,7 +328,7 @@ step.
 ```shell
 $ docker run --rm -it \
   --network hydraguide \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.4.2 \
   token introspect \
     --client-id some-consumer \
     --client-secret some-secret \
@@ -391,7 +391,7 @@ $ docker run -d \
   --network hydraguide \
   -e HYDRA_ADMIN_URL=http://ory-hydra-example--hydra:4445 \
   -e NODE_TLS_REJECT_UNAUTHORIZED=0 \
-  oryd/hydra-login-consent-node:v1.0.8
+  oryd/hydra-login-consent-node:v1.4.2
 ```
 
 ## OAuth2 with OpenID Connect (OIDC) Authorize Flow
@@ -407,7 +407,7 @@ and `offline`, and response types `token`, `code`, and `id_token`.
 ```shell
 $ docker run --rm -it \
   --network hydraguide \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.4.2 \
   clients create \
     --endpoint http://ory-hydra-example--hydra:4445 \
     --id another-consumer \
@@ -438,7 +438,7 @@ libraries for different languages: [Golang](https://github.com/golang/oauth2),
 $ docker run --rm -it \
   --network hydraguide \
   -p 9010:9010 \
-  oryd/hydra:v1.0.8 \
+  oryd/hydra:v1.4.2 \
   token user \
     --port 9010 \
     --auth-url http://127.0.0.1:9000/oauth2/auth \
