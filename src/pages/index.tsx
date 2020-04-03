@@ -25,7 +25,7 @@ const IndexPage = ({ data }: any) => {
         subtitle="Run User Management, Permission and Role Management, and OAuth 2.0 & OpenID Connect anywhere from your cloud to a Raspberry Pi."
         cta={[
           {
-            title: 'Contact Us',
+            title: 'Get a Demo',
             href:
               'https://docs.google.com/forms/d/e/1FAIpQLSe2KHAYSv0K0syWNCWjL3Sv3Nqf5VKBt4Hfq_thvaULqFrVlA/viewform',
             style: 'primary',
