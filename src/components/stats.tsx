@@ -3,11 +3,9 @@ import parse from 'csv-parse'
 import dateformat from 'dateformat'
 
 import styles from './stats.module.css'
-
 import csvHydraHitsPerMonth from 'raw-loader!../stats/hydra/hits-per-month.csv'
 import csvOathkeeperHitsPerMonth from 'raw-loader!../stats/oathkeeper/hits-per-month.csv'
 import csvKetoHitsPerMonth from 'raw-loader!../stats/keto/hits-per-month.csv'
-import VerticalDivider from './vertical-divider'
 import AnimatedCounter from './animated-counter'
 
 const countGitHubStars = (state: StateTypes) =>

@@ -10,17 +10,6 @@
     color: var(--colors-base-white);
   }
 
-  & a:any-link {
-    color: var(--colors-themed-default);
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: var(--colors-base-white);
-      text-decoration: underline;
-    }
-  }
-
   & :global a.cta.secondary:any-link {
     color: var(--colors-base-dark);
     border-color: var(--colors-base-dark);
@@ -39,9 +28,9 @@
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--colors-themed-default);
-      border-color: var(--colors-themed-default);
-      color: var(--colors-base-white);
+      background-color: var(--colors-base-white);
+      border-color: var(--colors-base-white);
+      color: var(--colors-themed-default);
     }
   }
 }
