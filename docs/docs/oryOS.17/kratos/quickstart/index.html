@@ -1,0 +1,374 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Quickstart · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="ORY Kratos has several moving parts and getting everything right from the"/><meta name="docsearch:version" content="oryOS.17"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Quickstart · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="ORY Kratos has several moving parts and getting everything right from the"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.17</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.17/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Introduction</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/projects">Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/software-architecture-philosophy">Software Architecture and Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/deployment">Deployment Fundamentals and Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/versioning">Software Versions and Project Maturity</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/api-design">API Design</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/roadmap">Roadmap</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Kratos<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Introduction</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/">Introduction</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.17/kratos/quickstart">Quickstart</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/install">Installation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/ui-user-interface">User Interface</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/identity-user-model">Identity and User Model</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/credentials">Credentials</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/email-sms">Out-of-band communication via E-Mail and SMS</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/federation">Federation</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/security">Threat Models and Security Profiles</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Flows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-login-user-registration">User Login and User Registration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-logout">User Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-profile-management">Profile Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/password-reset-account-recovery">Account Recovery</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-facing-errors">User-Facing Errors</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/verify-email-account-activation">Email and Phone Verification and Account Activation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Strategies</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/username-email-password">Username or Email and Password</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/openid-connect-social-sign-in-oauth2">Social Sign In with OpenID Connect and OAuth2</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Jobs and Workflows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/workflows/jobs/before">Before Jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/workflows/jobs/after">After Jobs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/json-schema-json-paths">JSON Schema and JSON Paths</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/html-forms">HTML Form Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/sdk/api">REST API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/sdk/">Overview</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/further-reading/comparison">Comparison</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/oauth2">OAuth 2.0</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/login-consent-flow">Hydra workflow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Integrating Hydra into your stack</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/5min-tutorial">5 Minute Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/implementing-consent">Login, Consent &amp; Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/case-study">OAuth 2.0 Case Study</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/js">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/php">PHP</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/authn">Authenticators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/authz">Authorizers</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/mutator">Mutators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/error">Error Handlers</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/configure-deploy">Configure and Deploy</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/">Access Control Engines - Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/kratos/quickstart.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Quickstart</h1></header><article><div><span><p>ORY Kratos has several moving parts and getting everything right from the
+beginning can be challenging. This getting started guide will help you install
+ORY Kratos and some additional dependencies so that you can see how ORY Kratos
+works.</p>
+<p>Please be aware that this guide is not a replacement for studying the docs. You
+must understand core concepts and APIs to use ORY Kratos productively. This is
+merely a guide to get you set up with some examples.</p>
+<h2><a class="anchor" aria-hidden="true" id="use-case-you-want-login-and-registration-for-your-application"></a><a href="#use-case-you-want-login-and-registration-for-your-application" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Use case: You want login and registration for your Application</h2>
+<p>This section gives you some context on what we want to achieve and what tools we
+need for that. You will also learn about the network set up we picked for this
+guide.</p>
+<p>This quickstart guide operates on the assumption that we are writing a NodeJS
+app called <strong>SecureApp</strong>. This app is using nothing fancy - some ExpressJS and a
+bit of HTML Templating using Handlebars. We do want to use TypeScript but only
+because it's more readable - not because we're doing anything out of the
+ordinary!</p>
+<p>You could pick any technology here, of course. This works with Swift, ReactJS,
+or Angular (client side) as well as with PHP, Ruby, Python, Java (server side) -
+you name it! We picked NodeJS + TypeScript because we believe it is the easiest
+to understand, and because JavaScript and NodeJS are universally understood and
+easy to install.</p>
+<p>We don't really know what SecureApp should do one day. But we do know that it
+will have some type of dashboard and that it needs users, therefore we need:</p>
+<ul>
+<li>Login</li>
+<li>Logout</li>
+<li>Registration</li>
+<li>Profile management (&quot;update first name&quot;, &quot;update avatar ...&quot;)</li>
+<li>Credentials Management (&quot;add a new recovery email&quot;, &quot;change password&quot;, &quot;...&quot;)</li>
+<li>Account Recovery (&quot;password reset&quot;)</li>
+<li>Two Factor Authentication with Google Authenticator</li>
+<li>&quot;Sign in with Google&quot; and &quot;Sign in with GitHub&quot;</li>
+</ul>
+<p>and of course:</p>
+<ul>
+<li>A dashboard that shows &quot;Hello {{ firstName }} {{ lastName }}, your birthday is
+on {{ birthday }}!&quot;. It is only visible when the user is signed in!</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="setup"></a><a href="#setup" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Setup</h2>
+<p>As you might already know, ORY Kratos is API-only. It does not have a UI or HTML
+Templating Engine. We will implement the all the user-facing UIs (dashboard,
+login, registration, ...) in our NodeJS SecureApp!</p>
+<p>To ensure that no one can access the dashboard without prior authentication
+(login), we will use a reverse proxy
+(<a href="https://github.com/ory/oathkeeper">ORY Oathkeeper</a>) to deny all
+unauthenticated traffic to <code>http://secure-app/dashboard</code> and redirect the user
+to the login page at <code>http://secure-app/auth/login</code>. Further, we will configure
+access to <code>http://secure-app/auth/login</code> in such a way that access only works if
+one is not yet authenticated.</p>
+<p>ORY Kratos does not ship with an administrative user interface. You must
+implement that yourself or choose the ORY Cloud offering (to be announced). In
+this quickstart, we will use ORY Kratos CLI (Command Line Interface) to interact
+with ORY Kratos' Administrative APIs.</p>
+<p>The quickstart also comes with <a href="https://mailslurper.com">MailSlurper</a>, a mock
+SMTP server the demo uses to show how e.g. email verification works.</p>
+<h3><a class="anchor" aria-hidden="true" id="clone-ory-kratos-and-run-it-in-docker"></a><a href="#clone-ory-kratos-and-run-it-in-docker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Clone ORY Kratos and run it in Docker</h3>
+<p>To get this example working, you will need Git and
+<a href="https://docs.docker.com/get-docker/">Docker, and Docker Compose</a> installed on
+your system. No other dependencies are required. Let's clone ORY Kratos and run
+<code>docker-compose</code>:</p>
+<pre><code class="hljs css language-shell script">git clone https://github.com/ory/kratos.git
+<span class="hljs-meta">#</span><span class="bash"> or <span class="hljs-keyword">if</span> you have git+ssh <span class="hljs-built_in">set</span> up:</span>
+<span class="hljs-meta">#</span><span class="bash">  git <span class="hljs-built_in">clone</span> git@github.com:ory/kratos.git</span>
+cd kratos
+make quickstart
+<span class="hljs-meta">
+#</span><span class="bash"> or <span class="hljs-keyword">if</span> you don<span class="hljs-string">'t have make installed:</span></span>
+docker pull oryd/kratos:latest-sqlite
+docker pull oryd/kratos-selfservice-ui-node:latest
+docker-compose -f quickstart.yml up --build --force-recreate
+</code></pre>
+<p>This might take a minute or two. Once the output slows down and logs indicate a
+healthy system you're ready to roll! A healthy system will show something along
+the lines of (the order of messages might be reversed):</p>
+<pre><code class="hljs">kratos_1                      | <span class="hljs-attribute">time</span>=<span class="hljs-string">"2020-01-20T14:52:13Z"</span> <span class="hljs-attribute">level</span>=info <span class="hljs-attribute">msg</span>=<span class="hljs-string">"Starting the admin httpd on: 0.0.0.0:4434"</span>
+kratos_1                      | <span class="hljs-attribute">time</span>=<span class="hljs-string">"2020-01-20T14:52:13Z"</span> <span class="hljs-attribute">level</span>=info <span class="hljs-attribute">msg</span>=<span class="hljs-string">"Starting the public httpd on: 0.0.0.0:4433"</span>
+
+oathkeeper_1                  | {<span class="hljs-string">"level"</span>:<span class="hljs-string">"info"</span>,<span class="hljs-string">"msg"</span>:<span class="hljs-string">"TLS has not been configured for api, skipping"</span>,<span class="hljs-string">"time"</span>:<span class="hljs-string">"2020-01-20T09:22:09Z"</span>}
+oathkeeper_1                  | {<span class="hljs-string">"level"</span>:<span class="hljs-string">"info"</span>,<span class="hljs-string">"msg"</span>:<span class="hljs-string">"Listening on http://:4456"</span>,<span class="hljs-string">"time"</span>:<span class="hljs-string">"2020-01-20T09:22:09Z"</span>}
+oathkeeper_1                  | {<span class="hljs-string">"level"</span>:<span class="hljs-string">"info"</span>,<span class="hljs-string">"msg"</span>:<span class="hljs-string">"TLS has not been configured for proxy, skipping"</span>,<span class="hljs-string">"time"</span>:<span class="hljs-string">"2020-01-20T09:22:09Z"</span>}
+oathkeeper_1                  | {<span class="hljs-string">"level"</span>:<span class="hljs-string">"info"</span>,<span class="hljs-string">"msg"</span>:<span class="hljs-string">"Listening on http://:4455"</span>,<span class="hljs-string">"time"</span>:<span class="hljs-string">"2020-01-20T09:22:09Z"</span>}
+</code></pre>
+<blockquote>
+<p>There are two important factors to get a fully functional system:</p>
+<ul>
+<li>You need to make sure that ports <code>4435</code>, <code>4455</code>, <code>4456</code>, <code>4433</code>, <code>4434</code>,
+<code>4436</code> &gt;
+<a href="https://serverfault.com/questions/309052/check-if-port-is-open-or-closed-on-a-linux-server">are free</a>.</li>
+<li>Make sure to always use <code>127.0.0.1</code> as the hostname, never use <code>localhost</code>!
+This is important because browsers treat these two as separate domains and
+will therefore have issues with setting and using the right cookies.</li>
+</ul>
+</blockquote>
+<p>You might notice that no database is being used in this example. ORY Kratos
+supports SQLite, PostgreSQL, MySQL, and CockroachDB as database backends. For
+the quickstart, we're mounting a persistent volume to store the SQLite database
+in. Future guides will explain how to set up a production system!</p>
+<h4><a class="anchor" aria-hidden="true" id="mitigating-docker-errors"></a><a href="#mitigating-docker-errors" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mitigating Docker Errors</h4>
+<p>If you encounter build errors (e.g. network timeout), make sure that the network
+is running correctly and run <code>docker-compose -f quickstart.yml up --build</code>
+again. If the problem persists, feel free to
+<a href="https://github.com/ory/kratos/issues/new/choose">open an issue</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="network-architecture"></a><a href="#network-architecture" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Network Architecture</h3>
+<p>This demo makes use of several services / Docker Images:</p>
+<ol>
+<li><a href="https://github.com/ory/kratos">ORY Kratos</a></li>
+<li>The <strong>SecureApp</strong> - an
+<a href="http://github.com/ory/kratos-selfservice-ui-node">example application written in NodeJS</a>
+that implements the login, registration, logout, ..., and dashboard screen.</li>
+<li>A reverse proxy (<a href="https://github.com/ory/oathkeeper">ORY Oathkeeper</a>) to
+protect the <strong>SecureApp</strong>.</li>
+<li>An SMTP server with which ORY Kratos can send E-Mails with. We will use
+<a href="https://github.com/mailhog/MailHog">MailHog</a>, a minimalistic SMTP throaway
+server with an easy UI.</li>
+</ol>
+<p>To better understand how everything is wired, let's take a look at the network
+configuration. This assumes that you have at least some understanding of how
+Docker (Compose) Networks work:</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblxuc3ViZ3JhcGggaG5bSG9zdCBOZXR3b3JrXVxuICAgIEJbQnJvd3Nlcl1cbiAgICBCLS0-fENhbiBhY2Nlc3MgVVJMcyB2aWEgMTI3LjAuMC4xOjQ0NTV8T0tQSE5cbiAgICBCLS0-fENhbiBhY2Nlc3MgVUkgdmlhIDEyNy4wLjAuMTo0NDM2fFNNVFBVSVxuICAgIE9LUEhOKFtSZXZlcnNlIFByb3h5IGV4cG9zZWQgYXQgOjQ0NTVdKVxuICAgIFNNVFBVSShbTWFpbFNsdXJwZXIgVUkgZXhwb3NlZCBhdCA6NDQzNl0pXG5lbmRcblxuc3ViZ3JhcGggZG5bXCJJbnRlcm5hbCBEb2NrZXIgTmV0d29yayAoaW50cmFuZXQpXCJdXG4gICAgT0tQSE4tLT5PT1xuICAgIFNNVFBVSS0tPlNNVFBcbiAgICBPTy0tPnxQcm94aWVzIFVSTHNzIC8ub3J5L2tyYXRvcy9wdWJsaWMvKiB0b3xPS1xuICAgIE9PLS0-fFwiUHJveGllcyAvYXV0aC9sb2dpbiwgL2F1dGgvcmVnaXN0cmF0aW9uLCAvZGFzaGJvYXJkLCAuLi4gdG9cInxTQVxuICAgIFNBLS0-fFRhbGtzIHRvfE9LXG4gICAgT0stLT58U2VuZHMgbWFpbCB2aWF8U01UUFxuICAgIE9PLS0-fFZhbGlkYXRlcyBhdXRoIHNlc3Npb25zIHVzaW5nfE9LXG5cbiAgICBPS1tPUlkgS3JhdG9zXVxuICAgIE9PW1wiUmV2ZXJzZSBQcm94eSAoT1JZIE9hdGhrZWVwZXIpXCJdXG4gICAgU0FbXCJTZWN1cmVBcHAgKE9SWSBLcmF0b3MgU2VsZlNlcnZpY2UgVUkgTm9kZSBFeGFtcGxlKVwiXVxuICAgIFNNVFBbXCJTTVRQIFNlcnZlciAoTWFpbFNsdXJwZXIpXCJdXG5lbmRcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIiwiZmxvd2NoYXJ0Ijp7InJhbmtTcGFjaW5nIjo2NSwibm9kZVNwYWNpbmciOjMwLCJjdXJ2ZSI6ImJhc2lzIn19LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblxuc3ViZ3JhcGggaG5bSG9zdCBOZXR3b3JrXVxuICAgIEJbQnJvd3Nlcl1cbiAgICBCLS0-fENhbiBhY2Nlc3MgVVJMcyB2aWEgMTI3LjAuMC4xOjQ0NTV8T0tQSE5cbiAgICBCLS0-fENhbiBhY2Nlc3MgVUkgdmlhIDEyNy4wLjAuMTo0NDM2fFNNVFBVSVxuICAgIE9LUEhOKFtSZXZlcnNlIFByb3h5IGV4cG9zZWQgYXQgOjQ0NTVdKVxuICAgIFNNVFBVSShbTWFpbFNsdXJwZXIgVUkgZXhwb3NlZCBhdCA6NDQzNl0pXG5lbmRcblxuc3ViZ3JhcGggZG5bXCJJbnRlcm5hbCBEb2NrZXIgTmV0d29yayAoaW50cmFuZXQpXCJdXG4gICAgT0tQSE4tLT5PT1xuICAgIFNNVFBVSS0tPlNNVFBcbiAgICBPTy0tPnxQcm94aWVzIFVSTHNzIC8ub3J5L2tyYXRvcy9wdWJsaWMvKiB0b3xPS1xuICAgIE9PLS0-fFwiUHJveGllcyAvYXV0aC9sb2dpbiwgL2F1dGgvcmVnaXN0cmF0aW9uLCAvZGFzaGJvYXJkLCAuLi4gdG9cInxTQVxuICAgIFNBLS0-fFRhbGtzIHRvfE9LXG4gICAgT0stLT58U2VuZHMgbWFpbCB2aWF8U01UUFxuICAgIE9PLS0-fFZhbGlkYXRlcyBhdXRoIHNlc3Npb25zIHVzaW5nfE9LXG5cbiAgICBPS1tPUlkgS3JhdG9zXVxuICAgIE9PW1wiUmV2ZXJzZSBQcm94eSAoT1JZIE9hdGhrZWVwZXIpXCJdXG4gICAgU0FbXCJTZWN1cmVBcHAgKE9SWSBLcmF0b3MgU2VsZlNlcnZpY2UgVUkgTm9kZSBFeGFtcGxlKVwiXVxuICAgIFNNVFBbXCJTTVRQIFNlcnZlciAoTWFpbFNsdXJwZXIpXCJdXG5lbmRcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIiwiZmxvd2NoYXJ0Ijp7InJhbmtTcGFjaW5nIjo2NSwibm9kZVNwYWNpbmciOjMwLCJjdXJ2ZSI6ImJhc2lzIn19LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" alt="User Login and Registration Network Topology"></a></p>
+<p>As you can see, most requests are proxied through the Reverse Proxy
+(<a href="https://github.com/ory/oathkeeper">ORY Oathkeeper</a>). The <code>quickstart.yml</code> file
+also defines additional ports such as <code>4434</code>, <code>4456</code>, and others. These ports
+are only there for debugging and playing around with and are not actually
+required for the demo to work.</p>
+<p>The next diagram shows how we've configured the routes in our Reverse Proxy
+(<a href="https://github.com/ory/oathkeeper">ORY Oathkeeper</a>):</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblxuc3ViZ3JhcGggcGlbUHVibGljIEludGVybmV0XVxuICAgIEJbQnJvd3Nlcl1cbmVuZFxuXG5zdWJncmFwaCB2cGNbVlBDIC8gQ2xvdWQgLyBEb2NrZXIgTmV0d29ya11cbnN1YmdyYXBoIFwiRGVtaWxpdGFyaXplZCBab25lIC8gRE1aXCJcbiAgICBPS1tPUlkgT2F0aGtlZXBlciA6NDQ1NV1cbiAgICBCIC0tPiBPS1xuZW5kXG5cbiAgICBPSyAtLT58XCJGb3J3YXJkcyB7LywvZGFzaGJvYXJkfSB0b1wifCBTQURcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvYXV0aC9sb2dvdXQgdG9cInwgU0FMVVxuICAgIE9LIC0tPnxcIkZvcndhcmRzIC9hdXRoL2xvZ2luIHRvXCJ8IFNBTElcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvYXV0aC9yZWdpc3RyYXRpb24gdG9cInwgU0FSXG4gICAgT0sgLS0-fFwiRm9yd2FyZHMgL2F1dGgvKiB0b1wifCBTQUFcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvLm9yeS9rcmF0b3MvcHVibGljLyogdG9cInwgS1BcblxuICAgIHN1YmdyYXBoIFwiUHJpdmF0ZSBTdWJuZXQgLyBJbnRyYW5ldFwiXG4gICAgS1sgT1JZIEtyYXRvcyBdXG5cbiAgICBLUChbIE9SWSBLcmF0b3MgUHVibGljIEFQSSBdKVxuICAgIEtBKFsgT1JZIEtyYXRvcyBBZG1pbiBBUEkgXSlcbiAgICBTQSAtLT4gS0FcbiAgICBLQSAtLmJlbG9uZ3MgdG8uLT4gS1xuICAgIEtQIC0uYmVsb25ncyB0by4tPiBLXG5cbiAgICBzdWJncmFwaCBzYVtcIlNlY3VyZUFwcCAvIGtyYXRvcy1zZXJsZnNlcnZpY2UtdWktbm9kZSBFeGFtcGxlXCJdXG5cbiAgICAgICAgU0FbU2VjdXJlQXBwXVxuICAgICAgICBTQUQgLS5iZWxvbmdzIHRvLi0-IFNBXG4gICAgICAgIFNBTFUgLS5iZWxvbmdzIHRvLi0-IFNBXG4gICAgICAgIFNBTEkgLS5iZWxvbmdzIHRvLi0-IFNBXG4gICAgICAgIFNBUiAtLmJlbG9uZ3MgdG8uLT4gU0FcbiAgICAgICAgU0FBIC0uYmVsb25ncyB0by4tPiBTQVxuXG4gICAgICAgIHN1YmdyYXBoIFwiSGFzIGFjdGl2ZSBsb2dpbiBzZXNzaW9uXCJcbiAgICAgICAgICAgIFNBRChbUm91dGUgL2Rhc2hib2FyZF0pXG4gICAgICAgICAgICBTQUxVKFtSb3V0ZSAvYXV0aC9sb2dvdXRdKVxuICAgICAgICBlbmRcblxuICAgICAgICBzdWJncmFwaCBcIk5vIGFjdGl2ZSBsb2dpbiBzZXNzaW9uXCJcbiAgICAgICAgICAgIFNBTEkoW1JvdXRlIC9hdXRoL2xvZ2luXSkgXG4gICAgICAgICAgICBTQVIoW1JvdXRlIC9hdXRoL3JlZ2lzdHJhdGlvbl0pIFxuICAgICAgICAgICAgU0FBKFtSb3V0ZSAvYXV0aC8uLi5dKVxuICAgICAgICBlbmRcbiAgICBlbmRcbiAgICBlbmRcblxuZW5kXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCIsImZsb3djaGFydCI6eyJyYW5rU3BhY2luZyI6NzAsIm5vZGVTcGFjaW5nIjozMCwiY3VydmUiOiJiYXNpcyJ9fX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblxuc3ViZ3JhcGggcGlbUHVibGljIEludGVybmV0XVxuICAgIEJbQnJvd3Nlcl1cbmVuZFxuXG5zdWJncmFwaCB2cGNbVlBDIC8gQ2xvdWQgLyBEb2NrZXIgTmV0d29ya11cbnN1YmdyYXBoIFwiRGVtaWxpdGFyaXplZCBab25lIC8gRE1aXCJcbiAgICBPS1tPUlkgT2F0aGtlZXBlciA6NDQ1NV1cbiAgICBCIC0tPiBPS1xuZW5kXG5cbiAgICBPSyAtLT58XCJGb3J3YXJkcyB7LywvZGFzaGJvYXJkfSB0b1wifCBTQURcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvYXV0aC9sb2dvdXQgdG9cInwgU0FMVVxuICAgIE9LIC0tPnxcIkZvcndhcmRzIC9hdXRoL2xvZ2luIHRvXCJ8IFNBTElcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvYXV0aC9yZWdpc3RyYXRpb24gdG9cInwgU0FSXG4gICAgT0sgLS0-fFwiRm9yd2FyZHMgL2F1dGgvKiB0b1wifCBTQUFcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvLm9yeS9rcmF0b3MvcHVibGljLyogdG9cInwgS1BcblxuICAgIHN1YmdyYXBoIFwiUHJpdmF0ZSBTdWJuZXQgLyBJbnRyYW5ldFwiXG4gICAgS1sgT1JZIEtyYXRvcyBdXG5cbiAgICBLUChbIE9SWSBLcmF0b3MgUHVibGljIEFQSSBdKVxuICAgIEtBKFsgT1JZIEtyYXRvcyBBZG1pbiBBUEkgXSlcbiAgICBTQSAtLT4gS0FcbiAgICBLQSAtLmJlbG9uZ3MgdG8uLT4gS1xuICAgIEtQIC0uYmVsb25ncyB0by4tPiBLXG5cbiAgICBzdWJncmFwaCBzYVtcIlNlY3VyZUFwcCAvIGtyYXRvcy1zZXJsZnNlcnZpY2UtdWktbm9kZSBFeGFtcGxlXCJdXG5cbiAgICAgICAgU0FbU2VjdXJlQXBwXVxuICAgICAgICBTQUQgLS5iZWxvbmdzIHRvLi0-IFNBXG4gICAgICAgIFNBTFUgLS5iZWxvbmdzIHRvLi0-IFNBXG4gICAgICAgIFNBTEkgLS5iZWxvbmdzIHRvLi0-IFNBXG4gICAgICAgIFNBUiAtLmJlbG9uZ3MgdG8uLT4gU0FcbiAgICAgICAgU0FBIC0uYmVsb25ncyB0by4tPiBTQVxuXG4gICAgICAgIHN1YmdyYXBoIFwiSGFzIGFjdGl2ZSBsb2dpbiBzZXNzaW9uXCJcbiAgICAgICAgICAgIFNBRChbUm91dGUgL2Rhc2hib2FyZF0pXG4gICAgICAgICAgICBTQUxVKFtSb3V0ZSAvYXV0aC9sb2dvdXRdKVxuICAgICAgICBlbmRcblxuICAgICAgICBzdWJncmFwaCBcIk5vIGFjdGl2ZSBsb2dpbiBzZXNzaW9uXCJcbiAgICAgICAgICAgIFNBTEkoW1JvdXRlIC9hdXRoL2xvZ2luXSkgXG4gICAgICAgICAgICBTQVIoW1JvdXRlIC9hdXRoL3JlZ2lzdHJhdGlvbl0pIFxuICAgICAgICAgICAgU0FBKFtSb3V0ZSAvYXV0aC8uLi5dKVxuICAgICAgICBlbmRcbiAgICBlbmRcbiAgICBlbmRcblxuZW5kXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCIsImZsb3djaGFydCI6eyJyYW5rU3BhY2luZyI6NzAsIm5vZGVTcGFjaW5nIjozMCwiY3VydmUiOiJiYXNpcyJ9fX0" alt="User Login and Registration Routes"></a></p>
+<p>You might notice that we're also proxying requests to ORY Kratos' Public API. We
+are doing this because that way all requests are going to and coming from the
+same hostname. This avoids common cross-domain issues with cookies.</p>
+<h2><a class="anchor" aria-hidden="true" id="perform-registration-logout-login"></a><a href="#perform-registration-logout-login" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Perform registration, logout, login</h2>
+<p>Enough theory, it's time to get this thing going! Let's start by trying to open
+the dashboard - <strong>go to
+<a href="http://127.0.0.1:4455/dashboard">127.0.0.1:4455/dashboard</a></strong>. You will probably
+notice that you're ending up at the login endpoint:</p>
+<p><img src="/docs/assets/images/kratos/secureapp-login.png" alt="Login screen of your secured app"></p>
+<p>Looking at the network stack, you can see two redirects happening:</p>
+<p><img src="/docs/assets/images/kratos/secureapp-login-ntrace.png" alt="Login screen of your secured app"></p>
+<p>The first redirect from <code>http://127.0.0.1:4445/dashboard</code> to
+<code>http://127.0.0.1:4455/.ory/kratos/public/auth/browser/login</code> is initiated by
+the Reverse Proxy (<a href="https://github.com/ory/oathkeeper">ORY Oathkeeper</a>) because
+the browser does not have a valid authentication (login) session yet. The
+redirect points to one of ORY Krato's APIs used for logging in browser-based
+applications. ORY Kratos does some security checks and prepares form data and
+redirects the browser to <code>http://127.0.0.1:4445/auth/login</code>, appending a
+<code>?request=...</code> query parameter. The endpoint at <code>/auth/login</code> (which belongs to
+our SecureApp) then fetches data important for rendering the forms from ORY
+Krato's Admin API:</p>
+<pre><code class="hljs css language-shell script"><span class="hljs-meta">$</span><span class="bash"> curl http://127.0.0.1:4434/self-service/browser/flows/login?request=&lt;request-id&gt;</span>
+{
+    "id": "27aa98bc-a074-418f-96fa-8b8146050209",
+    "expires_at": "2020-01-20T21:10:12.7365393Z",
+    "issued_at": "2020-01-20T21:00:12.7365532Z",
+    "request_url": "http://127.0.0.1:4455/auth/browser/login",
+    "methods": {
+        "password": {
+            "method": "password",
+            "config": {
+                "action": "http://127.0.0.1:4455/.ory/kratos/public/auth/browser/methods/password/login?request=27aa98bc-a074-418f-96fa-8b8146050209",
+                "method": "POST",
+                "fields": [
+                    {
+                        "name": "csrf_token",
+                        "type": "hidden",
+                        "required": true,
+                        "value": "Ii8iIEdnn12vVQ2vyz2YaHjmXMUK5eSQgw9pgENGxPjXi1PHC9gOG51x61o2GT9LGvC81ddvmNXYeLvlPxA04g=="
+                    },
+                    {
+                        "name": "identifier",
+                        "type": "text",
+                        "required": true
+                    },
+                    {
+                        "name": "password",
+                        "type": "password",
+                        "required": true
+                    }
+                ]
+            }
+        }
+    }
+}
+</code></pre>
+<p>This data is then rendered as an HTML form. This flow also works with Single
+Page Apps (SPA) and Frameworks like Angular or ReactJS. For more details about
+the specific flows (login, registration, logout, ...), head over to the
+<a href="/docs/oryOS.17/kratos/concepts/">concept</a> chapter.</p>
+<p>Let's move on to the next flow - registration! Click on &quot;Create an account&quot;,
+which initiates a flow similar to the one we just used:</p>
+<p><img src="/docs/assets/images/kratos/secureapp-registration.png" alt="Registration screen of your secured app"></p>
+<p>The network trace looks familiar by now:</p>
+<p><img src="/docs/assets/images/kratos/secureapp-registration-ntrace.png" alt="Registration with network trace screen of your secured app"></p>
+<p>If we try to sign up using a password like <code>123456</code>, ORY Krato's password policy
+will complain:</p>
+<p><img src="/docs/assets/images/kratos/secureapp-registration-pwpolicy.png" alt="Registration with network trace screen of your secured app"></p>
+<p>The error message is coming directly from ORY Krato's API:</p>
+<pre><code class="hljs css language-shell script"><span class="hljs-meta">$</span><span class="bash"> curl http://127.0.0.1:4434/self-service/browser/flows/requests/registration?request=&lt;request-id&gt;</span>
+{
+    "id": "79349cbd-c785-476a-8db8-d0d71c5b003c",
+    "expires_at": "2020-01-20T21:17:00.5077381Z",
+    "issued_at": "2020-01-20T21:07:00.5077527Z",
+    "request_url": "http://127.0.0.1:4455/auth/browser/registration",
+    "methods": {
+        "password": {
+            "method": "password",
+            "config": {
+                "action": "http://127.0.0.1:4455/.ory/kratos/public/auth/browser/methods/password/registration?request=79349cbd-c785-476a-8db8-d0d71c5b003c",
+                "method": "POST",
+                "fields": [
+                    {
+                        "name": "csrf_token",
+                        "type": "hidden",
+                        "required": true,
+                        "value": "+ZQ8x5cVgdtt4xtPIRJXQPKMVU5c/S2Mj2MuudP32vsMME0g26oQnV/H/brcNvBjkJq1XoF3UcnUFPzcr6Eq4Q=="
+                    },
+                    {
+                        "name": "password",
+                        "type": "password",
+                        "required": true
+                    },
+                    {
+                        "name": "traits.email",
+                        "type": "text",
+                        "value": "hello@ory.sh"
+                    },
+                    {
+                        "name": "traits.full_name",
+                        "type": "text"
+                    }
+                ]
+            }
+        }
+    }
+}
+</code></pre>
+<p>Setting a password that doesn't violate these policies, we will be immediately
+redirected to the Dashboard:</p>
+<p><img src="/docs/assets/images/kratos/secureapp-dashboard.png" alt="SecureApp Dashboard"></p>
+<p>By using &quot;logout&quot; you will be redirected to the log in screen again an will be
+able to use the credentials just set up to log in!</p>
+<h3><a class="anchor" aria-hidden="true" id="understanding-how-login-and-registration-works"></a><a href="#understanding-how-login-and-registration-works" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Understanding how Login and Registration works</h3>
+<p>Head over to the <a href="/docs/oryOS.17/kratos/self-service/flows/">Self-Service Flows Chapter</a> for
+a in-depth explanation of how the individual flows work.</p>
+<h3><a class="anchor" aria-hidden="true" id="email-verification"></a><a href="#email-verification" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Email Verification</h3>
+<p>As you've signed up, an email was sent to the email address you used. Because
+the quickstart uses a fake SMTP server, the email did not arrive in your inbox.
+You can retrieve the email however by opening the MailSlurper UI at
+<a href="http://127.0.0.1:4436">127.0.0.1:4436</a>.</p>
+<p>You should see something like this:</p>
+<p><img src="/docs/assets/images/kratos/mailslurper-quickstart.png" alt="User Email Verification"></p>
+<p>If not, hard refresh the tab or click on the home icon in the menu bar.</p>
+<p>Next, click the verification link. You will end up at the dashboard, with a
+verified E-Mail Address (check the <code>verified</code> and <code>verified_at</code> field in the
+JSON Payload):</p>
+<p><img src="/docs/assets/images/kratos/secureapp-verified-dashboard.png" alt="SecureApp Dashboard"></p>
+<p>To re-request the verification email, fill out the form at
+<a href="http://127.0.0.1:4455/verify">127.0.0.1:4455/verify</a>.</p>
+<h4><a class="anchor" aria-hidden="true" id="configuration-used"></a><a href="#configuration-used" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration Used</h4>
+<p>You can find all configuration files for this quickstart guide in
+<code>./contrib/quickstart</code> and <code>./quickstart.yml</code>. To understand what each of those
+individual configuration files are doing, you must consult the other chapters of
+this documentation.</p>
+<p>In the future, this guide will support more use cases such as:</p>
+<ul>
+<li>Use GitHub to login in and sign up</li>
+<li>Use PostgreSQL / MySQL instead of SQLite</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="cleaning-up-docker"></a><a href="#cleaning-up-docker" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Cleaning up Docker</h2>
+<p>To clean everything up, you need to bring down the Docker Compose environment
+and remove all mounted volumes.</p>
+<pre><code class="hljs css language-shell script">docker-compose -f quickstart.yml down -v
+docker-compose -f quickstart.yml rm -f -s -v
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/18/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.17/kratos/index"><span class="arrow-prev">← </span><span>Introduction</span></a><a class="docs-next button" href="/docs/oryOS.17/kratos/install"><span>Installation</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#use-case-you-want-login-and-registration-for-your-application">Use case: You want login and registration for your Application</a></li><li><a href="#setup">Setup</a><ul class="toc-headings"><li><a href="#clone-ory-kratos-and-run-it-in-docker">Clone ORY Kratos and run it in Docker</a></li><li><a href="#network-architecture">Network Architecture</a></li></ul></li><li><a href="#perform-registration-logout-login">Perform registration, logout, login</a><ul class="toc-headings"><li><a href="#understanding-how-login-and-registration-works">Understanding how Login and Registration works</a></li><li><a href="#email-verification">Email Verification</a></li></ul></li><li><a href="#cleaning-up-docker">Cleaning up Docker</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

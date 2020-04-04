@@ -1,0 +1,530 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuration · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="```yaml"/><meta name="docsearch:version" content="oryOS.17"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuration · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="```yaml"/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.17</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.17/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/projects">Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/software-architecture-philosophy">Software Architecture and Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/deployment">Deployment Fundamentals and Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/versioning">Software Versions and Project Maturity</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/api-design">API Design</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/roadmap">Roadmap</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Kratos<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Introduction</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/quickstart">Quickstart</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/install">Installation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/ui-user-interface">User Interface</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/identity-user-model">Identity and User Model</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/credentials">Credentials</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/email-sms">Out-of-band communication via E-Mail and SMS</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/federation">Federation</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/security">Threat Models and Security Profiles</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Flows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-login-user-registration">User Login and User Registration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-logout">User Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-profile-management">Profile Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/password-reset-account-recovery">Account Recovery</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-facing-errors">User-Facing Errors</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/verify-email-account-activation">Email and Phone Verification and Account Activation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Strategies</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/username-email-password">Username or Email and Password</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/openid-connect-social-sign-in-oauth2">Social Sign In with OpenID Connect and OAuth2</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Jobs and Workflows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/workflows/jobs/before">Before Jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/workflows/jobs/after">After Jobs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/json-schema-json-paths">JSON Schema and JSON Paths</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/html-forms">HTML Form Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/sdk/api">REST API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/sdk/">Overview</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/further-reading/comparison">Comparison</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/oauth2">OAuth 2.0</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/login-consent-flow">Hydra workflow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Integrating Hydra into your stack</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/5min-tutorial">5 Minute Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/implementing-consent">Login, Consent &amp; Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/case-study">OAuth 2.0 Case Study</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.17/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/js">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/php">PHP</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/authn">Authenticators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/authz">Authorizers</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/mutator">Mutators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/error">Error Handlers</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/configure-deploy">Configure and Deploy</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/">Access Control Engines - Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/configuration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Configuration</h1></header><article><div><span><pre><code class="hljs css language-yaml"><span class="hljs-comment"># ORY Hydra Configuration</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># !!WARNING!!</span>
+<span class="hljs-comment"># This configuration file is for documentation purposes only. Do not use it in production. As all configuration items</span>
+<span class="hljs-comment"># are enabled, it will not work out of the box either.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># ORY Hydra can be configured using a configuration file and passing the file location using `--config path/to/config.yaml`.</span>
+<span class="hljs-comment"># Per default, ORY Hydra will look up and load file ~/.hydra.yaml. All configuration keys can be set using environment</span>
+<span class="hljs-comment"># variables as well.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Setting environment variables is easy:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## Linux / OSX</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># $ export MY_ENV_VAR=foo</span>
+<span class="hljs-comment"># $ hydra ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># alternatively:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># $ MY_ENV_VAR=foo hydra ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## Windows</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### Command Prompt</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># &gt; set MY_ENV_VAR=foo</span>
+<span class="hljs-comment"># &gt; hydra ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### Powershell</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># &gt; $env:MY_ENV_VAR="foo"</span>
+<span class="hljs-comment"># &gt; hydra ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## Docker</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># $ docker run -e MY_ENV_VAR=foo oryd/hydra:...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Assuming the following configuration layout:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># serve:</span>
+<span class="hljs-comment">#   public:</span>
+<span class="hljs-comment">#     port: 4444</span>
+<span class="hljs-comment">#     something_else: foobar</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Key `something_else` can be set as an environment variable by uppercasing it's path:</span>
+<span class="hljs-comment">#   `serve.public.port.somethihng_else` -&gt; `SERVE.PUBLIC.PORT.SOMETHING_ELSE`</span>
+<span class="hljs-comment"># and replacing `.` with `_`:</span>
+<span class="hljs-comment">#   `serve.public.port.somethihng_else` -&gt; `SERVE_PUBLIC_PORT_SOMETHING_ELSE`</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Environment variables always override values from the configuration file. Here are some more examples:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Configuration key | Environment variable |</span>
+<span class="hljs-comment"># ------------------|----------------------|</span>
+<span class="hljs-comment"># dsn               | DSN                  |</span>
+<span class="hljs-comment"># serve.admin.host  | SERVE_ADMIN_HOST     |</span>
+<span class="hljs-comment"># ------------------|----------------------|</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># List items such as</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># secrets:</span>
+<span class="hljs-comment">#   system:</span>
+<span class="hljs-comment">#     - this-is-the-primary-secret</span>
+<span class="hljs-comment">#     - this-is-an-old-secret</span>
+<span class="hljs-comment">#     - this-is-another-old-secret</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># must be separated using `,` when using environment variables. The environment variable equivalent to the code section#</span>
+<span class="hljs-comment"># above is:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Linux/macOS: $ export SECRETS_SYSTEM=this-is-the-primary-secret,this-is-an-old-secret,this-is-another-old-secret</span>
+<span class="hljs-comment"># Windows: &gt; set SECRETS_SYSTEM=this-is-the-primary-secret,this-is-an-old-secret,this-is-another-old-secret</span>
+
+<span class="hljs-comment"># log configures the logger</span>
+<span class="hljs-attr">log:</span>
+  <span class="hljs-comment"># Sets the log level, supports "panic", "fatal", "error", "warn", "info" and "debug". Defaults to "info".</span>
+  <span class="hljs-attr">level:</span> <span class="hljs-string">info</span>
+  <span class="hljs-comment"># Sets the log format. Leave it undefined for text based log format, or set to "json" for JSON formatting.</span>
+  <span class="hljs-attr">format:</span> <span class="hljs-string">json</span>
+
+<span class="hljs-comment"># serve controls the configuration for the http(s) daemon(s).</span>
+<span class="hljs-attr">serve:</span>
+  <span class="hljs-comment"># public controls the public daemon serving public API endpoints like /oauth2/auth, /oauth2/token, /.well-known/jwks.json</span>
+  <span class="hljs-attr">public:</span>
+    <span class="hljs-comment"># The port to listen on. Defaults to 4444</span>
+    <span class="hljs-attr">port:</span> <span class="hljs-number">4444</span>
+    <span class="hljs-comment"># The interface or unix socket ORY Hydra should listen and handle public API requests on.</span>
+    <span class="hljs-comment"># Use the prefix "unix:" to specify a path to a unix socket.</span>
+    <span class="hljs-comment"># Leave empty to listen on all interfaces.</span>
+    <span class="hljs-attr">host:</span> <span class="hljs-string">localhost</span> <span class="hljs-comment"># leave this out or empty to listen on all devices which is the default</span>
+    <span class="hljs-comment"># host: unix:/path/to/socket</span>
+
+    <span class="hljs-comment"># cors configures Cross Origin Resource Sharing for public endpoints.</span>
+    <span class="hljs-attr">cors:</span>
+      <span class="hljs-comment"># set enabled to true to enable CORS. Defaults to false.</span>
+      <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span>
+      <span class="hljs-comment"># allowed_origins is a list of origins (comma separated values) a cross-domain request can be executed from.</span>
+      <span class="hljs-comment"># If the special * value is present in the list, all origins will be allowed. An origin may contain a wildcard (*)</span>
+      <span class="hljs-comment"># to replace 0 or more characters (i.e.: http://*.domain.com). Only one wildcard can be used per origin.</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># If empty or undefined, this defaults to `*`, allowing CORS from every domain (if cors.enabled: true).</span>
+      <span class="hljs-attr">allowed_origins:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">https://example.com</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">https://*.example.com</span>
+      <span class="hljs-comment"># allowed_methods is list of HTTP methods the user agent is allowed to use with cross-domain</span>
+      <span class="hljs-comment"># requests. Defaults to the methods listed.</span>
+      <span class="hljs-attr">allowed_methods:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">POST</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">GET</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">PUT</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">PATCH</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">DELETE</span>
+
+      <span class="hljs-comment"># A list of non simple headers the client is allowed to use with cross-domain requests. Defaults to the listed values.</span>
+      <span class="hljs-attr">allowed_headers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">Authorization</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">Content-Type</span>
+
+      <span class="hljs-comment"># Sets which headers (comma separated values) are safe to expose to the API of a CORS API specification. Defaults to the listed values.</span>
+      <span class="hljs-attr">exposed_headers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">Content-Type</span>
+
+      <span class="hljs-comment"># Sets whether the request can include user credentials like cookies, HTTP authentication</span>
+      <span class="hljs-comment"># or client side SSL certificates. Defaults to true.</span>
+      <span class="hljs-attr">allow_credentials:</span> <span class="hljs-literal">true</span>
+
+      <span class="hljs-comment"># Sets how long (in seconds) the results of a preflight request can be cached. If set to 0, every request</span>
+      <span class="hljs-comment"># is preceded by a preflight request. Defaults to 0.</span>
+      <span class="hljs-attr">max_age:</span> <span class="hljs-number">10</span>
+
+      <span class="hljs-comment"># If set to true, adds additional log output to debug server side CORS issues. Defaults to false.</span>
+      <span class="hljs-attr">debug:</span> <span class="hljs-literal">true</span>
+
+    <span class="hljs-comment"># Access Log configuration for public server.</span>
+    <span class="hljs-attr">access_log:</span>
+      <span class="hljs-comment"># Disable access log for health endpoints.</span>
+      <span class="hljs-attr">disable_for_health:</span> <span class="hljs-literal">false</span>
+
+  <span class="hljs-comment"># admin controls the admin daemon serving admin API endpoints like /jwk, /client, ...</span>
+  <span class="hljs-attr">admin:</span>
+    <span class="hljs-comment"># The port to listen on. Defaults to 4445</span>
+    <span class="hljs-attr">port:</span> <span class="hljs-number">4445</span>
+    <span class="hljs-comment"># The interface or unix socket ORY Hydra should listen and handle administrative API requests on.</span>
+    <span class="hljs-comment"># Use the prefix "unix:" to specify a path to a unix socket.</span>
+    <span class="hljs-comment"># Leave empty to listen on all interfaces.</span>
+    <span class="hljs-attr">host:</span> <span class="hljs-string">localhost</span> <span class="hljs-comment"># leave this out or empty to listen on all devices which is the default</span>
+    <span class="hljs-comment"># host: unix:/path/to/socket</span>
+
+    <span class="hljs-comment"># cors configures Cross Origin Resource Sharing for admin endpoints.</span>
+    <span class="hljs-attr">cors:</span>
+      <span class="hljs-comment"># set enabled to true to enable CORS. Defaults to false.</span>
+      <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span>
+      <span class="hljs-comment"># allowed_origins is a list of origins (comma separated values) a cross-domain request can be executed from.</span>
+      <span class="hljs-comment"># If the special * value is present in the list, all origins will be allowed. An origin may contain a wildcard (*)</span>
+      <span class="hljs-comment"># to replace 0 or more characters (i.e.: http://*.domain.com). Only one wildcard can be used per origin.</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># If empty or undefined, this defaults to `*`, allowing CORS from every domain (if cors.enabled: true).</span>
+      <span class="hljs-attr">allowed_origins:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">https://example.com</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">https://*.example.com</span>
+      <span class="hljs-comment"># allowed_methods is list of HTTP methods the user agent is allowed to use with cross-domain</span>
+      <span class="hljs-comment"># requests. Defaults to GET and POST.</span>
+      <span class="hljs-attr">allowed_methods:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">POST</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">GET</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">PUT</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">PATCH</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">DELETE</span>
+
+      <span class="hljs-comment"># A list of non simple headers the client is allowed to use with cross-domain requests. Defaults to the listed values.</span>
+      <span class="hljs-attr">allowed_headers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">Authorization</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">Content-Type</span>
+
+      <span class="hljs-comment"># Sets which headers (comma separated values) are safe to expose to the API of a CORS API specification. Defaults to the listed values.</span>
+      <span class="hljs-attr">exposed_headers:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">Content-Type</span>
+
+      <span class="hljs-comment"># Sets whether the request can include user credentials like cookies, HTTP authentication</span>
+      <span class="hljs-comment"># or client side SSL certificates.</span>
+      <span class="hljs-attr">allow_credentials:</span> <span class="hljs-literal">true</span>
+
+      <span class="hljs-comment"># Sets how long (in seconds) the results of a preflight request can be cached. If set to 0, every request</span>
+      <span class="hljs-comment"># is preceded by a preflight request. Defaults to 0.</span>
+      <span class="hljs-attr">max_age:</span> <span class="hljs-number">10</span>
+
+      <span class="hljs-comment"># If set to true, adds additional log output to debug server side CORS issues. Defaults to false.</span>
+      <span class="hljs-attr">debug:</span> <span class="hljs-literal">true</span>
+
+    <span class="hljs-comment"># Access Log configuration for admin server.</span>
+    <span class="hljs-attr">access_log:</span>
+      <span class="hljs-comment"># Disable access log for health endpoints.</span>
+      <span class="hljs-attr">disable_for_health:</span> <span class="hljs-literal">false</span>
+
+  <span class="hljs-comment"># tls configures HTTPS (HTTP over TLS). If configured, the server automatically supports HTTP/2.</span>
+  <span class="hljs-attr">tls:</span>
+    <span class="hljs-comment"># key configures the private key (pem encoded)</span>
+    <span class="hljs-attr">key:</span>
+      <span class="hljs-comment"># The key can either be loaded from a file:</span>
+      <span class="hljs-attr">path:</span> <span class="hljs-string">/path/to/key.pem</span>
+      <span class="hljs-comment"># Or from a base64 encoded (without padding) string:</span>
+      <span class="hljs-attr">base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBFTkNSWVBURUQgUFJJVkFURSBLRVktLS0tLVxuTUlJRkRqQkFCZ2txaGtpRzl3MEJCUTB3...</span>
+
+    <span class="hljs-comment"># cert configures the TLS certificate (PEM encoded)</span>
+    <span class="hljs-attr">cert:</span>
+      <span class="hljs-comment"># The cert can either be loaded from a file:</span>
+      <span class="hljs-attr">path:</span> <span class="hljs-string">/path/to/cert.pem</span>
+      <span class="hljs-comment"># Or from a base64 encoded (without padding) string:</span>
+      <span class="hljs-attr">base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tXG5NSUlEWlRDQ0FrMmdBd0lCQWdJRVY1eE90REFOQmdr...</span>
+
+    <span class="hljs-comment"># Whitelist one or multiple CIDR address ranges and allow them to terminate TLS connections.</span>
+    <span class="hljs-comment"># Be aware that the X-Forwarded-Proto header must be set and must never be modifiable by anyone but</span>
+    <span class="hljs-comment"># your proxy / gateway / load balancer. Supports ipv4 and ipv6.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Hydra serves http instead of https when this option is set.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># For more information head over to: https://www.ory.sh/docs/hydra/production#tls-termination</span>
+    <span class="hljs-attr">allow_termination_from:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">/32</span>
+  <span class="hljs-attr">cookies:</span>
+    <span class="hljs-comment"># specify the SameSite mode that cookies should be sent with</span>
+    <span class="hljs-attr">same_site_mode:</span> <span class="hljs-string">Lax</span>
+
+<span class="hljs-comment"># dsn sets the data source name. This configures the backend where ORY Hydra persists data.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## In-memory database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># If dsn is "memory", data will be written to memory and is lost when you restart this instance.</span>
+<span class="hljs-comment"># You can set this value using the DSN environment variable:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## SQL databases</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># ORY Hydra supports popular SQL databases. For more detailed configuration information go to:</span>
+<span class="hljs-comment"># https://www.ory.sh/docs/hydra/dependencies-environment#sql</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### PostgreSQL (recommended)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># If dsn is starting with postgres:// PostgreSQL will be used as storage backend:</span>
+<span class="hljs-comment"># dsn: dsn=postgres://user:password@host:123/database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### MySQL database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># If dsn is starting with mysql:// MySQL will be used as storage backend:</span>
+<span class="hljs-comment"># dsn: mysql://user:password@tcp(host:123)/database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### CockroachDB</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># If dsn is starting with cockroach:// CockroachDB will be used as storage backend:</span>
+<span class="hljs-comment"># dsn: cockroach://user:password@host:123/database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">dsn:</span> <span class="hljs-string">memory</span>
+<span class="hljs-comment"># dsn: postgres://user:password@host:123/database</span>
+<span class="hljs-comment"># dsn: mysql://user:password@tcp(host:123)/database</span>
+
+<span class="hljs-comment"># webfinger configures ./well-known/ settings</span>
+<span class="hljs-attr">webfinger:</span>
+  <span class="hljs-comment"># jwks configures the /.well-known/jwks.json endpoint.</span>
+  <span class="hljs-attr">jwks:</span>
+    <span class="hljs-comment"># broadcast_keys is a list of JSON Web Keys that should be exposed at that endpoint. This is usually</span>
+    <span class="hljs-comment"># the public key for verifying OpenID Connect ID Tokens. However, you might want to add additional keys here as well.</span>
+    <span class="hljs-attr">broadcast_keys:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">hydra.openid.id-token</span> <span class="hljs-comment"># This key is always exposed by default</span>
+      <span class="hljs-comment"># - hydra.jwt.access-token # This key will be exposed when the OAuth2 Access Token strategy is set to JWT.</span>
+
+  <span class="hljs-comment"># oidc_discovery configures OpenID Connect Discovery (/.well-known/openid-configuration)</span>
+  <span class="hljs-attr">oidc_discovery:</span>
+    <span class="hljs-attr">client_registration_url:</span> <span class="hljs-string">https://my-service.com/clients</span>
+    <span class="hljs-comment"># A list of supported claims to be broadcasted. Claim `sub` is always included:</span>
+    <span class="hljs-attr">supported_claims:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">email</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">username</span>
+    <span class="hljs-comment"># The scope OAuth 2.0 Clients may request. Scope `offline`, `offline_access`, and `openid` are always included.</span>
+    <span class="hljs-attr">supported_scope:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">email</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">whatever</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">read.photos</span>
+
+    <span class="hljs-comment"># A URL of the userinfo endpoint to be advertised at the OpenID Connect</span>
+    <span class="hljs-comment"># Discovery endpoint /.well-known/openid-configuration. Defaults to ORY Hydra's userinfo endpoint at /userinfo.</span>
+    <span class="hljs-comment"># Set this value if you want to handle this endpoint yourself.</span>
+    <span class="hljs-attr">userinfo_url:</span> <span class="hljs-string">https://example.org/my-custom-userinfo-endpoint</span>
+
+<span class="hljs-comment"># oidc configures OpenID Connect features.</span>
+<span class="hljs-attr">oidc:</span>
+  <span class="hljs-comment"># subject_identifiers configures the Subject Identifier algorithm.</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># For more information please head over to the documentation:</span>
+  <span class="hljs-comment"># -&gt; https://www.ory.sh/docs/hydra/advanced#subject-identifier-algorithms</span>
+  <span class="hljs-attr">subject_identifiers:</span>
+    <span class="hljs-comment"># which algorithms to enable. Defaults to "public"</span>
+    <span class="hljs-attr">enabled:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">pairwise</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">public</span>
+    <span class="hljs-comment"># configures the pairwise algorithm</span>
+    <span class="hljs-attr">pairwise:</span>
+      <span class="hljs-comment"># if "pairwise" is enabled, the salt must be defined.</span>
+      <span class="hljs-attr">salt:</span> <span class="hljs-string">some-random-salt</span>
+
+  <span class="hljs-comment"># dynamic_client_registration configures OpenID Connect Dynamic Client Registration (exposed as admin endpoints /clients/...)</span>
+  <span class="hljs-attr">dynamic_client_registration:</span>
+    <span class="hljs-comment"># The OpenID Connect Dynamic Client Registration specification has no concept of whitelisting OAuth 2.0 Scope. If you</span>
+    <span class="hljs-comment"># want to expose Dynamic Client Registration, you should set the default scope enabled for newly registered clients.</span>
+    <span class="hljs-comment"># Keep in mind that users can overwrite this default by setting the "scope" key in the registration payload,</span>
+    <span class="hljs-comment"># effectively disabling the concept of whitelisted scopes.</span>
+    <span class="hljs-attr">default_scope:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">openid</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">offline</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">offline_access</span>
+
+<span class="hljs-attr">urls:</span>
+  <span class="hljs-attr">self:</span>
+    <span class="hljs-comment"># This value will be used as the "issuer" in access and ID tokens. It must be</span>
+    <span class="hljs-comment"># specified and using HTTPS protocol, unless --dangerous-force-http is set. This should typically be equal</span>
+    <span class="hljs-comment"># to the public value.</span>
+    <span class="hljs-attr">issuer:</span> <span class="hljs-string">https://localhost:4444/</span>
+
+    <span class="hljs-comment"># This is the base location of the public endpoints of your ORY Hydra installation. This should typically be equal</span>
+    <span class="hljs-comment"># to the issuer value. If left unspecified, it falls back to the issuer value.</span>
+    <span class="hljs-attr">public:</span> <span class="hljs-string">https://localhost:4444/</span>
+
+  <span class="hljs-comment"># Sets the login endpoint of the User Login &amp; Consent flow. Defaults to an internal fallback URL.</span>
+  <span class="hljs-attr">login:</span> <span class="hljs-string">https://my-login.app/login</span>
+  <span class="hljs-comment"># Sets the consent endpoint of the User Login &amp; Consent flow. Defaults to an internal fallback URL.</span>
+  <span class="hljs-attr">consent:</span> <span class="hljs-string">https://my-consent.app/consent</span>
+  <span class="hljs-comment"># Sets the logout endpoint. Defaults to an internal fallback URL.</span>
+  <span class="hljs-attr">logout:</span> <span class="hljs-string">https://my-logout.app/logout</span>
+  <span class="hljs-comment"># Sets the error endpoint. The error ui will be shown when an OAuth2 error occurs that which can not be sent back</span>
+  <span class="hljs-comment"># to the client. Defaults to an internal fallback URL.</span>
+  <span class="hljs-attr">error:</span> <span class="hljs-string">https://my-error.app/error</span>
+  <span class="hljs-comment"># When a user agent requests to logout, it will be redirected to this url afterwards per default.</span>
+  <span class="hljs-attr">post_logout_redirect:</span> <span class="hljs-string">https://my-example.app/logout-successful</span>
+
+<span class="hljs-attr">strategies:</span>
+  <span class="hljs-attr">scope:</span> <span class="hljs-string">DEPRECATED_HIERARCHICAL_SCOPE_STRATEGY</span>
+  <span class="hljs-comment"># You may use JSON Web Tokens as access tokens.</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># But seriously. Don't do that. It's not a great idea and has a ton of caveats and subtle security implications. Read more:</span>
+  <span class="hljs-comment"># -&gt; https://www.ory.sh/docs/hydra/advanced#json-web-tokens</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment">#  access_token: jwt</span>
+
+<span class="hljs-comment"># configures time to live</span>
+<span class="hljs-attr">ttl:</span>
+  <span class="hljs-comment"># configures how long a user login and consent flow may take. Defaults to 1h.</span>
+  <span class="hljs-attr">login_consent_request:</span> <span class="hljs-string">1h</span>
+  <span class="hljs-comment"># configures how long access tokens are valid. Defaults to 1h.</span>
+  <span class="hljs-attr">access_token:</span> <span class="hljs-string">1h</span>
+  <span class="hljs-comment"># configures how long refresh tokens are valid. Defaults to 720h. Set to -1 for refresh tokens to never expire.</span>
+  <span class="hljs-attr">refresh_token:</span> <span class="hljs-string">720h</span>
+  <span class="hljs-comment"># configures how long id tokens are valid. Defaults to 1h.</span>
+  <span class="hljs-attr">id_token:</span> <span class="hljs-string">1h</span>
+  <span class="hljs-comment"># configures how long auth codes are valid. Defaults to 10m.</span>
+  <span class="hljs-attr">auth_code:</span> <span class="hljs-string">10m</span>
+
+<span class="hljs-attr">oauth2:</span>
+  <span class="hljs-comment"># Set this to true if you want to share error debugging information with your OAuth 2.0 clients.</span>
+  <span class="hljs-comment"># Keep in mind that debug information is very valuable when dealing with errors, but might also expose database error</span>
+  <span class="hljs-comment"># codes and similar errors. Defaults to false.</span>
+  <span class="hljs-attr">expose_internal_errors:</span> <span class="hljs-literal">true</span>
+  <span class="hljs-comment"># Configures hashing algorithms. Supports only BCrypt at the moment.</span>
+  <span class="hljs-attr">hashers:</span>
+    <span class="hljs-comment"># Configures the BCrypt hashing algorithm used for hashing Client Secrets.</span>
+    <span class="hljs-attr">bcrypt:</span>
+      <span class="hljs-comment"># Sets the BCrypt cost. Minimum value is 4 and default value is 10. The higher the value, the more CPU time is being</span>
+      <span class="hljs-comment"># used to generate hashes.</span>
+      <span class="hljs-attr">cost:</span> <span class="hljs-number">10</span>
+  <span class="hljs-attr">pkce:</span>
+    <span class="hljs-comment"># Set this to true if you want PKCE to be enforced for all clients.</span>
+    <span class="hljs-attr">enforced:</span> <span class="hljs-literal">false</span>
+
+<span class="hljs-comment"># The secrets section configures secrets used for encryption and signing of several systems. All secrets can be rotated,</span>
+<span class="hljs-comment"># for more information on this topic navigate to:</span>
+<span class="hljs-comment"># -&gt; https://www.ory.sh/docs/hydra/advanced#rotation-of-hmac-token-signing-and-database-and-cookie-encryption-keys</span>
+<span class="hljs-attr">secrets:</span>
+  <span class="hljs-comment"># The system secret must be at least 16 characters long. If none is provided, one will be generated. They key</span>
+  <span class="hljs-comment"># is used to encrypt sensitive data using AES-GCM (256 bit) and validate HMAC signatures.</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># The first item in the list is used for signing and encryption. The whole list is used for verifying signatures</span>
+  <span class="hljs-comment"># and decryption.</span>
+  <span class="hljs-attr">system:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-the-primary-secret</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-an-old-secret</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-another-old-secret</span>
+  <span class="hljs-comment"># A secret that is used to encrypt cookie sessions. Defaults to secrets.system. It is recommended to use</span>
+  <span class="hljs-comment"># a separate secret in production.</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># The first item in the list is used for signing and encryption. The whole list is used for verifying signatures</span>
+  <span class="hljs-comment"># and decryption.</span>
+  <span class="hljs-attr">cookie:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-the-primary-secret</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-an-old-secret</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">this-is-another-old-secret</span>
+
+<span class="hljs-comment"># Enables profiling if set. Use "cpu" to enable cpu profiling and "mem" to enable memory profiling. For more details</span>
+<span class="hljs-comment"># on profiling, head over to: https://blog.golang.org/profiling-go-programs</span>
+<span class="hljs-attr">profiling:</span> <span class="hljs-string">cpu</span>
+<span class="hljs-comment"># profiling: mem</span>
+
+<span class="hljs-comment"># ORY Hydra supports distributed tracing.</span>
+<span class="hljs-attr">tracing:</span>
+  <span class="hljs-comment"># Set this to the tracing backend you wish to use. Currently supports jaeger. If omitted or empty, tracing will</span>
+  <span class="hljs-comment"># be disabled.</span>
+  <span class="hljs-attr">provider:</span> <span class="hljs-string">jaeger</span>
+  <span class="hljs-comment"># Specifies the service name to use on the tracer.</span>
+  <span class="hljs-attr">service_name:</span> <span class="hljs-string">ORY</span> <span class="hljs-string">Hydra</span>
+  <span class="hljs-attr">providers:</span>
+    <span class="hljs-comment"># Configures the jaeger tracing backend.</span>
+    <span class="hljs-attr">jaeger:</span>
+      <span class="hljs-comment"># The address of the jaeger-agent where spans should be sent to</span>
+      <span class="hljs-attr">local_agent_address:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">:6831</span>
+      <span class="hljs-comment"># The tracing header format</span>
+      <span class="hljs-attr">propagation:</span> <span class="hljs-string">jaeger</span>
+      <span class="hljs-attr">sampling:</span>
+        <span class="hljs-comment"># The type of the sampler you want to use. Supports:</span>
+        <span class="hljs-comment"># - const</span>
+        <span class="hljs-comment"># - probabilistic</span>
+        <span class="hljs-comment"># - ratelimiting</span>
+        <span class="hljs-attr">type:</span> <span class="hljs-string">const</span>
+        <span class="hljs-comment"># The value passed to the sampler type that has been configured.</span>
+        <span class="hljs-comment"># Supported values: This is dependant on the sampling strategy used:</span>
+        <span class="hljs-comment"># - const: 0 or 1 (all or nothing)</span>
+        <span class="hljs-comment"># - rateLimiting: a constant rate (e.g. setting this to 3 will sample requests with the rate of 3 traces per second)</span>
+        <span class="hljs-comment"># - probabilistic: a value between 0..1</span>
+        <span class="hljs-attr">value:</span> <span class="hljs-number">1.0</span>
+        <span class="hljs-comment"># The address of jaeger-agent's HTTP sampling server</span>
+        <span class="hljs-attr">server_url:</span> <span class="hljs-string">http://localhost:5778/sampling</span>
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/28/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.17/hydra/configure-deploy"><span class="arrow-prev">← </span><span>Installation and Setup</span></a><a class="docs-next button" href="/docs/oryOS.17/hydra/dependencies-environment"><span>Database Setup and Configuration</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

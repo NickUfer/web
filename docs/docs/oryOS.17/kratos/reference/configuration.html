@@ -1,0 +1,695 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuration · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&lt;!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN."/><meta name="docsearch:version" content="oryOS.17"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuration · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&lt;!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN."/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.17</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.17/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Reference</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/projects">Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/software-architecture-philosophy">Software Architecture and Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/deployment">Deployment Fundamentals and Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/versioning">Software Versions and Project Maturity</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/api-design">API Design</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/roadmap">Roadmap</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Kratos<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Introduction</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/quickstart">Quickstart</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/install">Installation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/ui-user-interface">User Interface</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/identity-user-model">Identity and User Model</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/credentials">Credentials</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/email-sms">Out-of-band communication via E-Mail and SMS</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/federation">Federation</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/concepts/security">Threat Models and Security Profiles</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Flows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-login-user-registration">User Login and User Registration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-logout">User Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-profile-management">Profile Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/password-reset-account-recovery">Account Recovery</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/user-facing-errors">User-Facing Errors</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/flows/verify-email-account-activation">Email and Phone Verification and Account Activation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Strategies</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/username-email-password">Username or Email and Password</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/strategies/openid-connect-social-sign-in-oauth2">Social Sign In with OpenID Connect and OAuth2</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Jobs and Workflows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/workflows/jobs/before">Before Jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/self-service/workflows/jobs/after">After Jobs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Reference</h4><ul><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.17/kratos/reference/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/json-schema-json-paths">JSON Schema and JSON Paths</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/reference/html-forms">HTML Form Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/sdk/api">REST API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/sdk/">Overview</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/kratos/further-reading/comparison">Comparison</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/oauth2">OAuth 2.0</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/login-consent-flow">Hydra workflow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Integrating Hydra into your stack</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/5min-tutorial">5 Minute Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/implementing-consent">Login, Consent &amp; Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/case-study">OAuth 2.0 Case Study</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/js">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/sdk/php">PHP</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/authn">Authenticators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/authz">Authorizers</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/mutator">Mutators</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/pipeline/error">Error Handlers</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/configure-deploy">Configure and Deploy</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/">Access Control Engines - Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.17/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/kratos/reference/configuration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Configuration</h1></header><article><div><span><!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.
+OPEN AN ISSUE IF YOU WOULD LIKE TO MAKE ADJUSTMENTS HERE AND MAINTAINERS WILL HELP YOU LOCATE THE RIGHT
+FILE -->
+<p>If file <code>$HOME/.kratos.yaml</code> exists, it will be used as a configuration file
+which supports all configuration settings listed below.</p>
+<p>You can load the config file from another source using the
+<code>-c path/to/config.yaml</code> or <code>--config path/to/config.yaml</code> flag:
+<code>kratos --config path/to/config.yaml</code>.</p>
+<p>Config files can be formatted as JSON, YAML and TOML. Some configuration values
+support reloading without server restart. All configuration values can be set
+using environment variables, as documented below.</p>
+<pre><code class="hljs css language-yaml"><span class="hljs-comment">## ORY Kratos Configuration</span>
+<span class="hljs-comment">#</span>
+
+<span class="hljs-comment">## dsn ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Set this value using environment variables on</span>
+<span class="hljs-comment"># - Linux/macOS:</span>
+<span class="hljs-comment">#    $ export DSN=&lt;value&gt;</span>
+<span class="hljs-comment"># - Windows Command Line (CMD):</span>
+<span class="hljs-comment">#    &gt; set DSN=&lt;value&gt;</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">dsn:</span> <span class="hljs-string">nostrud</span>
+
+<span class="hljs-comment">## identity ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">identity:</span>
+  <span class="hljs-comment">## traits ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">traits:</span>
+    <span class="hljs-comment">## default_schema_url ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export IDENTITY_TRAITS_DEFAULT_SCHEMA_URL=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set IDENTITY_TRAITS_DEFAULT_SCHEMA_URL=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">default_schema_url:</span> <span class="hljs-string">https://WoYRfTpurnhTLjcG.pgixe0iRNM2MPB5bgXnDdqtzde9.U9BJqz5gv9zjJZnvjozA6AjVz4lr10-13,Azr6WEH1H9PGvjX6JHO</span>
+
+    <span class="hljs-comment">## schemas ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export IDENTITY_TRAITS_SCHEMAS=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set IDENTITY_TRAITS_SCHEMAS=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">schemas:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-number">3482446.864140749</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-number">-5837007</span>
+
+<span class="hljs-comment">## selfservice ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">selfservice:</span>
+  <span class="hljs-comment">## logout ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">logout:</span>
+    <span class="hljs-comment">## redirect_to ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SELFSERVICE_LOGOUT_REDIRECT_TO=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SELFSERVICE_LOGOUT_REDIRECT_TO=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">redirect_to:</span> <span class="hljs-string">http://fJBdqjFQtbetMdAEy.ubklRQFgU--dWISFCBoIBkVkyML12jsldaqK9H1EsHWe0eTo0LUCl,yGh</span>
+
+  <span class="hljs-comment">## strategies ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">strategies:</span>
+    <span class="hljs-comment">## password ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">password:</span>
+      <span class="hljs-comment">## enabled ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export SELFSERVICE_STRATEGIES_PASSWORD_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set SELFSERVICE_STRATEGIES_PASSWORD_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-attr">enabled:</span> <span class="hljs-literal">false</span>
+
+    <span class="hljs-comment">## oidc ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">oidc:</span>
+      <span class="hljs-comment">## enabled ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export SELFSERVICE_STRATEGIES_OIDC_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set SELFSERVICE_STRATEGIES_OIDC_ENABLED=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-attr">enabled:</span> <span class="hljs-literal">false</span>
+
+      <span class="hljs-comment">## config ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-attr">config:</span>
+        <span class="hljs-comment">## providers ##</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-comment"># Set this value using environment variables on</span>
+        <span class="hljs-comment"># - Linux/macOS:</span>
+        <span class="hljs-comment">#    $ export SELFSERVICE_STRATEGIES_OIDC_CONFIG_PROVIDERS=&lt;value&gt;</span>
+        <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+        <span class="hljs-comment">#    &gt; set SELFSERVICE_STRATEGIES_OIDC_CONFIG_PROVIDERS=&lt;value&gt;</span>
+        <span class="hljs-comment">#</span>
+        <span class="hljs-attr">providers:</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">irure</span> <span class="hljs-string">est</span>
+            <span class="hljs-attr">provider:</span> <span class="hljs-string">generic</span>
+            <span class="hljs-attr">client_id:</span> <span class="hljs-string">aliquip</span> <span class="hljs-string">cupidatat</span> <span class="hljs-string">laboris</span>
+            <span class="hljs-attr">schema_url:</span> <span class="hljs-string">http://Dr.wyhQd+HrofXVXtRpixlXWscOCh8MBOY3cC0CoGq3OHtMNzy8UlLp-.RLo8c9ZB1f5DWI</span>
+            <span class="hljs-attr">issuer_url:</span> <span class="hljs-string">https://gFOZPnkLt.cuA5,N2fYnZwtJHjX3J,FXgyz23DijubI3nMZHzH+h7ZM,7uzQy-1qk-5sCbi</span>
+            <span class="hljs-attr">auth_url:</span> <span class="hljs-string">http://DIRDNbvoSFVAmMlalxQ.vxdk2TrAHhPb8UzrknpyEtFiRn5OdOyLZh96CbQ2Z-l2DpQUbKSN68mlNEH</span>
+            <span class="hljs-attr">token_url:</span> <span class="hljs-string">https://hvaVgCrgZdgUcbGULWai.zenUNa4DPMDvrZ3ICyv7lLhRsvYpDIchHziR</span>
+            <span class="hljs-attr">scope:</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-string">id</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-string">proident</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-string">ex</span> <span class="hljs-string">sit</span>
+          <span class="hljs-bullet">-</span> <span class="hljs-attr">id:</span> <span class="hljs-string">culpa</span> <span class="hljs-string">minim</span> <span class="hljs-string">elit</span> <span class="hljs-string">et</span> <span class="hljs-string">aliquip</span>
+            <span class="hljs-attr">provider:</span> <span class="hljs-string">github</span>
+            <span class="hljs-attr">client_id:</span> <span class="hljs-string">officia</span> <span class="hljs-string">reprehenderit</span> <span class="hljs-string">fugiat</span> <span class="hljs-string">do</span>
+            <span class="hljs-attr">schema_url:</span> <span class="hljs-string">http://OONlaikciULKDKbbcRdMjQpmU.nneJnOsqLtJtH.eRcXuBAf04sW</span>
+            <span class="hljs-attr">issuer_url:</span> <span class="hljs-string">http://NxywjEZssfjSGQBgv.dcodu6suDZ0AuZQB-c2D,EfWv.qjPgSGXylU</span>
+            <span class="hljs-attr">auth_url:</span> <span class="hljs-string">https://EaaA.tudgH.Yh5s+f-IuxGCtBKzZnl6Z0uCsF+V,DKD1L82DRzpudYmf-U.0.j,wb8Wf</span>
+            <span class="hljs-attr">token_url:</span> <span class="hljs-string">https://GNKmpFKIXjPtQTq.zmPJ6esEIJkAvKXbc2bHQZaz8+Cs.Zb</span>
+            <span class="hljs-attr">scope:</span>
+              <span class="hljs-bullet">-</span> <span class="hljs-string">reprehenderit</span> <span class="hljs-string">tempor</span> <span class="hljs-string">elit</span> <span class="hljs-string">et</span>
+
+  <span class="hljs-comment">## profile ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">profile:</span>
+    <span class="hljs-comment">## request_lifespan ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: 1h</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SELFSERVICE_PROFILE_REQUEST_LIFESPAN=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SELFSERVICE_PROFILE_REQUEST_LIFESPAN=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">request_lifespan:</span> <span class="hljs-string">1083748ns</span>
+
+  <span class="hljs-comment">## login ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">login:</span>
+    <span class="hljs-comment">## request_lifespan ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: 1h</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SELFSERVICE_LOGIN_REQUEST_LIFESPAN=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SELFSERVICE_LOGIN_REQUEST_LIFESPAN=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">request_lifespan:</span> <span class="hljs-string">31827250us</span>
+
+    <span class="hljs-comment">## before ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SELFSERVICE_LOGIN_BEFORE=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SELFSERVICE_LOGIN_BEFORE=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">before:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">http://EFUn.oqlVt7S8vaqkyKbMyWoxXQb2DTsqkgh0OLhMNrxUaRagASLMAw,,rTI0c54eYFv</span>
+          <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">true</span>
+
+    <span class="hljs-comment">## after ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">after:</span>
+      <span class="hljs-comment">## password ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export SELFSERVICE_LOGIN_AFTER_PASSWORD=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set SELFSERVICE_LOGIN_AFTER_PASSWORD=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-attr">password:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">session</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+          <span class="hljs-attr">config:</span>
+            <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">https://uZbLpAktuZhpncShZLAqLjfpxMhr.aocA9yrqA3BbpcGdlj1U4XhS1o7DiUm8zeuQ9FujhUZMD49ISAodXdHmS+Zno3N9euSAkWKdl-9+e</span>
+            <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">false</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">revoke_active_sessions</span>
+
+      <span class="hljs-comment">## oidc ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export SELFSERVICE_LOGIN_AFTER_OIDC=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set SELFSERVICE_LOGIN_AFTER_OIDC=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-attr">oidc:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">session</span>
+
+  <span class="hljs-comment">## registration ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">registration:</span>
+    <span class="hljs-comment">## request_lifespan ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: 1h</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SELFSERVICE_REGISTRATION_REQUEST_LIFESPAN=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SELFSERVICE_REGISTRATION_REQUEST_LIFESPAN=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">request_lifespan:</span> <span class="hljs-string">921877ns</span>
+
+    <span class="hljs-comment">## before ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SELFSERVICE_REGISTRATION_BEFORE=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SELFSERVICE_REGISTRATION_BEFORE=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">before:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">http://CVpXveEcekpWv.bbzQLFckc0</span>
+          <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">false</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">https://EbVhurWwcJfqvKJxYiap.eeZJ</span>
+          <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">true</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">https://zqWLerXCNPxvBncjLQMpCQxEcApkrD.mopGAvVS4iXl-hh.U9RjnptUqHHPWN</span>
+          <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">false</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">https://VcdHs.vzirVssvZs3.2PxV-iEXEz3splvUVQwn-6TN,2YJNqC5RHz18hWTknkr6EK68H</span>
+          <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">false</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">https://zZlPggvV.qgzt.lvRr1O4uasUJFH9gmCdCvGC2rwsuMheUTKb4bPOmK3,JNx,iwfisJumhFh7PYwPbBeKhaw</span>
+          <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">true</span>
+
+    <span class="hljs-comment">## after ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">after:</span>
+      <span class="hljs-comment">## password ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export SELFSERVICE_REGISTRATION_AFTER_PASSWORD=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set SELFSERVICE_REGISTRATION_AFTER_PASSWORD=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-attr">password:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+          <span class="hljs-attr">config:</span>
+            <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">http://AsIE.ueyRr3PhLPcQB4UNzbGG0E.CdoTtriVDGKg+UBUJP5WeLFY</span>
+            <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">session</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+          <span class="hljs-attr">config:</span>
+            <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">https://gxKWUdSIhVPEqTirPPPCLqZ.bxgC+Ck</span>
+            <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">false</span>
+
+      <span class="hljs-comment">## oidc ##</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-comment"># Set this value using environment variables on</span>
+      <span class="hljs-comment"># - Linux/macOS:</span>
+      <span class="hljs-comment">#    $ export SELFSERVICE_REGISTRATION_AFTER_OIDC=&lt;value&gt;</span>
+      <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+      <span class="hljs-comment">#    &gt; set SELFSERVICE_REGISTRATION_AFTER_OIDC=&lt;value&gt;</span>
+      <span class="hljs-comment">#</span>
+      <span class="hljs-attr">oidc:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">session</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+          <span class="hljs-attr">config:</span>
+            <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">http://iDCxdoHhYFsgo.wjbwurS1Yxq</span>
+            <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">redirect</span>
+          <span class="hljs-attr">config:</span>
+            <span class="hljs-attr">default_redirect_url:</span> <span class="hljs-string">http://hzYyDqdbjEqJxiDVrCG.ecuB0BT98,pqRT47yJ</span>
+            <span class="hljs-attr">allow_user_defined_redirect:</span> <span class="hljs-literal">false</span>
+
+<span class="hljs-comment">## Courier configuration ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># The courier is responsible for sending and delivering messages over email, sms, and other means.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">courier:</span>
+  <span class="hljs-comment">## SMTP Configuration ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Configures outgoing emails using the SMTP protocol.</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">smtp:</span>
+    <span class="hljs-comment">## SMTP connection string ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># This URI will be used to connect to the SMTP server.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Examples:</span>
+    <span class="hljs-comment"># - smtps://foo:bar@my-mailserver:1234/</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export COURIER_SMTP_CONNECTION_URI=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set COURIER_SMTP_CONNECTION_URI=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">connection_uri:</span> <span class="hljs-string">smtps://foo:bar@my-mailserver:1234/</span>
+
+    <span class="hljs-comment">## SMTP Sender Address ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># The recipient of an email will see this as the sender address.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: no-reply@ory.kratos.sh</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export COURIER_SMTP_FROM_ADDRESS=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set COURIER_SMTP_FROM_ADDRESS=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">from_address:</span> <span class="hljs-string">hYc5l@MxlpSfdsAMLVv.xvxh</span>
+
+  <span class="hljs-comment">## Override message templates ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># You can override certain or all message templates by pointing this key to the path where the templates are located.</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export COURIER_TEMPLATE_OVERRIDE_PATH=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set COURIER_TEMPLATE_OVERRIDE_PATH=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">template_override_path:</span> <span class="hljs-string">sit</span> <span class="hljs-string">non</span> <span class="hljs-string">ut</span> <span class="hljs-string">officia</span> <span class="hljs-string">culpa</span>
+
+<span class="hljs-comment">## serve ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">serve:</span>
+  <span class="hljs-comment">## admin ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">admin:</span>
+    <span class="hljs-comment">## host ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: 0.0.0.0</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SERVE_ADMIN_HOST=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SERVE_ADMIN_HOST=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">host:</span> <span class="hljs-string">eiusmod</span> <span class="hljs-string">cillum</span> <span class="hljs-string">proident</span> <span class="hljs-string">elit</span> <span class="hljs-string">sit</span>
+
+    <span class="hljs-comment">## port ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: 4434</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SERVE_ADMIN_PORT=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SERVE_ADMIN_PORT=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">port:</span> <span class="hljs-number">24574</span>
+
+  <span class="hljs-comment">## public ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">public:</span>
+    <span class="hljs-comment">## host ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: 0.0.0.0</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SERVE_PUBLIC_HOST=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SERVE_PUBLIC_HOST=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">host:</span> <span class="hljs-string">in</span> <span class="hljs-string">et</span> <span class="hljs-string">ut</span> <span class="hljs-string">velit</span>
+
+    <span class="hljs-comment">## port ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Default value: 4433</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export SERVE_PUBLIC_PORT=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set SERVE_PUBLIC_PORT=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">port:</span> <span class="hljs-number">49527</span>
+
+<span class="hljs-comment">## urls ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">urls:</span>
+  <span class="hljs-comment">## profile_ui ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export URLS_PROFILE_UI=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set URLS_PROFILE_UI=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">profile_ui:</span> <span class="hljs-string">http://cPxszfL.zhhDZK2tzgVHIqZJ+RLYYYAiG,mFvyCr</span>
+
+  <span class="hljs-comment">## mfa_ui ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export URLS_MFA_UI=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set URLS_MFA_UI=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">mfa_ui:</span> <span class="hljs-string">http://gYBkoqPtZiUmbNcqYy.pkVCdaE3mOHBlvj1jPyXcdsJdfOEDMVjj94vP1k,e7wKxZb</span>
+
+  <span class="hljs-comment">## login_ui ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export URLS_LOGIN_UI=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set URLS_LOGIN_UI=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">login_ui:</span> <span class="hljs-string">http://suiLvtvfLvmthbYPjVJbF.zfoRvmjdJznZ.DWaeMDCHDcXVbUIt2VTqQGDujAjplPSdh5mWW5PEJC6vEvsZbbp0n9Hoa</span>
+
+  <span class="hljs-comment">## registration_ui ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export URLS_REGISTRATION_UI=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set URLS_REGISTRATION_UI=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">registration_ui:</span> <span class="hljs-string">http://D.seihXjTIqyMRj3XZjSKGi94VocxD9DSG1DE+mUF3</span>
+
+  <span class="hljs-comment">## error_ui ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export URLS_ERROR_UI=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set URLS_ERROR_UI=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">error_ui:</span> <span class="hljs-string">http://tywnUOCIk.xcqzx+MWKXjZMFMdoelJ0LMotk</span>
+
+  <span class="hljs-comment">## default_return_to ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export URLS_DEFAULT_RETURN_TO=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set URLS_DEFAULT_RETURN_TO=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">default_return_to:</span> <span class="hljs-string">http://pqLWE.kbdU,d39KE4uHikUvVhQMp4-</span>
+
+  <span class="hljs-comment">## self ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">self:</span>
+    <span class="hljs-comment">## public ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export URLS_SELF_PUBLIC=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set URLS_SELF_PUBLIC=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">public:</span> <span class="hljs-string">http://LMhjMTkiyUgRNsfVEhKNvOnyB.lzbAo9rfrdH7dZ3ryAQWsOH3Ujc7KUZZUxEyv</span>
+
+    <span class="hljs-comment">## admin ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export URLS_SELF_ADMIN=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set URLS_SELF_ADMIN=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">admin:</span> <span class="hljs-string">https://CMyrFHftXAsSRJdDSheKlKnMD.zwzn8DRczLLCmiAjaXxUh7Afhier4ay6yYoQx52gtHqtgGTBzSIRK,qkWxtIBT+B</span>
+
+  <span class="hljs-comment">## whitelisted_return_to_domains ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export URLS_WHITELISTED_RETURN_TO_DOMAINS=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set URLS_WHITELISTED_RETURN_TO_DOMAINS=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">whitelisted_return_to_domains:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">https://mLjjcTGrATFOKVvEyUXfBu.emrrd26kMy3AXDTsloLUF</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">http://yhsX.fepyp8,n8gt0ZQz5IQf8jFLoxGO3lbju</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">http://SFGytZuLcHSsdFGoDMRLfaL.myraVsVHGn1TJUrXx6eKXfKKKNJF.XNefR7vflPa,a</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">https://ncWsKtBBHmMtsN.nsgeT</span>
+
+<span class="hljs-comment">## log ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">log:</span>
+  <span class="hljs-comment">## level ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export LOG_LEVEL=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set LOG_LEVEL=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">level:</span> <span class="hljs-string">debug</span>
+
+  <span class="hljs-comment">## format ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export LOG_FORMAT=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set LOG_FORMAT=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">format:</span> <span class="hljs-string">text</span>
+
+<span class="hljs-comment">## secrets ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">secrets:</span>
+  <span class="hljs-comment">## session ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-comment"># Set this value using environment variables on</span>
+  <span class="hljs-comment"># - Linux/macOS:</span>
+  <span class="hljs-comment">#    $ export SECRETS_SESSION=&lt;value&gt;</span>
+  <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+  <span class="hljs-comment">#    &gt; set SECRETS_SESSION=&lt;value&gt;</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">session:</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">et</span> <span class="hljs-string">in</span> <span class="hljs-string">laborisnulla</span> <span class="hljs-string">dolore</span> <span class="hljs-string">reprehenderit</span> <span class="hljs-string">eiusmod</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">eu</span> <span class="hljs-string">aliquaLorem</span> <span class="hljs-string">temp</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">utsunt</span> <span class="hljs-string">amet</span> <span class="hljs-string">culpa</span>
+    <span class="hljs-bullet">-</span> <span class="hljs-string">nostrud</span> <span class="hljs-string">officia</span> <span class="hljs-string">voluptate</span> <span class="hljs-string">sit</span>
+
+<span class="hljs-comment">## hashers ##</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-attr">hashers:</span>
+  <span class="hljs-comment">## argon2 ##</span>
+  <span class="hljs-comment">#</span>
+  <span class="hljs-attr">argon2:</span>
+    <span class="hljs-comment">## memory ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export HASHERS_ARGON2_MEMORY=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set HASHERS_ARGON2_MEMORY=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">memory:</span> <span class="hljs-number">90811424</span>
+
+    <span class="hljs-comment">## iterations ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export HASHERS_ARGON2_ITERATIONS=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set HASHERS_ARGON2_ITERATIONS=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">iterations:</span> <span class="hljs-number">21190941</span>
+
+    <span class="hljs-comment">## parallelism ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export HASHERS_ARGON2_PARALLELISM=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set HASHERS_ARGON2_PARALLELISM=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">parallelism:</span> <span class="hljs-number">12975809</span>
+
+    <span class="hljs-comment">## salt_length ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export HASHERS_ARGON2_SALT_LENGTH=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set HASHERS_ARGON2_SALT_LENGTH=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">salt_length:</span> <span class="hljs-number">7900055</span>
+
+    <span class="hljs-comment">## key_length ##</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># Set this value using environment variables on</span>
+    <span class="hljs-comment"># - Linux/macOS:</span>
+    <span class="hljs-comment">#    $ export HASHERS_ARGON2_KEY_LENGTH=&lt;value&gt;</span>
+    <span class="hljs-comment"># - Windows Command Line (CMD):</span>
+    <span class="hljs-comment">#    &gt; set HASHERS_ARGON2_KEY_LENGTH=&lt;value&gt;</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-attr">key_length:</span> <span class="hljs-number">53940314</span>
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 2/19/2020 by aeneasr</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.17/kratos/self-service/workflows/jobs/after"><span class="arrow-prev">← </span><span>After Jobs</span></a><a class="docs-next button" href="/docs/oryOS.17/kratos/reference/json-schema-json-paths"><span>JSON Schema and JSON Paths</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
