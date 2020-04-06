@@ -236,7 +236,6 @@ class Stats extends Component<PropTypes, StateTypes> {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className={styles.stats}>
         <div className="container-fluid">

@@ -7,17 +7,9 @@ import SEO from '../components/seo'
 import kratosPolyglot from '../images/kratos/svg_kratos_p.svg'
 import Stats from '../components/stats'
 import CodeBox, { Languages } from '../components/codebox'
-import kratosProcess from '../images/kratos/svg_kratos.svg'
+import KratosAnimation from '../images/animations/kratos.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
-
-const KratosAnimation = () => (
-  <img
-    alt="The ORY Kratos user login and registration service"
-    className="responsive"
-    src={kratosProcess}
-  />
-)
 
 const KratosSdk = () => (
   <img alt="ORY Kratos SDKs" className="responsive" src={kratosPolyglot} />

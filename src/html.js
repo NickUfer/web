@@ -23,74 +23,80 @@ import icon17 from './images/icon/mstile-310x310.png'
 export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
-    <head>
-      <link rel="apple-touch-icon-precomposed" sizes="57x57" href={icon}/>
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href={icon1}/>
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href={icon2}/>
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href={icon3}/>
-      <link rel="apple-touch-icon-precomposed" sizes="60x60" href={icon4}/>
-      <link rel="apple-touch-icon-precomposed" sizes="120x120" href={icon5}/>
-      <link rel="apple-touch-icon-precomposed" sizes="76x76" href={icon6}/>
-      <link rel="apple-touch-icon-precomposed" sizes="152x152" href={icon7}/>
-      <link rel="icon" type="image/png" href={icon8}/>
-      <link rel="icon" type="image/png" href={icon9}/>
-      <link rel="icon" type="image/png" href={icon10}/>
-      <link rel="icon" type="image/png" href={icon11}/>
-      <link rel="icon" type="image/png" href={icon12}/>
-      <meta name="msapplication-TileImage" content={icon13}/>
-      <meta name="msapplication-square70x70logo" content={icon14}/>
-      <meta name="msapplication-square150x150logo" content={icon15}/>
-      <meta name="msapplication-wide310x150logo" content={icon16}/>
-      <meta name="msapplication-square310x310logo" content={icon17}/>
+      <head>
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href={icon} />
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href={icon1} />
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href={icon2} />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href={icon3} />
+        <link rel="apple-touch-icon-precomposed" sizes="60x60" href={icon4} />
+        <link rel="apple-touch-icon-precomposed" sizes="120x120" href={icon5} />
+        <link rel="apple-touch-icon-precomposed" sizes="76x76" href={icon6} />
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href={icon7} />
+        <link rel="icon" type="image/png" href={icon8} />
+        <link rel="icon" type="image/png" href={icon9} />
+        <link rel="icon" type="image/png" href={icon10} />
+        <link rel="icon" type="image/png" href={icon11} />
+        <link rel="icon" type="image/png" href={icon12} />
+        <meta name="msapplication-TileImage" content={icon13} />
+        <meta name="msapplication-square70x70logo" content={icon14} />
+        <meta name="msapplication-square150x150logo" content={icon15} />
+        <meta name="msapplication-wide310x150logo" content={icon16} />
+        <meta name="msapplication-square310x310logo" content={icon17} />
 
-      <meta charSet="utf-8"/>
-      <meta httpEquiv="x-ua-compatible" content="ie=edge"/>
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, shrink-to-fit=no"
-      />
-      {props.headComponents}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        {props.headComponents}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-MJD22FZ');`,
-        }}
-      />
-    </head>
-    <body {...props.bodyAttributes}>
-    {props.preBodyComponents}
-    <noscript key="noscript" id="gatsby-noscript">
-      This app works best with JavaScript enabled.
-    </noscript>
-    <div
-      key={`body`}
-      id="___gatsby"
-      dangerouslySetInnerHTML={{ __html: props.body }}
-    />
-    {props.postBodyComponents}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-71865250-1"
-    />
-    <script
-      dangerouslySetInnerHTML={{
-        __html: `window.dataLayer = window.dataLayer || [];
+          }}
+        />
+        <script src="/scripts/keyshapejs-1.1.0.min.js" />
+      </head>
+      <body {...props.bodyAttributes}>
+        {props.preBodyComponents}
+        <noscript key="noscript" id="gatsby-noscript">
+          This app works best with JavaScript enabled.
+        </noscript>
+        <div
+          key={`body`}
+          id="___gatsby"
+          dangerouslySetInnerHTML={{ __html: props.body }}
+        />
+        {props.postBodyComponents}
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-71865250-1"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 
 gtag('config', 'UA-71865250-1');`,
-      }}
-    />
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-MJD22FZ"
-        style={{ height: 0, width: 0, display: 'none', visibility: 'hidden' }}
-      />
-    </noscript>
-    </body>
+          }}
+        />
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MJD22FZ"
+            style={{
+              height: 0,
+              width: 0,
+              display: 'none',
+              visibility: 'hidden',
+            }}
+          />
+        </noscript>
+      </body>
     </html>
   )
 }

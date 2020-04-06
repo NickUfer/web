@@ -30,6 +30,14 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /.*images\/animations\/.*\.svg$/ // See below to configure properly
+        }
+      }
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
