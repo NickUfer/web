@@ -15,26 +15,28 @@
 <link data-react-helmet="true" rel="shortcut icon" href="/hydra/docs/img/favico.png">
 
 
-<link rel="stylesheet" href="/hydra/docs/styles.b784451d.css">
+<link rel="stylesheet" href="/hydra/docs/styles.87ba0952.css">
 
 
-<link rel="preload" href="/hydra/docs/styles.7ca22312.js" as="script">
+<link rel="preload" href="/hydra/docs/styles.a478bc50.js" as="script">
 
-<link rel="preload" href="/hydra/docs/runtime~main.863a9e5b.js" as="script">
+<link rel="preload" href="/hydra/docs/runtime~main.6e50cc83.js" as="script">
 
-<link rel="preload" href="/hydra/docs/main.7b5b9406.js" as="script">
+<link rel="preload" href="/hydra/docs/main.692df17b.js" as="script">
 
-<link rel="preload" href="/hydra/docs/1.c0431fd8.js" as="script">
+<link rel="preload" href="/hydra/docs/1.b88d8b12.js" as="script">
 
-<link rel="preload" href="/hydra/docs/2.c3a8da89.js" as="script">
+<link rel="preload" href="/hydra/docs/2.8c052c08.js" as="script">
 
-<link rel="preload" href="/hydra/docs/60.fea89142.js" as="script">
+<link rel="preload" href="/hydra/docs/1be78505.d05df60c.js" as="script">
 
-<link rel="preload" href="/hydra/docs/f4edeb99.5bd436c9.js" as="script">
+<link rel="preload" href="/hydra/docs/61.048a4dde.js" as="script">
 
-<link rel="preload" href="/hydra/docs/17896441.69b0075c.js" as="script">
+<link rel="preload" href="/hydra/docs/f4edeb99.7ed159ee.js" as="script">
 
-<link rel="preload" href="/hydra/docs/e85a841b.32fe96f7.js" as="script">
+<link rel="preload" href="/hydra/docs/17896441.a8ce663f.js" as="script">
+
+<link rel="preload" href="/hydra/docs/e85a841b.ea5e801a.js" as="script">
 
 </head>
 <body>
@@ -48,26 +50,28 @@ in your environment yourself, for example by putting it into <code>/usr/local/bi
 something comparable.</p><p>Once installed, you should be able to run:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-shell codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ hydra </span><span class="token builtin class-name" style="color:rgb(255, 203, 107)">help</span></div></div></div></div></div><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="building-from-source"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#building-from-source" title="Direct link to heading">#</a>Building from Source</h2><p>If you wish to compile ORY Hydra yourself, you need to install and set up
 <a href="https://golang.org/">Go 1.12+</a> and add <code>$GOPATH/bin</code> to your <code>$PATH</code>.</p><p>The following commands will check out the latest release tag of ORY Hydra,
 compile it, and set up flags so that <code>hydra version</code> works as expected. Please
-note that this will only work in a Bash-like shell.</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-shell codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ go get -d -u github.com/ory/hydra</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ </span><span class="token builtin class-name" style="color:rgb(255, 203, 107)">cd</span><span class="token plain"> </span><span class="token variable" style="color:rgb(191, 199, 213)">$(</span><span class="token variable" style="color:rgb(191, 199, 213)">go </span><span class="token variable function" style="color:rgb(130, 170, 255)">env</span><span class="token variable" style="color:rgb(191, 199, 213)"> GOPATH</span><span class="token variable" style="color:rgb(191, 199, 213)">)</span><span class="token plain">/src/github.com/ory/hydra</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ </span><span class="token assign-left variable" style="color:rgb(191, 199, 213)">GO111MODULE</span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain">on </span><span class="token function" style="color:rgb(130, 170, 255)">make</span><span class="token plain"> install-stable</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ </span><span class="token variable" style="color:rgb(191, 199, 213)">$(</span><span class="token variable" style="color:rgb(191, 199, 213)">go </span><span class="token variable function" style="color:rgb(130, 170, 255)">env</span><span class="token variable" style="color:rgb(191, 199, 213)"> GOPATH</span><span class="token variable" style="color:rgb(191, 199, 213)">)</span><span class="token plain">/bin/hydra </span><span class="token builtin class-name" style="color:rgb(255, 203, 107)">help</span></div></div></div></div></div></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/docs/hydra/edit/master/docs/versioned_docs/version-v1.4/install.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-04-06T13:16:25.000Z" class="docLastUpdatedAt_1sqk">4/6/2020</time> by <strong>hackerman</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/hydra/docs/index"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« ORY Hydra</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/hydra/docs/oauth2"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">OAuth 2.0 and OpenID Connect »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#docker" class="contents__link">Docker</a></li><li><a href="#macos" class="contents__link">macOS</a></li><li><a href="#linux" class="contents__link">Linux</a></li><li><a href="#windows" class="contents__link">Windows</a></li><li><a href="#download-binaries" class="contents__link">Download Binaries</a></li><li><a href="#building-from-source" class="contents__link">Building from Source</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/imprint">Imprint</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/privacy">Privacy</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/tos">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div></footer>
+note that this will only work in a Bash-like shell.</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-shell codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ go get -d -u github.com/ory/hydra</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ </span><span class="token builtin class-name" style="color:rgb(255, 203, 107)">cd</span><span class="token plain"> </span><span class="token variable" style="color:rgb(191, 199, 213)">$(</span><span class="token variable" style="color:rgb(191, 199, 213)">go </span><span class="token variable function" style="color:rgb(130, 170, 255)">env</span><span class="token variable" style="color:rgb(191, 199, 213)"> GOPATH</span><span class="token variable" style="color:rgb(191, 199, 213)">)</span><span class="token plain">/src/github.com/ory/hydra</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ </span><span class="token assign-left variable" style="color:rgb(191, 199, 213)">GO111MODULE</span><span class="token operator" style="color:rgb(137, 221, 255)">=</span><span class="token plain">on </span><span class="token function" style="color:rgb(130, 170, 255)">make</span><span class="token plain"> install-stable</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ </span><span class="token variable" style="color:rgb(191, 199, 213)">$(</span><span class="token variable" style="color:rgb(191, 199, 213)">go </span><span class="token variable function" style="color:rgb(130, 170, 255)">env</span><span class="token variable" style="color:rgb(191, 199, 213)"> GOPATH</span><span class="token variable" style="color:rgb(191, 199, 213)">)</span><span class="token plain">/bin/hydra </span><span class="token builtin class-name" style="color:rgb(255, 203, 107)">help</span></div></div></div></div></div></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/docs/hydra/edit/master/docs/versioned_docs/version-v1.4/install.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-04-06T13:16:25.000Z" class="docLastUpdatedAt_1sqk">4/6/2020</time> by <strong>hackerman</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/hydra/docs/index"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« ORY Hydra</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/hydra/docs/oauth2"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">OAuth 2.0 and OpenID Connect »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#docker" class="contents__link">Docker</a></li><li><a href="#macos" class="contents__link">macOS</a></li><li><a href="#linux" class="contents__link">Linux</a></li><li><a href="#windows" class="contents__link">Windows</a></li><li><a href="#download-binaries" class="contents__link">Download Binaries</a></li><li><a href="#building-from-source" class="contents__link">Building from Source</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/imprint">Imprint</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/privacy">Privacy</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/tos">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>document.querySelectorAll(".tabs .tabs-nav .nav-item a").forEach((function(t){t.addEventListener("click",(function(e){return e.preventDefault(),t.closest(".tabs-nav").querySelectorAll(".nav-item a").forEach((function(t){t.classList.remove("active")})),t.closest(".tabs").querySelectorAll(".tab-content .tab-pane").forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),document.getElementById(t.href.split("#")[1]).classList.add("active"),!1}))}))</script></footer>
 </div>
 
-<script src="/hydra/docs/styles.7ca22312.js"></script>
+<script src="/hydra/docs/styles.a478bc50.js"></script>
 
-<script src="/hydra/docs/runtime~main.863a9e5b.js"></script>
+<script src="/hydra/docs/runtime~main.6e50cc83.js"></script>
 
-<script src="/hydra/docs/main.7b5b9406.js"></script>
+<script src="/hydra/docs/main.692df17b.js"></script>
 
-<script src="/hydra/docs/1.c0431fd8.js"></script>
+<script src="/hydra/docs/1.b88d8b12.js"></script>
 
-<script src="/hydra/docs/2.c3a8da89.js"></script>
+<script src="/hydra/docs/2.8c052c08.js"></script>
 
-<script src="/hydra/docs/60.fea89142.js"></script>
+<script src="/hydra/docs/1be78505.d05df60c.js"></script>
 
-<script src="/hydra/docs/f4edeb99.5bd436c9.js"></script>
+<script src="/hydra/docs/61.048a4dde.js"></script>
 
-<script src="/hydra/docs/17896441.69b0075c.js"></script>
+<script src="/hydra/docs/f4edeb99.7ed159ee.js"></script>
 
-<script src="/hydra/docs/e85a841b.32fe96f7.js"></script>
+<script src="/hydra/docs/17896441.a8ce663f.js"></script>
+
+<script src="/hydra/docs/e85a841b.ea5e801a.js"></script>
 
 
 </body>
