@@ -105,7 +105,6 @@ https://www.ory.sh/docs/hydra/sdk/api https://www.ory.sh/hydra/docs/reference/ap
 https://www.ory.sh/docs/hydra/configuration https://www.ory.sh/hydra/docs/reference/configuration 302!
 https://www.ory.sh/docs/hydra/* https://www.ory.sh/hydra/docs/:splat 302!
 
-https://www.ory.sh/docs/ https://www.ory.sh/docs/index 302!
 https://www.ory.sh/docs/ecosystem https://www.ory.sh/docs/ecosystem/projects
 
 # END: April 2020 split docs repository change
