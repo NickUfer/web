@@ -12258,7 +12258,7 @@ function renderRoutes(routes, extraProps, switchProps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[["@docusaurus/plugin-content-docs",{"path":"docs","sidebarPath":"/home/circleci/project/docs/contrib/sidebar.js","editUrl":"https://github.com/ory/keto/edit/master/docs","routeBasePath":"","showLastUpdateAuthor":true,"showLastUpdateTime":true,"remarkPlugins":[null]}],["@docusaurus/plugin-content-pages"],["@docusaurus/plugin-google-analytics"],["@docusaurus/plugin-sitemap"]],"themes":[["@docusaurus/theme-classic",{"customCss":"/home/circleci/project/docs/src/css/theme.css"}],["@docusaurus/theme-search-algolia"]],"customFields":{},"themeConfig":{"googleAnalytics":{"trackingID":"UA-71865250-1","anonymizeIP":true},"algolia":{"apiKey":"8463c6ece843b377565726bb4ed325b0","indexName":"ory"},"navbar":{"logo":{"alt":"ORY Keto","src":"img/logo-keto.svg","href":"https://www.ory.sh/keto"},"links":[{"to":"index","activeBasePath":"keto/docs","label":"Docs","position":"left"},{"href":"https://www.ory.sh/docs","label":"Ecosystem","position":"left"},{"href":"https://www.ory.sh/blog","label":"Blog","position":"left"},{"href":"https://community.ory.sh","label":"Forum","position":"left"},{"href":"https://www.ory.sh/chat","label":"Chat","position":"left"},{"href":"https://github.com/ory/keto","label":"GitHub","position":"left"},{"label":"v0.5","position":"right","to":"versions"}]},"footer":{"style":"dark","copyright":"Copyright © 2020 ORY GmbH","links":[{"title":"Company","items":[{"label":"Imprint","href":"https://www.ory.sh/imprint"},{"label":"Privacy","href":"https://www.ory.sh/privacy"},{"label":"Terms","href":"https://www.ory.sh/tos"}]}]}},"title":"ORY Keto","tagline":"A cloud native access control server providing best-practice patterns (RBAC, ABAC, ACL, AWS IAM Policies, Kubernetes Roles, ...) via REST APIs.","url":"https://www.ory.sh/","baseUrl":"/keto/docs/","favicon":"img/favico.png","organizationName":"ory","projectName":"keto"});
+/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[["@docusaurus/plugin-content-docs",{"path":"docs","sidebarPath":"/home/circleci/project/docs/contrib/sidebar.js","editUrl":"https://github.com/ory/keto/edit/master/docs","routeBasePath":"","showLastUpdateAuthor":true,"showLastUpdateTime":true,"remarkPlugins":[null]}],["@docusaurus/plugin-content-pages"],["@docusaurus/plugin-google-analytics"],["@docusaurus/plugin-sitemap"]],"themes":[["@docusaurus/theme-classic",{"customCss":"/home/circleci/project/docs/src/css/theme.css"}],["@docusaurus/theme-search-algolia"]],"customFields":{},"themeConfig":{"googleAnalytics":{"trackingID":"UA-71865250-1","anonymizeIP":true},"algolia":{"apiKey":"8463c6ece843b377565726bb4ed325b0","indexName":"ory","algoliaOptions":{"facetFilters":["tags:keto","tags:ecosystem","version:v0.5"]}},"navbar":{"logo":{"alt":"ORY Keto","src":"img/logo-keto.svg","href":"https://www.ory.sh/keto"},"links":[{"to":"index","activeBasePath":"keto/docs","label":"Docs","position":"left"},{"href":"https://www.ory.sh/docs","label":"Ecosystem","position":"left"},{"href":"https://www.ory.sh/blog","label":"Blog","position":"left"},{"href":"https://community.ory.sh","label":"Forum","position":"left"},{"href":"https://www.ory.sh/chat","label":"Chat","position":"left"},{"href":"https://github.com/ory/keto","label":"GitHub","position":"left"},{"label":"v0.5","position":"right","to":"versions"}]},"footer":{"style":"dark","copyright":"Copyright © 2020 ORY GmbH","links":[{"title":"Company","items":[{"label":"Imprint","href":"https://www.ory.sh/imprint"},{"label":"Privacy","href":"https://www.ory.sh/privacy"},{"label":"Terms","href":"https://www.ory.sh/tos"}]}]}},"title":"ORY Keto","tagline":"A cloud native access control server providing best-practice patterns (RBAC, ABAC, ACL, AWS IAM Policies, Kubernetes Roles, ...) via REST APIs.","url":"https://www.ory.sh/","baseUrl":"/keto/docs/","favicon":"img/favico.png","organizationName":"ory","projectName":"keto"});
 
 /***/ }),
 /* 76 */
@@ -20608,7 +20608,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/keto/docs/next/reference/configuration","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1586189995,"sidebar":"docs","previous":{"title":"AWS IAM Policies","permalink":"/keto/docs/next/engines/acp-aws"},"next":{"title":"REST API","permalink":"/keto/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.keto.yaml`),` exists, it will be used as a configuration file which
+const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/keto/docs/next/reference/configuration","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1586192597,"sidebar":"docs","previous":{"title":"AWS IAM Policies","permalink":"/keto/docs/next/engines/acp-aws"},"next":{"title":"REST API","permalink":"/keto/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.keto.yaml`),` exists, it will be used as a configuration file which
 supports all configuration settings listed below.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can load the config file from another source using the
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`-c path/to/config.yaml`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`--config path/to/config.yaml`),` flag:
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`keto --config path/to/config.yaml`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Config files can be formatted as JSON, YAML and TOML. Some configuration values
@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: memory
+dsn: postgres://user:password@host:123/database
 
 ## HTTP REST API ##
 #
@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: ''
+  host: localhost
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20689,7 +20689,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -20724,11 +20724,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - DELETE
-      - PATCH
       - TRACE
       - POST
-      - CONNECT
+      - HEAD
+      - GET
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20743,7 +20742,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - exercitation sint
+      - voluptate non aute
+      - aliquip non occaecat pariatur qui
+      - in occaecat aute
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20758,7 +20759,10 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - laborum do
+      - Ut adipisicing quis Duis
+      - minim magna in
+      - sunt in irure
+      - pariatur voluptate reprehenderit sit
 
     ## Allow HTTP Credentials ##
     #
@@ -20772,7 +20776,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: false
+    allow_credentials: true
 
     ## Maximum Age ##
     #
@@ -20784,7 +20788,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -95336305
+    max_age: -92556062
 
     ## Enable Debugging ##
     #
@@ -20798,7 +20802,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: true
+    debug: false
 
   ## HTTPS ##
   #
@@ -20861,7 +20865,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: mem
+profiling: cpu
 
 ## Log ##
 #
@@ -20880,7 +20884,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: fatal
+  level: debug
 
   ## Format ##
   #
@@ -20894,7 +20898,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: json
+  format: text
 
 ## tracing ##
 #
