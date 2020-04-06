@@ -94,6 +94,8 @@ https://www.ory.sh/kratos/docs/self-service/flows/ https://www.ory.sh/kratos/doc
 https://www.ory.sh/docs/kratos/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
 https://www.ory.sh/docs/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
 
+https://www.ory.sh/oathkeeper/docs/sdk/ https://www.ory.sh/oathkeeper/docs/sdk/index 302!
+https://www.ory.sh/oathkeeper/docs/pipeline/ https://www.ory.sh/oathkeeper/docs/pipeline/index 302!
 https://www.ory.sh/docs/oathkeeper/sdk/api https://www.ory.sh/oathkeeper/docs/reference/api 302!
 https://www.ory.sh/docs/oathkeeper/configuration https://www.ory.sh/oathkeeper/docs/reference/configuration 302!
 https://www.ory.sh/docs/oathkeeper/* https://www.ory.sh/oathkeeper/docs/:splat 302!
