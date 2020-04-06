@@ -1,0 +1,202 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Go · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; !!WARNING!!  "/><meta name="docsearch:version" content="oryOS.11"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Go · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&gt; !!WARNING!!  "/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.11</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.11/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>API &amp; SDKs</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/usage">API Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/persistence">Data Storage and Persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/">Introduction to ORY Hydra, OAuth 2.0, and OpenID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/oauth2">Integrating with (existing) User Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/sdk/api">REST API</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.11/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/oathkeeper/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/oathkeeper/control-flow">Control Flow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/engines/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.11/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/sdk/go.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Go</h1></header><article><div><span><blockquote>
+<p>!!WARNING!!</p>
+<p>This document is outdated. Please go to <a href="https://www.ory.sh/docs">www.ory.sh/docs</a> for a recent version!
+To install the Go SDK, run:</p>
+</blockquote>
+<pre><code class="hljs"><span class="hljs-keyword">go</span> <span class="hljs-built_in">get</span> -<span class="hljs-keyword">u</span> -d github.<span class="hljs-keyword">com</span>/ory/hydra/sdk/<span class="hljs-keyword">go</span>/...
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="configuration"></a><a href="#configuration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Configuration</h2>
+<p>We use code generation to generate our SDKs. The Go SDK is generated using
+<a href="http://goswagger.io"><code>go-swagger</code></a>. The SDK is easily set up:</p>
+<pre><code class="hljs css language-go"><span class="hljs-keyword">import</span> <span class="hljs-string">"github.com/ory/hydra/sdk/go/hydra/client"</span>
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    adminURL := url.Parse(<span class="hljs-string">"https://hydra.localhost:4445"</span>)
+    admin := hydra.NewHTTPClientWithConfig(<span class="hljs-literal">nil</span>, &amp;client.TransportConfig{Schemes: []<span class="hljs-keyword">string</span>{adminURL.Scheme}, Host: adminURL.Host, BasePath: adminURL.Path})
+
+    <span class="hljs-comment">// admin.Admin.CreateOAuth2Client(...</span>
+
+    publicURL := url.Parse(<span class="hljs-string">"https://hydra.localhost:4444"</span>)
+    public := hydra.NewHTTPClientWithConfig(<span class="hljs-literal">nil</span>, &amp;client.TransportConfig{Schemes: []<span class="hljs-keyword">string</span>{publicURL.Scheme}, Host: publicURL.Host, BasePath: publicURL.Path})
+
+    <span class="hljs-comment">// public.Public.RevokeOAuth2Token(...</span>
+}
+</code></pre>
+<blockquote>
+<p>Be aware that endpoints /oauth2/auth and /oauth2/token MUST NOT be consumed
+using this SDK. Use
+<a href="https://godoc.org/golang.org/x/oauth2">golang.org/x/oauth2</a> instead.</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="making-requests"></a><a href="#making-requests" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Making requests</h2>
+<p>Making requests is straight forward:</p>
+<pre><code class="hljs css language-go"><span class="hljs-keyword">import</span> <span class="hljs-string">"github.com/ory/hydra/sdk/go/hydra/client"</span>
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    adminURL := url.Parse(<span class="hljs-string">"https://hydra.localhost:4445"</span>)
+    admin := hydra.NewHTTPClientWithConfig(<span class="hljs-literal">nil</span>, &amp;client.TransportConfig{Schemes: []<span class="hljs-keyword">string</span>{adminURL.Scheme}, Host: adminURL.Host, BasePath: adminURL.Path})
+
+    <span class="hljs-comment">// It is important to create the parameters using `New...`, otherwise requests will fail!</span>
+    result, err := c.Admin.CreateOAuth2Client(
+        admin.NewCreateOAuth2ClientParams().WithBody(&amp;models.Client{
+        ClientID: <span class="hljs-string">"scoped"</span>,
+    }))
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-comment">// err is not nil when the request failed (usually a 404, 401, 409 error)</span>
+        <span class="hljs-comment">// You can distinguish the errors by type-asserting err, for example:</span>
+        <span class="hljs-keyword">switch</span> e := err.(<span class="hljs-keyword">type</span>) {
+        <span class="hljs-keyword">case</span> (*admin.CreateOAuth2ClientConflict):
+            <span class="hljs-comment">// do something...</span>
+        }
+    }
+
+    <span class="hljs-comment">// if err is nil, then result is set. The result payload/body can be retrieved using result.Payload.</span>
+    fmt.Printf(<span class="hljs-string">"Got client: %+v"</span>, result.Payload)
+}
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="with-authorization"></a><a href="#with-authorization" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>With Authorization</h2>
+<p>Some endpoints require e.g. Basic Authorization:</p>
+<pre><code class="hljs css language-go"><span class="hljs-keyword">import</span> <span class="hljs-string">"github.com/ory/hydra/sdk/go/hydra/client"</span>
+<span class="hljs-keyword">import</span> httptransport <span class="hljs-string">"github.com/go-openapi/runtime/client"</span>
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    publicURL := url.Parse(<span class="hljs-string">"https://hydra.localhost:4444"</span>)
+    public := hydra.NewHTTPClientWithConfig(<span class="hljs-literal">nil</span>, &amp;client.TransportConfig{Schemes: []<span class="hljs-keyword">string</span>{publicURL.Scheme}, Host: publicURL.Host, BasePath: publicURL.Path})
+
+    _, err := client.Public.RevokeOAuth2Token(
+        public.NewRevokeOAuth2TokenParams().WithToken(c.token),
+        httptransport.BasicAuth(<span class="hljs-string">"my-client"</span>, <span class="hljs-string">"foobar"</span>),
+    )
+}
+</code></pre>
+<p>For more information on Authorization, check the
+<a href="https://goswagger.io/generate/client.html#authentication">go-swagger documentation</a>.</p>
+<h3><a class="anchor" aria-hidden="true" id="on-every-request"></a><a href="#on-every-request" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>On every request</h3>
+<p>You may want to protect ORY Hydra using e.g. OAuth2 Access Tokens. In that case,
+you can enhance the SDK by using the OAuth2 Client:</p>
+<pre><code class="hljs css language-go"><span class="hljs-keyword">import</span> <span class="hljs-string">"github.com/ory/hydra/sdk/go/hydra/client"</span>
+<span class="hljs-keyword">import</span> httptransport <span class="hljs-string">"github.com/go-openapi/runtime/client"</span>
+<span class="hljs-keyword">import</span> <span class="hljs-string">"golang.org/x/oauth2/clientcredentials"</span>
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    publicURL := url.Parse(<span class="hljs-string">"https://hydra.localhost:4444"</span>)
+    ht := httptransport.NewWithClient(
+        publicURL.Host,
+        publicURL.Path,
+        []<span class="hljs-keyword">string</span>{publicURL.Scheme},
+        clientcredentials.Config{
+            TokenURL:<span class="hljs-string">"http://hydra.localhost:4444/oauth2/token"</span>,
+            ClientID:<span class="hljs-string">"my-client"</span>,
+            ClientSecret:<span class="hljs-string">"my-secret"</span>,
+            Scopes:[]<span class="hljs-keyword">string</span>{<span class="hljs-string">"scope-a"</span>, <span class="hljs-string">"scope-b"</span>},
+        }.Client(context.Background()),
+    )
+
+    public := hydra.New(ht, <span class="hljs-literal">nil</span>)
+
+    _, err := client.Public.RevokeOAuth2Token(
+        public.NewRevokeOAuth2TokenParams().WithToken(c.token),
+        httptransport.BasicAuth(<span class="hljs-string">"my-client"</span>, <span class="hljs-string">"foobar"</span>),
+    )
+}
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.11/hydra/sdk/api"><span class="arrow-prev">← </span><span>REST API</span></a><a class="docs-next button" href="/docs/oryOS.11/hydra/sdk/js"><span class="function-name-prevnext">JavaScript</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#configuration">Configuration</a></li><li><a href="#making-requests">Making requests</a></li><li><a href="#with-authorization">With Authorization</a><ul class="toc-headings"><li><a href="#on-every-request">On every request</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

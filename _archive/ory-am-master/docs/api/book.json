@@ -1,6 +1,0 @@
-{
-  "plugins": [
-    "theme-api"],
-  "author": "ORY GmbH",
-  "gitbook": ">=3.2.0"
-}

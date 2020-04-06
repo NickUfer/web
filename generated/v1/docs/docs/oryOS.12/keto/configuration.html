@@ -1,0 +1,311 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Configuration · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; !!WARNING!!  "/><meta name="docsearch:version" content="oryOS.12"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Configuration · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&gt; !!WARNING!!  "/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.12</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.12/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/usage">API Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/persistence">Data Storage and Persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/">Introduction to ORY Hydra, OAuth 2.0, and OpenID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/oauth2">Integrating with (existing) User Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/control-flow">Control Flow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.12/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.12/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/keto/configuration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Configuration</h1></header><article><div><span><blockquote>
+<p>!!WARNING!!</p>
+<p>This document is outdated. Please go to <a href="https://www.ory.sh/docs">www.ory.sh/docs</a> for a recent version!</p>
+</blockquote>
+<pre><code class="hljs css language-yaml"><span class="hljs-comment"># ORY Keto Configuration</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># !!WARNING!!</span>
+<span class="hljs-comment"># This configuration file is for documentation purposes only. Do not use it in production. As all configuration items</span>
+<span class="hljs-comment"># are enabled, it will not work out of the box either.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># ORY Keto can be configured using a configuration file and passing the file location using `-c path/to/config.yaml`.</span>
+<span class="hljs-comment"># Per default, ORY Keto will look up and load file ~/.keto.yaml. All configuration keys can be set using environment</span>
+<span class="hljs-comment"># variables as well.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Setting environment variables is easy:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## Linux / OSX</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># $ export MY_ENV_VAR=foo</span>
+<span class="hljs-comment"># $ keto ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># alternatively:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># $ MY_ENV_VAR=foo keto ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## Windows</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### Command Prompt</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># &gt; set MY_ENV_VAR=foo</span>
+<span class="hljs-comment"># &gt; keto ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### Powershell</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># &gt; $env:MY_ENV_VAR="foo"</span>
+<span class="hljs-comment"># &gt; keto ...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## Docker</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># $ docker run -e MY_ENV_VAR=foo oryd/keto:...</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Assuming the following configuration layout:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># serve:</span>
+<span class="hljs-comment">#   public:</span>
+<span class="hljs-comment">#     port: 4444</span>
+<span class="hljs-comment">#     something_else: foobar</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Key `something_else` can be set as an environment variable by uppercasing it's path:</span>
+<span class="hljs-comment">#   `serve.public.port.somethihng_else` -&gt; `SERVE.PUBLIC.PORT.SOMETHING_ELSE`</span>
+<span class="hljs-comment"># and replacing `.` with `_`:</span>
+<span class="hljs-comment">#   `serve.public.port.somethihng_else` -&gt; `SERVE_PUBLIC_PORT_SOMETHING_ELSE`</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Environment variables always override values from the configuration file. Here are some more examples:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Configuration key | Environment variable |</span>
+<span class="hljs-comment"># ------------------|----------------------|</span>
+<span class="hljs-comment"># dsn               | DSN                  |</span>
+<span class="hljs-comment"># serve.admin.host  | SERVE_ADMIN_HOST     |</span>
+<span class="hljs-comment"># ------------------|----------------------|</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># List items such as</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># secrets:</span>
+<span class="hljs-comment">#   system:</span>
+<span class="hljs-comment">#     - this-is-the-primary-secret</span>
+<span class="hljs-comment">#     - this-is-an-old-secret</span>
+<span class="hljs-comment">#     - this-is-another-old-secret</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># must be separated using `,` when using environment variables. The environment variable equivalent to the code section#</span>
+<span class="hljs-comment"># above is:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># Linux/macOS: $ export SECRETS_SYSTEM=this-is-the-primary-secret,this-is-an-old-secret,this-is-another-old-secret</span>
+<span class="hljs-comment"># Windows: &gt; set SECRETS_SYSTEM=this-is-the-primary-secret,this-is-an-old-secret,this-is-another-old-secret</span>
+
+<span class="hljs-comment"># log configures the logger</span>
+<span class="hljs-attr">log:</span>
+  <span class="hljs-comment"># Sets the log level, supports "panic", "fatal", "error", "warn", "info" and "debug". Defaults to "info".</span>
+  <span class="hljs-attr">level:</span> <span class="hljs-string">info</span>
+  <span class="hljs-comment"># Sets the log format. Leave it undefined for text based log format, or set to "json" for JSON formatting.</span>
+  <span class="hljs-attr">format:</span> <span class="hljs-string">json</span>
+
+<span class="hljs-comment"># serve controls the configuration for the http(s) daemon(s).</span>
+<span class="hljs-attr">serve:</span>
+  <span class="hljs-comment"># The port to listen on. Defaults to 4444</span>
+  <span class="hljs-attr">port:</span> <span class="hljs-number">4444</span>
+  <span class="hljs-comment"># The interface or unix socket ORY Keto should listen and handle public API requests on.</span>
+  <span class="hljs-comment"># Use the prefix "unix:" to specify a path to a unix socket.</span>
+  <span class="hljs-comment"># Leave empty to listen on all interfaces.</span>
+  <span class="hljs-attr">host:</span> <span class="hljs-string">localhost</span> <span class="hljs-comment"># leave this out or empty to listen on all devices which is the default</span>
+  <span class="hljs-comment"># host: unix:/path/to/socket</span>
+
+  <span class="hljs-comment"># cors configures Cross Origin Resource Sharing for public endpoints.</span>
+  <span class="hljs-attr">cors:</span>
+    <span class="hljs-comment"># set enabled to true to enable CORS. Defaults to false.</span>
+    <span class="hljs-attr">enabled:</span> <span class="hljs-literal">true</span>
+    <span class="hljs-comment"># allowed_origins is a list of origins (comma separated values) a cross-domain request can be executed from.</span>
+    <span class="hljs-comment"># If the special * value is present in the list, all origins will be allowed. An origin may contain a wildcard (*)</span>
+    <span class="hljs-comment"># to replace 0 or more characters (i.e.: http://*.domain.com). Only one wildcard can be used per origin.</span>
+    <span class="hljs-comment">#</span>
+    <span class="hljs-comment"># If empty or undefined, this defaults to `*`, allowing CORS from every domain (if cors.enabled: true).</span>
+    <span class="hljs-attr">allowed_origins:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">https://example.com</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">https://*.example.com</span>
+    <span class="hljs-comment"># allowed_methods is list of HTTP methods the user agent is allowed to use with cross-domain</span>
+    <span class="hljs-comment"># requests. Defaults to GET and POST.</span>
+    <span class="hljs-attr">allowed_methods:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">POST</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">GET</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">PUT</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">PATCH</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">DELETE</span>
+
+    <span class="hljs-comment"># A list of non simple headers the client is allowed to use with cross-domain requests.</span>
+    <span class="hljs-attr">allowed_headers:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">Authorization</span>
+
+    <span class="hljs-comment"># Sets which headers (comma separated values) are safe to expose to the API of a CORS API specification</span>
+    <span class="hljs-attr">exposed_headers:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">Set-Cookie</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">Content-Type</span>
+
+    <span class="hljs-comment"># Sets whether the request can include user credentials like cookies, HTTP authentication</span>
+    <span class="hljs-comment"># or client side SSL certificates.</span>
+    <span class="hljs-attr">allow_credentials:</span> <span class="hljs-literal">true</span>
+
+    <span class="hljs-comment"># Sets how long (in seconds) the results of a preflight request can be cached. If set to 0, every request</span>
+    <span class="hljs-comment"># is preceded by a preflight request. Defaults to 0.</span>
+    <span class="hljs-attr">max_age:</span> <span class="hljs-number">10</span>
+
+    <span class="hljs-comment"># If set to true, adds additional log output to debug server side CORS issues. Defaults to false.</span>
+    <span class="hljs-attr">debug:</span> <span class="hljs-literal">true</span>
+
+  <span class="hljs-comment"># tls configures HTTPS (HTTP over TLS). If configured, the server automatically supports HTTP/2.</span>
+  <span class="hljs-attr">tls:</span>
+    <span class="hljs-comment"># key configures the private key (pem encoded)</span>
+    <span class="hljs-attr">key:</span>
+      <span class="hljs-comment"># The key can either be loaded from a file:</span>
+      <span class="hljs-attr">path:</span> <span class="hljs-string">/path/to/key.pem</span>
+      <span class="hljs-comment"># Or from a base64 encoded (without padding) string:</span>
+      <span class="hljs-attr">base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBFTkNSWVBURUQgUFJJVkFURSBLRVktLS0tLVxuTUlJRkRqQkFCZ2txaGtpRzl3MEJCUTB3...</span>
+
+    <span class="hljs-comment"># cert configures the TLS certificate (PEM encoded)</span>
+    <span class="hljs-attr">cert:</span>
+      <span class="hljs-comment"># The cert can either be loaded from a file:</span>
+      <span class="hljs-attr">path:</span> <span class="hljs-string">/path/to/cert.pem</span>
+      <span class="hljs-comment"># Or from a base64 encoded (without padding) string:</span>
+      <span class="hljs-attr">base64:</span> <span class="hljs-string">LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tXG5NSUlEWlRDQ0FrMmdBd0lCQWdJRVY1eE90REFOQmdr...</span>
+
+<span class="hljs-comment"># dsn sets the data source name. This configures the backend where ORY Keto persists data.</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## In-memory database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># If dsn is "memory", data will be written to memory and is lost when you restart this instance.</span>
+<span class="hljs-comment"># You can set this value using the DSN environment variable:</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">## SQL databases</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># ORY Keto supports popular SQL databases. For more detailed configuration information go to:</span>
+<span class="hljs-comment"># https://www.ory.sh/docs/keto/dependencies-environment#sql</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### PostgreSQL (recommended)</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># If dsn is starting with postgres:// PostgreSQL will be used as storage backend:</span>
+<span class="hljs-comment"># dsn: dsn=postgres://user:password@host:123/database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment">### MySQL database</span>
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># If dsn is starting with mysql:// MySQL will be used as storage backend:</span>
+<span class="hljs-comment"># dsn: mysql://user:password@tcp(host:123)/database</span>
+<span class="hljs-attr">dsn:</span> <span class="hljs-string">memory</span>
+<span class="hljs-comment"># dsn: dsn=postgres://user:password@host:123/database</span>
+<span class="hljs-comment"># dsn: mysql://user:password@tcp(host:123)/database</span>
+
+<span class="hljs-comment"># Enables profiling if set. Use "cpu" to enable cpu profiling and "mem" to enable memory profiling. For more details</span>
+<span class="hljs-comment"># on profiling, head over to: https://blog.golang.org/profiling-go-programs</span>
+<span class="hljs-attr">profiling:</span> <span class="hljs-string">cpu</span>
+<span class="hljs-comment"># profiling: mem</span>
+
+<span class="hljs-comment"># ORY Keto supports distributed tracing.</span>
+<span class="hljs-attr">tracing:</span>
+  <span class="hljs-comment"># Set this to the tracing backend you wish to use. Currently supports jaeger. If omitted or empty, tracing will</span>
+  <span class="hljs-comment"># be disabled.</span>
+  <span class="hljs-attr">provider:</span> <span class="hljs-string">jaeger</span>
+  <span class="hljs-comment"># Specifies the service name to use on the tracer.</span>
+  <span class="hljs-attr">service_name:</span> <span class="hljs-string">ORY</span> <span class="hljs-string">Keto</span>
+  <span class="hljs-attr">providers:</span>
+    <span class="hljs-comment"># Configures the jaeger tracing backend.</span>
+    <span class="hljs-attr">jaeger:</span>
+      <span class="hljs-comment"># The address of the jaeger-agent where spans should be sent to</span>
+      <span class="hljs-attr">local_agent_address:</span> <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span><span class="hljs-string">:6831</span>
+      <span class="hljs-attr">sampling:</span>
+        <span class="hljs-comment"># The type of the sampler you want to use. Supports:</span>
+        <span class="hljs-comment"># - const</span>
+        <span class="hljs-comment"># - probabilistic</span>
+        <span class="hljs-comment"># - ratelimiting</span>
+        <span class="hljs-attr">type:</span> <span class="hljs-string">const</span>
+        <span class="hljs-comment"># The value passed to the sampler type that has been configured.</span>
+        <span class="hljs-comment"># Supported values: This is dependant on the sampling strategy used:</span>
+        <span class="hljs-comment"># - const: 0 or 1 (all or nothing)</span>
+        <span class="hljs-comment"># - rateLimiting: a constant rate (e.g. setting this to 3 will sample requests with the rate of 3 traces per second)</span>
+        <span class="hljs-comment"># - probabilistic: a value between 0..1</span>
+        <span class="hljs-attr">value:</span> <span class="hljs-number">1.0</span>
+        <span class="hljs-comment"># The address of jaeger-agent's HTTP sampling server</span>
+        <span class="hljs-attr">server_url:</span> <span class="hljs-string">http://localhost:5778/sampling</span>
+</code></pre>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.12/keto/configure-deploy"><span class="arrow-prev">← </span><span>Configure and Deploy</span></a><a class="docs-next button" href="/docs/oryOS.12/keto/secure"><span>Secure</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

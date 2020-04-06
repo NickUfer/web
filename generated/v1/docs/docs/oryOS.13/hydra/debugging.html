@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Debugging · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; !!WARNING!!  "/><meta name="docsearch:version" content="oryOS.13"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="Debugging · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&gt; !!WARNING!!  "/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.13</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/oryOS.13/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Guides</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/overview">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/cloud-native">Cloud Native Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/usage">API Usage</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/versioning">Software Versions</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/persistence">Data Storage and Persistence</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/examples">Learn By Example</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/">Introduction to ORY Hydra, OAuth 2.0, and OpenID Connect</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Getting Started</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/5min-tutorial">5 Minute Tutorial</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/oauth2">Integrating with (existing) User Management</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/configuration">Configuration</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/oryOS.13/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/sdk/js">JavaScript</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/oathkeeper/api-access-rules">API Access Rules</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/oathkeeper/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/oathkeeper/control-flow">Control Flow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/engines/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oryOS.13/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/hydra/debugging.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Debugging</h1></header><article><div><span><blockquote>
+<p>!!WARNING!!</p>
+<p>This document is outdated. Please go to <a href="https://www.ory.sh/docs">www.ory.sh/docs</a> for a recent version!
+Spec-compliant OAuth 2.0 and OpenID Connect is hard. Let's take a look how to
+resolve certain issues.</p>
+</blockquote>
+<!-- toc -->
+<h2><a class="anchor" aria-hidden="true" id="first-aid"></a><a href="#first-aid" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>First Aid</h2>
+<p>There are three things you can do to quickly debug any issue:</p>
+<ol>
+<li>Check the logs. ORY Hydra has extensive logging and you will find the issue
+most likely in the logs. Here is an example log line for a client that
+requested a redirect URL that did not match the whitelisted redirect URLS:
+<code>time=&quot;2018-08-07T16:01:16Z&quot; level=error msg=&quot;An error occurred&quot; description=&quot;The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed&quot; error=invalid_request hint=&quot;The \&quot;redirect_uri\&quot; parameter does not match any of the OAuth 2.0 Client's pre-registered redirect urls.&quot;</code></li>
+<li>Check the URL because of two reasons:
+<ol>
+<li>ORY Hydra sends <code>error_hint</code>, <code>error</code>, <code>error_description</code>, <code>error_debug</code>
+in the URL. You will find the cause of the error most likely in there.</li>
+<li>You are maybe in the wrong URL. Make sure the host and port and path is
+correct. This happens often, especially when you're just starting out and
+experimenting</li>
+</ol></li>
+<li>Set environment variable <code>OAUTH2_EXPOSE_INTERNAL_ERRORS=true</code>. Do not do this
+in production, it is possible, though unlikely, that important data leaks
+with this. If set to true, ORY Hydra will set the <code>error_debug</code> query
+parameter if debug information is available.</li>
+<li>If you're just starting out and experimenting your docker set up does not
+work at all:
+<ol>
+<li>Stop all containers</li>
+<li>Remove them (unless you have something important running)</li>
+<li>Retry. <strong>This can help a lot if you are new to this!</strong></li>
+</ol></li>
+</ol>
+<h2><a class="anchor" aria-hidden="true" id="oauth-20-authorize-code-flow-fails"></a><a href="#oauth-20-authorize-code-flow-fails" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Authorize Code Flow fails</h2>
+<p>The most likely cause is misconfiguration, summarized in the next sections.</p>
+<h3><a class="anchor" aria-hidden="true" id="wrong-or-misconfigured-oauth-20-client"></a><a href="#wrong-or-misconfigured-oauth-20-client" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Wrong or misconfigured OAuth 2.0 Client</h3>
+<p>You are using the wrong OAuth 2.0 Client or the OAuth 2.0 Client has a broken
+configuration. To check that you're using the right client, run:</p>
+<pre><code class="hljs">hydra clients <span class="hljs-keyword">get</span> --endpoint http:<span class="hljs-comment">//ory-hydra &lt;the-client-id&gt;</span>
+</code></pre>
+<p>The result shows you the whole client (excluding its secret). Check that the
+values are correct. Example:</p>
+<pre><code class="hljs">{
+        <span class="hljs-attr">"client_id"</span>: <span class="hljs-string">"my-client"</span>,
+        <span class="hljs-attr">"grant_types"</span>: [
+                <span class="hljs-string">"authorization_code"</span>
+        ],
+        <span class="hljs-attr">"jwks"</span>: {},
+        <span class="hljs-attr">"redirect_uris"</span>: [
+                <span class="hljs-string">"http://127.0.0.1:5556/callback"</span>
+        ],
+        <span class="hljs-attr">"response_types"</span>: [
+                <span class="hljs-string">"code"</span>
+        ],
+        <span class="hljs-attr">"scope"</span>: <span class="hljs-string">"openid offline"</span>,
+        <span class="hljs-attr">"subject_type"</span>: <span class="hljs-string">"pairwise"</span>,
+        <span class="hljs-attr">"token_endpoint_auth_method"</span>: <span class="hljs-string">"client_secret_basic"</span>,
+        <span class="hljs-attr">"userinfo_signed_response_alg"</span>: <span class="hljs-string">"none"</span>
+}
+</code></pre>
+<h3><a class="anchor" aria-hidden="true" id="redirect-url-is-not-whitelisted"></a><a href="#redirect-url-is-not-whitelisted" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Redirect URL is not whitelisted</h3>
+<p>A likely cause of your request failing is that you are using the wrong redirect
+URL. Assuming your OAuth 2.0 URL looks like
+<code>http://ory-hydra/oauth2/auth?client_id=my-client&amp;...&amp;redirect_uri=http://my-url/callback</code></p>
+<p>The redirect URL <code>http://my-url/callback</code> must be whitelisted in your client
+configuration. The URLs must match <strong>exactly</strong>. URL <code>http://my-url/callback</code> and
+<code>http://my-url/callback?foo=bar</code> are different URLs!</p>
+<p>To see the whitelisted redirect_uris, check the client:</p>
+<pre><code class="hljs">hydra clients get <span class="hljs-params">--endpoint</span> http:<span class="hljs-string">//ory-hydra</span> &lt;the-client-id&gt;
+
+{
+        <span class="hljs-string">//</span> <span class="hljs-string">...</span>
+        <span class="hljs-string">"redirect_uris"</span>: [
+                <span class="hljs-string">"http://127.0.0.1:5556/callback"</span>
+        ],
+        <span class="hljs-string">//</span> <span class="hljs-string">...</span>
+}
+</code></pre>
+<p>Here you see that <code>http://my-url/callback</code> is not in the list, which is why the
+request fails.</p>
+<h3><a class="anchor" aria-hidden="true" id="oauth-20-client-id-and-secret-are-sent-in-body-instead-of-header"></a><a href="#oauth-20-client-id-and-secret-are-sent-in-body-instead-of-header" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>OAuth 2.0 Client ID and secret are sent in body instead of header</h3>
+<p>There are multiple ways of authenticating OAuth 2.0 Clients at the
+<code>/oauth2/token</code>:</p>
+<ul>
+<li>HTTP Basic Authorization (<code>client_secret_basic</code>) - the OAuth 2.0 Client ID and
+secret are sent in the HTTP Header (<code>Authorization: basic ....</code>)</li>
+<li>HTTP Body (<code>client_secret_post</code>) - the OAuth 2.0 Client ID and secret are sent
+in the POST body (<code>Content-Type: application/x-www-form-urlencoded</code>)</li>
+</ul>
+<p>Both are valid schemes. But the OAuth 2.0 Client has to be configured to allow
+either of the one. Per default, the OAuth 2.0 Client allows HTTP Basic
+Authorization only. You can check which method is allowed:</p>
+<pre><code class="hljs">hydra clients get <span class="hljs-params">--endpoint</span> http:<span class="hljs-string">//ory-hydra</span> &lt;the-client-id&gt;
+{
+        <span class="hljs-string">//</span> <span class="hljs-string">...</span>
+        <span class="hljs-string">"token_endpoint_auth_method"</span>: <span class="hljs-string">"client_secret_basic"</span>,
+        <span class="hljs-string">//</span> <span class="hljs-string">...</span>
+}
+</code></pre>
+<p>As you can see, this client is allowed to authorize using HTTP Basic
+Authorization. If you try to authorize with the client credentials in the POST
+body, the authentication process will fail. To allow a client to perform the
+POST authorization scheme, you must set
+<code>&quot;token_endpoint_auth_method&quot;: &quot;client_secret_post&quot;</code>. You can do this in the CLI
+with the <code>--token-endpoint-auth-method</code> flag.</p>
+<h2><a class="anchor" aria-hidden="true" id="distributed-tracing"></a><a href="#distributed-tracing" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Distributed Tracing</h2>
+<h3><a class="anchor" aria-hidden="true" id="what-is-this"></a><a href="#what-is-this" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What is this?</h3>
+<p>Configuring Distributed Tracing (DT) will enable you to obtain a visualization
+of the call paths that take place in order to process a request made to Hydra.
+It's yet another tool that you can use to aid you in profiling, debugging and
+ultimately understanding your deployment of Hydra better. Hydra currently
+supports the following tracing options:</p>
+<ul>
+<li>Tracing backend(s): Jaeger - <em>Note: adding support for other
+<a href="https://opentracing.io/docs/supported-tracers">opentracing compliant backends</a>
+is planned. To aid in priority, please
+<a href="https://github.com/ory/hydra/issues">create an issue</a> with your feature
+request.</em></li>
+<li>Following existing traces: If you have deployed Hydra behind a proxy that has
+initiated a trace, Hydra will attempt to join that trace by examining the
+request headers for tracing context.</li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="what-a-hydra-trace-includes"></a><a href="#what-a-hydra-trace-includes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What a Hydra trace includes</h3>
+<p>In DT speak, a trace is comprised of one or more spans which are logical units
+of work. Each Hydra span is encapsulated with the following state:</p>
+<ul>
+<li>A name</li>
+<li>A start time</li>
+<li>A finish time</li>
+<li>A set of zero or more tags</li>
+</ul>
+<p>Hydra currently creates the following spans:</p>
+<ul>
+<li>Top level span (<em>named after the request path</em>) for the requested endpoint.
+Span tags: - http method - http status code - error IFF status code &gt;= 400</li>
+<li>Child span will be created if bcrypt (<em>e.g. when the token endpoint is
+called</em>) is called. Span tags: - bcrypt work factor</li>
+<li>All SQL database interactions. Spans/tags will vary depending on the database
+driver used.</li>
+</ul>
+<p>This is still evolving and subject to change as tracing support continues to
+expand in Hydra. If you see something that is missing/wrong, please create an
+issue.</p>
+<h3><a class="anchor" aria-hidden="true" id="alright-how-can-i-set-this-up-locally"></a><a href="#alright-how-can-i-set-this-up-locally" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Alright, how can I set this up locally?</h3>
+<p>The
+<a href="https://github.com/ory/hydra/blob/master/docker-compose.yml">provided docker-compose file</a>
+in the project repository has tracing configuration w/ jaeger added which you
+can use to play around with. Simply uncomment the configurations associated with
+tracing as so:</p>
+<p><strong>Under the Hydra service definition <code>depends_on</code> configs, uncomment the
+following:</strong></p>
+<pre><code class="hljs"><span class="hljs-bullet">- </span>jaeger
+</code></pre>
+<p><strong>Under the Hydra service definition <code>environment</code> configs, uncomment the
+following:</strong></p>
+<pre><code class="hljs"><span class="hljs-bullet">- </span>TRACING_PROVIDER
+<span class="hljs-bullet">- </span>TRACING<span class="hljs-emphasis">_PROVIDER_</span>JAEGER<span class="hljs-emphasis">_SAMPLING_</span>SERVER_URL
+<span class="hljs-bullet">- </span>TRACING<span class="hljs-emphasis">_PROVIDER_</span>JAEGER<span class="hljs-emphasis">_LOCAL_</span>AGENT_ADDRESS
+<span class="hljs-bullet">- </span>TRACING<span class="hljs-emphasis">_PROVIDER_</span>JAEGER<span class="hljs-emphasis">_SAMPLING_</span>TYPE
+<span class="hljs-bullet">- </span>TRACING<span class="hljs-emphasis">_PROVIDER_</span>JAEGER<span class="hljs-emphasis">_SAMPLING_</span>VALUE
+</code></pre>
+<p><strong>Uncomment the Jaeger service definition:</strong></p>
+<pre><code class="hljs">jaeger:
+  image: jaegertracing/all-in-one:1.7.0
+  ports:
+  -<span class="ruby"> <span class="hljs-string">"5775:5775/udp"</span>
+</span>  -<span class="ruby"> <span class="hljs-string">"6831:6831/udp"</span>
+</span>  -<span class="ruby"> <span class="hljs-string">"6832:6832/udp"</span>
+</span>  -<span class="ruby"> <span class="hljs-string">"5778:5778"</span>
+</span>  -<span class="ruby"> <span class="hljs-string">"16686:16686"</span>
+</span>  -<span class="ruby"> <span class="hljs-string">"14268:14268"</span>
+</span>  -<span class="ruby"> <span class="hljs-string">"9411:9411"</span>
+</span></code></pre>
+<p>Then simply run <code>docker-compose up</code>. Grab a coffee or stretch while you wait for
+everything to come up. You will then be able to navigate to the Jaeger UI which
+you have exposed on port <code>16686</code> at <a href="http://localhost:16686/search">http://localhost:16686/search</a>. You can now
+start making requests to Hydra and inspect traces!</p>
+<p>As an example, here is a trace created by making a bad request to the
+<code>POST /clients</code> endpoint:</p>
+<p><img src="/images/docs/hydra/sample_trace.png" alt="Sample Trace"></p>
+<p>At a glance, you are able to see that:</p>
+<ul>
+<li>The request failed</li>
+<li>The request took ~80ms</li>
+<li>It resulted in a 409</li>
+<li>The hash comparison to validate the client's credentials took a whopping 70ms.
+Bcrypt is expensive!</li>
+<li>The various database operations performed</li>
+</ul>
+<p><em>Note: in order to see spans around database interactions, you must be using a
+SQL backend (i.e. MySQL or Postgres).</em></p>
+<h3><a class="anchor" aria-hidden="true" id="tracing-configurations"></a><a href="#tracing-configurations" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tracing configurations</h3>
+<p>The CLI will provide you with the list of Hydra tracing configurations and their
+supported values. Simply run:</p>
+<pre><code class="hljs">docker exec -<span class="hljs-keyword">it</span> hydra_hydra_1 hydra serve <span class="hljs-comment">--help</span>
+</code></pre>
+<p>And read the section on <code>DEBUG CONTROLS</code>.</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 5/17/2019 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/oryOS.13/hydra/configuration"><span class="arrow-prev">← </span><span>Configuration</span></a><a class="docs-next button" href="/docs/oryOS.13/hydra/advanced"><span>Advanced Topics</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#first-aid">First Aid</a></li><li><a href="#oauth-20-authorize-code-flow-fails">OAuth 2.0 Authorize Code Flow fails</a><ul class="toc-headings"><li><a href="#wrong-or-misconfigured-oauth-20-client">Wrong or misconfigured OAuth 2.0 Client</a></li><li><a href="#redirect-url-is-not-whitelisted">Redirect URL is not whitelisted</a></li><li><a href="#oauth-20-client-id-and-secret-are-sent-in-body-instead-of-header">OAuth 2.0 Client ID and secret are sent in body instead of header</a></li></ul></li><li><a href="#distributed-tracing">Distributed Tracing</a><ul class="toc-headings"><li><a href="#what-is-this">What is this?</a></li><li><a href="#what-a-hydra-trace-includes">What a Hydra trace includes</a></li><li><a href="#alright-how-can-i-set-this-up-locally">Alright, how can I set this up locally?</a></li><li><a href="#tracing-configurations">Tracing configurations</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

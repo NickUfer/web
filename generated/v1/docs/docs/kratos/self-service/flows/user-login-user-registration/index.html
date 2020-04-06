@@ -1,0 +1,458 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>User Login and User Registration · ORY Documentation</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta name="description" content="&gt; !!WARNING!!  "/><meta name="docsearch:version" content="oryOS.18"/><meta name="docsearch:language" content="en"/><meta property="og:title" content="User Login and User Registration · ORY Documentation"/><meta property="og:type" content="website"/><meta property="og:url" content="https://www.ory.sh/"/><meta property="og:description" content="&gt; !!WARNING!!  "/><meta property="og:image" content="https://www.ory.sh/images/logo.png"/><meta name="twitter:card" content="summary"/><meta name="twitter:image" content="https://www.ory.sh/images/logo.png"/><link rel="shortcut icon" href="/images/favicon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-71865250-1', 'auto');
+              ga('send', 'pageview');
+            </script><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><script src="/js/scrollSpy.js"></script><link rel="stylesheet" href="/css/main.css"/><script src="/js/codetabs.js"></script></head><body class="sideNavVisible separateOnPageNav"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/"><img class="logo" src="/images/logo.svg" alt="ORY Documentation"/></a><a href="/versions"><h3>oryOS.18</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class=""><a href="/" target="_self">Home</a></li><li class=""><a href="/blog" target="_self">Blog</a></li><li class=""><a href="https://community.ory.sh" target="_self">Forum</a></li><li class=""><a href="/chat" target="_self">Chat</a></li><li class="siteNavGroupActive"><a href="/docs/" target="_self">Docs</a></li><li class=""><a href="https://github.com/ory/" target="_self">GitHub</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search" title="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><div class="hamburger-menu"><div class="line1"></div><div class="line2"></div><div class="line3"></div></div></div><h2><i>›</i><span>Self Service Flows</span></h2><div class="tocToggler" id="tocToggler"><i class="icon-toc"></i></div></div><div class="navGroups"><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Welcome<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/">ORY Developer Documentation</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Ecosystem<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/ecosystem/projects">Projects</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/software-architecture-philosophy">Software Architecture and Philosophy</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/deployment">Deployment Fundamentals and Requirements</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/configuring">Configuring ORY services</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/versioning">Software Versions and Project Maturity</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/upgrading">Software Updates</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/api-design">API Design</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/community">Community</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/roadmap">Roadmap</a></li><li class="navListItem"><a class="navItem" href="/docs/ecosystem/sqa">Software Quality Assurance</a></li></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Kratos<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Introduction</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/quickstart">Quickstart</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/install">Installation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/concepts/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/concepts/ui-user-interface">User Interface</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/concepts/identity-user-model">Identity and User Model</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/concepts/credentials">Credentials</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/concepts/email-sms">Out-of-band communication via E-Mail and SMS</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/concepts/federation">Federation</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/concepts/security">Threat Models and Security Profiles</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Flows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/flows/">Overview</a></li><li class="navListItem navListItemActive"><a class="navItem" href="/docs/kratos/self-service/flows/user-login-user-registration">User Login and User Registration</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/flows/user-logout">User Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/flows/user-profile-management">Profile Management</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/flows/password-reset-account-recovery">Account Recovery</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/flows/user-facing-errors">User-Facing Errors</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/flows/verify-email-account-activation">Email and Phone Verification and Account Activation</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Strategies</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/strategies/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/strategies/username-email-password">Username or Email and Password</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/strategies/openid-connect-social-sign-in-oauth2">Social Sign In with OpenID Connect and OAuth2</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Self Service Jobs and Workflows</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/workflows/jobs/before">Before Jobs</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/self-service/workflows/jobs/after">After Jobs</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Reference</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/reference/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/reference/json-schema-json-paths">JSON Schema and JSON Paths</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/reference/html-forms">HTML Form Parser</a></li><li class="navListItem"><a class="navItem" href="/docs/kratos/sdk/api">REST API</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/sdk/">Overview</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/kratos/further-reading/comparison">Comparison</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Hydra<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/hydra/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/oauth2">OAuth 2.0</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/login-consent-flow">Hydra workflow</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Integrating Hydra into your stack</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/5min-tutorial">5 Minute Tutorial</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/implementing-consent">Login, Consent &amp; Logout</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/case-study">OAuth 2.0 Case Study</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/configure-deploy">Installation and Setup</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/dependencies-environment">Database Setup and Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/production">Preparing for Production</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/debugging">Debugging</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/advanced">Advanced Topics</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/integration">Consuming OAuth 2.0</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/api">REST API</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/go">Go</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/js">JavaScript</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/sdk/php">PHP</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Further Reading</h4><ul><li class="navListItem"><a class="navItem" href="/docs/hydra/limitations">Limitations</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/jwks">JSON Web Key Sets</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/security-architecture">Security Architecture</a></li><li class="navListItem"><a class="navItem" href="/docs/hydra/faq">FAQ</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Oathkeeper<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Core Concepts</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/api-access-rules">API Access Rules</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Pipeline Handlers</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/">Access Rule Pipeline</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/authn">Authenticators</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/authz">Authorizers</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/mutator">Mutators</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/pipeline/error">Error Handlers</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/configure-deploy">Configure and Deploy</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/oathkeeper/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">ORY Keto<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/keto/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/install">Installation</a></li><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Guides</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/configure-deploy">Configure and Deploy</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/configuration">Configuration</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/secure">Secure</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">Access Control Engines</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/engines/">Access Control Engines - Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acl">Access Control Lists (ACL)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/rbac">Role Based Access Control (RBAC)</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-ory">ORY Access Control Policies</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/engines/acp-aws">AWS IAM Policies</a></li></ul></div><div class="navGroup subNavGroup"><h4 class="navGroupSubcategoryTitle">API &amp; SDKs</h4><ul><li class="navListItem"><a class="navItem" href="/docs/keto/sdk/">Overview</a></li><li class="navListItem"><a class="navItem" href="/docs/keto/sdk/api">REST API</a></li></ul></div></ul></div><div class="navGroup"><h3 class="navGroupCategoryTitle collapsible">Performance<span class="arrow"><svg width="24" height="24" viewBox="0 0 24 24"><path fill="#565656" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg></span></h3><ul class="hide"><li class="navListItem"><a class="navItem" href="/docs/performance/">Introduction</a></li><li class="navListItem"><a class="navItem" href="/docs/performance/hydra">ORY Hydra</a></li></ul></div></div></section></div><script>
+            var coll = document.getElementsByClassName('collapsible');
+            var checkActiveCategory = true;
+            for (var i = 0; i < coll.length; i++) {
+              var links = coll[i].nextElementSibling.getElementsByTagName('*');
+              if (checkActiveCategory){
+                for (var j = 0; j < links.length; j++) {
+                  if (links[j].classList.contains('navListItemActive')){
+                    coll[i].nextElementSibling.classList.toggle('hide');
+                    coll[i].childNodes[1].classList.toggle('rotate');
+                    checkActiveCategory = false;
+                    break;
+                  }
+                }
+              }
+
+              coll[i].addEventListener('click', function() {
+                var arrow = this.childNodes[1];
+                arrow.classList.toggle('rotate');
+                var content = this.nextElementSibling;
+                content.classList.toggle('hide');
+              });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+              createToggler('#navToggler', '#docsNav', 'docsSliderActive');
+              createToggler('#tocToggler', 'body', 'tocActive');
+
+              var headings = document.querySelector('.toc-headings');
+              headings && headings.addEventListener('click', function(event) {
+                var el = event.target;
+                while(el !== headings){
+                  if (el.tagName === 'A') {
+                    document.body.classList.remove('tocActive');
+                    break;
+                  } else{
+                    el = el.parentNode;
+                  }
+                }
+              }, false);
+
+              function createToggler(togglerSelector, targetSelector, className) {
+                var toggler = document.querySelector(togglerSelector);
+                var target = document.querySelector(targetSelector);
+
+                if (!toggler) {
+                  return;
+                }
+
+                toggler.onclick = function(event) {
+                  event.preventDefault();
+
+                  target.classList.toggle(className);
+                };
+              }
+            });
+        </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/ory/docs/edit/master/docs/kratos/self-service/flows/user-login-user-registration.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">User Login and User Registration</h1></header><article><div><span><blockquote>
+<p>!!WARNING!!</p>
+<p>This document is outdated. Please go to <a href="https://www.ory.sh/docs">www.ory.sh/docs</a> for a recent version!
+ORY Kratos supports two type of login and registration flows:</p>
+</blockquote>
+<ul>
+<li>Browser-based (easy): This flow works for all applications running on top of a
+browser. Websites, single-page apps, Cordova/Ionic, and so on.</li>
+<li>API-based (advanced): This flow works for native applications like iOS
+(Swift), Android (Java), Microsoft (.NET), React Native, Electron, and others.</li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="self-service-user-login-and-user-registration-for-browser-applications"></a><a href="#self-service-user-login-and-user-registration-for-browser-applications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Self-Service User Login and User Registration for Browser Applications</h2>
+<p>ORY Kratos supports browser applications that run on server-side (e.g. Java,
+NodeJS, PHP) as well as client-side (e.g. JQuery, ReactJS, AngularJS, ...).</p>
+<p>Browser-based login and registration makes use of three core HTTP technologies:</p>
+<ul>
+<li>HTTP Redirects</li>
+<li>HTTP POST (<code>application/json</code>, <code>application/x-www-urlencoded</code>) and RESTful GET
+requests.</li>
+<li>HTTP Cookies to prevent CSRF and Session Hijaking attack vectors.</li>
+</ul>
+<p>The browser flow is the easiest and most secure to set up and integrated with.
+ORY Kratos takes care of all required session and CSRF cookies and ensures that
+all security requirements are fulfilled.</p>
+<p>Future versions of ORY Kratos will be able to deal with multi-domain
+environments that require SSO. For example, one account would be used to sign
+into both <code>mydomain.com</code> and <code>anotherdomain.org</code>. A common real-world example is
+using your Google account to seamlessly be signed into YouTube and Google at the
+same time.</p>
+<p>This flow is not suitable for scenarios where you use purely programmatic
+clients that do not work well with HTTP Cookies and HTTP Redirects.</p>
+<h3><a class="anchor" aria-hidden="true" id="the-login-and-registration-user-interface"></a><a href="#the-login-and-registration-user-interface" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>The Login and Registration User Interface</h3>
+<p>In Browser Applications, the User Interface is typically rendered as an HTML
+Form:</p>
+<pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!-- Login --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"POST"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"identifier"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your username"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your password"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"csrf_token"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"cdef..."</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Registration --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"POST"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your E-Mail Address"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your password"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span>
+    <span class="hljs-attr">type</span>=<span class="hljs-string">"first_name"</span>
+    <span class="hljs-attr">name</span>=<span class="hljs-string">"password"</span>
+    <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your First Name"</span>
+  /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"last_name"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter your Last Name"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"csrf_token"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"cdef..."</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>Depending on the type of login flows you want to support, this might also be a
+&quot;Sign up/in with GitHub&quot; flow:</p>
+<pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!-- Login and Registration --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">form</span> <span class="hljs-attr">action</span>=<span class="hljs-string">"..."</span> <span class="hljs-attr">method</span>=<span class="hljs-string">"POST"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"hidden"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"csrf_token"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"cdef..."</span> /&gt;</span>
+
+  <span class="hljs-comment">&lt;!-- Basically &lt;a href="https://github.com/login/oauth/authorize?..."&gt;Sign up/in with GitHub&lt;/a&gt; --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"provider"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"GitHub"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span>
+</code></pre>
+<p>In stark contrast to other Identity Systems, ORY Kratos does not render this
+HTML. Instead, you need to implement the HTML code in your application (e.g.
+NodeJS + ExpressJS, Java, PHP, ReactJS, ...), which gives you extreme
+flexibility and customizability in your user interface flows and designs.</p>
+<p>Each Login and Registration Strategy (e.g.
+<a href="/docs/kratos/self-service/strategies/username-email-password">Username and Password</a>,
+<a href="/docs/kratos/self-service/strategies/openid-connect-social-sign-in-oauth2">Social Sign In</a>,
+Passwordless, ...) works a bit differently but they all boil down to the same
+abstract sequence:</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBLIGFzIE9SWSBLcmF0b3NcbiAgcGFydGljaXBhbnQgQSBhcyBZb3VyIEFwcGxpY2F0aW9uXG5cblxuICBCLT4-SzogSW5pdGlhdGUgTG9naW5cbiAgSy0-PkI6IFJlZGlyZWN0cyB0byB5b3VyIEFwcGxpY2F0aW9uJ3MgL2xvZ2luIGVuZHBvaW50XG4gIEItPj5BOiBDYWxscyAvbG9naW5cbiAgQS0tPj5LOiBGZXRjaGVzIGRhdGEgdG8gcmVuZGVyIGZvcm1zIGV0Y1xuICBCLS0-PkE6IEZpbGxzIG91dCBmb3JtcywgY2xpY2tzIGUuZy4gXCJTdWJtaXQgTG9naW5cIlxuICBCLT4-SzogUE9TVHMgZGF0YSB0b1xuICBLLS0-Pks6IFByb2Nlc3NlcyBMb2dpbiBJbmZvXG5cbiAgYWx0IExvZ2luIGRhdGEgdmFsaWRcbiAgICBLLS0-PkI6IFNldHMgc2Vzc2lvbiBjb29raWVcbiAgICBLLT4-QjogUmVkaXJlY3RzIHRvIGUuZy4gRGFzaGJvYXJkXG4gIGVsc2UgTG9naW4gZGF0YSBpbnZhbGlkXG4gICAgSy0tPj5COiBSZWRpcmVjdHMgdG8geW91ciBBcHBsaWNhaXRvbidzIC9sb2dpbiBlbmRwb2ludFxuICAgIEItPj5BOiBDYWxscyAvbG9naW5cbiAgICBBLS0-Pks6IEZldGNoZXMgZGF0YSB0byByZW5kZXIgZm9ybSBmaWVsZHMgYW5kIGVycm9yc1xuICAgIEItLT4-QTogRmlsbHMgb3V0IGZvcm1zIGFnYWluLCBjb3JyZWN0cyBlcnJvcnNcbiAgICBCLT4-SzogUE9TVHMgZGF0YSBhZ2FpbiAtIGFuZCBzbyBvbi4uLlxuICBlbmRcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIiwic2VxdWVuY2VEaWFncmFtIjp7ImRpYWdyYW1NYXJnaW5YIjoxNSwiZGlhZ3JhbU1hcmdpblkiOjE1LCJib3hUZXh0TWFyZ2luIjowLCJub3RlTWFyZ2luIjoxNSwibWVzc2FnZU1hcmdpbiI6NDUsIm1pcnJvckFjdG9ycyI6dHJ1ZX19fQ"><img src="https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBLIGFzIE9SWSBLcmF0b3NcbiAgcGFydGljaXBhbnQgQSBhcyBZb3VyIEFwcGxpY2F0aW9uXG5cblxuICBCLT4-SzogSW5pdGlhdGUgTG9naW5cbiAgSy0-PkI6IFJlZGlyZWN0cyB0byB5b3VyIEFwcGxpY2F0aW9uJ3MgL2xvZ2luIGVuZHBvaW50XG4gIEItPj5BOiBDYWxscyAvbG9naW5cbiAgQS0tPj5LOiBGZXRjaGVzIGRhdGEgdG8gcmVuZGVyIGZvcm1zIGV0Y1xuICBCLS0-PkE6IEZpbGxzIG91dCBmb3JtcywgY2xpY2tzIGUuZy4gXCJTdWJtaXQgTG9naW5cIlxuICBCLT4-SzogUE9TVHMgZGF0YSB0b1xuICBLLS0-Pks6IFByb2Nlc3NlcyBMb2dpbiBJbmZvXG5cbiAgYWx0IExvZ2luIGRhdGEgdmFsaWRcbiAgICBLLS0-PkI6IFNldHMgc2Vzc2lvbiBjb29raWVcbiAgICBLLT4-QjogUmVkaXJlY3RzIHRvIGUuZy4gRGFzaGJvYXJkXG4gIGVsc2UgTG9naW4gZGF0YSBpbnZhbGlkXG4gICAgSy0tPj5COiBSZWRpcmVjdHMgdG8geW91ciBBcHBsaWNhaXRvbidzIC9sb2dpbiBlbmRwb2ludFxuICAgIEItPj5BOiBDYWxscyAvbG9naW5cbiAgICBBLS0-Pks6IEZldGNoZXMgZGF0YSB0byByZW5kZXIgZm9ybSBmaWVsZHMgYW5kIGVycm9yc1xuICAgIEItLT4-QTogRmlsbHMgb3V0IGZvcm1zIGFnYWluLCBjb3JyZWN0cyBlcnJvcnNcbiAgICBCLT4-SzogUE9TVHMgZGF0YSBhZ2FpbiAtIGFuZCBzbyBvbi4uLlxuICBlbmRcbiIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIiwic2VxdWVuY2VEaWFncmFtIjp7ImRpYWdyYW1NYXJnaW5YIjoxNSwiZGlhZ3JhbU1hcmdpblkiOjE1LCJib3hUZXh0TWFyZ2luIjowLCJub3RlTWFyZ2luIjoxNSwibWVzc2FnZU1hcmdpbiI6NDUsIm1pcnJvckFjdG9ycyI6dHJ1ZX19fQ" alt="Abstract Login and Registration User Flow"></a></p>
+<p>The exact data being fetched and the step <em>&quot;Processes Login / Registration
+Info&quot;</em> depend, of course, on the actual Strategy being used. But it is important
+to understand that <strong>&quot;Your Application&quot;</strong> is responsible for rendering the
+actual Login and Registration HTML Forms. You can of course implement one app
+for rendering all the Login, Registration, ... screens, and another app (think
+&quot;Service Oriented Architecture&quot;, &quot;Micro-Services&quot; or &quot;Service Mesh&quot;) is
+responsible for rendering your Dashboards, Management Screens, and so on.</p>
+<blockquote>
+<p>It is highly RECOMMENDED to all the applications (or &quot;services&quot;), including
+ORY Kratos, behind a common API Gateway or Reverse Proxy. This greatly reduces
+the amount of work you have to do to get all the Cookies working properly. We
+RECOMMEND using <a href="http://github.com/ory/oathkeeper">ORY Oathkeeper</a> for this as
+it integrates best with the ORY Ecosystem and because all of our examples use
+ORY Oathkeeper. You MAY of course use any other reverse proxy (Envoy, AWS API
+Gateway, Ambassador, Nginx, Kong, ...), but we do not have examples or guides
+for those at this time.</p>
+</blockquote>
+<h3><a class="anchor" aria-hidden="true" id="code"></a><a href="#code" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Code</h3>
+<p>Because Login and Registration are so similar, we can use one common piece of
+code to cover both. A functioning example of the code and approach used here can
+be found on
+<a href="https://github.com/ory/kratos-selfservice-ui-node">github.com/ory/kratos-selfservice-ui-node</a>.</p>
+<p>The code example used here is universal and does not use an SDK because we want
+you to understand the fundamentals of how this flow works.</p>
+<p>While this example assumes a Server-Side Application, a Client-Side (e.g.
+ReactJS) Application would work the same, but use ORY Kratos' Public API
+instead.</p>
+<pre><code class="hljs css language-js"><span class="hljs-keyword">const</span> fetch = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-fetch'</span>);
+
+<span class="hljs-keyword">const</span> config = {
+  <span class="hljs-attr">kratos</span>: {
+    <span class="hljs-comment">// The browser config key is used to redirect the user. It reflects where ORY Kratos' Public API</span>
+    <span class="hljs-comment">// is accessible from. Here, we're assuming traffic going to `http://example.org/.ory/kratos/public/`</span>
+    <span class="hljs-comment">// will be forwarded to ORY Kratos' Public API.</span>
+    <span class="hljs-attr">browser</span>: <span class="hljs-string">'http://example.org/.ory/kratos/public/'</span>,
+
+    <span class="hljs-comment">// This is where ORY Kratos' Admin API is accessible.</span>
+    <span class="hljs-attr">admin</span>: <span class="hljs-string">'https://ory-kratos-admin.example-org.vpc/'</span>,
+  },
+};
+
+<span class="hljs-comment">// The parameter "flow" can be "login" and "registration".</span>
+<span class="hljs-comment">// You would register the two routes in express js like this:</span>
+<span class="hljs-comment">//</span>
+<span class="hljs-comment">//  app.get('/auth/registration', authHandler('registration'))</span>
+<span class="hljs-comment">//  app.get('/auth/login', authHandler('login'))</span>
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> authHandler = <span class="hljs-function"><span class="hljs-params">flow</span> =&gt;</span> <span class="hljs-function">(<span class="hljs-params">req, res, next</span>) =&gt;</span> {
+  <span class="hljs-comment">// The request ID is used to identify the login and registraion request and</span>
+  <span class="hljs-comment">// return data like the csrf_token and so on.</span>
+  <span class="hljs-keyword">const</span> request = req.query.request;
+  <span class="hljs-keyword">if</span> (!request) {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'No request found in URL, initializing ${flow} flow.'</span>);
+    res.redirect(<span class="hljs-string">`<span class="hljs-subst">${config.kratos.browser}</span>/auth/browser/<span class="hljs-subst">${flow}</span>`</span>);
+    <span class="hljs-keyword">return</span>;
+  }
+
+  <span class="hljs-comment">// This is the ORY Kratos URL. If this app and ORY Kratos are running</span>
+  <span class="hljs-comment">// on the same (e.g. Kubernetes) cluster, this should be ORY Kratos's internal hostname.</span>
+  <span class="hljs-keyword">const</span> url = <span class="hljs-keyword">new</span> URL(<span class="hljs-string">`<span class="hljs-subst">${config.kratos.admin}</span>/auth/browser/requests/<span class="hljs-subst">${flow}</span>`</span>);
+  url.searchParams.set(<span class="hljs-string">'request'</span>, request);
+
+  fetch(url.toString())
+    .then(<span class="hljs-function"><span class="hljs-params">response</span> =&gt;</span> {
+      <span class="hljs-comment">// A 404 code means that this code does not exist. We'll retry by re-initiating the flow.</span>
+      <span class="hljs-keyword">if</span> (response.status == <span class="hljs-number">404</span>) {
+        res.redirect(<span class="hljs-string">`<span class="hljs-subst">${config.kratos.browser}</span>/auth/browser/<span class="hljs-subst">${flow}</span>`</span>);
+        <span class="hljs-keyword">return</span>;
+      }
+
+      <span class="hljs-keyword">return</span> response.json();
+    })
+    .then(<span class="hljs-function"><span class="hljs-params">request</span> =&gt;</span> {
+      <span class="hljs-comment">// Request contains all the request data for this Registration request.</span>
+      <span class="hljs-comment">// You can process that data here, if you want.</span>
+
+      <span class="hljs-comment">// Lastly, you probably want to render the data using a view (e.g. Jade Template):</span>
+      res.render(flow, request);
+    });
+};
+</code></pre>
+<p>For details on payloads and potential HTML snippets consult the individual
+Self-Service Strategies for:</p>
+<ul>
+<li><a href="/docs/kratos/self-service/strategies/username-email-password">Username and Password Strategy</a></li>
+<li><a href="/docs/kratos/self-service/strategies/openid-connect-social-sign-in-oauth2">Social Sign In Strategy</a></li>
+</ul>
+<h3><a class="anchor" aria-hidden="true" id="server-side-browser-applications"></a><a href="#server-side-browser-applications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Server-Side Browser Applications</h3>
+<p>Let's take a look at the concrete network topologies, calls, and payloads. Here,
+we're assuming that you're running a server-side browser application (written in
+e.g. PHP, Java, NodeJS) to render the login and registration screen on the
+server and make all API calls from that server code. The counterpart to this
+would be a client-side browser application (written in e.g. Vanilla JavaScript,
+JQuery, ReactJS, AngularJS, ...) that uses AJAX requests to fetch data. For
+these type of applications, read this section first and go to section
+<a href="#client-side-browser-applications">Client-Side Browser Applications</a> next.</p>
+<h4><a class="anchor" aria-hidden="true" id="network-topology"></a><a href="#network-topology" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Network Topology</h4>
+<p>Your Server-Side Application and ORY Kratos are deployed in a Virtual Private
+Cluster that can not be accessed from the public internet directly. Instead,
+only ORY Oathkeeper can be accessed from the public internet and proxies
+incoming requests to the appropriate service:</p>
+<ul>
+<li>Public internet traffic to domain <code>example.org</code> is sent to ORY Oathkeeper
+which in turn:
+<ul>
+<li>proxies URLs matching <code>https://example.org/auth/login</code> to your Server-Side
+Application available at
+<code>https://your-service-side-application.example-org.vpc/auth/login</code></li>
+<li>proxies URLs matching <code>https://example.org/auth/registration</code> to your
+Server-Side Application available at
+<code>https://your-service-side-application.example-org.vpc/auth/registration</code></li>
+<li><code>https://example.org/.ory/kratos/public/*</code> is proxied to
+<code>https://ory-kratos-public.example-org.vpc/</code></li>
+</ul></li>
+<li><code>https://ory-kratos-admin.example-org.vpc/</code> exposes ORY Kratos' Admin API and
+is not accessible by the open internet and ideally only by Your Server-Side
+Application.</li>
+<li><code>https://ory-kratos-public.example-org.vpc</code> exposes ORY Kratos' Public API and
+is ideally only accessible by ORY Oathkeeper.</li>
+<li><code>https://your-service-side-application.example-org.vpc</code> exposes your
+Server-Side Application and is ideally only accessible by ORY Oathkeeper.</li>
+</ul>
+<p>The ORY Kratos Admin API is exposed only in the intranet and only the
+Server-Side Application should be able to talk to it.</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggVERcblxuc3ViZ3JhcGggcGlbUHVibGljIEludGVybmV0XVxuICAgIEJbQnJvd3Nlcl1cbmVuZFxuXG5zdWJncmFwaCB2cGNbVlBDIC8gQ2xvdWQgLyBEb2NrZXIgTmV0d29ya11cbnN1YmdyYXBoIFwiRGVtaWxpdGFyaXplZCBab25lIC8gRE1aXCJcbiAgICBPS1tPUlkgT2F0aGtlZXBlciA6NDQ1NV1cbiAgICBCIC0tPiBPS1xuZW5kXG5cbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvYXV0aC9sb2dpbiB0b1wifCBTQUxJXG4gICAgT0sgLS0-fFwiRm9yd2FyZHMgL2F1dGgvcmVnaXN0cmF0aW9uIHRvXCJ8IFNBTFJcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvLm9yeS9rcmF0b3MvcHVibGljLyogdG9cInwgS1BcblxuICAgIHN1YmdyYXBoIFwiUHJpdmF0ZSBTdWJuZXQgLyBJbnRyYW5ldFwiXG4gICAgS1sgT1JZIEtyYXRvcyBdXG5cbiAgICBLUChbIE9SWSBLcmF0b3MgUHVibGljIEFQSSBdKVxuICAgIEtBKFsgT1JZIEtyYXRvcyBBZG1pbiBBUEkgXSlcbiAgICBTQSAtLT58XCJ0YWxrcyB0b1wifCBLQVxuICAgIEtBIC0uYmVsb25ncyB0by4tPiBLXG4gICAgS1AgLS5iZWxvbmdzIHRvLi0-IEtcblxuICAgIHN1YmdyYXBoIHNhW1wiWW91ciBBcHBsaWNhdGlvblwiXVxuXG4gICAgICAgIFNBW1wiWW91ciBTZXJ2ZXItU2lkZSBBcHBsaWNhdGlvblwiXVxuICAgICAgICBTQUxJIC0uYmVsb25ncyB0by4tPiBTQVxuICAgICAgICBTQUxSIC0uYmVsb25ncyB0by4tPiBTQVxuICAgICAgICBTQUxJKFtSb3V0ZSAvYXV0aC9sb2dpbl0pIFxuICAgICAgICBTQUxSKFtSb3V0ZSAvYXV0aC9yZWdpc3RyYXRpb25dKSBcbiAgICBlbmRcbiAgICBlbmRcblxuZW5kXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCIsImZsb3djaGFydCI6eyJyYW5rU3BhY2luZyI6NzAsIm5vZGVTcGFjaW5nIjozMCwiY3VydmUiOiJiYXNpcyJ9fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggVERcblxuc3ViZ3JhcGggcGlbUHVibGljIEludGVybmV0XVxuICAgIEJbQnJvd3Nlcl1cbmVuZFxuXG5zdWJncmFwaCB2cGNbVlBDIC8gQ2xvdWQgLyBEb2NrZXIgTmV0d29ya11cbnN1YmdyYXBoIFwiRGVtaWxpdGFyaXplZCBab25lIC8gRE1aXCJcbiAgICBPS1tPUlkgT2F0aGtlZXBlciA6NDQ1NV1cbiAgICBCIC0tPiBPS1xuZW5kXG5cbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvYXV0aC9sb2dpbiB0b1wifCBTQUxJXG4gICAgT0sgLS0-fFwiRm9yd2FyZHMgL2F1dGgvcmVnaXN0cmF0aW9uIHRvXCJ8IFNBTFJcbiAgICBPSyAtLT58XCJGb3J3YXJkcyAvLm9yeS9rcmF0b3MvcHVibGljLyogdG9cInwgS1BcblxuICAgIHN1YmdyYXBoIFwiUHJpdmF0ZSBTdWJuZXQgLyBJbnRyYW5ldFwiXG4gICAgS1sgT1JZIEtyYXRvcyBdXG5cbiAgICBLUChbIE9SWSBLcmF0b3MgUHVibGljIEFQSSBdKVxuICAgIEtBKFsgT1JZIEtyYXRvcyBBZG1pbiBBUEkgXSlcbiAgICBTQSAtLT58XCJ0YWxrcyB0b1wifCBLQVxuICAgIEtBIC0uYmVsb25ncyB0by4tPiBLXG4gICAgS1AgLS5iZWxvbmdzIHRvLi0-IEtcblxuICAgIHN1YmdyYXBoIHNhW1wiWW91ciBBcHBsaWNhdGlvblwiXVxuXG4gICAgICAgIFNBW1wiWW91ciBTZXJ2ZXItU2lkZSBBcHBsaWNhdGlvblwiXVxuICAgICAgICBTQUxJIC0uYmVsb25ncyB0by4tPiBTQVxuICAgICAgICBTQUxSIC0uYmVsb25ncyB0by4tPiBTQVxuICAgICAgICBTQUxJKFtSb3V0ZSAvYXV0aC9sb2dpbl0pIFxuICAgICAgICBTQUxSKFtSb3V0ZSAvYXV0aC9yZWdpc3RyYXRpb25dKSBcbiAgICBlbmRcbiAgICBlbmRcblxuZW5kXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCIsImZsb3djaGFydCI6eyJyYW5rU3BhY2luZyI6NzAsIm5vZGVTcGFjaW5nIjozMCwiY3VydmUiOiJiYXNpcyJ9fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt="User Login and Registration Network Topology for Server-Side Applications"></a></p>
+<h4><a class="anchor" aria-hidden="true" id="user-login-and-user-registration-process-sequence"></a><a href="#user-login-and-user-registration-process-sequence" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>User Login and User Registration Process Sequence</h4>
+<p>The Login and Registration User Flow is composed of several high-level steps
+summarized in this state diagram:</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic3RhdGVEaWFncmFtXG4gIHMxOiBVc2VyIGJyb3dzZXMgYXBwXG4gIHMyOiBFeGVjdXRlIFwiQmVmb3JlIExvZ2luL1JlZ2lzdHJhdGlvbiBKb2IocylcIlxuICBzMzogVXNlciBJbnRlcmZhY2UgQXBwbGljYXRpb24gcmVuZGVycyBcIkxvZ2luL1JlZ2lzdHJhdGlvbiBSZXF1ZXN0XCJcbiAgczQ6IEV4ZWN1dGUgXCJBZnRlciBMb2dpbi9SZWdpc3RyYXRpb24gSm9iKHMpXCJcbiAgczU6IFVwZGF0ZSBcIkxvZ2luL1JlZ2lzdHJhdGlvbiBSZXF1ZXN0XCIgd2l0aCBFcnJvciBDb250ZXh0KHMpXG4gIHM2OiBMb2dpbi9SZWdpc3RyYXRpb24gc3VjY2Vzc2Z1bFxuXG5cblxuXHRbKl0gLS0-IHMxXG4gIHMxIC0tPiBzMiA6IFVzZXIgY2xpY2tzIFwiTG9nIGluIC8gU2lnbiB1cFwiXG4gIHMyIC0tPiBFcnJvciA6IEEgam9iIGZhaWxzXG4gIHMyIC0tPiBzMyA6IFVzZXIgaXMgcmVkaXJlY3RlZCB0byBMb2dpbi9SZWdpc3RyYXRpb24gVUkgVVJMXG4gIHMzIC0tPiBzNCA6IFVzZXIgcHJvdmlkZXMgdmFsaWQgY3JlZGVudGlhbHMvcmVnaXN0cmF0aW9uIGRhdGFcbiAgczMgLS0-IHM1IDogVXNlciBwcm92aWRlcyBpbnZhbGlkIGNyZWRlbnRpYWxzL3JlZ2lzdHJhdGlvbiBkYXRhXG4gIHM1IC0tPiBzMyA6IFVzZXIgaXMgcmVkaXJlY3RlZCB0byBMb2dpbi9SZWdpc3RyYXRpb24gVUkgVVJMXG4gIHM0IC0tPiBFcnJvciA6IEEgam9iIGZhaWxzXG4gIHM0IC0tPiBzNlxuICBzNiAtLT4gWypdXG5cbiAgRXJyb3IgLS0-IFsqXVxuXG5cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9"><img src="https://mermaid.ink/img/eyJjb2RlIjoic3RhdGVEaWFncmFtXG4gIHMxOiBVc2VyIGJyb3dzZXMgYXBwXG4gIHMyOiBFeGVjdXRlIFwiQmVmb3JlIExvZ2luL1JlZ2lzdHJhdGlvbiBKb2IocylcIlxuICBzMzogVXNlciBJbnRlcmZhY2UgQXBwbGljYXRpb24gcmVuZGVycyBcIkxvZ2luL1JlZ2lzdHJhdGlvbiBSZXF1ZXN0XCJcbiAgczQ6IEV4ZWN1dGUgXCJBZnRlciBMb2dpbi9SZWdpc3RyYXRpb24gSm9iKHMpXCJcbiAgczU6IFVwZGF0ZSBcIkxvZ2luL1JlZ2lzdHJhdGlvbiBSZXF1ZXN0XCIgd2l0aCBFcnJvciBDb250ZXh0KHMpXG4gIHM2OiBMb2dpbi9SZWdpc3RyYXRpb24gc3VjY2Vzc2Z1bFxuXG5cblxuXHRbKl0gLS0-IHMxXG4gIHMxIC0tPiBzMiA6IFVzZXIgY2xpY2tzIFwiTG9nIGluIC8gU2lnbiB1cFwiXG4gIHMyIC0tPiBFcnJvciA6IEEgam9iIGZhaWxzXG4gIHMyIC0tPiBzMyA6IFVzZXIgaXMgcmVkaXJlY3RlZCB0byBMb2dpbi9SZWdpc3RyYXRpb24gVUkgVVJMXG4gIHMzIC0tPiBzNCA6IFVzZXIgcHJvdmlkZXMgdmFsaWQgY3JlZGVudGlhbHMvcmVnaXN0cmF0aW9uIGRhdGFcbiAgczMgLS0-IHM1IDogVXNlciBwcm92aWRlcyBpbnZhbGlkIGNyZWRlbnRpYWxzL3JlZ2lzdHJhdGlvbiBkYXRhXG4gIHM1IC0tPiBzMyA6IFVzZXIgaXMgcmVkaXJlY3RlZCB0byBMb2dpbi9SZWdpc3RyYXRpb24gVUkgVVJMXG4gIHM0IC0tPiBFcnJvciA6IEEgam9iIGZhaWxzXG4gIHM0IC0tPiBzNlxuICBzNiAtLT4gWypdXG5cbiAgRXJyb3IgLS0-IFsqXVxuXG5cbiIsIm1lcm1haWQiOnsidGhlbWUiOiJkZWZhdWx0In0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" alt="User Login and Registration State Machine"></a></p>
+<ol>
+<li>The <strong>Login/Registration User Flow</strong> is initiated because a link was clicked
+or an action was performed that requires an active user session.</li>
+<li>ORY Kratos executes Jobs defined in the <strong>Before Login/Registration
+Workflow</strong>. If a failure occurs, the whole flow is aborted.</li>
+<li>The user's browser is redirected to
+<code>https://example.org/.ory/kratos/public/auth/browser/(login|registration)</code>
+(the notation <code>(login|registration)</code> expresses the two possibilities of
+<code>../auth/browser/login</code> or <code>../auth/browser/registration</code>).</li>
+<li>ORY Kratos does some internal processing (e.g. checks if a session cookie is
+set, generates payloads for form fields, sets CSRF token, ...) and redirects
+the user's browser to the Login UI URL which is defined using the
+<code>urls.login_ui</code> (or <code>urls.registration_ui</code>) config or <code>URLS_LOGIN_UI</code> (or
+<code>URLS_REGISTRATION_UI</code>) environment variable, which is set to the ui
+endpoints - for example <code>https://example.org/auth/login</code> and
+<code>https://example.org/auth/registration</code>). The user's browser is thus
+redirected to <code>https://example.org/auth/(login|registration)?request=abcde</code>.
+The <code>request</code> query parameter includes a unique ID which will be used to
+fetch contextual data for this login request.</li>
+<li>Your Server-Side Application makes a <code>GET</code> request to
+<code>https://ory-kratos-admin.example-org.vpc/auth/browser/requests/(login|registration)?request=abcde</code>.
+ORY Kratos responds with a JSON Payload that contains data (form fields,
+error messages, ...) for all enabled User Login Strategies:
+<code>json5 { &quot;id&quot;: &quot;abcde&quot;, &quot;expires_at&quot;: &quot;2020-01-27T09:34:39.3249566Z&quot;, &quot;issued_at&quot;: &quot;2020-01-27T09:24:39.3249689Z&quot;, &quot;request_url&quot;: &quot;https://example.org/.ory/kratos/public/auth/browser/(login|registration)&quot;, &quot;methods&quot;: { &quot;oidc&quot;: { &quot;method&quot;: &quot;oidc&quot;, &quot;config&quot;: { /* ... */ } }, &quot;password&quot;: { &quot;method&quot;: &quot;password&quot;, &quot;config&quot;: { /* ... */ } } // ... } }</code></li>
+<li>Your Server-Side applications renders the data however you see fit. The User
+interacts with it an completes the Login by clicking, for example, the
+&quot;Login&quot;, the &quot;Login with Google&quot;, ... button.</li>
+<li>The User's browser makes a request to one of ORY Kratos' Strategy URLs (e.g.
+<code>https://example.org/.ory/kratos/public/auth/browser/methods/password/(login|registration)</code>
+or
+<code>https://example.org/.ory/kratos/public/auth/browser/methods/oidc/auth/abcde</code>).
+ORY Kratos validates the User's credentials (when logging in - e.g. Username
+and Password, by performing an OpenID Connect flow, ...) or the registration
+form data (when signing up - e.g. is the E-Mail address valid, is the person
+at least 21 years old, ...):
+<ul>
+<li>If the credentials / form data is invalid, the Login Request's JSON Payload
+is updated - for example with
+<pre><code class="hljs css language-json5">{
+  <span class="hljs-attribute">id</span>: <span class="hljs-string">'abcde'</span>,
+  <span class="hljs-attribute">expires_at</span>: <span class="hljs-string">'2020-01-27T10:05:50.1678228Z'</span>,
+  <span class="hljs-attribute">issued_at</span>: <span class="hljs-string">'2020-01-27T09:55:50.1678348Z'</span>,
+  <span class="hljs-attribute">request_url</span>: <span class="hljs-string">'http://127.0.0.1:4455/auth/browser/(login|registration)'</span>,
+  <span class="hljs-attribute">methods</span>: {
+    <span class="hljs-attribute">oidc</span>: {
+      <span class="hljs-attribute">method</span>: <span class="hljs-string">'oidc'</span>,
+      <span class="hljs-attribute">config</span>: {
+        <span class="hljs-comment">/* ... */</span>
+      },
+    },
+    <span class="hljs-attribute">password</span>: {
+      <span class="hljs-attribute">method</span>: <span class="hljs-string">'password'</span>,
+      <span class="hljs-attribute">config</span>: {
+        <span class="hljs-comment">/* ... */</span>
+        <span class="hljs-attribute">errors</span>: [
+          {
+            <span class="hljs-attribute">message</span>: <span class="hljs-string">'The provided credentials are invalid. Check for spelling mistakes in your password or username, email address, or phone number.'</span>,
+          },
+        ],
+      },
+    },
+  },
+}
+</code></pre>
+and the user's Browser is redirected back to the Login UI:
+<code>https://example.org/auth/(login|registration)?request=abcde</code>.</li>
+<li>If credentials / data is valid, ORY Kratos proceeds with the next step.</li>
+<li>If the flow is a registration request and the registration data is valid,
+the identity is created.</li>
+</ul></li>
+<li>ORY Kratos executes Jobs (e.g. redirect somewhere) defined in the <strong>After
+Login/Registration Workflow</strong>. If a failure occurs, the whole flow is
+aborted.</li>
+</ol>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBPIGFzIE9SWSBPYXRoa2VlcGVyXG4gIHBhcnRpY2lwYW50IEtQIGFzIE9SWSBLcmF0b3MgUHVibGljIEFQSVxuICBwYXJ0aWNpcGFudCBBIGFzIFlvdXIgU2VydmVyLVNpZGUgQXBwbGljYXRpb25cbiAgcGFydGljaXBhbnQgS0EgYXMgT1JZIEtyYXRvcyBBZG1pbiBBUElcblxuICBCLT4-K086IEdFVCAvLm9yeS9rcmF0b3MvcHVibGljL2F1dGgvYnJvd3Nlci8obG9naW58cmVnaXN0cmF0aW9uKVxuICBPLT4-K0tQOiBHRVQgL2F1dGgvYnJvd3Nlci8obG9naW58cmVnaXN0cmF0aW9uKVxuICBLUC0tPj5LUDogRXhlY3V0ZSBKb2JzIGRlZmluZWQgaW4gXCJCZWZvcmUgTG9naW4vUmVnaXN0cmF0aW9uIFdvcmtmbG93KHMpXCJcbiAgS1AtLT4-LU86IEhUVFAgMzAyIEZvdW5kIC9hcHAvYXV0aC8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG4gIE8tLT4-LUI6IEhUVFAgMzAyIEZvdW5kIC9hcHAvYXV0aC8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG5cbiAgQi0-PitPOiBHRVQgL2FwcC9hdXRoLyhsb2dpbnxyZWdpc3RyYXRpb24pP3JlcXVlc3Q9YWJjZGVcbiAgTy0-PitBOiBHRVQgL2F1dGgvKGxvZ2lufHJlZ2lzdHJhdGlvbik_cmVxdWVzdD1hYmNkZVxuICBBLT4-K0tBOiBHRVQgL2F1dGgvYnJvd3Nlci9yZXF1ZXN0cy8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG4gIEtBLT4-LUE6IFNlbmRzIExvZ2luL1JlZ2lzdHJhdGlvbiBSZXF1ZXN0IEpTT04gUGF5bG9hZFxuICBOb3RlIG92ZXIgQSxLQTogIHtcIm1ldGhvZHNcIjp7XCJwYXNzd29yZFwiOi4uLixcIm9pZGNcIjouLn19XG4gIEEtLT4-QTogR2VuZXJhdGUgYW5kIHJlbmRlciBIVE1MXG4gIEEtLT4-LU86IFJldHVybiBIVE1MIChGb3JtLCAuLi4pXG4gIE8tLT4-LUI6IFJldHVybiBIVE1MIChGb3JtLCAuLi4pXG5cbiAgQi0tPj5COiBGaWxsIG91dCBIVE1MXG5cbiAgQi0-PitPOiBQT1NUIEhUTUwgRm9ybVxuICBPLT4-K0tQOiBQT1NUIEhUTUwgRm9ybVxuICBLUC0tPj5LUDogQ2hlY2tzIGxvZ2luIC8gcmVnaXN0cmF0aW9uIGRhdGFcblxuXG4gIGFsdCBMb2dpbiBkYXRhIGlzIHZhbGlkXG4gICAgS1AtLT4-LUtQOiBFeGVjdXRlIEpvYnMgZGVmaW5lZCBpbiBcIkFmdGVyIExvZ2luIFdvcmtmbG93KHMpXCJcbiAgICBLUC0tPj5POiBIVFRQIDMwMiBGb3VuZCAvYXBwL2Rhc2hib2FyZFxuICAgIE5vdGUgb3ZlciBLUCxCOiBTZXQtQ29va2llOiBhdXRoX3Nlc3Npb249Li4uXG4gICAgTy0tPj4tQjogSFRUUCAzMDIgRm91bmQgL2FwcC9kYXNoYm9hcmRcbiAgICBCLT4-TzogR0VUIC9hcHAvZGFzaGJvYXJkXG4gICAgTy0tPktBOiBWYWxpZGF0ZXMgU2Vzc2lvbiBDb29raWVcbiAgICBPLT4-QTogR0VUIC9kYXNoYm9hcmRcbiAgZWxzZSBMb2dpbiBkYXRhIGlzIGludmFsaWRcbiAgICBOb3RlIG92ZXIgS1AsQjogVXNlciByZXRyaWVzIGxvZ2luIC8gcmVnaXN0cmF0aW9uXG4gICAgS1AtLT4-TzogSFRUUCAzMDIgRm91bmQgL2FwcC9hdXRoLyhsb2dpbnxyZWdpc3RyYXRpb24pP3JlcXVlc3Q9YWJjZGVcbiAgICBPLS0-PkI6IEhUVFAgMzAyIEZvdW5kIC9hcHAvYXV0aC8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG4gIGVuZFxuICAiLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCIsInNlcXVlbmNlRGlhZ3JhbSI6eyJkaWFncmFtTWFyZ2luWCI6MTUsImRpYWdyYW1NYXJnaW5ZIjoxNSwiYm94VGV4dE1hcmdpbiI6MSwibm90ZU1hcmdpbiI6MTAsIm1lc3NhZ2VNYXJnaW4iOjU1LCJtaXJyb3JBY3RvcnMiOnRydWV9fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0"><img src="https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBPIGFzIE9SWSBPYXRoa2VlcGVyXG4gIHBhcnRpY2lwYW50IEtQIGFzIE9SWSBLcmF0b3MgUHVibGljIEFQSVxuICBwYXJ0aWNpcGFudCBBIGFzIFlvdXIgU2VydmVyLVNpZGUgQXBwbGljYXRpb25cbiAgcGFydGljaXBhbnQgS0EgYXMgT1JZIEtyYXRvcyBBZG1pbiBBUElcblxuICBCLT4-K086IEdFVCAvLm9yeS9rcmF0b3MvcHVibGljL2F1dGgvYnJvd3Nlci8obG9naW58cmVnaXN0cmF0aW9uKVxuICBPLT4-K0tQOiBHRVQgL2F1dGgvYnJvd3Nlci8obG9naW58cmVnaXN0cmF0aW9uKVxuICBLUC0tPj5LUDogRXhlY3V0ZSBKb2JzIGRlZmluZWQgaW4gXCJCZWZvcmUgTG9naW4vUmVnaXN0cmF0aW9uIFdvcmtmbG93KHMpXCJcbiAgS1AtLT4-LU86IEhUVFAgMzAyIEZvdW5kIC9hcHAvYXV0aC8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG4gIE8tLT4-LUI6IEhUVFAgMzAyIEZvdW5kIC9hcHAvYXV0aC8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG5cbiAgQi0-PitPOiBHRVQgL2FwcC9hdXRoLyhsb2dpbnxyZWdpc3RyYXRpb24pP3JlcXVlc3Q9YWJjZGVcbiAgTy0-PitBOiBHRVQgL2F1dGgvKGxvZ2lufHJlZ2lzdHJhdGlvbik_cmVxdWVzdD1hYmNkZVxuICBBLT4-K0tBOiBHRVQgL2F1dGgvYnJvd3Nlci9yZXF1ZXN0cy8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG4gIEtBLT4-LUE6IFNlbmRzIExvZ2luL1JlZ2lzdHJhdGlvbiBSZXF1ZXN0IEpTT04gUGF5bG9hZFxuICBOb3RlIG92ZXIgQSxLQTogIHtcIm1ldGhvZHNcIjp7XCJwYXNzd29yZFwiOi4uLixcIm9pZGNcIjouLn19XG4gIEEtLT4-QTogR2VuZXJhdGUgYW5kIHJlbmRlciBIVE1MXG4gIEEtLT4-LU86IFJldHVybiBIVE1MIChGb3JtLCAuLi4pXG4gIE8tLT4-LUI6IFJldHVybiBIVE1MIChGb3JtLCAuLi4pXG5cbiAgQi0tPj5COiBGaWxsIG91dCBIVE1MXG5cbiAgQi0-PitPOiBQT1NUIEhUTUwgRm9ybVxuICBPLT4-K0tQOiBQT1NUIEhUTUwgRm9ybVxuICBLUC0tPj5LUDogQ2hlY2tzIGxvZ2luIC8gcmVnaXN0cmF0aW9uIGRhdGFcblxuXG4gIGFsdCBMb2dpbiBkYXRhIGlzIHZhbGlkXG4gICAgS1AtLT4-LUtQOiBFeGVjdXRlIEpvYnMgZGVmaW5lZCBpbiBcIkFmdGVyIExvZ2luIFdvcmtmbG93KHMpXCJcbiAgICBLUC0tPj5POiBIVFRQIDMwMiBGb3VuZCAvYXBwL2Rhc2hib2FyZFxuICAgIE5vdGUgb3ZlciBLUCxCOiBTZXQtQ29va2llOiBhdXRoX3Nlc3Npb249Li4uXG4gICAgTy0tPj4tQjogSFRUUCAzMDIgRm91bmQgL2FwcC9kYXNoYm9hcmRcbiAgICBCLT4-TzogR0VUIC9hcHAvZGFzaGJvYXJkXG4gICAgTy0tPktBOiBWYWxpZGF0ZXMgU2Vzc2lvbiBDb29raWVcbiAgICBPLT4-QTogR0VUIC9kYXNoYm9hcmRcbiAgZWxzZSBMb2dpbiBkYXRhIGlzIGludmFsaWRcbiAgICBOb3RlIG92ZXIgS1AsQjogVXNlciByZXRyaWVzIGxvZ2luIC8gcmVnaXN0cmF0aW9uXG4gICAgS1AtLT4-TzogSFRUUCAzMDIgRm91bmQgL2FwcC9hdXRoLyhsb2dpbnxyZWdpc3RyYXRpb24pP3JlcXVlc3Q9YWJjZGVcbiAgICBPLS0-PkI6IEhUVFAgMzAyIEZvdW5kIC9hcHAvYXV0aC8obG9naW58cmVnaXN0cmF0aW9uKT9yZXF1ZXN0PWFiY2RlXG4gIGVuZFxuICAiLCJtZXJtYWlkIjp7InRoZW1lIjoibmV1dHJhbCIsInNlcXVlbmNlRGlhZ3JhbSI6eyJkaWFncmFtTWFyZ2luWCI6MTUsImRpYWdyYW1NYXJnaW5ZIjoxNSwiYm94VGV4dE1hcmdpbiI6MSwibm90ZU1hcmdpbiI6MTAsIm1lc3NhZ2VNYXJnaW4iOjU1LCJtaXJyb3JBY3RvcnMiOnRydWV9fSwidXBkYXRlRWRpdG9yIjpmYWxzZX0" alt="User Login Sequence Diagram for Server-Side Applications"></a></p>
+<h3><a class="anchor" aria-hidden="true" id="client-side-browser-applications"></a><a href="#client-side-browser-applications" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client-Side Browser Applications</h3>
+<p>Because Client-Side Browser Applications do not have access to ORY Kratos' Admin
+API, they must use the ORY Kratos Public API instead. The flow for a Client-Side
+Browser Application is almost the exact same as the one for Server-Side
+Applications, with the small difference that
+<code>https://example.org/.ory/kratos/public/auth/browser/requests/login?request=abcde</code>
+would be called via AJAX instead of making a request to
+<code>https://ory-kratos-admin.example-org.vpc/auth/browser/requests/login?request=abcde</code>.</p>
+<blockquote>
+<p>To prevent brute force, guessing, session injection, and other attacks, it is
+required that cookies are working for this endpoint. The cookie set in the
+initial HTTP request made to
+<code>https://example.org/.ory/kratos/public/auth/browser/login</code> MUST be set and
+available when calling this endpoint!</p>
+</blockquote>
+<h2><a class="anchor" aria-hidden="true" id="self-service-user-login-and-user-registration-for-api-clients"></a><a href="#self-service-user-login-and-user-registration-for-api-clients" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Self-Service User Login and User Registration for API Clients</h2>
+<p>Will be addressed in a future release.</p>
+<h2><a class="anchor" aria-hidden="true" id="executing-jobs-before-user-login"></a><a href="#executing-jobs-before-user-login" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Executing Jobs before User Login</h2>
+<p>ORY Kratos allows you to configure jobs that run before the Login Request is
+generated. This may be helpful if you'd like to restrict logins to IPs coming
+from your internal network or other logic.</p>
+<p>You can find available <code>before</code> jobs in
+<a href="/docs/kratos/self-service/workflows/jobs/before#user-login">Self-Service Before Login Jobs</a> and
+configure them using the ORY Kratos configuration file:</p>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">selfservice:</span>
+  <span class="hljs-attr">login:</span>
+    <span class="hljs-attr">before:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">&lt;job-name&gt;</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-comment"># &lt;job-config&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="executing-jobs-after-user-login"></a><a href="#executing-jobs-after-user-login" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Executing Jobs after User Login</h2>
+<p>ORY Kratos allows you to configure jobs that run before the Login Request is
+generated. This may be helpful if you'd like to restrict logins to IPs coming
+from your internal network or other logic.</p>
+<p>You can find available <code>after</code> jobs in
+<a href="/docs/kratos/self-service/workflows/jobs/after#user-login">Self-Service After Login Jobs</a> and
+configure them using the ORY Kratos configuration file:</p>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">selfservice:</span>
+  <span class="hljs-attr">after:</span>
+    <span class="hljs-string">&lt;strategy&gt;:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">&lt;job-name&gt;</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-comment"># &lt;job-config&gt;</span>
+</code></pre>
+<p>It's possible to define jobs running after login for each individual User Login
+Flow Strategy (e.g. <code>password</code>, <code>oidc</code>).</p>
+<h2><a class="anchor" aria-hidden="true" id="executing-jobs-before-user-registration"></a><a href="#executing-jobs-before-user-registration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Executing Jobs before User Registration</h2>
+<p>ORY Kratos allows you to configure jobs that run before the Registration Request
+is generated. This may be helpful if you'd like to restrict registrations to IPs
+coming from your internal network or other logic.</p>
+<p>You can find available <code>before</code> jobs in
+<a href="/docs/kratos/self-service/workflows/jobs/before#user-registration">Self-Service Before Registration Jobs</a>
+and configure them using the ORY Kratos configuration file:</p>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">selfservice:</span>
+  <span class="hljs-attr">registration:</span>
+    <span class="hljs-attr">before:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">&lt;job-name&gt;</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-comment"># &lt;job-config&gt;</span>
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="executing-jobs-after-user-registration"></a><a href="#executing-jobs-after-user-registration" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Executing Jobs after User Registration</h2>
+<p>ORY Kratos allows you to configure jobs that run before the Registration Request
+is generated. This may be helpful if you'd like to restrict registrations to IPs
+coming from your internal network or other logic.</p>
+<p>You can find available <code>after</code> jobs in
+<a href="/docs/kratos/self-service/workflows/jobs/after#user-registration">Self-Service After Registration Jobs</a>
+and configure them using the ORY Kratos configuration file:</p>
+<pre><code class="hljs css language-yaml"><span class="hljs-attr">selfservice:</span>
+  <span class="hljs-attr">after:</span>
+    <span class="hljs-string">&lt;strategy&gt;:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">run:</span> <span class="hljs-string">&lt;job-name&gt;</span>
+        <span class="hljs-attr">config:</span>
+          <span class="hljs-comment"># &lt;job-config&gt;</span>
+</code></pre>
+<p>It's possible to define jobs running after registration for each individual User
+Registration Flow Strategy (e.g. <code>password</code>, <code>oidc</code>).</p>
+</span></div></article></div><div class="docLastUpdate"><em>Last updated on 1/28/2020 by hackerman</em></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/kratos/self-service/flows/index"><span class="arrow-prev">← </span><span>Overview</span></a><a class="docs-next button" href="/docs/kratos/self-service/flows/user-logout"><span>User Logout</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#self-service-user-login-and-user-registration-for-browser-applications">Self-Service User Login and User Registration for Browser Applications</a><ul class="toc-headings"><li><a href="#the-login-and-registration-user-interface">The Login and Registration User Interface</a></li><li><a href="#code">Code</a></li><li><a href="#server-side-browser-applications">Server-Side Browser Applications</a></li><li><a href="#client-side-browser-applications">Client-Side Browser Applications</a></li></ul></li><li><a href="#self-service-user-login-and-user-registration-for-api-clients">Self-Service User Login and User Registration for API Clients</a></li><li><a href="#executing-jobs-before-user-login">Executing Jobs before User Login</a></li><li><a href="#executing-jobs-after-user-login">Executing Jobs after User Login</a></li><li><a href="#executing-jobs-before-user-registration">Executing Jobs before User Registration</a></li><li><a href="#executing-jobs-after-user-registration">Executing Jobs after User Registration</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="copyright">Copyright © 2020 ORY GmbH</section><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>(function () {
+  document.querySelectorAll('.tabs .tabs-nav .nav-item a').forEach(function (t) {
+    t.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      t.closest('.tabs-nav').querySelectorAll('.nav-item a').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.closest('.tabs').querySelectorAll('.tab-content .tab-pane').forEach(function (i) {
+        i.classList.remove('active');
+      });
+
+      t.classList.add('active');
+      document.getElementById(t.href.split('#')[1]).classList.add('active');
+      return false
+    });
+  });
+})();</script></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+                document.addEventListener('keyup', function(e) {
+                  if (e.target !== document.body) {
+                    return;
+                  }
+                  // keyCode for '/' (slash)
+                  if (e.keyCode === 191) {
+                    const search = document.getElementById('search_input_react');
+                    search && search.focus();
+                  }
+                });
+              </script><script>
+              var search = docsearch({
+                
+                apiKey: '8463c6ece843b377565726bb4ed325b0',
+                indexName: 'ory',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>

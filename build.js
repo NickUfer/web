@@ -1,6 +1,6 @@
-var copydir = require('copy-dir');
-var fs = require('fs');
-var fse = require('fs-extra');
+const copydir = require('copy-dir')
+const fs = require('fs')
+const fse = require('fs-extra')
 
 ;[
   './public/css',
@@ -10,8 +10,8 @@ var fse = require('fs-extra');
   './public/img',
   './public/js',
   './public/versions',
-  // './public/docs/deprecated',
-].forEach(function (d) {
+
+].forEach(function(d) {
   try {
     fs.mkdirSync(d, { recursive: true })
   } catch (e) {
@@ -19,17 +19,35 @@ var fse = require('fs-extra');
   }
 })
 
-copydir.sync('./_archive/ory-am-master/images', './public/images/')
+;[
+  'keto',
+  'kratos',
+  'oathkeeper',
+  'hydra',
+].forEach((project) => {
+  const dst = `./public/${project}/docs`
+  try {
+    fs.mkdirSync(dst, { recursive: true })
+  } catch (e) {
+    console.log('Got error while creating dir', dst, e.message)
+  }
 
-copydir.sync('./docs/css', './public/css')
-copydir.sync('./docs/docs', './public/docs')
-copydir.sync('./docs/en', './public/en')
-copydir.sync('./docs/images', './public/images')
-copydir.sync('./docs/img', './public/img')
-copydir.sync('./docs/js', './public/js')
-copydir.sync('./docs/versions', './public/versions')
+  const src = `./generated/docs/${project}/`
+  copydir.sync(src, dst)
+  // Workaround for https://github.com/facebook/docusaurus/issues/2537
+  // fse.copySync(`${src}index/index.html`, `${dst}/index.html`)
+})
 
-fse.copySync('./docs/sitemap.xml', './public/docs/sitemap.xml')
-fse.copySync('./docs/versions.html', './public/docs/versions.html')
+copydir.sync('./generated/v1/docs/css', './public/css')
+copydir.sync('./generated/v1/docs/docs', './public/docs')
+copydir.sync('./generated/v1/docs/en', './public/en')
+copydir.sync('./generated/v1/docs/images', './public/images')
+copydir.sync('./generated/v1/docs/img', './public/img')
+copydir.sync('./generated/v1/docs/js', './public/js')
+copydir.sync('./generated/v1/docs/versions', './public/versions')
 
-// copydir.sync('./deprecated/guides', './public/docs/deprecated')
+// fse.copySync('./generated/v1/docs/sitemap.xml', './public/docs/sitemap.xml')
+// fse.copySync('./generated/v1/docs/versions.html', './public/docs/versions.html')
+
+// ecosystem needs to be copied after v1 docs!
+copydir.sync('./generated/docs/ecosystem', './public/docs')

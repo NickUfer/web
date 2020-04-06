@@ -18,12 +18,10 @@ https://www.ory.sh/docs/deprecated/* https://www.ory.sh/docs/ 302!
 https://www.ory.sh/docs/guides/* https://www.ory.sh/docs/ 302!
 https://www.ory.sh/docs/faq https://www.ory.sh/docs/ 302!
 
-## Shortlinks
-
+# Shortlinks
 https://www.ory.sh/pnp https://arekkas.typeform.com/to/H6sChj 302!
 
-## November 2018 docs change
-
+# November 2018 docs change
 https://www.ory.sh/docs/api/hydra https://www.ory.sh/docs/hydra/sdk/hydra-sdk-api 302!
 https://www.ory.sh/docs/api/oathkeeper https://www.ory.sh/docs/oathkeeper/sdk/oathkeeper-sdk-api 302!
 https://www.ory.sh/docs/api/keto https://www.ory.sh/docs/keto/sdk/keto-sdk-api 302!
@@ -71,6 +69,7 @@ https://www.ory.sh/docs/guides/master/performance/ https://www.ory.sh/docs/perfo
 https://www.ory.sh/docs/guides/master/performance/1-hydra.html https://www.ory.sh/docs/performance/performance-hydra 302!
 
 https://www.ory.sh/docs/guides/master/telemetry/ https://www.ory.sh/docs/ecosystem/ecosystem-sqa 302!
+# END: November 2018 docs change
 
 # January 2020 ecosystem change
 https://www.ory.sh/docs/ecosystem/overview https://www.ory.sh/docs/ecosystem/projects 302!
@@ -79,3 +78,26 @@ https://www.ory.sh/docs/ecosystem/kubernetes https://www.ory.sh/docs/ecosystem/d
 https://www.ory.sh/docs/ecosystem/persistence https://www.ory.sh/docs/ecosystem/deployment 302!
 https://www.ory.sh/docs/ecosystem/examples https://github.com/ory/examples 302!
 https://www.ory.sh/docs/ecosystem/usage https://www.ory.sh/docs/ecosystem/api-design 302!
+# END: anuary 2020 ecosystem change
+
+# April 2020 split docs repository change
+https://www.ory.sh/docs/keto/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
+https://www.ory.sh/docs/keto/configuration https://www.ory.sh/keto/docs/reference/configuration 302!
+https://www.ory.sh/docs/keto/* https://www.ory.sh/keto/docs/:splat 302!
+
+https://www.ory.sh/docs/kratos/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
+https://www.ory.sh/docs/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
+
+https://www.ory.sh/docs/oathkeeper/sdk/api https://www.ory.sh/oathkeeper/docs/reference/api 302!
+https://www.ory.sh/docs/oathkeeper/configuration https://www.ory.sh/oathkeeper/docs/reference/configuration 302!
+https://www.ory.sh/docs/oathkeeper/* https://www.ory.sh/oathkeeper/docs/:splat 302!
+
+https://www.ory.sh/docs/performance/hydra https://www.ory.sh/hydra/docs/benchmark 302!
+https://www.ory.sh/docs/performance/ https://www.ory.sh/hydra/docs/benchmark 302!
+https://www.ory.sh/docs/hydra/sdk/api https://www.ory.sh/hydra/docs/reference/api 302!
+https://www.ory.sh/docs/hydra/configuration https://www.ory.sh/hydra/docs/reference/configuration 302!
+https://www.ory.sh/docs/hydra/* https://www.ory.sh/hydra/docs/:splat 302!
+
+https://www.ory.sh/docs/ https://www.ory.sh/docs/ecosystem 302!
+
+# END: April 2020 split docs repository change
