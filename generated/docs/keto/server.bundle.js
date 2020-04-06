@@ -20616,7 +20616,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: memory
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -20671,7 +20671,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -20708,10 +20708,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - CONNECT
-      - TRACE
       - GET
-      - HEAD
+      - PATCH
+      - TRACE
+      - POST
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20726,10 +20726,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - labore nostrud
-      - dolore nisi laborum
-      - eiusmod reprehenderit
-      - pariatur tempor ad in Ut
+      - Lorem nostrud magna qui labore
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20744,7 +20741,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - Lorem deserunt aliqua qui
+      - nisi anim
 
     ## Allow HTTP Credentials ##
     #
@@ -20770,7 +20767,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: 60719370
+    max_age: 65194540
 
     ## Enable Debugging ##
     #
@@ -20847,7 +20844,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: mem
+profiling: cpu
 
 ## Log ##
 #
@@ -20866,7 +20863,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: panic
+  level: warn
 
   ## Format ##
   #
