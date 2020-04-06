@@ -81,10 +81,16 @@ https://www.ory.sh/docs/ecosystem/usage https://www.ory.sh/docs/ecosystem/api-de
 # END: anuary 2020 ecosystem change
 
 # April 2020 split docs repository change
+https://www.ory.sh/keto/docs/sdk/ https://www.ory.sh/keto/docs/sdk/index 302!
+https://www.ory.sh/keto/docs/engines/ https://www.ory.sh/keto/docs/engines/index 302!
 https://www.ory.sh/docs/keto/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
 https://www.ory.sh/docs/keto/configuration https://www.ory.sh/keto/docs/reference/configuration 302!
 https://www.ory.sh/docs/keto/* https://www.ory.sh/keto/docs/:splat 302!
 
+https://www.ory.sh/kratos/docs/sdk/ https://www.ory.sh/kratos/docs/sdk/index/ 302!
+https://www.ory.sh/kratos/docs/concepts/ https://www.ory.sh/kratos/docs/concepts/index 302!
+https://www.ory.sh/kratos/docs/self-service/strategies/ https://www.ory.sh/kratos/docs/self-service/strategies/index 302!
+https://www.ory.sh/kratos/docs/self-service/flows/ https://www.ory.sh/kratos/docs/self-service/flows/index 302!
 https://www.ory.sh/docs/kratos/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
 https://www.ory.sh/docs/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
 
@@ -92,12 +98,14 @@ https://www.ory.sh/docs/oathkeeper/sdk/api https://www.ory.sh/oathkeeper/docs/re
 https://www.ory.sh/docs/oathkeeper/configuration https://www.ory.sh/oathkeeper/docs/reference/configuration 302!
 https://www.ory.sh/docs/oathkeeper/* https://www.ory.sh/oathkeeper/docs/:splat 302!
 
+https://www.ory.sh/hydra/docs/sdk/ https://www.ory.sh/hydra/docs/sdk/index 302!
 https://www.ory.sh/docs/performance/hydra https://www.ory.sh/hydra/docs/benchmark 302!
 https://www.ory.sh/docs/performance/ https://www.ory.sh/hydra/docs/benchmark 302!
 https://www.ory.sh/docs/hydra/sdk/api https://www.ory.sh/hydra/docs/reference/api 302!
 https://www.ory.sh/docs/hydra/configuration https://www.ory.sh/hydra/docs/reference/configuration 302!
 https://www.ory.sh/docs/hydra/* https://www.ory.sh/hydra/docs/:splat 302!
 
-https://www.ory.sh/docs/ https://www.ory.sh/docs/ecosystem 302!
+https://www.ory.sh/docs/ https://www.ory.sh/docs/index 302!
+https://www.ory.sh/docs/ecosystem https://www.ory.sh/docs/ecosystem/projects
 
 # END: April 2020 split docs repository change
