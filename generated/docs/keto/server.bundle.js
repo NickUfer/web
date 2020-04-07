@@ -20709,9 +20709,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - https://example.com
-      - https://*.example.com
-      - https://*.foo.example.com
+      - '*'
 
     ## Allowed HTTP Methods ##
     #
@@ -20726,10 +20724,6 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - HEAD
-      - CONNECT
-      - PATCH
-      - DELETE
       - PUT
 
     ## Allowed Request HTTP Headers ##
@@ -20745,10 +20739,8 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - in dolore irure
-      - enim ipsum labore deserunt exercitation
-      - est commodo Duis tempor non
-      - esse dolore consectetur
+      - deserunt eu non aliqua
+      - irure
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20763,10 +20755,10 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - in
-      - sed
-      - quis
+      - dolor culpa id
       - nulla
+      - ipsum ut in
+      - cupidatat deserunt elit eiusmod
 
     ## Allow HTTP Credentials ##
     #
@@ -20792,7 +20784,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -67130046
+    max_age: -59513352
 
     ## Enable Debugging ##
     #
@@ -20869,7 +20861,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: cpu
+profiling: mem
 
 ## Log ##
 #
@@ -20888,7 +20880,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: error
+  level: info
 
   ## Format ##
   #
@@ -20902,7 +20894,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: text
+  format: json
 
 ## tracing ##
 #
