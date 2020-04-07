@@ -12258,7 +12258,7 @@ function renderRoutes(routes, extraProps, switchProps) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[["@docusaurus/plugin-content-docs",{"path":"docs","sidebarPath":"/home/circleci/project/docs/contrib/sidebar.js","editUrl":"https://github.com/ory/keto/edit/master/docs","routeBasePath":"","showLastUpdateAuthor":true,"showLastUpdateTime":true,"remarkPlugins":[null]}],["@docusaurus/plugin-content-pages"],["@docusaurus/plugin-google-analytics"],["@docusaurus/plugin-sitemap"]],"themes":[["@docusaurus/theme-classic",{"customCss":"/home/circleci/project/docs/src/css/theme.css"}],["@docusaurus/theme-search-algolia"]],"customFields":{},"themeConfig":{"googleAnalytics":{"trackingID":"UA-71865250-1","anonymizeIP":true},"algolia":{"apiKey":"8463c6ece843b377565726bb4ed325b0","indexName":"ory","algoliaOptions":{"facetFilters":["tags:keto","tags:ecosystem","version:v0.5"]}},"navbar":{"logo":{"alt":"ORY Keto","src":"img/logo-keto.svg","href":"https://www.ory.sh/keto"},"links":[{"to":"index","activeBasePath":"keto/docs","label":"Docs","position":"left"},{"href":"https://www.ory.sh/docs","label":"Ecosystem","position":"left"},{"href":"https://www.ory.sh/blog","label":"Blog","position":"left"},{"href":"https://community.ory.sh","label":"Forum","position":"left"},{"href":"https://www.ory.sh/chat","label":"Chat","position":"left"},{"href":"https://github.com/ory/keto","label":"GitHub","position":"left"},{"label":"v0.5","position":"right","to":"versions"}]},"footer":{"style":"dark","copyright":"Copyright © 2020 ORY GmbH","links":[{"title":"Company","items":[{"label":"Imprint","href":"https://www.ory.sh/imprint"},{"label":"Privacy","href":"https://www.ory.sh/privacy"},{"label":"Terms","href":"https://www.ory.sh/tos"}]}]}},"title":"ORY Keto","tagline":"A cloud native access control server providing best-practice patterns (RBAC, ABAC, ACL, AWS IAM Policies, Kubernetes Roles, ...) via REST APIs.","url":"https://www.ory.sh/","baseUrl":"/keto/docs/","favicon":"img/favico.png","organizationName":"ory","projectName":"keto"});
+/* harmony default export */ __webpack_exports__["a"] = ({"plugins":[["@docusaurus/plugin-content-docs",{"path":"docs","sidebarPath":"/home/circleci/project/docs/contrib/sidebar.js","editUrl":"https://github.com/ory/keto/edit/master/docs","routeBasePath":"","showLastUpdateAuthor":true,"showLastUpdateTime":true,"remarkPlugins":[null]}],["@docusaurus/plugin-content-pages"],["@docusaurus/plugin-google-analytics"],["@docusaurus/plugin-sitemap"]],"themes":[["@docusaurus/theme-classic",{"customCss":"/home/circleci/project/docs/src/css/theme.css"}],["@docusaurus/theme-search-algolia"]],"customFields":{},"themeConfig":{"googleAnalytics":{"trackingID":"UA-71865250-1","anonymizeIP":true},"algolia":{"apiKey":"8463c6ece843b377565726bb4ed325b0","indexName":"ory","algoliaOptions":{"facetFilters":["tags:keto","version:v0.5"]}},"navbar":{"logo":{"alt":"ORY Keto","src":"img/logo-keto.svg","href":"https://www.ory.sh/keto"},"links":[{"to":"index","activeBasePath":"keto/docs","label":"Docs","position":"left"},{"href":"https://www.ory.sh/docs","label":"Ecosystem","position":"left"},{"href":"https://www.ory.sh/blog","label":"Blog","position":"left"},{"href":"https://community.ory.sh","label":"Forum","position":"left"},{"href":"https://www.ory.sh/chat","label":"Chat","position":"left"},{"href":"https://github.com/ory/keto","label":"GitHub","position":"left"},{"label":"v0.5","position":"right","to":"versions"}]},"footer":{"style":"dark","copyright":"Copyright © 2020 ORY GmbH","links":[{"title":"Company","items":[{"label":"Imprint","href":"https://www.ory.sh/imprint"},{"label":"Privacy","href":"https://www.ory.sh/privacy"},{"label":"Terms","href":"https://www.ory.sh/tos"}]}]}},"title":"ORY Keto","tagline":"A cloud native access control server providing best-practice patterns (RBAC, ABAC, ACL, AWS IAM Policies, Kubernetes Roles, ...) via REST APIs.","url":"https://www.ory.sh/","baseUrl":"/keto/docs/","favicon":"img/favico.png","organizationName":"ory","projectName":"keto"});
 
 /***/ }),
 /* 76 */
@@ -16751,7 +16751,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
 /* harmony import */ var _versions_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(104);
 var _versions_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(104, 1);
-function Version(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();const{siteConfig={}}=context;const latestVersion=_versions_json__WEBPACK_IMPORTED_MODULE_5__[0];const pastVersions=_versions_json__WEBPACK_IMPORTED_MODULE_5__.filter(version=>version!==latestVersion);const repoUrl=`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{permalink:"/versions",description:"Page listing all documented site versions"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--xl"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Documentation versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"latest"},"Latest version (Stable)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the latest documentation."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,latestVersion),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"next"},"Next version (Unreleased)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the documentation for unreleased version."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,"master"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/next/index')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:repoUrl},"Source Code")))))),pastVersions.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"archive"},"Past Versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find documentation for previous versions."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,pastVersions.map(version=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{key:version},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,version),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(`/docs/${version}/index`)},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))))));}/* harmony default export */ __webpack_exports__["default"] = (Version);
+function Version(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();const{siteConfig={}}=context;const latestVersion=_versions_json__WEBPACK_IMPORTED_MODULE_5__[0];const pastVersions=_versions_json__WEBPACK_IMPORTED_MODULE_5__.filter(version=>version!==latestVersion);const repoUrl=`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{permalink:"/versions",description:"Page listing all documented site versions"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--xl"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Documentation versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"latest"},"Latest version (Stable)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the latest documentation."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,latestVersion),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"next"},"Next version (Unreleased)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the documentation for unreleased version."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,"master"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/next/index')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:repoUrl},"Source Code")))))),pastVersions.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"archive"},"Past Versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find documentation for previous versions."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,pastVersions.map(version=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{key:version},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,version),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(`/${version}/index`)},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))))));}/* harmony default export */ __webpack_exports__["default"] = (Version);
 
 /***/ }),
 /* 140 */
@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: mysql://user:password@tcp(host:123)/database
+dsn: memory
 
 ## HTTP REST API ##
 #
@@ -20689,7 +20689,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -20709,7 +20709,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - '*'
+      - https://example.com
+      - https://*.example.com
+      - https://*.foo.example.com
 
     ## Allowed HTTP Methods ##
     #
@@ -20724,7 +20726,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - TRACE
+      - HEAD
+      - PUT
+      - DELETE
+      - CONNECT
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20739,9 +20744,8 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - id
-      - veniam amet aliqua eu
-      - ex Lorem Duis officia
+      - dolor
+      - minim sint
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20756,8 +20760,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - dolore dolor occaecat culpa sed
-      - voluptate irure in
+      - aliquip elit sint
 
     ## Allow HTTP Credentials ##
     #
@@ -20771,7 +20774,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: true
+    allow_credentials: false
 
     ## Maximum Age ##
     #
@@ -20783,7 +20786,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -52463320
+    max_age: 93062192
 
     ## Enable Debugging ##
     #
@@ -20860,7 +20863,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: cpu
+profiling: ''
 
 ## Log ##
 #
@@ -20879,7 +20882,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: fatal
+  level: debug
 
   ## Format ##
   #
@@ -20893,7 +20896,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: text
+  format: json
 
 ## tracing ##
 #
@@ -22960,7 +22963,7 @@ context of access control, you'll often encounter `,Object(_mdx_js_react__WEBPAC
 /* 166 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"docsSidebars\":{\"version-v0.5/docs\":[{\"type\":\"category\",\"label\":\"Introduction\",\"items\":[{\"type\":\"link\",\"label\":\"Introduction\",\"href\":\"/keto/docs/index\"},{\"type\":\"link\",\"label\":\"Installation\",\"href\":\"/keto/docs/install\"}]},{\"type\":\"category\",\"label\":\"Guides\",\"items\":[{\"type\":\"link\",\"label\":\"Configure and Deploy\",\"href\":\"/keto/docs/configure-deploy\"},{\"type\":\"link\",\"label\":\"Secure\",\"href\":\"/keto/docs/secure\"}]},{\"type\":\"category\",\"label\":\"Access Control Engines\",\"items\":[{\"type\":\"link\",\"label\":\"Access Control Engines - Introduction\",\"href\":\"/keto/docs/engines/index\"},{\"type\":\"link\",\"label\":\"Access Control Lists (ACL)\",\"href\":\"/keto/docs/engines/acl\"},{\"type\":\"link\",\"label\":\"Role Based Access Control (RBAC)\",\"href\":\"/keto/docs/engines/rbac\"},{\"type\":\"link\",\"label\":\"ORY Access Control Policies\",\"href\":\"/keto/docs/engines/acp-ory\"},{\"type\":\"link\",\"label\":\"AWS IAM Policies\",\"href\":\"/keto/docs/engines/acp-aws\"}]},{\"type\":\"category\",\"label\":\"Reference\",\"items\":[{\"type\":\"link\",\"label\":\"Configuration\",\"href\":\"/keto/docs/reference/configuration\"},{\"type\":\"link\",\"label\":\"REST API\",\"href\":\"/keto/docs/reference/api\"}]},{\"type\":\"category\",\"label\":\"SDKs\",\"items\":[{\"type\":\"link\",\"label\":\"Overview\",\"href\":\"/keto/docs/sdk/index\"}]},{\"type\":\"category\",\"label\":\"ORY Kratos\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/kratos\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/kratos/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/kratos\"}]},{\"type\":\"category\",\"label\":\"ORY Hydra\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/hydra\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/hydra/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/hydra\"}]},{\"type\":\"category\",\"label\":\"ORY Oathkeeper\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/oathkeeper\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/oathkeeper/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/oathkeeper\"}]}]},\"permalinkToSidebar\":{\"/keto/docs/configure-deploy\":\"version-v0.5/docs\",\"/keto/docs/engines/acl\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-aws\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-ory\":\"version-v0.5/docs\",\"/keto/docs/engines/index\":\"version-v0.5/docs\",\"/keto/docs/engines/rbac\":\"version-v0.5/docs\",\"/keto/docs/index\":\"version-v0.5/docs\",\"/keto/docs/install\":\"version-v0.5/docs\",\"/keto/docs/reference/api\":\"version-v0.5/docs\",\"/keto/docs/reference/configuration\":\"version-v0.5/docs\",\"/keto/docs/sdk/index\":\"version-v0.5/docs\",\"/keto/docs/secure\":\"version-v0.5/docs\"},\"version\":\"v0.5\"}");
+module.exports = JSON.parse("{\"docsSidebars\":{\"version-v0.5/docs\":[{\"type\":\"category\",\"label\":\"Introduction\",\"items\":[{\"type\":\"link\",\"label\":\"Introduction\",\"href\":\"/keto/docs/index\"},{\"type\":\"link\",\"label\":\"Installation\",\"href\":\"/keto/docs/install\"}]},{\"type\":\"category\",\"label\":\"Guides\",\"items\":[{\"type\":\"link\",\"label\":\"Configure and Deploy\",\"href\":\"/keto/docs/configure-deploy\"},{\"type\":\"link\",\"label\":\"Secure\",\"href\":\"/keto/docs/secure\"}]},{\"type\":\"category\",\"label\":\"Access Control Engines\",\"items\":[{\"type\":\"link\",\"label\":\"Access Control Engines - Introduction\",\"href\":\"/keto/docs/engines/index\"},{\"type\":\"link\",\"label\":\"Access Control Lists (ACL)\",\"href\":\"/keto/docs/engines/acl\"},{\"type\":\"link\",\"label\":\"Role Based Access Control (RBAC)\",\"href\":\"/keto/docs/engines/rbac\"},{\"type\":\"link\",\"label\":\"ORY Access Control Policies\",\"href\":\"/keto/docs/engines/acp-ory\"},{\"type\":\"link\",\"label\":\"AWS IAM Policies\",\"href\":\"/keto/docs/engines/acp-aws\"}]},{\"type\":\"category\",\"label\":\"Reference\",\"items\":[{\"type\":\"link\",\"label\":\"Configuration\",\"href\":\"/keto/docs/reference/configuration\"},{\"type\":\"link\",\"label\":\"REST API\",\"href\":\"/keto/docs/reference/api\"}]},{\"type\":\"category\",\"label\":\"SDKs\",\"items\":[{\"type\":\"link\",\"label\":\"Overview\",\"href\":\"/keto/docs/sdk/index\"}]},{\"type\":\"category\",\"label\":\"ORY Kratos\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/kratos\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/kratos/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/kratos\"}]},{\"type\":\"category\",\"label\":\"ORY Hydra\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/hydra\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/hydra/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/hydra\"}]},{\"type\":\"category\",\"label\":\"ORY Oathkeeper\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/oathkeeper\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/oathkeeper/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/oathkeeper\"}]},{\"type\":\"category\",\"label\":\"ORY Keto\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/Keto\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/Keto/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/Keto\"}]}]},\"permalinkToSidebar\":{\"/keto/docs/configure-deploy\":\"version-v0.5/docs\",\"/keto/docs/engines/acl\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-aws\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-ory\":\"version-v0.5/docs\",\"/keto/docs/engines/index\":\"version-v0.5/docs\",\"/keto/docs/engines/rbac\":\"version-v0.5/docs\",\"/keto/docs/index\":\"version-v0.5/docs\",\"/keto/docs/install\":\"version-v0.5/docs\",\"/keto/docs/reference/api\":\"version-v0.5/docs\",\"/keto/docs/reference/configuration\":\"version-v0.5/docs\",\"/keto/docs/sdk/index\":\"version-v0.5/docs\",\"/keto/docs/secure\":\"version-v0.5/docs\"},\"version\":\"v0.5\"}");
 
 /***/ }),
 /* 167 */
@@ -23008,7 +23011,7 @@ $ export DSN=postgres://keto:secret@ory-keto-example--postgres:5432/keto?sslmode
 $ docker run -it --rm \\
   --network ketoguide \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   migrate sql -e
 
 Applying \`client\` SQL migrations...
@@ -23021,7 +23024,7 @@ $ docker run -d \\
   --network ketoguide \\
   -p 4466:4466 \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   serve
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Great, the server is running now! Make sure to check the logs and see if there
 were any errors or issues before moving on to the next step:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker logs ory-keto-example--keto
@@ -23045,12 +23048,12 @@ $ docker run -it --rm \\
   --network ketoguide \\
   -v $(pwd)/policies:/policies \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory policies import exact /policies/example-policy.json
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if the policy has been created:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory policies get exact example-policy
 {
   "actions": [
@@ -23060,7 +23063,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if Alice is allowed to delete the blog post:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory allowed exact alice blog_posts:my-first-blog-post delete
 {
         "allowed": true
@@ -23068,7 +23071,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Other users like Bob can not delete it:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory allowed exact bob blog_posts:my-first-blog-post delete
 {
         "allowed": false
@@ -23653,7 +23656,7 @@ $ export DSN=postgres://keto:secret@ory-keto-example--postgres:5432/keto?sslmode
 $ docker run -it --rm \\
   --network ketoguide \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   migrate sql -e
 
 Applying \`client\` SQL migrations...
@@ -23666,7 +23669,7 @@ $ docker run -d \\
   --network ketoguide \\
   -p 4466:4466 \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   serve
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Great, the server is running now! Make sure to check the logs and see if there
 were any errors or issues before moving on to the next step:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker logs ory-keto-example--keto
@@ -23690,12 +23693,12 @@ $ docker run -it --rm \\
   --network ketoguide \\
   -v $(pwd)/policies:/policies \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory policies import exact /policies/example-policy.json
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if the policy has been created:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory policies get exact example-policy
 {
   "actions": [
@@ -23705,7 +23708,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if Alice is allowed to delete the blog post:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory allowed exact alice blog_posts:my-first-blog-post delete
 {
         "allowed": true
@@ -23713,7 +23716,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Other users like Bob can not delete it:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.4-alpha.1 \\
+  oryd/keto:v0.5.3-alpha.3 \\
   engines acp ory allowed exact bob blog_posts:my-first-blog-post delete
 {
         "allowed": false
@@ -25313,7 +25316,7 @@ All configuration values can be set using environment variables, as documented b
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: mysql://user:password@tcp(host:123)/database
+dsn: postgres://user:password@host:123/database
 
 ## HTTP REST API ##
 #
@@ -25350,7 +25353,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: ""
+  host: localhost
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -25370,7 +25373,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -25390,7 +25393,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - "*"
+      - https://example.com
+      - https://*.example.com
+      - https://*.foo.example.com
 
     ## Allowed HTTP Methods ##
     #
@@ -25405,6 +25410,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
+      - PATCH
+      - HEAD
+      - POST
+      - CONNECT
       - TRACE
 
     ## Allowed Request HTTP Headers ##
@@ -25420,9 +25429,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - id
-      - veniam amet aliqua eu
-      - ex Lorem Duis officia
+      - dolore
+      - nostrud ea
+      - nostrud ut qui
 
     ## Allowed Response HTTP Headers ##
     #
@@ -25437,8 +25446,11 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - dolore dolor occaecat culpa sed
-      - voluptate irure in
+      - magna laborum amet nostrud laboris
+      - eu consequat do
+      - laborum voluptate deserunt fugiat cillum
+      - in
+      - consequat consectetur exercitation proident
 
     ## Allow HTTP Credentials ##
     #
@@ -25452,7 +25464,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: true
+    allow_credentials: false
 
     ## Maximum Age ##
     #
@@ -25464,7 +25476,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -52463320
+    max_age: 75363283
 
     ## Enable Debugging ##
     #
@@ -25544,7 +25556,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: cpu
+profiling: mem
 
 ## Log ##
 #
@@ -25564,7 +25576,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: fatal
+  level: debug
 
   ## Format ##
   #
@@ -25578,7 +25590,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: text
+  format: json
 
 ## tracing ##
 #
