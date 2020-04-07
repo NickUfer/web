@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: postgres://user:password@host:123/database
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -20724,7 +20724,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - PUT
+      - TRACE
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20739,8 +20739,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - deserunt eu non aliqua
-      - irure
+      - id
+      - veniam amet aliqua eu
+      - ex Lorem Duis officia
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20755,10 +20756,8 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - dolor culpa id
-      - nulla
-      - ipsum ut in
-      - cupidatat deserunt elit eiusmod
+      - dolore dolor occaecat culpa sed
+      - voluptate irure in
 
     ## Allow HTTP Credentials ##
     #
@@ -20784,7 +20783,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -59513352
+    max_age: -52463320
 
     ## Enable Debugging ##
     #
@@ -20861,7 +20860,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: mem
+profiling: cpu
 
 ## Log ##
 #
@@ -20880,7 +20879,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: info
+  level: fatal
 
   ## Format ##
   #
@@ -20894,7 +20893,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: json
+  format: text
 
 ## tracing ##
 #
@@ -22961,7 +22960,7 @@ context of access control, you'll often encounter `,Object(_mdx_js_react__WEBPAC
 /* 166 */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"docsSidebars\":{\"version-v0.5/docs\":[{\"type\":\"category\",\"label\":\"Introduction\",\"items\":[{\"type\":\"link\",\"label\":\"Introduction\",\"href\":\"/keto/docs/index\"},{\"type\":\"link\",\"label\":\"Installation\",\"href\":\"/keto/docs/install\"}]},{\"type\":\"category\",\"label\":\"Guides\",\"items\":[{\"type\":\"link\",\"label\":\"Configure and Deploy\",\"href\":\"/keto/docs/configure-deploy\"},{\"type\":\"link\",\"label\":\"Secure\",\"href\":\"/keto/docs/secure\"}]},{\"type\":\"category\",\"label\":\"Access Control Engines\",\"items\":[{\"type\":\"link\",\"label\":\"Access Control Engines - Introduction\",\"href\":\"/keto/docs/engines/index\"},{\"type\":\"link\",\"label\":\"Access Control Lists (ACL)\",\"href\":\"/keto/docs/engines/acl\"},{\"type\":\"link\",\"label\":\"Role Based Access Control (RBAC)\",\"href\":\"/keto/docs/engines/rbac\"},{\"type\":\"link\",\"label\":\"ORY Access Control Policies\",\"href\":\"/keto/docs/engines/acp-ory\"},{\"type\":\"link\",\"label\":\"AWS IAM Policies\",\"href\":\"/keto/docs/engines/acp-aws\"}]},{\"type\":\"category\",\"label\":\"Reference\",\"items\":[{\"type\":\"link\",\"label\":\"Configuration\",\"href\":\"/keto/docs/reference/configuration\"},{\"type\":\"link\",\"label\":\"REST API\",\"href\":\"/keto/docs/reference/api\"}]},{\"type\":\"category\",\"label\":\"SDKs\",\"items\":[{\"type\":\"link\",\"label\":\"Overview\",\"href\":\"/keto/docs/sdk/index\"}]},{\"type\":\"category\",\"label\":\"ORY Kratos\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/kratos\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/kratos/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/kratos\"}]},{\"type\":\"category\",\"label\":\"ORY Hydra\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/hydra\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/hydra/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/hydra\"}]},{\"type\":\"category\",\"label\":\"ORY Oathkeeper\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/oathkeeper\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/oathkeeper/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/oathkeeper\"}]},{\"type\":\"category\",\"label\":\"ORY Keto\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/Keto\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/Keto/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/Keto\"}]}]},\"permalinkToSidebar\":{\"/keto/docs/configure-deploy\":\"version-v0.5/docs\",\"/keto/docs/engines/acl\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-aws\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-ory\":\"version-v0.5/docs\",\"/keto/docs/engines/index\":\"version-v0.5/docs\",\"/keto/docs/engines/rbac\":\"version-v0.5/docs\",\"/keto/docs/index\":\"version-v0.5/docs\",\"/keto/docs/install\":\"version-v0.5/docs\",\"/keto/docs/reference/api\":\"version-v0.5/docs\",\"/keto/docs/reference/configuration\":\"version-v0.5/docs\",\"/keto/docs/sdk/index\":\"version-v0.5/docs\",\"/keto/docs/secure\":\"version-v0.5/docs\"},\"version\":\"v0.5\"}");
+module.exports = JSON.parse("{\"docsSidebars\":{\"version-v0.5/docs\":[{\"type\":\"category\",\"label\":\"Introduction\",\"items\":[{\"type\":\"link\",\"label\":\"Introduction\",\"href\":\"/keto/docs/index\"},{\"type\":\"link\",\"label\":\"Installation\",\"href\":\"/keto/docs/install\"}]},{\"type\":\"category\",\"label\":\"Guides\",\"items\":[{\"type\":\"link\",\"label\":\"Configure and Deploy\",\"href\":\"/keto/docs/configure-deploy\"},{\"type\":\"link\",\"label\":\"Secure\",\"href\":\"/keto/docs/secure\"}]},{\"type\":\"category\",\"label\":\"Access Control Engines\",\"items\":[{\"type\":\"link\",\"label\":\"Access Control Engines - Introduction\",\"href\":\"/keto/docs/engines/index\"},{\"type\":\"link\",\"label\":\"Access Control Lists (ACL)\",\"href\":\"/keto/docs/engines/acl\"},{\"type\":\"link\",\"label\":\"Role Based Access Control (RBAC)\",\"href\":\"/keto/docs/engines/rbac\"},{\"type\":\"link\",\"label\":\"ORY Access Control Policies\",\"href\":\"/keto/docs/engines/acp-ory\"},{\"type\":\"link\",\"label\":\"AWS IAM Policies\",\"href\":\"/keto/docs/engines/acp-aws\"}]},{\"type\":\"category\",\"label\":\"Reference\",\"items\":[{\"type\":\"link\",\"label\":\"Configuration\",\"href\":\"/keto/docs/reference/configuration\"},{\"type\":\"link\",\"label\":\"REST API\",\"href\":\"/keto/docs/reference/api\"}]},{\"type\":\"category\",\"label\":\"SDKs\",\"items\":[{\"type\":\"link\",\"label\":\"Overview\",\"href\":\"/keto/docs/sdk/index\"}]},{\"type\":\"category\",\"label\":\"ORY Kratos\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/kratos\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/kratos/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/kratos\"}]},{\"type\":\"category\",\"label\":\"ORY Hydra\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/hydra\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/hydra/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/hydra\"}]},{\"type\":\"category\",\"label\":\"ORY Oathkeeper\",\"items\":[{\"type\":\"link\",\"label\":\"Home\",\"href\":\"https://www.ory.sh/oathkeeper\"},{\"type\":\"link\",\"label\":\"Docs\",\"href\":\"https://www.ory.sh/oathkeeper/docs\"},{\"type\":\"link\",\"label\":\"GitHub\",\"href\":\"https://github.com/ory/oathkeeper\"}]}]},\"permalinkToSidebar\":{\"/keto/docs/configure-deploy\":\"version-v0.5/docs\",\"/keto/docs/engines/acl\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-aws\":\"version-v0.5/docs\",\"/keto/docs/engines/acp-ory\":\"version-v0.5/docs\",\"/keto/docs/engines/index\":\"version-v0.5/docs\",\"/keto/docs/engines/rbac\":\"version-v0.5/docs\",\"/keto/docs/index\":\"version-v0.5/docs\",\"/keto/docs/install\":\"version-v0.5/docs\",\"/keto/docs/reference/api\":\"version-v0.5/docs\",\"/keto/docs/reference/configuration\":\"version-v0.5/docs\",\"/keto/docs/sdk/index\":\"version-v0.5/docs\",\"/keto/docs/secure\":\"version-v0.5/docs\"},\"version\":\"v0.5\"}");
 
 /***/ }),
 /* 167 */
@@ -23009,7 +23008,7 @@ $ export DSN=postgres://keto:secret@ory-keto-example--postgres:5432/keto?sslmode
 $ docker run -it --rm \\
   --network ketoguide \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   migrate sql -e
 
 Applying \`client\` SQL migrations...
@@ -23022,7 +23021,7 @@ $ docker run -d \\
   --network ketoguide \\
   -p 4466:4466 \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   serve
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Great, the server is running now! Make sure to check the logs and see if there
 were any errors or issues before moving on to the next step:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker logs ory-keto-example--keto
@@ -23046,12 +23045,12 @@ $ docker run -it --rm \\
   --network ketoguide \\
   -v $(pwd)/policies:/policies \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory policies import exact /policies/example-policy.json
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if the policy has been created:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory policies get exact example-policy
 {
   "actions": [
@@ -23061,7 +23060,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if Alice is allowed to delete the blog post:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory allowed exact alice blog_posts:my-first-blog-post delete
 {
         "allowed": true
@@ -23069,7 +23068,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Other users like Bob can not delete it:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory allowed exact bob blog_posts:my-first-blog-post delete
 {
         "allowed": false
@@ -23654,7 +23653,7 @@ $ export DSN=postgres://keto:secret@ory-keto-example--postgres:5432/keto?sslmode
 $ docker run -it --rm \\
   --network ketoguide \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   migrate sql -e
 
 Applying \`client\` SQL migrations...
@@ -23667,7 +23666,7 @@ $ docker run -d \\
   --network ketoguide \\
   -p 4466:4466 \\
   -e DSN=$DSN \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   serve
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Great, the server is running now! Make sure to check the logs and see if there
 were any errors or issues before moving on to the next step:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker logs ory-keto-example--keto
@@ -23691,12 +23690,12 @@ $ docker run -it --rm \\
   --network ketoguide \\
   -v $(pwd)/policies:/policies \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory policies import exact /policies/example-policy.json
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if the policy has been created:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory policies get exact example-policy
 {
   "actions": [
@@ -23706,7 +23705,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Check if Alice is allowed to delete the blog post:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory allowed exact alice blog_posts:my-first-blog-post delete
 {
         "allowed": true
@@ -23714,7 +23713,7 @@ $ docker run -it --rm \\
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Other users like Bob can not delete it:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker run -it --rm \\
   --network ketoguide \\
   -e KETO_URL=http://ory-keto-example--keto:4466/ \\
-  oryd/keto:v0.5.3-alpha.3 \\
+  oryd/keto:v0.5.4-alpha.1 \\
   engines acp ory allowed exact bob blog_posts:my-first-blog-post delete
 {
         "allowed": false
@@ -25314,7 +25313,7 @@ All configuration values can be set using environment variables, as documented b
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: postgres://user:password@host:123/database
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -25351,7 +25350,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: localhost
+  host: ""
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -25371,7 +25370,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
     ## Allowed Origins ##
     #
@@ -25391,9 +25390,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - https://example.com
-      - https://*.example.com
-      - https://*.foo.example.com
+      - "*"
 
     ## Allowed HTTP Methods ##
     #
@@ -25408,10 +25405,6 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - PATCH
-      - HEAD
-      - POST
-      - CONNECT
       - TRACE
 
     ## Allowed Request HTTP Headers ##
@@ -25427,9 +25420,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - dolore
-      - nostrud ea
-      - nostrud ut qui
+      - id
+      - veniam amet aliqua eu
+      - ex Lorem Duis officia
 
     ## Allowed Response HTTP Headers ##
     #
@@ -25444,11 +25437,8 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - magna laborum amet nostrud laboris
-      - eu consequat do
-      - laborum voluptate deserunt fugiat cillum
-      - in
-      - consequat consectetur exercitation proident
+      - dolore dolor occaecat culpa sed
+      - voluptate irure in
 
     ## Allow HTTP Credentials ##
     #
@@ -25462,7 +25452,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: false
+    allow_credentials: true
 
     ## Maximum Age ##
     #
@@ -25474,7 +25464,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: 75363283
+    max_age: -52463320
 
     ## Enable Debugging ##
     #
@@ -25554,7 +25544,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: mem
+profiling: cpu
 
 ## Log ##
 #
@@ -25574,7 +25564,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: debug
+  level: fatal
 
   ## Format ##
   #
@@ -25588,7 +25578,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: json
+  format: text
 
 ## tracing ##
 #
