@@ -31,8 +31,8 @@ const projects = [
     className: pstyles.keto,
     title: `${brandPrefix}/ Keto`,
     description:
-      'A best practices access control server. Use established standard patterns (RBAC, ABAC, ACL, AWS IAM) via REST API.',
-    url: 'https://github.com/ory/keto',
+      'Access Control and Permission Management Server. Use best practices (RBAC, ABAC, ACL, ...) to secure your application.',
+    path: '/keto',
   },
 ]
 

@@ -59,7 +59,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-MJD22FZ');`,
           }}
         />
-        <script src="/scripts/keyshapejs-1.1.0.min.js" />
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}

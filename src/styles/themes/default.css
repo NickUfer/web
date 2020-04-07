@@ -38,7 +38,7 @@
 
   --colors-keto-default: #00A571;
   --colors-keto-weak: #6BE2BD;
-  --colors-keto-light: #E3F6EF;
+  --colors-keto-light: #f5fffb;
 }
 
 .theme-hydra {
@@ -57,4 +57,10 @@
   --colors-themed-default: var(--colors-kratos-default);
   --colors-themed-weak: var(--colors-kratos-weak);
   --colors-themed-light: var(--colors-kratos-light);
+}
+
+.theme-keto {
+  --colors-themed-default: var(--colors-keto-default);
+  --colors-themed-weak: var(--colors-keto-weak);
+  --colors-themed-light: var(--colors-keto-light);
 }
