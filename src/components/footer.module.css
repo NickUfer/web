@@ -8,6 +8,7 @@
 
 .footer a:any-link {
   color: var(--colors-base-white);
+
   &:hover,
   &:active,
   &:focus {
@@ -16,21 +17,35 @@
 }
 
 .footer .contact {
-  margin-top: 16px;
-  margin-bottom: 2px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 168%;
+  margin-bottom: 8px;
+  margin-top: 32px;
 }
 
 .footer .copyright {
-  color: var(--colors-base-white);
+  color: var(--colors-base-grey);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 168%;
+  margin-bottom: 16px;
+}
+
+.footer .divider {
+  border-top: 1px solid var(--colors-base-grey);
+  margin: 32px 0;
 }
 
 .list-title {
   color: var(--colors-base-white);
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 168%;
-  margin: 0;
+  margin-bottom: 16px;
   padding: 0;
 }
 
@@ -40,32 +55,86 @@
 }
 
 .item {
-  margin: 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 168%;
+  margin-bottom: 8px;
   padding: 0;
   list-style-type: none;
-
-  & a:any-link {
-    font-size: 14px;
-    line-height: 168%;
-  }
 }
 
 .menu-row {
   justify-content: flex-end;
 }
 
+.menu-row a:any-link {
+  color: var(--colors-base-light);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--colors-themed-default);
+  }
+}
+
 .menu-item {
-  margin-right: 32px;
+  margin-right: 64px;
+
+  &:last-child {
+    margin-right: 0 !important;
+  }
+}
+
+.comp-row {
+  justify-content: flex-end;
+}
+
+.comp-row a:any-link {
+  color: var(--colors-base-grey);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--colors-themed-default);
+  }
+}
+
+.comp-item {
+  float: left;
+  display: block;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 168%;
+  margin-bottom: 8px;
+  margin-right: 64px;
+
+  &:last-child {
+    margin-right: 0 !important;
+  }
 }
 
 @media (--mobile-viewport) {
+
   .menu-row {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .comp-row {
     justify-content: center;
     flex-direction: column;
   }
 
   .menu-item {
     margin-bottom: 32px;
+    margin-right: 0;
+  }
+
+  .comp-item {
+    float: none;
+    margin-bottom: 16px;
     margin-right: 0;
   }
 }

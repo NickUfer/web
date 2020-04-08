@@ -6,6 +6,9 @@ declare const styles: {
   readonly list: string
   readonly item: string
   readonly menuRow: string
+  readonly compRow: string
   readonly menuItem: string
+  readonly compItem: string
+  readonly divider: string
 }
 export = styles
