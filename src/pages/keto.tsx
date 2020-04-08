@@ -4,23 +4,26 @@ import CompressedHero from '../components/compressed-hero'
 import Newsletter from '../components/newsletter'
 import CompressedSection from '../components/compressed-section'
 import SEO from '../components/seo'
-import ketoPolyglot from '../images/keto/svg_keto_p.svg'
 import Stats from '../components/stats'
-import CodeBox, { Languages } from '../components/codebox'
-import ketoProcess from '../images/keto/svg_keto.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
+import ketoProcess from '../images/keto/keto.svg'
+import ketoPolyglot from '../images/keto/keto_p.svg'
 
 const KetoAnimation = () => (
   <img
-    alt="Keto Permission and Role Management"
+    alt="The ORY Keto Permission and Role Management"
     className="responsive"
     src={ketoProcess}
   />
 )
 
 const KetoSdk = () => (
-  <img alt="ORY Keto SDKs" className="responsive" src={ketoPolyglot} />
+  <img
+    alt="ORY Keto SDKs"
+    className="responsive"
+    src={ketoPolyglot}
+  />
 )
 
 const KetoPage = () => (

@@ -4,15 +4,27 @@ import CompressedHero from '../components/compressed-hero'
 import Newsletter from '../components/newsletter'
 import CompressedSection from '../components/compressed-section'
 import SEO from '../components/seo'
-import kratosPolyglot from '../images/kratos/svg_kratos_p.svg'
 import Stats from '../components/stats'
 import CodeBox, { Languages } from '../components/codebox'
-import KratosAnimation from '../images/animations/kratos.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
+import kratosProcess from '../images/kratos/kratos.svg'
+import kratosPolyglot from '../images/kratos/kratos_p.svg'
+
+const KratosAnimation = () => (
+  <img
+    alt="The ORY Kratos user login and registration service"
+    className="responsive"
+    src={kratosProcess}
+  />
+)
 
 const KratosSdk = () => (
-  <img alt="ORY Kratos SDKs" className="responsive" src={kratosPolyglot} />
+  <img
+    alt="ORY Kratos SDKs"
+    className="responsive"
+    src={kratosPolyglot}
+  />
 )
 
 const IntegrationCodeBox = () => (

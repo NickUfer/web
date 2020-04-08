@@ -4,23 +4,27 @@ import CompressedHero from '../components/compressed-hero'
 import Newsletter from '../components/newsletter'
 import CompressedSection from '../components/compressed-section'
 import SEO from '../components/seo'
-import hydraPolyglot from '../images/hydra/svg_hydra_p.svg'
 import Stats from '../components/stats'
 import CodeBox, { Languages } from '../components/codebox'
-import integrationProcess from '../images/hydra/svg_hydra.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
+import hydraProcess from '../images/hydra/hydra.svg'
+import hydraPolyglot from '../images/hydra/hydra_p.svg'
 
 const HydraAnimation = () => (
   <img
     alt="The ORY Hydra login and consent flow"
     className="responsive"
-    src={integrationProcess}
+    src={hydraProcess}
   />
 )
 
 const HydraSdk = () => (
-  <img alt="ORY Hydra SDKs" className="responsive" src={hydraPolyglot} />
+  <img
+    alt="ORY Hydra SDKs"
+    className="responsive"
+    src={hydraPolyglot}
+  />
 )
 
 const IntegrationCodeBox = () => (

@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="405" height="333" viewBox="0 0 405 333" fill="none"><style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405 333" fill="none"><style>
 @keyframes a0_o { 0% { opacity: 1; } 97.5% { opacity: 1; } 100% { opacity: 0; } }
 @keyframes a1_t { 0% { transform: translate(-149px,-78px); } 17.5% { transform: translate(-149px,-78px); animation-timing-function: cubic-bezier(.4,0,1,1); } 20% { transform: translate(-139px,-78px); } 100% { transform: translate(-139px,-78px); } }
 @keyframes a1_o { 0% { opacity: 0; } 17.5% { opacity: 0; animation-timing-function: cubic-bezier(.4,0,1,1); } 18.75% { opacity: 1; } 100% { opacity: 1; } }

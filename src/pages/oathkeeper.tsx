@@ -4,12 +4,12 @@ import CompressedHero from '../components/compressed-hero'
 import Newsletter from '../components/newsletter'
 import CompressedSection from '../components/compressed-section'
 import SEO from '../components/seo'
-import oathkeeperPolyglot from '../images/oathkeeper/svg_oathkeeper_p.svg'
 import Stats from '../components/stats'
 import CodeBox, { Languages } from '../components/codebox'
-import oathkeeperProcess from '../images/oathkeeper/svg_oathkeeper.svg'
 import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
+import oathkeeperProcess from '../images/oathkeeper/oathkeeper.svg'
+import oathkeeperPolyglot from '../images/oathkeeper/oathkeeper_p.svg'
 
 const OathkeeperAnimation = () => (
   <img
