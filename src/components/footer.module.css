@@ -109,6 +109,7 @@
   line-height: 168%;
   margin-bottom: 8px;
   margin-right: 64px;
+  padding: 0;
 
   &:last-child {
     margin-right: 0 !important;
