@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: memory
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: localhost
+  host: 127.0.0.1
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20689,7 +20689,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -20724,7 +20724,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
+      - PUT
       - DELETE
+      - GET
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20739,7 +20741,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - consectetur qui incididunt pariatur
+      - id Excepteur commodo ea aliquip
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20754,10 +20756,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - proident enim pariatur in
-      - eu tempor id aliquip sed
-      - in pariatur qui
-      - cillum
+      - ad occaecat cillum
 
     ## Allow HTTP Credentials ##
     #
@@ -20783,7 +20782,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: 33324424
+    max_age: -56897051
 
     ## Enable Debugging ##
     #
@@ -20797,7 +20796,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: false
+    debug: true
 
   ## HTTPS ##
   #
@@ -20860,7 +20859,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: cpu
+profiling: mem
 
 ## Log ##
 #
@@ -20879,7 +20878,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: debug
+  level: info
 
   ## Format ##
   #
