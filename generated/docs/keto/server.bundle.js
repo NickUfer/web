@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: mysql://user:password@tcp(host:123)/database
+dsn: memory
 
 ## HTTP REST API ##
 #
@@ -20689,7 +20689,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
     ## Allowed Origins ##
     #
@@ -20709,7 +20709,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - '*'
+      - https://example.com
+      - https://*.example.com
+      - https://*.foo.example.com
 
     ## Allowed HTTP Methods ##
     #
@@ -20724,9 +20726,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - PUT
+      - TRACE
+      - PATCH
+      - CONNECT
       - DELETE
-      - GET
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20741,7 +20744,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - id Excepteur commodo ea aliquip
+      - ad in elit minim
+      - Excepteur culpa sed sint
+      - anim aliqua adipisicing veniam
+      - sit magna cupidatat irure elit
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20756,7 +20762,11 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - ad occaecat cillum
+      - enim dolor culpa aliquip
+      - consectetur culpa fugiat ut ullamco
+      - anim cillum
+      - non esse
+      - eiusmod aliquip id officia quis
 
     ## Allow HTTP Credentials ##
     #
@@ -20770,7 +20780,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: true
+    allow_credentials: false
 
     ## Maximum Age ##
     #
@@ -20782,7 +20792,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -56897051
+    max_age: 58500002
 
     ## Enable Debugging ##
     #
@@ -20796,7 +20806,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: true
+    debug: false
 
   ## HTTPS ##
   #
@@ -20878,7 +20888,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: info
+  level: error
 
   ## Format ##
   #
