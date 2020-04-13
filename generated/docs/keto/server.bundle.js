@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: memory
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -20689,7 +20689,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -20709,9 +20709,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - https://example.com
-      - https://*.example.com
-      - https://*.foo.example.com
+      - '*'
 
     ## Allowed HTTP Methods ##
     #
@@ -20726,10 +20724,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - TRACE
-      - PATCH
-      - CONNECT
-      - DELETE
+      - HEAD
+      - PUT
+      - POST
+      - GET
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20744,10 +20742,11 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - ad in elit minim
-      - Excepteur culpa sed sint
-      - anim aliqua adipisicing veniam
-      - sit magna cupidatat irure elit
+      - in
+      - aute
+      - adipisicing voluptate nostrud
+      - commodo
+      - eu amet consectetur velit ut
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20762,11 +20761,10 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - enim dolor culpa aliquip
-      - consectetur culpa fugiat ut ullamco
-      - anim cillum
-      - non esse
-      - eiusmod aliquip id officia quis
+      - ut laboris mollit id
+      - sit in consequat exercitation laboris
+      - elit
+      - labore
 
     ## Allow HTTP Credentials ##
     #
@@ -20780,7 +20778,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: false
+    allow_credentials: true
 
     ## Maximum Age ##
     #
@@ -20792,7 +20790,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: 58500002
+    max_age: -32314430
 
     ## Enable Debugging ##
     #
@@ -20806,7 +20804,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: false
+    debug: true
 
   ## HTTPS ##
   #
@@ -20869,7 +20867,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: mem
+profiling: ''
 
 ## Log ##
 #
@@ -20888,7 +20886,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: error
+  level: warn
 
   ## Format ##
   #
