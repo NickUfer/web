@@ -86,6 +86,7 @@ https://www.ory.sh/keto/docs/engines/ https://www.ory.sh/keto/docs/engines/index
 https://www.ory.sh/docs/keto/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
 https://www.ory.sh/docs/keto/configuration https://www.ory.sh/keto/docs/reference/configuration 302!
 https://www.ory.sh/docs/keto/* https://www.ory.sh/keto/docs/:splat 302!
+https://www.ory.sh/docs/next/keto/* https://www.ory.sh/keto/docs/:splat 302!
 
 https://www.ory.sh/kratos/docs/sdk/ https://www.ory.sh/kratos/docs/sdk/index/ 302!
 https://www.ory.sh/kratos/docs/concepts/ https://www.ory.sh/kratos/docs/concepts/index 302!
@@ -93,12 +94,14 @@ https://www.ory.sh/kratos/docs/self-service/strategies/ https://www.ory.sh/krato
 https://www.ory.sh/kratos/docs/self-service/flows/ https://www.ory.sh/kratos/docs/self-service/flows/index 302!
 https://www.ory.sh/docs/kratos/sdk/api https://www.ory.sh/kratos/docs/reference/api 302!
 https://www.ory.sh/docs/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
+https://www.ory.sh/docs/next/kratos/* https://www.ory.sh/kratos/docs/:splat 302!
 
 https://www.ory.sh/oathkeeper/docs/sdk/ https://www.ory.sh/oathkeeper/docs/sdk/index 302!
 https://www.ory.sh/oathkeeper/docs/pipeline/ https://www.ory.sh/oathkeeper/docs/pipeline/index 302!
 https://www.ory.sh/docs/oathkeeper/sdk/api https://www.ory.sh/oathkeeper/docs/reference/api 302!
 https://www.ory.sh/docs/oathkeeper/configuration https://www.ory.sh/oathkeeper/docs/reference/configuration 302!
 https://www.ory.sh/docs/oathkeeper/* https://www.ory.sh/oathkeeper/docs/:splat 302!
+https://www.ory.sh/docs/next/oathkeeper/* https://www.ory.sh/oathkeeper/docs/:splat 302!
 
 https://www.ory.sh/hydra/docs/sdk/ https://www.ory.sh/hydra/docs/sdk/index 302!
 https://www.ory.sh/docs/performance/hydra https://www.ory.sh/hydra/docs/benchmark 302!
@@ -106,6 +109,7 @@ https://www.ory.sh/docs/performance/ https://www.ory.sh/hydra/docs/benchmark 302
 https://www.ory.sh/docs/hydra/sdk/api https://www.ory.sh/hydra/docs/reference/api 302!
 https://www.ory.sh/docs/hydra/configuration https://www.ory.sh/hydra/docs/reference/configuration 302!
 https://www.ory.sh/docs/hydra/* https://www.ory.sh/hydra/docs/:splat 302!
+https://www.ory.sh/docs/next/hydra/* https://www.ory.sh/hydra/docs/:splat 302!
 
 https://www.ory.sh/docs/ecosystem https://www.ory.sh/docs/ecosystem/projects
 
