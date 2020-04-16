@@ -42,7 +42,7 @@ const KetoPage = () => (
       cta={[
         {
           title: 'Get started',
-          href: 'https://www.ory.sh/docs/next/keto/install',
+          href: 'https://www.ory.sh/docs/keto/install',
           style: 'primary',
         },
         {

@@ -91,7 +91,7 @@ const KratosPage = () => (
       cta={[
         {
           title: 'Get started',
-          href: 'https://www.ory.sh/docs/next/kratos/quickstart',
+          href: 'https://www.ory.sh/docs/kratos/quickstart',
           style: 'primary',
         },
         {
