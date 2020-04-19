@@ -20608,7 +20608,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/keto/docs/next/reference/configuration","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1586192597,"sidebar":"docs","previous":{"title":"AWS IAM Policies","permalink":"/keto/docs/next/engines/acp-aws"},"next":{"title":"REST API","permalink":"/keto/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.keto.yaml`),` exists, it will be used as a configuration file which
+const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/keto/docs/next/reference/configuration","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1586763589,"sidebar":"docs","previous":{"title":"AWS IAM Policies","permalink":"/keto/docs/next/engines/acp-aws"},"next":{"title":"REST API","permalink":"/keto/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.keto.yaml`),` exists, it will be used as a configuration file which
 supports all configuration settings listed below.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can load the config file from another source using the
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`-c path/to/config.yaml`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`--config path/to/config.yaml`),` flag:
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`keto --config path/to/config.yaml`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Config files can be formatted as JSON, YAML and TOML. Some configuration values
@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: mysql://user:password@tcp(host:123)/database
+dsn: postgres://user:password@host:123/database
 
 ## HTTP REST API ##
 #
@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: 127.0.0.1
+  host: ''
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20724,10 +20724,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - HEAD
+      - CONNECT
+      - TRACE
       - PUT
-      - POST
-      - GET
+      - PATCH
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20742,11 +20742,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - in
-      - aute
-      - adipisicing voluptate nostrud
-      - commodo
-      - eu amet consectetur velit ut
+      - in occaecat
+      - voluptate veniam nostrud nulla in
+      - elit occaecat aliquip in
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20761,10 +20759,11 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - ut laboris mollit id
-      - sit in consequat exercitation laboris
-      - elit
-      - labore
+      - Duis adipisicing enim
+      - dolore sunt in
+      - nulla
+      - veniam officia magna eu ut
+      - do nisi elit
 
     ## Allow HTTP Credentials ##
     #
@@ -20790,7 +20789,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -32314430
+    max_age: -9742806
 
     ## Enable Debugging ##
     #
@@ -20804,7 +20803,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: true
+    debug: false
 
   ## HTTPS ##
   #
@@ -20867,7 +20866,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: ''
+profiling: cpu
 
 ## Log ##
 #
@@ -20886,7 +20885,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: warn
+  level: debug
 
   ## Format ##
   #
