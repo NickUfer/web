@@ -20724,10 +20724,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - CONNECT
-      - TRACE
-      - PUT
-      - PATCH
+      - HEAD
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20742,9 +20739,8 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - in occaecat
-      - voluptate veniam nostrud nulla in
-      - elit occaecat aliquip in
+      - exercitation Duis aute
+      - incididunt pariatur dolore tempor veniam
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20759,11 +20755,9 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - Duis adipisicing enim
-      - dolore sunt in
-      - nulla
-      - veniam officia magna eu ut
-      - do nisi elit
+      - Ut
+      - veniam Excepteur sit aliquip laboris
+      - eu velit est quis
 
     ## Allow HTTP Credentials ##
     #
@@ -20789,7 +20783,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -9742806
+    max_age: -55468541
 
     ## Enable Debugging ##
     #
@@ -20803,7 +20797,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: false
+    debug: true
 
   ## HTTPS ##
   #
@@ -20866,7 +20860,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: cpu
+profiling: mem
 
 ## Log ##
 #
@@ -20885,7 +20879,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: debug
+  level: fatal
 
   ## Format ##
   #
@@ -25217,13 +25211,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'install',title:'Installation'};const metadata={"id":"install","title":"Installation","description":"Installing ORY Keto on any system is straightforward. We provide pre-built","source":"@site/docs/install.md","permalink":"/keto/docs/next/install","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/install.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1586170560,"sidebar":"docs","previous":{"title":"Introduction","permalink":"/keto/docs/next/index"},"next":{"title":"Configure and Deploy","permalink":"/keto/docs/next/configure-deploy"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Keto on any system is straightforward. We provide pre-built
+const frontMatter={id:'install',title:'Installation'};const metadata={"id":"install","title":"Installation","description":"Installing ORY Keto on any system is straightforward. We provide pre-built","source":"@site/docs/install.md","permalink":"/keto/docs/next/install","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/install.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1587299634,"sidebar":"docs","previous":{"title":"Introduction","permalink":"/keto/docs/next/index"},"next":{"title":"Configure and Deploy","permalink":"/keto/docs/next/configure-deploy"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Keto on any system is straightforward. We provide pre-built
 binaries, Docker images, and support a number of package managers.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"docker"},`Docker`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`We recommend using Docker to run ORY Keto:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ docker pull oryd/keto:v0.4.4-alpha.1
 $ docker run --rm -it oryd/ketov0.4.4-alpha.1 help
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"macos"},`macOS`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can install ORY Keto using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://brew.sh/"}),`homebrew`),` on macOS:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ brew tap ory/keto
 $ brew install ory/keto/keto
 $ keto help
-`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"linux"},`Linux`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`On linux, you can use `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`curl | bash`),` to fetch the latest stable binary using:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ curl https://raw.githubusercontent.com/ory/keto/master/install.sh | bash -s -- -b .
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"linux"},`Linux`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`On linux, you can use `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`bash <(curl ...)`),` to fetch the latest stable binary
+using:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ bash <(curl https://raw.githubusercontent.com/ory/keto/master/install.sh) -b . v0.4.4-alpha.1
 $ ./keto help
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You may want to move ORY Keto into your `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$PATH`),`:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ sudo mv ./keto /usr/local/bin/
 $ keto help
