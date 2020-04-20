@@ -20608,7 +20608,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/keto/docs/next/reference/configuration","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1586763589,"sidebar":"docs","previous":{"title":"AWS IAM Policies","permalink":"/keto/docs/next/engines/acp-aws"},"next":{"title":"REST API","permalink":"/keto/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.keto.yaml`),` exists, it will be used as a configuration file which
+const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/keto/docs/next/reference/configuration","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1587301980,"sidebar":"docs","previous":{"title":"AWS IAM Policies","permalink":"/keto/docs/next/engines/acp-aws"},"next":{"title":"REST API","permalink":"/keto/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.keto.yaml`),` exists, it will be used as a configuration file which
 supports all configuration settings listed below.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can load the config file from another source using the
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`-c path/to/config.yaml`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`--config path/to/config.yaml`),` flag:
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`keto --config path/to/config.yaml`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Config files can be formatted as JSON, YAML and TOML. Some configuration values
@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: postgres://user:password@host:123/database
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: ''
+  host: 127.0.0.1
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20689,7 +20689,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
     ## Allowed Origins ##
     #
@@ -20724,6 +20724,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
+      - DELETE
       - HEAD
 
     ## Allowed Request HTTP Headers ##
@@ -20739,8 +20740,11 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - exercitation Duis aute
-      - incididunt pariatur dolore tempor veniam
+      - dolor adipisicing
+      - irure
+      - id velit ut sint nisi
+      - culpa proident irure sunt in
+      - veniam
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20755,9 +20759,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - Ut
-      - veniam Excepteur sit aliquip laboris
-      - eu velit est quis
+      - dolore tempor
 
     ## Allow HTTP Credentials ##
     #
@@ -20783,7 +20785,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -55468541
+    max_age: -70832199
 
     ## Enable Debugging ##
     #
@@ -20860,7 +20862,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: mem
+profiling: ''
 
 ## Log ##
 #
@@ -20879,7 +20881,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: fatal
+  level: info
 
   ## Format ##
   #
@@ -20893,7 +20895,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: text
+  format: json
 
 ## tracing ##
 #
@@ -25211,7 +25213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'install',title:'Installation'};const metadata={"id":"install","title":"Installation","description":"Installing ORY Keto on any system is straightforward. We provide pre-built","source":"@site/docs/install.md","permalink":"/keto/docs/next/install","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/install.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1587299634,"sidebar":"docs","previous":{"title":"Introduction","permalink":"/keto/docs/next/index"},"next":{"title":"Configure and Deploy","permalink":"/keto/docs/next/configure-deploy"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Keto on any system is straightforward. We provide pre-built
+const frontMatter={id:'install',title:'Installation'};const metadata={"id":"install","title":"Installation","description":"Installing ORY Keto on any system is straightforward. We provide pre-built","source":"@site/docs/install.md","permalink":"/keto/docs/next/install","editUrl":"https://github.com/ory/keto/edit/master/docs/docs/install.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1587301980,"sidebar":"docs","previous":{"title":"Introduction","permalink":"/keto/docs/next/index"},"next":{"title":"Configure and Deploy","permalink":"/keto/docs/next/configure-deploy"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Keto on any system is straightforward. We provide pre-built
 binaries, Docker images, and support a number of package managers.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"docker"},`Docker`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`We recommend using Docker to run ORY Keto:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ docker pull oryd/keto:v0.4.4-alpha.1
 $ docker run --rm -it oryd/ketov0.4.4-alpha.1 help
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"macos"},`macOS`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can install ORY Keto using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://brew.sh/"}),`homebrew`),` on macOS:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ brew tap ory/keto
