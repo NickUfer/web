@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: 127.0.0.1
+  host: localhost
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20709,7 +20709,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - '*'
+      - https://example.com
+      - https://*.example.com
+      - https://*.foo.example.com
 
     ## Allowed HTTP Methods ##
     #
@@ -20724,8 +20726,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - DELETE
-      - HEAD
+      - POST
+      - GET
+      - CONNECT
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20740,11 +20743,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - dolor adipisicing
-      - irure
-      - id velit ut sint nisi
-      - culpa proident irure sunt in
-      - veniam
+      - deserunt occaecat do
+      - labore
+      - aliquip irure sit
+      - consequat non adipisicing id anim
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20759,7 +20761,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - dolore tempor
+      - non laboris
 
     ## Allow HTTP Credentials ##
     #
@@ -20773,7 +20775,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: true
+    allow_credentials: false
 
     ## Maximum Age ##
     #
@@ -20785,7 +20787,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -70832199
+    max_age: -87985938
 
     ## Enable Debugging ##
     #
@@ -20799,7 +20801,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: true
+    debug: false
 
   ## HTTPS ##
   #
@@ -20862,7 +20864,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: ''
+profiling: cpu
 
 ## Log ##
 #
@@ -20895,7 +20897,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: json
+  format: text
 
 ## tracing ##
 #
