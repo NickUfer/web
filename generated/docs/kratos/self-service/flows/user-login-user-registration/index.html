@@ -18,25 +18,25 @@
 <link rel="stylesheet" href="/kratos/docs/styles.87ba0952.css">
 
 
-<link rel="preload" href="/kratos/docs/styles.c065e412.js" as="script">
+<link rel="preload" href="/kratos/docs/styles.a2924866.js" as="script">
 
-<link rel="preload" href="/kratos/docs/runtime~main.71ca4469.js" as="script">
+<link rel="preload" href="/kratos/docs/runtime~main.3847e080.js" as="script">
 
-<link rel="preload" href="/kratos/docs/main.0cf6bfe0.js" as="script">
+<link rel="preload" href="/kratos/docs/main.cf42b85a.js" as="script">
 
-<link rel="preload" href="/kratos/docs/1.5c39a6df.js" as="script">
+<link rel="preload" href="/kratos/docs/1.321c070f.js" as="script">
 
-<link rel="preload" href="/kratos/docs/2.d964bc43.js" as="script">
+<link rel="preload" href="/kratos/docs/2.2f785539.js" as="script">
 
-<link rel="preload" href="/kratos/docs/1be78505.a4132079.js" as="script">
+<link rel="preload" href="/kratos/docs/1be78505.09d4bc7b.js" as="script">
 
-<link rel="preload" href="/kratos/docs/83.a233a51d.js" as="script">
+<link rel="preload" href="/kratos/docs/89.d0c0744d.js" as="script">
 
-<link rel="preload" href="/kratos/docs/a7f4b2b8.03a1a530.js" as="script">
+<link rel="preload" href="/kratos/docs/a7f4b2b8.f44d823d.js" as="script">
 
-<link rel="preload" href="/kratos/docs/17896441.ebbe2100.js" as="script">
+<link rel="preload" href="/kratos/docs/17896441.2079525c.js" as="script">
 
-<link rel="preload" href="/kratos/docs/7801678b.8b6abefb.js" as="script">
+<link rel="preload" href="/kratos/docs/7801678b.83beaea7.js" as="script">
 
 </head>
 <body>
@@ -177,25 +177,25 @@ and configure them using the ORY Kratos configuration file:</p><div class="mdxCo
 Registration Flow Strategy (e.g. <code>password</code>, <code>oidc</code>).</p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/ory/kratos/edit/master/docs/versioned_docs/version-v0.1/self-service/flows/user-login-user-registration.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-04-06T12:46:02.000Z" class="docLastUpdatedAt_1sqk">4/6/2020</time> by <strong>hackerman</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/kratos/docs/self-service/flows/index"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« Overview</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/kratos/docs/self-service/flows/user-logout"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">User Logout »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#self-service-user-login-and-user-registration-for-browser-applications" class="contents__link">Self-Service User Login and User Registration for Browser Applications</a><ul><li><a href="#the-login-and-registration-user-interface" class="contents__link">The Login and Registration User Interface</a></li><li><a href="#code" class="contents__link">Code</a></li><li><a href="#server-side-browser-applications" class="contents__link">Server-Side Browser Applications</a></li><li><a href="#client-side-browser-applications" class="contents__link">Client-Side Browser Applications</a></li></ul></li><li><a href="#self-service-user-login-and-user-registration-for-api-clients" class="contents__link">Self-Service User Login and User Registration for API Clients</a></li><li><a href="#executing-jobs-before-user-login" class="contents__link">Executing Jobs before User Login</a></li><li><a href="#executing-jobs-after-user-login" class="contents__link">Executing Jobs after User Login</a></li><li><a href="#executing-jobs-before-user-registration" class="contents__link">Executing Jobs before User Registration</a></li><li><a href="#executing-jobs-after-user-registration" class="contents__link">Executing Jobs after User Registration</a></li></ul></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/imprint">Imprint</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/privacy">Privacy</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/tos">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>document.querySelectorAll(".tabs .tabs-nav .nav-item a").forEach((function(t){t.addEventListener("click",(function(e){return e.preventDefault(),t.closest(".tabs-nav").querySelectorAll(".nav-item a").forEach((function(t){t.classList.remove("active")})),t.closest(".tabs").querySelectorAll(".tab-content .tab-pane").forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),document.getElementById(t.href.split("#")[1]).classList.add("active"),!1}))}))</script></footer>
 </div>
 
-<script src="/kratos/docs/styles.c065e412.js"></script>
+<script src="/kratos/docs/styles.a2924866.js"></script>
 
-<script src="/kratos/docs/runtime~main.71ca4469.js"></script>
+<script src="/kratos/docs/runtime~main.3847e080.js"></script>
 
-<script src="/kratos/docs/main.0cf6bfe0.js"></script>
+<script src="/kratos/docs/main.cf42b85a.js"></script>
 
-<script src="/kratos/docs/1.5c39a6df.js"></script>
+<script src="/kratos/docs/1.321c070f.js"></script>
 
-<script src="/kratos/docs/2.d964bc43.js"></script>
+<script src="/kratos/docs/2.2f785539.js"></script>
 
-<script src="/kratos/docs/1be78505.a4132079.js"></script>
+<script src="/kratos/docs/1be78505.09d4bc7b.js"></script>
 
-<script src="/kratos/docs/83.a233a51d.js"></script>
+<script src="/kratos/docs/89.d0c0744d.js"></script>
 
-<script src="/kratos/docs/a7f4b2b8.03a1a530.js"></script>
+<script src="/kratos/docs/a7f4b2b8.f44d823d.js"></script>
 
-<script src="/kratos/docs/17896441.ebbe2100.js"></script>
+<script src="/kratos/docs/17896441.2079525c.js"></script>
 
-<script src="/kratos/docs/7801678b.8b6abefb.js"></script>
+<script src="/kratos/docs/7801678b.83beaea7.js"></script>
 
 
 </body>
