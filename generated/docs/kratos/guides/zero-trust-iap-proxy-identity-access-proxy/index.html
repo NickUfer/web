@@ -20,7 +20,7 @@
 
 <link rel="preload" href="/kratos/docs/styles.53505e03.js" as="script">
 
-<link rel="preload" href="/kratos/docs/runtime~main.a654a358.js" as="script">
+<link rel="preload" href="/kratos/docs/runtime~main.d260e62b.js" as="script">
 
 <link rel="preload" href="/kratos/docs/main.d492fa95.js" as="script">
 
@@ -36,7 +36,7 @@
 
 <link rel="preload" href="/kratos/docs/17896441.7a8d15a2.js" as="script">
 
-<link rel="preload" href="/kratos/docs/b700ae95.5a9e47cc.js" as="script">
+<link rel="preload" href="/kratos/docs/b700ae95.597d9833.js" as="script">
 
 </head>
 <body>
@@ -56,7 +56,7 @@ and that builds on the components and flows established in the
 unauthenticated traffic to <code>http://secure-app/dashboard</code> and redirect the user
 to the login page at <code>http://secure-app/auth/login</code>. Further, we will configure
 access to <code>http://secure-app/auth/login</code> in such a way that access only works if
-one is not yet authenticated.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="running-ory-kratos-and-the-ory-oathkeeper-identity-and-access-proxy"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#running-ory-kratos-and-the-ory-oathkeeper-identity-and-access-proxy" title="Direct link to heading">#</a>Running ORY Kratos and the ORY Oathkeeper Identity and Access Proxy</h2><p>Clone the ORY Kratos repository and fetch the latest images:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-shell codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token function" style="color:rgb(130, 170, 255)">git</span><span class="token plain"> clone https://github.com/ory/kratos.git</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># or if you have git+ssh set up:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">#  git clone git@github.com:ory/kratos.git</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(255, 203, 107)">cd</span><span class="token plain"> kratos</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token function" style="color:rgb(130, 170, 255)">git</span><span class="token plain"> checkout v0.2.0-alpha.2</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
+one is not yet authenticated.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="running-ory-kratos-and-the-ory-oathkeeper-identity-and-access-proxy"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#running-ory-kratos-and-the-ory-oathkeeper-identity-and-access-proxy" title="Direct link to heading">#</a>Running ORY Kratos and the ORY Oathkeeper Identity and Access Proxy</h2><p>Clone the ORY Kratos repository and fetch the latest images:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-shell codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token function" style="color:rgb(130, 170, 255)">git</span><span class="token plain"> clone https://github.com/ory/kratos.git</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># or if you have git+ssh set up:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic">#  git clone git@github.com:ory/kratos.git</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token builtin class-name" style="color:rgb(255, 203, 107)">cd</span><span class="token plain"> kratos</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token function" style="color:rgb(130, 170, 255)">git</span><span class="token plain"> checkout v0.2.1-alpha.1</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">docker pull oryd/kratos:latest-sqlite</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">docker pull oryd/kratos-selfservice-ui-node:latest</span></div></div></div></div></div><p>Next, run the quickstart and add the ORY Oathkeeper config:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-shell codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">docker-compose </span><span class="token punctuation" style="color:rgb(199, 146, 234)">\</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  -f quickstart.yml </span><span class="token punctuation" style="color:rgb(199, 146, 234)">\</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  -f quickstart-oathkeeper.yml </span><span class="token punctuation" style="color:rgb(199, 146, 234)">\</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  up --build --force-recreate</span></div></div></div></div></div><p>This might take a minute or two. Once the output slows down and logs indicate a
 healthy system you&#x27;re ready to roll! A healthy system will show something along
 the lines of (the order of messages might be reversed):</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">kratos_1                      | time=&quot;2020-01-20T14:52:13Z&quot; level=info msg=&quot;Starting the admin httpd on: 0.0.0.0:4434&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">kratos_1                      | time=&quot;2020-01-20T14:52:13Z&quot; level=info msg=&quot;Starting the public httpd on: 0.0.0.0:4433&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
@@ -118,7 +118,7 @@ and remove all mounted volumes.</p><div class="mdxCodeBlock_iHAB"><div class="co
 
 <script src="/kratos/docs/styles.53505e03.js"></script>
 
-<script src="/kratos/docs/runtime~main.a654a358.js"></script>
+<script src="/kratos/docs/runtime~main.d260e62b.js"></script>
 
 <script src="/kratos/docs/main.d492fa95.js"></script>
 
@@ -134,7 +134,7 @@ and remove all mounted volumes.</p><div class="mdxCodeBlock_iHAB"><div class="co
 
 <script src="/kratos/docs/17896441.7a8d15a2.js"></script>
 
-<script src="/kratos/docs/b700ae95.5a9e47cc.js"></script>
+<script src="/kratos/docs/b700ae95.597d9833.js"></script>
 
 
 </body>
