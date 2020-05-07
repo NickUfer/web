@@ -55,7 +55,7 @@ class Newsletter extends Component<PropTypes, StateTypes> {
               )}
             >
               <h3>Subscribe now</h3>
-              <form className={styles.form}>
+              <form className={styles.form} onSubmit={this.onSubmit}>
                 <input
                   type="email"
                   name={'email'}
