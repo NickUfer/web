@@ -22432,7 +22432,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_PORT=<value>
     #
-    port: 74009431
+    port: 79541278
 
     ## Host ##
     #
@@ -22448,7 +22448,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_HOST=<value>
     #
-    host: localhost
+    host: ''
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -22503,7 +22503,8 @@ serve:
       #
       allowed_methods:
         - GET
-        - DELETE
+        - HEAD
+        - PUT
 
       ## Allowed Request HTTP Headers ##
       #
@@ -22518,9 +22519,10 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - pariatur cillum
-        - esse proident enim sed non
-        - occaecat anim dolor minim ex
+        - voluptate Excepteur eiusmod
+        - sed quis
+        - consectetur dolor laborum consequat
+        - commodo culpa cillum occaecat exercitation
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22535,7 +22537,7 @@ serve:
       #    > set SERVE_API_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - Ut nisi est qui velit
+        - eu ullamco
 
       ## Allow HTTP Credentials ##
       #
@@ -22549,7 +22551,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_ALLOW_CREDENTIALS=<value>
       #
-      allow_credentials: false
+      allow_credentials: true
 
       ## Maximum Age ##
       #
@@ -22561,7 +22563,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_MAX_AGE=<value>
       #
-      max_age: 49168684
+      max_age: 44803311
 
       ## Enable Debugging ##
       #
@@ -22643,7 +22645,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_PORT=<value>
     #
-    port: -29400447
+    port: 60704349
 
     ## Host ##
     #
@@ -22659,7 +22661,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_HOST=<value>
     #
-    host: localhost
+    host: ''
 
     ## HTTP Timeouts ##
     #
@@ -22683,7 +22685,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_READ=<value>
       #
-      read: 5s
+      read: 5h
 
       ## HTTP Write Timeout ##
       #
@@ -22702,7 +22704,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_WRITE=<value>
       #
-      write: 120s
+      write: 5m
 
       ## HTTP Idle Timeout ##
       #
@@ -22721,7 +22723,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_IDLE=<value>
       #
-      idle: 5s
+      idle: 5h
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -22740,7 +22742,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_ENABLED=<value>
       #
-      enabled: false
+      enabled: true
 
       ## Allowed Origins ##
       #
@@ -22760,9 +22762,7 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_ORIGINS=<value>
       #
       allowed_origins:
-        - https://example.com
-        - https://*.example.com
-        - https://*.foo.example.com
+        - '*'
 
       ## Allowed HTTP Methods ##
       #
@@ -22777,11 +22777,9 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
-        - PUT
-        - TRACE
-        - DELETE
-        - PATCH
+        - GET
         - CONNECT
+        - HEAD
 
       ## Allowed Request HTTP Headers ##
       #
@@ -22796,11 +22794,10 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - amet adipisicing
-        - laborum consectetur
-        - amet dolor nulla esse eu
-        - voluptate consequat non cillum
-        - labore reprehenderit et
+        - officia Excepteur laborum et
+        - aute sint Ut aliqua officia
+        - ex amet officia occaecat irure
+        - mollit
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22815,10 +22812,7 @@ serve:
       #    > set SERVE_PROXY_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - aliqua
-        - aliqua irure Excepteur fugiat
-        - Excepteur ad elit
-        - amet
+        - eu voluptate Lorem
 
       ## Allow HTTP Credentials ##
       #
@@ -22844,7 +22838,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_MAX_AGE=<value>
       #
-      max_age: 30170454
+      max_age: 78024546
 
       ## Enable Debugging ##
       #
@@ -23028,7 +23022,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_NOOP_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Unauthorized ##
   #
@@ -23057,64 +23051,6 @@ authenticators:
   # The [\`cookie_session\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#cookie_session).
   #
   cookie_session:
-    ## config ##
-    #
-    config:
-      ## check_session_url ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_CHECK_SESSION_URL=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_CHECK_SESSION_URL=<value>
-      #
-      check_session_url: https://session-store-host
-
-      ## only ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_ONLY=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_ONLY=<value>
-      #
-      only:
-        - minim magna in
-        - cupidatat consectetur tempor minim sunt
-        - sint pariatur
-        - consequat in irure
-        - consequat voluptate ad
-
-      ## preserve_path ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_PRESERVE_PATH=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_PRESERVE_PATH=<value>
-      #
-      preserve_path: false
-
-      ## extra_from ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_EXTRA_FROM=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_EXTRA_FROM=<value>
-      #
-      extra_from: proident sed non
-
-      ## subject_from ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_SUBJECT_FROM=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_SUBJECT_FROM=<value>
-      #
-      subject_from: incididunt nisi occaecat non labore
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23152,13 +23088,39 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_JWT_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## OAuth 2.0 Client Credentials ##
   #
   # The [\`oauth2_client_credentials\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#oauth2_client_credentials).
   #
   oauth2_client_credentials:
+    ## config ##
+    #
+    config:
+      ## token_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_TOKEN_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_TOKEN_URL=<value>
+      #
+      token_url: https://my-website.com/oauth2/token
+
+      ## required_scope ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_REQUIRED_SCOPE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_REQUIRED_SCOPE=<value>
+      #
+      required_scope:
+        - amet commodo ad aute irure
+        - dolore
+        - sint deserunt enim
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23174,164 +23136,13 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## OAuth 2.0 Token Introspection ##
   #
   # The [\`oauth2_introspection\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#oauth2_introspection).
   #
   oauth2_introspection:
-    ## config ##
-    #
-    config:
-      ## introspection_url ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_INTROSPECTION_URL=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_INTROSPECTION_URL=<value>
-      #
-      introspection_url: https://my-website.com/oauth2/introspection
-
-      ## scope_strategy ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_SCOPE_STRATEGY=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_SCOPE_STRATEGY=<value>
-      #
-      scope_strategy: none
-
-      ## pre_authorization ##
-      #
-      pre_authorization:
-        ## enabled ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_ENABLED=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_ENABLED=<value>
-        #
-        enabled: false
-
-        ## client_id ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=<value>
-        #
-        client_id: elit Duis fugiat
-
-        ## client_secret ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=<value>
-        #
-        client_secret: mollit nisi
-
-        ## token_url ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=<value>
-        #
-        token_url: http://bfYwyiiFNwgFiOUlKhyfCixSNhLLWYNt.ovNiBplsjV5Tm4nPOv9SrJ2K6iZD489E
-
-        ## scope ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_SCOPE=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_SCOPE=<value>
-        #
-        scope:
-          - foo
-          - bar
-
-      ## required_scope ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_REQUIRED_SCOPE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_REQUIRED_SCOPE=<value>
-      #
-      required_scope:
-        - consequat veniam ipsum ullamco et
-
-      ## target_audience ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TARGET_AUDIENCE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TARGET_AUDIENCE=<value>
-      #
-      target_audience:
-        - ullamco
-
-      ## trusted_issuers ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TRUSTED_ISSUERS=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TRUSTED_ISSUERS=<value>
-      #
-      trusted_issuers:
-        - dolore
-        - ea laborum tempor Excepteur nostrud
-        - commodo consectetur labore ut
-        - sed aute consequat
-        - ad ullamco
-
-      ## token_from ##
-      #
-      token_from:
-        ## header ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_HEADER=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_HEADER=<value>
-        #
-        header: Lorem
-
-      ## retry ##
-      #
-      retry:
-        ## give_up_after ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_GIVE_UP_AFTER=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_GIVE_UP_AFTER=<value>
-        #
-        give_up_after: 1257ms
-
-        ## max_delay ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_MAX_DELAY=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_MAX_DELAY=<value>
-        #
-        max_delay: 7052h
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23347,7 +23158,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
 ## Error Handling ##
 #
@@ -23389,7 +23200,7 @@ errors:
         # - Windows Command Line (CMD):
         #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
         #
-        realm: minim eu
+        realm: enim
 
         ## when ##
         #
@@ -23401,24 +23212,49 @@ errors:
         #
         when:
           - error:
-              - unauthorized
-              - not_found
+              - forbidden
             request:
               cidr:
-                - Duis
-                - deserunt eiusmod sed
+                - sit velit nulla sed
+                - culpa
+                - laboris
+                - esse proident consequat id
               header:
                 content_type: []
                 accept: []
           - error:
+              - internal_server_error
+              - forbidden
+              - internal_server_error
+            request:
+              cidr:
+                - laborum id
+                - irure esse consequat sint quis
+                - eu
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
               - unauthorized
               - forbidden
+              - unauthorized
+              - forbidden
+            request:
+              cidr:
+                - anim est proident magna
+                - eu dolore aute est incididunt
+                - amet nisi do
+                - sit
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
               - not_found
             request:
               cidr:
-                - consequat mollit
-                - qui do deserunt amet
-                - commodo
+                - non dolore cillum
               header:
                 content_type: []
                 accept: []
@@ -23456,7 +23292,7 @@ errors:
         # - Windows Command Line (CMD):
         #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
         #
-        to: http://Qt.rxrlCYWDFFF6Qf6CV0B,kPRxtnVsi
+        to: https://N.bxa,LtAuG8ZFTW-FcrXrV1S1hbrXcGsrgXynS28NhAznUxAFrKVEjdq0-G9qYkIeoywr
 
         ## code ##
         #
@@ -23479,59 +23315,21 @@ errors:
         when:
           - error:
               - not_found
+            request:
+              cidr:
+                - laboris cillum ex dolor eiusmod
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - forbidden
+              - forbidden
               - internal_server_error
               - forbidden
-              - unauthorized
             request:
               cidr:
-                - fugiat consequat anim
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - unauthorized
-            request:
-              cidr:
-                - ipsum
-                - consequat id
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - not_found
-              - not_found
-              - not_found
-              - unauthorized
-              - internal_server_error
-            request:
-              cidr:
-                - adipisicing ipsum ad qui irure
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - internal_server_error
-              - forbidden
-              - not_found
-              - forbidden
-              - forbidden
-            request:
-              cidr:
-                - consectetur in enim eiusmod ad
-                - amet non
-                - amet dolor ut
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - not_found
-            request:
-              cidr:
-                - laboris elit
-                - aliqua ullamco
-                - Excepteur
-                - eu Excepteur aliquip deserunt
-                - ipsum commodo cupidatat
+                - in
+                - adipisicing aute sit nostrud
               header:
                 content_type: []
                 accept: []
@@ -23597,7 +23395,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_ALLOW_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Deny ##
   #
@@ -23619,13 +23417,66 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_DENY_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## ORY Keto Access Control Policies Engine ##
   #
   # The [\`keto_engine_acp_ory\` authorizer](https://www.ory.sh/oathkeeper/docs/pipeline/authz#keto_engine_acp_ory).
   #
   keto_engine_acp_ory:
+    ## config ##
+    #
+    config:
+      ## base_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=<value>
+      #
+      base_url: http://my-keto/
+
+      ## required_action ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=<value>
+      #
+      required_action: nostrud sunt Duis amet ullamco
+
+      ## required_resource ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=<value>
+      #
+      required_resource: quis exercitation
+
+      ## subject ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=<value>
+      #
+      subject: dolore irure eiusmod
+
+      ## flavor ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=<value>
+      #
+      flavor: ea nostrud
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23641,13 +23492,26 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Remote ##
   #
   # The [\`remote\` authorizer](https://www.ory.sh/oathkeeper/docs/pipeline/authz#remote).
   #
   remote:
+    ## config ##
+    #
+    config:
+      ## remote ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHORIZERS_REMOTE_CONFIG_REMOTE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHORIZERS_REMOTE_CONFIG_REMOTE=<value>
+      #
+      remote: https://host/path
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23767,7 +23631,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_COOKIE_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## HTTP Header ##
   #
@@ -23821,7 +23685,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_HYDRATOR_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## ID Token (JSON Web Token) ##
   #
@@ -23843,7 +23707,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_ID_TOKEN_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
 ## Log ##
 #
@@ -23862,7 +23726,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: info
+  level: fatal
 
   ## Format ##
   #
@@ -23876,7 +23740,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: json
+  format: text
 
 ## Profiling ##
 #
@@ -24722,7 +24586,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'authn',title:'Authenticators'};const metadata={"id":"pipeline/authn","title":"Authenticators","description":"An authenticator is responsible for authenticating request credentials. ORY","source":"@site/docs/pipeline/authn.md","permalink":"/oathkeeper/docs/next/pipeline/authn","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/pipeline/authn.md","version":"next","lastUpdatedBy":"Mohammad Aziz","lastUpdatedAt":1587893557,"sidebar":"docs","previous":{"title":"Access Rule Pipeline","permalink":"/oathkeeper/docs/next/pipeline/index"},"next":{"title":"Authorizers","permalink":"/oathkeeper/docs/next/pipeline/authz"}};/* @jsx mdx */const rightToc=[{value:'<code>noop</code>',id:'noop',children:[{value:'Configuration',id:'configuration',children:[]},{value:'Access Rule Example',id:'access-rule-example',children:[]}]},{value:'<code>unauthorized</code>',id:'unauthorized',children:[{value:'Configuration',id:'configuration-1',children:[]},{value:'Access Rule Example',id:'access-rule-example-1',children:[]}]},{value:'<code>anonymous</code>',id:'anonymous',children:[{value:'Configuration',id:'configuration-2',children:[]},{value:'Access Rule Example',id:'access-rule-example-2',children:[]}]},{value:'<code>cookie_session</code>',id:'cookie_session',children:[{value:'Configuration',id:'configuration-3',children:[]},{value:'Access Rule Example',id:'access-rule-example-3',children:[]}]},{value:'<code>oauth2_client_credentials</code>',id:'oauth2_client_credentials',children:[{value:'Configuration',id:'configuration-4',children:[]},{value:'Access Rule Example',id:'access-rule-example-4',children:[]}]},{value:'<code>oauth2_introspection</code>',id:'oauth2_introspection',children:[{value:'Configuration',id:'configuration-5',children:[]},{value:'Access Rule Example',id:'access-rule-example-5',children:[]}]},{value:'<code>jwt</code>',id:'jwt',children:[{value:'Configuration',id:'configuration-6',children:[]},{value:'Scope',id:'scope',children:[]},{value:'Access Rule Example',id:'access-rule-example-6',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`An authenticator is responsible for authenticating request credentials. ORY
+const frontMatter={id:'authn',title:'Authenticators'};const metadata={"id":"pipeline/authn","title":"Authenticators","description":"An authenticator is responsible for authenticating request credentials. ORY","source":"@site/docs/pipeline/authn.md","permalink":"/oathkeeper/docs/next/pipeline/authn","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/pipeline/authn.md","version":"next","lastUpdatedBy":"pike1212","lastUpdatedAt":1588843454,"sidebar":"docs","previous":{"title":"Access Rule Pipeline","permalink":"/oathkeeper/docs/next/pipeline/index"},"next":{"title":"Authorizers","permalink":"/oathkeeper/docs/next/pipeline/authz"}};/* @jsx mdx */const rightToc=[{value:'<code>noop</code>',id:'noop',children:[{value:'Configuration',id:'configuration',children:[]},{value:'Access Rule Example',id:'access-rule-example',children:[]}]},{value:'<code>unauthorized</code>',id:'unauthorized',children:[{value:'Configuration',id:'configuration-1',children:[]},{value:'Access Rule Example',id:'access-rule-example-1',children:[]}]},{value:'<code>anonymous</code>',id:'anonymous',children:[{value:'Configuration',id:'configuration-2',children:[]},{value:'Access Rule Example',id:'access-rule-example-2',children:[]}]},{value:'<code>cookie_session</code>',id:'cookie_session',children:[{value:'Configuration',id:'configuration-3',children:[]},{value:'Access Rule Example',id:'access-rule-example-3',children:[]}]},{value:'<code>oauth2_client_credentials</code>',id:'oauth2_client_credentials',children:[{value:'Configuration',id:'configuration-4',children:[]},{value:'Access Rule Example',id:'access-rule-example-4',children:[]}]},{value:'<code>oauth2_introspection</code>',id:'oauth2_introspection',children:[{value:'Configuration',id:'configuration-5',children:[]},{value:'Access Rule Example',id:'access-rule-example-5',children:[]}]},{value:'<code>jwt</code>',id:'jwt',children:[{value:'Configuration',id:'configuration-6',children:[]},{value:'Scope',id:'scope',children:[]},{value:'Access Rule Example',id:'access-rule-example-6',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`An authenticator is responsible for authenticating request credentials. ORY
 Oathkeeper supports different authenticators and we will add more as the project
 progresses.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`An authenticator inspects the HTTP request (e.g. the HTTP Authorization Header)
 and executes some business logic that returns true (for authentication ok) or
@@ -25039,7 +24903,9 @@ sensitive) that must contain a Bearer token for request authentication. It
 can't be set along with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`header`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`cookie`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`cookie`),` (string, required, one of) - The cookie (case sensitive) that must
 contain a Bearer token for request authentication. It can't be set along
 with `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`header`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`query_parameter`)))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`introspection_request_headers`),` (object, optional) - Additional headers to add
-to the introspection request`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-yaml"}),`# Global configuration file oathkeeper.yml
+to the introspection request`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`cache`),` (object, optional) - Enables caching of incoming tokens`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",{parentName:"li"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`enabled`),` (bool, optional) - Enable the cache, will use exp time of token to
+determine when to evict from cache. Defaults to false.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"li"},`ttl`),` (string) - Can override the default behaviour of using the token exp
+time, and specify a set time to live for the token in the cache.`)))),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-yaml"}),`# Global configuration file oathkeeper.yml
 authenticators:
   oauth2_introspection:
     # Set enabled to true if the authenticator should be enabled and false to disable the authenticator. Defaults to false.
@@ -25066,6 +24932,9 @@ authenticators:
         # cookie: auth-token
       introspection_request_headers:
         x-forwarded-proto: https
+      cache:
+        enabled: true
+        ttl: 60s
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-yaml"}),`# Some Access Rule: access-rule-1.yaml
 id: access-rule-1
 # match: ...
