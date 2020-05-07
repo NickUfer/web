@@ -534,6 +534,20 @@ module.exports = Token;
 
 /***/ }),
 /* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useBaseUrl; });
+/* harmony import */ var _useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+/**
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */function useBaseUrl(url){const{siteConfig}=Object(_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])();const{baseUrl='/'}=siteConfig||{};if(!url){return url;}const externalRegex=/^(https?:|\/\/)/;if(externalRegex.test(url)){return url;}if(url.startsWith('/')){return baseUrl+url.slice(1);}return baseUrl+url;}
+
+/***/ }),
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var helpers = __webpack_require__(84);
@@ -591,7 +605,7 @@ module.exports = {
 
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var fs = __webpack_require__(25)
@@ -941,20 +955,6 @@ function retry () {
   }
 }
 
-
-/***/ }),
-/* 11 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useBaseUrl; });
-/* harmony import */ var _useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */function useBaseUrl(url){const{siteConfig}=Object(_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])();const{baseUrl='/'}=siteConfig||{};if(!url){return url;}const externalRegex=/^(https?:|\/\/)/;if(externalRegex.test(url)){return url;}if(url.startsWith('/')){return baseUrl+url.slice(1);}return baseUrl+url;}
 
 /***/ }),
 /* 12 */
@@ -8444,7 +8444,7 @@ var isInternalUrl = __webpack_require__(20);
 var useDocusaurusContext = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(11);
+var useBaseUrl = __webpack_require__(9);
 
 // CONCATENATED MODULE: ./node_modules/@docusaurus/theme-classic/src/theme/hooks/useTheme.js
 /**
@@ -10878,7 +10878,7 @@ module.exports = hasProtocol;
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 
 const NODE_VERSION_MAJOR_WITH_BIGINT = 10
@@ -12159,7 +12159,7 @@ HelmetExport.renderStatic = HelmetExport.rewind;
 "use strict";
 /* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
 /* harmony import */ var _theme_hooks_useThemeContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(44);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(11);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 /* harmony import */ var _docusaurus_isInternalUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(20);
 /**
  * Copyright (c) Facebook, Inc. and its affiliates.
@@ -13414,8 +13414,8 @@ module.exports = restoreWithComponents;
 // Properties will be tokenized in one step, see #429
 
 var Token = __webpack_require__(8);
-var serializeRules = __webpack_require__(9).rules;
-var serializeValue = __webpack_require__(9).value;
+var serializeRules = __webpack_require__(10).rules;
+var serializeValue = __webpack_require__(10).value;
 
 function extractProperties(token) {
   var properties = [];
@@ -16453,7 +16453,7 @@ exports.ArraySet = ArraySet;
 // This is adapted from https://github.com/normalize/mz
 // Copyright (c) 2014-2016 Jonathan Ong me@jongleberry.com and Contributors
 const u = __webpack_require__(14).fromCallback
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 
 const api = [
   'access',
@@ -16611,7 +16611,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const os = __webpack_require__(109)
 const path = __webpack_require__(6)
 
@@ -16849,7 +16849,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _theme_Layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(45);
 /* harmony import */ var _docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
 /* harmony import */ var _docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(12);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(11);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
 /* harmony import */ var _versions_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(104);
 var _versions_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(104, 1);
 function Version(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();const{siteConfig={}}=context;const latestVersion=_versions_json__WEBPACK_IMPORTED_MODULE_5__[0];const pastVersions=_versions_json__WEBPACK_IMPORTED_MODULE_5__.filter(version=>version!==latestVersion);const repoUrl=`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{permalink:"/versions",description:"Page listing all documented site versions"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--xl"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Documentation versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"latest"},"Latest version (Stable)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the latest documentation."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,latestVersion),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"next"},"Next version (Unreleased)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the documentation for unreleased version."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,"master"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/next/index')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:repoUrl},"Source Code")))))),pastVersions.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"archive"},"Past Versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find documentation for previous versions."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,pastVersions.map(version=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{key:version},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,version),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(`/${version}/index`)},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))))));}/* harmony default export */ __webpack_exports__["default"] = (Version);
@@ -22432,7 +22432,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_PORT=<value>
     #
-    port: -81077907
+    port: 74009431
 
     ## Host ##
     #
@@ -22448,7 +22448,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_HOST=<value>
     #
-    host: ''
+    host: localhost
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -22487,9 +22487,7 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_ORIGINS=<value>
       #
       allowed_origins:
-        - https://example.com
-        - https://*.example.com
-        - https://*.foo.example.com
+        - '*'
 
       ## Allowed HTTP Methods ##
       #
@@ -22504,7 +22502,7 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
-        - PATCH
+        - GET
         - DELETE
 
       ## Allowed Request HTTP Headers ##
@@ -22520,10 +22518,9 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - culpa do aliqua proident
-        - ipsum id anim
-        - tempor in ad esse
-        - dolor
+        - pariatur cillum
+        - esse proident enim sed non
+        - occaecat anim dolor minim ex
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22538,9 +22535,7 @@ serve:
       #    > set SERVE_API_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - exercitation ullamco
-        - quis ullamco amet ut id
-        - id sit pariatur
+        - Ut nisi est qui velit
 
       ## Allow HTTP Credentials ##
       #
@@ -22554,7 +22549,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_ALLOW_CREDENTIALS=<value>
       #
-      allow_credentials: true
+      allow_credentials: false
 
       ## Maximum Age ##
       #
@@ -22566,7 +22561,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_MAX_AGE=<value>
       #
-      max_age: 11415148
+      max_age: 49168684
 
       ## Enable Debugging ##
       #
@@ -22648,7 +22643,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_PORT=<value>
     #
-    port: -77138998
+    port: -29400447
 
     ## Host ##
     #
@@ -22688,7 +22683,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_READ=<value>
       #
-      read: 5h
+      read: 5s
 
       ## HTTP Write Timeout ##
       #
@@ -22707,7 +22702,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_WRITE=<value>
       #
-      write: 5m
+      write: 120s
 
       ## HTTP Idle Timeout ##
       #
@@ -22726,7 +22721,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_IDLE=<value>
       #
-      idle: 5m
+      idle: 5s
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -22765,7 +22760,9 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_ORIGINS=<value>
       #
       allowed_origins:
-        - '*'
+        - https://example.com
+        - https://*.example.com
+        - https://*.foo.example.com
 
       ## Allowed HTTP Methods ##
       #
@@ -22780,7 +22777,11 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
+        - PUT
+        - TRACE
+        - DELETE
         - PATCH
+        - CONNECT
 
       ## Allowed Request HTTP Headers ##
       #
@@ -22795,9 +22796,11 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - sunt ut Excepteur nisi
-        - sunt pariatur in
-        - esse mollit
+        - amet adipisicing
+        - laborum consectetur
+        - amet dolor nulla esse eu
+        - voluptate consequat non cillum
+        - labore reprehenderit et
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22812,10 +22815,10 @@ serve:
       #    > set SERVE_PROXY_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - ad consectetur et Ut
-        - enim irure minim in anim
-        - veniam
-        - deserunt ad Duis dolor culpa
+        - aliqua
+        - aliqua irure Excepteur fugiat
+        - Excepteur ad elit
+        - amet
 
       ## Allow HTTP Credentials ##
       #
@@ -22841,7 +22844,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_MAX_AGE=<value>
       #
-      max_age: 24245028
+      max_age: 30170454
 
       ## Enable Debugging ##
       #
@@ -22979,7 +22982,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_ANONYMOUS_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
     ## Anonymous Authenticator Configuration ##
     #
@@ -23025,7 +23028,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_NOOP_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Unauthorized ##
   #
@@ -23047,13 +23050,71 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_UNAUTHORIZED_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Cookie Session ##
   #
   # The [\`cookie_session\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#cookie_session).
   #
   cookie_session:
+    ## config ##
+    #
+    config:
+      ## check_session_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_CHECK_SESSION_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_CHECK_SESSION_URL=<value>
+      #
+      check_session_url: https://session-store-host
+
+      ## only ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_ONLY=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_ONLY=<value>
+      #
+      only:
+        - minim magna in
+        - cupidatat consectetur tempor minim sunt
+        - sint pariatur
+        - consequat in irure
+        - consequat voluptate ad
+
+      ## preserve_path ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_PRESERVE_PATH=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_PRESERVE_PATH=<value>
+      #
+      preserve_path: false
+
+      ## extra_from ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_EXTRA_FROM=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_EXTRA_FROM=<value>
+      #
+      extra_from: proident sed non
+
+      ## subject_from ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_COOKIE_SESSION_CONFIG_SUBJECT_FROM=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_SUBJECT_FROM=<value>
+      #
+      subject_from: incididunt nisi occaecat non labore
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23076,99 +23137,6 @@ authenticators:
   # The [\`jwt\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#jwt).
   #
   jwt:
-    ## config ##
-    #
-    config:
-      ## jwks_urls ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
-      #
-      jwks_urls:
-        - https://my-website.com/.well-known/jwks.json
-        - https://my-other-website.com/.well-known/jwks.json
-        - file://path/to/local/jwks.json
-
-      ## required_scope ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
-      #
-      required_scope:
-        - in commodo Excepteur est
-
-      ## target_audience ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
-      #
-      target_audience:
-        - quis culpa
-        - incididunt cillum reprehenderit
-        - nulla id nostrud Duis ex
-        - Duis adipisicing sed
-        - consectetur eu aute enim dolore
-
-      ## trusted_issuers ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
-      #
-      trusted_issuers:
-        - Ut fugiat est nostrud
-        - commodo aliquip
-        - esse aliqua
-        - nostrud consequat sunt dolore cupidatat
-        - consectetur incididunt
-
-      ## allowed_algorithms ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
-      #
-      allowed_algorithms:
-        - culpa et in commodo
-        - pariatur Lorem ullamco Excepteur
-        - sit velit tempor in
-
-      ## scope_strategy ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
-      #
-      scope_strategy: exact
-
-      ## token_from ##
-      #
-      token_from:
-        ## header ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_HEADER=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_HEADER=<value>
-        #
-        header: proident nulla tempor
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23213,6 +23181,157 @@ authenticators:
   # The [\`oauth2_introspection\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#oauth2_introspection).
   #
   oauth2_introspection:
+    ## config ##
+    #
+    config:
+      ## introspection_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_INTROSPECTION_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_INTROSPECTION_URL=<value>
+      #
+      introspection_url: https://my-website.com/oauth2/introspection
+
+      ## scope_strategy ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_SCOPE_STRATEGY=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_SCOPE_STRATEGY=<value>
+      #
+      scope_strategy: none
+
+      ## pre_authorization ##
+      #
+      pre_authorization:
+        ## enabled ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_ENABLED=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_ENABLED=<value>
+        #
+        enabled: false
+
+        ## client_id ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=<value>
+        #
+        client_id: elit Duis fugiat
+
+        ## client_secret ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=<value>
+        #
+        client_secret: mollit nisi
+
+        ## token_url ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=<value>
+        #
+        token_url: http://bfYwyiiFNwgFiOUlKhyfCixSNhLLWYNt.ovNiBplsjV5Tm4nPOv9SrJ2K6iZD489E
+
+        ## scope ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_SCOPE=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_SCOPE=<value>
+        #
+        scope:
+          - foo
+          - bar
+
+      ## required_scope ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_REQUIRED_SCOPE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_REQUIRED_SCOPE=<value>
+      #
+      required_scope:
+        - consequat veniam ipsum ullamco et
+
+      ## target_audience ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TARGET_AUDIENCE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TARGET_AUDIENCE=<value>
+      #
+      target_audience:
+        - ullamco
+
+      ## trusted_issuers ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TRUSTED_ISSUERS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TRUSTED_ISSUERS=<value>
+      #
+      trusted_issuers:
+        - dolore
+        - ea laborum tempor Excepteur nostrud
+        - commodo consectetur labore ut
+        - sed aute consequat
+        - ad ullamco
+
+      ## token_from ##
+      #
+      token_from:
+        ## header ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_HEADER=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_HEADER=<value>
+        #
+        header: Lorem
+
+      ## retry ##
+      #
+      retry:
+        ## give_up_after ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_GIVE_UP_AFTER=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_GIVE_UP_AFTER=<value>
+        #
+        give_up_after: 1257ms
+
+        ## max_delay ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_MAX_DELAY=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_MAX_DELAY=<value>
+        #
+        max_delay: 7052h
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23259,6 +23378,51 @@ errors:
     # Responds with the WWW-Authenticate HTTP Response
     #
     www_authenticate:
+      ## config ##
+      #
+      config:
+        ## realm ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
+        #
+        realm: minim eu
+
+        ## when ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_WHEN=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_WHEN=<value>
+        #
+        when:
+          - error:
+              - unauthorized
+              - not_found
+            request:
+              cidr:
+                - Duis
+                - deserunt eiusmod sed
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - unauthorized
+              - forbidden
+              - not_found
+            request:
+              cidr:
+                - consequat mollit
+                - qui do deserunt amet
+                - commodo
+              header:
+                content_type: []
+                accept: []
+
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23281,6 +23445,97 @@ errors:
     # Responds with a 301/302 HTTP redirect.
     #
     redirect:
+      ## config ##
+      #
+      config:
+        ## to ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
+        #
+        to: http://Qt.rxrlCYWDFFF6Qf6CV0B,kPRxtnVsi
+
+        ## code ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
+        #
+        code: 301
+
+        ## when ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
+        #
+        when:
+          - error:
+              - not_found
+              - internal_server_error
+              - forbidden
+              - unauthorized
+            request:
+              cidr:
+                - fugiat consequat anim
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - unauthorized
+            request:
+              cidr:
+                - ipsum
+                - consequat id
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
+              - not_found
+              - not_found
+              - unauthorized
+              - internal_server_error
+            request:
+              cidr:
+                - adipisicing ipsum ad qui irure
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - internal_server_error
+              - forbidden
+              - not_found
+              - forbidden
+              - forbidden
+            request:
+              cidr:
+                - consectetur in enim eiusmod ad
+                - amet non
+                - amet dolor ut
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
+            request:
+              cidr:
+                - laboris elit
+                - aliqua ullamco
+                - Excepteur
+                - eu Excepteur aliquip deserunt
+                - ipsum commodo cupidatat
+              header:
+                content_type: []
+                accept: []
+
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23342,7 +23597,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_ALLOW_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Deny ##
   #
@@ -23364,66 +23619,13 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_DENY_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## ORY Keto Access Control Policies Engine ##
   #
   # The [\`keto_engine_acp_ory\` authorizer](https://www.ory.sh/oathkeeper/docs/pipeline/authz#keto_engine_acp_ory).
   #
   keto_engine_acp_ory:
-    ## config ##
-    #
-    config:
-      ## base_url ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=<value>
-      #
-      base_url: http://my-keto/
-
-      ## required_action ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=<value>
-      #
-      required_action: ullamco
-
-      ## required_resource ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=<value>
-      #
-      required_resource: laboris eiusmod quis labore
-
-      ## subject ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=<value>
-      #
-      subject: in tempor nostrud ut
-
-      ## flavor ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=<value>
-      #
-      flavor: in velit
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23439,26 +23641,13 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Remote ##
   #
   # The [\`remote\` authorizer](https://www.ory.sh/oathkeeper/docs/pipeline/authz#remote).
   #
   remote:
-    ## config ##
-    #
-    config:
-      ## remote ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_REMOTE_CONFIG_REMOTE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_REMOTE_CONFIG_REMOTE=<value>
-      #
-      remote: https://host/path
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23519,7 +23708,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_REMOTE_JSON_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
 ## Mutators ##
 #
@@ -23546,13 +23735,23 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_NOOP_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## HTTP Cookie ##
   #
   # The [\`cookie\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#cookie).
   #
   cookie:
+    ## config ##
+    #
+    # Set this value using environment variables on
+    # - Linux/macOS:
+    #    $ export MUTATORS_COOKIE_CONFIG=<value>
+    # - Windows Command Line (CMD):
+    #    > set MUTATORS_COOKIE_CONFIG=<value>
+    #
+    config: {}
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23600,91 +23799,13 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_HEADER_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Hydrator ##
   #
   # The [\`hydrator\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#hydrator).
   #
   hydrator:
-    ## config ##
-    #
-    config:
-      ## api ##
-      #
-      api:
-        ## url ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export MUTATORS_HYDRATOR_CONFIG_API_URL=<value>
-        # - Windows Command Line (CMD):
-        #    > set MUTATORS_HYDRATOR_CONFIG_API_URL=<value>
-        #
-        url: http://bPsqofAqSWyDZbegQoeNOpqMnMRjd.ewBA.jZvaJBVUSLrBkbFFDsRDAtneb1fTravv9cVGc4cQ+cxhNJJv
-
-        ## auth ##
-        #
-        auth:
-          ## basic ##
-          #
-          basic:
-            ## username ##
-            #
-            # Set this value using environment variables on
-            # - Linux/macOS:
-            #    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=<value>
-            # - Windows Command Line (CMD):
-            #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=<value>
-            #
-            username: esse officia est Excepteur
-
-            ## password ##
-            #
-            # Set this value using environment variables on
-            # - Linux/macOS:
-            #    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=<value>
-            # - Windows Command Line (CMD):
-            #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=<value>
-            #
-            password: dolore
-
-        ## retry ##
-        #
-        retry:
-          ## give_up_after ##
-          #
-          # Set this value using environment variables on
-          # - Linux/macOS:
-          #    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=<value>
-          # - Windows Command Line (CMD):
-          #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=<value>
-          #
-          give_up_after: 920163818us
-
-          ## max_delay ##
-          #
-          # Set this value using environment variables on
-          # - Linux/macOS:
-          #    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=<value>
-          # - Windows Command Line (CMD):
-          #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=<value>
-          #
-          max_delay: 52919329us
-
-      ## cache ##
-      #
-      cache:
-        ## ttl ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export MUTATORS_HYDRATOR_CONFIG_CACHE_TTL=<value>
-        # - Windows Command Line (CMD):
-        #    > set MUTATORS_HYDRATOR_CONFIG_CACHE_TTL=<value>
-        #
-        ttl: 688455823m
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23700,7 +23821,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_HYDRATOR_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## ID Token (JSON Web Token) ##
   #
@@ -23741,7 +23862,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: panic
+  level: info
 
   ## Format ##
   #
@@ -23755,7 +23876,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: text
+  format: json
 
 ## Profiling ##
 #
@@ -23767,7 +23888,7 @@ log:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: mem
+profiling: ''
 `)));};MDXContent.isMDXComponent=true;
 
 /***/ }),
@@ -26429,7 +26550,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'configure-deploy',title:'Configure and Deploy'};const metadata={"id":"configure-deploy","title":"Configure and Deploy","description":"The ORY Oathkeeper HTTP serve process `oathkeeper serve` opens two ports","source":"@site/docs/configure-deploy.md","permalink":"/oathkeeper/docs/next/configure-deploy","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/configure-deploy.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1586177132,"sidebar":"docs","previous":{"title":"Error Handlers","permalink":"/oathkeeper/docs/next/pipeline/error"},"next":{"title":"Configuration","permalink":"/oathkeeper/docs/next/reference/configuration"}};/* @jsx mdx */const rightToc=[{value:'Configure',id:'configure',children:[{value:'Access Rules',id:'access-rules',children:[]},{value:'Cryptographic Keys',id:'cryptographic-keys',children:[]},{value:'Dockerfile',id:'dockerfile',children:[]}]},{value:'Build &amp; Run',id:'build--run',children:[]},{value:'Authorizing Requests',id:'authorizing-requests',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The ORY Oathkeeper HTTP serve process `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper serve`),` opens two ports
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
+const frontMatter={id:'configure-deploy',title:'Configure and Deploy'};const metadata={"id":"configure-deploy","title":"Configure and Deploy","description":"import useBaseUrl from '@docusaurus/useBaseUrl'","source":"@site/docs/configure-deploy.md","permalink":"/oathkeeper/docs/next/configure-deploy","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/configure-deploy.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1588842472,"sidebar":"docs","previous":{"title":"Error Handlers","permalink":"/oathkeeper/docs/next/pipeline/error"},"next":{"title":"Configuration","permalink":"/oathkeeper/docs/next/reference/configuration"}};/* @jsx mdx */const rightToc=[{value:'Configure',id:'configure',children:[{value:'Access Rules',id:'access-rules',children:[]},{value:'Cryptographic Keys',id:'cryptographic-keys',children:[]},{value:'Dockerfile',id:'dockerfile',children:[]}]},{value:'Build &amp; Run',id:'build--run',children:[]},{value:'Authorizing Requests',id:'authorizing-requests',children:[]},{value:'Monitoring',id:'monitoring',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The ORY Oathkeeper HTTP serve process `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper serve`),` opens two ports
 exposing the`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"/oathkeeper/docs/next/index#reverse-proxy"}),`reverse proxy`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`REST API which serves the
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"/oathkeeper/docs/next/index#access-control-decision-api"}),`Access Control Decision API`),` as well as
 other API endpoints such as health checks, JSON Web Key Sets, and a list of
@@ -26705,7 +26827,47 @@ $ curl -X GET http://127.0.0.1:4455/anything/id_token
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`That's it! You can now clean up the demo using:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{}),`$ docker rm -f ory-oathkeeper-demo
 $ docker rmi -f ory-oathkeeper-demo
 $ rm -rf oathkeeper-demo
-`)));};MDXContent.isMDXComponent=true;
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"monitoring"},`Monitoring`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Oathkeeper provides an endpoint for Prometheus to scrape as a target. This
+endpoint can be accessed by default at:
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://localhost:9000/metrics"}),`http://localhost:9000/metrics`),`:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can adjust the settings within Oathkeeper's config.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ cat << EOF > config.yaml
+serve:
+  prometheus:
+    port: 9000
+    host: localhost
+    metrics_path: /metrics
+EOF
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Prometheus can easily be run as a docker container. More information are
+available on
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/prometheus/prometheus"}),`https://github.com/prometheus/prometheus`),`.
+Start with setting up a prometheus configuration:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ cat << EOF > prometheus.yml
+global:
+  scrape_interval: 15s # By default, scrape targets every 15 seconds.
+
+scrape_configs:
+  - job_name: 'prometheus'
+    scrape_interval: 15s
+    static_configs:
+      - targets: ['localhost:9090']
+  - job_name: 'oathkeeper'
+    scrape_interval: 15s
+    metrics_path: /metrics
+    static_configs:
+      # The target needs to match what you've configured above
+      - targets: ['localhost:9000']
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Then start the prometheus server and access it on
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"http://localhost:9090"}),`http://localhost:9090`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ docker run \\
+  --config.file=/etc/prometheus/prometheus.yml \\
+  -v ./prometheus.yml:/etc/prometheus/prometheus.yml \\
+  --name prometheus \\
+  -d \\
+  --net=host
+  -p 9090:9090 \\
+  prom/prometheus
+`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Now where you have a basic monitoring setup running you can extend it by
+building up nice visualizations eg. using Grafana. More information are
+available on
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://prometheus.io/docs/visualization/grafana/"}),`https://prometheus.io/docs/visualization/grafana/`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`We have a pre built Dashboard which you can use to get started quickly:
+`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://github.com/ory/oathkeeper/tree/master/contrib/grafana/Oathkeeper-Dashboard.json"}),`Oathkeeper-Dashboard.json`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("img",{alt:"ORY Oathkeeper with Prometheus and Grafana",src:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])('img/docs/grafana.png')}));};MDXContent.isMDXComponent=true;
 
 /***/ }),
 /* 173 */
@@ -29251,7 +29413,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _docusaurus_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(28);
-/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(11);
+/* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9);
 function Home(){return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_router__WEBPACK_IMPORTED_MODULE_1__[/* Redirect */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])('/index')});}/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
@@ -30291,7 +30453,7 @@ var isInternalUrl = __webpack_require__(20);
 var useDocusaurusContext = __webpack_require__(5);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useBaseUrl.js
-var useBaseUrl = __webpack_require__(11);
+var useBaseUrl = __webpack_require__(9);
 
 // EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
 var Link = __webpack_require__(12);
@@ -34363,7 +34525,7 @@ var Marker = __webpack_require__(13);
 var formatPosition = __webpack_require__(56);
 var split = __webpack_require__(83);
 
-var serializeRules = __webpack_require__(9).rules;
+var serializeRules = __webpack_require__(10).rules;
 
 var IgnoreProperty = 'ignore-property';
 
@@ -35547,8 +35709,8 @@ var tidyRules = __webpack_require__(81);
 
 var OptimizationLevel = __webpack_require__(26).OptimizationLevel;
 
-var serializeBody = __webpack_require__(9).body;
-var serializeRules = __webpack_require__(9).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 var Token = __webpack_require__(8);
 
@@ -35605,7 +35767,7 @@ var restoreWithComponents = __webpack_require__(86);
 var restoreFromOptimizing = __webpack_require__(47);
 var wrapSingle = __webpack_require__(35).single;
 
-var serializeBody = __webpack_require__(9).body;
+var serializeBody = __webpack_require__(10).body;
 var Token = __webpack_require__(8);
 
 function mergeIntoShorthands(properties, validator) {
@@ -37332,7 +37494,7 @@ var restoreFromOptimizing = __webpack_require__(47);
 var Token = __webpack_require__(8);
 var Marker = __webpack_require__(13);
 
-var serializeProperty = __webpack_require__(9).property;
+var serializeProperty = __webpack_require__(10).property;
 
 function wouldBreakCompatibility(property, validator) {
   for (var i = 0; i < property.components.length; i++) {
@@ -37915,7 +38077,7 @@ var canReorderSingle = __webpack_require__(60).canReorderSingle;
 var extractProperties = __webpack_require__(87);
 var rulesOverlap = __webpack_require__(116);
 
-var serializeRules = __webpack_require__(9).rules;
+var serializeRules = __webpack_require__(10).rules;
 var OptimizationLevel = __webpack_require__(26).OptimizationLevel;
 var Token = __webpack_require__(8);
 
@@ -38149,8 +38311,8 @@ var tidyRules = __webpack_require__(81);
 
 var OptimizationLevel = __webpack_require__(26).OptimizationLevel;
 
-var serializeBody = __webpack_require__(9).body;
-var serializeRules = __webpack_require__(9).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 var Token = __webpack_require__(8);
 
@@ -38233,7 +38395,7 @@ var extractProperties = __webpack_require__(87);
 
 var optimizeProperties = __webpack_require__(58);
 
-var serializeRules = __webpack_require__(9).rules;
+var serializeRules = __webpack_require__(10).rules;
 
 var Token = __webpack_require__(8);
 
@@ -38320,8 +38482,8 @@ var cloneArray = __webpack_require__(117);
 
 var Token = __webpack_require__(8);
 
-var serializeBody = __webpack_require__(9).body;
-var serializeRules = __webpack_require__(9).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 function reduceNonAdjacent(tokens, context) {
   var options = context.options;
@@ -38500,7 +38662,7 @@ module.exports = reduceNonAdjacent;
 
 var Token = __webpack_require__(8);
 
-var serializeAll = __webpack_require__(9).all;
+var serializeAll = __webpack_require__(10).all;
 
 var FONT_FACE_SCOPE = '@font-face';
 
@@ -38536,8 +38698,8 @@ module.exports = removeDuplicateFontAtRules;
 
 var Token = __webpack_require__(8);
 
-var serializeAll = __webpack_require__(9).all;
-var serializeRules = __webpack_require__(9).rules;
+var serializeAll = __webpack_require__(10).all;
+var serializeRules = __webpack_require__(10).rules;
 
 function removeDuplicateMediaQueries(tokens) {
   var candidates = {};
@@ -38572,8 +38734,8 @@ module.exports = removeDuplicateMediaQueries;
 
 var Token = __webpack_require__(8);
 
-var serializeBody = __webpack_require__(9).body;
-var serializeRules = __webpack_require__(9).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 function removeDuplicates(tokens) {
   var matched = {};
@@ -38883,8 +39045,8 @@ var Token = __webpack_require__(8);
 
 var cloneArray = __webpack_require__(117);
 
-var serializeBody = __webpack_require__(9).body;
-var serializeRules = __webpack_require__(9).rules;
+var serializeBody = __webpack_require__(10).body;
+var serializeRules = __webpack_require__(10).rules;
 
 function naturalSorter(a, b) {
   return a > b ? 1 : -1;
@@ -48621,7 +48783,7 @@ function clone (obj) {
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const mkdirpSync = __webpack_require__(18).mkdirsSync
 const utimesSync = __webpack_require__(135).utimesMillisSync
@@ -48792,7 +48954,7 @@ module.exports = copySync
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const invalidWin32Path = __webpack_require__(134).invalidWin32Path
 
@@ -48862,7 +49024,7 @@ module.exports = mkdirs
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const invalidWin32Path = __webpack_require__(134).invalidWin32Path
 
@@ -48942,7 +49104,7 @@ module.exports = function (size) {
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const mkdirp = __webpack_require__(18).mkdirs
 const pathExists = __webpack_require__(23).pathExists
@@ -49162,7 +49324,7 @@ module.exports = copy
 
 
 const u = __webpack_require__(14).fromCallback
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const mkdir = __webpack_require__(18)
 const remove = __webpack_require__(64)
@@ -49216,7 +49378,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const assert = __webpack_require__(91)
 
@@ -49569,7 +49731,7 @@ module.exports = {
 
 const u = __webpack_require__(14).fromCallback
 const path = __webpack_require__(6)
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const mkdir = __webpack_require__(18)
 const pathExists = __webpack_require__(23).pathExists
 
@@ -49625,7 +49787,7 @@ module.exports = {
 
 const u = __webpack_require__(14).fromCallback
 const path = __webpack_require__(6)
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const mkdir = __webpack_require__(18)
 const pathExists = __webpack_require__(23).pathExists
 
@@ -49693,7 +49855,7 @@ module.exports = {
 
 const u = __webpack_require__(14).fromCallback
 const path = __webpack_require__(6)
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const _mkdirs = __webpack_require__(18)
 const mkdirs = _mkdirs.mkdirs
 const mkdirsSync = _mkdirs.mkdirsSync
@@ -49762,7 +49924,7 @@ module.exports = {
 
 
 const path = __webpack_require__(6)
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const pathExists = __webpack_require__(23).pathExists
 
 /**
@@ -49867,7 +50029,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 
 function symlinkType (srcpath, type, callback) {
   callback = (typeof type === 'function') ? type : callback
@@ -49927,7 +50089,7 @@ module.exports = jsonFile
 
 var _fs
 try {
-  _fs = __webpack_require__(10)
+  _fs = __webpack_require__(11)
 } catch (_) {
   _fs = __webpack_require__(25)
 }
@@ -50102,7 +50264,7 @@ module.exports = outputJson
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const mkdir = __webpack_require__(18)
 const jsonFile = __webpack_require__(92)
@@ -50139,7 +50301,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const copySync = __webpack_require__(133).copySync
 const removeSync = __webpack_require__(64).removeSync
@@ -50206,7 +50368,7 @@ module.exports = {
 "use strict";
 
 
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const copy = __webpack_require__(136).copy
 const remove = __webpack_require__(64).remove
@@ -50279,7 +50441,7 @@ module.exports = move
 
 
 const u = __webpack_require__(14).fromCallback
-const fs = __webpack_require__(10)
+const fs = __webpack_require__(11)
 const path = __webpack_require__(6)
 const mkdir = __webpack_require__(18)
 const pathExists = __webpack_require__(23).pathExists
