@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: ''
+  host: localhost
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20689,7 +20689,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -20709,7 +20709,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - '*'
+      - https://example.com
+      - https://*.example.com
+      - https://*.foo.example.com
 
     ## Allowed HTTP Methods ##
     #
@@ -20724,7 +20726,8 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - POST
+      - PUT
+      - HEAD
       - CONNECT
 
     ## Allowed Request HTTP Headers ##
@@ -20740,11 +20743,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - sit Duis culpa nulla dolore
-      - Ut
-      - id
-      - ipsum consectetur nostrud in qui
-      - aute occaecat minim incididunt exercitation
+      - qui occaecat
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20759,10 +20758,8 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - Lorem ea dolore
-      - velit
-      - elit nisi amet
-      - irure voluptate reprehenderit
+      - tempor
+      - proident sit et mollit esse
 
     ## Allow HTTP Credentials ##
     #
@@ -20776,7 +20773,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: true
+    allow_credentials: false
 
     ## Maximum Age ##
     #
@@ -20788,7 +20785,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: 20123131
+    max_age: -55922647
 
     ## Enable Debugging ##
     #
@@ -20884,7 +20881,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: debug
+  level: info
 
   ## Format ##
   #
