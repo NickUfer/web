@@ -97,7 +97,7 @@ const HydraPage = () => (
       mobile={[<HydraAnimation />]}
     />
 
-    <Newsletter />
+    <Newsletter preselect="hydra" />
     <CompressedSection
       expanded
       left={

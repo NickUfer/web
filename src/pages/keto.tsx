@@ -55,7 +55,7 @@ const KetoPage = () => (
       mobile={[<KetoAnimation />]}
     />
 
-    <Newsletter />
+    <Newsletter preselect={"keto"}/>
     <CompressedSection
       right={<KetoSdk />}
       left={

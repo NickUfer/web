@@ -104,7 +104,7 @@ const KratosPage = () => (
       mobile={[<KratosAnimation />]}
     />
 
-    <Newsletter />
+    <Newsletter preselect={"kratos"}/>
     <CompressedSection
       expanded
       left={

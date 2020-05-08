@@ -7,9 +7,17 @@ interface StateTypes {
   email: string
 }
 
+const projects = {
+  kratos: '&group[17097][4]=1',
+  hydra: '&group[17097][8]=1',
+  oathkeeper: '&group[17097][16]=1',
+  keto: '&group[17097][32]=1'
+}
+
 interface PropTypes {
   left?: ReactNode
   light?: boolean
+  preselect: keyof projects
 }
 
 class Newsletter extends Component<PropTypes, StateTypes> {
@@ -19,7 +27,7 @@ class Newsletter extends Component<PropTypes, StateTypes> {
     e.preventDefault()
     window.open(
       'https://ory.us10.list-manage.com/subscribe?u=ffb1a878e4ec6c0ed312a3480&id=f605a41b53&MERGE0=' +
-        encodeURIComponent(this.state.email)
+        encodeURIComponent(this.state.email) + (this.props.preselect ? projects[this.props.preselect] : '')
     )
   }
 

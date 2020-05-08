@@ -104,7 +104,7 @@ const OathkeeperPage = () => (
       mobile={[<OathkeeperAnimation />]}
     />
 
-    <Newsletter />
+    <Newsletter preselect={"oathkeeper"}/>
 
     <CompressedSection
       expanded
