@@ -22430,7 +22430,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/oathkeeper/docs/next/reference/configuration","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588846434,"sidebar":"docs","previous":{"title":"Configure and Deploy","permalink":"/oathkeeper/docs/next/configure-deploy"},"next":{"title":"REST API","permalink":"/oathkeeper/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.oathkeeper.yaml`),` exists, it will be used as a configuration file
+const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/docs/reference/configuration.md","permalink":"/oathkeeper/docs/next/reference/configuration","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/reference/configuration.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"docs","previous":{"title":"Configure and Deploy","permalink":"/oathkeeper/docs/next/configure-deploy"},"next":{"title":"REST API","permalink":"/oathkeeper/docs/next/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.oathkeeper.yaml`),` exists, it will be used as a configuration file
 which supports all configuration settings listed below.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can load the config file from another source using the
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`-c path/to/config.yaml`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`--config path/to/config.yaml`),` flag:
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper --config path/to/config.yaml`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Config files can be formatted as JSON, YAML and TOML. Some configuration values
@@ -22459,7 +22459,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_PORT=<value>
     #
-    port: -67900
+    port: 9067868
 
     ## Host ##
     #
@@ -22494,7 +22494,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_ENABLED=<value>
       #
-      enabled: true
+      enabled: false
 
       ## Allowed Origins ##
       #
@@ -22514,7 +22514,9 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_ORIGINS=<value>
       #
       allowed_origins:
-        - '*'
+        - https://example.com
+        - https://*.example.com
+        - https://*.foo.example.com
 
       ## Allowed HTTP Methods ##
       #
@@ -22529,7 +22531,10 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
-        - PATCH
+        - HEAD
+        - TRACE
+        - GET
+        - DELETE
 
       ## Allowed Request HTTP Headers ##
       #
@@ -22544,10 +22549,7 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - culpa sint aliquip voluptate deserunt
-        - reprehenderit et ullamco cillum
-        - minim eu dolor ut
-        - occaecat id reprehenderit
+        - et sit
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22562,10 +22564,10 @@ serve:
       #    > set SERVE_API_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - commodo esse
-        - Lorem dolor id nostrud deserunt
-        - nulla ut sunt
-        - in amet consectetur ullamco
+        - irure ex ipsum
+        - enim
+        - elit
+        - dolor labore ipsum cupidatat
 
       ## Allow HTTP Credentials ##
       #
@@ -22591,7 +22593,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_MAX_AGE=<value>
       #
-      max_age: 30526427
+      max_age: -92921695
 
       ## Enable Debugging ##
       #
@@ -22673,7 +22675,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_PORT=<value>
     #
-    port: 34362227
+    port: 55486131
 
     ## Host ##
     #
@@ -22732,7 +22734,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_WRITE=<value>
       #
-      write: 120s
+      write: 5h
 
       ## HTTP Idle Timeout ##
       #
@@ -22751,7 +22753,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_IDLE=<value>
       #
-      idle: 5h
+      idle: 5m
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -22790,7 +22792,9 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_ORIGINS=<value>
       #
       allowed_origins:
-        - '*'
+        - https://example.com
+        - https://*.example.com
+        - https://*.foo.example.com
 
       ## Allowed HTTP Methods ##
       #
@@ -22805,8 +22809,7 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
-        - PATCH
-        - PUT
+        - TRACE
 
       ## Allowed Request HTTP Headers ##
       #
@@ -22821,10 +22824,10 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - et
-        - sint
-        - qui cupidatat
-        - occaecat ipsum in nostrud
+        - reprehenderit do qui
+        - non nostrud quis minim
+        - elit ipsum velit ex
+        - fugiat nulla sunt dolore velit
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22839,9 +22842,7 @@ serve:
       #    > set SERVE_PROXY_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - enim Duis deserunt
-        - nulla velit dolor mollit
-        - minim nisi
+        - adipisicing
 
       ## Allow HTTP Credentials ##
       #
@@ -22867,7 +22868,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_MAX_AGE=<value>
       #
-      max_age: -2698754
+      max_age: -33742573
 
       ## Enable Debugging ##
       #
@@ -23073,7 +23074,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_UNAUTHORIZED_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Cookie Session ##
   #
@@ -23095,104 +23096,13 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_COOKIE_SESSION_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## JSON Web Token (jwt) ##
   #
   # The [\`jwt\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#jwt).
   #
   jwt:
-    ## config ##
-    #
-    config:
-      ## jwks_urls ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
-      #
-      jwks_urls:
-        - https://my-website.com/.well-known/jwks.json
-        - https://my-other-website.com/.well-known/jwks.json
-        - file://path/to/local/jwks.json
-
-      ## required_scope ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
-      #
-      required_scope:
-        - dolore mollit nisi
-        - ipsum laboris voluptate
-
-      ## target_audience ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
-      #
-      target_audience:
-        - mollit
-        - tempor dolore qui
-        - esse velit
-        - ex Lorem
-
-      ## trusted_issuers ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
-      #
-      trusted_issuers:
-        - culpa labore in qui
-        - ea pariatur eu dolor do
-        - dolor exercitation pariatur sint aute
-
-      ## allowed_algorithms ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
-      #
-      allowed_algorithms:
-        - voluptate
-        - Duis Excepteur officia sed consequat
-        - deserunt nisi non
-
-      ## scope_strategy ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
-      #
-      scope_strategy: hierarchic
-
-      ## token_from ##
-      #
-      token_from:
-        ## query_parameter ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_QUERY_PARAMETER=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_QUERY_PARAMETER=<value>
-        #
-        query_parameter: magna culpa
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23215,6 +23125,30 @@ authenticators:
   # The [\`oauth2_client_credentials\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#oauth2_client_credentials).
   #
   oauth2_client_credentials:
+    ## config ##
+    #
+    config:
+      ## token_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_TOKEN_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_TOKEN_URL=<value>
+      #
+      token_url: https://my-website.com/oauth2/token
+
+      ## required_scope ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_REQUIRED_SCOPE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_REQUIRED_SCOPE=<value>
+      #
+      required_scope:
+        - in commodo reprehenderit Ut
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23230,7 +23164,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## OAuth 2.0 Token Introspection ##
   #
@@ -23252,7 +23186,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
 ## Error Handling ##
 #
@@ -23294,7 +23228,7 @@ errors:
         # - Windows Command Line (CMD):
         #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
         #
-        realm: ex consequat
+        realm: voluptate Lorem Ut
 
         ## when ##
         #
@@ -23306,38 +23240,36 @@ errors:
         #
         when:
           - error:
-              - internal_server_error
               - forbidden
-              - unauthorized
-              - unauthorized
-              - unauthorized
+              - not_found
             request:
               cidr:
-                - laboris occaecat Ut culpa ad
-                - amet culpa consequat
-                - Ut enim incididunt cillum ullamco
-                - ut Duis qui id
-                - pariatur
+                - Ut voluptate tempor
               header:
                 content_type: []
                 accept: []
           - error:
+              - unauthorized
               - internal_server_error
+              - unauthorized
             request:
               cidr:
-                - sunt sint
-                - est
-                - Excepteur mollit incididunt
+                - cupidatat consectetur
+                - nulla deserunt esse sed dolore
+                - sunt commodo
+                - tempor cupidatat
+                - adipisicing
               header:
                 content_type: []
                 accept: []
           - error:
+              - not_found
               - internal_server_error
             request:
               cidr:
-                - velit
-                - ea pariatur ut exercitation
-                - officia Lorem
+                - ullamco
+                - aliqua
+                - incididunt Lorem
               header:
                 content_type: []
                 accept: []
@@ -23357,98 +23289,13 @@ errors:
       # - Windows Command Line (CMD):
       #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_ENABLED=<value>
       #
-      enabled: false
+      enabled: true
 
     ## HTTP Redirect Error Handler ##
     #
     # Responds with a 301/302 HTTP redirect.
     #
     redirect:
-      ## config ##
-      #
-      config:
-        ## to ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
-        # - Windows Command Line (CMD):
-        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
-        #
-        to: https://xQFP.kaf3MTljjCsFuNRXZZ,umcBLMrLxIRL
-
-        ## code ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
-        # - Windows Command Line (CMD):
-        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
-        #
-        code: 301
-
-        ## when ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
-        # - Windows Command Line (CMD):
-        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
-        #
-        when:
-          - error:
-              - unauthorized
-              - unauthorized
-              - unauthorized
-              - internal_server_error
-            request:
-              cidr:
-                - velit irure labore
-                - deserunt esse occaecat sed
-                - in anim cillum
-                - reprehenderit deserunt
-                - culpa
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - unauthorized
-              - not_found
-            request:
-              cidr:
-                - officia
-                - in nulla fugiat occaecat
-                - ad et
-                - deserunt Excepteur
-                - amet non dolor et Lorem
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - unauthorized
-              - not_found
-              - forbidden
-              - forbidden
-              - unauthorized
-            request:
-              cidr:
-                - in aliqua nulla occaecat anim
-                - officia labore dolor
-                - ea aute
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - not_found
-            request:
-              cidr:
-                - elit
-                - non qui laborum nostrud
-                - culpa officia
-              header:
-                content_type: []
-                accept: []
-
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23464,7 +23311,7 @@ errors:
       # - Windows Command Line (CMD):
       #    > set ERRORS_HANDLERS_REDIRECT_ENABLED=<value>
       #
-      enabled: true
+      enabled: false
 
     ## JSON Error Handler ##
     #
@@ -23510,7 +23357,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_ALLOW_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Deny ##
   #
@@ -23554,7 +23401,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Remote ##
   #
@@ -23589,7 +23436,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_REMOTE_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Remote JSON ##
   #
@@ -23683,23 +23530,13 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_COOKIE_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## HTTP Header ##
   #
   # The [\`header\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#header).
   #
   header:
-    ## config ##
-    #
-    # Set this value using environment variables on
-    # - Linux/macOS:
-    #    $ export MUTATORS_HEADER_CONFIG=<value>
-    # - Windows Command Line (CMD):
-    #    > set MUTATORS_HEADER_CONFIG=<value>
-    #
-    config: {}
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23736,7 +23573,7 @@ mutators:
         # - Windows Command Line (CMD):
         #    > set MUTATORS_HYDRATOR_CONFIG_API_URL=<value>
         #
-        url: http://R.qhzW
+        url: https://tssrjsnUDbsckO.nrtcXf1RT2ZZGPGbfQ
 
         ## auth ##
         #
@@ -23752,7 +23589,7 @@ mutators:
             # - Windows Command Line (CMD):
             #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=<value>
             #
-            username: reprehenderit aliqua magna
+            username: reprehenderit est ea
 
             ## password ##
             #
@@ -23762,7 +23599,7 @@ mutators:
             # - Windows Command Line (CMD):
             #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=<value>
             #
-            password: in esse id minim
+            password: sit labore Duis dolor amet
 
         ## retry ##
         #
@@ -23775,7 +23612,7 @@ mutators:
           # - Windows Command Line (CMD):
           #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=<value>
           #
-          give_up_after: 13964316ms
+          give_up_after: 8s
 
           ## max_delay ##
           #
@@ -23785,7 +23622,7 @@ mutators:
           # - Windows Command Line (CMD):
           #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=<value>
           #
-          max_delay: 983ns
+          max_delay: 641ms
 
       ## cache ##
       #
@@ -23808,7 +23645,7 @@ mutators:
         # - Windows Command Line (CMD):
         #    > set MUTATORS_HYDRATOR_CONFIG_CACHE_TTL=<value>
         #
-        ttl: 48680783h
+        ttl: 071719509s
 
     ## Enabled ##
     #
@@ -23832,6 +23669,49 @@ mutators:
   # The [\`id_token\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#id_token).
   #
   id_token:
+    ## config ##
+    #
+    config:
+      ## jwks_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export MUTATORS_ID_TOKEN_CONFIG_JWKS_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set MUTATORS_ID_TOKEN_CONFIG_JWKS_URL=<value>
+      #
+      jwks_url: file://../from/this/relative/location.json
+
+      ## issuer_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export MUTATORS_ID_TOKEN_CONFIG_ISSUER_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set MUTATORS_ID_TOKEN_CONFIG_ISSUER_URL=<value>
+      #
+      issuer_url: sint laborum
+
+      ## claims ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export MUTATORS_ID_TOKEN_CONFIG_CLAIMS=<value>
+      # - Windows Command Line (CMD):
+      #    > set MUTATORS_ID_TOKEN_CONFIG_CLAIMS=<value>
+      #
+      claims: veniam proident
+
+      ## ttl ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export MUTATORS_ID_TOKEN_CONFIG_TTL=<value>
+      # - Windows Command Line (CMD):
+      #    > set MUTATORS_ID_TOKEN_CONFIG_TTL=<value>
+      #
+      ttl: 1m
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23866,7 +23746,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: panic
+  level: info
 
   ## Format ##
   #
@@ -24157,7 +24037,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-const frontMatter={id:'configure-deploy',title:'Configure and Deploy'};const metadata={"id":"version-v0.38/configure-deploy","title":"Configure and Deploy","description":"import useBaseUrl from '@docusaurus/useBaseUrl'","source":"@site/versioned_docs/version-v0.38/configure-deploy.md","permalink":"/oathkeeper/docs/configure-deploy","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/configure-deploy.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588846434,"sidebar":"version-v0.38/docs","previous":{"title":"Error Handlers","permalink":"/oathkeeper/docs/pipeline/error"},"next":{"title":"Configuration","permalink":"/oathkeeper/docs/reference/configuration"}};/* @jsx mdx */const rightToc=[{value:'Configure',id:'configure',children:[{value:'Access Rules',id:'access-rules',children:[]},{value:'Cryptographic Keys',id:'cryptographic-keys',children:[]},{value:'Dockerfile',id:'dockerfile',children:[]}]},{value:'Build &amp; Run',id:'build--run',children:[]},{value:'Authorizing Requests',id:'authorizing-requests',children:[]},{value:'Monitoring',id:'monitoring',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The ORY Oathkeeper HTTP serve process `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper serve`),` opens two ports
+const frontMatter={id:'configure-deploy',title:'Configure and Deploy'};const metadata={"id":"version-v0.38/configure-deploy","title":"Configure and Deploy","description":"import useBaseUrl from '@docusaurus/useBaseUrl'","source":"@site/versioned_docs/version-v0.38/configure-deploy.md","permalink":"/oathkeeper/docs/configure-deploy","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/configure-deploy.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"version-v0.38/docs","previous":{"title":"Error Handlers","permalink":"/oathkeeper/docs/pipeline/error"},"next":{"title":"Configuration","permalink":"/oathkeeper/docs/reference/configuration"}};/* @jsx mdx */const rightToc=[{value:'Configure',id:'configure',children:[{value:'Access Rules',id:'access-rules',children:[]},{value:'Cryptographic Keys',id:'cryptographic-keys',children:[]},{value:'Dockerfile',id:'dockerfile',children:[]}]},{value:'Build &amp; Run',id:'build--run',children:[]},{value:'Authorizing Requests',id:'authorizing-requests',children:[]},{value:'Monitoring',id:'monitoring',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The ORY Oathkeeper HTTP serve process `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper serve`),` opens two ports
 exposing the`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"/oathkeeper/docs/index#reverse-proxy"}),`reverse proxy`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`REST API which serves the
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"/oathkeeper/docs/index#access-control-decision-api"}),`Access Control Decision API`),` as well as
 other API endpoints such as health checks, JSON Web Key Sets, and a list of
@@ -27172,7 +27052,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'mutator',title:'Mutators'};const metadata={"id":"pipeline/mutator","title":"Mutators","description":"A mutator transforms the credentials from incoming requests to credentials that","source":"@site/docs/pipeline/mutator.md","permalink":"/oathkeeper/docs/next/pipeline/mutator","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/pipeline/mutator.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1588926108,"sidebar":"docs","previous":{"title":"Authorizers","permalink":"/oathkeeper/docs/next/pipeline/authz"},"next":{"title":"Error Handlers","permalink":"/oathkeeper/docs/next/pipeline/error"}};/* @jsx mdx */const rightToc=[{value:'<code>noop</code>',id:'noop',children:[{value:'Configuration',id:'configuration',children:[]},{value:'Access Rule Example',id:'access-rule-example',children:[]}]},{value:'<code>id_token</code>',id:'id_token',children:[{value:'Global Configuration',id:'global-configuration',children:[]},{value:'Configuration',id:'configuration-1',children:[]},{value:'Access Rule Example',id:'access-rule-example-1',children:[]}]},{value:'<code>header</code>',id:'header',children:[{value:'Configuration',id:'configuration-2',children:[]},{value:'Access Rule Example',id:'access-rule-example-2',children:[]}]},{value:'<code>cookie</code>',id:'cookie',children:[{value:'Configuration',id:'configuration-3',children:[]},{value:'Cookies',id:'cookies',children:[]}]},{value:'<code>hydrator</code>',id:'hydrator',children:[{value:'Cache',id:'cache',children:[]},{value:'Configuration',id:'configuration-4',children:[]},{value:'Access Rule Example',id:'access-rule-example-3',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`A mutator transforms the credentials from incoming requests to credentials that
+const frontMatter={id:'mutator',title:'Mutators'};const metadata={"id":"pipeline/mutator","title":"Mutators","description":"A mutator transforms the credentials from incoming requests to credentials that","source":"@site/docs/pipeline/mutator.md","permalink":"/oathkeeper/docs/next/pipeline/mutator","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/pipeline/mutator.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"docs","previous":{"title":"Authorizers","permalink":"/oathkeeper/docs/next/pipeline/authz"},"next":{"title":"Error Handlers","permalink":"/oathkeeper/docs/next/pipeline/error"}};/* @jsx mdx */const rightToc=[{value:'<code>noop</code>',id:'noop',children:[{value:'Configuration',id:'configuration',children:[]},{value:'Access Rule Example',id:'access-rule-example',children:[]}]},{value:'<code>id_token</code>',id:'id_token',children:[{value:'Global Configuration',id:'global-configuration',children:[]},{value:'Configuration',id:'configuration-1',children:[]},{value:'Access Rule Example',id:'access-rule-example-1',children:[]}]},{value:'<code>header</code>',id:'header',children:[{value:'Configuration',id:'configuration-2',children:[]},{value:'Access Rule Example',id:'access-rule-example-2',children:[]}]},{value:'<code>cookie</code>',id:'cookie',children:[{value:'Configuration',id:'configuration-3',children:[]},{value:'Cookies',id:'cookies',children:[]}]},{value:'<code>hydrator</code>',id:'hydrator',children:[{value:'Cache',id:'cache',children:[]},{value:'Configuration',id:'configuration-4',children:[]},{value:'Access Rule Example',id:'access-rule-example-3',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`A mutator transforms the credentials from incoming requests to credentials that
 your backend understands. For example, the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`Authorization: basic`),` header might
 be transformed to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`X-User: <subject-id>`),`. This allows you to write backends that
 do not care if the original request was an anonymous one, an OAuth 2.0 Access
@@ -29221,7 +29101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
 /* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9);
-const frontMatter={id:'configure-deploy',title:'Configure and Deploy'};const metadata={"id":"configure-deploy","title":"Configure and Deploy","description":"import useBaseUrl from '@docusaurus/useBaseUrl'","source":"@site/docs/configure-deploy.md","permalink":"/oathkeeper/docs/next/configure-deploy","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/configure-deploy.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588846434,"sidebar":"docs","previous":{"title":"Error Handlers","permalink":"/oathkeeper/docs/next/pipeline/error"},"next":{"title":"Configuration","permalink":"/oathkeeper/docs/next/reference/configuration"}};/* @jsx mdx */const rightToc=[{value:'Configure',id:'configure',children:[{value:'Access Rules',id:'access-rules',children:[]},{value:'Cryptographic Keys',id:'cryptographic-keys',children:[]},{value:'Dockerfile',id:'dockerfile',children:[]}]},{value:'Build &amp; Run',id:'build--run',children:[]},{value:'Authorizing Requests',id:'authorizing-requests',children:[]},{value:'Monitoring',id:'monitoring',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The ORY Oathkeeper HTTP serve process `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper serve`),` opens two ports
+const frontMatter={id:'configure-deploy',title:'Configure and Deploy'};const metadata={"id":"configure-deploy","title":"Configure and Deploy","description":"import useBaseUrl from '@docusaurus/useBaseUrl'","source":"@site/docs/configure-deploy.md","permalink":"/oathkeeper/docs/next/configure-deploy","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/configure-deploy.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"docs","previous":{"title":"Error Handlers","permalink":"/oathkeeper/docs/next/pipeline/error"},"next":{"title":"Configuration","permalink":"/oathkeeper/docs/next/reference/configuration"}};/* @jsx mdx */const rightToc=[{value:'Configure',id:'configure',children:[{value:'Access Rules',id:'access-rules',children:[]},{value:'Cryptographic Keys',id:'cryptographic-keys',children:[]},{value:'Dockerfile',id:'dockerfile',children:[]}]},{value:'Build &amp; Run',id:'build--run',children:[]},{value:'Authorizing Requests',id:'authorizing-requests',children:[]},{value:'Monitoring',id:'monitoring',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`The ORY Oathkeeper HTTP serve process `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper serve`),` opens two ports
 exposing the`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("ul",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"/oathkeeper/docs/next/index#reverse-proxy"}),`reverse proxy`)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("li",{parentName:"ul"},`REST API which serves the
 `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"li"},{"href":"/oathkeeper/docs/next/index#access-control-decision-api"}),`Access Control Decision API`),` as well as
 other API endpoints such as health checks, JSON Web Key Sets, and a list of
@@ -29646,7 +29526,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'mutator',title:'Mutators'};const metadata={"id":"version-v0.38/pipeline/mutator","title":"Mutators","description":"A mutator transforms the credentials from incoming requests to credentials that","source":"@site/versioned_docs/version-v0.38/pipeline/mutator.md","permalink":"/oathkeeper/docs/pipeline/mutator","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/pipeline/mutator.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588844820,"sidebar":"version-v0.38/docs","previous":{"title":"Authorizers","permalink":"/oathkeeper/docs/pipeline/authz"},"next":{"title":"Error Handlers","permalink":"/oathkeeper/docs/pipeline/error"}};/* @jsx mdx */const rightToc=[{value:'<code>noop</code>',id:'noop',children:[{value:'Configuration',id:'configuration',children:[]},{value:'Access Rule Example',id:'access-rule-example',children:[]}]},{value:'<code>id_token</code>',id:'id_token',children:[{value:'Global Configuration',id:'global-configuration',children:[]},{value:'Configuration',id:'configuration-1',children:[]},{value:'Access Rule Example',id:'access-rule-example-1',children:[]}]},{value:'<code>header</code>',id:'header',children:[{value:'Configuration',id:'configuration-2',children:[]},{value:'Access Rule Example',id:'access-rule-example-2',children:[]}]},{value:'<code>cookie</code>',id:'cookie',children:[{value:'Configuration',id:'configuration-3',children:[]},{value:'Cookies',id:'cookies',children:[]}]},{value:'<code>hydrator</code>',id:'hydrator',children:[{value:'Cache',id:'cache',children:[]},{value:'Configuration',id:'configuration-4',children:[]},{value:'Access Rule Example',id:'access-rule-example-3',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`A mutator transforms the credentials from incoming requests to credentials that
+const frontMatter={id:'mutator',title:'Mutators'};const metadata={"id":"version-v0.38/pipeline/mutator","title":"Mutators","description":"A mutator transforms the credentials from incoming requests to credentials that","source":"@site/versioned_docs/version-v0.38/pipeline/mutator.md","permalink":"/oathkeeper/docs/pipeline/mutator","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/pipeline/mutator.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"version-v0.38/docs","previous":{"title":"Authorizers","permalink":"/oathkeeper/docs/pipeline/authz"},"next":{"title":"Error Handlers","permalink":"/oathkeeper/docs/pipeline/error"}};/* @jsx mdx */const rightToc=[{value:'<code>noop</code>',id:'noop',children:[{value:'Configuration',id:'configuration',children:[]},{value:'Access Rule Example',id:'access-rule-example',children:[]}]},{value:'<code>id_token</code>',id:'id_token',children:[{value:'Global Configuration',id:'global-configuration',children:[]},{value:'Configuration',id:'configuration-1',children:[]},{value:'Access Rule Example',id:'access-rule-example-1',children:[]}]},{value:'<code>header</code>',id:'header',children:[{value:'Configuration',id:'configuration-2',children:[]},{value:'Access Rule Example',id:'access-rule-example-2',children:[]}]},{value:'<code>cookie</code>',id:'cookie',children:[{value:'Configuration',id:'configuration-3',children:[]},{value:'Cookies',id:'cookies',children:[]}]},{value:'<code>hydrator</code>',id:'hydrator',children:[{value:'Cache',id:'cache',children:[]},{value:'Configuration',id:'configuration-4',children:[]},{value:'Access Rule Example',id:'access-rule-example-3',children:[]}]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`A mutator transforms the credentials from incoming requests to credentials that
 your backend understands. For example, the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`Authorization: basic`),` header might
 be transformed to `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`X-User: <subject-id>`),`. This allows you to write backends that
 do not care if the original request was an anonymous one, an OAuth 2.0 Access
@@ -30054,7 +29934,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"version-v0.38/reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/versioned_docs/version-v0.38/reference/configuration.md","permalink":"/oathkeeper/docs/reference/configuration","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/reference/configuration.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588846434,"sidebar":"version-v0.38/docs","previous":{"title":"Configure and Deploy","permalink":"/oathkeeper/docs/configure-deploy"},"next":{"title":"REST API","permalink":"/oathkeeper/docs/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.oathkeeper.yaml`),` exists, it will be used as a configuration file which supports all
+const frontMatter={id:'configuration',title:'Configuration'};const metadata={"id":"version-v0.38/reference/configuration","title":"Configuration","description":"<!-- THIS FILE IS BEING AUTO-GENERATED. DO NOT MODIFY IT AS ALL CHANGES WILL BE OVERWRITTEN.","source":"@site/versioned_docs/version-v0.38/reference/configuration.md","permalink":"/oathkeeper/docs/reference/configuration","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/reference/configuration.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"version-v0.38/docs","previous":{"title":"Configure and Deploy","permalink":"/oathkeeper/docs/configure-deploy"},"next":{"title":"REST API","permalink":"/oathkeeper/docs/reference/api"}};/* @jsx mdx */const rightToc=[];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`If file `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`$HOME/.oathkeeper.yaml`),` exists, it will be used as a configuration file which supports all
 configuration settings listed below.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can load the config file from another source using the `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`-c path/to/config.yaml`),` or `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`--config path/to/config.yaml`),`
 flag: `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper --config path/to/config.yaml`),`.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Config files can be formatted as JSON, YAML and TOML. Some configuration values support reloading without server restart.
 All configuration values can be set using environment variables, as documented below.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`To find out more about edge cases like setting string array values through environmental variables head to the
@@ -32182,7 +32062,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'install',title:'Installation'};const metadata={"id":"version-v0.38/install","title":"Installation","description":"Installing ORY Oathkeeper on any system is straight forward. We provide","source":"@site/versioned_docs/version-v0.38/install.md","permalink":"/oathkeeper/docs/install","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/install.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588846434,"sidebar":"version-v0.38/docs","previous":{"title":"Introduction","permalink":"/oathkeeper/docs/index"},"next":{"title":"API Access Rules","permalink":"/oathkeeper/docs/api-access-rules"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Oathkeeper on any system is straight forward. We provide
+const frontMatter={id:'install',title:'Installation'};const metadata={"id":"version-v0.38/install","title":"Installation","description":"Installing ORY Oathkeeper on any system is straight forward. We provide","source":"@site/versioned_docs/version-v0.38/install.md","permalink":"/oathkeeper/docs/install","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/versioned_docs/version-v0.38/install.md","version":"v0.38","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"version-v0.38/docs","previous":{"title":"Introduction","permalink":"/oathkeeper/docs/index"},"next":{"title":"API Access Rules","permalink":"/oathkeeper/docs/api-access-rules"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Oathkeeper on any system is straight forward. We provide
 pre-built binaries, Docker Images and support various package managers.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"docker"},`Docker`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`We recommend using Docker to run ORY Oathkeeper:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ docker pull oryd/oathkeeper:v0.38.1-beta.1
 $ docker run --rm -it oryd/oathkeeper help
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"macos"},`macOS`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can install ORY Oathkeeper using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://brew.sh/"}),`homebrew`),` on macOS:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ brew tap ory/oathkeeper
@@ -34025,7 +33905,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'install',title:'Installation'};const metadata={"id":"install","title":"Installation","description":"Installing ORY Oathkeeper on any system is straight forward. We provide","source":"@site/docs/install.md","permalink":"/oathkeeper/docs/next/install","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/install.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588846434,"sidebar":"docs","previous":{"title":"Introduction","permalink":"/oathkeeper/docs/next/index"},"next":{"title":"API Access Rules","permalink":"/oathkeeper/docs/next/api-access-rules"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Oathkeeper on any system is straight forward. We provide
+const frontMatter={id:'install',title:'Installation'};const metadata={"id":"install","title":"Installation","description":"Installing ORY Oathkeeper on any system is straight forward. We provide","source":"@site/docs/install.md","permalink":"/oathkeeper/docs/next/install","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/install.md","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1588935418,"sidebar":"docs","previous":{"title":"Introduction","permalink":"/oathkeeper/docs/next/index"},"next":{"title":"API Access Rules","permalink":"/oathkeeper/docs/next/api-access-rules"}};/* @jsx mdx */const rightToc=[{value:'Docker',id:'docker',children:[]},{value:'macOS',id:'macos',children:[]},{value:'Linux',id:'linux',children:[]},{value:'Windows',id:'windows',children:[]},{value:'Download Binaries',id:'download-binaries',children:[]},{value:'Building from Source',id:'building-from-source',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`Installing ORY Oathkeeper on any system is straight forward. We provide
 pre-built binaries, Docker Images and support various package managers.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"docker"},`Docker`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`We recommend using Docker to run ORY Oathkeeper:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ docker pull oryd/oathkeeper:v0.38.1-beta.1
 $ docker run --rm -it oryd/oathkeeper help
 `)),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("h2",{"id":"macos"},`macOS`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`You can install ORY Oathkeeper using `,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("a",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"p"},{"href":"https://brew.sh/"}),`homebrew`),` on macOS:`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-shell"}),`$ brew tap ory/oathkeeper
