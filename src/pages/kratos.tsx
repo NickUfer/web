@@ -20,11 +20,7 @@ const KratosAnimation = () => (
 )
 
 const KratosSdk = () => (
-  <img
-    alt="ORY Kratos SDKs"
-    className="responsive"
-    src={kratosPolyglot}
-  />
+  <img alt="ORY Kratos SDKs" className="responsive" src={kratosPolyglot} />
 )
 
 const IntegrationCodeBox = () => (
@@ -104,7 +100,7 @@ const KratosPage = () => (
       mobile={[<KratosAnimation />]}
     />
 
-    <Newsletter preselect={"kratos"}/>
+    <Newsletter preselect={'kratos'} />
     <CompressedSection
       expanded
       left={

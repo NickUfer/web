@@ -72,15 +72,16 @@ const Footer = () => (
         <div className="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
           {brandPrefix.length > 0 ? (
             <>
-              <img src={logo} alt={'ORY logo'}/>
+              <img src={logo} alt={'ORY logo'} />
               <p className={cn(styles.contact)}>
-                Get in touch with us<br/>
+                Get in touch with us
+                <br />
                 <a href="mailto:hi@ory.sh">hi@ory.sh</a>
               </p>
             </>
           ) : (
             <>
-              <img src={logoTiny} alt={'ORY logo'}/>
+              <img src={logoTiny} alt={'ORY logo'} />
             </>
           )}
         </div>
@@ -103,19 +104,22 @@ const Footer = () => (
       </div>
 
       <div className="row">
-        <div className={cn('col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile', styles.divider)}/>
+        <div
+          className={cn(
+            'col-lg-offset-1 col-lg-10 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile',
+            styles.divider
+          )}
+        />
       </div>
 
       <div className="row">
         <div className="col-lg-offset-1 col-lg-3 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
-          <p className={styles.copyright}>
-            &copy; Copyright 2020 Ory Corp
-          </p>
+          <p className={styles.copyright}>&copy; Copyright 2020 Ory Corp</p>
         </div>
 
         <div className="col-lg-6 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 center-mobile">
           <div className={cn('row', styles.compRow)}>
-            {comp.map(({items }, index) => (
+            {comp.map(({ items }, index) => (
               <div key={index} className={styles.menuItem}>
                 <ul className={styles.list}>
                   {items.map(({ title, href }) => (

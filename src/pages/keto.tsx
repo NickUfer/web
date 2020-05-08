@@ -19,11 +19,7 @@ const KetoAnimation = () => (
 )
 
 const KetoSdk = () => (
-  <img
-    alt="ORY Keto SDKs"
-    className="responsive"
-    src={ketoPolyglot}
-  />
+  <img alt="ORY Keto SDKs" className="responsive" src={ketoPolyglot} />
 )
 
 const KetoPage = () => (
@@ -55,7 +51,7 @@ const KetoPage = () => (
       mobile={[<KetoAnimation />]}
     />
 
-    <Newsletter preselect={"keto"}/>
+    <Newsletter preselect={'keto'} />
     <CompressedSection
       right={<KetoSdk />}
       left={

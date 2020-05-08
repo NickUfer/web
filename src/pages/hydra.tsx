@@ -20,11 +20,7 @@ const HydraAnimation = () => (
 )
 
 const HydraSdk = () => (
-  <img
-    alt="ORY Hydra SDKs"
-    className="responsive"
-    src={hydraPolyglot}
-  />
+  <img alt="ORY Hydra SDKs" className="responsive" src={hydraPolyglot} />
 )
 
 const IntegrationCodeBox = () => (
