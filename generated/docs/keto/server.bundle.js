@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: postgres://user:password@host:123/database
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: localhost
+  host: 127.0.0.1
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20709,9 +20709,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - https://example.com
-      - https://*.example.com
-      - https://*.foo.example.com
+      - '*'
 
     ## Allowed HTTP Methods ##
     #
@@ -20727,8 +20725,8 @@ serve:
     #
     allowed_methods:
       - PUT
-      - HEAD
-      - CONNECT
+      - GET
+      - POST
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20743,7 +20741,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - qui occaecat
+      - Lorem
+      - sit
+      - ad dolor officia
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20758,8 +20758,9 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
+      - Ut consectetur aute ut sint
+      - quis
       - tempor
-      - proident sit et mollit esse
 
     ## Allow HTTP Credentials ##
     #
@@ -20785,7 +20786,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -55922647
+    max_age: -79521043
 
     ## Enable Debugging ##
     #
@@ -20799,7 +20800,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_DEBUG=<value>
     #
-    debug: false
+    debug: true
 
   ## HTTPS ##
   #
@@ -20862,7 +20863,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: cpu
+profiling: ''
 
 ## Log ##
 #
@@ -20881,7 +20882,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: info
+  level: panic
 
   ## Format ##
   #
@@ -20895,7 +20896,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: text
+  format: json
 
 ## tracing ##
 #
