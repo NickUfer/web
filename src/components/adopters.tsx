@@ -11,6 +11,7 @@ import hootsuite from '../images/adopters/hootsuite.svg'
 import raspi from '../images/adopters/raspi.svg'
 import segment from '../images/adopters/segment.svg'
 import tulip from '../images/adopters/tulip.svg'
+import spiribo from '../images/adopters/spiribo.svg'
 
 const adopters = [
   {
@@ -57,6 +58,11 @@ const adopters = [
     title: 'Kyma Project',
     image: kyma,
     url: 'https://kyma-project.io/',
+  },
+  {
+    title: 'Spiribo',
+    image: spiribo,
+    url: 'https://www.spiri.bo/',
   },
 ]
 
