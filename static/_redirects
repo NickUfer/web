@@ -81,6 +81,7 @@ https://www.ory.sh/docs/ecosystem/usage https://www.ory.sh/docs/ecosystem/api-de
 # END: anuary 2020 ecosystem change
 
 # April 2020 split docs repository change
+
 https://www.ory.sh/keto/docs/sdk/ https://www.ory.sh/keto/docs/sdk/index 302!
 https://www.ory.sh/keto/docs/engines/ https://www.ory.sh/keto/docs/engines/index 302!
 https://www.ory.sh/docs/keto/sdk/api https://www.ory.sh/keto/docs/reference/api 302!
@@ -117,4 +118,29 @@ https://www.ory.sh/docs/next/hydra/* https://www.ory.sh/hydra/docs/:splat 302!
 
 https://www.ory.sh/docs/ecosystem https://www.ory.sh/docs/ecosystem/projects
 
+https://www.ory.sh/docs/next/* https://www.ory.sh/docs/:splat 302!
+https://www.ory.sh/docs/next https://www.ory.sh/docs/index 302!
+
 # END: April 2020 split docs repository change
+
+# May 2020 Kratos docs refactoring
+
+https://www.ory.sh/kratos/docs/self-service/flows/user-settings-profile-management https://www.ory.sh/kratos/docs/self-service/flows/user-settings 302!
+
+https://www.ory.sh/kratos/docs/self-service/strategies/username-email-password https://www.ory.sh/kratos/docs/self-service/flows/user-login-user-registration/username-email-password 302!
+https://www.ory.sh/kratos/docs/self-service/strategies/openid-connect-social-sign-in-oauth2 https://www.ory.sh/kratos/docs/self-service/flows/user-login-user-registration/openid-connect-social-sign-in-oauth2 302!
+
+https://www.ory.sh/kratos/docs/self-service/strategies/user-settings-profile https://www.ory.sh/kratos/docs/self-service/flows/user-settings/user-profile-management 302!
+https://www.ory.sh/kratos/docs/self-service/flows/index https://www.ory.sh/kratos/docs/self-service 302!
+https://www.ory.sh/kratos/docs/self-service/index https://www.ory.sh/kratos/docs/self-service/index 302!
+
+https://www.ory.sh/kratos/docs/next/self-service/flows/user-settings-profile-management https://www.ory.sh/kratos/docs/next/self-service/flows/user-settings 302!
+
+https://www.ory.sh/kratos/docs/next/self-service/strategies/username-email-password https://www.ory.sh/kratos/docs/next/self-service/flows/user-login-user-registration/username-email-password 302!
+https://www.ory.sh/kratos/docs/next/self-service/strategies/openid-connect-social-sign-in-oauth2 https://www.ory.sh/kratos/docs/next/self-service/flows/user-login-user-registration/openid-connect-social-sign-in-oauth2 302!
+
+https://www.ory.sh/kratos/docs/next/self-service/strategies/user-settings-profile https://www.ory.sh/kratos/docs/next/self-service/flows/user-settings/user-profile-management 302!
+https://www.ory.sh/kratos/docs/next/self-service/flows/index https://www.ory.sh/kratos/docs/next/self-service 302!
+https://www.ory.sh/kratos/docs/next/self-service/index https://www.ory.sh/kratos/docs/next/self-service/index 302!
+
+# END: 2020 Kratos docs refactoring
