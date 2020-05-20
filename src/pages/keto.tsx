@@ -9,6 +9,7 @@ import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
 import ketoProcess from '../images/keto/keto.svg'
 import ketoPolyglot from '../images/keto/keto_p.svg'
+import Adopters from '../components/adopters'
 
 const KetoAnimation = () => (
   <img
@@ -78,6 +79,7 @@ const KetoPage = () => (
     />
 
     <Stats />
+    <Adopters />
     <Collaborator />
   </Layout>
 )

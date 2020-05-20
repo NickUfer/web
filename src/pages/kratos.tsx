@@ -10,6 +10,7 @@ import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
 import kratosProcess from '../images/kratos/kratos.svg'
 import kratosPolyglot from '../images/kratos/kratos_p.svg'
+import Adopters from '../components/adopters'
 
 const KratosAnimation = () => (
   <img
@@ -171,6 +172,7 @@ const KratosPage = () => (
     />
 
     <Stats />
+    <Adopters />
     <Collaborator />
   </Layout>
 )

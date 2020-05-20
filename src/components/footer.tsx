@@ -76,7 +76,7 @@ const Footer = () => (
               <p className={cn(styles.contact)}>
                 Get in touch with us
                 <br />
-                <a href="mailto:hi@ory.sh">hi@ory.sh</a>
+                <a href="mailto:office@ory.sh">office@ory.sh</a>
               </p>
             </>
           ) : (

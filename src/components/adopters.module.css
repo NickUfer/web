@@ -1,12 +1,7 @@
 .adopters {
-  background-color: var(--colors-base-white);
-  padding: 96px 0;
+  background-color: var(--colors-themed-light);
+  padding: 64px 0;
   position: relative;
-
-  & h3,
-  & p {
-    color: var(--colors-base-dark);
-  }
 
   & a img {
     transition: all ease 200ms;
@@ -43,8 +38,6 @@
 }
 
 .logos-inner {
-  height: 100%;
-
   flex-wrap: wrap;
   display: flex;
   align-items: center;
@@ -52,7 +45,10 @@
   justify-content: space-around;
 
   & img {
+    height: 100%;
+    width: 100%;
     margin: 0 4px 16px 4px;
     max-width: 128px;
+    max-height: 40px;
   }
 }

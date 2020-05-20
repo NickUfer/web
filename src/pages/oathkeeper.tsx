@@ -10,6 +10,7 @@ import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
 import oathkeeperProcess from '../images/oathkeeper/oathkeeper.svg'
 import oathkeeperPolyglot from '../images/oathkeeper/oathkeeper_p.svg'
+import Adopters from '../components/adopters'
 
 const OathkeeperAnimation = () => (
   <img
@@ -82,7 +83,7 @@ const OathkeeperPage = () => (
   >
     <SEO
       description=""
-      title={`${brandPrefix} Oathkeeper Open Source Identity and Access Proxy (IAP).`}
+      title={`${brandPrefix}Oathkeeper Open Source Identity and Access Proxy (IAP).`}
     />
 
     <CompressedHero
@@ -176,6 +177,7 @@ const OathkeeperPage = () => (
     />
 
     <Stats />
+    <Adopters />
     <Collaborator />
   </Layout>
 )

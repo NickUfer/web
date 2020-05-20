@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "collaborator": string;
+  readonly "team": string;
 };
 export = styles;
 

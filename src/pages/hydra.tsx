@@ -10,6 +10,7 @@ import { brandPrefix } from '../config'
 import Collaborator from '../components/collaborator'
 import hydraProcess from '../images/hydra/hydra.svg'
 import hydraPolyglot from '../images/hydra/hydra_p.svg'
+import Adopters from '../components/adopters'
 
 const HydraAnimation = () => (
   <img
@@ -162,6 +163,7 @@ const HydraPage = () => (
     />
 
     <Stats />
+    <Adopters />
     <Collaborator />
   </Layout>
 )

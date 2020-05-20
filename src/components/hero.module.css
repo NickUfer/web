@@ -3,10 +3,15 @@
 .hero {
   background-color: var(--colors-themed-default);
   color: var(--colors-base-white);
+  text-align: center;
 
   & :global a.cta.secondary:any-link {
     color: var(--colors-base-dark);
     border-color: var(--colors-base-dark);
+
+    &:last-child {
+      margin-right: 0 !important;
+    }
 
     &:hover {
       border-color: var(--colors-base-white);
@@ -47,25 +52,5 @@
     & :global .container-fluid {
       padding: 64px 0;
     }
-  }
-}
-
-.logo {
-  position: absolute;
-  content: ' ';
-  right: 40px;
-  width: 228px;
-  height: 460px;
-  top: 54px;
-  background-image: url('../images/hero-logo-desktop.svg');
-}
-
-@media (max-width: 1280px) {
-  .logo {
-    width: 80px;
-    height: 320px;
-    top: 64px;
-    right: 0;
-    background-image: url('../images/hero-logo-mobile.svg');
   }
 }

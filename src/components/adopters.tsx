@@ -1,33 +1,34 @@
 import React from 'react'
 import styles from './adopters.module.css'
-import VerticalDivider from './vertical-divider'
 
 import allmyfunds from '../images/adopters/allmyfunds.svg'
 import kyma from '../images/adopters/kyma.svg'
-import tw from '../images/adopters/tw.svg'
-import threerein from '../images/adopters/3R-horiz.svg'
+import thoughtworks from '../images/adopters/thoughtworks.svg'
+import threerein from '../images/adopters/threerein.svg'
 import arduino from '../images/adopters/arduino.svg'
 import hootsuite from '../images/adopters/hootsuite.svg'
-import raspi from '../images/adopters/raspi.svg'
+import raspberrypi from '../images/adopters/raspberrypi.svg'
 import segment from '../images/adopters/segment.svg'
 import tulip from '../images/adopters/tulip.svg'
 import spiribo from '../images/adopters/spiribo.svg'
 
 const adopters = [
   {
-    title: 'ThoughtWorks',
-    image: tw,
-    url: 'https://www.thoughtworks.com',
-  },
-  {
     title: 'Tulip Retail',
     image: tulip,
     url: 'https://tulip.com/',
   },
   {
+    title: 'ThoughtWorks',
+    image: thoughtworks,
+    url: 'https://www.thoughtworks.com',
+    featured: true,
+  },
+  {
     title: 'Segment',
     image: segment,
     url: 'https://segment.com/',
+    featured: true,
   },
   {
     title: 'All My Funds',
@@ -36,18 +37,21 @@ const adopters = [
   },
   {
     title: 'Raspberry Pi',
-    image: raspi,
+    image: raspberrypi,
     url: 'https://www.raspberrypi.org/',
+    featured: true,
   },
   {
     title: 'Arduino',
     image: arduino,
     url: 'https://arduino.cc/',
+    featured: true,
   },
   {
     title: 'Hootsuite',
     image: hootsuite,
     url: 'https://hootsuite.com',
+    featured: true,
   },
   {
     title: '3REIN',
@@ -58,6 +62,7 @@ const adopters = [
     title: 'Kyma Project',
     image: kyma,
     url: 'https://kyma-project.io/',
+    featured: true,
   },
   {
     title: 'Spiribo',
@@ -66,31 +71,26 @@ const adopters = [
   },
 ]
 
-const Adopters = () => (
+interface PropTypes {
+  onlyFeatured?: boolean
+}
+
+const Adopters = ({ onlyFeatured }: PropTypes) => (
   <div className={styles.adopters}>
     <div className="container-fluid">
       <div className="row">
-        <VerticalDivider padding={96} />
-        <div className="mobile-offset-16 col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-          <h3 className="hidden-md hidden-sm">Developers love ORY</h3>
-          <p>
-            Developers across different industries and companies use ORY to
-            provide secure access to their applications and endpoints.
-          </p>
-        </div>
-        <div className="col-lg-offset-2 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
+        <div className="col-lg-offset-1 col-lg-10  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
           <div className={styles.logos}>
             <div className={styles.logosInner}>
-              {adopters.map(({ title, image, url }) => (
-                <a href={url} key={title}>
-                  <img src={image} alt={title} />
-                </a>
-              ))}
+              {adopters
+                .filter(({ featured }) => onlyFeatured ? featured : true)
+                .map(({ title, image, url }) => (
+                  <a href={url} key={title}>
+                    <img src={image} alt={title}/>
+                  </a>
+                ))}
             </div>
           </div>
-        </div>
-        <div className="hidden-lg  col-lg-offset-1 col-lg-4  col-md-offset-1 col-md-10  col-sm-offset-1 col-sm-10">
-          <h3>Developers love ORY</h3>
         </div>
       </div>
     </div>

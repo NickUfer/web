@@ -1,7 +1,6 @@
-.collaborator {
+.team {
   background-color: var(--colors-themed-light);
-  padding-bottom: 112px;
-  padding-top: 32px;
+  padding: 112px 0;
 
   & h3,
   & p {
@@ -21,7 +20,7 @@
 }
 
 @media (--sm-viewport) {
-  .collaborator {
+  .team {
     padding: 32px 0;
 
     & img {
@@ -31,7 +30,7 @@
 }
 
 @media (--md-viewport) {
-  .collaborator {
+  .team {
     padding: 32px 0;
 
     & img {
