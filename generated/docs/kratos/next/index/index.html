@@ -20,7 +20,7 @@
 
 <link rel="preload" href="/kratos/docs/styles.067893b4.js" as="script">
 
-<link rel="preload" href="/kratos/docs/runtime~main.45575853.js" as="script">
+<link rel="preload" href="/kratos/docs/runtime~main.7aedad53.js" as="script">
 
 <link rel="preload" href="/kratos/docs/main.11b4e59c.js" as="script">
 
@@ -36,7 +36,7 @@
 
 <link rel="preload" href="/kratos/docs/17896441.e31c77d3.js" as="script">
 
-<link rel="preload" href="/kratos/docs/c377a04b.2fdfc917.js" as="script">
+<link rel="preload" href="/kratos/docs/c377a04b.e8a52205.js" as="script">
 
 </head>
 <body>
@@ -54,34 +54,34 @@ Passwordless flows, and others.</li><li><strong>Multi-Factor Authentication (MFA
 <a href="https://tools.ietf.org/html/rfc4226">IETF RFC 4226</a> - better known as
 <a href="https://en.wikipedia.org/wiki/Google_Authenticator">Google Authenticator</a>)</li><li><strong>Account Verification</strong>: Verify that an E-Mail address, phone number, or
 physical address actually belong to that identity.</li><li><strong>Account Recovery</strong>: Recover access using &quot;Forgot Password&quot; flows, Security
-Codes (in case of MKFA device loss), and others.</li><li><strong>Profile and Account Management</strong>: Update passwords, personal details, email
+Codes (in case of MFA device loss), etc.</li><li><strong>Profile and Account Management</strong>: Update passwords, personal details, email
 addresses, linked social profiles using secure flows.</li><li><strong>Admin APIs</strong>: Import, update, delete identities.</li></ul><p>Identity is a hard problem and ORY Kratos solves it in a unique way. We value
 security, flexibility, and integration with cloud technology (such as
-Kubernetes) most:</p><ul><li>ORY Kratos does not ship a HTML Rendering Engine. You can build your own UI
+Kubernetes) most:</p><ul><li>ORY Kratos does not ship an HTML Rendering Engine. You can build your own UI
 (or use our example UIs) in the language and framework you feel most
-comfortable with!</li><li>The workflow engine allows you to fully customize your use experience: Whether
-your users need to activate their account after registration, or a multi-step
-(progressive) registration - it&#x27;s all possible!</li><li>One Identity Data Model does not fit all - you might have customers that need
-a billing address, internal support staff that is assigned to a cost center,
-and that smart fridge on floor 4. You can express the different data models
-using <a href="https://json-schema.org/">JSON Schema</a> and make the system work for
-you - not the other way around!</li></ul><p>To learn more about what&#x27;s different and how ORY Kratos compares to other (open
-source) solutions, head over to <a href="/kratos/docs/next/concepts/index">Concepts</a> and
-<a href="/kratos/docs/next/further-reading/comparison">Comparison</a>.</p><p>But it&#x27;s not just features - ORY Kratos stands out because it runs on any
+comfortable with.</li><li>The workflow engine allows you to fully customize your use experience. Whether
+your users need to activate their account after registration, or have a
+multi-step (progressive) registration - it&#x27;s all possible!</li><li>One Identity Data Model does not fit all - you may have customers that need a
+billing address, internal support staff that is assigned to a cost center, and
+that smart fridge on floor 4. You can express the different data models using
+<a href="https://json-schema.org/">JSON Schema</a> and make the system work for you - not
+the other way around.</li></ul><p>To learn more about what&#x27;s different and how ORY Kratos compares to other open
+source solutions, head over to <a href="/kratos/docs/next/concepts/index">Concepts</a> and
+<a href="/kratos/docs/next/further-reading/comparison">Comparison</a>.</p><p>ORY Kratos isn&#x27;t just about features; it stands out because it runs on any
 operating system (Linux, macOS, Windows) and on most processors (i386, amd64,
-arm, ...). The compiled binary has <em>no system or library or file dependencies</em>
-and can be run as a single, static binary on top of a, for example, raw Linux
-kernel. The binary and Docker Image is less than 20MB small.</p><p>ORY Kratos scales horizontally without effort. The only external dependency is a
-RDBMS - we currently support SQLite, PostgreSQL, MySQL, CockroachDB. You will
-not need memcached, etcd, or any other system to scale ORY Kratos.</p><p>We believe in strong separation of concerns, it is a guiding principle in the
+arm, etc.). The compiled binary has <em>no system or library or file dependencies</em>
+and can be run as a single, static binary on top of, for example, a raw Linux
+kernel. The binary and Docker image are each less than 20MB in size.</p><p>ORY Kratos scales horizontally without effort. The only external dependency is
+an RDBMS - we currently support SQLite, PostgreSQL, MySQL, CockroachDB. You will
+not need memcached, etcd, or any other system to scale ORY Kratos.</p><p>We believe in strong separation of concerns, which is a guiding principle in the
 design of each ORY project. As such, we build software that solves specific
 problems very well and offloads adjacent issues (such as a user interface) to
-other applications.</p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/ory/kratos/edit/master/docs/docs/index.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-04-10T06:28:21.000Z" class="docLastUpdatedAt_1sqk">4/10/2020</time> by <strong>hackerman</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/kratos/docs/next/quickstart"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">Quickstart »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/imprint">Imprint</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/privacy">Privacy</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/tos">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>document.querySelectorAll(".tabs .tabs-nav .nav-item a").forEach((function(t){t.addEventListener("click",(function(e){return e.preventDefault(),t.closest(".tabs-nav").querySelectorAll(".nav-item a").forEach((function(t){t.classList.remove("active")})),t.closest(".tabs").querySelectorAll(".tab-content .tab-pane").forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),document.getElementById(t.href.split("#")[1]).classList.add("active"),!1}))}))</script></footer>
+other applications.</p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/ory/kratos/edit/master/docs/docs/index.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-05-20T11:34:19.000Z" class="docLastUpdatedAt_1sqk">5/20/2020</time> by <strong>Andrew Banchich</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/kratos/docs/next/quickstart"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">Quickstart »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"></div></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/imprint">Imprint</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/privacy">Privacy</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/tos">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>document.querySelectorAll(".tabs .tabs-nav .nav-item a").forEach((function(t){t.addEventListener("click",(function(e){return e.preventDefault(),t.closest(".tabs-nav").querySelectorAll(".nav-item a").forEach((function(t){t.classList.remove("active")})),t.closest(".tabs").querySelectorAll(".tab-content .tab-pane").forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),document.getElementById(t.href.split("#")[1]).classList.add("active"),!1}))}))</script></footer>
 </div>
 
 <script src="/kratos/docs/styles.067893b4.js"></script>
 
-<script src="/kratos/docs/runtime~main.45575853.js"></script>
+<script src="/kratos/docs/runtime~main.7aedad53.js"></script>
 
 <script src="/kratos/docs/main.11b4e59c.js"></script>
 
@@ -97,7 +97,7 @@ other applications.</p></div></article><div class="margin-vert--xl"><div class="
 
 <script src="/kratos/docs/17896441.e31c77d3.js"></script>
 
-<script src="/kratos/docs/c377a04b.2fdfc917.js"></script>
+<script src="/kratos/docs/c377a04b.e8a52205.js"></script>
 
 
 </body>
