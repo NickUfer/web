@@ -20,7 +20,7 @@
 
 <link rel="preload" href="/hydra/docs/styles.8d227ce1.js" as="script">
 
-<link rel="preload" href="/hydra/docs/runtime~main.c42cadbe.js" as="script">
+<link rel="preload" href="/hydra/docs/runtime~main.8a38ce43.js" as="script">
 
 <link rel="preload" href="/hydra/docs/main.2c3eebc2.js" as="script">
 
@@ -36,7 +36,7 @@
 
 <link rel="preload" href="/hydra/docs/17896441.3d5cf8b3.js" as="script">
 
-<link rel="preload" href="/hydra/docs/e79af006.dbe89719.js" as="script">
+<link rel="preload" href="/hydra/docs/e79af006.d63393b8.js" as="script">
 
 </head>
 <body>
@@ -49,9 +49,9 @@ following:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ SERVE_TLS_KEY_PATH=/path/to/key.pem</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ SERVE_TLS_CERT_PATH=/path/to/cert.crt</span></div></div></div></div></div><p>If you run Docker locally, you can then use</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ docker run ... \</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    -e SERVE_TLS_CERT_BASE64=$(SERVE_TLS_CERT_BASE64) \</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    -e SERVE_TLS_KEY_BASE64=$(SERVE_TLS_KEY_BASE64) \</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    ...</span></div></div></div></div></div><p>or mount the files using <code>--mount</code> and linking to the files.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="mobile--browser-spa-authorization"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#mobile--browser-spa-authorization" title="Direct link to heading">#</a>Mobile &amp; Browser (SPA) Authorization</h2><p>We have an
 <a href="https://www.ory.sh/oauth2-for-mobile-app-spa-browser">excellent blog post</a> on
 this topic. Read it now!</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="creating-a-public-oauth-20-client"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#creating-a-public-oauth-20-client" title="Direct link to heading">#</a>Creating a public OAuth 2.0 Client</h3><p>You can create a public OAuth 2.0 Client (e.g. for the authorize code + PKCE or
-implicit flow) with the CLI</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">hydra clients create --endpoint http://ory-hydra-admin-api --token-endpoint-auth-method none</span></div></div></div></div></div><p>or by setting in the HTTP API JSON body when POSTing to <code>/clients</code>:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">{</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    &quot;client_id&quot;: &quot;...&quot;,</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    &quot;token_endpoint_auth_method&quot;: &quot;none&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div></div></div></div></div><p>Be aware that when making requests to <code>/oauth2/token</code> or <code>/oauth2/revoke</code> with a
-public OAuth 2.0 Client, you can not authenticate with the HTTP Basic
-Authorization but must include the <code>client_id</code> in the POST body.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="key-rotation"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#key-rotation" title="Direct link to heading">#</a>Key rotation</h2><p>There are two types of key rotation:</p><ul><li>Rotation of JSON Web Token Signing Keys</li><li>Rotation of HMAC Token Signing and Database and Cookie Encryption Keys</li></ul><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="rotation-of-json-web-token-signing-keys"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#rotation-of-json-web-token-signing-keys" title="Direct link to heading">#</a>Rotation of JSON Web Token Signing Keys</h3><p>JSON Web Token Signing Key rotation is simple with ORY Hydra. You can rotate
+implicit flow) with the CLI</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">hydra clients create --endpoint http://ory-hydra-admin-api --token-endpoint-auth-method none</span></div></div></div></div></div><p>or by setting in the HTTP API JSON body when POSTing to <code>/clients</code>:</p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">{</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    &quot;client_id&quot;: &quot;...&quot;,</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    &quot;token_endpoint_auth_method&quot;: &quot;none&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div></div></div></div></div><p>Be aware that when making requests to <code>/oauth2/token</code> or <code>/oauth2/revoke</code> with a public OAuth 2.0
+Client, you can not authenticate with the HTTP Basic Authorization but must
+include the <code>client_id</code> in the POST body.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="key-rotation"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#key-rotation" title="Direct link to heading">#</a>Key rotation</h2><p>There are two types of key rotation:</p><ul><li>Rotation of JSON Web Token Signing Keys</li><li>Rotation of HMAC Token Signing and Database and Cookie Encryption Keys</li></ul><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="rotation-of-json-web-token-signing-keys"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#rotation-of-json-web-token-signing-keys" title="Direct link to heading">#</a>Rotation of JSON Web Token Signing Keys</h3><p>JSON Web Token Signing Key rotation is simple with ORY Hydra. You can rotate
 OpenID Connect ID Token and OAuth 2.0 Access Tokens, when using the JSON Web
 Token strategy, keys with one simple command.</p><p>ORY Hydra takes the latest key from the key store to sign JSON Web Tokens. All
 public keys will be shown at
@@ -173,7 +173,7 @@ that can be enabled by setting <code>serve.cookies.same_site_legacy_workaround</
 
 <script src="/hydra/docs/styles.8d227ce1.js"></script>
 
-<script src="/hydra/docs/runtime~main.c42cadbe.js"></script>
+<script src="/hydra/docs/runtime~main.8a38ce43.js"></script>
 
 <script src="/hydra/docs/main.2c3eebc2.js"></script>
 
@@ -189,7 +189,7 @@ that can be enabled by setting <code>serve.cookies.same_site_legacy_workaround</
 
 <script src="/hydra/docs/17896441.3d5cf8b3.js"></script>
 
-<script src="/hydra/docs/e79af006.dbe89719.js"></script>
+<script src="/hydra/docs/e79af006.d63393b8.js"></script>
 
 
 </body>
