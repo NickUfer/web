@@ -20,7 +20,7 @@
 
 <link rel="preload" href="/hydra/docs/styles.8d227ce1.js" as="script">
 
-<link rel="preload" href="/hydra/docs/runtime~main.e03b69dd.js" as="script">
+<link rel="preload" href="/hydra/docs/runtime~main.a4296d2c.js" as="script">
 
 <link rel="preload" href="/hydra/docs/main.2c3eebc2.js" as="script">
 
@@ -36,7 +36,7 @@
 
 <link rel="preload" href="/hydra/docs/17896441.3d5cf8b3.js" as="script">
 
-<link rel="preload" href="/hydra/docs/1dd2dd4f.cc937bbd.js" as="script">
+<link rel="preload" href="/hydra/docs/1dd2dd4f.4926b401.js" as="script">
 
 </head>
 <body>
@@ -58,7 +58,7 @@ can lead cause issues when misconfigured. The most common causes of CSRF issues 
 in the same flow.</li><li>You are running ORY Hydra via HTTP but are missing the <code>--dangerous-force-http</code> CLI flag.</li><li>You are running the OAuth2 flow in separate browsers, or in a browser with incognito mode. The Brave browser
 is also known for notoriously discarding cookies when used in &quot;No-Tracking&quot; mode.</li><li>You are running ORY Hydra behind a Reverse Proxy (e.g. Load Balancer) that strips the Cookie header. If the
 reverse proxy supports path rewrites that might also cause issues!</li><li>You are trying to do two OAuth2 flows at the same time in the same Browser.</li><li>You have changed the Cookie SameSite behavior. If this is the default value (you did not change it), this should
-not be an issue.</li><li>You are using the <code>--dangerous-force-http</code> CLI flag to run via HTTP, but have not changed the Cookie SameSite behaviour. The default value for SameSite setting is <code>None</code>, which also requires the cookie be marked as <code>Secure</code> which won&#x27;t be set whilst running Hydra over HTTP.</li></ul><p>:::warn
+not be an issue.</li></ul><p>:::warn
 You cannot call <code>/oauth2/auth</code> using an AJAX request. It is not allowed and not possible with OAuth2.
 This endpoint can only be accessed using a normal browser request.
 :::</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="logout-is-not-working-as-expected"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#logout-is-not-working-as-expected" title="Direct link to heading">#</a>Logout is not working as expected</h2><p>Sometimes, calling <code>/oauth2/sessions/logout</code> does not behave as expected, for
@@ -145,7 +145,7 @@ supported values. Simply run:</p><div class="mdxCodeBlock_iHAB"><div class="code
 
 <script src="/hydra/docs/styles.8d227ce1.js"></script>
 
-<script src="/hydra/docs/runtime~main.e03b69dd.js"></script>
+<script src="/hydra/docs/runtime~main.a4296d2c.js"></script>
 
 <script src="/hydra/docs/main.2c3eebc2.js"></script>
 
@@ -161,7 +161,7 @@ supported values. Simply run:</p><div class="mdxCodeBlock_iHAB"><div class="code
 
 <script src="/hydra/docs/17896441.3d5cf8b3.js"></script>
 
-<script src="/hydra/docs/1dd2dd4f.cc937bbd.js"></script>
+<script src="/hydra/docs/1dd2dd4f.4926b401.js"></script>
 
 
 </body>
