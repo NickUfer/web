@@ -20634,7 +20634,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: postgres://user:password@host:123/database
+dsn: mysql://user:password@tcp(host:123)/database
 
 ## HTTP REST API ##
 #
@@ -20670,7 +20670,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: 127.0.0.1
+  host: localhost
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -20725,9 +20725,7 @@ serve:
     #
     allowed_methods:
       - TRACE
-      - HEAD
-      - DELETE
-      - GET
+      - PATCH
 
     ## Allowed Request HTTP Headers ##
     #
@@ -20742,10 +20740,8 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - enim
-      - Lorem do ut cillum enim
-      - sed in sint nostrud ipsum
-      - ipsum qui amet
+      - culpa exercitation nostrud ad
+      - ex in do cupidatat
 
     ## Allowed Response HTTP Headers ##
     #
@@ -20760,10 +20756,9 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - labore occaecat sint dolor
-      - in Duis
-      - voluptate nostrud magna exercitation et
-      - occaecat
+      - mollit sint cillum consectetur et
+      - quis Ut dolor
+      - ullamco eiusmod
 
     ## Allow HTTP Credentials ##
     #
@@ -20789,7 +20784,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: 44400048
+    max_age: 52489155
 
     ## Enable Debugging ##
     #
@@ -20885,7 +20880,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: fatal
+  level: warn
 
   ## Format ##
   #
