@@ -20,7 +20,7 @@
 
 <link rel="preload" href="/oathkeeper/docs/styles.e12e2309.js" as="script">
 
-<link rel="preload" href="/oathkeeper/docs/runtime~main.81213fea.js" as="script">
+<link rel="preload" href="/oathkeeper/docs/runtime~main.c7b93ac4.js" as="script">
 
 <link rel="preload" href="/oathkeeper/docs/main.5e5ca59b.js" as="script">
 
@@ -36,7 +36,7 @@
 
 <link rel="preload" href="/oathkeeper/docs/17896441.90a378c8.js" as="script">
 
-<link rel="preload" href="/oathkeeper/docs/8306c3dc.fda10708.js" as="script">
+<link rel="preload" href="/oathkeeper/docs/8306c3dc.27025be6.js" as="script">
 
 </head>
 <body>
@@ -107,7 +107,8 @@ OAuth 2.0 Client Credentials grant in order to detect if the provided
 credentials are valid.</p><p>This authenticator will use the username from the HTTP Basic Authorization
 header as the subject for this request.</p><blockquote><p>If you are unfamiliar with OAuth 2.0 Client Credentials we recommend
 <a href="https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/">reading this guide</a>.</p></blockquote><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="configuration-4"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#configuration-4" title="Direct link to heading">#</a>Configuration</h3><ul><li><code>token_url</code> (string, required) - The OAuth 2.0 Token Endpoint that will be
-used to validate the client credentials.</li><li><code>required_scope</code> ([]string, optional) - Sets what scope is required by the URL
+used to validate the client credentials.</li><li><code>retry</code> (object, optional) - Configures timeout and delay settings for the
+request against the token endpoint<ul><li><code>give_up_after</code> (string) timeout</li><li><code>max_delay</code> (string) time to wait between retries</li></ul></li><li><code>required_scope</code> ([]string, optional) - Sets what scope is required by the URL
 and when making performing OAuth 2.0 Client Credentials request, the scope
 will be included in the request:</li></ul><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-yaml codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># Global configuration file oathkeeper.yml</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token key atrule">authenticators</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token key atrule">oauth2_client_credentials</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># Set enabled to true if the authenticator should be enabled and false to disable the authenticator. Defaults to false.</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token key atrule">enabled</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> </span><span class="token boolean important" style="color:rgb(255, 88, 116)">true</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
 </span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token key atrule">config</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      </span><span class="token key atrule">token_url</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> https</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain">//my</span><span class="token punctuation" style="color:rgb(199, 146, 234)">-</span><span class="token plain">website.com/oauth2/token</span></div></div></div></div></div><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-yaml codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># Some Access Rule: access-rule-1.yaml</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token key atrule">id</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> access</span><span class="token punctuation" style="color:rgb(199, 146, 234)">-</span><span class="token plain">rule</span><span class="token punctuation" style="color:rgb(199, 146, 234)">-</span><span class="token number" style="color:rgb(247, 140, 108)">1</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># match: ...</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token comment" style="color:rgb(105, 112, 152);font-style:italic"># upstream: ...</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain"></span><span class="token key atrule">authenticators</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">  </span><span class="token punctuation" style="color:rgb(199, 146, 234)">-</span><span class="token plain"> </span><span class="token key atrule">handler</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> oauth2_client_credentials</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">    </span><span class="token key atrule">config</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"></span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">      </span><span class="token key atrule">token_url</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain"> https</span><span class="token punctuation" style="color:rgb(199, 146, 234)">:</span><span class="token plain">//my</span><span class="token punctuation" style="color:rgb(199, 146, 234)">-</span><span class="token plain">website.com/oauth2/token</span></div></div></div></div></div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="access-rule-example-4"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#access-rule-example-4" title="Direct link to heading">#</a>Access Rule Example</h3><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-shell codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">$ </span><span class="token function" style="color:rgb(130, 170, 255)">cat</span><span class="token plain"> ./rules.json</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain" style="display:inline-block">
@@ -214,7 +215,7 @@ JWT is considered invalid.</p></div></article><div class="margin-vert--xl"><div 
 
 <script src="/oathkeeper/docs/styles.e12e2309.js"></script>
 
-<script src="/oathkeeper/docs/runtime~main.81213fea.js"></script>
+<script src="/oathkeeper/docs/runtime~main.c7b93ac4.js"></script>
 
 <script src="/oathkeeper/docs/main.5e5ca59b.js"></script>
 
@@ -230,7 +231,7 @@ JWT is considered invalid.</p></div></article><div class="margin-vert--xl"><div 
 
 <script src="/oathkeeper/docs/17896441.90a378c8.js"></script>
 
-<script src="/oathkeeper/docs/8306c3dc.fda10708.js"></script>
+<script src="/oathkeeper/docs/8306c3dc.27025be6.js"></script>
 
 
 </body>
