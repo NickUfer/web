@@ -19,23 +19,23 @@
 <link rel="stylesheet" href="/hydra/docs/styles.24414715.css">
 
 
-<link rel="preload" href="/hydra/docs/styles.df67e517.js" as="script">
+<link rel="preload" href="/hydra/docs/styles.96a6b7f1.js" as="script">
 
-<link rel="preload" href="/hydra/docs/runtime~main.c5cbe11d.js" as="script">
+<link rel="preload" href="/hydra/docs/runtime~main.b926194a.js" as="script">
 
-<link rel="preload" href="/hydra/docs/main.5acaf75f.js" as="script">
+<link rel="preload" href="/hydra/docs/main.5fa765bf.js" as="script">
 
-<link rel="preload" href="/hydra/docs/1.179a10b7.js" as="script">
+<link rel="preload" href="/hydra/docs/1.188a3a21.js" as="script">
 
-<link rel="preload" href="/hydra/docs/2.aae81b09.js" as="script">
+<link rel="preload" href="/hydra/docs/2.2b437ed4.js" as="script">
 
-<link rel="preload" href="/hydra/docs/1be78505.04f9bcca.js" as="script">
+<link rel="preload" href="/hydra/docs/1be78505.37582a14.js" as="script">
 
-<link rel="preload" href="/hydra/docs/88.a269bb56.js" as="script">
+<link rel="preload" href="/hydra/docs/86.415e0025.js" as="script">
 
-<link rel="preload" href="/hydra/docs/71bd2d01.328e67a0.js" as="script">
+<link rel="preload" href="/hydra/docs/71bd2d01.42de57d9.js" as="script">
 
-<link rel="preload" href="/hydra/docs/beaa4a23.41f093d8.js" as="script">
+<link rel="preload" href="/hydra/docs/beaa4a23.783da913.js" as="script">
 
 </head>
 <body>
@@ -368,23 +368,23 @@ publicly visible as those of ID Tokens. It is therefore imperative to <strong>no
 expose sensitive information without end-user consent.</strong></p></blockquote></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/ory/hydra/edit/master/docs/docs/oauth2.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-04-30T11:02:50.000Z" class="docLastUpdatedAt_1sqk">4/30/2020</time> by <strong>aeneasr</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/hydra/docs/next/install"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Installation</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/hydra/docs/next/login-consent-flow"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Hydra&#x27;s User Login and Consent Flow »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#oauth-20" class="table-of-contents__link">OAuth 2.0</a></li><li><a href="#what-is-openid-connect-10" class="table-of-contents__link">What is OpenID Connect 1.0?</a></li><li><a href="#oauth-20-scope--permission" class="table-of-contents__link">OAuth 2.0 Scope != Permission</a></li><li><a href="#terminology" class="table-of-contents__link">Terminology</a></li><li><a href="#authenticating-users-and-requesting-consent" class="table-of-contents__link">Authenticating Users and Requesting Consent</a><ul><li><a href="#the-flow-from-a-users-point-of-view" class="table-of-contents__link">The flow from a user&#39;s point of view</a></li><li><a href="#the-flow-from-a-network-perspective" class="table-of-contents__link">The flow from a network perspective</a></li><li><a href="#implementing-a-login--consent-provider" class="table-of-contents__link">Implementing a Login &amp; Consent Provider</a></li><li><a href="#logout" class="table-of-contents__link">Logout</a></li><li><a href="#revoking-consent-and-login-sessions" class="table-of-contents__link">Revoking consent and login sessions</a></li></ul></li><li><a href="#oauth-20-1" class="table-of-contents__link">OAuth 2.0</a><ul><li><a href="#oauth-20-scope" class="table-of-contents__link">OAuth 2.0 Scope</a></li><li><a href="#oauth-20-access-token-audience" class="table-of-contents__link">OAuth 2.0 Access Token Audience</a></li><li><a href="#oauth-20-refresh-tokens" class="table-of-contents__link">OAuth 2.0 Refresh Tokens</a></li><li><a href="#oauth-20-token-introspection" class="table-of-contents__link">OAuth 2.0 Token Introspection</a></li><li><a href="#oauth-20-clients" class="table-of-contents__link">OAuth 2.0 Clients</a></li></ul></li><li><a href="#openid-connect" class="table-of-contents__link">OpenID Connect</a><ul><li><a href="#userinfo" class="table-of-contents__link">Userinfo</a></li></ul></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/imprint">Imprint</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/privacy">Privacy</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.ory.sh/tos">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>document.querySelectorAll(".tabs .tabs-nav .nav-item a").forEach((function(t){t.addEventListener("click",(function(e){return e.preventDefault(),t.closest(".tabs-nav").querySelectorAll(".nav-item a").forEach((function(t){t.classList.remove("active")})),t.closest(".tabs").querySelectorAll(".tab-content .tab-pane").forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),document.getElementById(t.href.split("#")[1]).classList.add("active"),!1}))}))</script></footer>
 </div>
 
-<script src="/hydra/docs/styles.df67e517.js"></script>
+<script src="/hydra/docs/styles.96a6b7f1.js"></script>
 
-<script src="/hydra/docs/runtime~main.c5cbe11d.js"></script>
+<script src="/hydra/docs/runtime~main.b926194a.js"></script>
 
-<script src="/hydra/docs/main.5acaf75f.js"></script>
+<script src="/hydra/docs/main.5fa765bf.js"></script>
 
-<script src="/hydra/docs/1.179a10b7.js"></script>
+<script src="/hydra/docs/1.188a3a21.js"></script>
 
-<script src="/hydra/docs/2.aae81b09.js"></script>
+<script src="/hydra/docs/2.2b437ed4.js"></script>
 
-<script src="/hydra/docs/1be78505.04f9bcca.js"></script>
+<script src="/hydra/docs/1be78505.37582a14.js"></script>
 
-<script src="/hydra/docs/88.a269bb56.js"></script>
+<script src="/hydra/docs/86.415e0025.js"></script>
 
-<script src="/hydra/docs/71bd2d01.328e67a0.js"></script>
+<script src="/hydra/docs/71bd2d01.42de57d9.js"></script>
 
-<script src="/hydra/docs/beaa4a23.41f093d8.js"></script>
+<script src="/hydra/docs/beaa4a23.783da913.js"></script>
 
 
 </body>
