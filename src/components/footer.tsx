@@ -9,8 +9,8 @@ const comp = [
   {
     items: [
       {
-        title: 'Imprint',
-        href: 'https://www.ory.sh/imprint',
+        title: 'About Us',
+        href: '/about',
       },
       {
         title: 'Privacy',

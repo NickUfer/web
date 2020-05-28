@@ -1,22 +1,7 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import cn from 'classnames'
 import * as styles from './thin-project.module.css'
 import { Link } from 'gatsby'
-
-interface Title {
-  title: string
-  href: string
-}
-
-interface LearnMore {
-  title: string
-  href: string
-}
-
-interface Visualize {
-  title: string
-  href: string
-}
 
 interface PropTypes {
   title: string

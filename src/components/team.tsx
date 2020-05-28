@@ -2,7 +2,7 @@ import React from 'react'
 import cn from 'classnames'
 import styles from './team.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
-import Profile from './profile'
+import Profile, { SocialNetworks } from './profile'
 
 const Team = () => {
   const data = useStaticQuery(graphql`
@@ -15,6 +15,13 @@ const Team = () => {
         }
       }
       thomas: file(relativePath: { eq: "thomas.png" }) {
+        childImageSharp {
+          fixed(width: 90, height: 90) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+      jared: file(relativePath: { eq: "jared.png" }) {
         childImageSharp {
           fixed(width: 90, height: 90) {
             ...GatsbyImageSharpFixed
@@ -34,27 +41,45 @@ const Team = () => {
               <>
                 <Profile
                   name="Aeneas Rekkas"
-                  description={
-                    <>
-                      <a href="https://github.com/aeneasr">
-                        github.com/aeneasr
-                      </a>
-                    </>
-                  }
+                  social={[
+                    {
+                      network: SocialNetworks.github,
+                      href: 'https://github.com/aeneasr'
+                    },
+                    {
+                      network: SocialNetworks.linkedin,
+                      href: 'https://www.linkedin.com/in/aeneasr'
+                    }
+                  ]}
                   img={data.aeneas.childImageSharp.fixed}
                 />
                 <Profile
                   name="Thomas Aidan Curran"
-                  description={
-                    <>
-                      <a
-                        href={'https://www.linkedin.com/in/thomasaidancurran/'}
-                      >
-                        linkedin.com/in/thomasaidancurran/
-                      </a>
-                    </>
-                  }
+                  social={[
+                    {
+                      network: SocialNetworks.github,
+                      href: 'https://github.com/tacurran'
+                    },
+                    {
+                      network: SocialNetworks.linkedin,
+                      href: 'https://www.linkedin.com/in/thomasaidancurran/'
+                    }
+                  ]}
                   img={data.thomas.childImageSharp.fixed}
+                />
+                <Profile
+                  name="Jared Preston"
+                  social={[
+                    {
+                      network: SocialNetworks.github,
+                      href: 'https://github.com/jaredpreston'
+                    },
+                    {
+                      network: SocialNetworks.linkedin,
+                      href: 'https://www.linkedin.com/in/jaredpreston'
+                    }
+                  ]}
+                  img={data.jared.childImageSharp.fixed}
                 />
               </>
             </div>
@@ -67,27 +92,49 @@ const Team = () => {
               engineering.
             </p>
           </div>
-          <div className={cn('hidden-sm hidden-md col-lg-offset-2 col-lg-4')}>
+          <div className={cn( 'hidden-sm hidden-md col-lg-offset-2 col-lg-4')}>
             <>
               <Profile
                 name="Aeneas Rekkas"
-                description={
-                  <>
-                    <a href="https://github.com/aeneasr">github.com/aeneasr</a>
-                  </>
-                }
+                social={[
+                  {
+                    network: SocialNetworks.github,
+                    href: 'https://github.com/aeneasr'
+                  },
+                  {
+                    network: SocialNetworks.linkedin,
+                    href: 'https://www.linkedin.com/in/aeneasr'
+                  }
+                ]}
                 img={data.aeneas.childImageSharp.fixed}
               />
               <Profile
                 name="Thomas Aidan Curran"
-                description={
-                  <>
-                    <a href={'https://www.linkedin.com/in/thomasaidancurran/'}>
-                      linkedin.com/in/thomasaidancurran/
-                    </a>
-                  </>
-                }
+                social={[
+                  {
+                    network: SocialNetworks.github,
+                    href: 'https://github.com/tacurran'
+                  },
+                  {
+                    network: SocialNetworks.linkedin,
+                    href: 'https://www.linkedin.com/in/thomasaidancurran/'
+                  }
+                ]}
                 img={data.thomas.childImageSharp.fixed}
+              />
+              <Profile
+                name="Jared Preston"
+                social={[
+                  {
+                    network: SocialNetworks.github,
+                    href: 'https://github.com/jaredpreston'
+                  },
+                  {
+                    network: SocialNetworks.linkedin,
+                    href: 'https://www.linkedin.com/in/jaredpreston'
+                  }
+                ]}
+                img={data.jared.childImageSharp.fixed}
               />
             </>
           </div>
