@@ -25,17 +25,17 @@ const ThinProject = ({
       <div className={cn('row middle-lg')}>
         <div className="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
           <Link to={href} className={cn(styles.cap, 'secondary')}>
-                <h3>{title}</h3>
+            <h3>{title}</h3>
           </Link>
           <p>{description}</p>
-              <Link to={href} className={cn(styles.cap, 'secondary')} >
-                {learn}
-              </Link>
+          <Link to={href} className={cn(styles.cap, 'secondary')}>
+            {learn}
+          </Link>
         </div>
         <div className="col-lg-offset-2 col-lg-4 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10">
-            <Link to={href} >
-              <img src={visual} alt={`${title} visualized`} />
-            </Link>
+          <Link to={href}>
+            <img src={visual} alt={`${title} visualized`}/>
+          </Link>
         </div>
       </div>
     </div>
