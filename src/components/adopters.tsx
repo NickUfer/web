@@ -57,6 +57,7 @@ const adopters = [
     title: '3REIN',
     image: threerein,
     url: 'https://3rein.com/',
+    featured: true,
   },
   {
     title: 'Kyma Project',
