@@ -17,6 +17,7 @@ const defaultMenu: Menu = [
   { title: 'Docs', href: '/docs' },
   { title: 'Blog', path: '/blog' },
   { title: 'Jobs', href: 'https://github.com/ory/jobs' },
+  { title: 'Support', href: 'https://github.com/ory/open-source-support/blob/master/README.md' },
 ]
 
 const defaultIconMenu = ({
