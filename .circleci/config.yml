@@ -5,9 +5,9 @@
 version: 2.1
 jobs:
 
-  publish-hydra:
+  publish:
     docker:
-      - image: circleci/node:12.4
+      - image: circleci/node:14.3
     working_directory: ~/web
     steps:
       - checkout
@@ -20,13 +20,15 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package-lock.json" }}
-      - run: make hydra
+      - run: |
+          echo "done"
+#      - run: npm run deploy -- --site "CircleCI deploy from $CIRCLE_SHA1" --site 123
 
 workflows:
   version: 2
   publish-hydra:
     jobs:
-      - publish-hydra:
+      - publish:
           filters:
             brances:
               only: master
