@@ -7,19 +7,20 @@
 <link rel="preconnect" href="https://www.google-analytics.com">
 <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-71865250-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview")</script>
 <script async src="https://www.google-analytics.com/analytics.js"></script>
-<link rel="search" type="application/opensearchdescription+xml" title="ORY Kratos" href="/kratos/docs/opensearch.xml"><title data-react-helmet="true">User Settings | ORY Kratos</title><meta data-react-helmet="true" name="docsearch:version" content="next"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="User Settings | ORY Kratos"><meta data-react-helmet="true" name="description" content="ORY Kratos allows users to update their own settings and profile information"><meta data-react-helmet="true" property="og:description" content="ORY Kratos allows users to update their own settings and profile information"><meta data-react-helmet="true" property="og:url" content="https://www.ory.sh//kratos/docs/next/self-service/flows/user-settings"><link data-react-helmet="true" rel="shortcut icon" href="/kratos/docs/img/favico.png"><link data-react-helmet="true" rel="canonical" href="https://www.ory.sh//kratos/docs/next/self-service/flows/user-settings"><link rel="stylesheet" href="/kratos/docs/styles.540c99d3.css">
-<link rel="preload" href="/kratos/docs/styles.89d9b080.js" as="script">
-<link rel="preload" href="/kratos/docs/runtime~main.4fd133e2.js" as="script">
-<link rel="preload" href="/kratos/docs/main.49d8aaa0.js" as="script">
-<link rel="preload" href="/kratos/docs/1.82890050.js" as="script">
-<link rel="preload" href="/kratos/docs/2.e9695c35.js" as="script">
-<link rel="preload" href="/kratos/docs/18b93cb3.9f32eb3f.js" as="script">
-<link rel="preload" href="/kratos/docs/1be78505.bf6d13e7.js" as="script">
-<link rel="preload" href="/kratos/docs/f9e517e8.11d8b451.js" as="script">
-<link rel="preload" href="/kratos/docs/191.c7f6dbd8.js" as="script">
-<link rel="preload" href="/kratos/docs/190.a91a1f81.js" as="script">
-<link rel="preload" href="/kratos/docs/86d007ba.001dcb1b.js" as="script">
-<link rel="preload" href="/kratos/docs/5e8d90b7.d4ff0323.js" as="script">
+<link rel="search" type="application/opensearchdescription+xml" title="ORY Kratos" href="/kratos/docs/opensearch.xml"><title data-react-helmet="true">User Settings | ORY Kratos</title><meta data-react-helmet="true" name="docsearch:version" content="next"><meta data-react-helmet="true" name="twitter:card" content="summary_large_image"><meta data-react-helmet="true" property="og:title" content="User Settings | ORY Kratos"><meta data-react-helmet="true" name="description" content="ORY Kratos allows users to update their own settings and profile information"><meta data-react-helmet="true" property="og:description" content="ORY Kratos allows users to update their own settings and profile information"><meta data-react-helmet="true" property="og:url" content="https://www.ory.sh//kratos/docs/next/self-service/flows/user-settings"><link data-react-helmet="true" rel="shortcut icon" href="/kratos/docs/img/favico.png"><link data-react-helmet="true" rel="canonical" href="https://www.ory.sh//kratos/docs/next/self-service/flows/user-settings"><link rel="stylesheet" href="/kratos/docs/styles.b9178920.css">
+<link rel="preload" href="/kratos/docs/styles.cc472aec.js" as="script">
+<link rel="preload" href="/kratos/docs/runtime~main.4372100e.js" as="script">
+<link rel="preload" href="/kratos/docs/main.86229e43.js" as="script">
+<link rel="preload" href="/kratos/docs/2.b4364593.js" as="script">
+<link rel="preload" href="/kratos/docs/3.7a3cdc3e.js" as="script">
+<link rel="preload" href="/kratos/docs/18b93cb3.17143f27.js" as="script">
+<link rel="preload" href="/kratos/docs/1be78505.07061da9.js" as="script">
+<link rel="preload" href="/kratos/docs/f9e517e8.60cdb18c.js" as="script">
+<link rel="preload" href="/kratos/docs/194.13fac3df.js" as="script">
+<link rel="preload" href="/kratos/docs/193.937890f2.js" as="script">
+<link rel="preload" href="/kratos/docs/86d007ba.c7d92bf3.js" as="script">
+<link rel="preload" href="/kratos/docs/1.e6569ea9.js" as="script">
+<link rel="preload" href="/kratos/docs/5e8d90b7.749c25ec.js" as="script">
 </head>
 <body>
 <script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=window.matchMedia("(prefers-color-scheme: dark)"),n=function(){var t=null;try{t=localStorage.getItem("theme")}catch(t){}return t}();null!==n?t(n):e.matches&&t("dark")}()</script><div id="__docusaurus">
@@ -46,7 +47,29 @@ flexibility and customizability in your user interface flows and designs.</p><p>
 <a href="/kratos/docs/next/self-service/flows/user-login-user-registration/username-email-password">Username and Password</a>,
 <a href="/kratos/docs/next/self-service/flows/user-login-user-registration/openid-connect-social-sign-in-oauth2">Social Sign In</a>,
 Passwordless, ...) works a bit different but they all boil down to the same
-abstract sequence:</p><p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBLIGFzIE9SWSBLcmF0b3NcbiAgcGFydGljaXBhbnQgQSBhcyBZb3VyIEFwcGxpY2F0aW9uXG5cblxuICBCLT4-SzogSW5pdGlhdGUgTG9naW5cbiAgSy0-PkI6IFJlZGlyZWN0cyB0byB5b3VyIEFwcGxpY2F0aW9uJ3MgL3NldHRpbmdzX3VpIGVuZHBvaW50XG4gIEItPj5BOiBDYWxscyAvc2V0dGluZ3NfdWlcbiAgQS0tPj5LOiBGZXRjaGVzIGRhdGEgdG8gcmVuZGVyIGZvcm1zIGV0Y1xuICBCLS0-PkE6IEZpbGxzIG91dCBmb3JtcywgY2xpY2tzIGUuZy4gXCJTYXZlIENoYW5nZXNcIlxuICBCLT4-SzogUE9TVHMgZGF0YSB0b1xuICBLLS0-Pks6IFByb2Nlc3NlcyBTZXR0aW5ncyBJbmZvXG5cbiAgYWx0IFNldHRpbmdzIGRhdGEgdmFsaWRcbiAgICBLLS0-PkI6IFVwZGF0ZXMgSWRlbnRpdHkgU2V0dGluZ3NcbiAgICBLLT4-QjogUmVkaXJlY3RzIHRvIGUuZy4gRGFzaGJvYXJkXG4gIGVsc2UgU2V0aW5ncyBkYXRhIGludmFsaWRcbiAgICBLLS0-PkI6IFJlZGlyZWN0cyB0byB5b3VyIEFwcGxpY2FpdG9uJ3MgL3NldHRpbmdzX3VpIGVuZHBvaW50XG4gICAgQi0-PkE6IENhbGxzIC9zZXR0aW5nc191aVxuICAgIEEtLT4-SzogRmV0Y2hlcyBkYXRhIHRvIHJlbmRlciBmb3JtIGZpZWxkcyBhbmQgZXJyb3JzXG4gICAgQi0tPj5BOiBGaWxscyBvdXQgZm9ybXMgYWdhaW4sIGNvcnJlY3RzIGVycm9yc1xuICAgIEItPj5LOiBQT1NUcyBkYXRhIGFnYWluIC0gYW5kIHNvIG9uLi4uXG4gIGVuZFxuIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwiLCJzZXF1ZW5jZURpYWdyYW0iOnsiZGlhZ3JhbU1hcmdpblgiOjE1LCJkaWFncmFtTWFyZ2luWSI6MTUsImJveFRleHRNYXJnaW4iOjAsIm5vdGVNYXJnaW4iOjE1LCJtZXNzYWdlTWFyZ2luIjo0NSwibWlycm9yQWN0b3JzIjp0cnVlfX0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" target="_blank" rel="noopener noreferrer"><img src="https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBLIGFzIE9SWSBLcmF0b3NcbiAgcGFydGljaXBhbnQgQSBhcyBZb3VyIEFwcGxpY2F0aW9uXG5cblxuICBCLT4-SzogSW5pdGlhdGUgTG9naW5cbiAgSy0-PkI6IFJlZGlyZWN0cyB0byB5b3VyIEFwcGxpY2F0aW9uJ3MgL3NldHRpbmdzX3VpIGVuZHBvaW50XG4gIEItPj5BOiBDYWxscyAvc2V0dGluZ3NfdWlcbiAgQS0tPj5LOiBGZXRjaGVzIGRhdGEgdG8gcmVuZGVyIGZvcm1zIGV0Y1xuICBCLS0-PkE6IEZpbGxzIG91dCBmb3JtcywgY2xpY2tzIGUuZy4gXCJTYXZlIENoYW5nZXNcIlxuICBCLT4-SzogUE9TVHMgZGF0YSB0b1xuICBLLS0-Pks6IFByb2Nlc3NlcyBTZXR0aW5ncyBJbmZvXG5cbiAgYWx0IFNldHRpbmdzIGRhdGEgdmFsaWRcbiAgICBLLS0-PkI6IFVwZGF0ZXMgSWRlbnRpdHkgU2V0dGluZ3NcbiAgICBLLT4-QjogUmVkaXJlY3RzIHRvIGUuZy4gRGFzaGJvYXJkXG4gIGVsc2UgU2V0aW5ncyBkYXRhIGludmFsaWRcbiAgICBLLS0-PkI6IFJlZGlyZWN0cyB0byB5b3VyIEFwcGxpY2FpdG9uJ3MgL3NldHRpbmdzX3VpIGVuZHBvaW50XG4gICAgQi0-PkE6IENhbGxzIC9zZXR0aW5nc191aVxuICAgIEEtLT4-SzogRmV0Y2hlcyBkYXRhIHRvIHJlbmRlciBmb3JtIGZpZWxkcyBhbmQgZXJyb3JzXG4gICAgQi0tPj5BOiBGaWxscyBvdXQgZm9ybXMgYWdhaW4sIGNvcnJlY3RzIGVycm9yc1xuICAgIEItPj5LOiBQT1NUcyBkYXRhIGFnYWluIC0gYW5kIHNvIG9uLi4uXG4gIGVuZFxuIiwibWVybWFpZCI6eyJ0aGVtZSI6Im5ldXRyYWwiLCJzZXF1ZW5jZURpYWdyYW0iOnsiZGlhZ3JhbU1hcmdpblgiOjE1LCJkaWFncmFtTWFyZ2luWSI6MTUsImJveFRleHRNYXJnaW4iOjAsIm5vdGVNYXJnaW4iOjE1LCJtZXNzYWdlTWFyZ2luIjo0NSwibWlycm9yQWN0b3JzIjp0cnVlfX0sInVwZGF0ZUVkaXRvciI6ZmFsc2V9" alt="Abstract Settings Flow"></a></p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="code"></a>Code<a aria-hidden="true" tabindex="-1" class="hash-link" href="#code" title="Direct link to heading">#</a></h3><p>The code example used here is universal and does not use an SDK because we want
+abstract sequence:</p><div class="graph_2ogv mermaid">
+sequenceDiagram
+  participant B as Browser
+  participant K as ORY Kratos
+  participant A as Your Application
+  B-&gt;&gt;K: Initiate Login
+  K-&gt;&gt;B: Redirects to your Application&#x27;s /settings_ui endpoint
+  B-&gt;&gt;A: Calls /settings_ui
+  A--&gt;&gt;K: Fetches data to render forms etc
+  B--&gt;&gt;A: Fills out forms, clicks e.g. &quot;Save Changes&quot;
+  B-&gt;&gt;K: POSTs data to
+  K--&gt;&gt;K: Processes Settings Info
+  alt Settings data valid
+    K--&gt;&gt;B: Updates Identity Settings
+    K-&gt;&gt;B: Redirects to e.g. Dashboard
+  else Setings data invalid
+    K--&gt;&gt;B: Redirects to your Applicaiton&#x27;s /settings_ui endpoint
+    B-&gt;&gt;A: Calls /settings_ui
+    A--&gt;&gt;K: Fetches data to render form fields and errors
+    B--&gt;&gt;A: Fills out forms again, corrects errors
+    B-&gt;&gt;K: POSTs data again - and so on...
+  end
+</div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="code"></a>Code<a aria-hidden="true" tabindex="-1" class="hash-link" href="#code" title="Direct link to heading">#</a></h3><p>The code example used here is universal and does not use an SDK because we want
 you to understand the fundamentals of how this flow works.</p><p>While this example assumes a Server-Side Application, a Client-Side (e.g.
 ReactJS) Application would work the same, but use ORY Kratos&#x27; Public API
 instead.</p><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="server-side-route"></a>Server-side route<a aria-hidden="true" tabindex="-1" class="hash-link" href="#server-side-route" title="Direct link to heading">#</a></h4><p>You will notice that this endpoint is very similar to the one documented for
@@ -82,7 +105,23 @@ SecureApp to communicate with ORY Kratos.</li></ol><p>Keep in mind that his arch
 architectures. It is however one of the simplest as well and it works locally.
 For production deployments you would probably use an Reverse Proxy such as
 Nginx, Kong, Envoy, ORY Oathkeeper, or others.</p><h4><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="user-settings-process-sequence"></a>User Settings Process Sequence<a aria-hidden="true" tabindex="-1" class="hash-link" href="#user-settings-process-sequence" title="Direct link to heading">#</a></h4><p>The User Settings Flow is composed of several high-level steps summarized in
-this state diagram:</p><p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic3RhdGVEaWFncmFtXG4gIHMxOiBVc2VyIGJyb3dzZXMgYXBwXG4gIHMzOiBVc2VyIEludGVyZmFjZSBBcHBsaWNhdGlvbiByZW5kZXJzIFwiU2V0dGluZ3MgUmVxdWVzdFwiXG4gIHM0OiBFeGVjdXRlIFwiQWZ0ZXIgU2V0dGluZ3MgSG9vayhzKVwiXG4gIHM1OiBVcGRhdGUgXCJTZXR0aW5ncyBSZXF1ZXN0XCIgd2l0aCBFcnJvciBDb250ZXh0KHMpXG4gIHM2OiBTZXR0aW5ncyB1cGRhdGUgc3VjY2Vzc2Z1bFxuXG5cdFsqXSAtLT4gczFcbiAgczEgLS0-IHMzIDogVXNlciBjbGlja3MgXCJNYW5hZ2UgQWNjb3VudFwiIGFuZCBpcyByZWRpcmVjdGVkIHRvIFNldHRpbmdzIEluaXQgRW5kcG9pbnRcbiAgczMgLS0-IHM0IDogVXNlciBwcm92aWRlcyB2YWxpZCBwcm9maWxlIGRhdGFcbiAgczMgLS0-IHM1IDogVXNlciBwcm92aWRlcyBpbnZhbGlkIHByb2ZpbGUgZGF0YVxuICBzNSAtLT4gczMgOiBVc2VyIGlzIHJlZGlyZWN0ZWQgdG8gU2V0dGluZ3MgVUkgVVJMXG4gIHM0IC0tPiBFcnJvciA6IEEgSG9vayBmYWlsc1xuICBzNCAtLT4gczZcbiAgczYgLS0-IFsqXVxuXG4gIEVycm9yIC0tPiBbKl1cblxuXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" target="_blank" rel="noopener noreferrer"><img src="https://mermaid.ink/img/eyJjb2RlIjoic3RhdGVEaWFncmFtXG4gIHMxOiBVc2VyIGJyb3dzZXMgYXBwXG4gIHMzOiBVc2VyIEludGVyZmFjZSBBcHBsaWNhdGlvbiByZW5kZXJzIFwiU2V0dGluZ3MgUmVxdWVzdFwiXG4gIHM0OiBFeGVjdXRlIFwiQWZ0ZXIgU2V0dGluZ3MgSG9vayhzKVwiXG4gIHM1OiBVcGRhdGUgXCJTZXR0aW5ncyBSZXF1ZXN0XCIgd2l0aCBFcnJvciBDb250ZXh0KHMpXG4gIHM2OiBTZXR0aW5ncyB1cGRhdGUgc3VjY2Vzc2Z1bFxuXG5cdFsqXSAtLT4gczFcbiAgczEgLS0-IHMzIDogVXNlciBjbGlja3MgXCJNYW5hZ2UgQWNjb3VudFwiIGFuZCBpcyByZWRpcmVjdGVkIHRvIFNldHRpbmdzIEluaXQgRW5kcG9pbnRcbiAgczMgLS0-IHM0IDogVXNlciBwcm92aWRlcyB2YWxpZCBwcm9maWxlIGRhdGFcbiAgczMgLS0-IHM1IDogVXNlciBwcm92aWRlcyBpbnZhbGlkIHByb2ZpbGUgZGF0YVxuICBzNSAtLT4gczMgOiBVc2VyIGlzIHJlZGlyZWN0ZWQgdG8gU2V0dGluZ3MgVUkgVVJMXG4gIHM0IC0tPiBFcnJvciA6IEEgSG9vayBmYWlsc1xuICBzNCAtLT4gczZcbiAgczYgLS0-IFsqXVxuXG4gIEVycm9yIC0tPiBbKl1cblxuXG4iLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" alt="User Settings State Machine"></a></p><ol><li>The flow is initiated by directing the user&#x27;s browser to
+this state diagram:</p><div class="graph_2ogv mermaid">
+stateDiagram
+  s1: User browses app
+  s3: User Interface Application renders &quot;Settings Request&quot;
+  s4: Execute &quot;After Settings Hook(s)&quot;
+  s5: Update &quot;Settings Request&quot; with Error Context(s)
+  s6: Settings update successful
+	[*] --&gt; s1
+  s1 --&gt; s3 : User clicks &quot;Manage Account&quot; and is redirected to Settings Init Endpoint
+  s3 --&gt; s4 : User provides valid profile data
+  s3 --&gt; s5 : User provides invalid profile data
+  s5 --&gt; s3 : User is redirected to Settings UI URL
+  s4 --&gt; Error : A Hook fails
+  s4 --&gt; s6
+  s6 --&gt; [*]
+  Error --&gt; [*]
+</div><ol><li>The flow is initiated by directing the user&#x27;s browser to
 <code>http://127.0.0.1:4455/.ory/kratos/public/self-service/browser/flows/settings</code>.</li><li>ORY Kratos does some internal processing (e.g. checks if a session cookie is
 set, generates payloads for form fields, sets CSRF token, ...) and redirects
 the user&#x27;s browser to the Settings UI URL which is defined using the
@@ -108,7 +147,36 @@ be stored!</li><li>If data is valid, ORY Kratos proceeds with the next step.</li
 failure occurs, the whole flow is aborted.</li><li>The client receives the expected response. For browsers, this is a HTTP
 Redirection, for API clients it will be a JSON response containing the
 session and/or identity. For more information on this topic check
-<a href="/kratos/docs/next/concepts/selfservice-flow-completion">Self-Service Flow Completion</a>.</li></ol><p><a href="https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBBIGFzIFlvdXIgU2VydmVyLVNpZGUgQXBwbGljYXRpb25cbiAgcGFydGljaXBhbnQgS1AgYXMgT1JZIEtyYXRvcyBQdWJsaWMgQVBJXG4gIHBhcnRpY2lwYW50IEtBIGFzIE9SWSBLcmF0b3MgQWRtaW4gQVBJXG5cbiAgQi0-PitBOiBHRVQgLy5vcnkva3JhdG9zL3B1YmxpYy9zZWxmLXNlcnZpY2UvYnJvd3Nlci9mbG93cy9zZXR0aW5nc1xuICBBLT4-K0tQOiBHRVQgL3NlbGYtc2VydmljZS9icm93c2VyL2Zsb3dzL3NldHRpbmdzXG4gIEtQLS0-Pi1BOiBIVFRQIDMwMiBGb3VuZCAvc2V0dGluZ3M_cmVxdWVzdD1hYmNkZVxuICBBLS0-Pi1COiBIVFRQIDMwMiBGb3VuZCAvc2V0dGluZ3M_cmVxdWVzdD1hYmNkZVxuXG4gIEItPj4rQTogR0VUIC9zZXR0aW5ncz9yZXF1ZXN0PWFiY2RlXG4gIEEtPj4rS0E6IEdFVCAvc2VsZi1zZXJ2aWNlL2Jyb3dzZXIvZmxvd3MvcmVxdWVzdHMvc2V0dGluZ3M_cmVxdWVzdD1hYmNkZVxuICBLQS0-Pi1BOiBTZW5kcyBTZXR0aW5ncyBSZXF1ZXN0IEpTT04gUGF5bG9hZFxuICBOb3RlIG92ZXIgQSxLQTogIHtcIm1ldGhvZHNcIjp7XCJwYXNzd29yZFwiOi4uLixcIm9pZGNcIjouLn19XG4gIEEtLT4-QTogR2VuZXJhdGUgYW5kIHJlbmRlciBIVE1MXG4gIEEtLT4-LUI6IFJldHVybiBIVE1MIChGb3JtLCAuLi4pXG5cbiAgQi0tPj5COiBGaWxsIG91dCBIVE1MXG5cbiAgQi0-PitLUDogUE9TVCBIVE1MIEZvcm1cbiAgS1AtLT4-S1A6IENoZWNrcyBwcm9maWxlIGRhdGFcblxuXG4gIGFsdCBTZXR0aW5nIHVwZGF0ZXMgYXJlIHZhbGlkXG4gICAgS1AtLT4-LUtQOiBFeGVjdXRlIEpvYnMgZGVmaW5lZCBpbiBcIkFmdGVyIFNldHRpbmdzIFdvcmtmbG93KHMpXCJcbiAgICBLUC0tPj5BOiBIVFRQIDMwMiBGb3VuZCAvZGFzaGJvYXJkXG4gIGVsc2UgU2V0dGluZyB1cGRhdGVzIHJlcXVpcmUgcmUtYXV0aGVudGljYXRpb25cbiAgICBOb3RlIG92ZXIgS1AsQjogVXNlciBpcyBhc2tlZCB0byBsb2dpbiBpbiBhZ2Fpbi4gSWYgdGhlIGxvZ2luIGlzIHZhbGlkLCB0aGUgZGF0YSBpcyB1cGRhdGVkLlxuICAgIEtQLS0-PkI6IEhUVFAgMzAyIEZvdW5kIC9zZXR0aW5ncz9yZXF1ZXN0PWFiY2RlXG4gIGVsc2UgU2V0dGluZyB1cGRhdGVzIGFyZSBpbnZhbGlkXG4gICAgTm90ZSBvdmVyIEtQLEI6IFVzZXIgcmV0cmllcyBzZXR0aW5ncyBmbG93XG4gICAgS1AtLT4-QjogSFRUUCAzMDIgRm91bmQgL3NldHRpbmdzP3JlcXVlc3Q9YWJjZGVcbiAgZW5kXG4gICIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIiwic2VxdWVuY2VEaWFncmFtIjp7ImRpYWdyYW1NYXJnaW5YIjoxNSwiZGlhZ3JhbU1hcmdpblkiOjE1LCJib3hUZXh0TWFyZ2luIjoxLCJub3RlTWFyZ2luIjoxMCwibWVzc2FnZU1hcmdpbiI6NTUsIm1pcnJvckFjdG9ycyI6dHJ1ZX19LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" target="_blank" rel="noopener noreferrer"><img src="https://mermaid.ink/img/eyJjb2RlIjoic2VxdWVuY2VEaWFncmFtXG4gIHBhcnRpY2lwYW50IEIgYXMgQnJvd3NlclxuICBwYXJ0aWNpcGFudCBBIGFzIFlvdXIgU2VydmVyLVNpZGUgQXBwbGljYXRpb25cbiAgcGFydGljaXBhbnQgS1AgYXMgT1JZIEtyYXRvcyBQdWJsaWMgQVBJXG4gIHBhcnRpY2lwYW50IEtBIGFzIE9SWSBLcmF0b3MgQWRtaW4gQVBJXG5cbiAgQi0-PitBOiBHRVQgLy5vcnkva3JhdG9zL3B1YmxpYy9zZWxmLXNlcnZpY2UvYnJvd3Nlci9mbG93cy9zZXR0aW5nc1xuICBBLT4-K0tQOiBHRVQgL3NlbGYtc2VydmljZS9icm93c2VyL2Zsb3dzL3NldHRpbmdzXG4gIEtQLS0-Pi1BOiBIVFRQIDMwMiBGb3VuZCAvc2V0dGluZ3M_cmVxdWVzdD1hYmNkZVxuICBBLS0-Pi1COiBIVFRQIDMwMiBGb3VuZCAvc2V0dGluZ3M_cmVxdWVzdD1hYmNkZVxuXG4gIEItPj4rQTogR0VUIC9zZXR0aW5ncz9yZXF1ZXN0PWFiY2RlXG4gIEEtPj4rS0E6IEdFVCAvc2VsZi1zZXJ2aWNlL2Jyb3dzZXIvZmxvd3MvcmVxdWVzdHMvc2V0dGluZ3M_cmVxdWVzdD1hYmNkZVxuICBLQS0-Pi1BOiBTZW5kcyBTZXR0aW5ncyBSZXF1ZXN0IEpTT04gUGF5bG9hZFxuICBOb3RlIG92ZXIgQSxLQTogIHtcIm1ldGhvZHNcIjp7XCJwYXNzd29yZFwiOi4uLixcIm9pZGNcIjouLn19XG4gIEEtLT4-QTogR2VuZXJhdGUgYW5kIHJlbmRlciBIVE1MXG4gIEEtLT4-LUI6IFJldHVybiBIVE1MIChGb3JtLCAuLi4pXG5cbiAgQi0tPj5COiBGaWxsIG91dCBIVE1MXG5cbiAgQi0-PitLUDogUE9TVCBIVE1MIEZvcm1cbiAgS1AtLT4-S1A6IENoZWNrcyBwcm9maWxlIGRhdGFcblxuXG4gIGFsdCBTZXR0aW5nIHVwZGF0ZXMgYXJlIHZhbGlkXG4gICAgS1AtLT4-LUtQOiBFeGVjdXRlIEpvYnMgZGVmaW5lZCBpbiBcIkFmdGVyIFNldHRpbmdzIFdvcmtmbG93KHMpXCJcbiAgICBLUC0tPj5BOiBIVFRQIDMwMiBGb3VuZCAvZGFzaGJvYXJkXG4gIGVsc2UgU2V0dGluZyB1cGRhdGVzIHJlcXVpcmUgcmUtYXV0aGVudGljYXRpb25cbiAgICBOb3RlIG92ZXIgS1AsQjogVXNlciBpcyBhc2tlZCB0byBsb2dpbiBpbiBhZ2Fpbi4gSWYgdGhlIGxvZ2luIGlzIHZhbGlkLCB0aGUgZGF0YSBpcyB1cGRhdGVkLlxuICAgIEtQLS0-PkI6IEhUVFAgMzAyIEZvdW5kIC9zZXR0aW5ncz9yZXF1ZXN0PWFiY2RlXG4gIGVsc2UgU2V0dGluZyB1cGRhdGVzIGFyZSBpbnZhbGlkXG4gICAgTm90ZSBvdmVyIEtQLEI6IFVzZXIgcmV0cmllcyBzZXR0aW5ncyBmbG93XG4gICAgS1AtLT4-QjogSFRUUCAzMDIgRm91bmQgL3NldHRpbmdzP3JlcXVlc3Q9YWJjZGVcbiAgZW5kXG4gICIsIm1lcm1haWQiOnsidGhlbWUiOiJuZXV0cmFsIiwic2VxdWVuY2VEaWFncmFtIjp7ImRpYWdyYW1NYXJnaW5YIjoxNSwiZGlhZ3JhbU1hcmdpblkiOjE1LCJib3hUZXh0TWFyZ2luIjoxLCJub3RlTWFyZ2luIjoxMCwibWVzc2FnZU1hcmdpbiI6NTUsIm1pcnJvckFjdG9ycyI6dHJ1ZX19LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ" alt="User Settings Sequence Diagram for Server-Side Applications"></a></p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="client-side-browser-applications"></a>Client-Side Browser Applications<a aria-hidden="true" tabindex="-1" class="hash-link" href="#client-side-browser-applications" title="Direct link to heading">#</a></h3><p>Because Client-Side Browser Applications do not have access to ORY Kratos&#x27; Admin
+<a href="/kratos/docs/next/concepts/selfservice-flow-completion">Self-Service Flow Completion</a>.</li></ol><div class="graph_2ogv mermaid">
+sequenceDiagram
+  participant B as Browser
+  participant A as Your Server-Side Application
+  participant KP as ORY Kratos Public API
+  participant KA as ORY Kratos Admin API
+  B-&gt;&gt;+A: GET /.ory/kratos/public/self-service/browser/flows/settings
+  A-&gt;&gt;+KP: GET /self-service/browser/flows/settings
+  KP--&gt;&gt;-A: HTTP 302 Found /settings?request=abcde
+  A--&gt;&gt;-B: HTTP 302 Found /settings?request=abcde
+  B-&gt;&gt;+A: GET /settings?request=abcde
+  A-&gt;&gt;+KA: GET /self-service/browser/flows/requests/settings?request=abcde
+  KA-&gt;&gt;-A: Sends Settings Request JSON Payload
+  Note over A,KA:  {&quot;methods&quot;:{&quot;password&quot;:...,&quot;oidc&quot;:..}}
+  A--&gt;&gt;A: Generate and render HTML
+  A--&gt;&gt;-B: Return HTML (Form, ...)
+  B--&gt;&gt;B: Fill out HTML
+  B-&gt;&gt;+KP: POST HTML Form
+  KP--&gt;&gt;KP: Checks profile data
+  alt Setting updates are valid
+    KP--&gt;&gt;-KP: Execute Jobs defined in &quot;After Settings Workflow(s)&quot;
+    KP--&gt;&gt;A: HTTP 302 Found /dashboard
+  else Setting updates require re-authentication
+    Note over KP,B: User is asked to login in again. If the login is valid, the data is updated.
+    KP--&gt;&gt;B: HTTP 302 Found /settings?request=abcde
+  else Setting updates are invalid
+    Note over KP,B: User retries settings flow
+    KP--&gt;&gt;B: HTTP 302 Found /settings?request=abcde
+  end
+</div><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="client-side-browser-applications"></a>Client-Side Browser Applications<a aria-hidden="true" tabindex="-1" class="hash-link" href="#client-side-browser-applications" title="Direct link to heading">#</a></h3><p>Because Client-Side Browser Applications do not have access to ORY Kratos&#x27; Admin
 API, they must use the ORY Kratos Public API instead. The flow for a Client-Side
 Browser Application is almost the exact same as the one for Server-Side
 Applications, with the small difference that
@@ -124,18 +192,19 @@ be set and available when calling this endpoint!</p><div class="admonition admon
 user&#x27;s browser using e.g. <code>window.open</code> <code>location.href</code> or plain and simple old
 <code>&lt;a href=...&gt;</code>.</p></div></div><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="self-service-user-settings-for-api-clients"></a>Self-Service User Settings for API Clients<a aria-hidden="true" tabindex="-1" class="hash-link" href="#self-service-user-settings-for-api-clients" title="Direct link to heading">#</a></h2><p>Will be addressed in a future release.</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="hooks"></a>Hooks<a aria-hidden="true" tabindex="-1" class="hash-link" href="#hooks" title="Direct link to heading">#</a></h2><p>ORY Kratos allows you to configure hooks that run before and after a profile
 update was successful. For more information about hooks please read the
-<a href="/kratos/docs/next/self-service/hooks/index">Hook Documentation</a>.</p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/ory/kratos/edit/master/docs/docs/self-service/flows/user-settings.mdx" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-05-15T13:20:40.000Z" class="docLastUpdatedAt_1sqk">5/15/2020</time> by <strong>aeneasr</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/kratos/docs/next/self-service/flows/user-login-user-registration/openid-connect-social-sign-in-oauth2"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Social Sign In with OpenID Connect and OAuth2</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/kratos/docs/next/self-service/flows/user-settings/user-profile-management"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">User Profile Management »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#self-service-user-settings-for-browser-applications" class="table-of-contents__link">Self-Service User Settings for Browser Applications</a><ul><li><a href="#the-settings-user-interface" class="table-of-contents__link">The Settings User Interface</a></li><li><a href="#code" class="table-of-contents__link">Code</a></li><li><a href="#server-side-browser-applications" class="table-of-contents__link">Server-Side Browser Applications</a></li><li><a href="#client-side-browser-applications" class="table-of-contents__link">Client-Side Browser Applications</a></li></ul></li><li><a href="#self-service-user-settings-for-api-clients" class="table-of-contents__link">Self-Service User Settings for API Clients</a></li><li><a href="#hooks" class="table-of-contents__link">Hooks</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a href="https://www.ory.sh/imprint" target="_blank" rel="noopener noreferrer" class="footer__link-item">Imprint</a></li><li class="footer__item"><a href="https://www.ory.sh/privacy" target="_blank" rel="noopener noreferrer" class="footer__link-item">Privacy</a></li><li class="footer__item"><a href="https://www.ory.sh/tos" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>document.querySelectorAll(".tabs .tabs-nav .nav-item a").forEach((function(t){t.addEventListener("click",(function(e){return e.preventDefault(),t.closest(".tabs-nav").querySelectorAll(".nav-item a").forEach((function(t){t.classList.remove("active")})),t.closest(".tabs").querySelectorAll(".tab-content .tab-pane").forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),document.getElementById(t.href.split("#")[1]).classList.add("active"),!1}))}))</script></footer></div>
-<script src="/kratos/docs/styles.89d9b080.js"></script>
-<script src="/kratos/docs/runtime~main.4fd133e2.js"></script>
-<script src="/kratos/docs/main.49d8aaa0.js"></script>
-<script src="/kratos/docs/1.82890050.js"></script>
-<script src="/kratos/docs/2.e9695c35.js"></script>
-<script src="/kratos/docs/18b93cb3.9f32eb3f.js"></script>
-<script src="/kratos/docs/1be78505.bf6d13e7.js"></script>
-<script src="/kratos/docs/f9e517e8.11d8b451.js"></script>
-<script src="/kratos/docs/191.c7f6dbd8.js"></script>
-<script src="/kratos/docs/190.a91a1f81.js"></script>
-<script src="/kratos/docs/86d007ba.001dcb1b.js"></script>
-<script src="/kratos/docs/5e8d90b7.d4ff0323.js"></script>
+<a href="/kratos/docs/next/self-service/hooks/index">Hook Documentation</a>.</p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/ory/kratos/edit/master/docs/docs/self-service/flows/user-settings.mdx" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-06-05T10:41:08.000Z" class="docLastUpdatedAt_1sqk">6/5/2020</time> by <strong>hackerman</strong></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/kratos/docs/next/self-service/flows/user-login-user-registration/openid-connect-social-sign-in-oauth2"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">« Social Sign In with OpenID Connect and OAuth2</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/kratos/docs/next/self-service/flows/user-settings/user-profile-management"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">User Profile Management »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#self-service-user-settings-for-browser-applications" class="table-of-contents__link">Self-Service User Settings for Browser Applications</a><ul><li><a href="#the-settings-user-interface" class="table-of-contents__link">The Settings User Interface</a></li><li><a href="#code" class="table-of-contents__link">Code</a></li><li><a href="#server-side-browser-applications" class="table-of-contents__link">Server-Side Browser Applications</a></li><li><a href="#client-side-browser-applications" class="table-of-contents__link">Client-Side Browser Applications</a></li></ul></li><li><a href="#self-service-user-settings-for-api-clients" class="table-of-contents__link">Self-Service User Settings for API Clients</a></li><li><a href="#hooks" class="table-of-contents__link">Hooks</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">Company</h4><ul class="footer__items"><li class="footer__item"><a href="https://www.ory.sh/imprint" target="_blank" rel="noopener noreferrer" class="footer__link-item">Imprint</a></li><li class="footer__item"><a href="https://www.ory.sh/privacy" target="_blank" rel="noopener noreferrer" class="footer__link-item">Privacy</a></li><li class="footer__item"><a href="https://www.ory.sh/tos" target="_blank" rel="noopener noreferrer" class="footer__link-item">Terms</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 ORY GmbH</div></div></div><div id="codefund"></div><script src="https://codefund.io/properties/140/funder.js" async=""></script><script>document.querySelectorAll(".tabs .tabs-nav .nav-item a").forEach((function(t){t.addEventListener("click",(function(e){return e.preventDefault(),t.closest(".tabs-nav").querySelectorAll(".nav-item a").forEach((function(t){t.classList.remove("active")})),t.closest(".tabs").querySelectorAll(".tab-content .tab-pane").forEach((function(t){t.classList.remove("active")})),t.classList.add("active"),document.getElementById(t.href.split("#")[1]).classList.add("active"),!1}))}))</script></footer></div>
+<script src="/kratos/docs/styles.cc472aec.js"></script>
+<script src="/kratos/docs/runtime~main.4372100e.js"></script>
+<script src="/kratos/docs/main.86229e43.js"></script>
+<script src="/kratos/docs/2.b4364593.js"></script>
+<script src="/kratos/docs/3.7a3cdc3e.js"></script>
+<script src="/kratos/docs/18b93cb3.17143f27.js"></script>
+<script src="/kratos/docs/1be78505.07061da9.js"></script>
+<script src="/kratos/docs/f9e517e8.60cdb18c.js"></script>
+<script src="/kratos/docs/194.13fac3df.js"></script>
+<script src="/kratos/docs/193.937890f2.js"></script>
+<script src="/kratos/docs/86d007ba.c7d92bf3.js"></script>
+<script src="/kratos/docs/1.e6569ea9.js"></script>
+<script src="/kratos/docs/5e8d90b7.749c25ec.js"></script>
 </body>
 </html>
