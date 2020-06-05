@@ -1,10 +1,10 @@
 ---
 published: true
 path: '/tos/'
-lastUpdatedAt: 'Aug 12th, 2019'
-title: 'Terms and Conditions'
-metaTitle: 'ORY Terms and Conditions'
-metaDescription: 'Read the Terms and Conditions.'
+lastUpdatedAt: 'Jun 5th, 2020'
+title: 'Terms of Service'
+metaTitle: 'ORY Terms of Service'
+metaDescription: 'Read the Terms of Service.'
 ---
 
 The terms and conditions outlined below (the “Terms of Service”) constitute a contract between you and ORY Corp (“ORY”, “us”, “we”), a Pennsylvania State company, and govern your access to and use of the ory.sh and related sub-domains (collectively known as the "Website"). You agree to the Terms of Service by using or accessing the Website. Please note that we do not provide warranties for the Website. The Terms of Service also limits our liability. 
