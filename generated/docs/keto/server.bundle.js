@@ -17108,7 +17108,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
 /* harmony import */ var _versions_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(83);
 var _versions_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(83, 1);
-function Version(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();const{siteConfig={}}=context;const latestVersion=_versions_json__WEBPACK_IMPORTED_MODULE_5__[0];const pastVersions=_versions_json__WEBPACK_IMPORTED_MODULE_5__.filter(version=>version!==latestVersion);const repoUrl=`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{permalink:"/versions",description:"Page listing all documented site versions"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--xl"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Documentation versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"latest"},"Latest version (Stable)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the latest documentation."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,latestVersion),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"next"},"Next version (Unreleased)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the documentation for unreleased version."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,"master"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/next/index')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:repoUrl},"Source Code")))))),pastVersions.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"archive"},"Past Versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find documentation for previous versions."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,pastVersions.map(version=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{key:version},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,version),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(`/${version}/index`)},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))))));}/* harmony default export */ __webpack_exports__["default"] = (Version);
+function Version(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();const{siteConfig={}}=context;const latestVersion=_versions_json__WEBPACK_IMPORTED_MODULE_5__[0];const pastVersions=_versions_json__WEBPACK_IMPORTED_MODULE_5__.filter(version=>version!==latestVersion);const repoUrl=`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{permalink:"/versions",description:"Page listing all documented site versions"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--xl"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Documentation versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"latest"},"Latest version (Stable)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the latest documentation."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,latestVersion),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"next"},"Next version (Unreleased)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the documentation for unreleased version."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,"master"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/next')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:repoUrl},"Source Code")))))),pastVersions.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"archive"},"Past Versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find documentation for previous versions."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,pastVersions.map(version=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{key:version},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,version),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(`/${version}`)},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))))));}/* harmony default export */ __webpack_exports__["default"] = (Version);
 
 /***/ }),
 /* 153 */
@@ -20991,7 +20991,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: memory
+dsn: postgres://user:password@host:123/database
 
 ## HTTP REST API ##
 #
@@ -21027,7 +21027,7 @@ serve:
   # - Windows Command Line (CMD):
   #    > set SERVE_HOST=<value>
   #
-  host: ''
+  host: 127.0.0.1
 
   ## Cross Origin Resource Sharing (CORS) ##
   #
@@ -21046,7 +21046,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
     ## Allowed Origins ##
     #
@@ -21081,7 +21081,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
-      - GET
+      - HEAD
 
     ## Allowed Request HTTP Headers ##
     #
@@ -21096,9 +21096,8 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - aliquip sit minim officia
-      - id aliqua
-      - sint eiusmod in dolor ut
+      - magna enim
+      - ullamco labore laboris tempor
 
     ## Allowed Response HTTP Headers ##
     #
@@ -21113,11 +21112,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - Duis dolor sint
-      - tempor dolore commodo qui Ut
-      - in
-      - anim ipsum officia
-      - ut
+      - labore velit reprehenderit pariatur occaecat
 
     ## Allow HTTP Credentials ##
     #
@@ -21143,7 +21138,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: 12540955
+    max_age: -17264981
 
     ## Enable Debugging ##
     #
@@ -21239,7 +21234,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: debug
+  level: fatal
 
   ## Format ##
   #
@@ -21253,7 +21248,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: text
+  format: json
 
 ## tracing ##
 #
