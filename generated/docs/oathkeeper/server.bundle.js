@@ -12183,22 +12183,22 @@ var Helmet = function Helmet(Component) {
             // Don’t use it for anything other than testing.
 
             /**
-            * @param {Object} base: {"target": "_blank", "href": "http://mysite.com/"}
-            * @param {Object} bodyAttributes: {"className": "root"}
-            * @param {String} defaultTitle: "Default Title"
-            * @param {Boolean} defer: true
-            * @param {Boolean} encodeSpecialCharacters: true
-            * @param {Object} htmlAttributes: {"lang": "en", "amp": undefined}
-            * @param {Array} link: [{"rel": "canonical", "href": "http://mysite.com/example"}]
-            * @param {Array} meta: [{"name": "description", "content": "Test description"}]
-            * @param {Array} noscript: [{"innerHTML": "<img src='http://mysite.com/js/test.js'"}]
-            * @param {Function} onChangeClientState: "(newState) => console.log(newState)"
-            * @param {Array} script: [{"type": "text/javascript", "src": "http://mysite.com/js/test.js"}]
-            * @param {Array} style: [{"type": "text/css", "cssText": "div { display: block; color: blue; }"}]
-            * @param {String} title: "Title"
-            * @param {Object} titleAttributes: {"itemprop": "name"}
-            * @param {String} titleTemplate: "MySite.com - %s"
-            */
+             * @param {Object} base: {"target": "_blank", "href": "http://mysite.com/"}
+             * @param {Object} bodyAttributes: {"className": "root"}
+             * @param {String} defaultTitle: "Default Title"
+             * @param {Boolean} defer: true
+             * @param {Boolean} encodeSpecialCharacters: true
+             * @param {Object} htmlAttributes: {"lang": "en", "amp": undefined}
+             * @param {Array} link: [{"rel": "canonical", "href": "http://mysite.com/example"}]
+             * @param {Array} meta: [{"name": "description", "content": "Test description"}]
+             * @param {Array} noscript: [{"innerHTML": "<img src='http://mysite.com/js/test.js'"}]
+             * @param {Function} onChangeClientState: "(newState) => console.log(newState)"
+             * @param {Array} script: [{"type": "text/javascript", "src": "http://mysite.com/js/test.js"}]
+             * @param {Array} style: [{"type": "text/css", "cssText": "div { display: block; color: blue; }"}]
+             * @param {String} title: "Title"
+             * @param {Object} titleAttributes: {"itemprop": "name"}
+             * @param {String} titleTemplate: "MySite.com - %s"
+             */
             set: function set$$1(canUseDOM) {
                 Component.canUseDOM = canUseDOM;
             }
@@ -12256,6 +12256,7 @@ var HelmetSideEffects = react_side_effect__WEBPACK_IMPORTED_MODULE_1___default()
 var HelmetExport = Helmet(HelmetSideEffects);
 HelmetExport.renderStatic = HelmetExport.rewind;
 
+/* unused harmony default export */ var _unused_webpack_default_export = (HelmetExport);
 
 
 
@@ -14342,11 +14343,12 @@ module.exports = merge;
 
 
 // NOTE: this behaves like lodash/defaults, but doesn't mutate the target
+// it also preserve keys order
 module.exports = function defaultsPure() {
   var sources = Array.prototype.slice.call(arguments);
-  return sources.reduceRight(function(acc, source) {
+  return sources.reduce(function(acc, source) {
     Object.keys(Object(source)).forEach(function(key) {
-      if (source[key] !== undefined) {
+      if (source[key] !== undefined && !Object.hasOwnProperty.call(acc, key)) {
         acc[key] = source[key];
       }
     });
@@ -17201,7 +17203,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(10);
 /* harmony import */ var _versions_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(83);
 var _versions_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(83, 1);
-function Version(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();const{siteConfig={}}=context;const latestVersion=_versions_json__WEBPACK_IMPORTED_MODULE_5__[0];const pastVersions=_versions_json__WEBPACK_IMPORTED_MODULE_5__.filter(version=>version!==latestVersion);const repoUrl=`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{permalink:"/versions",description:"Page listing all documented site versions"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--xl"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Documentation versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"latest"},"Latest version (Stable)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the latest documentation."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,latestVersion),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"next"},"Next version (Unreleased)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the documentation for unreleased version."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,"master"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/next/index')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:repoUrl},"Source Code")))))),pastVersions.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"archive"},"Past Versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find documentation for previous versions."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,pastVersions.map(version=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{key:version},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,version),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(`/${version}/index`)},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))))));}/* harmony default export */ __webpack_exports__["default"] = (Version);
+function Version(){const context=Object(_docusaurus_useDocusaurusContext__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])();const{siteConfig={}}=context;const latestVersion=_versions_json__WEBPACK_IMPORTED_MODULE_5__[0];const pastVersions=_versions_json__WEBPACK_IMPORTED_MODULE_5__.filter(version=>version!==latestVersion);const repoUrl=`https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_theme_Layout__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"],{permalink:"/versions",description:"Page listing all documented site versions"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"container margin-vert--xl"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1",null,"Documentation versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"latest"},"Latest version (Stable)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the latest documentation."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,latestVersion),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"next"},"Next version (Unreleased)"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find the documentation for unreleased version."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,"master"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])('/next')},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:repoUrl},"Source Code")))))),pastVersions.length>0&&/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div",{className:"margin-bottom--lg"},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3",{id:"archive"},"Past Versions"),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p",null,"Here you can find documentation for previous versions."),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("table",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tbody",null,pastVersions.map(version=>/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr",{key:version},/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("th",null,version),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_docusaurus_Link__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"],{to:Object(_docusaurus_useBaseUrl__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"])(`/${version}`)},"Documentation")),/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td",null,/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a",{href:`${repoUrl}/blob/master/CHANGELOG.md`},"Changelog")))))))));}/* harmony default export */ __webpack_exports__["default"] = (Version);
 
 /***/ }),
 /* 152 */
@@ -22808,7 +22810,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_PORT=<value>
     #
-    port: -58739414
+    port: -39945958
 
     ## Host ##
     #
@@ -22848,7 +22850,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_TIMEOUT_READ=<value>
       #
-      read: 5s
+      read: 5m
 
       ## HTTP Write Timeout ##
       #
@@ -22867,7 +22869,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_TIMEOUT_WRITE=<value>
       #
-      write: 5m
+      write: 5h
 
       ## HTTP Idle Timeout ##
       #
@@ -22886,7 +22888,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_TIMEOUT_IDLE=<value>
       #
-      idle: 5s
+      idle: 5h
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -22905,7 +22907,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_ENABLED=<value>
       #
-      enabled: false
+      enabled: true
 
       ## Allowed Origins ##
       #
@@ -22942,10 +22944,8 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
-        - PUT
-        - PATCH
-        - POST
         - GET
+        - HEAD
 
       ## Allowed Request HTTP Headers ##
       #
@@ -22960,11 +22960,9 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - in dolor anim id
-        - laboris ad ipsum veniam occaecat
-        - sed mollit Ut
-        - adipisicing
-        - voluptate Ut dolore
+        - amet
+        - qui sed Lorem sunt eu
+        - incididunt
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22979,7 +22977,11 @@ serve:
       #    > set SERVE_API_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - Excepteur in id
+        - Excepteur est in
+        - consequat
+        - ut aliquip Lorem
+        - do eu
+        - veniam
 
       ## Allow HTTP Credentials ##
       #
@@ -22993,7 +22995,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_ALLOW_CREDENTIALS=<value>
       #
-      allow_credentials: true
+      allow_credentials: false
 
       ## Maximum Age ##
       #
@@ -23005,7 +23007,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_MAX_AGE=<value>
       #
-      max_age: -18094286
+      max_age: 9305089
 
       ## Enable Debugging ##
       #
@@ -23019,7 +23021,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_DEBUG=<value>
       #
-      debug: false
+      debug: true
 
     ## HTTPS ##
     #
@@ -23087,7 +23089,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_PORT=<value>
     #
-    port: -27937202
+    port: 95044638
 
     ## Host ##
     #
@@ -23103,7 +23105,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_HOST=<value>
     #
-    host: ''
+    host: localhost
 
     ## HTTP Timeouts ##
     #
@@ -23127,7 +23129,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_READ=<value>
       #
-      read: 5h
+      read: 5s
 
       ## HTTP Write Timeout ##
       #
@@ -23165,7 +23167,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_IDLE=<value>
       #
-      idle: 5s
+      idle: 5h
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -23204,7 +23206,9 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_ORIGINS=<value>
       #
       allowed_origins:
-        - '*'
+        - https://example.com
+        - https://*.example.com
+        - https://*.foo.example.com
 
       ## Allowed HTTP Methods ##
       #
@@ -23219,11 +23223,11 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
-        - PATCH
-        - CONNECT
-        - TRACE
+        - HEAD
+        - DELETE
         - PUT
         - POST
+        - PATCH
 
       ## Allowed Request HTTP Headers ##
       #
@@ -23238,8 +23242,10 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - in veniam exercitation aliquip commodo
-        - non sit exercitation
+        - in
+        - cupidatat Lorem eu id dolore
+        - dolore ullamco adipisicing anim
+        - non
 
       ## Allowed Response HTTP Headers ##
       #
@@ -23254,7 +23260,8 @@ serve:
       #    > set SERVE_PROXY_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - incididunt minim aliquip veniam
+        - ea velit culpa cillum sunt
+        - ut
 
       ## Allow HTTP Credentials ##
       #
@@ -23280,7 +23287,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_MAX_AGE=<value>
       #
-      max_age: 31366241
+      max_age: -45503988
 
       ## Enable Debugging ##
       #
@@ -23294,7 +23301,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_DEBUG=<value>
       #
-      debug: false
+      debug: true
 
     ## HTTPS ##
     #
@@ -23362,7 +23369,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROMETHEUS_PORT=<value>
     #
-    port: -54476710
+    port: 65322801
 
     ## Host ##
     #
@@ -23378,7 +23385,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROMETHEUS_HOST=<value>
     #
-    host: localhost
+    host: 127.0.0.1
 
     ## Path ##
     #
@@ -23392,7 +23399,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROMETHEUS_METRICS_PATH=<value>
     #
-    metrics_path: esse culpa cupidatat pariatur ut
+    metrics_path: est ut dolor mollit
 
 ## Access Rules ##
 #
@@ -23511,7 +23518,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_NOOP_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Unauthorized ##
   #
@@ -23533,7 +23540,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_UNAUTHORIZED_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Cookie Session ##
   #
@@ -23562,9 +23569,9 @@ authenticators:
       #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_ONLY=<value>
       #
       only:
-        - ut officia Duis nulla id
-        - cupidatat laboris
-        - tempor magna dolor dolor esse
+        - ipsum commodo Excepteur
+        - tempor qui id
+        - id in reprehenderit
 
       ## preserve_path ##
       #
@@ -23584,7 +23591,7 @@ authenticators:
       # - Windows Command Line (CMD):
       #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_EXTRA_FROM=<value>
       #
-      extra_from: laboris mollit
+      extra_from: aliquip quis
 
       ## subject_from ##
       #
@@ -23594,7 +23601,7 @@ authenticators:
       # - Windows Command Line (CMD):
       #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_SUBJECT_FROM=<value>
       #
-      subject_from: incididunt
+      subject_from: laboris commodo eiusmod
 
     ## Enabled ##
     #
@@ -23611,13 +23618,102 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_COOKIE_SESSION_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## JSON Web Token (jwt) ##
   #
   # The [\`jwt\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#jwt).
   #
   jwt:
+    ## config ##
+    #
+    config:
+      ## jwks_urls ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
+      #
+      jwks_urls:
+        - https://my-website.com/.well-known/jwks.json
+        - https://my-other-website.com/.well-known/jwks.json
+        - file://path/to/local/jwks.json
+
+      ## required_scope ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
+      #
+      required_scope:
+        - enim
+        - eiusmod
+        - Ut
+        - laborum proident
+
+      ## target_audience ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
+      #
+      target_audience:
+        - elit sit
+
+      ## trusted_issuers ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
+      #
+      trusted_issuers:
+        - sit incididunt non Excepteur aute
+        - dolore irure
+        - et ut pariatur minim est
+        - in non voluptate ut sed
+
+      ## allowed_algorithms ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
+      #
+      allowed_algorithms:
+        - amet
+
+      ## scope_strategy ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
+      #
+      scope_strategy: wildcard
+
+      ## token_from ##
+      #
+      token_from:
+        ## cookie ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_COOKIE=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM_COOKIE=<value>
+        #
+        cookie: aliquip culpa velit
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23633,7 +23729,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_JWT_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## OAuth 2.0 Client Credentials ##
   #
@@ -23662,7 +23758,7 @@ authenticators:
       #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_REQUIRED_SCOPE=<value>
       #
       required_scope:
-        - reprehenderit aliqua minim incididunt
+        - laborum quis
 
       ## retry ##
       #
@@ -23675,7 +23771,7 @@ authenticators:
         # - Windows Command Line (CMD):
         #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_RETRY_GIVE_UP_AFTER=<value>
         #
-        give_up_after: 62h
+        give_up_after: 536243m
 
         ## max_delay ##
         #
@@ -23685,7 +23781,7 @@ authenticators:
         # - Windows Command Line (CMD):
         #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_RETRY_MAX_DELAY=<value>
         #
-        max_delay: 3331us
+        max_delay: 993853698ns
 
     ## Enabled ##
     #
@@ -23724,7 +23820,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
 ## Error Handling ##
 #
@@ -23755,6 +23851,94 @@ errors:
     # Responds with the WWW-Authenticate HTTP Response
     #
     www_authenticate:
+      ## config ##
+      #
+      config:
+        ## realm ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
+        #
+        realm: reprehenderit incididunt Lorem Ut id
+
+        ## when ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_WHEN=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_WHEN=<value>
+        #
+        when:
+          - error:
+              - forbidden
+            request:
+              cidr:
+                - exercitation
+                - mollit Lorem esse
+                - adipisicing commodo aute et deserunt
+                - laborum eiusmod reprehenderit sit
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - internal_server_error
+              - unauthorized
+              - not_found
+              - forbidden
+            request:
+              cidr:
+                - dolore mollit aute
+                - in cupidatat cillum
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
+              - forbidden
+              - not_found
+              - not_found
+            request:
+              cidr:
+                - aliquip non
+                - in qui
+                - est laboris esse Lorem tempor
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - internal_server_error
+              - internal_server_error
+              - internal_server_error
+              - unauthorized
+              - internal_server_error
+            request:
+              cidr:
+                - commodo amet ea incididunt Excepteur
+                - proident
+                - officia exercitation
+                - Excepteur
+                - nostrud sint dolor fugiat
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - forbidden
+              - forbidden
+            request:
+              cidr:
+                - fugiat
+                - irure deserunt laborum elit fugiat
+                - do
+                - exercitation laboris ipsum qui ut
+                - ex nisi irure nostrud
+              header:
+                content_type: []
+                accept: []
+
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23770,68 +23954,13 @@ errors:
       # - Windows Command Line (CMD):
       #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_ENABLED=<value>
       #
-      enabled: true
+      enabled: false
 
     ## HTTP Redirect Error Handler ##
     #
     # Responds with a 301/302 HTTP redirect.
     #
     redirect:
-      ## config ##
-      #
-      config:
-        ## to ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
-        # - Windows Command Line (CMD):
-        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
-        #
-        to: http://AYWlrzPFKdkItQbE.cnzrZltW5dP52hAkjnL0Q0g0PuYCZ5DTYoWS28nH5VxiQSqla1wdWO3qqouCOLY-de
-
-        ## code ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
-        # - Windows Command Line (CMD):
-        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
-        #
-        code: 302
-
-        ## when ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
-        # - Windows Command Line (CMD):
-        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
-        #
-        when:
-          - error:
-              - unauthorized
-            request:
-              cidr:
-                - nulla ullamco
-                - quis
-                - incididunt et
-              header:
-                content_type: []
-                accept: []
-          - error:
-              - unauthorized
-              - forbidden
-              - unauthorized
-            request:
-              cidr:
-                - fugiat consectetur
-                - nisi est
-                - minim officia nostrud
-              header:
-                content_type: []
-                accept: []
-
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23893,7 +24022,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_ALLOW_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Deny ##
   #
@@ -23915,66 +24044,13 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_DENY_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## ORY Keto Access Control Policies Engine ##
   #
   # The [\`keto_engine_acp_ory\` authorizer](https://www.ory.sh/oathkeeper/docs/pipeline/authz#keto_engine_acp_ory).
   #
   keto_engine_acp_ory:
-    ## config ##
-    #
-    config:
-      ## base_url ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_BASE_URL=<value>
-      #
-      base_url: http://my-keto/
-
-      ## required_action ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_ACTION=<value>
-      #
-      required_action: nisi exercitation labore ullamco qui
-
-      ## required_resource ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_REQUIRED_RESOURCE=<value>
-      #
-      required_resource: aliquip in commodo occaecat ut
-
-      ## subject ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_SUBJECT=<value>
-      #
-      subject: eiusmod Duis aute
-
-      ## flavor ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_CONFIG_FLAVOR=<value>
-      #
-      flavor: Duis
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -24019,29 +24095,6 @@ authorizers:
   # The [\`remote_json\` authorizer](https://www.ory.sh/oathkeeper/docs/pipeline/authz#remote_json).
   #
   remote_json:
-    ## config ##
-    #
-    config:
-      ## remote ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_REMOTE_JSON_CONFIG_REMOTE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_REMOTE_JSON_CONFIG_REMOTE=<value>
-      #
-      remote: https://host/path
-
-      ## payload ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHORIZERS_REMOTE_JSON_CONFIG_PAYLOAD=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHORIZERS_REMOTE_JSON_CONFIG_PAYLOAD=<value>
-      #
-      payload: '{"subject":"{{ .Subject }}"}'
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -24057,7 +24110,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_REMOTE_JSON_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
 ## Mutators ##
 #
@@ -24091,6 +24144,16 @@ mutators:
   # The [\`cookie\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#cookie).
   #
   cookie:
+    ## config ##
+    #
+    # Set this value using environment variables on
+    # - Linux/macOS:
+    #    $ export MUTATORS_COOKIE_CONFIG=<value>
+    # - Windows Command Line (CMD):
+    #    > set MUTATORS_COOKIE_CONFIG=<value>
+    #
+    config: {}
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -24106,7 +24169,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_COOKIE_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## HTTP Header ##
   #
@@ -24145,94 +24208,6 @@ mutators:
   # The [\`hydrator\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#hydrator).
   #
   hydrator:
-    ## config ##
-    #
-    config:
-      ## api ##
-      #
-      api:
-        ## url ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export MUTATORS_HYDRATOR_CONFIG_API_URL=<value>
-        # - Windows Command Line (CMD):
-        #    > set MUTATORS_HYDRATOR_CONFIG_API_URL=<value>
-        #
-        url: https://Pw.pxqwRlcUMJWk
-
-        ## auth ##
-        #
-        auth:
-          ## basic ##
-          #
-          basic:
-            ## username ##
-            #
-            # Set this value using environment variables on
-            # - Linux/macOS:
-            #    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=<value>
-            # - Windows Command Line (CMD):
-            #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=<value>
-            #
-            username: deserunt Duis culpa
-
-            ## password ##
-            #
-            # Set this value using environment variables on
-            # - Linux/macOS:
-            #    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=<value>
-            # - Windows Command Line (CMD):
-            #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=<value>
-            #
-            password: aliquip quis tempor voluptate
-
-        ## retry ##
-        #
-        retry:
-          ## give_up_after ##
-          #
-          # Set this value using environment variables on
-          # - Linux/macOS:
-          #    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=<value>
-          # - Windows Command Line (CMD):
-          #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=<value>
-          #
-          give_up_after: 3242243m
-
-          ## max_delay ##
-          #
-          # Set this value using environment variables on
-          # - Linux/macOS:
-          #    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=<value>
-          # - Windows Command Line (CMD):
-          #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=<value>
-          #
-          max_delay: 480660us
-
-      ## cache ##
-      #
-      cache:
-        ## enabled ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export MUTATORS_HYDRATOR_CONFIG_CACHE_ENABLED=<value>
-        # - Windows Command Line (CMD):
-        #    > set MUTATORS_HYDRATOR_CONFIG_CACHE_ENABLED=<value>
-        #
-        enabled: false
-
-        ## ttl ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export MUTATORS_HYDRATOR_CONFIG_CACHE_TTL=<value>
-        # - Windows Command Line (CMD):
-        #    > set MUTATORS_HYDRATOR_CONFIG_CACHE_TTL=<value>
-        #
-        ttl: 807us
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -24255,49 +24230,6 @@ mutators:
   # The [\`id_token\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#id_token).
   #
   id_token:
-    ## config ##
-    #
-    config:
-      ## jwks_url ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export MUTATORS_ID_TOKEN_CONFIG_JWKS_URL=<value>
-      # - Windows Command Line (CMD):
-      #    > set MUTATORS_ID_TOKEN_CONFIG_JWKS_URL=<value>
-      #
-      jwks_url: https://fetch-keys/from/this/location.json
-
-      ## issuer_url ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export MUTATORS_ID_TOKEN_CONFIG_ISSUER_URL=<value>
-      # - Windows Command Line (CMD):
-      #    > set MUTATORS_ID_TOKEN_CONFIG_ISSUER_URL=<value>
-      #
-      issuer_url: deserunt
-
-      ## claims ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export MUTATORS_ID_TOKEN_CONFIG_CLAIMS=<value>
-      # - Windows Command Line (CMD):
-      #    > set MUTATORS_ID_TOKEN_CONFIG_CLAIMS=<value>
-      #
-      claims: proident
-
-      ## ttl ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export MUTATORS_ID_TOKEN_CONFIG_TTL=<value>
-      # - Windows Command Line (CMD):
-      #    > set MUTATORS_ID_TOKEN_CONFIG_TTL=<value>
-      #
-      ttl: 1m
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -24313,7 +24245,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_ID_TOKEN_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
 ## Log ##
 #
@@ -24332,7 +24264,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: info
+  level: error
 
   ## Format ##
   #
@@ -24346,7 +24278,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_FORMAT=<value>
   #
-  format: json
+  format: text
 
 ## Profiling ##
 #
@@ -28679,7 +28611,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _mdx_js_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(0);
-const frontMatter={id:'api-access-rules',title:'API Access Rules'};const metadata={"id":"api-access-rules","title":"API Access Rules","description":"ORY Oathkeeper reaches decisions to allow or deny access by applying Access","source":"@site/docs/api-access-rules.md","permalink":"/oathkeeper/docs/next/api-access-rules","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/api-access-rules.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1586177132,"sidebar":"docs","previous":{"title":"Installation","permalink":"/oathkeeper/docs/next/install"},"next":{"title":"Access Rule Pipeline","permalink":"/oathkeeper/docs/next/pipeline/index"}};/* @jsx mdx */const rightToc=[{value:'Access Rule Format',id:'access-rule-format',children:[]},{value:'Handler configuration',id:'handler-configuration',children:[]},{value:'Scoped Credentials',id:'scoped-credentials',children:[]},{value:'Match strategy behavior',id:'match-strategy-behavior',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`ORY Oathkeeper reaches decisions to allow or deny access by applying Access
+const frontMatter={id:'api-access-rules',title:'API Access Rules'};const metadata={"id":"api-access-rules","title":"API Access Rules","description":"ORY Oathkeeper reaches decisions to allow or deny access by applying Access","source":"@site/docs/api-access-rules.md","permalink":"/oathkeeper/docs/next/api-access-rules","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/api-access-rules.md","version":"next","lastUpdatedBy":"hackerman","lastUpdatedAt":1591338663,"sidebar":"docs","previous":{"title":"Installation","permalink":"/oathkeeper/docs/next/install"},"next":{"title":"Access Rule Pipeline","permalink":"/oathkeeper/docs/next/pipeline/index"}};/* @jsx mdx */const rightToc=[{value:'Access Rule Format',id:'access-rule-format',children:[]},{value:'Handler configuration',id:'handler-configuration',children:[]},{value:'Scoped Credentials',id:'scoped-credentials',children:[]},{value:'Match strategy behavior',id:'match-strategy-behavior',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])(MDXLayout,Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("p",null,`ORY Oathkeeper reaches decisions to allow or deny access by applying Access
 Rules. Access Rules can be stored on the file system, set as an environment
 variable, or fetched from HTTP(s) remotes. These repositories can be configured
 in the configuration file (`,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("inlineCode",{parentName:"p"},`oathkeeper -c ./path/to/config.yml ...`),`)`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pre",null,Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("code",Object(_home_circleci_project_docs_node_modules_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__[/* default */ "a"])({parentName:"pre"},{"className":"language-yaml"}),`# Configures Access Rules
@@ -28795,7 +28727,7 @@ match:
 authenticators:
   - handler: noop
 authorizer:
-  hander: allow
+  handler: allow
 mutators:
   - handler: noop
 errors:
@@ -37061,7 +36993,7 @@ module.exports = inherits;
 "use strict";
 
 
-module.exports = '3.1.1';
+module.exports = '3.1.2';
 
 
 /***/ }),
@@ -37770,15 +37702,21 @@ var styles_module_default = /*#__PURE__*/__webpack_require__.n(styles_module);
  * LICENSE file in the root directory of this source tree.
  */function TabItem(props){return/*#__PURE__*/react_default.a.createElement("div",null,props.children);}/* harmony default export */ var theme_TabItem = (TabItem);
 // CONCATENATED MODULE: ./docs/reference/api.mdx
-const frontMatter={title:'REST API',id:'api'};const metadata={"id":"reference/api","title":"REST API","description":"ORY Oathkeeper is a reverse proxy that checks the HTTP Authorization for validity against a set of rules. This service uses Hydra to validate access tokens and policies.","source":"@site/docs/reference/api.mdx","permalink":"/oathkeeper/docs/next/reference/api","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/reference/api.mdx","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1590770922,"sidebar":"docs","previous":{"title":"Configuration","permalink":"/oathkeeper/docs/next/reference/configuration"},"next":{"title":"Overview","permalink":"/oathkeeper/docs/next/sdk/index"}};/* @jsx mdx */const rightToc=[{value:'api',id:'api',children:[{value:'Lists cryptographic keys',id:'lists-cryptographic-keys',children:[]},{value:'Access Control Decision API',id:'access-control-decision-api',children:[]},{value:'List all rules',id:'list-all-rules',children:[]},{value:'Retrieve a rule',id:'retrieve-a-rule',children:[]}]},{value:'health',id:'health',children:[{value:'Check alive status',id:'check-alive-status',children:[]},{value:'Check readiness status',id:'check-readiness-status',children:[]}]},{value:'version',id:'version',children:[{value:'Get service version',id:'get-service-version',children:[]}]},{value:'Schemas',id:'schemas',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(esm["b" /* mdx */])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(esm["b" /* mdx */])(MDXLayout,Object(esm_extends["a" /* default */])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(esm["b" /* mdx */])("p",null,`ORY Oathkeeper is a reverse proxy that checks the HTTP Authorization for validity against a set of rules. This service uses Hydra to validate access tokens and policies.`),Object(esm["b" /* mdx */])("div",{"className":"admonition admonition-info alert alert--info"},Object(esm["b" /* mdx */])("div",Object(esm_extends["a" /* default */])({parentName:"div"},{"className":"admonition-heading"}),Object(esm["b" /* mdx */])("h5",{parentName:"div"},Object(esm["b" /* mdx */])("span",Object(esm_extends["a" /* default */])({parentName:"h5"},{"className":"admonition-icon"}),Object(esm["b" /* mdx */])("svg",Object(esm_extends["a" /* default */])({parentName:"span"},{"xmlns":"http://www.w3.org/2000/svg","width":"14","height":"16","viewBox":"0 0 14 16"}),Object(esm["b" /* mdx */])("path",Object(esm_extends["a" /* default */])({parentName:"svg"},{"fillRule":"evenodd","d":"M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"})))),`info`)),Object(esm["b" /* mdx */])("div",Object(esm_extends["a" /* default */])({parentName:"div"},{"className":"admonition-content"}),Object(esm["b" /* mdx */])("p",{parentName:"div"},`You are viewing REST API documentation. This documentation is auto-generated from a swagger specification which
-itself is generated from annotations in the source code of the project. It is possible that this documentation includes
-bugs and that code samples are incomplete or wrong.`),Object(esm["b" /* mdx */])("p",{parentName:"div"},`If you find issues in the respective documentation, please do not edit the
-Markdown files directly (as they are generated) but raise an issue on the project's GitHub presence instead. This documentation
-will improve over time with your help! If you have ideas how to improve this part of the documentation, feel free to
-share them in a `,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"p"},{"href":"https://github.com/ory/docs/issues/new"}),`GitHub issue`),` any time.`))),Object(esm["b" /* mdx */])("a",{id:"ory-oathkeeper-api"}),Object(esm["b" /* mdx */])("h2",{"id":"api"},`api`),Object(esm["b" /* mdx */])("a",{id:"opIdgetWellKnownJSONWebKeys"}),Object(esm["b" /* mdx */])("h3",{"id":"lists-cryptographic-keys"},`Lists cryptographic keys`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /.well-known/jwks.json HTTP/1.1
+const frontMatter={title:'REST API',id:'api'};const metadata={"id":"reference/api","title":"REST API","description":"ORY Oathkeeper is a reverse proxy that checks the HTTP Authorization for","source":"@site/docs/reference/api.mdx","permalink":"/oathkeeper/docs/next/reference/api","editUrl":"https://github.com/ory/oathkeeper/edit/master/docs/docs/reference/api.mdx","version":"next","lastUpdatedBy":"aeneasr","lastUpdatedAt":1590770922,"sidebar":"docs","previous":{"title":"Configuration","permalink":"/oathkeeper/docs/next/reference/configuration"},"next":{"title":"Overview","permalink":"/oathkeeper/docs/next/sdk/index"}};/* @jsx mdx */const rightToc=[{value:'api',id:'api',children:[{value:'Lists cryptographic keys',id:'lists-cryptographic-keys',children:[]},{value:'Access Control Decision API',id:'access-control-decision-api',children:[]},{value:'List all rules',id:'list-all-rules',children:[]},{value:'Retrieve a rule',id:'retrieve-a-rule',children:[]}]},{value:'health',id:'health',children:[{value:'Check alive status',id:'check-alive-status',children:[]},{value:'Check readiness status',id:'check-readiness-status',children:[]}]},{value:'version',id:'version',children:[{value:'Get service version',id:'get-service-version',children:[]}]},{value:'Schemas',id:'schemas',children:[]}];const makeShortcode=name=>function MDXDefaultShortcode(props){console.warn("Component "+name+" was not imported, exported, or provided by MDXProvider as global scope");return Object(esm["b" /* mdx */])("div",props);};const layoutProps={rightToc};const MDXLayout="wrapper";function MDXContent({components,...props}){return Object(esm["b" /* mdx */])(MDXLayout,Object(esm_extends["a" /* default */])({},layoutProps,props,{components:components,mdxType:"MDXLayout"}),Object(esm["b" /* mdx */])("p",null,`ORY Oathkeeper is a reverse proxy that checks the HTTP Authorization for
+validity against a set of rules. This service uses Hydra to validate access
+tokens and policies.`),Object(esm["b" /* mdx */])("div",{"className":"admonition admonition-info alert alert--info"},Object(esm["b" /* mdx */])("div",Object(esm_extends["a" /* default */])({parentName:"div"},{"className":"admonition-heading"}),Object(esm["b" /* mdx */])("h5",{parentName:"div"},Object(esm["b" /* mdx */])("span",Object(esm_extends["a" /* default */])({parentName:"h5"},{"className":"admonition-icon"}),Object(esm["b" /* mdx */])("svg",Object(esm_extends["a" /* default */])({parentName:"span"},{"xmlns":"http://www.w3.org/2000/svg","width":"14","height":"16","viewBox":"0 0 14 16"}),Object(esm["b" /* mdx */])("path",Object(esm_extends["a" /* default */])({parentName:"svg"},{"fillRule":"evenodd","d":"M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"})))),`info`)),Object(esm["b" /* mdx */])("div",Object(esm_extends["a" /* default */])({parentName:"div"},{"className":"admonition-content"}),Object(esm["b" /* mdx */])("p",{parentName:"div"},`You are viewing REST API documentation. This documentation is auto-generated
+from a swagger specification which itself is generated from annotations in the
+source code of the project. It is possible that this documentation includes bugs
+and that code samples are incomplete or wrong.`),Object(esm["b" /* mdx */])("p",{parentName:"div"},`If you find issues in the respective documentation, please do not edit the
+Markdown files directly (as they are generated) but raise an issue on the
+project's GitHub presence instead. This documentation will improve over time
+with your help! If you have ideas how to improve this part of the documentation,
+feel free to share them in a
+`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"p"},{"href":"https://github.com/ory/docs/issues/new"}),`GitHub issue`),` any time.`))),Object(esm["b" /* mdx */])("a",{id:"ory-oathkeeper-api"}),Object(esm["b" /* mdx */])("h2",{"id":"api"},`api`),Object(esm["b" /* mdx */])("a",{id:"opIdgetWellKnownJSONWebKeys"}),Object(esm["b" /* mdx */])("h3",{"id":"lists-cryptographic-keys"},`Lists cryptographic keys`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /.well-known/jwks.json HTTP/1.1
 Accept: application/json
 
-`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns cryptographic keys that are required to, for example, verify signatures of ID Tokens.`),Object(esm["b" /* mdx */])("h4",{"id":"responses"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"lists-cryptographic-keys-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`jsonWebKeySet`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemajsonwebkeyset"}),`jsonWebKeySet`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"lists-cryptographic-keys-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns cryptographic keys that are required to, for example,
+verify signatures of ID Tokens.`),Object(esm["b" /* mdx */])("h4",{"id":"responses"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"lists-cryptographic-keys-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`jsonWebKeySet`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemajsonwebkeyset"}),`jsonWebKeySet`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"lists-cryptographic-keys-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "keys": [
     {
       "alg": "string",
@@ -37796,9 +37734,7 @@ Accept: application/json
       "qi": "string",
       "use": "string",
       "x": "string",
-      "x5c": [
-        "string"
-      ],
+      "x5c": ["string"],
       "y": "string"
     }
   ]
@@ -37813,7 +37749,7 @@ import (
 )
 
 func main() {
-    headers := map[string][]string{ 
+    headers := map[string][]string{
         "Accept": []string{"application/json"},
     }
 
@@ -37827,20 +37763,20 @@ func main() {
     resp, err := client.Do(req)
     // ...
 }
-`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch');
+`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch')
 
 const headers = {
-  'Accept': 'application/json'
+  Accept: 'application/json'
 }
 
 fetch('/.well-known/jwks.json', {
   method: 'GET',
   headers
 })
-.then(r => r.json())
-.then((body) => {
+  .then((r) => r.json())
+  .then((body) => {
     console.log(body)
-})
+  })
 `))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"java",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-java"}),`// This sample needs improvement.
 URL obj = new URL("/.well-known/jwks.json");
 
@@ -37887,13 +37823,14 @@ p JSON.parse(result)
 `)))),Object(esm["b" /* mdx */])("a",{id:"opIddecisions"}),Object(esm["b" /* mdx */])("h3",{"id":"access-control-decision-api"},`Access Control Decision API`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /decisions HTTP/1.1
 Accept: application/json
 
-`)),Object(esm["b" /* mdx */])("blockquote",null,Object(esm["b" /* mdx */])("p",{parentName:"blockquote"},`This endpoint works with all HTTP Methods (GET, POST, PUT, ...) and matches every path prefixed with /decision.`)),Object(esm["b" /* mdx */])("p",null,`This endpoint mirrors the proxy capability of ORY Oathkeeper's proxy functionality but instead of forwarding the
-request to the upstream server, returns 200 (request should be allowed), 401 (unauthorized), or 403 (forbidden)
-status codes. This endpoint can be used to integrate with other API Proxies like Ambassador, Kong, Envoy, and many more.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-1"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"access-control-decision-api-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-1"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`An empty response`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`None`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`401`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7235#section-3.1"}),`Unauthorized`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`403`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.5.3"}),`Forbidden`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`404`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.5.4"}),`Not Found`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"access-control-decision-api-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`401`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`403`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`404`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-1"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"401-response"},`401 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("blockquote",null,Object(esm["b" /* mdx */])("p",{parentName:"blockquote"},`This endpoint works with all HTTP Methods (GET, POST, PUT, ...) and matches
+every path prefixed with /decision.`)),Object(esm["b" /* mdx */])("p",null,`This endpoint mirrors the proxy capability of ORY Oathkeeper's proxy
+functionality but instead of forwarding the request to the upstream server,
+returns 200 (request should be allowed), 401 (unauthorized), or 403 (forbidden)
+status codes. This endpoint can be used to integrate with other API Proxies like
+Ambassador, Kong, Envoy, and many more.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-1"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"access-control-decision-api-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-1"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`An empty response`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`None`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`401`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7235#section-3.1"}),`Unauthorized`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`403`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.5.3"}),`Forbidden`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`404`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.5.4"}),`Not Found`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"access-control-decision-api-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`401`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`403`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`404`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-1"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"401-response"},`401 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "code": 0,
-  "details": [
-    {}
-  ],
+  "details": [{}],
   "message": "string",
   "reason": "string",
   "request": "string",
@@ -37909,7 +37846,7 @@ import (
 )
 
 func main() {
-    headers := map[string][]string{ 
+    headers := map[string][]string{
         "Accept": []string{"application/json"},
     }
 
@@ -37923,20 +37860,20 @@ func main() {
     resp, err := client.Do(req)
     // ...
 }
-`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch');
+`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch')
 
 const headers = {
-  'Accept': 'application/json'
+  Accept: 'application/json'
 }
 
 fetch('/decisions', {
   method: 'GET',
   headers
 })
-.then(r => r.json())
-.then((body) => {
+  .then((r) => r.json())
+  .then((body) => {
     console.log(body)
-})
+  })
 `))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"java",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-java"}),`// This sample needs improvement.
 URL obj = new URL("/decisions");
 
@@ -37983,8 +37920,9 @@ p JSON.parse(result)
 `)))),Object(esm["b" /* mdx */])("a",{id:"opIdlistRules"}),Object(esm["b" /* mdx */])("h3",{"id":"list-all-rules"},`List all rules`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /rules HTTP/1.1
 Accept: application/json
 
-`)),Object(esm["b" /* mdx */])("p",null,`This method returns an array of all rules that are stored in the backend. This is useful if you want to get a full
-view of what rules you have currently in place.`),Object(esm["b" /* mdx */])("a",{id:"list-all-rules-parameters"}),Object(esm["b" /* mdx */])("h4",{"id":"parameters"},`Parameters`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Parameter`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`In`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`limit`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`query`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The maximum amount of rules returned.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`offset`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`query`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The offset from where to start looking.`)))),Object(esm["b" /* mdx */])("h4",{"id":"responses-2"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"list-all-rules-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-2"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`A list of rules`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"list-all-rules-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`200`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("em",{parentName:"td"},`anonymous`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarule"}),`rule`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» swaggerRule is a single rule that will get checked on every HTTP request.`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarule"}),`rule`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» authenticators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Authenticators is a list of authentication handlers that will try and authenticate the provided credentials. Authenticators are checked iteratively from index 0 to n and if the first authenticator to return a positive result will be the one used.  If you want the rule to first check a specific authenticator  before "falling back" to others, have that authenticator as the first item in the array.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» config`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`object`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Config contains the configuration for the handler. Please read the user guide for a complete list of each handler's available settings.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» handler`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Handler identifies the implementation which will be used to handle this specific request. Please read the user guide for a complete list of available handlers.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» authorizer`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» description`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description is a human readable description of this rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» id`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`ID is the unique id of the rule. It can be at most 190 characters long, but the layout of the ID is up to you. You will need this ID later on to update or delete the rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» match`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulematch"}),`ruleMatch`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» methods`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[string]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`An array of HTTP methods (e.g. GET, POST, PUT, DELETE, ...). When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the HTTP method of the incoming request with the HTTP methods of each rules. If a match is found, the rule is considered a partial match. If the matchesUrl field is satisfied as well, the rule is considered a full match.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» url`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`This field represents the URL pattern this rule matches. When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the full request URL (e.g. `,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://mydomain.com/api/resource"}),`https://mydomain.com/api/resource`),`) without query parameters of the incoming request with this field. If a match is found, the rule is considered a partial match. If the matchesMethods field is satisfied as well, the rule is considered a full match.  You can use regular expressions in this field to match more than one url. Regular expressions are encapsulated in brackets < and >. The following example matches all paths of the domain `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`mydomain.com`),`: `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`https://mydomain.com/<.*>`),`.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» mutators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Mutators is a list of mutation handlers that transform the HTTP request. A common use case is generating a new set of credentials (e.g. JWT) which then will be forwarded to the upstream server.  Mutations are performed iteratively from index 0 to n and should all succeed in order for the HTTP request to be forwarded.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» upstream`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemaupstream"}),`Upstream`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» preserve_host`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`boolean`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`PreserveHost, if false (the default), tells ORY Oathkeeper to set the upstream request's Host header to the hostname of the API's upstream's URL. Setting this flag to true instructs ORY Oathkeeper not to do so.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» strip_path`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`StripPath if set, replaces the provided path prefix when forwarding the requested URL to the upstream URL.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» url`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`URL is the URL the request will be proxied to.`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-2"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-1"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`[
+`)),Object(esm["b" /* mdx */])("p",null,`This method returns an array of all rules that are stored in the backend. This
+is useful if you want to get a full view of what rules you have currently in
+place.`),Object(esm["b" /* mdx */])("a",{id:"list-all-rules-parameters"}),Object(esm["b" /* mdx */])("h4",{"id":"parameters"},`Parameters`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Parameter`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`In`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`limit`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`query`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The maximum amount of rules returned.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`offset`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`query`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The offset from where to start looking.`)))),Object(esm["b" /* mdx */])("h4",{"id":"responses-2"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"list-all-rules-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-2"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`A list of rules`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"list-all-rules-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`200`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("em",{parentName:"td"},`anonymous`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarule"}),`rule`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» swaggerRule is a single rule that will get checked on every HTTP request.`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarule"}),`rule`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» authenticators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Authenticators is a list of authentication handlers that will try and authenticate the provided credentials. Authenticators are checked iteratively from index 0 to n and if the first authenticator to return a positive result will be the one used. If you want the rule to first check a specific authenticator before "falling back" to others, have that authenticator as the first item in the array.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» config`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`object`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Config contains the configuration for the handler. Please read the user guide for a complete list of each handler's available settings.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» handler`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Handler identifies the implementation which will be used to handle this specific request. Please read the user guide for a complete list of available handlers.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» authorizer`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» description`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description is a human readable description of this rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» id`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`ID is the unique id of the rule. It can be at most 190 characters long, but the layout of the ID is up to you. You will need this ID later on to update or delete the rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» match`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulematch"}),`ruleMatch`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» methods`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[string]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`An array of HTTP methods (e.g. GET, POST, PUT, DELETE, ...). When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the HTTP method of the incoming request with the HTTP methods of each rules. If a match is found, the rule is considered a partial match. If the matchesUrl field is satisfied as well, the rule is considered a full match.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» url`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`This field represents the URL pattern this rule matches. When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the full request URL (e.g. `,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://mydomain.com/api/resource"}),`https://mydomain.com/api/resource`),`) without query parameters of the incoming request with this field. If a match is found, the rule is considered a partial match. If the matchesMethods field is satisfied as well, the rule is considered a full match. You can use regular expressions in this field to match more than one url. Regular expressions are encapsulated in brackets < and >. The following example matches all paths of the domain `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`mydomain.com`),`: `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`https://mydomain.com/<.*>`),`.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» mutators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Mutators is a list of mutation handlers that transform the HTTP request. A common use case is generating a new set of credentials (e.g. JWT) which then will be forwarded to the upstream server. Mutations are performed iteratively from index 0 to n and should all succeed in order for the HTTP request to be forwarded.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»» upstream`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemaupstream"}),`Upstream`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» preserve_host`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`boolean`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`PreserveHost, if false (the default), tells ORY Oathkeeper to set the upstream request's Host header to the hostname of the API's upstream's URL. Setting this flag to true instructs ORY Oathkeeper not to do so.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» strip_path`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`StripPath if set, replaces the provided path prefix when forwarding the requested URL to the upstream URL.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`»»» url`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`URL is the URL the request will be proxied to.`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-2"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-1"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`[
   {
     "authenticators": [
       {
@@ -37999,9 +37937,7 @@ view of what rules you have currently in place.`),Object(esm["b" /* mdx */])("a"
     "description": "string",
     "id": "string",
     "match": {
-      "methods": [
-        "string"
-      ],
+      "methods": ["string"],
       "url": "string"
     },
     "mutators": [
@@ -38027,7 +37963,7 @@ import (
 )
 
 func main() {
-    headers := map[string][]string{ 
+    headers := map[string][]string{
         "Accept": []string{"application/json"},
     }
 
@@ -38041,20 +37977,20 @@ func main() {
     resp, err := client.Do(req)
     // ...
 }
-`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch');
+`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch')
 
 const headers = {
-  'Accept': 'application/json'
+  Accept: 'application/json'
 }
 
 fetch('/rules', {
   method: 'GET',
   headers
 })
-.then(r => r.json())
-.then((body) => {
+  .then((r) => r.json())
+  .then((body) => {
     console.log(body)
-})
+  })
 `))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"java",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-java"}),`// This sample needs improvement.
 URL obj = new URL("/rules");
 
@@ -38101,7 +38037,8 @@ p JSON.parse(result)
 `)))),Object(esm["b" /* mdx */])("a",{id:"opIdgetRule"}),Object(esm["b" /* mdx */])("h3",{"id":"retrieve-a-rule"},`Retrieve a rule`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /rules/{id} HTTP/1.1
 Accept: application/json
 
-`)),Object(esm["b" /* mdx */])("p",null,`Use this method to retrieve a rule from the storage. If it does not exist you will receive a 404 error.`),Object(esm["b" /* mdx */])("a",{id:"retrieve-a-rule-parameters"}),Object(esm["b" /* mdx */])("h4",{"id":"parameters-1"},`Parameters`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Parameter`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`In`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`id`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`path`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`true`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h4",{"id":"responses-3"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"retrieve-a-rule-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-3"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`A rule`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarule"}),`rule`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`404`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.5.4"}),`Not Found`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"retrieve-a-rule-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`404`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-3"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-2"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("p",null,`Use this method to retrieve a rule from the storage. If it does not exist you
+will receive a 404 error.`),Object(esm["b" /* mdx */])("a",{id:"retrieve-a-rule-parameters"}),Object(esm["b" /* mdx */])("h4",{"id":"parameters-1"},`Parameters`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Parameter`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`In`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`id`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`path`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`true`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h4",{"id":"responses-3"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"retrieve-a-rule-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-3"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`A rule`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarule"}),`rule`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`404`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.5.4"}),`Not Found`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"retrieve-a-rule-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`404`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-3"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-2"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "authenticators": [
     {
       "config": {},
@@ -38115,9 +38052,7 @@ Accept: application/json
   "description": "string",
   "id": "string",
   "match": {
-    "methods": [
-      "string"
-    ],
+    "methods": ["string"],
     "url": "string"
   },
   "mutators": [
@@ -38142,7 +38077,7 @@ import (
 )
 
 func main() {
-    headers := map[string][]string{ 
+    headers := map[string][]string{
         "Accept": []string{"application/json"},
     }
 
@@ -38156,20 +38091,20 @@ func main() {
     resp, err := client.Do(req)
     // ...
 }
-`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch');
+`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch')
 
 const headers = {
-  'Accept': 'application/json'
+  Accept: 'application/json'
 }
 
 fetch('/rules/{id}', {
   method: 'GET',
   headers
 })
-.then(r => r.json())
-.then((body) => {
+  .then((r) => r.json())
+  .then((body) => {
     console.log(body)
-})
+  })
 `))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"java",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-java"}),`// This sample needs improvement.
 URL obj = new URL("/rules/{id}");
 
@@ -38216,10 +38151,11 @@ p JSON.parse(result)
 `)))),Object(esm["b" /* mdx */])("a",{id:"ory-oathkeeper-health"}),Object(esm["b" /* mdx */])("h2",{"id":"health"},`health`),Object(esm["b" /* mdx */])("a",{id:"opIdisInstanceAlive"}),Object(esm["b" /* mdx */])("h3",{"id":"check-alive-status"},`Check alive status`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /health/alive HTTP/1.1
 Accept: application/json
 
-`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns a 200 status code when the HTTP server is up running.
-This status does currently not include checks whether the database connection is working.`),Object(esm["b" /* mdx */])("p",null,`If the service supports TLS Edge Termination, this endpoint does not require the
-`,Object(esm["b" /* mdx */])("inlineCode",{parentName:"p"},`X-Forwarded-Proto`),` header to be set.`),Object(esm["b" /* mdx */])("p",null,`Be aware that if you are running multiple nodes of this service, the health status will never
-refer to the cluster state, only to a single instance.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-4"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"check-alive-status-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-4"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`healthStatus`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemahealthstatus"}),`healthStatus`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"check-alive-status-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-4"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-3"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns a 200 status code when the HTTP server is up running. This
+status does currently not include checks whether the database connection is
+working.`),Object(esm["b" /* mdx */])("p",null,`If the service supports TLS Edge Termination, this endpoint does not require the
+`,Object(esm["b" /* mdx */])("inlineCode",{parentName:"p"},`X-Forwarded-Proto`),` header to be set.`),Object(esm["b" /* mdx */])("p",null,`Be aware that if you are running multiple nodes of this service, the health
+status will never refer to the cluster state, only to a single instance.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-4"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"check-alive-status-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-4"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`healthStatus`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemahealthstatus"}),`healthStatus`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`500`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.1"}),`Internal Server Error`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The standard error format`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Inline`)))),Object(esm["b" /* mdx */])("a",{id:"check-alive-status-responseschema"}),"##### Response Schema",Object(esm["b" /* mdx */])("p",null,`Status Code `,Object(esm["b" /* mdx */])("strong",{parentName:"p"},`500`)),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» code`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`integer(int64)`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» details`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[object]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» message`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» reason`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» request`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("h5",{"id":"examples-4"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-3"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "status": "string"
 }
 `)),Object(esm["b" /* mdx */])("aside",{class:"success"},"This operation does not require authentication"),Object(esm["b" /* mdx */])("h4",{"id":"code-samples-4"},`Code samples`),Object(esm["b" /* mdx */])(theme_Tabs,{groupId:"code-samples",defaultValue:"shell",values:[{label:'Shell',value:'shell'},{label:'Go',value:'go'},{label:'Node',value:'node'},{label:'Java',value:'java'},{label:'Python',value:'python'},{label:'Ruby',value:'ruby'}],mdxType:"Tabs"},Object(esm["b" /* mdx */])(theme_TabItem,{value:"shell",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-shell"}),`curl -X GET /health/alive \\
@@ -38232,7 +38168,7 @@ import (
 )
 
 func main() {
-    headers := map[string][]string{ 
+    headers := map[string][]string{
         "Accept": []string{"application/json"},
     }
 
@@ -38246,20 +38182,20 @@ func main() {
     resp, err := client.Do(req)
     // ...
 }
-`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch');
+`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch')
 
 const headers = {
-  'Accept': 'application/json'
+  Accept: 'application/json'
 }
 
 fetch('/health/alive', {
   method: 'GET',
   headers
 })
-.then(r => r.json())
-.then((body) => {
+  .then((r) => r.json())
+  .then((body) => {
     console.log(body)
-})
+  })
 `))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"java",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-java"}),`// This sample needs improvement.
 URL obj = new URL("/health/alive");
 
@@ -38306,10 +38242,10 @@ p JSON.parse(result)
 `)))),Object(esm["b" /* mdx */])("a",{id:"opIdisInstanceReady"}),Object(esm["b" /* mdx */])("h3",{"id":"check-readiness-status"},`Check readiness status`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /health/ready HTTP/1.1
 Accept: application/json
 
-`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns a 200 status code when the HTTP server is up running and the environment dependencies (e.g.
-the database) are responsive as well.`),Object(esm["b" /* mdx */])("p",null,`If the service supports TLS Edge Termination, this endpoint does not require the
-`,Object(esm["b" /* mdx */])("inlineCode",{parentName:"p"},`X-Forwarded-Proto`),` header to be set.`),Object(esm["b" /* mdx */])("p",null,`Be aware that if you are running multiple nodes of this service, the health status will never
-refer to the cluster state, only to a single instance.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-5"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"check-readiness-status-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-5"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`healthStatus`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemahealthstatus"}),`healthStatus`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`503`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.4"}),`Service Unavailable`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`healthNotReadyStatus`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemahealthnotreadystatus"}),`healthNotReadyStatus`))))),Object(esm["b" /* mdx */])("h5",{"id":"examples-5"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-4"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns a 200 status code when the HTTP server is up running and
+the environment dependencies (e.g. the database) are responsive as well.`),Object(esm["b" /* mdx */])("p",null,`If the service supports TLS Edge Termination, this endpoint does not require the
+`,Object(esm["b" /* mdx */])("inlineCode",{parentName:"p"},`X-Forwarded-Proto`),` header to be set.`),Object(esm["b" /* mdx */])("p",null,`Be aware that if you are running multiple nodes of this service, the health
+status will never refer to the cluster state, only to a single instance.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-5"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"check-readiness-status-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-5"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`healthStatus`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemahealthstatus"}),`healthStatus`))),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`503`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.6.4"}),`Service Unavailable`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`healthNotReadyStatus`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemahealthnotreadystatus"}),`healthNotReadyStatus`))))),Object(esm["b" /* mdx */])("h5",{"id":"examples-5"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-4"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "status": "string"
 }
 `)),Object(esm["b" /* mdx */])("aside",{class:"success"},"This operation does not require authentication"),Object(esm["b" /* mdx */])("h4",{"id":"code-samples-5"},`Code samples`),Object(esm["b" /* mdx */])(theme_Tabs,{groupId:"code-samples",defaultValue:"shell",values:[{label:'Shell',value:'shell'},{label:'Go',value:'go'},{label:'Node',value:'node'},{label:'Java',value:'java'},{label:'Python',value:'python'},{label:'Ruby',value:'ruby'}],mdxType:"Tabs"},Object(esm["b" /* mdx */])(theme_TabItem,{value:"shell",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-shell"}),`curl -X GET /health/ready \\
@@ -38322,7 +38258,7 @@ import (
 )
 
 func main() {
-    headers := map[string][]string{ 
+    headers := map[string][]string{
         "Accept": []string{"application/json"},
     }
 
@@ -38336,20 +38272,20 @@ func main() {
     resp, err := client.Do(req)
     // ...
 }
-`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch');
+`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch')
 
 const headers = {
-  'Accept': 'application/json'
+  Accept: 'application/json'
 }
 
 fetch('/health/ready', {
   method: 'GET',
   headers
 })
-.then(r => r.json())
-.then((body) => {
+  .then((r) => r.json())
+  .then((body) => {
     console.log(body)
-})
+  })
 `))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"java",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-java"}),`// This sample needs improvement.
 URL obj = new URL("/health/ready");
 
@@ -38396,9 +38332,10 @@ p JSON.parse(result)
 `)))),Object(esm["b" /* mdx */])("a",{id:"ory-oathkeeper-version"}),Object(esm["b" /* mdx */])("h2",{"id":"version"},`version`),Object(esm["b" /* mdx */])("a",{id:"opIdgetVersion"}),Object(esm["b" /* mdx */])("h3",{"id":"get-service-version"},`Get service version`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{}),`GET /version HTTP/1.1
 Accept: application/json
 
-`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns the service version typically notated using semantic versioning.`),Object(esm["b" /* mdx */])("p",null,`If the service supports TLS Edge Termination, this endpoint does not require the
-`,Object(esm["b" /* mdx */])("inlineCode",{parentName:"p"},`X-Forwarded-Proto`),` header to be set.`),Object(esm["b" /* mdx */])("p",null,`Be aware that if you are running multiple nodes of this service, the health status will never
-refer to the cluster state, only to a single instance.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-6"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"get-service-version-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-6"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`version`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemaversion"}),`version`))))),Object(esm["b" /* mdx */])("h5",{"id":"examples-6"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-5"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("p",null,`This endpoint returns the service version typically notated using semantic
+versioning.`),Object(esm["b" /* mdx */])("p",null,`If the service supports TLS Edge Termination, this endpoint does not require the
+`,Object(esm["b" /* mdx */])("inlineCode",{parentName:"p"},`X-Forwarded-Proto`),` header to be set.`),Object(esm["b" /* mdx */])("p",null,`Be aware that if you are running multiple nodes of this service, the health
+status will never refer to the cluster state, only to a single instance.`),Object(esm["b" /* mdx */])("h4",{"id":"responses-6"},`Responses`),Object(esm["b" /* mdx */])("a",{id:"get-service-version-responses"}),Object(esm["b" /* mdx */])("h5",{"id":"overview-6"},`Overview`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Meaning`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Schema`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`200`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://tools.ietf.org/html/rfc7231#section-6.3.1"}),`OK`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`version`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemaversion"}),`version`))))),Object(esm["b" /* mdx */])("h5",{"id":"examples-6"},`Examples`),Object(esm["b" /* mdx */])("h6",{"id":"200-response-5"},`200 response`),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "version": "string"
 }
 `)),Object(esm["b" /* mdx */])("aside",{class:"success"},"This operation does not require authentication"),Object(esm["b" /* mdx */])("h4",{"id":"code-samples-6"},`Code samples`),Object(esm["b" /* mdx */])(theme_Tabs,{groupId:"code-samples",defaultValue:"shell",values:[{label:'Shell',value:'shell'},{label:'Go',value:'go'},{label:'Node',value:'node'},{label:'Java',value:'java'},{label:'Python',value:'python'},{label:'Ruby',value:'ruby'}],mdxType:"Tabs"},Object(esm["b" /* mdx */])(theme_TabItem,{value:"shell",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-shell"}),`curl -X GET /version \\
@@ -38411,7 +38348,7 @@ import (
 )
 
 func main() {
-    headers := map[string][]string{ 
+    headers := map[string][]string{
         "Accept": []string{"application/json"},
     }
 
@@ -38425,20 +38362,20 @@ func main() {
     resp, err := client.Do(req)
     // ...
 }
-`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch');
+`))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"node",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-javascript"}),`const fetch = require('node-fetch')
 
 const headers = {
-  'Accept': 'application/json'
+  Accept: 'application/json'
 }
 
 fetch('/version', {
   method: 'GET',
   headers
 })
-.then(r => r.json())
-.then((body) => {
+  .then((r) => r.json())
+  .then((body) => {
     console.log(body)
-})
+  })
 `))),Object(esm["b" /* mdx */])(theme_TabItem,{value:"java",mdxType:"TabItem"},Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-java"}),`// This sample needs improvement.
 URL obj = new URL("/version");
 
@@ -38487,18 +38424,15 @@ p JSON.parse(result)
   "strip_path": "string",
   "url": "string"
 }
-
 `)),Object(esm["b" /* mdx */])("h4",{"id":"properties"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`preserve_host`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`boolean`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`PreserveHost, if false (the default), tells ORY Oathkeeper to set the upstream request's Host header to the hostname of the API's upstream's URL. Setting this flag to true instructs ORY Oathkeeper not to do so.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`strip_path`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`StripPath if set, replaces the provided path prefix when forwarding the requested URL to the upstream URL.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`url`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`URL is the URL the request will be proxied to.`)))),Object(esm["b" /* mdx */])("a",{id:"tocShealthnotreadystatus"},"healthNotReadyStatus"),"#### healthNotReadyStatus",Object(esm["b" /* mdx */])("a",{id:"schemahealthnotreadystatus"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "errors": {
     "property1": "string",
     "property2": "string"
   }
 }
-
 `)),Object(esm["b" /* mdx */])("h4",{"id":"properties-1"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`errors`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`object`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Errors contains a list of errors that caused the not ready status.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`» `,Object(esm["b" /* mdx */])("strong",{parentName:"td"},`additionalProperties`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("a",{id:"tocShealthstatus"},"healthStatus"),"#### healthStatus",Object(esm["b" /* mdx */])("a",{id:"schemahealthstatus"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "status": "string"
 }
-
 `)),Object(esm["b" /* mdx */])("h4",{"id":"properties-2"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`status`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Status always contains "ok".`)))),Object(esm["b" /* mdx */])("a",{id:"tocSjsonwebkey"},"jsonWebKey"),"#### jsonWebKey",Object(esm["b" /* mdx */])("a",{id:"schemajsonwebkey"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "alg": "string",
   "crv": "string",
@@ -38515,13 +38449,10 @@ p JSON.parse(result)
   "qi": "string",
   "use": "string",
   "x": "string",
-  "x5c": [
-    "string"
-  ],
+  "x5c": ["string"],
   "y": "string"
 }
-
-`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-3"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`alg`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "alg" (algorithm) parameter identifies the algorithm intended for use with the key.  The values used should either be registered in the IANA "JSON Web Signature and Encryption Algorithms" registry established by `,`[JWA]`,` or be a value that contains a Collision- Resistant Name.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`crv`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`d`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`dp`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`dq`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`e`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`k`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`kid`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "kid" (key ID) parameter is used to match a specific key.  This is used, for instance, to choose among a set of keys within a JWK Set during key rollover.  The structure of the "kid" value is unspecified.  When "kid" values are used within a JWK Set, different keys within the JWK Set SHOULD use distinct "kid" values.  (One example in which different keys might use the same "kid" value is if they have different "kty" (key type) values but are considered to be equivalent alternatives by the application using them.)  The "kid" value is a case-sensitive string.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`kty`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "kty" (key type) parameter identifies the cryptographic algorithm family used with the key, such as "RSA" or "EC". "kty" values should either be registered in the IANA "JSON Web Key Types" registry established by `,`[JWA]`,` or be a value that contains a Collision- Resistant Name.  The "kty" value is a case-sensitive string.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`n`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`p`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`q`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`qi`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`use`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "use" (public key use) parameter identifies the intended use of the public key. The "use" parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Values are commonly "sig" (signature) or "enc" (encryption).`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`x`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`x5c`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[string]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "x5c" (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates `,`[RFC5280]`,`.  The certificate chain is represented as a JSON array of certificate value strings.  Each string in the array is a base64-encoded (Section 4 of `,`[RFC4648]`,` -- not base64url-encoded) DER `,`[ITU.X690.1994]`,` PKIX certificate value. The PKIX certificate containing the key value MUST be the first certificate.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`y`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("a",{id:"tocSjsonwebkeyset"},"jsonWebKeySet"),"#### jsonWebKeySet",Object(esm["b" /* mdx */])("a",{id:"schemajsonwebkeyset"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-3"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`alg`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "alg" (algorithm) parameter identifies the algorithm intended for use with the key. The values used should either be registered in the IANA "JSON Web Signature and Encryption Algorithms" registry established by `,`[JWA]`,` or be a value that contains a Collision- Resistant Name.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`crv`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`d`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`dp`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`dq`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`e`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`k`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`kid`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "kid" (key ID) parameter is used to match a specific key. This is used, for instance, to choose among a set of keys within a JWK Set during key rollover. The structure of the "kid" value is unspecified. When "kid" values are used within a JWK Set, different keys within the JWK Set SHOULD use distinct "kid" values. (One example in which different keys might use the same "kid" value is if they have different "kty" (key type) values but are considered to be equivalent alternatives by the application using them.) The "kid" value is a case-sensitive string.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`kty`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "kty" (key type) parameter identifies the cryptographic algorithm family used with the key, such as "RSA" or "EC". "kty" values should either be registered in the IANA "JSON Web Key Types" registry established by `,`[JWA]`,` or be a value that contains a Collision- Resistant Name. The "kty" value is a case-sensitive string.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`n`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`p`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`q`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`qi`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`use`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "use" (public key use) parameter identifies the intended use of the public key. The "use" parameter is employed to indicate whether a public key is used for encrypting data or verifying the signature on data. Values are commonly "sig" (signature) or "enc" (encryption).`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`x`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`x5c`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[string]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The "x5c" (X.509 certificate chain) parameter contains a chain of one or more PKIX certificates `,`[RFC5280]`,`. The certificate chain is represented as a JSON array of certificate value strings. Each string in the array is a base64-encoded (Section 4 of `,`[RFC4648]`,` -- not base64url-encoded) DER `,`[ITU.X690.1994]`,` PKIX certificate value. The PKIX certificate containing the key value MUST be the first certificate.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`y`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("a",{id:"tocSjsonwebkeyset"},"jsonWebKeySet"),"#### jsonWebKeySet",Object(esm["b" /* mdx */])("a",{id:"schemajsonwebkeyset"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "keys": [
     {
       "alg": "string",
@@ -38539,15 +38470,12 @@ p JSON.parse(result)
       "qi": "string",
       "use": "string",
       "x": "string",
-      "x5c": [
-        "string"
-      ],
+      "x5c": ["string"],
       "y": "string"
     }
   ]
 }
-
-`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-4"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`keys`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemajsonwebkey"}),`jsonWebKey`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The value of the "keys" parameter is an array of JWK values.  By default, the order of the JWK values within the array does not imply an order of preference among them, although applications of JWK Sets can choose to assign a meaning to the order for their purposes, if desired.`)))),Object(esm["b" /* mdx */])("a",{id:"tocSrule"},"rule"),"#### rule",Object(esm["b" /* mdx */])("a",{id:"schemarule"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-4"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`keys`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemajsonwebkey"}),`jsonWebKey`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`The value of the "keys" parameter is an array of JWK values. By default, the order of the JWK values within the array does not imply an order of preference among them, although applications of JWK Sets can choose to assign a meaning to the order for their purposes, if desired.`)))),Object(esm["b" /* mdx */])("a",{id:"tocSrule"},"rule"),"#### rule",Object(esm["b" /* mdx */])("a",{id:"schemarule"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "authenticators": [
     {
       "config": {},
@@ -38561,9 +38489,7 @@ p JSON.parse(result)
   "description": "string",
   "id": "string",
   "match": {
-    "methods": [
-      "string"
-    ],
+    "methods": ["string"],
     "url": "string"
   },
   "mutators": [
@@ -38578,23 +38504,17 @@ p JSON.parse(result)
     "url": "string"
   }
 }
-
-`)),Object(esm["b" /* mdx */])("p",null,Object(esm["b" /* mdx */])("em",{parentName:"p"},`swaggerRule is a single rule that will get checked on every HTTP request.`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-5"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`authenticators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Authenticators is a list of authentication handlers that will try and authenticate the provided credentials. Authenticators are checked iteratively from index 0 to n and if the first authenticator to return a positive result will be the one used.  If you want the rule to first check a specific authenticator  before "falling back" to others, have that authenticator as the first item in the array.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`authorizer`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`description`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description is a human readable description of this rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`id`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`ID is the unique id of the rule. It can be at most 190 characters long, but the layout of the ID is up to you. You will need this ID later on to update or delete the rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`match`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulematch"}),`ruleMatch`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`mutators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Mutators is a list of mutation handlers that transform the HTTP request. A common use case is generating a new set of credentials (e.g. JWT) which then will be forwarded to the upstream server.  Mutations are performed iteratively from index 0 to n and should all succeed in order for the HTTP request to be forwarded.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`upstream`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemaupstream"}),`Upstream`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("a",{id:"tocSrulehandler"},"ruleHandler"),"#### ruleHandler",Object(esm["b" /* mdx */])("a",{id:"schemarulehandler"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("p",null,Object(esm["b" /* mdx */])("em",{parentName:"p"},`swaggerRule is a single rule that will get checked on every HTTP request.`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-5"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`authenticators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Authenticators is a list of authentication handlers that will try and authenticate the provided credentials. Authenticators are checked iteratively from index 0 to n and if the first authenticator to return a positive result will be the one used. If you want the rule to first check a specific authenticator before "falling back" to others, have that authenticator as the first item in the array.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`authorizer`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`description`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description is a human readable description of this rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`id`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`ID is the unique id of the rule. It can be at most 190 characters long, but the layout of the ID is up to you. You will need this ID later on to update or delete the rule.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`match`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulematch"}),`ruleMatch`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`mutators`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[`,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemarulehandler"}),`ruleHandler`),`]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Mutators is a list of mutation handlers that transform the HTTP request. A common use case is generating a new set of credentials (e.g. JWT) which then will be forwarded to the upstream server. Mutations are performed iteratively from index 0 to n and should all succeed in order for the HTTP request to be forwarded.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`upstream`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"#schemaupstream"}),`Upstream`)),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`)))),Object(esm["b" /* mdx */])("a",{id:"tocSrulehandler"},"ruleHandler"),"#### ruleHandler",Object(esm["b" /* mdx */])("a",{id:"schemarulehandler"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "config": {},
   "handler": "string"
 }
-
 `)),Object(esm["b" /* mdx */])("h4",{"id":"properties-6"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`config`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`object`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Config contains the configuration for the handler. Please read the user guide for a complete list of each handler's available settings.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`handler`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Handler identifies the implementation which will be used to handle this specific request. Please read the user guide for a complete list of available handlers.`)))),Object(esm["b" /* mdx */])("a",{id:"tocSrulematch"},"ruleMatch"),"#### ruleMatch",Object(esm["b" /* mdx */])("a",{id:"schemarulematch"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
-  "methods": [
-    "string"
-  ],
+  "methods": ["string"],
   "url": "string"
 }
-
-`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-7"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`methods`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[string]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`An array of HTTP methods (e.g. GET, POST, PUT, DELETE, ...). When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the HTTP method of the incoming request with the HTTP methods of each rules. If a match is found, the rule is considered a partial match. If the matchesUrl field is satisfied as well, the rule is considered a full match.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`url`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`This field represents the URL pattern this rule matches. When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the full request URL (e.g. `,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://mydomain.com/api/resource"}),`https://mydomain.com/api/resource`),`) without query parameters of the incoming request with this field. If a match is found, the rule is considered a partial match. If the matchesMethods field is satisfied as well, the rule is considered a full match.  You can use regular expressions in this field to match more than one url. Regular expressions are encapsulated in brackets < and >. The following example matches all paths of the domain `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`mydomain.com`),`: `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`https://mydomain.com/<.*>`),`.`)))),Object(esm["b" /* mdx */])("a",{id:"tocSversion"},"version"),"#### version",Object(esm["b" /* mdx */])("a",{id:"schemaversion"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
+`)),Object(esm["b" /* mdx */])("h4",{"id":"properties-7"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`methods`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`[string]`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`An array of HTTP methods (e.g. GET, POST, PUT, DELETE, ...). When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the HTTP method of the incoming request with the HTTP methods of each rules. If a match is found, the rule is considered a partial match. If the matchesUrl field is satisfied as well, the rule is considered a full match.`)),Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`url`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`This field represents the URL pattern this rule matches. When ORY Oathkeeper searches for rules to decide what to do with an incoming request to the proxy server, it compares the full request URL (e.g. `,Object(esm["b" /* mdx */])("a",Object(esm_extends["a" /* default */])({parentName:"td"},{"href":"https://mydomain.com/api/resource"}),`https://mydomain.com/api/resource`),`) without query parameters of the incoming request with this field. If a match is found, the rule is considered a partial match. If the matchesMethods field is satisfied as well, the rule is considered a full match. You can use regular expressions in this field to match more than one url. Regular expressions are encapsulated in brackets < and >. The following example matches all paths of the domain `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`mydomain.com`),`: `,Object(esm["b" /* mdx */])("inlineCode",{parentName:"td"},`https://mydomain.com/<.*>`),`.`)))),Object(esm["b" /* mdx */])("a",{id:"tocSversion"},"version"),"#### version",Object(esm["b" /* mdx */])("a",{id:"schemaversion"}),Object(esm["b" /* mdx */])("pre",null,Object(esm["b" /* mdx */])("code",Object(esm_extends["a" /* default */])({parentName:"pre"},{"className":"language-json"}),`{
   "version": "string"
 }
-
 `)),Object(esm["b" /* mdx */])("h4",{"id":"properties-8"},`Properties`),Object(esm["b" /* mdx */])("table",null,Object(esm["b" /* mdx */])("thead",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"thead"},Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Name`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Type`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Required`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Restrictions`),Object(esm["b" /* mdx */])("th",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Description`))),Object(esm["b" /* mdx */])("tbody",{parentName:"table"},Object(esm["b" /* mdx */])("tr",{parentName:"tbody"},Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`version`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`string`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`false`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`none`),Object(esm["b" /* mdx */])("td",Object(esm_extends["a" /* default */])({parentName:"tr"},{"align":null}),`Version is the service's version.`)))));};MDXContent.isMDXComponent=true;
 
 /***/ }),
@@ -38741,28 +38661,26 @@ module.exports = withSideEffect;
 
 /***/ }),
 /* 223 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
+/* global Map:readonly, Set:readonly, ArrayBuffer:readonly */
 
-
-var isArray = Array.isArray;
-var keyList = Object.keys;
-var hasProp = Object.prototype.hasOwnProperty;
 var hasElementType = typeof Element !== 'undefined';
+var hasMap = typeof Map === 'function';
+var hasSet = typeof Set === 'function';
+var hasArrayBuffer = typeof ArrayBuffer === 'function' && !!ArrayBuffer.isView;
+
+// Note: We **don't** need `envHasBigInt64Array` in fde es6/index.js
 
 function equal(a, b) {
-  // fast-deep-equal index.js 2.0.1
+  // START: fast-deep-equal es6/index.js 3.1.1
   if (a === b) return true;
 
   if (a && b && typeof a == 'object' && typeof b == 'object') {
-    var arrA = isArray(a)
-      , arrB = isArray(b)
-      , i
-      , length
-      , key;
+    if (a.constructor !== b.constructor) return false;
 
-    if (arrA && arrB) {
+    var length, i, keys;
+    if (Array.isArray(a)) {
       length = a.length;
       if (length != b.length) return false;
       for (i = length; i-- !== 0;)
@@ -38770,50 +38688,91 @@ function equal(a, b) {
       return true;
     }
 
-    if (arrA != arrB) return false;
+    // START: Modifications:
+    // 1. Extra `has<Type> &&` helpers in initial condition allow es6 code
+    //    to co-exist with es5.
+    // 2. Replace `for of` with es5 compliant iteration using `for`.
+    //    Basically, take:
+    //
+    //    ```js
+    //    for (i of a.entries())
+    //      if (!b.has(i[0])) return false;
+    //    ```
+    //
+    //    ... and convert to:
+    //
+    //    ```js
+    //    it = a.entries();
+    //    while (!(i = it.next()).done)
+    //      if (!b.has(i.value[0])) return false;
+    //    ```
+    //
+    //    **Note**: `i` access switches to `i.value`.
+    var it;
+    if (hasMap && (a instanceof Map) && (b instanceof Map)) {
+      if (a.size !== b.size) return false;
+      it = a.entries();
+      while (!(i = it.next()).done)
+        if (!b.has(i.value[0])) return false;
+      it = a.entries();
+      while (!(i = it.next()).done)
+        if (!equal(i.value[1], b.get(i.value[0]))) return false;
+      return true;
+    }
 
-    var dateA = a instanceof Date
-      , dateB = b instanceof Date;
-    if (dateA != dateB) return false;
-    if (dateA && dateB) return a.getTime() == b.getTime();
+    if (hasSet && (a instanceof Set) && (b instanceof Set)) {
+      if (a.size !== b.size) return false;
+      it = a.entries();
+      while (!(i = it.next()).done)
+        if (!b.has(i.value[0])) return false;
+      return true;
+    }
+    // END: Modifications
 
-    var regexpA = a instanceof RegExp
-      , regexpB = b instanceof RegExp;
-    if (regexpA != regexpB) return false;
-    if (regexpA && regexpB) return a.toString() == b.toString();
+    if (hasArrayBuffer && ArrayBuffer.isView(a) && ArrayBuffer.isView(b)) {
+      length = a.length;
+      if (length != b.length) return false;
+      for (i = length; i-- !== 0;)
+        if (a[i] !== b[i]) return false;
+      return true;
+    }
 
-    var keys = keyList(a);
+    if (a.constructor === RegExp) return a.source === b.source && a.flags === b.flags;
+    if (a.valueOf !== Object.prototype.valueOf) return a.valueOf() === b.valueOf();
+    if (a.toString !== Object.prototype.toString) return a.toString() === b.toString();
+
+    keys = Object.keys(a);
     length = keys.length;
-
-    if (length !== keyList(b).length)
-      return false;
+    if (length !== Object.keys(b).length) return false;
 
     for (i = length; i-- !== 0;)
-      if (!hasProp.call(b, keys[i])) return false;
-    // end fast-deep-equal
+      if (!Object.prototype.hasOwnProperty.call(b, keys[i])) return false;
+    // END: fast-deep-equal
 
-    // start react-fast-compare
+    // START: react-fast-compare
     // custom handling for DOM elements
-    if (hasElementType && a instanceof Element && b instanceof Element)
-      return a === b;
+    if (hasElementType && a instanceof Element) return false;
 
-    // custom handling for React
+    // custom handling for React/Preact
     for (i = length; i-- !== 0;) {
-      key = keys[i];
-      if (key === '_owner' && a.$$typeof) {
-        // React-specific: avoid traversing React elements' _owner.
-        //  _owner contains circular references
-        // and is not needed when comparing the actual elements (and not their owners)
-        // .$$typeof and ._store on just reasonable markers of a react element
-        continue;
-      } else {
-        // all other properties should be traversed as usual
-        if (!equal(a[key], b[key])) return false;
-      }
-    }
-    // end react-fast-compare
+      if ((keys[i] === '_owner' || keys[i] === '__v' || keys[i] === '__o') && a.$$typeof) {
+        // React-specific: avoid traversing React elements' _owner
+        // Preact-specific: avoid traversing Preact elements' __v and __o
+        //    __v = $_original / $_vnode
+        //    __o = $_owner
+        // These properties contain circular references and are not needed when
+        // comparing the actual elements (and not their owners)
+        // .$$typeof and ._store on just reasonable markers of elements
 
-    // fast-deep-equal index.js 2.0.1
+        continue;
+      }
+
+      // all other properties should be traversed as usual
+      if (!equal(a[keys[i]], b[keys[i]])) return false;
+    }
+    // END: react-fast-compare
+
+    // START: fast-deep-equal
     return true;
   }
 
@@ -38821,17 +38780,17 @@ function equal(a, b) {
 }
 // end fast-deep-equal
 
-module.exports = function exportedEqual(a, b) {
+module.exports = function isEqual(a, b) {
   try {
     return equal(a, b);
   } catch (error) {
-    if ((error.message && error.message.match(/stack|recursion/i)) || (error.number === -2146828260)) {
+    if (((error.message || '').match(/stack|recursion/i))) {
       // warn on circular references, don't crash
       // browsers give this different errors name and messages:
       // chrome/safari: "RangeError", "Maximum call stack size exceeded"
       // firefox: "InternalError", too much recursion"
       // edge: "Error", "Out of stack space"
-      console.warn('Warning: react-fast-compare does not handle circular references.', error.name, error.message);
+      console.warn('react-fast-compare cannot handle circular refs');
       return false;
     }
     // some other error. we should definitely know about these
