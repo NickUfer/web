@@ -22810,7 +22810,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_PORT=<value>
     #
-    port: 88896345
+    port: -91215311
 
     ## Host ##
     #
@@ -22826,7 +22826,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_API_HOST=<value>
     #
-    host: localhost
+    host: 127.0.0.1
 
     ## HTTP Timeouts ##
     #
@@ -22850,7 +22850,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_TIMEOUT_READ=<value>
       #
-      read: 5s
+      read: 5h
 
       ## HTTP Write Timeout ##
       #
@@ -22869,7 +22869,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_TIMEOUT_WRITE=<value>
       #
-      write: 5m
+      write: 5h
 
       ## HTTP Idle Timeout ##
       #
@@ -22888,7 +22888,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_TIMEOUT_IDLE=<value>
       #
-      idle: 120s
+      idle: 5h
 
     ## Cross Origin Resource Sharing (CORS) ##
     #
@@ -22907,7 +22907,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_ENABLED=<value>
       #
-      enabled: false
+      enabled: true
 
       ## Allowed Origins ##
       #
@@ -22944,7 +22944,7 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_METHODS=<value>
       #
       allowed_methods:
-        - GET
+        - PUT
         - TRACE
 
       ## Allowed Request HTTP Headers ##
@@ -22960,11 +22960,8 @@ serve:
       #    > set SERVE_API_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - ullamco velit cillum adipisicing
-        - occaecat consequat cillum
-        - dolore dolore eiusmod
-        - dolore
-        - velit et minim
+        - Excepteur sed quis
+        - labore consectetur quis pariatur fugiat
 
       ## Allowed Response HTTP Headers ##
       #
@@ -22979,8 +22976,8 @@ serve:
       #    > set SERVE_API_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - id voluptate
-        - ea consequat Duis
+        - aliqua nulla anim
+        - Ut nulla consequat dolor in
 
       ## Allow HTTP Credentials ##
       #
@@ -22994,7 +22991,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_ALLOW_CREDENTIALS=<value>
       #
-      allow_credentials: true
+      allow_credentials: false
 
       ## Maximum Age ##
       #
@@ -23006,7 +23003,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_API_CORS_MAX_AGE=<value>
       #
-      max_age: -55696460
+      max_age: -33411714
 
       ## Enable Debugging ##
       #
@@ -23088,7 +23085,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_PORT=<value>
     #
-    port: 41824180
+    port: 74492614
 
     ## Host ##
     #
@@ -23104,7 +23101,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROXY_HOST=<value>
     #
-    host: localhost
+    host: 127.0.0.1
 
     ## HTTP Timeouts ##
     #
@@ -23147,7 +23144,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_TIMEOUT_WRITE=<value>
       #
-      write: 5m
+      write: 5s
 
       ## HTTP Idle Timeout ##
       #
@@ -23222,7 +23219,8 @@ serve:
       allowed_methods:
         - CONNECT
         - HEAD
-        - GET
+        - POST
+        - PATCH
         - DELETE
 
       ## Allowed Request HTTP Headers ##
@@ -23238,9 +23236,9 @@ serve:
       #    > set SERVE_PROXY_CORS_ALLOWED_HEADERS=<value>
       #
       allowed_headers:
-        - ex
-        - est cillum ex
-        - reprehenderit ut sit
+        - dolor minim ipsum amet
+        - sunt sit
+        - irure minim
 
       ## Allowed Response HTTP Headers ##
       #
@@ -23255,10 +23253,7 @@ serve:
       #    > set SERVE_PROXY_CORS_EXPOSED_HEADERS=<value>
       #
       exposed_headers:
-        - dolor Duis adipisicing magna cupidatat
-        - consequat
-        - dolore eu cillum dolore
-        - Ut veniam anim reprehenderit minim
+        - occaecat id
 
       ## Allow HTTP Credentials ##
       #
@@ -23284,7 +23279,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_MAX_AGE=<value>
       #
-      max_age: -27261312
+      max_age: 14459470
 
       ## Enable Debugging ##
       #
@@ -23298,7 +23293,7 @@ serve:
       # - Windows Command Line (CMD):
       #    > set SERVE_PROXY_CORS_DEBUG=<value>
       #
-      debug: true
+      debug: false
 
     ## HTTPS ##
     #
@@ -23366,7 +23361,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROMETHEUS_PORT=<value>
     #
-    port: -39271499
+    port: 12403542
 
     ## Host ##
     #
@@ -23396,7 +23391,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_PROMETHEUS_METRICS_PATH=<value>
     #
-    metrics_path: Lorem dolor voluptate et sit
+    metrics_path: sint eiusmod
 
 ## Access Rules ##
 #
@@ -23469,7 +23464,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_ANONYMOUS_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
     ## Anonymous Authenticator Configuration ##
     #
@@ -23537,7 +23532,7 @@ authenticators:
     # - Windows Command Line (CMD):
     #    > set AUTHENTICATORS_UNAUTHORIZED_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Cookie Session ##
   #
@@ -23566,11 +23561,7 @@ authenticators:
       #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_ONLY=<value>
       #
       only:
-        - esse ullamco aute fugiat
-        - reprehenderit esse culpa ad enim
-        - Lorem consectetur
-        - quis in in
-        - adipisicing est voluptate amet
+        - ea irure
 
       ## preserve_path ##
       #
@@ -23590,7 +23581,7 @@ authenticators:
       # - Windows Command Line (CMD):
       #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_EXTRA_FROM=<value>
       #
-      extra_from: amet ex
+      extra_from: consectetur
 
       ## subject_from ##
       #
@@ -23600,7 +23591,7 @@ authenticators:
       # - Windows Command Line (CMD):
       #    > set AUTHENTICATORS_COOKIE_SESSION_CONFIG_SUBJECT_FROM=<value>
       #
-      subject_from: nostrud fugiat esse elit
+      subject_from: commodo ea in
 
     ## Enabled ##
     #
@@ -23624,6 +23615,91 @@ authenticators:
   # The [\`jwt\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#jwt).
   #
   jwt:
+    ## config ##
+    #
+    config:
+      ## jwks_urls ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_JWKS_URLS=<value>
+      #
+      jwks_urls:
+        - https://my-website.com/.well-known/jwks.json
+        - https://my-other-website.com/.well-known/jwks.json
+        - file://path/to/local/jwks.json
+
+      ## required_scope ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_REQUIRED_SCOPE=<value>
+      #
+      required_scope:
+        - id sunt
+
+      ## target_audience ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_TARGET_AUDIENCE=<value>
+      #
+      target_audience:
+        - reprehenderit eiusmod
+        - magna laboris in
+        - sint ea ullamco cupidatat id
+
+      ## trusted_issuers ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_TRUSTED_ISSUERS=<value>
+      #
+      trusted_issuers:
+        - occaecat aute incididunt irure adipisicing
+        - pariatur ut ex laboris quis
+        - Excepteur cupidatat adipisicing laboris sint
+
+      ## allowed_algorithms ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_ALLOWED_ALGORITHMS=<value>
+      #
+      allowed_algorithms:
+        - veniam
+        - qui voluptate eiusmod est nostrud
+
+      ## scope_strategy ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_SCOPE_STRATEGY=<value>
+      #
+      scope_strategy: hierarchic
+
+      ## token_from ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_JWT_CONFIG_TOKEN_FROM=<value>
+      #
+      token_from: null
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23646,56 +23722,6 @@ authenticators:
   # The [\`oauth2_client_credentials\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#oauth2_client_credentials).
   #
   oauth2_client_credentials:
-    ## config ##
-    #
-    config:
-      ## token_url ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_TOKEN_URL=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_TOKEN_URL=<value>
-      #
-      token_url: https://my-website.com/oauth2/token
-
-      ## required_scope ##
-      #
-      # Set this value using environment variables on
-      # - Linux/macOS:
-      #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_REQUIRED_SCOPE=<value>
-      # - Windows Command Line (CMD):
-      #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_REQUIRED_SCOPE=<value>
-      #
-      required_scope:
-        - fugiat laboris mollit
-        - laboris commodo
-        - dolor qui nisi
-        - quis Excepteur ipsum occaecat
-
-      ## retry ##
-      #
-      retry:
-        ## give_up_after ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_RETRY_GIVE_UP_AFTER=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_RETRY_GIVE_UP_AFTER=<value>
-        #
-        give_up_after: 065us
-
-        ## max_delay ##
-        #
-        # Set this value using environment variables on
-        # - Linux/macOS:
-        #    $ export AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_RETRY_MAX_DELAY=<value>
-        # - Windows Command Line (CMD):
-        #    > set AUTHENTICATORS_OAUTH2_CLIENT_CREDENTIALS_CONFIG_RETRY_MAX_DELAY=<value>
-        #
-        max_delay: 246380ms
-
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23718,6 +23744,185 @@ authenticators:
   # The [\`oauth2_introspection\` authenticator](https://www.ory.sh/oathkeeper/docs/pipeline/authn#oauth2_introspection).
   #
   oauth2_introspection:
+    ## config ##
+    #
+    config:
+      ## introspection_url ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_INTROSPECTION_URL=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_INTROSPECTION_URL=<value>
+      #
+      introspection_url: https://my-website.com/oauth2/introspection
+
+      ## scope_strategy ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_SCOPE_STRATEGY=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_SCOPE_STRATEGY=<value>
+      #
+      scope_strategy: exact
+
+      ## pre_authorization ##
+      #
+      pre_authorization:
+        ## client_id ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_ID=<value>
+        #
+        client_id: minim tempor labore
+
+        ## client_secret ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_CLIENT_SECRET=<value>
+        #
+        client_secret: ut aliquip ullamco
+
+        ## token_url ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_TOKEN_URL=<value>
+        #
+        token_url: https://ibnBLi.asliwhShwKFhtpt
+
+        ## enabled ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_ENABLED=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_ENABLED=<value>
+        #
+        enabled: true
+
+        ## scope ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_SCOPE=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_PRE_AUTHORIZATION_SCOPE=<value>
+        #
+        scope:
+          - foo
+          - bar
+
+      ## required_scope ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_REQUIRED_SCOPE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_REQUIRED_SCOPE=<value>
+      #
+      required_scope:
+        - sed sit
+        - nisi Duis
+        - labore proident cupidatat Excepteur laboris
+        - aliquip nostrud
+        - anim occaecat enim
+
+      ## target_audience ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TARGET_AUDIENCE=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TARGET_AUDIENCE=<value>
+      #
+      target_audience:
+        - et dolor
+        - esse magna minim
+        - officia do Duis
+        - Duis
+        - laborum
+
+      ## trusted_issuers ##
+      #
+      # Set this value using environment variables on
+      # - Linux/macOS:
+      #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TRUSTED_ISSUERS=<value>
+      # - Windows Command Line (CMD):
+      #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TRUSTED_ISSUERS=<value>
+      #
+      trusted_issuers:
+        - nulla irure et qui
+        - aute exercitation cupidatat
+
+      ## token_from ##
+      #
+      token_from:
+        ## header ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_HEADER=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_TOKEN_FROM_HEADER=<value>
+        #
+        header: minim ad deserunt labore velit
+
+      ## retry ##
+      #
+      retry:
+        ## give_up_after ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_GIVE_UP_AFTER=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_GIVE_UP_AFTER=<value>
+        #
+        give_up_after: 6108082325ns
+
+        ## max_delay ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_MAX_DELAY=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_RETRY_MAX_DELAY=<value>
+        #
+        max_delay: 57m
+
+      ## cache ##
+      #
+      cache:
+        ## enabled ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_CACHE_ENABLED=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_CACHE_ENABLED=<value>
+        #
+        enabled: true
+
+        ## ttl ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_CACHE_TTL=<value>
+        # - Windows Command Line (CMD):
+        #    > set AUTHENTICATORS_OAUTH2_INTROSPECTION_CONFIG_CACHE_TTL=<value>
+        #
+        ttl: 5s
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -23754,7 +23959,7 @@ errors:
   #    > set ERRORS_FALLBACK=<value>
   #
   fallback:
-    - redirect
+    - json
 
   ## Individual Error Handler Configuration ##
   #
@@ -23764,6 +23969,79 @@ errors:
     # Responds with the WWW-Authenticate HTTP Response
     #
     www_authenticate:
+      ## config ##
+      #
+      config:
+        ## realm ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_REALM=<value>
+        #
+        realm: reprehenderit id veniam tempor
+
+        ## when ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_WHEN=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_CONFIG_WHEN=<value>
+        #
+        when:
+          - error:
+              - not_found
+              - not_found
+              - unauthorized
+            request:
+              cidr:
+                - exercitation aliqua non do veniam
+                - ad
+                - esse minim
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - unauthorized
+              - internal_server_error
+            request:
+              cidr:
+                - nulla occaecat proident culpa
+                - tempor incididunt commodo Excepteur
+                - nostrud deserunt in in Excepteur
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
+              - unauthorized
+              - internal_server_error
+              - internal_server_error
+              - forbidden
+            request:
+              cidr:
+                - occaecat laborum
+                - aute quis ipsum minim culpa
+                - aute elit nulla veniam cupidatat
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - internal_server_error
+              - internal_server_error
+              - unauthorized
+              - internal_server_error
+            request:
+              cidr:
+                - sed
+                - sed ad adipisicing laborum
+                - sit officia
+              header:
+                content_type: []
+                accept: []
+
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23779,13 +24057,107 @@ errors:
       # - Windows Command Line (CMD):
       #    > set ERRORS_HANDLERS_WWW_AUTHENTICATE_ENABLED=<value>
       #
-      enabled: false
+      enabled: true
 
     ## HTTP Redirect Error Handler ##
     #
     # Responds with a 301/302 HTTP redirect.
     #
     redirect:
+      ## config ##
+      #
+      config:
+        ## to ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_TO=<value>
+        #
+        to: http://HTNPMTMOoRtNnaCKxYary.wtwxANE62gozDjvI.kLdPq6IwpPuXYka2rumg,bu6VmPU
+
+        ## code ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_CODE=<value>
+        #
+        code: 301
+
+        ## when ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_REDIRECT_CONFIG_WHEN=<value>
+        #
+        when:
+          - error:
+              - internal_server_error
+              - not_found
+              - internal_server_error
+              - internal_server_error
+              - internal_server_error
+            request:
+              cidr:
+                - aute pariatur
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
+              - forbidden
+              - internal_server_error
+              - internal_server_error
+            request:
+              cidr:
+                - in dolore eiusmod ipsum
+                - ex
+                - in commodo nisi
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
+              - internal_server_error
+              - not_found
+              - internal_server_error
+            request:
+              cidr:
+                - officia qui laborum
+                - mollit in
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - internal_server_error
+              - not_found
+              - internal_server_error
+            request:
+              cidr:
+                - Duis cillum
+                - dolore
+                - non aute
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - not_found
+              - not_found
+              - forbidden
+              - not_found
+            request:
+              cidr:
+                - ullamco nostrud in
+                - laborum sunt eu aute nisi
+              header:
+                content_type: []
+                accept: []
+
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23801,7 +24173,7 @@ errors:
       # - Windows Command Line (CMD):
       #    > set ERRORS_HANDLERS_REDIRECT_ENABLED=<value>
       #
-      enabled: true
+      enabled: false
 
     ## JSON Error Handler ##
     #
@@ -23810,6 +24182,80 @@ errors:
     # Default value: [object Object]
     #
     json:
+      ## config ##
+      #
+      config:
+        ## verbose ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_JSON_CONFIG_VERBOSE=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_JSON_CONFIG_VERBOSE=<value>
+        #
+        verbose: true
+
+        ## when ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export ERRORS_HANDLERS_JSON_CONFIG_WHEN=<value>
+        # - Windows Command Line (CMD):
+        #    > set ERRORS_HANDLERS_JSON_CONFIG_WHEN=<value>
+        #
+        when:
+          - error:
+              - forbidden
+              - unauthorized
+            request:
+              cidr:
+                - pariatur in cillum
+                - officia
+                - eiusmod
+                - officia incididunt in laboris
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - internal_server_error
+              - forbidden
+              - not_found
+              - forbidden
+              - forbidden
+            request:
+              cidr:
+                - qui magna in labore
+                - velit ad in sit
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - unauthorized
+              - not_found
+              - internal_server_error
+              - unauthorized
+            request:
+              cidr:
+                - qui
+                - do amet aliqua irure
+                - ex sed aliquip exercitation nostrud
+                - in eu
+                - dolor do dolore
+              header:
+                content_type: []
+                accept: []
+          - error:
+              - forbidden
+              - unauthorized
+              - unauthorized
+              - forbidden
+            request:
+              cidr:
+                - esse sit labore pariatur sunt
+              header:
+                content_type: []
+                accept: []
+
       ## Enabled ##
       #
       # En-/disables this component.
@@ -23820,7 +24266,7 @@ errors:
       # - Windows Command Line (CMD):
       #    > set ERRORS_HANDLERS_JSON_ENABLED=<value>
       #
-      enabled: false
+      enabled: true
 
 ## Authorizers ##
 #
@@ -23891,7 +24337,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_KETO_ENGINE_ACP_ORY_ENABLED=<value>
     #
-    enabled: false
+    enabled: true
 
   ## Remote ##
   #
@@ -23913,7 +24359,7 @@ authorizers:
     # - Windows Command Line (CMD):
     #    > set AUTHORIZERS_REMOTE_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Remote JSON ##
   #
@@ -23985,13 +24431,23 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_NOOP_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## HTTP Cookie ##
   #
   # The [\`cookie\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#cookie).
   #
   cookie:
+    ## config ##
+    #
+    # Set this value using environment variables on
+    # - Linux/macOS:
+    #    $ export MUTATORS_COOKIE_CONFIG=<value>
+    # - Windows Command Line (CMD):
+    #    > set MUTATORS_COOKIE_CONFIG=<value>
+    #
+    config: {}
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -24007,7 +24463,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_COOKIE_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## HTTP Header ##
   #
@@ -24039,13 +24495,101 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_HEADER_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## Hydrator ##
   #
   # The [\`hydrator\` mutator](https://www.ory.sh/oathkeeper/docs/pipeline/mutator#hydrator).
   #
   hydrator:
+    ## config ##
+    #
+    config:
+      ## api ##
+      #
+      api:
+        ## url ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export MUTATORS_HYDRATOR_CONFIG_API_URL=<value>
+        # - Windows Command Line (CMD):
+        #    > set MUTATORS_HYDRATOR_CONFIG_API_URL=<value>
+        #
+        url: http://WzRRVInG.jyC1J7a-oLkrBm4Hm6x0aofecS0THrt-UY5rlDyPz+e4rSgfLQqctsEZfnZ4TK.QWT4TXldaXPqiUMmX
+
+        ## auth ##
+        #
+        auth:
+          ## basic ##
+          #
+          basic:
+            ## username ##
+            #
+            # Set this value using environment variables on
+            # - Linux/macOS:
+            #    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=<value>
+            # - Windows Command Line (CMD):
+            #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_USERNAME=<value>
+            #
+            username: occaecat ad
+
+            ## password ##
+            #
+            # Set this value using environment variables on
+            # - Linux/macOS:
+            #    $ export MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=<value>
+            # - Windows Command Line (CMD):
+            #    > set MUTATORS_HYDRATOR_CONFIG_API_AUTH_BASIC_PASSWORD=<value>
+            #
+            password: commodo
+
+        ## retry ##
+        #
+        retry:
+          ## give_up_after ##
+          #
+          # Set this value using environment variables on
+          # - Linux/macOS:
+          #    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=<value>
+          # - Windows Command Line (CMD):
+          #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_GIVE_UP_AFTER=<value>
+          #
+          give_up_after: 0754448788s
+
+          ## max_delay ##
+          #
+          # Set this value using environment variables on
+          # - Linux/macOS:
+          #    $ export MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=<value>
+          # - Windows Command Line (CMD):
+          #    > set MUTATORS_HYDRATOR_CONFIG_API_RETRY_MAX_DELAY=<value>
+          #
+          max_delay: 42180490m
+
+      ## cache ##
+      #
+      cache:
+        ## enabled ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export MUTATORS_HYDRATOR_CONFIG_CACHE_ENABLED=<value>
+        # - Windows Command Line (CMD):
+        #    > set MUTATORS_HYDRATOR_CONFIG_CACHE_ENABLED=<value>
+        #
+        enabled: false
+
+        ## ttl ##
+        #
+        # Set this value using environment variables on
+        # - Linux/macOS:
+        #    $ export MUTATORS_HYDRATOR_CONFIG_CACHE_TTL=<value>
+        # - Windows Command Line (CMD):
+        #    > set MUTATORS_HYDRATOR_CONFIG_CACHE_TTL=<value>
+        #
+        ttl: 10252186ms
+
     ## Enabled ##
     #
     # En-/disables this component.
@@ -24061,7 +24605,7 @@ mutators:
     # - Windows Command Line (CMD):
     #    > set MUTATORS_HYDRATOR_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
   ## ID Token (JSON Web Token) ##
   #
@@ -24102,7 +24646,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: error
+  level: fatal
 
   ## Format ##
   #
