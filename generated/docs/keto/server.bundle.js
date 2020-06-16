@@ -20991,7 +20991,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: postgres://user:password@host:123/database
+dsn: memory
 
 ## HTTP REST API ##
 #
@@ -21046,7 +21046,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ENABLED=<value>
     #
-    enabled: true
+    enabled: false
 
     ## Allowed Origins ##
     #
@@ -21066,7 +21066,9 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - '*'
+      - https://example.com
+      - https://*.example.com
+      - https://*.foo.example.com
 
     ## Allowed HTTP Methods ##
     #
@@ -21082,6 +21084,7 @@ serve:
     #
     allowed_methods:
       - HEAD
+      - CONNECT
 
     ## Allowed Request HTTP Headers ##
     #
@@ -21096,8 +21099,10 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - magna enim
-      - ullamco labore laboris tempor
+      - ut qui in laboris
+      - aliquip
+      - labore deserunt
+      - dolor pariatur culpa in
 
     ## Allowed Response HTTP Headers ##
     #
@@ -21112,7 +21117,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - labore velit reprehenderit pariatur occaecat
+      - minim aliquip exercitation
 
     ## Allow HTTP Credentials ##
     #
@@ -21126,7 +21131,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: true
+    allow_credentials: false
 
     ## Maximum Age ##
     #
@@ -21138,7 +21143,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -17264981
+    max_age: -8371334
 
     ## Enable Debugging ##
     #
@@ -21234,7 +21239,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: fatal
+  level: error
 
   ## Format ##
   #
