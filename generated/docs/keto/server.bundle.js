@@ -20991,7 +20991,7 @@ section.`),Object(_mdx_js_react__WEBPACK_IMPORTED_MODULE_2__[/* mdx */ "b"])("pr
 # - Windows Command Line (CMD):
 #    > set DSN=<value>
 #
-dsn: memory
+dsn: postgres://user:password@host:123/database
 
 ## HTTP REST API ##
 #
@@ -21066,9 +21066,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_ORIGINS=<value>
     #
     allowed_origins:
-      - https://example.com
-      - https://*.example.com
-      - https://*.foo.example.com
+      - '*'
 
     ## Allowed HTTP Methods ##
     #
@@ -21083,8 +21081,8 @@ serve:
     #    > set SERVE_CORS_ALLOWED_METHODS=<value>
     #
     allowed_methods:
+      - POST
       - HEAD
-      - CONNECT
 
     ## Allowed Request HTTP Headers ##
     #
@@ -21099,10 +21097,7 @@ serve:
     #    > set SERVE_CORS_ALLOWED_HEADERS=<value>
     #
     allowed_headers:
-      - ut qui in laboris
-      - aliquip
-      - labore deserunt
-      - dolor pariatur culpa in
+      - dolor mollit ipsum
 
     ## Allowed Response HTTP Headers ##
     #
@@ -21117,7 +21112,7 @@ serve:
     #    > set SERVE_CORS_EXPOSED_HEADERS=<value>
     #
     exposed_headers:
-      - minim aliquip exercitation
+      - cupidatat
 
     ## Allow HTTP Credentials ##
     #
@@ -21131,7 +21126,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_ALLOW_CREDENTIALS=<value>
     #
-    allow_credentials: false
+    allow_credentials: true
 
     ## Maximum Age ##
     #
@@ -21143,7 +21138,7 @@ serve:
     # - Windows Command Line (CMD):
     #    > set SERVE_CORS_MAX_AGE=<value>
     #
-    max_age: -8371334
+    max_age: -57745217
 
     ## Enable Debugging ##
     #
@@ -21220,7 +21215,7 @@ serve:
 # - Windows Command Line (CMD):
 #    > set PROFILING=<value>
 #
-profiling: cpu
+profiling: mem
 
 ## Log ##
 #
@@ -21239,7 +21234,7 @@ log:
   # - Windows Command Line (CMD):
   #    > set LOG_LEVEL=<value>
   #
-  level: error
+  level: debug
 
   ## Format ##
   #
