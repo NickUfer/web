@@ -22,7 +22,7 @@ const IndexPage = () => (
         {
           title: 'Demo',
           href:
-            'https://docs.google.com/forms/d/1jTLa6_TRc-IQ7w51abpUA2ZWD2spcqWySeDD9FR1V6A',
+            'https://docs.google.com/forms/d/e/1FAIpQLSc5sViXt5rR44MLbJM5QjSDoSiZxXaXtmkHvAg22KC-x3z1Dg/viewform',
           style: 'primary',
         },
         {
