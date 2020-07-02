@@ -1,10 +1,14 @@
-# web
+# [www.ory.sh](https://www.ory.sh)
 
-## Writing Blog Articles
+[![Netlify Status](https://api.netlify.com/api/v1/badges/57a447bf-7887-4204-af24-08cd81e5d825/deploy-status)](https://app.netlify.com/sites/wonderful-sinoussi-8532a7/deploys)
 
-```md
+This is the [www.ory.sh](https://www.ory.sh) website!
 
-```
+## Contributing
+
+### Writing Blog Articles
+
+To be done.
 
 ## Writing Pages
 
@@ -15,23 +19,10 @@
 
 ```md
 ---
-path: '/imprint'
-title: 'Imprint'
-metaTitle: 'ORY Imprint'
-metaDescription: 'Read the ORY imprint.'
+path: '/the-path'
+title: 'The Page Title'
+metaTitle: 'The SEO Title'
+metaDescription: 'The SEO Description.'
 lastUpdatedAt: 'Aug 12th, 2019'
 ---
-
-**ORY GmbH**  
-Belfortstrasse 14  
-81667 Munich  
-Germany
-
-Geschäftsführer: Aeneas Rekkas  
-E-Mail: [hi@ory.sh](mailto:hi@ory.sh)  
-Registergericht: Handelsregister B des Amtsgerichts München  
-Registernummer: HRB 216983  
-Umsatzsteuer-Identifikationsnummer gem. § 27a UStG: DE 30224105
-
 ```
-
