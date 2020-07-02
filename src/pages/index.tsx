@@ -24,6 +24,7 @@ const IndexPage = () => (
           href:
             'https://docs.google.com/forms/d/e/1FAIpQLSc5sViXt5rR44MLbJM5QjSDoSiZxXaXtmkHvAg22KC-x3z1Dg/viewform',
           style: 'primary',
+          openInNewWindow: true,
         },
         {
           title: 'GitHub',
@@ -36,7 +37,7 @@ const IndexPage = () => (
     <Adopters onlyFeatured />
     <ThinProjectList />
     <Stats />
-    <Newsletter />
+    <Newsletter/>
     <Team />
   </Layout>
 )

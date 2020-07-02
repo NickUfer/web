@@ -90,6 +90,7 @@ const KratosPage = () => (
           title: 'Get started',
           href: 'https://www.ory.sh/docs/kratos/quickstart',
           style: 'primary',
+          openInNewWindow: true,
         },
         {
           title: 'GitHub',
