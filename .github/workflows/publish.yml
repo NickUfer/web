@@ -1,4 +1,4 @@
-name: Publish or Preview Website
+name: CI
 
 on:
   push:
