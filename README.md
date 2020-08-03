@@ -1,6 +1,6 @@
 # [www.ory.sh](https://www.ory.sh)
 
-![GitHub Actions Status](https://github.com/ory/web/workflows/CI/badge.svg?branch=master)
+![CI](https://github.com/ory/web/workflows/CI/badge.svg?branch=master)
 
 This is the [www.ory.sh](https://www.ory.sh) website!
 
