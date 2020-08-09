@@ -66,7 +66,7 @@ const stats = (state: StateTypes) => [
   {
     title: 'Requests secured',
     amount: state.requests.amount,
-    description: dateformat(state.requests.date, 'mmmm yyyy'),
+    description: `in ${dateformat(state.requests.date, 'mmmm yyyy')}`,
   },
   {
     title: 'Docker pulls',
