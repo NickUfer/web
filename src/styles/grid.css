@@ -1,9 +1,9 @@
-@lost gutter 20px;
+@lost gutter 40px;
 @lost flexbox flex;
 
 .container-fluid {
   width: 100%;
-  max-width: 350px;
+  max-width: 320px;
   margin: 0 auto;
 }
 
@@ -66,14 +66,14 @@
   }
 
   .col-sm-offset-$i {
-    lost-offset: $(i) / 12 12 20px;
+    lost-offset: $(i) / 12 12 40px;
   }
 }
 
 @media (--md-viewport) {
   .container-fluid {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1024px;
     margin: 0 auto;
   }
 
@@ -91,19 +91,19 @@
 
   @for $i from 1 to 12 {
     .col-md-$i {
-      lost-column: $(i) / 12 12 20px;
+      lost-column: $(i) / 12 12 40px;
     }
 
     .col-md-offset-$i {
-      lost-offset: $(i) / 12 12 20px;
+      lost-offset: $(i) / 12 12 40px;
     }
   }
 }
 
 @media (--lg-viewport) {
   .container-fluid {
-    width: calc(100% - 20px);
-    max-width: 1300px;
+    width: calc(100% - 40px);
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 10px;
   }
@@ -122,11 +122,11 @@
 
   @for $i from 1 to 12 {
     .col-lg-$i {
-      lost-column: $(i) / 12 12 20px;
+      lost-column: $(i) / 12 12 40px;
     }
 
     .col-lg-offset-$i {
-      lost-offset: $(i) / 12 12 20px;
+      lost-offset: $(i) / 12 12 40px;
     }
   }
 }

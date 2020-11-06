@@ -33,12 +33,6 @@ const IndexPage = () => (
         },
       ]}
     />
-    <BlogSummarySection />
-    <Adopters onlyFeatured />
-    <ThinProjectList />
-    <Stats />
-    <Newsletter/>
-    <Team />
   </Layout>
 )
 

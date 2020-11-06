@@ -3,10 +3,11 @@
 .header {
   height: var(--nav-height);
   width: 100%;
-  background: var(--colors-base-dark);
-  color: var(--colors-base-white);
+  background: var(--colors-base-white);
+  color: var(--colors-base-black);
   display: flex;
   align-items: center;
+  border-bottom: 1px solid var(--colors-base-black);
 
   & .logo {
     color: var(--colors-themed-default);
@@ -14,7 +15,7 @@
 
   & a,
   & a:visited {
-    color: var(--colors-base-white);
+    color: var(--colors-base-black);
 
     &:hover,
     &:focus,

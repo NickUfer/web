@@ -14,21 +14,21 @@ export type MenuItem = {
   className?: string
 }
 
-export type IconMenuItem = {
+export type githubbuttonItem = {
   title: string
   href: string
 }
 
 export type Menu = MenuItem[]
-export type IconMenu = IconMenuItem[]
+export type GitHubButton = githubbuttonItem[]
 
 interface PropTypes {
   menu: Menu
-  icons: IconMenu
+  githubbutton: GitHubButton
   appendix: string
 }
 
-const Header = ({ menu = [], icons = [], appendix }: PropTypes) => (
+const Header = ({ menu = [], githubbutton = [], appendix }: PropTypes) => (
   <header className={styles.header}>
     <div className="container-fluid">
       <div className="row middle-sm">
@@ -65,16 +65,15 @@ const Header = ({ menu = [], icons = [], appendix }: PropTypes) => (
             <div className={styles.rightMenu}>
               <nav className={styles.iconMenu}>
                 <ul className="hidden-sm hidden-md">
-                  {icons.map(({ href, title }, k) => (
-                    <li key={k}>
+                  {githubbutton.map(({ href, title }, k) => (
+                    <li>
                       <a href={href}>
                         {title}
-                        {/*<img src={image} alt={title} />*/}
                       </a>
                     </li>
                   ))}
                 </ul>
-                <MobileMenu menu={menu} icons={icons} />
+                <MobileMenu menu={menu} githubbutton={githubbutton} />
               </nav>
             </div>
           </div>

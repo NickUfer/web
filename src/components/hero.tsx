@@ -31,9 +31,9 @@ const Hero = ({ title, subtitle, cta }: PropTypes) => (
   <div className={styles.hero}>
     <div className="container-fluid">
       <div className="row">
-        <div className="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1  col-lg-10 col-lg-offset-1">
+        <div className="col-sm-10 col-sm-offset-1  col-md-10 col-md-offset-1  col-lg-6 col-lg-offset-1">
           <h1>{title}</h1>
-          <h2 className="col-lg-10 col-lg-offset-1">{subtitle}</h2>
+          <h5>{subtitle}</h5>
           <>{cta.map(CallToActionButton)}</>
         </div>
       </div>

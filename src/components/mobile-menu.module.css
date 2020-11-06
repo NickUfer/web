@@ -18,7 +18,7 @@
 }
 
 .show .divider {
-  background-color: var(--colors-base-white);
+  background-color: var(--colors-base-black);
 }
 
 .nav-icon :global .container-fluid {
@@ -40,7 +40,7 @@
 .nav-icon:after,
 .nav-icon:before,
 .nav-icon div {
-  background-color: #fff;
+  background-color: #000;
   content: '';
   display: block;
   height: 2px;
@@ -68,7 +68,7 @@
 
 .nav-items {
   transition: all ease-in 300ms;
-  background-color: var(--colors-base-dark);
+  background-color: var(--colors-base-white);
   position: absolute;
   z-index: 1;
   top: var(--nav-height);
