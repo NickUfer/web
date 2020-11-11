@@ -169,7 +169,7 @@ knative-serving  -o json | jq '.items[].metadata.name' | wc -l )" != 0 ]]
 
 The Knative documentation has a very
 [simplistic hello world example](https://knative.dev/docs/serving/getting-started-knative-app/),
-which we'll use here as a kind of probe to test the funtionality. It's a very
+which we'll use here as a kind of probe to test the functionality. It's a very
 simple go-container running a webserver returning "Hello Go Sample v1!".
 
 `make deploy-probe`
@@ -233,7 +233,7 @@ the file can also be reviewed in Github:
 So applying that yaml-file should make the service available and you can test it
 via
 [http://demo-oathkeeper.demo.example.com/authenticator/anonymous/authorizer/allow/mutator/id_token](http://demo-oathkeeper.demo.example.com/authenticator/anonymous/authorizer/allow/mutator/id_token).
-That's not very usefull, but we have to continue as we're only doing a very
+That's not very useful, but we have to continue as we're only doing a very
 shallow example here on Knative and Ory software.
 
 ## Working on ORY Kratos
@@ -242,7 +242,7 @@ The goal of this part was to make as much workable as possible from the
 [ORY Kratos quickstart tutorial](https://www.ory.sh/kratos/docs/quickstart/). We
 won't get that far, but more about that later. But first another prerequisite:
 Running ORY Kratos requires an open source relational database system such as
-Postgres or something equivalent. Without fullfilling that, kratos-bootup will
+Postgres or something equivalent. Without fulfilling that, kratos-bootup will
 quickly fail.
 
 `make deploy-psql`

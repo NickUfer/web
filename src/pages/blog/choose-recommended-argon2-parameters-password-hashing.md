@@ -35,7 +35,7 @@ Argon2. It first provides some background on Argon2 and best practice for
 choosing its parameters. I also wrote a CLI that allows you to calibrate the
 Argon2 parameter values according to your constrains and resources.
 
-## Arogn2 - Secure Login and Password Hashing
+## Argon2 - Secure Login and Password Hashing
 
 To securely manage credentials, one has to only store a cryptographic hash of
 the credential. Whenever the credential has to be checked, the hash of the

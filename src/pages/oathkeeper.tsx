@@ -44,7 +44,7 @@ const IntegrationCodeBox = () => (
   authenticators:
     - handler: jwt
   authorizer:
-    hander: allow
+    handler: allow
   mutators:
     - handler: headers
       config:

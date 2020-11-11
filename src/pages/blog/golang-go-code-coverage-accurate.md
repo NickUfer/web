@@ -173,7 +173,7 @@ cannot use test profile flag with multiple packages
 <video autoplay muted loop>
   <source src="../../images/articles/code-coverage/tableflip.mp4" type="video/mp4">
   <source src="../../images/articles/code-coverage/tableflip.webm" type="video/webm">
-  <img src="../../images/articles/code-coverage/tableflip.gif" alt="Tabelflip" />
+  <img src="../../images/articles/code-coverage/tableflip.gif" alt="Tableflip" />
 </video>
 
 Using the flag `-coverprofile`, `go test` is unable to merge code coverage from

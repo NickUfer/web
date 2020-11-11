@@ -78,7 +78,7 @@ NIST deems security question unacceptable for proof of authentication:
 > https://pages.nist.gov/800-63-FAQ/#q-b15
 
 Security questions have been used in high-profile dataleaks including the
-[iCloud leaks of celebrety fotos (aka "The Fappening")](https://en.wikipedia.org/wiki/ICloud_leaks_of_celebrity_photos).
+[iCloud leaks of celebrity fotos (aka "The Fappening")](https://en.wikipedia.org/wiki/ICloud_leaks_of_celebrity_photos).
 
 ### Auth0
 
@@ -125,7 +125,7 @@ in front of the screen. By asking the identity to login in again for the sole
 purpose of changing the password, both intent and authenticity of the request
 are confirmed.
 
-To text below can perhpas be used in another place
+To text below can perhaps be used in another place
 
 ## Approaches to solving Identity
 

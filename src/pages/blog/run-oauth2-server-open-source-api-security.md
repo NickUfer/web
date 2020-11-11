@@ -100,7 +100,7 @@ your favorite programming language for example Java, PHP, Go, NodeJS, etc., and 
 
 All
 [ORY technology follows architecture principles](https://www.ory.sh/docs/ecosystem/software-architecture-philosophy)
-that work best on oontainer orchestration systems such as Kubernetes,
+that work best on container orchestration systems such as Kubernetes,
 CloudFoundry, OpenShift, and similar projects. While it is possible to run the
 ORY stack on a RaspberryPI, the integration with the Docker and Container
 ecosystem is best documented and supported. ORY's architecture is designed along several guiding principles:
@@ -128,7 +128,7 @@ For Apple MacOS (`/bin/bash` and `/bin/zsh`)
 $ sudo netstat -atuln | grep '9000\|9001\|9010\|9020'
 ```
 
-Note 'netstat' on the MAC does not support all options used in Lunix and Windows. The 'lsof' command ($ man -k lsof) augments some of netstat missing functionality.
+Note 'netstat' on the MAC does not support all options used in Linux and Windows. The 'lsof' command ($ man -k lsof) augments some of netstat missing functionality.
 
 
 For Microsoft Windows 10, use the following command:
@@ -325,7 +325,7 @@ Available Commands:
 Flags:
       --config string     Config file (default is $HOME/.hydra.yaml)
   -h, --help              help for hydra
-      --skip-tls-verify   Foolishly accept TLS certificates signed by unkown certificate authorities
+      --skip-tls-verify   Foolishly accept TLS certificates signed by unknown certificate authorities
 
 Use "hydra [command] --help" for more information about a command.
 ```
